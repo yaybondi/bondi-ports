@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libmpfr4" section="libs">
+    <description>
+        <summary>multiple precision floating-point computation</summary>
+        <p>
+        MPFR provides a library for multiple-precision floating-point computation
+        with correct rounding.  The computation is both efficient and has a
+        well-defined semantics. It copies the good ideas from the
+        ANSI/IEEE-754 standard for double-precision floating-point arithmetic
+        (53-bit mantissa).
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/libmpfr.so.*"/>
+    </contents>
+</package>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="cloog-isl" section="libs">
+    <description>
+        <summary>Chunky Loop Generator (runtime library)</summary>
+        <p>
+        CLooG is a software which generates loops for scanning Z-polyhedra.
+        </p>
+        <p>
+        This package contains the cloog-isl binary.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libcloog-isl4" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/*"/>
+    </contents>
+</package>

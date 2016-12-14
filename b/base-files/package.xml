@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE control [
+<!ENTITY description SYSTEM "description.xml">
+<!ENTITY rules       SYSTEM "rules.xml">
+<!ENTITY changelog   SYSTEM "changelog.xml">
+]>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <source name="base-files" architecture-independent="true">
+        &description;
+
+        <sources>
+            <file src="base-files.tar.gz" subdir="install"/>
+        </sources>
+
+        &rules;
+    </source>
+
+    <package name="base-files" section="admin">
+        &description;
+
+        <contents>
+            <file src="/"/>
+        </contents>
+    </package>
+
+    <!-- changelog -->
+    &changelog;
+
+</control>

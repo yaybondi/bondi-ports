@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="fixincludes" section="">
+    <description>
+        <summary>Fix non-ANSI header files</summary>
+        <p>
+        FixIncludes was created to fix non-ANSI system header files. Many
+        system manufacturers supply proprietary headers that are not ANSI compliant.
+        The GNU compilers cannot compile non-ANSI headers. Consequently, the
+        FixIncludes shell script was written to fix the header files.
+        </p>
+        <p>
+        Not all packages with header files are installed on the system, when the
+        package is built, so we make fixincludes available at build time of other
+        packages, such that checking tools like lintian can make use of it.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc-5-base" version="=="/>
+        <package name="gcc-5" version="=="/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

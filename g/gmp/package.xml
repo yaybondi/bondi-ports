@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <defines>
+        <def name="XPACK_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="gmp" architecture-independent="false">
+        <description>
+            <summary>Multiprecision arithmetic library</summary>
+            <p>
+            GNU MP is a programmer's library for arbitrary precision
+            arithmetic (ie, a bignum package).  It can operate on signed
+            integer, rational, and floating point numeric types.
+            </p>
+            <p>
+            It has a rich set of functions, and the functions have a regular
+            interface.
+            </p>
+        </description>
+
+        <sources>
+            <file src="gmp.tar.xz" subdir="sources"
+                sha256sum="78a74cfd933bbdf7e93909a6069e53e8aba8389e9b3880300c926da7a7d55632"/>
+        </sources>
+
+        <requires>
+            <package name="m4"/>
+        </requires>
+
+        <!-- build rules -->
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <!-- package rules -->
+    <xi:include href="libgmp10.xml"/>
+    <xi:include href="libgmp-dev.xml"/>
+
+    <!-- changelog -->
+    <xi:include href="changelog.xml"/>
+</control>

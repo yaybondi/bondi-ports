@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="binutils-dev" section="devel">
+    <description>
+        <summary>binutils development files</summary>
+    </description>
+
+    <requires>
+        <package name="binutils" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/*.{a,la}"/>
+        <file src="/usr/lib/libopcodes.so"/>
+        <file src="/usr/lib/libbfd.so"/>
+        <file src="/usr/include/*"/>
+    </contents>
+</package>

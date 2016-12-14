@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libitm1" section="libs">
+    <description>
+        <summary>GNU Transactional Memory Library</summary>
+        <p>
+        GNU Transactional Memory Library (libitm) provides transaction support for
+        accesses to the memory of a process, enabling easy-to-use synchronization of
+        accesses to shared memory by several threads.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc-5-base" version="=="/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

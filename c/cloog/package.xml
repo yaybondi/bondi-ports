@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <defines>
+        <def name="XPACK_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="cloog" architecture-independent="false">
+        <description>
+            <summary>Chunky Loop Generator (development files)</summary>
+            <p>
+            CLooG is a software which generates loops for scanning Z-polyhedra. That is,
+            CLooG finds the code or pseudo-code where each integral point of one or more
+            parametrized polyhedron or parametrized polyhedra union is reached. CLooG is
+            designed to avoid control overhead and to produce a very efficient code.
+            </p>
+        </description>
+
+        <sources>
+            <file src="cloog.tar.gz" subdir="sources"
+                sha256sum="325adf3710ce2229b7eeb9e84d3b539556d093ae860027185e7af8a8b00a750e"/>
+        </sources>
+
+        <requires>
+            <package name="autotools-dev"/>
+            <package name="libisl-dev" version="&gt;= 0.15"/>
+            <package name="libgmp-dev"/>
+        </requires>
+
+        <!-- build rules -->
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <!-- package rules -->
+    <xi:include href="libcloog-isl-dev.xml"/>
+    <xi:include href="libcloog-isl4.xml"/>
+    <xi:include href="cloog-isl.xml"/>
+
+    <!-- changelog -->
+    <xi:include href="changelog.xml"/>
+</control> 

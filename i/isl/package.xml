@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <defines>
+        <def name="XPACK_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="isl" architecture-independent="false">
+        <description>
+            <summary>manipulating sets and relations of integer points bounded by linear constraints</summary>
+            <p>
+            isl is a library for manipulating sets and relations of integer points
+            bounded by linear constraints. Supported operations on sets include
+            intersection, union, set difference, emptiness check, convex hull,
+            (integer) affine hull, integer projection, and computing the lexicographic
+            minimum using parametric integer programming. It also includes an ILP solver
+            based on generalized basis reduction.
+            </p>
+            <p>
+            This package contains the development files.
+            </p>
+        </description>
+
+        <sources>
+            <file src="isl.tar.gz" subdir="sources"
+                sha256sum="fb34703bd694622aef92164bad983c15ec04274edbe19e614d9ecda54b85603d"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="52bfeba837ff2abde3041c40e1aebf353b25062f0de1b2933e6aa088ad47122d"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/fix-header.diff"/>
+                <file src="patches/open-runtime-lib.diff"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="libgmp-dev"/>
+        </requires>
+
+        <!-- build rules -->
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <!-- package rules -->
+    <xi:include href="libisl-dev.xml"/>
+    <xi:include href="libisl15.xml"/>
+
+    <!-- changelog -->
+    <xi:include href="changelog.xml"/>
+</control> 

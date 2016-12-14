@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <defines>
+        <def name="XPACK_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="gcc6" architecture-independent="false">
+        <description>
+            <summary>GCC, the GNU Compiler Collection (base package)</summary>
+            <p>
+            This package contains files common to all languages and libraries
+            contained in the GNU Compiler Collection (GCC).
+            </p>
+        </description>
+
+        <sources>
+            <file src="gcc-6-20160327.tar.bz2" subdir="sources"
+                sha256sum="38ed9959115ec33c41b71ae1f85005896660271c0b32eec48e660e2a28cc1d62"/>
+        </sources>
+
+        <patches>
+        </patches>
+
+        <requires>
+        </requires>
+
+        <!-- build rules -->
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <!-- package rules -->
+    <xi:include href="gcc-5-base.xml"/>
+
+    <!-- changelog -->
+    <xi:include href="changelog.xml"/>
+</control> 

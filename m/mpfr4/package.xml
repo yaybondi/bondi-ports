@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <defines>
+        <def name="XPACK_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="mpfr4" architecture-independent="false">
+        <description>
+            <summary>multiple precision floating-point computation</summary>
+            <p>
+            MPFR provides a library for multiple-precision floating-point computation
+            with correct rounding.  The computation is both efficient and has a
+            well-defined semantics. It copies the good ideas from the
+            ANSI/IEEE-754 standard for double-precision floating-point arithmetic
+            (53-bit mantissa).
+            </p>
+        </description>
+
+        <sources>
+            <file src="mpfr.tar.xz" subdir="sources"
+                sha256sum="6835a08bd992c8257641791e9a6a2b35b02336c8de26d0a8577953747e514a16"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="f961d2e9044c8a17a2b0e4206287e9f55b66307ef0a64eea8296426807b6679e"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/patch01"/>
+                <file src="patches/patch02"/>
+                <file src="patches/patch03"/>
+                <file src="patches/patch04"/>
+                <file src="patches/patch05"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="libgmp-dev"/>
+            <package name="automake"/>
+        </requires>
+
+        <!-- build rules -->
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <!-- package rules -->
+    <xi:include href="libmpfr4.xml"/>
+    <xi:include href="libmpfr-dev.xml"/>
+
+    <!-- changelog -->
+    <xi:include href="changelog.xml"/>
+</control> 

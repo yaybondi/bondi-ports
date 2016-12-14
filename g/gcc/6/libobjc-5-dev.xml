@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libobjc-5-dev" section="libdevel">
+    <description>
+        <summary>Runtime library for GNU Objective-C applications (development files)</summary>
+        <p>
+        This package contains the headers and static library files needed to build
+        GNU ObjC applications.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc-5-base" version="=="/>
+        <package name="libgcc-5-dev" version="=="/>
+        <package name="libobjc4" version="&gt;="/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

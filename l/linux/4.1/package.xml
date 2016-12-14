@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <source name="linux-4.1" architecture-independent="false">
+        <description>
+            <summary></summary>
+            <p>
+            </p>
+        </description>
+
+        <sources>
+            <file src="linux.tar.xz" subdir="sources"
+                sha256sum=""/>
+        </sources>
+
+        <requires>
+        </requires>
+
+        <!-- build rules -->
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <!-- package rules -->
+    <xi:include href="linux.xml"/>
+
+    <!-- changelog -->
+    <xi:include href="changelog.xml"/>
+</control>

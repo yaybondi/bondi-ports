@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libasan2" section="libs">
+    <description>
+        <summary>AddressSanitizer -- a fast memory error detector</summary>
+        <p>
+        AddressSanitizer (ASan) is a fast memory error detector.  It finds
+        use-after-free and {heap,stack,global}-buffer overflow bugs in C/C++ programs.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc-5-base" version="=="/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

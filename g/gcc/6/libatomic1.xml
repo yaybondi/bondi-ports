@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libatomic1" section="libs">
+    <description>
+        <summary>support library providing __atomic built-in functions</summary>
+        <p>
+        library providing __atomic built-in functions. When an atomic call cannot
+        be turned into lock-free instructions, GCC will make calls into this library.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc-5-base" version="=="/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

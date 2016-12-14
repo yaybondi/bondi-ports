@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libobjc4" section="libs">
+    <description>
+        <summary>Runtime library for GNU Objective-C applications</summary>
+        <p>
+        Library needed for GNU ObjC applications linked against the shared library.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc-5-base" version="=="/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

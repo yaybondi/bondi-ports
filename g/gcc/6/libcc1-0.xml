@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libcc1-0" section="libs">
+    <description>
+        <summary>GCC cc1 plugin for GDB</summary>
+        <p>
+        libcc1 is a plugin for GDB.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc-5-base" version="=="/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

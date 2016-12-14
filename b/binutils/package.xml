@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="binutils" architecture-independent="false">
+        <xi:include href="description.xml"/>
+
+        <sources>
+            <file src="binutils-2.27.51.20161201.tar.gz" subdir="sources"
+                sha256sum="917428442e8ed6b81f16f452ba7309e1cc460575928a367bef4b88a8fbcc1b8d"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="4a7c64d675cfe22b58e2287eab8894516d8c2be7805de7c9ac968ed2aa6a5c88"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/001_ld_makefile_patch.patch"/>
+                <file src="patches/002_gprof_profile_arcs.patch"/>
+                <file src="patches/003_gprof_see_also_monitor.patch"/>
+                <file src="patches/006_better_file_error.patch"/>
+                <file src="patches/012_check_ldrunpath_length.patch"/>
+                <file src="patches/013_bash_in_ld_testsuite.patch"/>
+                <file src="patches/128_ppc64_powerpc_biarch.patch"/>
+                <file src="patches/129_multiarch_libpath.patch"/>
+                <file src="patches/130_gold_disable_testsuite_build.patch"/>
+                <file src="patches/131_ld_bootstrap_testsuite.patch"/>
+                <file src="patches/135_bfd_version.patch"/>
+                <file src="patches/136_bfd_pic.patch"/>
+                <file src="patches/157_ar_scripts_with_tilde.patch"/>
+                <file src="patches/161_gold_dummy_zoption.diff"/>
+                <file src="patches/164_ld_doc_remove_xref.diff"/>
+                <file src="patches/gprof-build.diff"/>
+                <file src="patches/aarch64-libpath.diff"/>
+                <file src="patches/mips64-default-n64.diff"/>
+                <file src="patches/gold-mips.diff"/>
+                <file src="patches/mips-pt-gnu-stack.diff"/>
+                <file src="patches/pr20649.diff"/>
+                <file src="patches/ld-new-dtags-by-default.diff"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autoconf"/>
+            <package name="bison"/>
+            <package name="flex"/>
+            <package name="file"/>
+            <package name="xz-utils"/>
+            <package name="libc6-dev"/>
+            <package name="zlib1g-dev"/>
+        </requires>
+
+        <!-- build rules -->
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <!-- package rules -->
+    <xi:include href="binutils.xml"/>
+    <xi:include href="binutils-dev.xml"/>
+
+    <!-- changelog -->
+    <xi:include href="changelog.xml"/>
+</control>

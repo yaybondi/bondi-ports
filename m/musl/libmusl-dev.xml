@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libmusl-dev" section="libdevel">
+    <description>
+        <summary></summary>
+        <p>
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/libmpc.so"/>
+        <file src="/usr/lib/libmpc.a"/>
+        <file src="/usr/include"/>
+    </contents>
+</package>

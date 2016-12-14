@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="binutils" section="devel" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="description.xml"/>
+
+    <requires>
+        <package name="m4"/>
+        <package name="perl"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/*"/>
+        <file src="/usr/lib/lib*.*.so"/>
+        <file src="/usr/lib/ldscripts/"/>
+    </contents>
+</package>

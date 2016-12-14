@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libmusl1" section="libs">
+    <description>
+        <summary>multiple precision complex floating-point library</summary>
+        <p>
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/lib*.so.*"/>
+    </contents>
+</package>

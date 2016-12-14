@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgcc2" section="libs">
+    <description>
+        <summary>GCC support library</summary>
+        <p>
+        Shared version of the support library, a library of internal subroutines
+        that GCC uses to overcome shortcomings of particular machines, or
+        special needs for some languages.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc-5-base" version="=="/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>
