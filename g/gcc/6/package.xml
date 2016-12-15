@@ -15,11 +15,106 @@
         </description>
 
         <sources>
-            <file src="gcc-6-20160327.tar.bz2" subdir="sources"
-                sha256sum="38ed9959115ec33c41b71ae1f85005896660271c0b32eec48e660e2a28cc1d62"/>
+            <file src="gcc-6.2.0.tar.xz" subdir="sources"
+                sha256sum="d6c720212539518b3390885b558053ecaddb5a7c8768407ce7c59139cf54f6be"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="ff2116c4c1f73898dfdcd8ba656a473b870cf6569f674f19c2603c340d435e3a"/>
         </sources>
 
         <patches>
+            <patchset subdir="sources" strip="2">
+                <file src="patches/svn-updates.diff"/>
+                <file src="patches/libiberty-updates.diff"/>
+                <file src="patches/gcc-gfdl-build.diff"/>
+                <file src="patches/gcc-textdomain.diff"/>
+                <file src="patches/gcc-driver-extra-langs.diff"/>
+                <file src="patches/gcc-hash-style-gnu.diff"/>
+                <file src="patches/libstdc++-pic.diff"/>
+                <file src="patches/libstdc++-doclink.diff"/>
+                <file src="patches/libstdc++-man-3cxx.diff"/>
+                <file src="patches/libstdc++-test-installed.diff"/>
+                <file src="patches/libjava-stacktrace.diff"/>
+                <file src="patches/libjava-jnipath.diff"/>
+                <file src="patches/libjava-sjlj.diff"/>
+                <file src="patches/libjava-disable-plugin.diff"/>
+                <file src="patches/alpha-no-ev4-directive.diff"/>
+                <file src="patches/boehm-gc-getnprocs.diff"/>
+                <file src="patches/note-gnu-stack.diff"/>
+                <file src="patches/libgomp-omp_h-multilib.diff"/>
+                <file src="patches/gccgo-version.diff"/>
+                <file src="patches/pr47818.diff"/>
+                <file src="patches/gcc-base-version.diff"/>
+                <file src="patches/libgo-testsuite.diff"/>
+                <file src="patches/gcc-target-include-asm.diff"/>
+                <file src="patches/libgo-revert-timeout-exp.diff"/>
+                <file src="patches/libgo-setcontext-config.diff"/>
+                <file src="patches/gcc-auto-build.diff"/>
+                <file src="patches/kfreebsd-unwind.diff"/>
+                <file src="patches/libitm-no-fortify-source.diff"/>
+                <file src="patches/sparc64-biarch-long-double-128.diff"/>
+                <file src="patches/gcc-ia64-bootstrap-ignore.diff"/>
+                <file src="patches/gotools-configury.diff"/>
+                <file src="patches/pr66368.diff"/>
+                <file src="patches/pr67590.diff"/>
+                <file src="patches/ada-gnattools-ldflags.diff"/>
+                <file src="patches/libjit-ldflags.diff"/>
+                <file src="patches/gcc-SOURCE_DATE_EPOCH.diff"/>
+                <file src="patches/gcc-SOURCE_DATE_EPOCH-2.diff"/>
+                <file src="patches/cmd-go-combine-gccgo-s-ld-and-ldShared-methods.diff"/>
+                <file src="patches/libjava-mips64el.diff"/>
+                <file src="patches/PR55947-revert.diff"/>
+                <file src="patches/gccgo-issue16780.diff"/>
+                <file src="patches/pr77379.diff"/>
+                <file src="patches/vulcan-cpu.diff"/>
+                <file src="patches/vulcan-costs.diff"/>
+                <file src="patches/libffi-pax.diff"/>
+                <file src="patches/libffi-race-condition.diff"/>
+                <file src="patches/libgo-add-getrandom-mips-sparc.diff"/>
+                <file src="patches/libgo-fix-getrandom-clone-sparc64.diff"/>
+                <file src="patches/libgo-rawClone-no_split_stack.diff"/>
+                <file src="patches/libgo-rawClone-no-pt_regs.diff"/>
+                <file src="patches/libgo-elf-relocations-sparc64.diff"/>
+                <file src="patches/libobjc-system-gc.diff"/>
+                <file src="patches/libstdc++-functexcept.diff"/>
+                <file src="patches/ada-arm.diff"/>
+                <file src="patches/ada-kfreebsd.diff"/>
+                <file src="patches/ada-revert-pr63225.diff"/>
+                <file src="patches/ada-driver-check.diff"/>
+                <file src="patches/ada-gcc-name.diff"/>
+                <file src="patches/ada-default-project-path.diff"/>
+                <file src="patches/ada-library-project-files-soname.diff"/>
+                <file src="patches/ada-link-lib.diff"/>
+                <file src="patches/ada-libgnatvsn.diff"/>
+                <file src="patches/ada-libgnatprj.diff"/>
+                <file src="patches/ada-gnattools-cross.diff"/>
+                <file src="patches/ada-acats.diff"/>
+                <file src="patches/libgnatprj-cross-hack.diff"/>
+                <file src="patches/ada-sjlj.diff"/>
+                <file src="patches/ada-link-shlib.diff"/>
+                <file src="patches/sys-auxv-header.diff"/>
+                <file src="patches/libcilkrts-targets.diff"/>
+                <file src="patches/arm-multilib-soft.diff"/>
+                <file src="patches/arm-multilib-defaults.diff"/>
+                <file src="patches/gcc-ice-dump.diff"/>
+                <file src="patches/gcc-ice-apport.diff"/>
+                <file src="patches/skip-bootstrap-multilib.diff"/>
+                <file src="patches/libjava-fixed-symlinks.diff"/>
+                <file src="patches/libffi-ro-eh_frame_sect.diff"/>
+                <file src="patches/libffi-mips.diff"/>
+                <file src="patches/pr67899.diff"/>
+                <file src="patches/gcc-multiarch.diff"/>
+                <file src="patches/libjava-multiarch.diff"/>
+                <file src="patches/libjava-nobiarch-check.diff"/>
+                <file src="patches/config-ml.diff"/>
+                <file src="patches/g++-multiarch-incdir.diff"/>
+                <file src="patches/canonical-cpppath.diff"/>
+                <file src="patches/gcc-multilib-multiarch.diff"/>
+                <file src="patches/libgomp-kfreebsd-testsuite.diff"/>
+                <file src="patches/go-testsuite.diff"/>
+                <file src="patches/ada-749574.diff"/>
+                <file src="patches/ada-mips.diff"/>
+                <file src="patches/ada-bootstrap-compare.diff"/>
+            </patchset>
         </patches>
 
         <!-- build rules -->
