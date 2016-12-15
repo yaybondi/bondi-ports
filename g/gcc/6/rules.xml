@@ -4,8 +4,8 @@
     <prepare>
     <![CDATA[
 
-cd $XPACK_BUILD_DIR
-$XPACK_SOURCE_DIR/configure \
+cd $BOLT_BUILD_DIR
+$BOLT_SOURCE_DIR/configure \
     --prefix=/usr \
     --disable-nls
 
@@ -15,8 +15,8 @@ $XPACK_SOURCE_DIR/configure \
     <build>
     <![CDATA[
 
-cd $XPACK_BUILD_DIR
-make -j$XPACK_PARALLEL_JOBS
+cd $BOLT_BUILD_DIR
+make -j$BOLT_PARALLEL_JOBS
 
     ]]>
     </build>
@@ -24,8 +24,8 @@ make -j$XPACK_PARALLEL_JOBS
     <install>
     <![CDATA[
 
-cd $XPACK_BUILD_DIR
-make DESTDIR=$XPACK_INSTALL_DIR install
+cd $BOLT_BUILD_DIR
+make DESTDIR=$BOLT_INSTALL_DIR install
 
     ]]>
     </install>

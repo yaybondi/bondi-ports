@@ -2,7 +2,7 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <defines>
-        <def name="XPACK_BUILD_DIR" value="build"/>
+        <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
     <source name="gcc6" architecture-independent="false">
@@ -22,15 +22,9 @@
         <patches>
         </patches>
 
-        <requires>
-        </requires>
-
         <!-- build rules -->
         <xi:include href="rules.xml"/>
     </source>
-
-    <!-- package rules -->
-    <xi:include href="gcc-5-base.xml"/>
 
     <!-- changelog -->
     <xi:include href="changelog.xml"/>
