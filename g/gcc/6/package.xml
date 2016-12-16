@@ -15,7 +15,7 @@
         </description>
 
         <sources>
-            <file src="gcc-6.2.0.tar.xz" subdir="sources"
+            <file src="gcc-6.2.0-dfsg.tar.xz" subdir="sources"
                 sha256sum="d6c720212539518b3390885b558053ecaddb5a7c8768407ce7c59139cf54f6be"/>
             <file src="patches.01.tar.gz" subdir="patches"
                 sha256sum="ff2116c4c1f73898dfdcd8ba656a473b870cf6569f674f19c2603c340d435e3a"/>
