@@ -2,7 +2,7 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <defines>
-        <def name="XPACK_BUILD_DIR" value="build"/>
+        <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
     <source name="isl" architecture-independent="false">
@@ -16,16 +16,13 @@
             minimum using parametric integer programming. It also includes an ILP solver
             based on generalized basis reduction.
             </p>
-            <p>
-            This package contains the development files.
-            </p>
         </description>
 
         <sources>
-            <file src="isl.tar.gz" subdir="sources"
-                sha256sum="fb34703bd694622aef92164bad983c15ec04274edbe19e614d9ecda54b85603d"/>
+            <file src="isl-0.17.1.tar.xz" subdir="sources"
+                sha256sum="be152e5c816b477594f4c6194b5666d8129f3a27702756ae9ff60346a8731647"/>
             <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="52bfeba837ff2abde3041c40e1aebf353b25062f0de1b2933e6aa088ad47122d"/>
+                sha256sum="0a048b0146848d4b65f7d44d160813f9d455637e6e49aeb958a9ff37071914a1"/>
         </sources>
 
         <patches>
@@ -35,17 +32,9 @@
             </patchset>
         </patches>
 
-        <requires>
-            <package name="libgmp-dev"/>
-        </requires>
-
         <!-- build rules -->
         <xi:include href="rules.xml"/>
     </source>
-
-    <!-- package rules -->
-    <xi:include href="libisl-dev.xml"/>
-    <xi:include href="libisl15.xml"/>
 
     <!-- changelog -->
     <xi:include href="changelog.xml"/>

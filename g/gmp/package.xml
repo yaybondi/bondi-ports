@@ -2,7 +2,7 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <defines>
-        <def name="XPACK_BUILD_DIR" value="build"/>
+        <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
     <source name="gmp" architecture-independent="false">
@@ -20,21 +20,13 @@
         </description>
 
         <sources>
-            <file src="gmp.tar.xz" subdir="sources"
-                sha256sum="78a74cfd933bbdf7e93909a6069e53e8aba8389e9b3880300c926da7a7d55632"/>
+            <file src="gmp-6.1.1-dfsg.tar.xz" subdir="sources"
+                sha256sum="1c34c3c0c89c4f1270f6e3e579e7b7f9190eca6713311f0167bb9fee5b3750ee"/>
         </sources>
-
-        <requires>
-            <package name="m4"/>
-        </requires>
 
         <!-- build rules -->
         <xi:include href="rules.xml"/>
     </source>
-
-    <!-- package rules -->
-    <xi:include href="libgmp10.xml"/>
-    <xi:include href="libgmp-dev.xml"/>
 
     <!-- changelog -->
     <xi:include href="changelog.xml"/>

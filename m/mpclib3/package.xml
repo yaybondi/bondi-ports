@@ -2,7 +2,7 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <defines>
-        <def name="XPACK_BUILD_DIR" value="build"/>
+        <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
     <source name="mpclib3" architecture-independent="false">
@@ -25,24 +25,13 @@
         </description>
 
         <sources>
-            <file src="mpc.tar.gz" subdir="sources"
+            <file src="mpc-1.0.3.tar.gz" subdir="sources"
                 sha256sum="617decc6ea09889fb08ede330917a00b16809b8db88c29c31bfbb49cbf88ecc3"/>
         </sources>
-
-        <requires>
-            <package name="autotools-dev"/>
-            <package name="libmpfr-dev"/>
-            <package name="libgmp-dev"/>
-            <package name="automake"/>
-        </requires>
 
         <!-- build rules -->
         <xi:include href="rules.xml"/>
     </source>
-
-    <!-- package rules -->
-    <xi:include href="libmpc-dev.xml"/>
-    <xi:include href="libmpc3.xml"/>
 
     <!-- changelog -->
     <xi:include href="changelog.xml"/>

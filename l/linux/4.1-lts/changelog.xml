@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
-    <release version="4.1.17" revision="1" maintainer="Tobias Koch"
+    <release version="4.1.36" revision="1" maintainer="Tobias Koch"
      email="tobias.koch@nonterra.com" date="2016-12-14 15:14:00 GMT+3">
         <changeset>
             <li>Initial packaging</li>

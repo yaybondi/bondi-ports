@@ -2,31 +2,38 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <defines>
-        <def name="XPACK_BUILD_DIR" value="build"/>
+        <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
     <source name="musl" architecture-independent="false">
         <description>
-            <summary></summary>
+            <summary>A small, standards-conformling libc for Linux</summary>
             <p>
+                musl provides consistent quality and implementation behavior
+            from tiny embedded systems to full-fledged servers. Minimal
+            machine-specific code means less chance of breakage on minority
+            architectures and better success with “write once run everywhere”
+            C development.
+            </p>
+            <p>
+                musl's efficiency is unparalleled in Linux libc implementations.
+            Designed from the ground up for static linking, musl carefully avoids
+            pulling in large amounts of code or data that the application will
+            not use. Dynamic linking is also efficient; by integrating the entire
+            standard library implementation, including threads, math, and even the
+            dynamic linker itself into a single shared object, most of the startup
+            time and memory overhead of dynamic linking have been eliminated.
             </p>
         </description>
 
         <sources>
-            <file src="musl.tar.gz" subdir="sources"
-                sha256sum="35f6c00c84a6091bd5dab29eedde7508dae755ead92dcc0239f3677d1055b9b5"/>
+            <file src="musl-1.1.16~20161215.tar.gz" subdir="sources"
+                sha256sum="158f0c5ee1359964e582732f32fb3ce9dec4869df21aa6226da16f801587732d"/>
         </sources>
-
-        <requires>
-        </requires>
 
         <!-- build rules -->
         <xi:include href="rules.xml"/>
     </source>
-
-    <!-- package rules -->
-    <xi:include href="libmusl-dev.xml"/>
-    <xi:include href="libmusl1.xml"/>
 
     <!-- changelog -->
     <xi:include href="changelog.xml"/>
