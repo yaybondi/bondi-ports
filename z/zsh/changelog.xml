@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
-    <release version="5.2" revision="1" upstream-version="5.2-5"
+    <release version="5.2" revision="5" upstream-version="5.2-5"
         maintainer="Tobias Koch" email="tobias.koch@nonterra.com"
         date="2016-12-23 21:06:00+03:00">
         <changeset>
