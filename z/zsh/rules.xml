@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+cd $BOLT_SOURCE_DIR && ./Util/preconfig
+
+cd $BOLT_BUILD_DIR
+$BOLT_SOURCE_DIR/configure \
+    --disable-locale \
+    --prefix=/usr \
+    --bindir=/usr/bin \
+    --enable-max-jobtable-size=256 \
+    --enable-etcdir=/etc/zsh \
+    --enable-function-subdirs \
+    --enable-fndir=/usr/share/zsh/functions \
+    --with-tcsetpgrp \
+    --with-term-lib="ncursesw tinfo" \
+    --enable-cap --enable-pcre \
+    --enable-readnullcmd=pager \
+    --enable-custom-patchlevel=Bolt \
+    --enable-additional-fpath=/usr/share/zsh/vendor-functions,/usr/share/zsh/vendor-completion \
+    --disable-ansi2knr
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+cd $BOLT_BUILD_DIR
+make -j$BOLT_PARALLEL_JOBS
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd $BOLT_BUILD_DIR
+make DESTDIR=$BOLT_INSTALL_DIR install
+
+install -d -m 0755 "$BOLT_INSTALL_DIR"/usr/include/zsh
+install -d -m 0755 "$BOLT_INSTALL_DIR"/usr/include/zsh/Zle
+install -d -m 0755 "$BOLT_INSTALL_DIR"/usr/include/zsh/Modules
+install -d -m 0755 "$BOLT_INSTALL_DIR"/usr/include/zsh/Builtins
+install -d -m 0755 "$BOLT_INSTALL_DIR"/usr/share/aclocal
+install -d -m 0755 "$BOLT_INSTALL_DIR"/usr/share/zsh-dev
+
+cp -a "$BOLT_SOURCE_DIR"/Config/aczshoot.m4 \
+        "$BOLT_INSTALL_DIR"/usr/share/aclocal
+cp -a "$BOLT_SOURCE_DIR"/Src/*.h \
+        "$BOLT_INSTALL_DIR"/usr/include/zsh
+cp -a "$BOLT_SOURCE_DIR"/Src/Zle/*.h \
+        "$BOLT_INSTALL_DIR"/usr/include/zsh/Zle
+cp -a "$BOLT_SOURCE_DIR"/Src/Modules/*.h \
+        "$BOLT_INSTALL_DIR"/usr/include/zsh/Modules
+cp -a "$BOLT_SOURCE_DIR"/Src/makepro.awk \
+        "$BOLT_INSTALL_DIR"/usr/share/zsh-dev
+cp -a "$BOLT_BUILD_DIR"/config.h \
+        "$BOLT_INSTALL_DIR"/usr/include/zsh
+cp -a "$BOLT_BUILD_DIR"/Src/*.epro \
+        "$BOLT_INSTALL_DIR"/usr/include/zsh
+cp -a "$BOLT_BUILD_DIR"/Src/*.h \
+        "$BOLT_INSTALL_DIR"/usr/include/zsh
+cp -a "$BOLT_BUILD_DIR"/Src/*.mdh \
+        "$BOLT_INSTALL_DIR"/usr/include/zsh
+cp -a "$BOLT_BUILD_DIR"/Src/Zle/*.h \
+        "$BOLT_INSTALL_DIR"/usr/include/zsh/Zle
+cp -a "$BOLT_BUILD_DIR"/Src/Zle/*.mdh \
+        "$BOLT_INSTALL_DIR"/usr/include/zsh/Zle
+cp -a "$BOLT_BUILD_DIR"/Src/Modules/*.h \
+        "$BOLT_INSTALL_DIR"/usr/include/zsh/Modules
+cp -a "$BOLT_BUILD_DIR"/Src/Modules/*.mdh \
+        "$BOLT_INSTALL_DIR"/usr/include/zsh/Modules
+cp -a "$BOLT_BUILD_DIR"/Src/Builtins/*.h \
+        "$BOLT_INSTALL_DIR"/usr/include/zsh/Builtins
+cp -a "$BOLT_BUILD_DIR"/Src/Builtins/*.mdh \
+        "$BOLT_INSTALL_DIR"/usr/include/zsh/Builtins
+    ]]>
+    </install>
+</rules>

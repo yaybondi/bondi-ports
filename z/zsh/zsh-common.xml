@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="zsh-common" section="shells">
+    <description>
+        <summary>architecture independent files for Zsh</summary>
+        <p>
+        Zsh is a UNIX command interpreter (shell) usable as an
+        interactive login shell and as a shell script command
+        processor. Of the standard shells, zsh most closely resembles
+        ksh but includes many enhancements. Zsh has command-line editing,
+        built-in spelling correction, programmable command completion,
+        shell functions (with autoloading), a history mechanism, and a
+        host of other features.
+        </p>
+        <p>
+        This package contains the common zsh files shared by all
+        architectures.
+        </p>
+    </description>
+
+    <contents>
+        <dir src="/etc/zsh"/>
+        <file src="/usr/share/zsh/*/help/**/*"/>
+        <file src="/usr/share/zsh/*/scripts/**/*"/>
+        <file src="/usr/share/zsh/functions"/>
+    </contents>
+</package>

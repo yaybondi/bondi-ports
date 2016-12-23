@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="zsh" architecture-independent="false">
+        <description>
+            <summary>shell with lots of features</summary>
+            <p>
+            Zsh is a UNIX command interpreter (shell) usable as an
+            interactive login shell and as a shell script command
+            processor. Of the standard shells, zsh most closely resembles
+            ksh but includes many enhancements. Zsh has command-line editing,
+            built-in spelling correction, programmable command completion,
+            shell functions (with autoloading), a history mechanism, and a
+            host of other features.
+            </p>
+        </description>
+
+        <sources>
+            <file src="zsh-5.2.tar.xz" subdir="sources"
+                sha256sum="aa39c48a13d10da480593d4f17168ee221160d85773d2cd2e04a63233a9bf51a"/>
+            <file src="patches.05.tar.gz" subdir="patches"
+                sha256sum="1ca291f51c0de16faf2f104aab5f14e11b609501b40d5a9091fe811114fedfc5"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/further-mitigate-test-suite-hangs.patch"/>
+                <file src="patches/update-apt-completion-808317.patch"/>
+                <file src="patches/fix-aptitude-completion-for-0.7.5-807906.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autotools-dev"/>
+            <package name="bsdmainutils"/>
+            <package name="cm-super-minimal"/>
+            <package name="libcap-dev"/>
+            <package name="libncursesw5-dev"/>
+            <package name="libpcre3-dev"/>
+            <package name="perl"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="zsh-common.xml"/>
+    <xi:include href="zsh.xml"/>
+    <xi:include href="zsh-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
