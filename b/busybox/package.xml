@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="busybox" architecture-independent="false">
+        <description>
+            <summary>Tiny utilities for small and embedded systems</summary>
+            <p>
+            BusyBox combines tiny versions of many common UNIX utilities into a single
+            small executable. It provides minimalist replacements for the most common
+            utilities you would usually find on your desktop system (i.e., ls, cp, mv,
+            mount, tar, etc.). The utilities in BusyBox generally have fewer options than
+            their full-featured GNU cousins; however, the options that are included
+            provide the expected functionality and behave very much like their GNU
+            counterparts.
+            </p>
+        </description>
+
+        <sources>
+            <file src="busybox-1.22.0.tar.bz2" subdir="sources"
+                sha256sum="92f00cd391b7d5fa2215c8450abe2ba15f9d16c226e8855fb21b6c9a5b723a53"/>
+            <file src="patches.19.tar.gz" subdir="patches"
+                sha256sum="1fc810db4fce2b1a1f429d272d7c72ebd642d0b56e5567a8834e96644ff75279"/>
+            <file src="patches.cfg.tar.gz" subdir="patches"
+                sha256sum="6f15a8fa6ff0f7bd6f54bf0e1c9d76a16add147d20f9e46a633b63697c511390"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/1.22.1.diff"/>
+                <file src="patches/ash-in-bash-compat-mode-always-export-SHLVL.diff"/>
+                <file src="patches/libbb-fix-parsing-of-10101010-datetime-form.diff"/>
+                <file src="patches/testsuite-fix-last-which-change.diff"/>
+                <file src="patches/libarchive-open_zipped-does-not-need-to-check-extensions.diff"/>
+                <file src="patches/libbb-open_zipped-should-not-fail-on-non-compressed-files.diff"/>
+                <file src="patches/zcat:-complain-if-input-is-not-compressed.diff"/>
+                <file src="patches/lzop-add-overflow-check-CVE-2014-4607.patch"/>
+                <file src="patches/do-not-fail-on-missing-SIGPWR.patch"/>
+                <file src="patches/find:-support-perm-_BITS.diff"/>
+                <file src="patches/shell-ash-export-HOME.patch"/>
+                <file src="patches/version.patch"/>
+                <file src="patches/init-console.patch"/>
+                <file src="patches/u-mount-FreeBSD-support.patch"/>
+                <file src="patches/swaponoff-FreeBSD-support.patch"/>
+                <file src="patches/modprobe-read-modules-builtin.patch"/>
+                <file src="patches/stop-checking-ancient-kernel-version.patch"/>
+                <file src="patches/iproute-support-onelink-route-option-and-print-route-flags.patch"/>
+                <file src="patches/update-deb-format-support.patch"/>
+                <file src="patches/CVE-2014-9645.patch"/>
+                <file src="patches/defconfig.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="zip"/>
+            <package name="libc-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="busybox.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

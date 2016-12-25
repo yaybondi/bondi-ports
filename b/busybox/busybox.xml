@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox" section="utils">
+    <description>
+        <summary>Tiny utilities for small and embedded systems</summary>
+        <p>
+        BusyBox combines tiny versions of many common UNIX utilities into a single
+        small executable. It provides minimalist replacements for the most common
+        utilities you would usually find on your desktop system (i.e., ls, cp, mv,
+        mount, tar, etc.). The utilities in BusyBox generally have fewer options than
+        their full-featured GNU cousins; however, the options that are included
+        provide the expected functionality and behave very much like their GNU
+        counterparts.
+        </p>
+        <p>
+        This package installs the BusyBox binary but does not install
+        symlinks for any of the supported utilities.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/bin"/>
+    </contents>
+</package>
