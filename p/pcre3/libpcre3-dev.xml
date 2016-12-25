@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libpcre3-dev" section="libdevel">
+    <description>
+        <summary>Old Perl 5 Compatible Regular Expression Library - development files</summary>
+        <p>
+        This is a library of functions to support regular expressions whose syntax 
+        and semantics are as close as possible to those of the Perl 5 language.
+        </p>
+        <p>
+        New packages should use the newer pcre2 packages, and existing
+        packages should migrate to pcre2.
+        </p>
+        <p>
+        This package contains the development files, including headers, static 
+        libraries, and documentation.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libc6-dev"/>
+        <package name="libpcre3" version="=="/>
+        <package name="libpcrecpp0v5" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/*-config"/>
+        <file src="/usr/include/*"/>
+        <file src="/usr/lib/lib*.a"/>
+        <file src="/usr/lib/lib*.so"/>
+        <file src="/usr/lib/pkgconfig/*"/>
+    </contents>
+</package>

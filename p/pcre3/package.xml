@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="pcre3" architecture-independent="false">
+        <description>
+            <summary>Old Perl 5 Compatible Regular Expression Library - runtime files</summary>
+            <p>
+            This is a library of functions to support regular expressions whose syntax 
+            and semantics are as close as possible to those of the Perl 5 language.
+            </p>
+            <p>
+            New packages should use the newer pcre2 packages, and existing
+            packages should migrate to pcre2.
+            </p>
+        </description>
+
+        <sources>
+            <file src="pcre3-8.39.tar.bz2" subdir="sources"
+                sha256sum="b858099f82483031ee02092711689e7245586ada49e534a06e678b8ea9549e8b"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="7bcff9d1113fb744d74dc5b89c7f9bb6c28bd6d26972a0a7e88aa50e710c2034"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/PCRE6_compatible_API.patch"/>
+                <file src="patches/pcreposix.patch"/>
+                <file src="patches/pcre_info.patch"/>
+                <file src="patches/pcregrep.1-patch"/>
+                <file src="patches/soname.patch"/>
+                <file src="patches/no_jit_x32_powerpcspe.patch"/>
+                <file src="patches/Disable_JIT_on_sparc64.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="libc6-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libpcre3.xml"/>
+    <xi:include href="libpcrecpp0v5.xml"/>
+    <xi:include href="libpcre3-dev.xml"/>
+    <xi:include href="pcregrep.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

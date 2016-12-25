@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="pcregrep" section="utils">
+    <description>
+        <summary>grep utility that uses perl 5 compatible regexes.</summary>
+        <p>
+        Perl-style regexps have many useful features that the standard POSIX ones
+        don't; this is basically the same as grep but with the different
+        regexp syntax.
+        </p>
+        <p>
+        The other reason for the existence of pcregrep is that its source code is an
+        example of programming with libpcre.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/bin/pcregrep"/>
+    </contents>
+</package>
