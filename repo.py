@@ -316,8 +316,9 @@ def print_usage():
         "                                                                              \n"
         "COMMANDS:                                                                     \n"
         "                                                                              \n"
+        "  index             Refresh the repository index file.                        \n"
         "  list              Dump the repository index to standard output.             \n"
-        "  show  <pkg_name>  Show summary information about the given package.         \n"
+        "  show  <pkg_name>  Show summary information about package.                   \n"
         % VERSION
     )
 #end function
