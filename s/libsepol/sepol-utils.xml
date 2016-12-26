@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="sepol-utils" section="admin">
+    <description>
+        <summary>Security Enhanced Linux policy utility programs</summary>
+        <p>
+        This package provides a utility for a Security-enhanced
+        Linux system to rewrite existing mandatory access control policy with
+        different boolean setting, generating a new policy. Security-enhanced
+        Linux is a patch of the Linux kernel and a number of utilities with
+        enhanced security functionality designed to add mandatory access
+        controls to Linux. This package provides utility programs to get and
+        set process and file security contexts and to obtain security policy
+        decisions.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/bin"/>
+    </contents>
+</package>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libsepol" architecture-independent="false">
+        <description>
+            <summary>SELinux library for manipulating binary security policies</summary>
+            <p>
+            Security-enhanced Linux is a patch of the Linux kernel and a number
+            of utilities with enhanced security functionality designed to add
+            mandatory access controls to Linux. The Security-enhanced Linux
+            kernel contains new architectural components originally developed to
+            improve the security of the Flask operating system. These
+            architectural components provide general support for the enforcement
+            of many kinds of mandatory access control policies, including those
+            based on the concepts of Type Enforcement®, Role-based Access
+            Control, and Multi-level Security.
+            </p>
+        </description>
+
+        <sources>
+            <file src="libsepol-2.6.tar.gz" subdir="sources"
+                sha256sum="d856d6506054f52abeaa3543ea2f2344595a3dc05d0d873ed7f724f7a16b1874"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="43181bb8e5e0a24c259ac727438e60efc9b978cb6f801f0b7fcd9c20e4a282cc"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/fix_use-after-free_python3.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="file"/>
+            <package name="flex"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="sepol-utils.xml"/>
+    <xi:include href="libsepol1.xml"/>
+    <xi:include href="libsepol1-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
