@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <source name="libselinux" architecture-independent="false">
+        <description>
+            <summary>SELinux utility programs</summary>
+            <p>
+            This package provides various utility programs for a Security-enhanced
+            Linux system. Security-enhanced Linux is a patch of the Linux kernel
+            and a number of utilities with enhanced security functionality
+            designed to add mandatory access controls to Linux. This package
+            provides utility programs to get and set process and file security
+            contexts and to obtain security policy decisions.
+            </p>
+        </description>
+
+        <sources>
+            <file src="libselinux-2.6.tar.gz" subdir="sources"
+                sha256sum="4ea2dde50665c202253ba5caac7738370ea0337c47b251ba981c60d24e1a118a"/>
+            <file src="patches.03.tar.gz" subdir="patches"
+                sha256sum="5a99bffb847d58f10492bc5a471a6eeba91498beff77f69e3a96022260566c3a"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/fix-makefile-bugs.patch"/>
+                <file src="patches/fix-cross-compile.patch"/>
+                <file src="patches/fix_python3_bindings.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="file"/>
+            <package name="libsepol1-dev" version=">= 2.6"/>
+            <package name="libpcre3-dev"/>
+            <package name="pkg-config"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="selinux-utils.xml"/>
+    <xi:include href="libselinux1.xml"/>
+    <xi:include href="libselinux1-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

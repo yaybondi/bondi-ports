@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="selinux-utils" section="admin">
+    <description>
+        <summary>SELinux utility programs</summary>
+        <p>
+        This package provides various utility programs for a Security-enhanced
+        Linux system. Security-enhanced Linux is a patch of the Linux kernel
+        and a number of utilities with enhanced security functionality
+        designed to add mandatory access controls to Linux. This package
+        provides utility programs to get and set process and file security
+        contexts and to obtain security policy decisions.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/sbin/*"/>
+    </contents>
+</package>

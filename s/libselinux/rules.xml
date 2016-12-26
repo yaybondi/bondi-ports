@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+true
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make -j"$BOLT_PARALLEL_JOBS"
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BOLT_INSTALL_DIR"
+install -d -m 0755 usr/lib
+mv -v lib/* usr/lib/
+rm usr/lib/libselinux.so
+ln -s libselinux.so.1 usr/lib/libselinux.so
+
+    ]]>
+    </install>
+</rules>
