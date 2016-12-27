@@ -19,7 +19,7 @@
             <file src="patches.03.tar.gz" subdir="patches"
                 sha256sum="5a99bffb847d58f10492bc5a471a6eeba91498beff77f69e3a96022260566c3a"/>
             <file src="patches.extra.tar.gz" subdir="patches"
-                sha256sum="27cd7a1dd4f20d792636cbc1ea970dcfbee3e978ce7072cdf8bd1e2efe50ecd6"/>
+                sha256sum="69fee54526b57b89ab7b7be53919f6702d06972a7f4a6633891bd910c23ecb68"/>
         </sources>
         
         <patches>
@@ -30,6 +30,7 @@
                 <file src="patches/fix_python3_bindings.patch"/>
                 <!-- Bolt OS -->
                 <file src="patches/fix-readv-undeclared.patch"/>
+                <file src="patches/fix-sys-errno-include.patch"/>
             </patchset>
         </patches>
 
