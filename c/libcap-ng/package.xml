@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libcap-ng" architecture-independent="false">
+        <description>
+            <summary>Development and header files for libcap-ng</summary>
+            <p>
+            This library implements the user-space interfaces to the POSIX
+            1003.1e capabilities available in Linux kernels. These capabilities are
+            a partitioning of the all powerful root privilege into a set of distinct
+            privileges.
+            </p>
+            <p>
+            The libcap-ng library is intended to make programming with POSIX
+            capabilities much easier than the traditional libcap library.
+            </p>
+        </description>
+
+        <sources>
+            <file src="libcap-ng-0.7.7.tar.gz" subdir="sources"
+                sha256sum="615549ce39b333f6b78baee0c0b4ef18bc726c6bf1cca123dfd89dd963f6d06b"/>
+            <file src="patches.03.tar.gz" subdir="patches"
+                sha256sum="f7ab7474a2d6a18fc9227e0383961b3a21ff113591f5fd318cb4c7dbf6c6a88a"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/01_manpage_description.patch"/>
+                <file src="patches/02_fix_armel_segfault_memset.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autotools-dev"/>
+            <package name="libattr1-dev"/>
+            <package name="linux-kernel-headers"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libcap-ng-dev.xml"/>
+    <xi:include href="libcap-ng0.xml"/>
+    <xi:include href="libcap-ng-utils.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libcap-ng-dev" section="libdevel">
+    <description>
+        <summary>Development and header files for libcap-ng</summary>
+        <p>
+        This library implements the user-space interfaces to the POSIX
+        1003.1e capabilities available in Linux kernels. These capabilities are
+        a partitioning of the all powerful root privilege into a set of distinct
+        privileges.
+        </p>
+        <p>
+        The libcap-ng library is intended to make programming with POSIX
+        capabilities much easier than the traditional libcap library.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libcap-ng0" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include/*"/>
+        <file src="/usr/lib/lib*.a"/>
+        <file src="/usr/lib/lib*.so"/>
+        <file src="/usr/lib/pkgconfig/*.pc"/>
+        <file src="/usr/share/aclocal/*"/>
+    </contents>
+</package>
