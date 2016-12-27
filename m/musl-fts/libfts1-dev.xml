@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libfts1-dev" section="libdevel">
+    <description>
+        <summary></summary>
+        <p>
+        </p>
+    </description>
+
+    <requires>
+        <package name="libfts1" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include/"/>
+        <file src="/usr/lib/*.a"/>
+        <file src="/usr/lib/*.so"/>
+    </contents>
+</package>
