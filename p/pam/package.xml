@@ -21,8 +21,47 @@
             <file src="pam-1.1.8.tar.gz" subdir="sources"
                 sha256sum="4183409a450708a976eca5af561dbf4f0490141a08e86e4a1e649c7c1b094876"/>
             <file src="patches.3.3.tar.gz" subdir="patches"
-                sha256sum="6c601072ce6075fd0b09d3639bd33261b655bc95310209e7fdbc4604bbb6f9e9"/>
+                sha256sum="6d4f6ea6e6149abb4acdb27a77e5fe494f39db257f074dadbaf1e85150b5cb39"/>
+            <file src="patches.extra.tar.gz" subdir="patches"
+                sha256sum="433c5639df5738b1c822c9e87f0d94fc368298ca6bba12215a70a60d97bfd626"/>
         </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <!-- Debian -->
+                <file src="patches/pam_unix_fix_sgid_shadow_auth.patch"/>
+                <file src="patches/pam_unix_dont_trust_chkpwd_caller.patch"/>
+                <file src="patches/007_modules_pam_unix"/>
+                <file src="patches/008_modules_pam_limits_chroot"/>
+                <file src="patches/021_nis_cleanup"/>
+                <file src="patches/022_pam_unix_group_time_miscfixes"/>
+                <file src="patches/026_pam_unix_passwd_unknown_user"/>
+                <file src="patches/do_not_check_nis_accidentally"/>
+                <file src="patches/027_pam_limits_better_init_allow_explicit_root"/>
+                <file src="patches/031_pam_include"/>
+                <file src="patches/032_pam_limits_EPERM_NOT_FATAL"/>
+                <file src="patches/036_pam_wheel_getlogin_considered_harmful"/>
+                <file src="patches/hurd_no_setfsuid"/>
+                <file src="patches/040_pam_limits_log_failure"/>
+                <file src="patches/045_pam_dispatch_jump_is_ignore"/>
+                <file src="patches/054_pam_security_abstract_securetty_handling"/>
+                <file src="patches/055_pam_unix_nullok_secure"/>
+                <file src="patches/cve-2010-4708.patch"/>
+                <file src="patches/PAM-manpage-section"/>
+                <file src="patches/update-motd"/>
+                <file src="patches/no_PATH_MAX_on_hurd"/>
+                <file src="patches/lib_security_multiarch_compat"/>
+                <file src="patches/pam-loginuid-in-containers"/>
+                <file src="patches/cve-2013-7041.patch"/>
+                <file src="patches/cve-2014-2583.patch"/>
+                <file src="patches/cve-2015-3238.patch"/>
+                <file src="patches/pam-limits-nofile-fd-setsize-cap"/>
+                <file src="patches/pam_namespace_fix_bashism.patch"/>
+                <file src="patches/make_documentation_reproducible.patch"/>
+                <!-- Bolt -->
+                <file src="patches/pam-1.2.1-innetgr.patch"/>
+            </patchset>
+        </patches>
 
         <requires>
             <package name="bzip2"/>
