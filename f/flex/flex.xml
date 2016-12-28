@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="flex" section="devel">
+    <description>
+        <summary>fast lexical analyzer generator</summary>
+        <p>
+        Flex is a tool for generating scanners: programs which recognized lexical
+        patterns in text. It reads the given input files for a description of a
+        scanner to generate. The description is in the form of pairs of regular
+        expressions and C code, called rules. Flex generates as output a C source
+        file, lex.yy.c, which defines a routine yylex(). This file is compiled
+        and linked with the -lfl library to produce an executable. When the
+        executable is run, it analyzes its input for occurrences of the regular
+        expressions. Whenever it finds one, it executes the corresponding C code.
+        </p>
+    </description>
+
+    <requires>
+        <package name="m4"/>
+        <package name="dpkg" version=">= 1.15.4"/>
+        <package name="debconf|debconf-2.0"/>
+    </requires>
+
+    <contents>
+        <file src="/debian/tmp/bin"/>
+        <file src="/debian/tmp/share"/>
+    </contents>
+</package>

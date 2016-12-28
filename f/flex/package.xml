@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="flex" architecture-independent="false">
+        <description>
+            <summary>fast lexical analyzer generator</summary>
+            <p>
+            Flex is a tool for generating scanners: programs which recognized lexical
+            patterns in text. It reads the given input files for a description of a
+            scanner to generate. The description is in the form of pairs of regular
+            expressions and C code, called rules. Flex generates as output a C source
+            file, lex.yy.c, which defines a routine yylex(). This file is compiled
+            and linked with the -lfl library to produce an executable. When the
+            executable is run, it analyzes its input for occurrences of the regular
+            expressions. Whenever it finds one, it executes the corresponding C code.
+            </p>
+        </description>
+
+        <sources>
+            <file src="flex-2.6.1.tar.gz" subdir="sources"
+                sha256sum="45ca57aa8c9c2539bc201f602279d8730d20450514b36e867853e212c0e55438"/>
+        </sources>
+
+        <requires>
+            <package name="bison"/>
+            <package name="gettext"/>
+            <package name="texinfo"/>
+            <package name="help2man"/>
+            <package name="file"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="flex.xml"/>
+    <xi:include href="libfl-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
