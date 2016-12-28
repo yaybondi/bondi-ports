@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="m4" architecture-independent="false">
+        <description>
+            <summary>macro processing language</summary>
+            <p>
+            GNU `m4' is an implementation of the traditional UNIX macro
+            processor. It is mostly SVR4 compatible, although it has some
+            extensions (for example, handling more than 9 positional parameters to
+            macros). `m4' also has builtin functions for including files, running
+            shell commands, doing arithmetic, etc. Autoconf needs GNU `m4' for
+            generating `configure' scripts, but not for running them.
+            </p>
+        </description>
+
+        <sources>
+            <file src="m4-1.4.17.tar.xz" subdir="sources"
+                sha256sum="f0543c3beb51fa6b3337d8025331591e0e18d8ec2886ed391f1aade43477d508"/>
+            <file src="patches.05.tar.gz" subdir="patches"
+                sha256sum="a0c5f5bded6b454007b36f34e6862423bed79b1a6702a3ac96f486148896fb1f"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/01-float-endian-detection"/>
+                <file src="patches/02-add-escapes-for-braces-in-perl-regex"/>
+                <file src="patches/99-config-guess-config-sub"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="libsigsegv-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="m4.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

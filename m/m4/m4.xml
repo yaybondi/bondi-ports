@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="m4" section="interpreters">
+    <description>
+        <summary>macro processing language</summary>
+        <p>
+        GNU `m4' is an implementation of the traditional UNIX macro
+        processor. It is mostly SVR4 compatible, although it has some
+        extensions (for example, handling more than 9 positional parameters to
+        macros). `m4' also has builtin functions for including files, running
+        shell commands, doing arithmetic, etc. Autoconf needs GNU `m4' for
+        generating `configure' scripts, but not for running them.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/bin/*"/>
+        <file src="/usr/share/*"/>
+    </contents>
+</package>
