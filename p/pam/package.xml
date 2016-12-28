@@ -23,7 +23,7 @@
             <file src="patches.3.3.tar.gz" subdir="patches"
                 sha256sum="6d4f6ea6e6149abb4acdb27a77e5fe494f39db257f074dadbaf1e85150b5cb39"/>
             <file src="patches.extra.tar.gz" subdir="patches"
-                sha256sum="433c5639df5738b1c822c9e87f0d94fc368298ca6bba12215a70a60d97bfd626"/>
+                sha256sum="29af5d5cbb128848752c5cb0332b518a54e58792343b0d27fa444d618db6b4c7"/>
         </sources>
         
         <patches>
@@ -60,6 +60,7 @@
                 <file src="patches/make_documentation_reproducible.patch"/>
                 <!-- Bolt -->
                 <file src="patches/pam-1.2.1-innetgr.patch"/>
+                <file src="patches/fix-compat.patch"/>
             </patchset>
         </patches>
 
