@@ -19,12 +19,17 @@
                 sha256sum="8923917332daa7833bbc0c1d9eb012167093fbad000da4a9630fb3356aff8cdc"/>
             <file src="patches.01.tar.gz" subdir="patches"
                 sha256sum="03e4073d64c56121e5491e5987a59aa6976377e068c3b8a27c10f6f98765ec97"/>
+            <file src="patches.extra.tar.gz" subdir="patches"
+                sha256sum="8da7b2409f4ed684750ed242fa127caa7a160c7401aaa64a20af9eb03a95cd92"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/01-no-refusemanualstop.patch"/>
                 <file src="patches/02-restorecon-path.patch"/>
+                <!-- Bolt -->
+                <file src="patches/fix-includes.patch"/>
             </patchset>
         </patches>
 
