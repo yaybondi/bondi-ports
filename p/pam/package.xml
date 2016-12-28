@@ -62,6 +62,7 @@
                 <file src="patches/pam-1.2.1-innetgr.patch"/>
                 <file src="patches/fix-compat.patch"/>
                 <file src="patches/crypt-is-in-libc.patch"/>
+                <file src="patches/disable-mod-rhosts.patch"/>
             </patchset>
         </patches>
 
