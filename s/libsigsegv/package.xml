@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libsigsegv" architecture-independent="false">
+        <description>
+            <summary>Library for handling page faults in a portable way</summary>
+            <p>
+            GNU libsigsegv is a library that allows handling page faults in a
+            portable way. It is used e.g. for generational garbage collectors
+            and stack overflow handlers.
+            </p>
+            <p>
+            This package contains the shared library.
+            </p>
+        </description>
+
+        <sources>
+            <file src="libsigsegv-2.10.tar.gz" subdir="sources"
+                sha256sum="8460a4a3dd4954c3d96d7a4f5dd5bc4d9b76f5754196aa245287553b26d2199a"/>
+            <file src="patches.05.tar.gz" subdir="patches"
+                sha256sum="5180ccab8c482dae86aee4b53a2a7ff1a3ed9b112d79eb20f96a68f1900e8b12"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/configure-patch-for-kfreebsd-debian.patch"/>
+                <file src="patches/no-stackhandler-on-s390.patch"/>
+                <file src="patches/sparc-fix-sigsegv-fault-stackpointer-definition.patch"/>
+                <file src="patches/aarch64-stack-direction.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autotools-dev"/>
+            <package name="autoconf"/>
+            <package name="automake"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libsigsegv2.xml"/>
+    <xi:include href="libsigsegv-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

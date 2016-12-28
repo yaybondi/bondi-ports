@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libsigsegv2" section="libs">
+    <description>
+        <summary>Library for handling page faults in a portable way</summary>
+        <p>
+        GNU libsigsegv is a library that allows handling page faults in a
+        portable way. It is used e.g. for generational garbage collectors
+        and stack overflow handlers.
+        </p>
+        <p>
+        This package contains the shared library.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libsigsegv.so.*"/>
+    </contents>
+</package>
