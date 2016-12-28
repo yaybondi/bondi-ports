@@ -23,7 +23,7 @@
             <file src="patches.3.3.tar.gz" subdir="patches"
                 sha256sum="6d4f6ea6e6149abb4acdb27a77e5fe494f39db257f074dadbaf1e85150b5cb39"/>
             <file src="patches.extra.tar.gz" subdir="patches"
-                sha256sum="29af5d5cbb128848752c5cb0332b518a54e58792343b0d27fa444d618db6b4c7"/>
+                sha256sum="53a00e21cce19985c8a7b6d5d5c0ca7c37cd02c26c2445a416f4ee25a4a235e7"/>
         </sources>
         
         <patches>
