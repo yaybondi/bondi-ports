@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="pam" architecture-independent="false">
+        <description>
+            <summary>Pluggable Authentication Modules library</summary>
+            <p>
+            Contains the shared library for Linux-PAM, a library that enables the
+            local system administrator to choose how applications authenticate users.
+            In other words, without rewriting or recompiling a PAM-aware application,
+            it is possible to switch between the authentication mechanism(s) it uses.
+            One may entirely upgrade the local authentication system without touching
+            the applications themselves.
+            </p>
+        </description>
+
+        <sources>
+            <file src="pam-1.1.8.tar.gz" subdir="sources"
+                sha256sum="4183409a450708a976eca5af561dbf4f0490141a08e86e4a1e649c7c1b094876"/>
+            <file src="patches.3.3.tar.gz" subdir="patches"
+                sha256sum="6c601072ce6075fd0b09d3639bd33261b655bc95310209e7fdbc4604bbb6f9e9"/>
+        </sources>
+
+        <requires>
+            <package name="bzip2"/>
+            <package name="flex"/>
+            <package name="libdb-dev"/>
+            <package name="libselinux1-dev"/>
+            <package name="libaudit-dev"/>
+            <package name="pkg-config"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libpam0g.xml"/>
+    <xi:include href="libpam-modules.xml"/>
+    <xi:include href="libpam-modules-bin.xml"/>
+    <xi:include href="libpam-runtime.xml"/>
+    <xi:include href="libpam0g-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

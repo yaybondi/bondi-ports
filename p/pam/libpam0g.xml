@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libpam0g" section="libs">
+    <description>
+        <summary>Pluggable Authentication Modules library</summary>
+        <p>
+        Contains the shared library for Linux-PAM, a library that enables the
+        local system administrator to choose how applications authenticate users.
+        In other words, without rewriting or recompiling a PAM-aware application,
+        it is possible to switch between the authentication mechanism(s) it uses.
+        One may entirely upgrade the local authentication system without touching
+        the applications themselves.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/lib*.so.*"/>
+    </contents>
+</package>

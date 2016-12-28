@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libpam-modules" section="admin">
+    <description>
+        <summary>Pluggable Authentication Modules for PAM</summary>
+        <p>
+        This package completes the set of modules for PAM. It includes the
+        pam_unix.so module as well as some specialty modules.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libpam0g" version=">= 1.1.3-2"/>
+        <package name="libpam-modules-bin" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/etc/security/*"/>
+        <file src="/usr/lib/security/*.so"/>
+    </contents>
+</package>

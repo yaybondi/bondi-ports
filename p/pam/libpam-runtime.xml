@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libpam-runtime" section="admin">
+    <description>
+        <summary>Runtime support for the PAM library</summary>
+        <p>
+        Contains configuration files and directories required for
+        authentication to work on Debian systems. This package is required
+        on almost all installations.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libpam-modules" version=">= 1.0.1-6"/>
+    </requires>
+
+    <contents>
+        <dir src="/var/lib/pam"/>
+    </contents>
+</package>

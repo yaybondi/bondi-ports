@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libpam0g-dev" section="libdevel">
+    <description>
+        <summary>Development files for PAM</summary>
+        <p>
+        Contains C header files and development libraries for libpam, the Pluggable
+        Authentication Modules, a library that enables the local system
+        administrator to choose how applications authenticate users.
+        </p>
+        <p>
+        PAM decouples applications from the authentication mechanism, making it
+        possible to upgrade the authentication system without recompiling or
+        rewriting the applications.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libpam0g" version="=="/>
+        <package name="libc6-dev"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include/security/*"/>
+        <file src="/usr/lib/*.a"/>
+    </contents>
+</package>

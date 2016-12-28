@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libpam-modules-bin" section="admin">
+    <description>
+        <summary>Pluggable Authentication Modules for PAM - helper binaries</summary>
+        <p>
+        This package contains helper binaries used by the standard set of PAM
+        modules in the libpam-modules package.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/sbin/mkhomedir_helper"/>
+        <file src="/usr/sbin/pam_tally"/>
+        <file src="/usr/sbin/pam_tally2"/>
+        <file src="/usr/sbin/pam_timestamp_check"/>
+        <file src="/usr/sbin/unix_chkpwd"/>
+        <file src="/usr/sbin/unix_update"/>
+    </contents>
+</package>
