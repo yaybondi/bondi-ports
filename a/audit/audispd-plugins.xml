@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="audispd-plugins" section="admin">
+    <description>
+        <summary>Plugins for the audit event dispatcher</summary>
+        <p>
+        The audispd-plugins package provides plugins for the real-time
+        interface to the audit system, audispd. These plugins can do things
+        like relay events to remote machines or analyze events for suspicious
+        behavior.
+        </p>
+    </description>
+
+    <requires>
+        <package name="auditd"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/sbin/audisp-remote"/>
+        <file src="/usr/sbin/audispd-zos-remote"/>
+    </contents>
+</package>

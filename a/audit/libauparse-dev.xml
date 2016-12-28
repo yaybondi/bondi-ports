@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libauparse-dev" section="libdevel">
+    <description>
+        <summary>Header files and static library for the libauparse0 library</summary>
+        <p>
+        The audit-libs parse package contains the dynamic libraries needed for
+        applications to use the audit framework. It is used to monitor systems for
+        security related events.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libauparse0" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include/auparse-defs.h"/>
+        <file src="/usr/include/auparse.h"/>
+        <file src="/usr/lib/libauparse.a"/>
+        <file src="/usr/lib/libauparse.so"/>
+        <file src="/usr/lib/pkgconfig/auparse.pc"/>
+    </contents>
+</package>

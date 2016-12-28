@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libaudit1" section="libs">
+    <description>
+        <summary>Dynamic library for security auditing</summary>
+        <p>
+        The audit-libs package contains the dynamic libraries needed for
+        applications to use the audit framework. It is used to monitor systems for
+        security related events.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libaudit-common" version=">=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libaudit.so.*"/>
+    </contents>
+</package>

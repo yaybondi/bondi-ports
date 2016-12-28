@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libaudit-dev" section="libdevel">
+    <description>
+        <summary>Header files and static library for security auditing</summary>
+        <p>
+        The audit-libs-devel package contains the static libraries and header
+        files needed for developing applications that need to use the audit
+        framework libraries.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libaudit1" version="=="/>
+        <package name="libcap-ng-dev"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include/libaudit.h"/>
+        <file src="/usr/lib/libaudit.a"/>
+        <file src="/usr/lib/libaudit.so"/>
+        <file src="/usr/lib/pkgconfig/audit.pc"/>
+        <file src="/usr/share/aclocal/audit.m4"/>
+    </contents>
+</package>
