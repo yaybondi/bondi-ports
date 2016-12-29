@@ -22,7 +22,8 @@
     </requires>
 
     <contents>
-        <file src="/debian/tmp/include"/>
-        <file src="/debian/tmp/lib"/>
+        <file src="/usr/include"/>
+        <file src="/usr/lib/*.so"/>
+        <file src="/usr/lib/*.a"/>
     </contents>
 </package>

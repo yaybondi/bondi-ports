@@ -16,12 +16,10 @@
 
     <requires>
         <package name="m4"/>
-        <package name="dpkg" version=">= 1.15.4"/>
-        <package name="debconf|debconf-2.0"/>
     </requires>
 
     <contents>
-        <file src="/debian/tmp/bin"/>
-        <file src="/debian/tmp/share"/>
+        <file src="/usr/bin"/>
+        <file src="/usr/share"/>
     </contents>
 </package>
