@@ -22,14 +22,19 @@
                 sha256sum="8460a4a3dd4954c3d96d7a4f5dd5bc4d9b76f5754196aa245287553b26d2199a"/>
             <file src="patches.05.tar.gz" subdir="patches"
                 sha256sum="5180ccab8c482dae86aee4b53a2a7ff1a3ed9b112d79eb20f96a68f1900e8b12"/>
+            <file src="patches.extra.tar.gz" subdir="patches"
+                sha256sum="72d7f0f233f5e92bc5110101b70d1ba837c4b89432caf64f6d0d04c3e06f943a"/>
         </sources>
         
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/configure-patch-for-kfreebsd-debian.patch"/>
                 <file src="patches/no-stackhandler-on-s390.patch"/>
                 <file src="patches/sparc-fix-sigsegv-fault-stackpointer-definition.patch"/>
                 <file src="patches/aarch64-stack-direction.patch"/>
+                <!-- Bolt -->
+                <file src="patches/musl-uses-posix-fault.patch"/>
             </patchset>
         </patches>
 
