@@ -24,7 +24,7 @@
             <file src="patches.19.tar.gz" subdir="patches"
                 sha256sum="1fc810db4fce2b1a1f429d272d7c72ebd642d0b56e5567a8834e96644ff75279"/>
             <file src="patches.cfg.tar.gz" subdir="patches"
-                sha256sum="da4bc425c6c96351d6570695eedee11a17e2f5e8990c15ccb54050ca9dea0aae"/>
+                sha256sum="2d349c8bd8e9a993d37c2494448cab860490e1d4bd0bf61c235c1d70fd82fcef"/>
         </sources>
         
         <patches>
