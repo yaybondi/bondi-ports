@@ -14,7 +14,15 @@
         <sources>
             <file src="linux-4.1.36.tar.xz" subdir="sources"
                 sha256sum="e1526ddf1222a89399f0d0b0921c46fe727812571dd3a7f42be9f03472f11590"/>
+            <file src="patches.extra.tar.gz" subdir="patches"
+                sha256sum="63ad89e449f607bb915575cfa79cfb599065b07b4c5187656eb58eb12efa2201"/>
         </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/libc-compat-h-dont-assume-glibc.patch"/>
+            </patchset>
+        </patches>
 
         <!-- build rules -->
         <xi:include href="rules.xml"/>
