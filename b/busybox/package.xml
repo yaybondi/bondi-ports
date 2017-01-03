@@ -24,11 +24,12 @@
             <file src="patches.19.tar.gz" subdir="patches"
                 sha256sum="1fc810db4fce2b1a1f429d272d7c72ebd642d0b56e5567a8834e96644ff75279"/>
             <file src="patches.cfg.tar.gz" subdir="patches"
-                sha256sum="2d349c8bd8e9a993d37c2494448cab860490e1d4bd0bf61c235c1d70fd82fcef"/>
+                sha256sum="f004d8457f39956969b3b4773e6654d2aa62db9f021b5e0ffd38a6c056f35e3b"/>
         </sources>
         
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/1.22.1.diff"/>
                 <file src="patches/ash-in-bash-compat-mode-always-export-SHLVL.diff"/>
                 <file src="patches/libbb-fix-parsing-of-10101010-datetime-form.diff"/>
@@ -49,6 +50,7 @@
                 <file src="patches/iproute-support-onelink-route-option-and-print-route-flags.patch"/>
                 <file src="patches/update-deb-format-support.patch"/>
                 <file src="patches/CVE-2014-9645.patch"/>
+                <!-- Bolt OS -->
                 <file src="patches/defconfig.patch"/>
             </patchset>
         </patches>
