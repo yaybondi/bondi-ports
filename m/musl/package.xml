@@ -30,7 +30,7 @@
             <file src="musl-1.1.16~20161215.tar.gz" subdir="sources"
                 sha256sum="158f0c5ee1359964e582732f32fb3ce9dec4869df21aa6226da16f801587732d"/>
             <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="4153aafa7c0e2830c61910b20cce8b9ef939a65ec8dbbc0f5f13020c3c3ce750"/>
+                sha256sum="4007beb9a4e22e9ccaa951a60ce167e13f418c6cc9d314759615e9145c52075f"/>
         </sources>
 
         <patches>
