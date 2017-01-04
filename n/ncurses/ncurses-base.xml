@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="ncurses-base" section="misc">
+    <description>
+        <summary>basic terminal type definitions</summary>
+        <p>
+        The ncurses library routines are a terminal-independent method of
+        updating character screens with reasonable optimization.
+        </p>
+        <p>
+        This package contains terminfo data files to support the most common types of
+        terminal, including ansi, dumb, linux, rxvt, screen, sun, vt100, vt102, vt220,
+        vt52, and xterm.
+        </p>
+    </description>
+
+    <contents>
+        <dir src="/usr/share/terminfo"/>
+        <file src="/etc/terminfo"/>
+        <file src="/usr/lib/terminfo"/>
+        <file src="/usr/share/tabset"/>
+    </contents>
+</package>

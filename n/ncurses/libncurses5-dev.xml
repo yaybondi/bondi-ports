@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libncurses5-dev" section="libdevel">
+    <description>
+        <summary>developer's libraries for ncurses</summary>
+        <p>
+        The ncurses library routines are a terminal-independent method of
+        updating character screens with reasonable optimization.
+        </p>
+        <p>
+        This package contains the header files, static libraries
+        and symbolic links that developers using ncurses will need.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libtinfo5" version="=="/>
+        <package name="libncurses5" version="=="/>
+        <package name="libtinfo-dev" version="=="/>
+        <package name="libc6-dev|libc-dev"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/ncurses5-config"/>
+        <file src="/usr/include/*.h"/>
+        <file src="/usr/lib/libcurses.a"/>
+        <file src="/usr/lib/libform.a"/>
+        <file src="/usr/lib/libform.so"/>
+        <file src="/usr/lib/libmenu.a"/>
+        <file src="/usr/lib/libmenu.so"/>
+        <file src="/usr/lib/libncurses++.a"/>
+        <file src="/usr/lib/libncurses.a"/>
+        <file src="/usr/lib/libncurses.so"/>
+        <file src="/usr/lib/libpanel.a"/>
+        <file src="/usr/lib/libpanel.so"/>
+        <file src="/usr/lib/pkgconfig/form.pc"/>
+        <file src="/usr/lib/pkgconfig/menu.pc"/>
+        <file src="/usr/lib/pkgconfig/ncurses++.pc"/>
+        <file src="/usr/lib/pkgconfig/ncurses.pc"/>
+        <file src="/usr/lib/pkgconfig/panel.pc"/>
+    </contents>
+</package>

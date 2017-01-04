@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="ncurses-bin" section="utils">
+    <description>
+        <summary>terminal-related programs and man pages</summary>
+        <p>
+        The ncurses library routines are a terminal-independent method of
+        updating character screens with reasonable optimization.
+        </p>
+        <p>
+        This package contains the programs used for manipulating the terminfo
+        database and individual terminfo entries, as well as some programs for
+        resetting terminals and such.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/bin"/>
+    </contents>
+</package>

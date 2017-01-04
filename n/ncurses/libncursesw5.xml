@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libncursesw5" section="libs">
+    <description>
+        <summary>shared libraries for terminal handling (wide character support)</summary>
+        <p>
+        The ncurses library routines are a terminal-independent method of
+        updating character screens with reasonable optimization.
+        </p>
+        <p>
+        This package contains the shared libraries necessary to run programs
+        compiled with ncursesw, which includes support for wide characters.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libtinfo5" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libformw.so.*"/>
+        <file src="/usr/lib/libmenuw.so.*"/>
+        <file src="/usr/lib/libncursesw.so.*"/>
+        <file src="/usr/lib/libpanelw.so.*"/>
+    </contents>
+</package>

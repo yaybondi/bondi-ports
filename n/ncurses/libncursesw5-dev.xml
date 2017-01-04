@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libncursesw5-dev" section="libdevel">
+    <description>
+        <summary>developer's libraries for ncursesw</summary>
+        <p>
+        The ncurses library routines are a terminal-independent method of
+        updating character screens with reasonable optimization.
+        </p>
+        <p>
+        This package contains the header files, static libraries
+        and symbolic links that developers using ncursesw will need.
+        </p>
+        <p>
+        This package includes support for wide characters.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libtinfo5" version="=="/>
+        <package name="libncursesw5" version="=="/>
+        <package name="libtinfo-dev" version="=="/>
+        <package name="libc6-dev|libc-dev"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/ncursesw5-config"/>
+        <file src="/usr/include/ncursesw"/>
+        <file src="/usr/lib/libformw.a"/>
+        <file src="/usr/lib/libformw.so"/>
+        <file src="/usr/lib/libmenuw.a"/>
+        <file src="/usr/lib/libmenuw.so"/>
+        <file src="/usr/lib/libncurses++w.a"/>
+        <file src="/usr/lib/libncursesw.a"/>
+        <file src="/usr/lib/libncursesw.so"/>
+        <file src="/usr/lib/libpanelw.a"/>
+        <file src="/usr/lib/libpanelw.so"/>
+        <file src="/usr/lib/pkgconfig/formw.pc"/>
+        <file src="/usr/lib/pkgconfig/menuw.pc"/>
+        <file src="/usr/lib/pkgconfig/ncurses++w.pc"/>
+        <file src="/usr/lib/pkgconfig/ncursesw.pc"/>
+        <file src="/usr/lib/pkgconfig/panelw.pc"/>
+    </contents>
+</package>

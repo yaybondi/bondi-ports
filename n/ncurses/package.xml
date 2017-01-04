@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="ncurses" architecture-independent="false">
+        <description>
+            <summary>shared low-level terminfo library for terminal handling</summary>
+            <p>
+            The ncurses library routines are a terminal-independent method of
+            updating character screens with reasonable optimization.
+            </p>
+            <p>
+            This package contains the shared low-level terminfo library.
+            </p>
+        </description>
+
+        <sources>
+            <file src="ncurses-6.0+20161126.tar.gz" subdir="sources"
+                sha256sum="e4b9cf1cfcf5a2db7df1d36402967783ba759246c8ff5a17a85ffd7e79296ec0"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="8b36856d3d5436ef278d9643f24fc111aa8eca7bb83ad47d4a073a5b29b5d555"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/01-debian-no-ada-doc.diff"/>
+                <file src="patches/02-debian-backspace.diff"/>
+                <file src="patches/03-debian-ncursesconfig-omit-L.diff"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="pkg-config"/>
+            <package name="autotools-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libtinfo5.xml"/>
+    <xi:include href="libncurses5.xml"/>
+    <xi:include href="libtinfo-dev.xml"/>
+    <xi:include href="libncurses5-dev.xml"/>
+    <xi:include href="libncursesw5.xml"/>
+    <xi:include href="libncursesw5-dev.xml"/>
+    <xi:include href="lib64ncurses5.xml"/>
+    <xi:include href="lib64ncurses5-dev.xml"/>
+    <xi:include href="lib32ncurses5.xml"/>
+    <xi:include href="lib32ncurses5-dev.xml"/>
+    <xi:include href="lib32ncursesw5.xml"/>
+    <xi:include href="lib32ncursesw5-dev.xml"/>
+    <xi:include href="lib64tinfo5.xml"/>
+    <xi:include href="lib32tinfo5.xml"/>
+    <xi:include href="lib32tinfo-dev.xml"/>
+    <xi:include href="ncurses-bin.xml"/>
+    <xi:include href="ncurses-base.xml"/>
+    <xi:include href="ncurses-term.xml"/>
+    <xi:include href="ncurses-examples.xml"/>
+    <xi:include href="ncurses-doc.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
