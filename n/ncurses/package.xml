@@ -45,20 +45,9 @@
     <xi:include href="libncurses5-dev.xml"/>
     <xi:include href="libncursesw5.xml"/>
     <xi:include href="libncursesw5-dev.xml"/>
-    <xi:include href="lib64ncurses5.xml"/>
-    <xi:include href="lib64ncurses5-dev.xml"/>
-    <xi:include href="lib32ncurses5.xml"/>
-    <xi:include href="lib32ncurses5-dev.xml"/>
-    <xi:include href="lib32ncursesw5.xml"/>
-    <xi:include href="lib32ncursesw5-dev.xml"/>
-    <xi:include href="lib64tinfo5.xml"/>
-    <xi:include href="lib32tinfo5.xml"/>
-    <xi:include href="lib32tinfo-dev.xml"/>
     <xi:include href="ncurses-bin.xml"/>
     <xi:include href="ncurses-base.xml"/>
     <xi:include href="ncurses-term.xml"/>
-    <xi:include href="ncurses-examples.xml"/>
-    <xi:include href="ncurses-doc.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>
