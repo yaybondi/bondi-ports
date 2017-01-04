@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libdb5.3-stl" section="libs">
+    <description>
+        <summary>Berkeley v5.3 Database Libraries [STL runtime]</summary>
+        <p>
+        This is the runtime package for programs that use the v5.3 Berkeley
+        database STL library.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/libdb_stl-*.so"/>
+    </contents>
+</package>

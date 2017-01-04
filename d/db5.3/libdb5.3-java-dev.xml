@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libdb5.3-java-dev" section="libdevel">
+    <description>
+        <summary>Berkeley v5.3 Database Libraries for Java [development]</summary>
+        <p>
+        This package provides the Java interface for the Berkeley v5.3 database
+        library.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libdb5.3-java" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libdb_java-*.a"/>
+        <file src="/usr/lib/libdb_java.*"/>
+    </contents>
+</package>

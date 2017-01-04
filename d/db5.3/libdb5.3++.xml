@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libdb5.3++" section="libs">
+    <description>
+        <summary>Berkeley v5.3 Database Libraries for C++ [runtime]</summary>
+        <p>
+        This is the runtime package for programs that use the Berkeley v5.3
+        database library. This is only for programs which use the C++ interface.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/libdb_cxx-*.so"/>
+    </contents>
+</package>

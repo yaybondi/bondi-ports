@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="db5.3" architecture-independent="false">
+        <description>
+            <summary>Berkeley v5.3 Database Documentation [html]</summary>
+            <p>
+            This package contains documentation in HTML format for all of
+            the APIs (C, C++, C#, STL, Java, Tcl) and utilities provided
+            by version 5.3 of Berkeley DB.
+            </p>
+        </description>
+
+        <sources>
+            <file src="db5.3-5.3.28.tar.xz" subdir="sources"
+                sha256sum="e1f85c8b6ebd0ed3ca72fa0ae97b65006f6d0bd0cd6f4ac24bed103cb5497bf5"/>
+            <file src="patches.12.tar.gz" subdir="patches"
+                sha256sum="7a23c161a5dfe50982f2ae5c9a1adadc7012f83e23e675cc53c692724ea6b3b4"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/002-versioned_symbols.patch"/>
+                <file src="patches/003-jni_javac.patch"/>
+                <file src="patches/004-tclsleep.patch"/>
+                <file src="patches/005-pg_crypt_size.patch"/>
+                <file src="patches/006-mutex_alignment.patch"/>
+                <file src="patches/007-link-sql-libs.patch"/>
+                <file src="patches/mmap_extend-mode-requires-page-aligned-extends.patch"/>
+                <file src="patches/008-autoconf-in-lang-sql-sqlite.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autotools-dev" version=">= 20100122.1"/>
+            <package name="tcl-dev"/>
+            <package name="procps"/>
+            <package name="javahelper"/>
+            <package name="default-jdk"/>
+            <package name="gcj-native-helper"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libdb5.3-dev.xml"/>
+    <xi:include href="libdb5.3.xml"/>
+    <xi:include href="db5.3-util.xml"/>
+    <xi:include href="db5.3-sql-util.xml"/>
+    <xi:include href="libdb5.3++.xml"/>
+    <xi:include href="libdb5.3++-dev.xml"/>
+    <xi:include href="libdb5.3-tcl.xml"/>
+    <xi:include href="libdb5.3-java-jni.xml"/>
+    <xi:include href="libdb5.3-java.xml"/>
+    <xi:include href="libdb5.3-java-gcj.xml"/>
+    <xi:include href="libdb5.3-java-dev.xml"/>
+    <xi:include href="libdb5.3-sql-dev.xml"/>
+    <xi:include href="libdb5.3-sql.xml"/>
+    <xi:include href="libdb5.3-stl-dev.xml"/>
+    <xi:include href="libdb5.3-stl.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

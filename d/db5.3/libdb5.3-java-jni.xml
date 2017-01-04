@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libdb5.3-java-jni" section="java">
+    <description>
+        <summary>Berkeley v5.3 Database Libraries for Java</summary>
+        <p>
+        This package provides the Java interface for the Berkeley v5.3 database
+        library.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libdb_java-5.3*.so"/>
+    </contents>
+</package>

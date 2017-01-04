@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="db5.3-util" section="database">
+    <description>
+        <summary>Berkeley v5.3 Database Utilities</summary>
+        <p>
+        This package provides different tools for manipulating databases
+        in the Berkeley v5.3 database format, and includes:
+        </p>
+        <ul>
+            <li>db5.3_archive: write the pathnames of the log files no longer in use.</li>
+            <li>db5.3_checkpoint: daemon process to monitor the database log and
+                checkpoint it periodically.</li>
+            <li>db5.3_deadlock: traverse the database environment lock region and
+                abort lock requests when a deadlock is detected.</li>
+            <li>db5.3_load: loads (and creates) a database from standard input.</li>
+            <li>db5.3_dump: read a database file and write it in a format understood
+                by db4.{2..8}_load.</li>
+            <li>db5.3_printlog: dump log files in human readable format.</li>
+            <li>db5.3_stat: display statistics for Berkeley DB environments.</li>
+            <li>db5.3_upgrade: upgrades the version of files and the databases they
+                contain.</li>
+            <li>db5.3_verify: check the structure of files and their databases.</li>
+        </ul>
+    </description>
+
+    <contents>
+        <file src="/usr/bin/db5.3_archive"/>
+        <file src="/usr/bin/db5.3_checkpoint"/>
+        <file src="/usr/bin/db5.3_deadlock"/>
+        <file src="/usr/bin/db5.3_dump"/>
+        <file src="/usr/bin/db5.3_hotbackup"/>
+        <file src="/usr/bin/db5.3_load"/>
+        <file src="/usr/bin/db5.3_log_verify"/>
+        <file src="/usr/bin/db5.3_printlog"/>
+        <file src="/usr/bin/db5.3_recover"/>
+        <file src="/usr/bin/db5.3_replicate"/>
+        <file src="/usr/bin/db5.3_stat"/>
+        <file src="/usr/bin/db5.3_upgrade"/>
+        <file src="/usr/bin/db5.3_verify"/>
+    </contents>
+</package>

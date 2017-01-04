@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libdb5.3-sql" section="libs">
+    <description>
+        <summary>Berkeley v5.3 Database Libraries [SQL runtime]</summary>
+        <p>
+        This is the runtime package for programs that use the v5.3 Berkeley
+        database SQL library.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/libdb_sql-*.so"/>
+    </contents>
+</package>

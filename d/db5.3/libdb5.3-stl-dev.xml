@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libdb5.3-stl-dev" section="libdevel">
+    <description>
+        <summary>Berkeley v5.3 Database Libraries [STL development]</summary>
+        <p>
+        This is the development package which contains headers and static
+        libraries for the Berkeley v5.3 database library.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libdb5.3-stl" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include/dbstl*.h"/>
+        <file src="/usr/lib/libdb_stl-*.a"/>
+        <file src="/usr/lib/libdb_stl.*"/>
+    </contents>
+</package>

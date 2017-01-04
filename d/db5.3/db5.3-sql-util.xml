@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="db5.3-sql-util" section="database">
+    <description>
+        <summary>Berkeley v5.3 SQL Database Utilities</summary>
+        <p>
+        This package provides different tools for manipulating databases
+        in the Berkeley v5.3 SQL database format, and includes:
+        - db5.3_sql: sqlite3 compatible command-line utility
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/bin/db5.3_sql"/>
+    </contents>
+</package>

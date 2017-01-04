@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libdb5.3-tcl" section="interpreters">
+    <description>
+        <summary>Berkeley v5.3 Database Libraries for Tcl [module]</summary>
+        <p>
+        This package provides a Tcl module suitable for accessing Berkeley v5.3
+        databases from within Tcl programs.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/libdb_tcl*"/>
+    </contents>
+</package>
