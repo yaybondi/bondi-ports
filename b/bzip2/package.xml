@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="bzip2" architecture-independent="false">
+        <description>
+            <summary>high-quality block-sorting file compressor library</summary>
+            <p>
+            bzip2 is a freely available, patent free, high-quality data compressor.
+            It typically compresses files to within 10% to 15% of the best available
+            techniques, whilst being around twice as fast at compression and six
+            times faster at decompression.
+            </p>
+            <p>
+            bzip2 compresses files using the Burrows-Wheeler block-sorting text
+            compression algorithm, and Huffman coding. Compression is generally
+            considerably better than that achieved by more conventional
+            LZ77/LZ78-based compressors, and approaches the performance of the PPM
+            family of statistical compressors.
+            </p>
+            <p>
+            The archive file format of bzip2 (.bz2) is incompatible with that of its
+            predecessor, bzip (.bz).
+            </p>
+        </description>
+
+        <sources>
+            <file src="bzip2-1.0.6.tar.bz2" subdir="sources"
+                sha256sum="d70a9ccd8bdf47e302d96c69fecd54925f45d9c7b966bb4ef5f56b770960afa7"/>
+            <file src="patches.08.tar.gz" subdir="patches"
+                sha256sum="4386484ae3c32806f661b2d5ed3cf7bfdf2cc9859e3a95c7a8edd6acebdcb264"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/10-bzip2.1.patch"/>
+                <file src="patches/20-legacy.patch"/>
+                <file src="patches/30-bzip2-harden.patch"/>
+            </patchset>
+        </patches>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libbz2-1.0.xml"/>
+    <xi:include href="libbz2-dev.xml"/>
+    <xi:include href="bzip2.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
