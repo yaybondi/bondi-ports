@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libsqlite3-dev" section="libdevel">
+    <description>
+        <summary>SQLite 3 development files</summary>
+        <p>
+        SQLite is a C library that implements an SQL database engine. 
+        Programs that link with the SQLite library can have SQL database 
+        access without running a separate RDBMS process.
+        </p>
+        <p>
+        This package contains the development files (headers, static libraries)
+        </p>
+    </description>
+
+    <requires>
+        <package name="libsqlite3-0" version="=="/>
+        <package name="libc6-dev"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include/*.h"/>
+        <file src="/usr/lib/libsqlite3.a"/>
+        <file src="/usr/lib/libsqlite3.la"/>
+        <file src="/usr/lib/libsqlite3.so"/>
+        <file src="/usr/lib/pkgconfig/sqlite3.pc"/>
+    </contents>
+</package>

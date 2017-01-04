@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libsqlite3-0" section="libs">
+    <description>
+        <summary>SQLite 3 shared library</summary>
+        <p>
+        SQLite is a C library that implements an SQL database engine. 
+        Programs that link with the SQLite library can have SQL database 
+        access without running a separate RDBMS process.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/libsqlite3.so.*"/>
+    </contents>
+</package>

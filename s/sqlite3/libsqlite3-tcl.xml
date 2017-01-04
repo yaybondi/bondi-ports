@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libsqlite3-tcl" section="interpreters">
+    <description>
+        <summary>SQLite 3 Tcl bindings</summary>
+        <p>
+        SQLite is a C library that implements an SQL database engine. 
+        Programs that link with the SQLite library can have SQL database 
+        access without running a separate RDBMS process.
+        </p>
+        <p>
+        This package contains the Tcl bindings.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/tcltk/sqlite3"/>
+    </contents>
+</package>

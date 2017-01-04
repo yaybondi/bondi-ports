@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="sqlite3" architecture-independent="false">
+        <description>
+            <summary>LALR(1) Parser Generator for C or C++</summary>
+            <p>
+            Lemon is an LALR(1) parser generator for C or C++. It does the same
+            job as bison and yacc. But lemon is not another bison or yacc
+            clone. It uses a different grammar syntax which is designed to reduce
+            the number of coding errors. Lemon also uses a more sophisticated
+            parsing engine that is faster than yacc and bison and which is both
+            reentrant and thread-safe. Furthermore, Lemon implements features
+            that can be used to eliminate resource leaks, making is suitable for
+            use in long-running programs such as graphical user interfaces or
+            embedded controllers.
+            </p>
+        </description>
+
+        <sources>
+            <file src="sqlite3-3.15.2.tar.xz" subdir="sources"
+                sha256sum="6858c3bd37586b48ff964c26a8bf2d257dd21199af7302cada499be927bb0fc5"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="3e3a4a14d0569a32bc001845a9560b6d26f201f42d9f5712b9b66033f875ab78"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/10-520466-libsqlite3-depends-on-libdl.patch"/>
+                <file src="patches/10-520478-squash-bad-deps.patch"/>
+                <file src="patches/20-hurd-locking-style.patch"/>
+                <file src="patches/30-cross.patch"/>
+                <file src="patches/10-665363-disable-malloc-usable-size.patch"/>
+                <file src="patches/31-increase_SQLITE_MAX_DEFAULT_PAGE_SIZE_to_32k.patch"/>
+                <file src="patches/02-use-packaged-lempar.c.patch"/>
+                <file src="patches/32-fix-memory-database-slowness.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="dpkg-dev" version=">= 1.16.1~"/>
+            <package name="debhelper" version=">= 9"/>
+            <package name="autoconf" version=">= 2.59"/>
+            <package name="libtool" version=">= 1.5.2"/>
+            <package name="automake"/>
+            <package name="autotools-dev"/>
+            <package name="chrpath"/>
+            <package name="libreadline-dev"/>
+            <package name="tcl8.6-dev"/>
+            <package name="dh-autoreconf"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="lemon.xml"/>
+    <xi:include href="sqlite3.xml"/>
+    <xi:include href="libsqlite3-0.xml"/>
+    <xi:include href="libsqlite3-dev.xml"/>
+    <xi:include href="libsqlite3-tcl.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

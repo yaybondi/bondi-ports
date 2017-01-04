@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="sqlite3" section="database">
+    <description>
+        <summary>Command line interface for SQLite 3</summary>
+        <p>
+        SQLite is a C library that implements an SQL database engine. 
+        Programs that link with the SQLite library can have SQL database 
+        access without running a separate RDBMS process.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libsqlite3-0" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/sqldiff"/>
+        <file src="/usr/bin/sqlite3"/>
+    </contents>
+</package>
