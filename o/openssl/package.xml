@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="openssl" architecture-independent="false">
+        <description>
+            <summary>Secure Sockets Layer toolkit - cryptographic utility</summary>
+            <p>
+            This package is part of the OpenSSL project's implementation of the SSL
+            and TLS cryptographic protocols for secure communication over the
+            Internet.
+            </p>
+            <p>
+            It contains the general-purpose command line binary /usr/bin/openssl,
+            useful for cryptographic operations such as:
+            * creating RSA, DH, and DSA key parameters;
+            * creating X.509 certificates, CSRs, and CRLs;
+            * calculating message digests;
+            * encrypting and decrypting with ciphers;
+            * testing SSL/TLS clients and servers;
+            * handling S/MIME signed or encrypted mail.
+            </p>
+        </description>
+
+        <sources>
+            <file src="openssl-1.1.0c.tar.gz" subdir="sources"
+                sha256sum="fc436441a2e05752d31b4e46115eb89709a28aef96d4fe786abe92409b2fd6f5"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="83552c756e7a0d63556b8c2981bb9af2cdfa593d5839b17c281cc0d07c6d444e"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/debian-targets.patch"/>
+                <file src="patches/man-section.patch"/>
+                <file src="patches/no-symbolic.patch"/>
+                <file src="patches/pic.patch"/>
+                <file src="patches/c_rehash-compat.patch"/>
+                <file src="patches/revert_ssl_read.patch"/>
+                <file src="patches/0001-Add-missing-zdelete-for-some-linux-arches.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="m4"/>
+            <package name="bc"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="openssl.xml"/>
+    <xi:include href="libssl1.1.xml"/>
+    <xi:include href="libssl-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

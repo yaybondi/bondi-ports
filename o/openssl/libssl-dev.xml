@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libssl-dev" section="libdevel">
+    <description>
+        <summary>Secure Sockets Layer toolkit - development files</summary>
+        <p>
+        This package is part of the OpenSSL project's implementation of the SSL
+        and TLS cryptographic protocols for secure communication over the
+        Internet.
+        </p>
+        <p>
+        It contains development libraries, header files, and manpages for libssl
+        and libcrypto.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libssl1.1" version="=="/>
+    </requires>
+
+    <contents>
+        <dir src="/usr/lib"/>
+        <file src="/usr/include"/>
+        <file src="/usr/lib/libcrypto.a"/>
+        <file src="/usr/lib/libcrypto.so"/>
+        <file src="/usr/lib/libssl.a"/>
+        <file src="/usr/lib/libssl.so"/>
+        <file src="/usr/lib/pkgconfig"/>
+    </contents>
+</package>

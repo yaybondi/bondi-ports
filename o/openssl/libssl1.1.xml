@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libssl1.1" section="libs">
+    <description>
+        <summary>Secure Sockets Layer toolkit - shared libraries</summary>
+        <p>
+        This package is part of the OpenSSL project's implementation of the SSL
+        and TLS cryptographic protocols for secure communication over the
+        Internet.
+        </p>
+        <p>
+        It provides the libssl and libcrypto shared libraries.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/*.so.*.*"/>
+        <file src="/usr/lib/*/*.so.*.*"/>
+        <file src="/usr/lib/engines-*"/>
+    </contents>
+</package>
