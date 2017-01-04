@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libffi-dev" section="libdevel">
+    <description>
+        <summary>Foreign Function Interface library (development files)</summary>
+        <p>
+        This package contains the headers and static library files necessary for
+        building programs which use libffi.
+        </p>
+        <p>
+        A foreign function interface is the popular name for the interface that
+        allows code written in one language to call code written in another
+        language.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libffi6" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include/*"/>
+        <file src="/usr/lib/lib*.a"/>
+        <file src="/usr/lib/lib*.so"/>
+        <file src="/usr/lib/pkgconfig/*"/>
+        <file src="/usr/share/*"/>
+    </contents>
+</package>

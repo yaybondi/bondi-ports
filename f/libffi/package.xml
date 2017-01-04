@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libffi" architecture-independent="false">
+        <description>
+            <summary>Foreign Function Interface library (development files)</summary>
+            <p>
+            This package contains the headers and static library files necessary for
+            building programs which use libffi.
+            </p>
+            <p>
+            A foreign function interface is the popular name for the interface that
+            allows code written in one language to call code written in another
+            language.
+            </p>
+        </description>
+
+        <sources>
+            <file src="libffi-3.2.1.tar.gz" subdir="sources"
+                sha256sum="d06ebb8e1d9a22d19e38d63fdb83954253f39bedc5d46232a05645685722ca37"/>
+            <file src="patches.06.tar.gz" subdir="patches"
+                sha256sum="d95307bf84d2295d987021399188093a06eba0a0260942b8db6384cf1f3dab08"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/fix-alpha.diff"/>
+                <file src="patches/includedir.diff"/>
+                <file src="patches/aarch64-fix.diff"/>
+                <file src="patches/libffi-pax.patch"/>
+                <file src="patches/libffi-race-condition.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="libltdl-dev"/>
+            <package name="dejagnu"/>
+            <package name="texinfo"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libffi-dev.xml"/>
+    <xi:include href="libffi6.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
