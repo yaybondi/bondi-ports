@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="expat" section="text">
+    <description>
+        <summary>XML parsing C library - example application</summary>
+        <p>
+        This package contains xmlwf, an example application of expat, the C
+        library for parsing XML. The arguments to xmlwf are one or more
+        files which are each to be checked for XML well-formedness.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/bin"/>
+    </contents>
+</package>
