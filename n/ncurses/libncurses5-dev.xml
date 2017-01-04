@@ -16,7 +16,7 @@
         <package name="libtinfo5" version="=="/>
         <package name="libncurses5" version="=="/>
         <package name="libtinfo-dev" version="=="/>
-        <package name="libc6-dev|libc-dev"/>
+        <package name="libc6-dev"/>
     </requires>
 
     <contents>
