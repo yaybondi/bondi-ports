@@ -47,7 +47,7 @@
             <package name="libncursesw5-dev" version=">= 5.6"/>
             <package name="lib32ncursesw5-dev"/>
             <package name="lib64ncurses5-dev"/>
-            <package name="mawk|awk"/>
+            <package name="awk"/>
             <package name="texinfo"/>
             <package name="autotools-dev"/>
             <package name="gcc-multilib"/>
