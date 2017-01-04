@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libreadline7" section="libs">
+    <description>
+        <summary>GNU readline and history libraries, run-time libraries</summary>
+        <p>
+        The GNU readline library aids in the consistency of user interface
+        across discrete programs that need to provide a command line
+        interface.
+        </p>
+        <p>
+        The GNU history library provides a consistent user interface for
+        recalling lines of previously typed input.
+        </p>
+    </description>
+
+    <requires>
+        <package name="readline-common"/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>
