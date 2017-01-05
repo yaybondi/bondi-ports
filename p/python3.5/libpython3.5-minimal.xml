@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libpython3.5-minimal" section="python">
+    <description>
+        <summary>Minimal subset of the Python language (version 3.5)</summary>
+        <p>
+        This package contains some essential modules. It is normally not
+        used on it's own, but as a dependency of python3.5-minimal.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

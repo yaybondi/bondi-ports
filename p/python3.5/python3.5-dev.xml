@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python3.5-dev" section="python">
+    <description>
+        <summary>Header files and a static library for Python (v3.5)</summary>
+        <p>
+        Header files, a static library and development tools for building
+        Python (v3.5) modules, extending the Python interpreter or embedding
+        Python (v3.5) in applications.
+        </p>
+        <p>
+        Maintainers of Python packages should read README.maintainers.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python3.5" version="=="/>
+        <package name="libpython3.5-dev" version="=="/>
+        <package name="libpython3.5" version="=="/>
+        <package name="libexpat1-dev"/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

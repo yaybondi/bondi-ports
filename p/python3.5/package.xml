@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="python3.5" architecture-independent="false">
+        <description>
+            <summary>Interactive high-level object-oriented language (version 3.5)</summary>
+            <p>
+            Python is a high-level, interactive, object-oriented language. Its 3.5 version
+            includes an extensive class library with lots of goodies for
+            network programming, system administration, sounds and graphics.
+            </p>
+        </description>
+
+        <sources>
+            <file src="python3.5-3.5.2.tar.xz" subdir="sources"
+                sha256sum="0010f56100b9b74259ebcd5d4b295a32324b58b517403a10d1a2aa7cb22bca40"/>
+            <file src="patches.09.tar.gz" subdir="patches"
+                sha256sum="613e459d9e712b4be83aa02bbb67891500e61f1ca179c57b72365e35ab4bc1d3"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/hg-updates.diff"/>
+                <file src="patches/deb-setup.diff"/>
+                <file src="patches/deb-locations.diff"/>
+                <file src="patches/distutils-install-layout.diff"/>
+                <file src="patches/locale-module.diff"/>
+                <file src="patches/distutils-link.diff"/>
+                <file src="patches/distutils-sysconfig.diff"/>
+                <file src="patches/tkinter-import.diff"/>
+                <file src="patches/gdbm-import.diff"/>
+                <file src="patches/link-opt.diff"/>
+                <file src="patches/setup-modules.diff"/>
+                <file src="patches/platform-lsbrelease.diff"/>
+                <file src="patches/bdist-wininst-notfound.diff"/>
+                <file src="patches/profiled-build.diff"/>
+                <file src="patches/makesetup-bashism.diff"/>
+                <file src="patches/hurd-disable-nonworking-constants.diff"/>
+                <file src="patches/enable-fpectl.diff"/>
+                <file src="patches/langpack-gettext.diff"/>
+                <file src="patches/no-large-file-support.diff"/>
+                <file src="patches/disable-sem-check.diff"/>
+                <file src="patches/lib-argparse.diff"/>
+                <file src="patches/ctypes-arm.diff"/>
+                <file src="patches/lto-link-flags.diff"/>
+                <file src="patches/multiarch.diff"/>
+                <file src="patches/lib2to3-no-pickled-grammar.diff"/>
+                <file src="patches/ext-no-libpython-link.diff"/>
+                <file src="patches/test-no-random-order.diff"/>
+                <file src="patches/multiarch-extname.diff"/>
+                <file src="patches/distutils-init.diff"/>
+                <file src="patches/tempfile-minimal.diff"/>
+                <file src="patches/disable-some-tests.diff"/>
+                <file src="patches/ensurepip-wheels.diff"/>
+                <file src="patches/ensurepip-disabled.diff"/>
+                <file src="patches/mpdecimal-version.diff"/>
+                <file src="patches/mangle-fstack-protector.diff"/>
+                <file src="patches/reproducible-buildinfo.diff"/>
+                <file src="patches/pydoc-use-pager.diff"/>
+                <file src="patches/pyhash.diff"/>
+                <file src="patches/lib2to3-no-pgen-caching.diff"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autoconf"/>
+            <package name="sharutils"/>
+            <package name="libreadline-dev"/>
+            <package name="libncursesw5-dev" version=">= 5.3"/>
+            <package name="zlib1g-dev"/>
+            <package name="libbz2-dev"/>
+            <package name="liblzma-dev"/>
+            <package name="libgdbm-dev"/>
+            <package name="libdb-dev"/>
+            <package name="tk-dev"/>
+            <package name="blt-dev" version=">= 2.4z"/>
+            <package name="libssl-dev"/>
+            <package name="libexpat1-dev"/>
+            <package name="libmpdec-dev" version=">= 2.4"/>
+            <package name="libbluetooth-dev"/>
+            <package name="locales"/>
+            <package name="libsqlite3-dev"/>
+            <package name="libffi-dev" version=">= 3.0.5"/>
+            <package name="libgpm2"/>
+            <package name="mime-support"/>
+            <package name="netbase"/>
+            <package name="bzip2"/>
+            <package name="time"/>
+            <package name="net-tools"/>
+            <package name="xvfb"/>
+            <package name="xauth"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="python3.5.xml"/>
+    <xi:include href="python3.5-venv.xml"/>
+    <xi:include href="libpython3.5-stdlib.xml"/>
+    <xi:include href="python3.5-minimal.xml"/>
+    <xi:include href="libpython3.5-minimal.xml"/>
+    <xi:include href="libpython3.5.xml"/>
+    <xi:include href="python3.5-dev.xml"/>
+    <xi:include href="libpython3.5-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python3.5-venv" section="python">
+    <description>
+        <summary>Interactive high-level object-oriented language (pyvenv binary, version 3.5)</summary>
+        <p>
+        Python is a high-level, interactive, object-oriented language. Its 3.5 version
+        includes an extensive class library with lots of goodies for
+        network programming, system administration, sounds and graphics.
+        </p>
+        <p>
+        This package contains the pyvenv-3.5 binary.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python3.5" version="=="/>
+        <package name="python-pip-whl" version=">= 8.1.0-2"/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>
