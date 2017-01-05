@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="liblzma5" section="libs">
+    <description>
+        <summary>XZ-format compression library</summary>
+        <p>
+        XZ is the successor to the Lempel-Ziv/Markov-chain Algorithm
+        compression format, which provides memory-hungry but powerful
+        compression (often better than bzip2) and fast, easy decompression.
+        </p>
+        <p>
+        The native format of liblzma is XZ; it also supports raw (headerless)
+        streams and the older LZMA format used by lzma. (For 7-Zip's related
+        format, use the p7zip package instead.)
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/liblzma.so.*"/>
+    </contents>
+</package>

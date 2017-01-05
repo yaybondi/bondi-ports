@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="xzdec" section="utils">
+    <description>
+        <summary>XZ-format compression utilities - tiny decompressors</summary>
+        <p>
+        XZ is the successor to the Lempel-Ziv/Markov-chain Algorithm
+        compression format, which provides memory-hungry but powerful
+        compression (often better than bzip2) and fast, easy decompression.
+        </p>
+        <p>
+        This package provides the xzdec and lzmadec utilities, which write
+        the decompressed version of a compressed file to standard output. The
+        binaries are very small, so they can be easily stored on small media
+        with some compressed files, and they are linked statically against
+        liblzma so they can be used on machines without a compatible version
+        of liblzma installed. However, they have:
+        </p>
+        <p>
+        * no compression support;
+        * no support for writing to a file other than standard output;
+        * no translated messages;
+        * been optimized for size rather than speed.
+        </p>
+        <p>
+        For a full-featured xzcat command without these limitations, use
+        the xz-utils package instead.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/lzmadec"/>
+        <file src="/usr/bin/xzdec"/>
+    </contents>
+</package>

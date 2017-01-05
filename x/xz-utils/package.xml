@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="xz-utils" architecture-independent="false">
+        <description>
+            <summary>XZ-format compression library and utilities</summary>
+            <p>
+            XZ is the successor to the Lempel-Ziv/Markov-chain Algorithm
+            compression format, which provides memory-hungry but powerful
+            compression (often better than bzip2) and fast, easy decompression.
+            </p>
+            <p>
+            The native format of liblzma is XZ; it also supports raw (headerless)
+            streams and the older LZMA format used by lzma. (For 7-Zip's related
+            format, use the p7zip package instead.)
+            </p>
+        </description>
+
+        <sources>
+            <file src="xz-utils-5.2.2.tar.xz" subdir="sources"
+                sha256sum="f341b1906ebcdde291dd619399ae944600edc9193619dd0c0110a5f05bfcc89e"/>
+            <file src="patches.1.2.tar.gz" subdir="patches"
+                sha256sum="82df96dd07ceb2bdb8854e8329eb7b0a17faef383a12b5006d7d70b248c2f5fd"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/liblzma-skip-ABI-incompatible-check-when-liblzma.so.patch"/>
+                <file src="patches/liblzma-make-dlopen-based-liblzma2-compatibility-opt.patch"/>
+                <file src="patches/kfreebsd-link-against-libfreebsd-glue.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autoconf" version=">= 2.64~"/>
+            <package name="automake"/>
+            <package name="libtool" version=">= 2.2"/>
+            <package name="gettext"/>
+            <package name="cvs"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="liblzma5.xml"/>
+    <xi:include href="xz-utils.xml"/>
+    <xi:include href="xzdec.xml"/>
+    <xi:include href="liblzma-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

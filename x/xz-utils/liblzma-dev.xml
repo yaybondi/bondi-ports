@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="liblzma-dev" section="libdevel">
+    <description>
+        <summary>XZ-format compression library - development files</summary>
+        <p>
+        XZ is the successor to the Lempel-Ziv/Markov-chain Algorithm
+        compression format, which provides memory-hungry but powerful
+        compression (often better than bzip2) and fast, easy decompression.
+        </p>
+        <p>
+        The native format of liblzma is XZ; it also supports raw (headerless)
+        streams and the older LZMA format used by lzma. (For 7-Zip's related
+        format, use the p7zip package instead.) This package provides the
+        development library needed to build programs using liblzma.
+        </p>
+    </description>
+
+    <requires>
+        <package name="liblzma5" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include/*"/>
+        <file src="/usr/include/lzma/*"/>
+        <file src="/usr/lib/lib*.a"/>
+        <file src="/usr/lib/lib*.so"/>
+        <file src="/usr/lib/pkgconfig/*"/>
+    </contents>
+</package>
