@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="mpdecimal" architecture-independent="false">
+        <description>
+            <summary>library for decimal floating point arithmetic (development files)</summary>
+            <p>
+            mpdecimal is a package for correctly-rounded arbitrary precision decimal
+            floating point arithmetic.
+            </p>
+        </description>
+
+        <sources>
+            <file src="mpdecimal-2.4.2.tar.gz" subdir="sources"
+                sha256sum="83c628b90f009470981cf084c5418329c88b19835d8af3691b930afccb7d79c7"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="ae3cd5654c585a388a971af4586b227ab87dac29f565141794bf45fb45b5abb6"/>
+        </sources>
+
+        <requires>
+            <package name="debhelper" version=">= 9"/>
+            <package name="autotools-dev"/>
+            <package name="libgmp-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libmpdec-dev.xml"/>
+    <xi:include href="libmpdec2.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
