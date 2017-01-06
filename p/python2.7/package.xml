@@ -98,7 +98,7 @@
             <package name="net-tools"/>
             <package name="bzip2"/>
             <package name="time"/>
-            <package name="libdb-dev" version="<< 1:6.0"/>
+            <package name="libdb-dev"/>
             <package name="libgdbm-dev"/>
             <package name="python:any"/>
             <package name="help2man"/>
