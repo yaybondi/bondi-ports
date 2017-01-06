@@ -100,7 +100,7 @@
             <package name="time"/>
             <package name="libdb-dev"/>
             <package name="libgdbm-dev"/>
-            <package name="python:any"/>
+            <package name="python"/>
             <package name="help2man"/>
             <package name="xvfb"/>
             <package name="xauth"/>
