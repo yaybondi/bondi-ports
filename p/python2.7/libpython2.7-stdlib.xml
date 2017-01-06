@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libpython2.7-stdlib" section="python">
+    <description>
+        <summary>Interactive high-level object-oriented language (standard library, version 2.7)</summary>
+        <p>
+        Python is a high-level, interactive, object-oriented language. Its 2.7 version
+        includes an extensive class library with lots of goodies for
+        network programming, system administration, sounds and graphics.
+        </p>
+        <p>
+        This package contains Python 2.7's standard library. It is normally not
+        used on its own, but as a dependency of python2.7.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libpython2.7-minimal" version="=="/>
+        <package name="mime-support"/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

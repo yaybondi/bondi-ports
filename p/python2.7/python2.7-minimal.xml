@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python2.7-minimal" section="python">
+    <description>
+        <summary>Minimal subset of the Python language (version 2.7)</summary>
+        <p>
+        This package contains the interpreter and some essential modules. It can
+        be used in the boot process for some basic tasks.
+        See /usr/share/doc/python2.7-minimal/README.Debian for a list of the modules
+        contained in this package.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libpython2.7-minimal" version="=="/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

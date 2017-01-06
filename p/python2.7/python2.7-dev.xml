@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python2.7-dev" section="python">
+    <description>
+        <summary>Header files and a static library for Python (v2.7)</summary>
+        <p>
+        Header files, a static library and development tools for building
+        Python (v2.7) modules, extending the Python interpreter or embedding
+        Python (v2.7) in applications.
+        </p>
+        <p>
+        Maintainers of Python packages should read README.maintainers.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python2.7" version="=="/>
+        <package name="libpython2.7-dev" version="=="/>
+        <package name="libpython2.7" version="=="/>
+        <package name="libexpat1-dev"/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>
