@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="perl" section="perl">
+    <description>
+        <summary>Larry Wall's Practical Extraction and Report Language</summary>
+        <p>
+        Perl is a highly capable, feature-rich programming language with over
+        20 years of development. Perl 5 runs on over 100 platforms from
+        portables to mainframes. Perl is suitable for both rapid prototyping
+        and large scale development projects.
+        </p>
+        <p>
+        Perl 5 supports many programming styles, including procedural,
+        functional, and object-oriented. In addition to this, it is supported
+        by an ever-growing collection of reusable modules which accelerate
+        development. Some of these modules include Web frameworks, database
+        integration, networking protocols, and encryption. Perl provides
+        interfaces to C and C++ for custom extension development.
+        </p>
+    </description>
+
+    <requires>
+        <package name="perl-base" version="=="/>
+        <package name="perl-modules-5.24" version=">=="/>
+        <package name="libperl5.24" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin"/>
+    </contents>
+</package>

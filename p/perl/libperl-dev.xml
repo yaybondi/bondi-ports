@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libperl-dev" section="libdevel">
+    <description>
+        <summary>Perl library: development files</summary>
+        <p>
+        Files for developing applications which embed a Perl interpreter.
+        </p>
+    </description>
+
+    <requires>
+        <package name="perl" version="=="/>
+        <package name="libperl5.24" version="=="/>
+        <package name="libc6-dev"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libperl.a"/>
+        <file src="/usr/lib/libperl.so"/>
+    </contents>
+</package>

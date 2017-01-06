@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="perl" architecture-independent="false">
+        <description>
+            <summary>Larry Wall's Practical Extraction and Report Language</summary>
+            <p>
+            Perl is a highly capable, feature-rich programming language with over
+            20 years of development. Perl 5 runs on over 100 platforms from
+            portables to mainframes. Perl is suitable for both rapid prototyping
+            and large scale development projects.
+            </p>
+            <p>
+            Perl 5 supports many programming styles, including procedural,
+            functional, and object-oriented. In addition to this, it is supported
+            by an ever-growing collection of reusable modules which accelerate
+            development. Some of these modules include Web frameworks, database
+            integration, networking protocols, and encryption. Perl provides
+            interfaces to C and C++ for custom extension development.
+            </p>
+        </description>
+
+        <sources>
+            <file src="perl-5.24.1~rc4.tar.xz" subdir="sources"
+                sha256sum="6da6333809eb2b35b17ee3c25b7f0327da32fad7214b296b662ccd9883b8bc59"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="678d56dbe92f20a49dcca7a7dddfc4f6a4281b388c24bdc3c02bf322fb240293"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/debian/cpan_definstalldirs.diff"/>
+                <file src="patches/debian/db_file_ver.diff"/>
+                <file src="patches/debian/doc_info.diff"/>
+                <file src="patches/debian/enc2xs_inc.diff"/>
+                <file src="patches/debian/errno_ver.diff"/>
+                <file src="patches/debian/libperl_embed_doc.diff"/>
+                <file src="patches/fixes/respect_umask.diff"/>
+                <file src="patches/debian/writable_site_dirs.diff"/>
+                <file src="patches/debian/extutils_set_libperl_path.diff"/>
+                <file src="patches/debian/no_packlist_perllocal.diff"/>
+                <file src="patches/debian/fakeroot.diff"/>
+                <file src="patches/debian/instmodsh_doc.diff"/>
+                <file src="patches/debian/ld_run_path.diff"/>
+                <file src="patches/debian/libnet_config_path.diff"/>
+                <file src="patches/debian/mod_paths.diff"/>
+                <file src="patches/debian/prune_libs.diff"/>
+                <file src="patches/fixes/net_smtp_docs.diff"/>
+                <file src="patches/debian/perlivp.diff"/>
+                <file src="patches/debian/deprecate-with-apt.diff"/>
+                <file src="patches/debian/squelch-locale-warnings.diff"/>
+                <file src="patches/debian/skip-upstream-git-tests.diff"/>
+                <file src="patches/debian/patchlevel.diff"/>
+                <file src="patches/debian/skip-kfreebsd-crash.diff"/>
+                <file src="patches/fixes/document_makemaker_ccflags.diff"/>
+                <file src="patches/debian/find_html2text.diff"/>
+                <file src="patches/debian/perl5db-x-terminal-emulator.patch"/>
+                <file src="patches/debian/cpan-missing-site-dirs.diff"/>
+                <file src="patches/fixes/memoize_storable_nstore.diff"/>
+                <file src="patches/debian/regen-skip.diff"/>
+                <file src="patches/debian/makemaker-pasthru.diff"/>
+                <file src="patches/debian/makemaker-manext.diff"/>
+                <file src="patches/debian/devel-ppport-reproducibility.diff"/>
+                <file src="patches/debian/encode-unicode-bom-doc.diff"/>
+                <file src="patches/debian/kfreebsd-softupdates.diff"/>
+                <file src="patches/fixes/autodie-scope.diff"/>
+                <file src="patches/fixes/crosscompile-no-targethost.diff"/>
+                <file src="patches/fixes/memoize-pod.diff"/>
+                <file src="patches/fixes/ok-pod.diff"/>
+                <file src="patches/debian/hurd-softupdates.diff"/>
+                <file src="patches/fixes/nntp_docs.diff"/>
+                <file src="patches/fixes/math_complex_doc_great_circle.diff"/>
+                <file src="patches/fixes/math_complex_doc_see_also.diff"/>
+                <file src="patches/fixes/math_complex_doc_angle_units.diff"/>
+                <file src="patches/fixes/cpan_web_link.diff"/>
+                <file src="patches/fixes/time_piece_doc.diff"/>
+                <file src="patches/fixes/perlbug-refactor.diff"/>
+                <file src="patches/fixes/perlbug-linewrap.diff"/>
+                <file src="patches/fixes/hurd_sigaction.diff"/>
+                <file src="patches/fixes/hurd_hints.diff"/>
+                <file src="patches/fixes/extutils-parsexs-reproducibility.diff"/>
+                <file src="patches/debian/CVE-2016-1238/sitecustomize-in-etc.diff"/>
+                <file src="patches/debian/CVE-2016-1238/test-suite-without-dot.diff"/>
+                <file src="patches/debian/CVE-2016-1238/eumm-without-dot.diff"/>
+                <file src="patches/debian/CVE-2016-1238/cpan-without-dot.diff"/>
+                <file src="patches/debian/document_inc_removal.diff"/>
+                <file src="patches/fixes/extutils_makemaker_reproducible.diff"/>
+                <file src="patches/debian/CVE-2016-1238/remove-inc-test.diff"/>
+                <file src="patches/debian/customized.diff"/>
+                <file src="patches/fixes/file_path_hurd_errno.diff"/>
+                <file src="patches/debian/hppa_op_optimize_workaround.diff"/>
+                <file src="patches/fixes/test-builder-warning.diff"/>
+                <file src="patches/fixes/longdblinf-randomness.diff"/>
+                <file src="patches/debian/installman-utf8.diff"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="file"/>
+            <package name="cpio"/>
+            <package name="libdb-dev"/>
+            <package name="libgdbm-dev"/>
+            <package name="netbase"/>
+            <package name="procps"/>
+            <package name="zlib1g-dev"/>
+            <package name="libbz2-dev"/>
+            <package name="dpkg-dev" version=">= 1.17.14"/>
+            <package name="libc6-dev" version=">= 2.19-9"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="perl-base.xml"/>
+    <xi:include href="libperl5.24.xml"/>
+    <xi:include href="libperl-dev.xml"/>
+    <xi:include href="perl-modules-5.24.xml"/>
+    <xi:include href="perl.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libperl5.24" section="libs">
+    <description>
+        <summary>shared Perl library</summary>
+        <p>
+        This package contains the shared Perl library, used by applications
+        which embed a Perl interpreter.
+        </p>
+        <p>
+        It also contains the architecture-dependent parts of the standard
+        library (and depends on perl-modules-5.24 which contains the
+        architecture-independent parts).
+        </p>
+    </description>
+
+    <requires>
+        <package name="perl-modules-5.24" version=">=="/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

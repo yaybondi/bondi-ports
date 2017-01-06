@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="perl-modules-5.24" section="perl">
+    <description>
+        <summary>Core Perl modules</summary>
+        <p>
+        Architecture independent Perl modules. These modules are part of Perl and
+        required if the `perl' package is installed.
+        </p>
+        <p>
+        Note that this package only exists to save archive space and should be
+        considered an internal implementation detail of the `perl' package.
+        Other packages should not depend on `perl-modules-5.24' directly, they
+        should use `perl' (which depends on `perl-modules-5.24') instead.
+        </p>
+    </description>
+
+    <requires>
+        <package name="perl-base" version=">="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/share/perl"/>
+    </contents>
+</package>
