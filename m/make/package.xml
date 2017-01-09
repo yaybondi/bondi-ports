@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="make" architecture-independent="false">
+        <description>
+            <summary>utility for directing compilation</summary>
+            <p>
+            GNU Make is a utility which controls the generation of executables
+            and other target files of a program from the program's source
+            files. It determines automatically which pieces of a large program
+            need to be (re)created, and issues the commands to (re)create
+            them. Make can be used to organize any task in which targets (files)
+            are to be automatically updated based on input files whenever the
+            corresponding input is newer --- it is not limited to building
+            computer programs. Indeed, Make is a general purpose dependency
+            solver.
+            </p>
+        </description>
+
+        <sources>
+            <file src="make-dfsg-4.1.tar.gz" subdir="sources"
+                sha256sum="b3ed04fb6718289e4a430afbe2df6ecba9177aad9f6d09aaf38e5409262ca8a3"/>
+            <file src="patches.09.tar.gz" subdir="patches"
+                sha256sum="1e1e7a58b396942e4d649ec7291d96671127beb8e5bfd2e657264abe9f578e3a"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/make-dfsg.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autoconf"/>
+            <package name="automake"/>
+            <package name="autopoint"/>
+            <package name="file"/>
+            <package name="pkg-config"/>
+            <package name="procps"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="make.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
