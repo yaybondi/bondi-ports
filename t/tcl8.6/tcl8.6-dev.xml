@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="tcl8.6-dev" section="libdevel">
+    <description>
+        <summary>Tcl (the Tool Command Language) v8.6 - development files</summary>
+        <p>
+        Tcl is a powerful, easy-to-use, embeddable, cross-platform interpreted
+        scripting language. This package contains the headers and libraries
+        needed to embed or extend Tcl.
+        </p>
+    </description>
+
+    <requires>
+        <package name="dpkg-dev" version=">= 1.16.1~"/>
+        <package name="zlib1g-dev"/>
+        <package name="libtcl8.6" version="=="/>
+        <package name="tcl8.6"/>
+    </requires>
+
+    <contents>
+        <dir src="/usr/share/aclocal"/>
+        <file src="/debian/tclConfig.sh"/>
+        <file src="/debian/tclooConfig.sh"/>
+        <file src="/usr/include"/>
+        <file src="/usr/lib/*.a"/>
+        <file src="/usr/lib/tcl*/*.sh"/>
+        <file src="/usr/share/aclocal/*.m4"/>
+    </contents>
+</package>

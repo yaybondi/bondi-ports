@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libtcl8.6" section="libs">
+    <description>
+        <summary>Tcl (the Tool Command Language) v8.6 - run-time library files</summary>
+        <p>
+        Tcl is a powerful, easy to use, embeddable, cross-platform interpreted
+        scripting language. This package contains the Tcl library and auxiliary
+        code which allows one to run Tcl-enabled applications. This version
+        includes thread support.
+        </p>
+    </description>
+
+    <requires>
+        <package name="tzdata"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/*.so"/>
+        <file src="/usr/lib/*.so.*"/>
+        <file src="/usr/share/tcltk/tcl8.6"/>
+    </contents>
+</package>
