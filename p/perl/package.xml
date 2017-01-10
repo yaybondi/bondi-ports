@@ -28,10 +28,13 @@
                 sha256sum="6da6333809eb2b35b17ee3c25b7f0327da32fad7214b296b662ccd9883b8bc59"/>
             <file src="patches.01.tar.gz" subdir="patches"
                 sha256sum="678d56dbe92f20a49dcca7a7dddfc4f6a4281b388c24bdc3c02bf322fb240293"/>
+            <file src="patches.extra.tar.gz" subdir="patches"
+                sha256sum="12d86f658c535d9dce4a8b527b4319aeac0fc7374aa40e87736dbfcd7644350b"/>
         </sources>
         
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/debian/cpan_definstalldirs.diff"/>
                 <file src="patches/debian/db_file_ver.diff"/>
                 <file src="patches/debian/doc_info.diff"/>
@@ -95,6 +98,8 @@
                 <file src="patches/fixes/test-builder-warning.diff"/>
                 <file src="patches/fixes/longdblinf-randomness.diff"/>
                 <file src="patches/debian/installman-utf8.diff"/>
+                <!-- Bolt OS -->
+                <file src="patches/cross-musl-config-sh.patch"/>
             </patchset>
         </patches>
 
