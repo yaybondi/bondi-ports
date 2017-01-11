@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="tcllib" architecture-independent="false">
+        <description>
+            <summary>Standard Tcl Library</summary>
+            <p>
+            Tcllib, the standard Tcl library, is a collection of common utility
+            functions and modules all written in high-level Tcl.
+            </p>
+        </description>
+
+        <sources>
+            <file src="tcllib-1.18-dfsg.tar.xz" subdir="sources"
+                sha256sum="ed531a58d28f77f7b2af570c24caec3c213288219315708d0158efe98bcab37e"/>
+            <file src="patches.03.tar.gz" subdir="patches"
+                sha256sum="f3b93023fcfc226603ff3cc5ef4f3db80969c4c4796abd55c147f555ee89f4f4"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/nettool.patch"/>
+            </patchset>
+        </patches>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="tcllib.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
