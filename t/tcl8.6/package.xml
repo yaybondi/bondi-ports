@@ -42,7 +42,6 @@
     <xi:include href="tcl8.6.xml"/>
     <xi:include href="libtcl8.6.xml"/>
     <xi:include href="tcl8.6-dev.xml"/>
-    <xi:include href="tcl8.6-doc.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>
