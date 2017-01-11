@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="tcl-expect" section="interpreters">
+    <description>
+        <summary>Automates interactive applications (Tcl package)</summary>
+        <p>
+        Expect is a tool for automating interactive applications according to a script.
+        Following the script, Expect knows what can be expected from a program and what
+        the correct response should be. Expect is also useful for testing these same
+        applications. And by adding Tk, you can also wrap interactive applications in
+        X11 GUIs. An interpreted language provides branching and high-level control
+        structures to direct the dialogue. In addition, the user can take control and
+        interact directly when desired, afterward returning control to the script.
+        </p>
+        <p>
+        This package contains the library and Tcl package Expect.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libtcl8.6"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/*.so.*"/>
+        <file src="/usr/lib/tcltk/*/*"/>
+    </contents>
+</package>

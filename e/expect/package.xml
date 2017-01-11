@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="expect" architecture-independent="false">
+        <description>
+            <summary>Automates interactive applications</summary>
+            <p>
+            Expect is a tool for automating interactive applications according to a script.
+            Following the script, Expect knows what can be expected from a program and what
+            the correct response should be. Expect is also useful for testing these same
+            applications. And by adding Tk, you can also wrap interactive applications in
+            X11 GUIs. An interpreted language provides branching and high-level control
+            structures to direct the dialogue. In addition, the user can take control and
+            interact directly when desired, afterward returning control to the script.
+            </p>
+        </description>
+
+        <sources>
+            <file src="expect-5.45.tar.gz" subdir="sources"
+                sha256sum="b28dca90428a3b30e650525cdc16255d76bb6ccd65d448be53e620d95d5cc040"/>
+            <file src="patches.07.tar.gz" subdir="patches"
+                sha256sum="fd89ad4f59bf30f503efd439055a23c8519d217ac8b86753dd5852ec359dd39c"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/01-example-shebang.patch"/>
+                <file src="patches/02-example-cryptdir.patch"/>
+                <file src="patches/05-makefile-soname.patch"/>
+                <file src="patches/06-pkgindex.patch"/>
+                <file src="patches/07-file-handle.patch"/>
+                <file src="patches/09-unsafe-traps.patch"/>
+                <file src="patches/10-manpage.patch"/>
+                <file src="patches/11-ttyname.patch"/>
+                <file src="patches/12-fdout.patch"/>
+                <file src="patches/13-implicit-defs.patch"/>
+                <file src="patches/16-logfile.patch"/>
+                <file src="patches/18-non-linux.patch"/>
+                <file src="patches/22-segfault-with-stubs.patch"/>
+                <file src="patches/23-memmove.patch"/>
+                <file src="patches/24-format.patch"/>
+                <file src="patches/25-matchlen.patch"/>
+                <file src="patches/26-eof-handling.patch"/>
+                <file src="patches/27-exp_chan.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autotools-dev"/>
+            <package name="autoconf"/>
+            <package name="tcl8.6-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="expect.xml"/>
+    <xi:include href="tcl-expect.xml"/>
+    <xi:include href="tcl-expect-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
