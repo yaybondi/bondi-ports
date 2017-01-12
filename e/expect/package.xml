@@ -23,8 +23,10 @@
                 sha256sum="b28dca90428a3b30e650525cdc16255d76bb6ccd65d448be53e620d95d5cc040"/>
             <file src="patches.07.tar.gz" subdir="patches"
                 sha256sum="fd89ad4f59bf30f503efd439055a23c8519d217ac8b86753dd5852ec359dd39c"/>
+            <file src="patches.extra.tar.gz" subdir="patches"
+                sha256sum="5468e825ec77cbcdea487313f482764985126eb4d774929fdeae9d1df3aaa117"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/01-example-shebang.patch"/>
