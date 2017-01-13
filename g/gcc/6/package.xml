@@ -106,7 +106,9 @@
                 <file src="patches/libjava-multiarch.diff"/>
                 <file src="patches/libjava-nobiarch-check.diff"/>
                 <file src="patches/config-ml.diff"/>
+                <!--
                 <file src="patches/g++-multiarch-incdir.diff"/>
+                -->
                 <file src="patches/canonical-cpppath.diff"/>
                 <file src="patches/gcc-multilib-multiarch.diff"/>
                 <file src="patches/libgomp-kfreebsd-testsuite.diff"/>
