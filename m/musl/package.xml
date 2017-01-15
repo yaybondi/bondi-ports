@@ -30,14 +30,13 @@
             <file src="musl-1.1.16~20161215.tar.gz" subdir="sources"
                 sha256sum="158f0c5ee1359964e582732f32fb3ce9dec4869df21aa6226da16f801587732d"/>
             <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="fcfbe611266dbcc2fb0e8cc309ba610b70efee17f7385259f743582b8776d74d"/>
+                sha256sum="e4f25c084e0c86ea99449f86da373a0e9470a337f9d8dad6f53ddeaebecaa830"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/musl-cdefs.patch"/>
                 <file src="patches/musl-unsafe-str-funcs.patch"/>
-                <file src="patches/musl-getpwent-r-impl.patch"/>
             </patchset>
         </patches>
 
