@@ -24,7 +24,7 @@
             <file src="patches.19.tar.gz" subdir="patches"
                 sha256sum="1fc810db4fce2b1a1f429d272d7c72ebd642d0b56e5567a8834e96644ff75279"/>
             <file src="patches.extra.tar.gz" subdir="patches"
-                sha256sum="925425ee1890069ed87cc40442fa9902612c7601a1cfde06e2a860e37a6c8488"/>
+                sha256sum="ca5622b9a451d2543b6e4465ebe20cbe7b3050dfe56eb59b02ef419027c302e6"/>
         </sources>
         
         <patches>
@@ -53,6 +53,7 @@
                 <!-- Bolt OS -->
                 <file src="patches/defconfig.patch"/>
                 <file src="patches/ifplugd-no-ethernet-h.patch"/>
+                <file src="patches/no-getpwent-r.patch"/>
             </patchset>
         </patches>
 
