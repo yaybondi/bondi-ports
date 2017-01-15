@@ -29,9 +29,9 @@
             <file src="patches.01.tar.gz" subdir="patches"
                 sha256sum="678d56dbe92f20a49dcca7a7dddfc4f6a4281b388c24bdc3c02bf322fb240293"/>
             <file src="patches.extra.tar.gz" subdir="patches"
-                sha256sum="12d86f658c535d9dce4a8b527b4319aeac0fc7374aa40e87736dbfcd7644350b"/>
+                sha256sum="bbd220128ffbe259d630a3ed3d53b4ef704f2bf841ede0b094123cb96c824ec2"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <!-- Debian -->
