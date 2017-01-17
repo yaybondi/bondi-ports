@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="gzip" architecture-independent="false">
+        <description>
+            <summary>GNU compression utilities</summary>
+            <p>
+            This package provides the standard GNU file compression utilities, which 
+            are also the default compression tools for Debian. They typically operate 
+            on files with names ending in '.gz', but can also decompress files ending 
+            in '.Z' created with 'compress'.
+            </p>
+        </description>
+
+        <sources>
+            <file src="gzip-1.6.tar.gz" subdir="sources"
+                sha256sum="97eb83b763d9e5ad35f351fe5517e6b71521d7aac7acf3e3cacdb6b1496d8f7e"/>
+            <file src="patches.05.tar.gz" subdir="patches"
+                sha256sum="751e29b015729e36cb76076d15268b7ba3a1a3454486646836820e5ead312f90"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/rsyncable.diff"/>
+                <file src="patches/sigpipe.diff"/>
+                <file src="patches/zgrep-man-diff"/>
+                <file src="patches/gnulib-mingw-w64.diff"/>
+                <file src="patches/man-page-typo.diff"/>
+                <file src="patches/gzip_reproducible_build.diff"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="texinfo"/>
+            <package name="autoconf"/>
+            <package name="automake"/>
+            <package name="autotools-dev"/>
+            <package name="less"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="gzip.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
