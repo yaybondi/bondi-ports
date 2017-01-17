@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="attr" architecture-independent="false">
+        <description>
+            <summary>Utilities for manipulating filesystem extended attributes</summary>
+            <p>
+            A set of tools for manipulating extended attributes on filesystem
+            objects, in particular getfattr(1) and setfattr(1).
+            An attr(1) command is also provided which is largely compatible
+            with the SGI IRIX tool of the same name.
+            </p>
+        </description>
+
+        <sources>
+            <file src="attr-2.4.47.tar.bz2" subdir="sources"
+                sha256sum="6c1208035757f5ce9b516402dd45b8299a53ae4d69ad2c352116f9cb8d7bc274"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="134b69c97511752c6f18f796afb5b206c1c3841ffea3d3c04510e36ef5115000"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/01-configure.in.patch"/>
+                <file src="patches/02-687531-fix-missing-ldflags.patch"/>
+                <file src="patches/12-643587-attr-autoconf-version-check.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autoconf"/>
+            <package name="automake"/>
+            <package name="gettext"/>
+            <package name="libtool"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="attr.xml"/>
+    <xi:include href="libattr1-dev.xml"/>
+    <xi:include href="libattr1.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

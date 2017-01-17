@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="attr" section="utils">
+    <description>
+        <summary>Utilities for manipulating filesystem extended attributes</summary>
+        <p>
+        A set of tools for manipulating extended attributes on filesystem
+        objects, in particular getfattr(1) and setfattr(1).
+        An attr(1) command is also provided which is largely compatible
+        with the SGI IRIX tool of the same name.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libattr1" version="=="/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

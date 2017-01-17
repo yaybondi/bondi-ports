@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libattr1" section="libs">
+    <description>
+        <summary>Extended attribute shared library</summary>
+        <p>
+        Contains the runtime environment required by programs that make use
+        of extended attributes.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+    </contents>
+</package>
