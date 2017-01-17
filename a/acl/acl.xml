@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="acl" section="utils">
+    <description>
+        <summary>Access control list utilities</summary>
+        <p>
+        This package contains the getfacl and setfacl utilities needed for
+        manipulating access control lists.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libacl1" version="=="/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

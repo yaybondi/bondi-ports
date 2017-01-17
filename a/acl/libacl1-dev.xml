@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libacl1-dev" section="libdevel">
+    <description>
+        <summary>Access control list static libraries and headers</summary>
+        <p>
+        This package contains the static libraries and header files needed
+        for developing programs which make use of the access control list
+        programming interface defined in POSIX 1003.1e draft standard 17.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libc6-dev"/>
+        <package name="libacl1" version="=="/>
+        <package name="libattr1-dev"/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

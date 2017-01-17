@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="acl" architecture-independent="false">
+        <description>
+            <summary>Access control list utilities</summary>
+            <p>
+            This package contains the getfacl and setfacl utilities needed for
+            manipulating access control lists.
+            </p>
+        </description>
+
+        <sources>
+            <file src="acl-2.2.52.tar.bz2" subdir="sources"
+                sha256sum="59d05b38af76baf2eddccbf08c7968a17451cc785ffecc657fcb46ce32b2631d"/>
+            <file src="patches.03.tar.gz" subdir="patches"
+                sha256sum="0a3624dd851c57b73e8f56842605d34e13d70aa8affec228ba789859017733f4"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/01-configure.in.patch"/>
+                <file src="patches/02-687535-fix-missing-ldflags.patch"/>
+                <file src="patches/10-590240-move-binaries-to-root-bin-dir.patch"/>
+                <file src="patches/11-636512-fix-ftbfs4hurd.patch"/>
+                <file src="patches/12-643588-acl-autoconf-version-check.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autotools-dev"/>
+            <package name="autoconf"/>
+            <package name="automake"/>
+            <package name="gettext"/>
+            <package name="libtool"/>
+            <package name="libattr1-dev" version=">= 1:2.4.46-8"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="acl.xml"/>
+    <xi:include href="libacl1-dev.xml"/>
+    <xi:include href="libacl1.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

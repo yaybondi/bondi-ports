@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libacl1" section="libs">
+    <description>
+        <summary>Access control list shared library</summary>
+        <p>
+        This package contains the libacl.so dynamic library containing
+        the POSIX 1003.1e draft standard 17 functions for manipulating
+        access control lists.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+    </contents>
+</package>
