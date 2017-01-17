@@ -20,16 +20,21 @@
                 sha256sum="97eb83b763d9e5ad35f351fe5517e6b71521d7aac7acf3e3cacdb6b1496d8f7e"/>
             <file src="patches.05.tar.gz" subdir="patches"
                 sha256sum="751e29b015729e36cb76076d15268b7ba3a1a3454486646836820e5ead312f90"/>
+            <file src="patches.extra.tar.gz" subdir="patches"
+                sha256sum="d37f42371dfb51ccec81a9dfc463244a68d5c0795787c754b654ef9a3684d805"/>
         </sources>
         
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/rsyncable.diff"/>
                 <file src="patches/sigpipe.diff"/>
                 <file src="patches/zgrep-man-diff"/>
                 <file src="patches/gnulib-mingw-w64.diff"/>
                 <file src="patches/man-page-typo.diff"/>
                 <file src="patches/gzip_reproducible_build.diff"/>
+                <!-- Bolt OS -->
+                <file src="patches/gnulib-musl-compat.patch"/>
             </patchset>
         </patches>
 
