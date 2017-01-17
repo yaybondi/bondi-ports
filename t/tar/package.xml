@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="tar" architecture-independent="false">
+        <description>
+            <summary>GNU version of the tar archiving utility</summary>
+            <p>
+            Tar is a program for packaging a set of files as a single archive in tar
+            format. The function it performs is conceptually similar to cpio, and to
+            things like PKZIP in the DOS world. It is heavily used by the Debian package
+            management system, and is useful for performing system backups and exchanging
+            sets of files with others.
+            </p>
+        </description>
+
+        <sources>
+            <file src="tar-1.29b.tar.xz" subdir="sources"
+                sha256sum="6a59706ebee384a6cd2fb3ee1dbfbfc20c5c66c7efd7cedb28edc054fca8ba00"/>
+            <file src="patches.1.1.tar.gz" subdir="patches"
+                sha256sum="6a0e7db2bf727961d8fa3a25c4f4e92690ce1015798977c03a6df0ed2b4b0f01"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/pristine-tar.diff"/>
+                <file src="patches/listed03-linux-only"/>
+                <file src="patches/rmt.8-header-wrong"/>
+                <file src="patches/When-extracting-skip-.-members.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="gettext"/>
+            <package name="autoconf"/>
+            <package name="automake"/>
+            <package name="autopoint"/>
+            <package name="autotools-dev"/>
+            <package name="libacl1-dev"/>
+            <package name="libattr1-dev"/>
+            <package name="libselinux1-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="tar.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
