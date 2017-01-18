@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="bsdcpio" section="oldlibs">
+    <description>
+        <summary>transitional dummy package for moving bsdcpio to libarchive-tools</summary>
+        <p>
+        The bsdcpio program is the default system 'cpio' program used on FreeBSD.
+        bsdcpio uses the libarchive library as a backend which does all of the work for
+        reading and writing archives in various formats.
+        </p>
+        <p>
+        This is a transitional package for the migration of the bsdcpio tool to
+        the libarchive-tools package.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libarchive-tools" version=">=="/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>

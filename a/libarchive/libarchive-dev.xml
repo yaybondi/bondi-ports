@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libarchive-dev" section="libdevel">
+    <description>
+        <summary>Multi-format archive and compression library (development files)</summary>
+        <p>
+        The libarchive library provides a flexible interface for reading and writing
+        archives in various formats such as tar and cpio. libarchive also supports
+        reading and writing archives compressed using various compression filters such
+        as gzip and bzip2. The library is inherently stream-oriented; readers serially
+        iterate through the archive, writers serially add things to the archive.
+        </p>
+        <p>
+        This package provides the files necessary for development with libarchive.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libarchive13" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include"/>
+        <file src="/usr/lib/lib*.a"/>
+        <file src="/usr/lib/lib*.so"/>
+        <file src="/usr/lib/pkgconfig/*"/>
+    </contents>
+</package>

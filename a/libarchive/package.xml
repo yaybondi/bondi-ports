@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libarchive" architecture-independent="false">
+        <description>
+            <summary>Multi-format archive and compression library</summary>
+            <p>
+            The libarchive library provides a flexible interface for reading and writing
+            archives in various formats such as tar and cpio. libarchive also supports
+            reading and writing archives compressed using various compression filters such
+            as gzip and bzip2. The library is inherently stream-oriented; readers serially
+            iterate through the archive, writers serially add things to the archive.
+            </p>
+            <p>
+            Archive formats supported are:
+            </p>
+            <ul>
+                <li>tar (read and write, including GNU extensions)</li>
+                <li>pax (read and write, including GNU and star extensions)</li>
+                <li>cpio (read and write, including odc and newc variants)</li>
+                <li>iso9660 (read and write, including Joliet and Rockridge extensions, with some limitations)</li>
+                <li>zip (read only, with some limitations, uses zlib)</li>
+                <li>mtree (read and write)</li>
+                <li>shar (write only)</li>
+                <li>ar (read and write, including BSD and GNU/SysV variants)</li>
+                <li>empty (read only; in particular, note that no other format will accept an empty file)</li>
+                <li>raw (read only)</li>
+                <li>xar (read only)</li>
+                <li>rar (read only, with some limitations)</li>
+                <li>7zip (read and write, with some limitations)</li>
+            </ul>
+            <p>
+            Filters supported are:
+            </p>
+            <ul>
+                <li>gzip (read and write, uses zlib)</li>
+                <li>bzip2 (read and write, uses bzlib)</li>
+                <li>compress (read and write, uses an internal implementation)</li>
+                <li>uudecode (read only)</li>
+                <li>separate command-line compressors with fixed-signature auto-detection</li>
+                <li>xz and lzma (read and write using liblzma)</li>
+            </ul>
+        </description>
+
+        <sources>
+            <file src="libarchive-3.2.1.tar.gz" subdir="sources"
+                sha256sum="72ee1a4e3fd534525f13a0ba1aa7b05b203d186e0c6072a8a4738649d0b3cfd2"/>
+            <file src="patches.05.tar.gz" subdir="patches"
+                sha256sum="f6574db24a1d907829ee9d7ff130accf82f6501c3462647e27920d3870a52c89"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/Ignore-the-MT-encoder-in-XZ-5.2-prerelease-versions.patch"/>
+                <file src="patches/Do-not-use-SIGRTMAX.patch"/>
+                <file src="patches/Typos.patch"/>
+                <file src="patches/Candidate.patch"/>
+                <file src="patches/CPPCheck.patch"/>
+                <file src="patches/Issue-744-part-of-Issue-743-Enforce-sandbox-with-very-lon.patch"/>
+                <file src="patches/Fixes-for-Issue-745-and-Issue-746-from-Doran-Moppert.patch"/>
+                <file src="patches/Test-cases-for-Github-Issue-744-745-and-746.patch"/>
+                <file src="patches/Fix-the-test-cases-for-Issue-745-and-Issue-746.patch"/>
+                <file src="patches/Correct-the-usage-of-PATH_MAX-as-reported-in-Issue-744.patch"/>
+                <file src="patches/Issue-761-Heap-overflow-reading-corrupted-7Zip-files.patch"/>
+                <file src="patches/Issue-747-and-others-Avoid-OOB-read-when-parsing-multiple.patch"/>
+                <file src="patches/Issue-767-Buffer-overflow-printing-a-filename.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="pkg-config"/>
+            <package name="libbz2-dev"/>
+            <package name="liblz4-dev"/>
+            <package name="liblzma-dev"/>
+            <package name="libxml2-dev"/>
+            <package name="zlib1g-dev"/>
+            <package name="libacl1-dev"/>
+            <package name="e2fslibs-dev"/>
+            <package name="libattr1-dev"/>
+            <package name="sharutils"/>
+            <package name="nettle-dev"/>
+            <package name="liblzo2-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libarchive-dev.xml"/>
+    <xi:include href="libarchive13.xml"/>
+    <xi:include href="libarchive-tools.xml"/>
+    <xi:include href="bsdtar.xml"/>
+    <xi:include href="bsdcpio.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

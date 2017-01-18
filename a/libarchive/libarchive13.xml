@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libarchive13" section="libs">
+    <description>
+        <summary>Multi-format archive and compression library (shared library)</summary>
+        <p>
+        The libarchive library provides a flexible interface for reading and writing
+        archives in various formats such as tar and cpio. libarchive also supports
+        reading and writing archives compressed using various compression filters such
+        as gzip and bzip2. The library is inherently stream-oriented; readers serially
+        iterate through the archive, writers serially add things to the archive.
+        </p>
+        <p>
+        This package provides the libarchive shared library.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/lib*.so.*"/>
+    </contents>
+</package>

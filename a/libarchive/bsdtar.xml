@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="bsdtar" section="oldlibs">
+    <description>
+        <summary>transitional dummy package for moving bsdtar to libarchive-tools</summary>
+        <p>
+        The bsdtar program is the default system 'tar' program used on FreeBSD. bsdtar
+        uses the libarchive library as a backend which does all of the work for reading
+        and writing archives in various formats.
+        </p>
+        <p>
+        This is a transitional package for the migration of the bsdtar tool to
+        the libarchive-tools package.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libarchive-tools" version=">=="/>
+    </requires>
+
+    <contents>
+    </contents>
+</package>
