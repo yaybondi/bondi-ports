@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-
     <defines>
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
@@ -24,7 +23,7 @@
 
         <requires>
             <package name="libgmp-dev"/>
-            <package name="automake"/>
+            <package name="autoconf"/>
         </requires>
 
         <!-- build rules -->

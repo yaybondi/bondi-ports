@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-
     <defines>
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
@@ -19,10 +18,10 @@
         </description>
 
         <sources>
-            <file src="isl-0.17.1.tar.xz" subdir="sources"
-                sha256sum="be152e5c816b477594f4c6194b5666d8129f3a27702756ae9ff60346a8731647"/>
+            <file src="isl-0.18.tar.xz" subdir="sources"
+                sha256sum="0f35051cc030b87c673ac1f187de40e386a1482a0cfdf2c552dd6031b307ddc4"/>
             <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="0a048b0146848d4b65f7d44d160813f9d455637e6e49aeb958a9ff37071914a1"/>
+                sha256sum="c1319c112ef9ecb2ce8e50cf36e0237731ed4065dd921f6f956bd08aba76f3bc"/>
         </sources>
 
         <patches>
@@ -32,10 +31,13 @@
             </patchset>
         </patches>
 
-        <!-- build rules -->
+        <requires>
+            <package name="libgmp-dev"/>
+            <package name="autoconf"/>
+        </requires>
+
         <xi:include href="rules.xml"/>
     </source>
 
-    <!-- changelog -->
     <xi:include href="changelog.xml"/>
 </control> 

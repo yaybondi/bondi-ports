@@ -20,14 +20,16 @@
         </description>
 
         <sources>
-            <file src="gmp-6.1.1-dfsg.tar.xz" subdir="sources"
-                sha256sum="1c34c3c0c89c4f1270f6e3e579e7b7f9190eca6713311f0167bb9fee5b3750ee"/>
+            <file src="gmp-6.1.2+dfsg.tar.xz" subdir="sources"
+                sha256sum="18016f718f621e7641ddd4e57f8e140391c5183252e5998263ffff59198a65b7"/>
         </sources>
 
-        <!-- build rules -->
+        <requires>
+            <package name="m4"/>
+        </requires>
+
         <xi:include href="rules.xml"/>
     </source>
 
-    <!-- changelog -->
     <xi:include href="changelog.xml"/>
 </control>
