@@ -25,7 +25,7 @@
         </description>
 
         <sources>
-            <file src="mpc-1.0.3.tar.gz" subdir="sources"
+            <file src="mpclib3-1.0.3.tar.gz" subdir="sources"
                 sha256sum="617decc6ea09889fb08ede330917a00b16809b8db88c29c31bfbb49cbf88ecc3"/>
         </sources>
 
