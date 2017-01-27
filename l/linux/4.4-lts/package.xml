@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <source name="linux-4.1" architecture-independent="false">
+    <source name="linux-4.4" architecture-independent="false">
         <description>
             <summary>Linux kernel version 4.4 LTS</summary>
             <p>
