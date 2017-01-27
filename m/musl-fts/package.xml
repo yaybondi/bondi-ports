@@ -12,8 +12,8 @@
         </description>
 
         <sources>
-            <file src="musl-fts-1.2.5.tar.gz" subdir="sources"
-                sha256sum="8ce636f066b1943906f6a2d9b0064482626ee89cb926dda8faa5b05140cbba8b"/>
+            <file src="musl-fts-1.2.7.tar.gz" subdir="sources"
+                sha256sum="49ae567a96dbab22823d045ffebe0d6b14b9b799925e9ca9274d47d26ff482a6"/>
         </sources>
 
         <requires>
