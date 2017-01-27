@@ -17,11 +17,11 @@
             <file src="libselinux-2.6.tar.gz" subdir="sources"
                 sha256sum="4ea2dde50665c202253ba5caac7738370ea0337c47b251ba981c60d24e1a118a"/>
             <file src="patches.03.tar.gz" subdir="patches"
-                sha256sum="5a99bffb847d58f10492bc5a471a6eeba91498beff77f69e3a96022260566c3a"/>
-            <file src="patches.extra.tar.gz" subdir="patches"
-                sha256sum="69fee54526b57b89ab7b7be53919f6702d06972a7f4a6633891bd910c23ecb68"/>
+                sha256sum="64be9a4a3b5db7425c2382e335495f184ae9bff2c7c18232f9942653ff5a298e"/>
+            <file src="patches.bolt.tar.gz" subdir="patches"
+                sha256sum="9442ef1412f789d203357aefc5394f6499aad4ecab5cb5cc78a4bae3dbce915a"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <!-- Debian -->
@@ -39,6 +39,9 @@
             <package name="libsepol1-dev" version=">= 2.6"/>
             <package name="libpcre3-dev"/>
             <package name="pkg-config"/>
+            <package name="python-all-dev" version=">= 2.6.6-3~"/>
+            <package name="python3-all-dev"/>
+            <package name="swig"/>
         </requires>
 
         <xi:include href="rules.xml"/>
