@@ -6,7 +6,7 @@
 
     <source name="pcre3" architecture-independent="false">
         <description>
-            <summary>Old Perl 5 Compatible Regular Expression Library - runtime files</summary>
+            <summary>Old Perl 5 Compatible Regular Expression Library</summary>
             <p>
             This is a library of functions to support regular expressions whose syntax 
             and semantics are as close as possible to those of the Perl 5 language.
@@ -21,7 +21,7 @@
             <file src="pcre3-8.39.tar.bz2" subdir="sources"
                 sha256sum="b858099f82483031ee02092711689e7245586ada49e534a06e678b8ea9549e8b"/>
             <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="7bcff9d1113fb744d74dc5b89c7f9bb6c28bd6d26972a0a7e88aa50e710c2034"/>
+                sha256sum="8f8ce637501c86f07d78e6f48a0d03341cd087fbff9a8a3172d8707dd63f2c3c"/>
         </sources>
 
         <patches>
@@ -37,7 +37,7 @@
         </patches>
 
         <requires>
-            <package name="libc6-dev"/>
+            <package name="autoconf"/>
         </requires>
 
         <xi:include href="rules.xml"/>
