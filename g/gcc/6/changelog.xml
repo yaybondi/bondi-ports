@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
-    <release version="6.2.1" revision="1" upstream-version="6.2.1-5"
+    <release version="6.2.1" revision="7"
+        upstream-version="6.2.1-7"
         maintainer="Tobias Koch" email="tobias.koch@nonterra.com"
-        date="2016-12-12 15:11:40 GMT+3">
+        date="2017-01-27 16:11:40+03:00">
         <changeset>
             <li>Initial packaging</li>
         </changeset>

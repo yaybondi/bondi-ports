@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="2.27.51.20161220" revision="1"
+        upstream-version="2.27.51.20161220-1"
+        maintainer="Tobias Koch" email="tobias.koch@nonterra.com"
+        date="2017-01-27 15:21:00+03:00">
+        <changeset>
+            <li>Update to Debian version 2.27.51.20161220-1</li>
+        </changeset>
+    </release>
     <release version="2.27.51.20161201" revision="1"
         upstream-version="2.27.51.20161201-1"
         maintainer="Tobias Koch" email="tobias.koch@nonterra.com"
-        date="2016-12-10 15:20:00 GMT+2">
+        date="2016-12-10 15:20:00+02:00">
         <changeset>
             <li>Use Debian binutils version 2.27.51.20161201-1</li>
         </changeset>

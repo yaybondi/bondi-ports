@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="binutils-dev" section="devel">
     <description>
-        <summary>binutils development files</summary>
+        <summary>GNU binary utilities (BFD development files)</summary>
+        <p>
+        This package includes header files and static libraries necessary to build
+        programs which use the GNU BFD library, which is part of binutils. Note
+        that building Debian packages which depend on the shared libbfd is Not
+        Allowed.
+        </p>
     </description>
 
     <requires>

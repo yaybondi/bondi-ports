@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-
     <defines>
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
     <source name="binutils" architecture-independent="false">
-        <xi:include href="description.xml"/>
+        <description>
+            <summary>GNU assembler, linker and binary utilities</summary>
+            <p>
+            The programs in this package are used to assemble, link and manipulate
+            binary and object files. They may be used in conjunction with a compiler
+            and various libraries to build programs.
+            </p>
+        </description>
 
         <sources>
-            <file src="binutils-2.27.51.20161201.tar.gz" subdir="sources"
-                sha256sum="917428442e8ed6b81f16f452ba7309e1cc460575928a367bef4b88a8fbcc1b8d"/>
+            <file src="binutils-2.27.51.20161220.tar.gz" subdir="sources"
+                sha256sum="dca9f4e7bd242a2a1d0a5b2c241a32a4a604b6377e01e4923faa1dd726d8815c"/>
             <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="4a7c64d675cfe22b58e2287eab8894516d8c2be7805de7c9ac968ed2aa6a5c88"/>
+                sha256sum="7737fd743e3fd038eb946e60fd700ebc6fb87e591baa19bf9edfe1fbc3c668b5"/>
         </sources>
 
         <patches>
@@ -46,20 +52,23 @@
             <package name="autoconf"/>
             <package name="bison"/>
             <package name="flex"/>
+            <package name="gettext"/>
+            <package name="texinfo"/>
+            <package name="dejagnu"/>
+            <package name="quilt"/>
+            <package name="chrpath"/>
+            <package name="python3"/>
             <package name="file"/>
             <package name="xz-utils"/>
-            <package name="libc6-dev"/>
+            <package name="lsb-release"/>
             <package name="zlib1g-dev"/>
         </requires>
 
-        <!-- build rules -->
         <xi:include href="rules.xml"/>
     </source>
 
-    <!-- package rules -->
     <xi:include href="binutils.xml"/>
     <xi:include href="binutils-dev.xml"/>
 
-    <!-- changelog -->
     <xi:include href="changelog.xml"/>
 </control>

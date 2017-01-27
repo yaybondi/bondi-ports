@@ -17,7 +17,7 @@
             <file src="acl-2.2.52.tar.bz2" subdir="sources"
                 sha256sum="59d05b38af76baf2eddccbf08c7968a17451cc785ffecc657fcb46ce32b2631d"/>
             <file src="patches.03.tar.gz" subdir="patches"
-                sha256sum="0a3624dd851c57b73e8f56842605d34e13d70aa8affec228ba789859017733f4"/>
+                sha256sum="84c3a1196c792bcd93fe73df6a44ae1986b2c6a89ae3426045a130d846047b70"/>
         </sources>
         
         <patches>

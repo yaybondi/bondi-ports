@@ -27,16 +27,18 @@
         </description>
 
         <sources>
-            <file src="musl-1.1.16~20161215.tar.gz" subdir="sources"
-                sha256sum="158f0c5ee1359964e582732f32fb3ce9dec4869df21aa6226da16f801587732d"/>
+            <file src="musl-1.1.16.tar.gz" subdir="sources"
+                sha256sum="937185a5e5d721050306cf106507a006c3f1f86d86cd550024ea7be909071011"/>
             <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="e4f25c084e0c86ea99449f86da373a0e9470a337f9d8dad6f53ddeaebecaa830"/>
+                sha256sum="d1c3b2f6c1bc8f6b781db10b12fdaa08e821948328461c1c9d238d79e63cb949"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
+                <!--
                 <file src="patches/musl-cdefs.patch"/>
                 <file src="patches/musl-unsafe-str-funcs.patch"/>
+                -->
             </patchset>
         </patches>
 

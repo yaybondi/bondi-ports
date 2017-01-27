@@ -5,7 +5,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="gcc6" architecture-independent="false">
+    <source name="gcc-6" architecture-independent="false">
         <description>
             <summary>GCC, the GNU Compiler Collection (base package)</summary>
             <p>
@@ -17,8 +17,8 @@
         <sources>
             <file src="gcc-6.2.0-dfsg.tar.xz" subdir="sources"
                 sha256sum="d6c720212539518b3390885b558053ecaddb5a7c8768407ce7c59139cf54f6be"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="ff2116c4c1f73898dfdcd8ba656a473b870cf6569f674f19c2603c340d435e3a"/>
+            <file src="patches.07.tar.gz" subdir="patches"
+                sha256sum="251ffc2b7c3339ec6412106241a8c66a8df047359d06e264b1b3a148c6077293"/>
         </sources>
 
         <patches>
@@ -75,6 +75,13 @@
                 <file src="patches/libgo-rawClone-no-pt_regs.diff"/>
                 <file src="patches/libgo-elf-relocations-sparc64.diff"/>
                 <file src="patches/libobjc-system-gc.diff"/>
+                <file src="patches/compress-debug-check.diff"/>
+                <file src="patches/pr77267.diff"/>
+                <file src="patches/pr78774.diff"/>
+                <file src="patches/CVE-2016-9840.diff"/>
+                <file src="patches/CVE-2016-9841.diff"/>
+                <file src="patches/CVE-2016-9842.diff"/>
+                <file src="patches/CVE-2016-9843.diff"/>
                 <file src="patches/libstdc++-functexcept.diff"/>
                 <file src="patches/ada-arm.diff"/>
                 <file src="patches/ada-kfreebsd.diff"/>
@@ -91,6 +98,21 @@
                 <file src="patches/libgnatprj-cross-hack.diff"/>
                 <file src="patches/ada-sjlj.diff"/>
                 <file src="patches/ada-link-shlib.diff"/>
+                <!--
+                <file src="patches/gdc-6.diff"/>
+                <file src="patches/gdc-updates.diff"/>
+                <file src="patches/libphobos-soname.diff"/>
+                <file src="patches/libphobos-zlib.diff"/>
+                <file src="patches/gdc-versym-cpu.diff"/>
+                <file src="patches/gdc-versym-os.diff"/>
+                <file src="patches/gdc-frontend-posix.diff"/>
+                <file src="patches/gdc-base-version.diff"/>
+                <file src="patches/gdc-profiledbuild.diff"/>
+                <file src="patches/gdc-libphobos-link.diff"/>
+                <file src="patches/gdc-845377.diff"/>
+                <file src="patches/gdc-texinfo.diff"/>
+                <file src="patches/gdc-libphobos-build.diff"/>
+                -->
                 <file src="patches/sys-auxv-header.diff"/>
                 <file src="patches/libcilkrts-targets.diff"/>
                 <file src="patches/arm-multilib-soft.diff"/>
@@ -115,7 +137,6 @@
                 <file src="patches/go-testsuite.diff"/>
                 <file src="patches/ada-749574.diff"/>
                 <file src="patches/ada-mips.diff"/>
-                <file src="patches/ada-bootstrap-compare.diff"/>
             </patchset>
         </patches>
 
