@@ -22,10 +22,8 @@
                 sha256sum="8460a4a3dd4954c3d96d7a4f5dd5bc4d9b76f5754196aa245287553b26d2199a"/>
             <file src="patches.05.tar.gz" subdir="patches"
                 sha256sum="55238735bd389fdcb4738a4d4f2f39d5d0777154e13cc8f2ab5247a88b0f6572"/>
-            <!--
-            <file src="patches.extra.tar.gz" subdir="patches"
-                sha256sum="904cde07f1a3963c8bd6ab0612bce9b673f5a97ee3f154ff098af7280aa444d9"/>
-            -->
+            <file src="patches.bolt.tar.gz" subdir="patches"
+                sha256sum="1da1c0fa758ea9133284811667623ca0909407966d3b69467a3f28c2be81e4d2"/>
         </sources>
         
         <patches>
@@ -36,9 +34,7 @@
                 <file src="patches/sparc-fix-sigsegv-fault-stackpointer-definition.patch"/>
                 <file src="patches/aarch64-stack-direction.patch"/>
                 <!-- Bolt -->
-                <!--
                 <file src="patches/musl-uses-posix-fault.patch"/>
-                -->
             </patchset>
         </patches>
 
