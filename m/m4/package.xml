@@ -18,19 +18,9 @@
         </description>
 
         <sources>
-            <file src="m4-1.4.17.tar.xz" subdir="sources"
-                sha256sum="f0543c3beb51fa6b3337d8025331591e0e18d8ec2886ed391f1aade43477d508"/>
-            <file src="patches.05.tar.gz" subdir="patches"
-                sha256sum="a0c5f5bded6b454007b36f34e6862423bed79b1a6702a3ac96f486148896fb1f"/>
+            <file src="m4-1.4.18.tar.xz" subdir="sources"
+                sha256sum="f2c1e86ca0a404ff281631bdc8377638992744b175afb806e25871a24a934e07"/>
         </sources>
-        
-        <patches>
-            <patchset subdir="sources">
-                <file src="patches/01-float-endian-detection"/>
-                <file src="patches/02-add-escapes-for-braces-in-perl-regex"/>
-                <file src="patches/99-config-guess-config-sub"/>
-            </patchset>
-        </patches>
 
         <requires>
             <package name="libsigsegv-dev"/>
