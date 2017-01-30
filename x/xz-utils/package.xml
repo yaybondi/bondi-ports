@@ -23,7 +23,7 @@
             <file src="xz-utils-5.2.2.tar.xz" subdir="sources"
                 sha256sum="f341b1906ebcdde291dd619399ae944600edc9193619dd0c0110a5f05bfcc89e"/>
             <file src="patches.1.2.tar.gz" subdir="patches"
-                sha256sum="82df96dd07ceb2bdb8854e8329eb7b0a17faef383a12b5006d7d70b248c2f5fd"/>
+                sha256sum="56a9266aee7dd15b32156d19d4e973562e638d360596eee82360effa71fcf57b"/>
         </sources>
         
         <patches>

@@ -27,9 +27,9 @@
             <file src="perl-5.24.1~rc4.tar.xz" subdir="sources"
                 sha256sum="6da6333809eb2b35b17ee3c25b7f0327da32fad7214b296b662ccd9883b8bc59"/>
             <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="678d56dbe92f20a49dcca7a7dddfc4f6a4281b388c24bdc3c02bf322fb240293"/>
-            <file src="patches.extra.tar.gz" subdir="patches"
-                sha256sum="bbd220128ffbe259d630a3ed3d53b4ef704f2bf841ede0b094123cb96c824ec2"/>
+                sha256sum="0a3c9617d1f612d598760966fd55ae00b2e3a89e91eb9323ac5dbe79b429202a"/>
+            <file src="patches.bolt.tar.gz" subdir="patches"
+                sha256sum="6bb635c06f69a23c20fcaec5cfeba9a6cc5f78fc4f7e12d5bca0c122d95dde9d"/>
         </sources>
 
         <patches>
@@ -112,7 +112,6 @@
             <package name="procps"/>
             <package name="zlib1g-dev"/>
             <package name="libbz2-dev"/>
-            <package name="dpkg-dev" version=">= 1.17.14"/>
             <package name="libc6-dev" version=">= 2.19-9"/>
         </requires>
 

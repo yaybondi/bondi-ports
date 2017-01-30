@@ -18,7 +18,7 @@
             <file src="python2.7-2.7.13.tar.gz" subdir="sources"
                 sha256sum="a4f05a0720ce0fd92626f0278b6b433eee9a6173ddf2bced7957dfb599a5ece1"/>
             <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="6eb526726ffac9d96d75f392e68c6f6640d7a5061a4dfce6a0ffda8eb76dcedb"/>
+                sha256sum="c615ebb1bb2e42f8174e5ed51dc18ffd0ae78b6f5436874a30fe1fd5bfd002f9"/>
         </sources>
         
         <patches>

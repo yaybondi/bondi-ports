@@ -17,7 +17,7 @@
             <file src="ncurses-6.0+20161126.tar.gz" subdir="sources"
                 sha256sum="e4b9cf1cfcf5a2db7df1d36402967783ba759246c8ff5a17a85ffd7e79296ec0"/>
             <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="eff8a2a7bcfc599b984b686343313dfaed0d97641550b6efa80f42e289a3d583"/>
+                sha256sum="cf1a7ea09968e1d92983b10d2f42eb8e8429a3fd43f07c99f901df7ec2e812d7"/>
         </sources>
         
         <patches>

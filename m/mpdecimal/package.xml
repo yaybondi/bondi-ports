@@ -6,7 +6,7 @@
 
     <source name="mpdecimal" architecture-independent="false">
         <description>
-            <summary>library for decimal floating point arithmetic (development files)</summary>
+            <summary>library for decimal floating point arithmetic</summary>
             <p>
             mpdecimal is a package for correctly-rounded arbitrary precision decimal
             floating point arithmetic.
@@ -17,7 +17,7 @@
             <file src="mpdecimal-2.4.2.tar.gz" subdir="sources"
                 sha256sum="83c628b90f009470981cf084c5418329c88b19835d8af3691b930afccb7d79c7"/>
             <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="ae3cd5654c585a388a971af4586b227ab87dac29f565141794bf45fb45b5abb6"/>
+                sha256sum="8230b58566295b71a4a9f471108b3fbb938071e69cc365efae17a313f9a86d6f"/>
         </sources>
 
         <requires>

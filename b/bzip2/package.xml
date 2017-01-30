@@ -30,7 +30,7 @@
             <file src="bzip2-1.0.6.tar.bz2" subdir="sources"
                 sha256sum="d70a9ccd8bdf47e302d96c69fecd54925f45d9c7b966bb4ef5f56b770960afa7"/>
             <file src="patches.08.tar.gz" subdir="patches"
-                sha256sum="4386484ae3c32806f661b2d5ed3cf7bfdf2cc9859e3a95c7a8edd6acebdcb264"/>
+                sha256sum="fd1ad06b76297ea1b1d83417873e18bb9d497d8c6ec5767c5bec58f1a404c63c"/>
         </sources>
         
         <patches>

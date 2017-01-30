@@ -18,7 +18,7 @@
             <file src="db5.3-5.3.28.tar.xz" subdir="sources"
                 sha256sum="e1f85c8b6ebd0ed3ca72fa0ae97b65006f6d0bd0cd6f4ac24bed103cb5497bf5"/>
             <file src="patches.12.tar.gz" subdir="patches"
-                sha256sum="7a23c161a5dfe50982f2ae5c9a1adadc7012f83e23e675cc53c692724ea6b3b4"/>
+                sha256sum="04af0cb1c1146a7f478b29c51b6e1b7a8931afc63b653d034803bec53d8cd867"/>
         </sources>
         
         <patches>
@@ -36,6 +36,7 @@
 
         <requires>
             <package name="autotools-dev" version=">= 20100122.1"/>
+            <package name="autoconf"/>
             <package name="tcl-dev"/>
             <package name="procps"/>
             <package name="javahelper"/>

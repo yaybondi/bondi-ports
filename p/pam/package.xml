@@ -20,12 +20,12 @@
         <sources>
             <file src="pam-1.1.8.tar.gz" subdir="sources"
                 sha256sum="4183409a450708a976eca5af561dbf4f0490141a08e86e4a1e649c7c1b094876"/>
-            <file src="patches.3.3.tar.gz" subdir="patches"
-                sha256sum="6d4f6ea6e6149abb4acdb27a77e5fe494f39db257f074dadbaf1e85150b5cb39"/>
-            <file src="patches.extra.tar.gz" subdir="patches"
-                sha256sum="21e96131acedb84a156a0ef9fb47ca57ebc146f45d6e45841462f81f78624a3a"/>
+            <file src="patches.3.5.tar.gz" subdir="patches"
+                sha256sum="1f5192fc1a8c8f9c3af46878081033d54902e9637c3da61108d3a40a198abe15"/>
+            <file src="patches.bolt.tar.gz" subdir="patches"
+                sha256sum="d60d4bfa7718a49b49086b817966a43d8ace0313c0790cf18ce6e721681a2fa8"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <!-- Debian -->
@@ -59,9 +59,10 @@
                 <file src="patches/pam_namespace_fix_bashism.patch"/>
                 <file src="patches/make_documentation_reproducible.patch"/>
                 <!-- Bolt -->
-                <file src="patches/pam-1.2.1-innetgr.patch"/>
-                <file src="patches/fix-compat.patch"/>
-                <file src="patches/crypt-is-in-libc.patch"/>
+                <file src="patches/gentoo-fix-compat.patch"/>
+                <file src="patches/gentoo-innetgr.patch"/>
+                <file src="patches/gentoo-no-strndupa.patch"/>
+                <file src="patches/handle-crypt-is-in-libc.patch"/>
                 <file src="patches/disable-mod-rhosts.patch"/>
             </patchset>
         </patches>

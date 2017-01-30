@@ -21,10 +21,10 @@
         </description>
 
         <sources>
-            <file src="sqlite3-3.15.2.tar.xz" subdir="sources"
-                sha256sum="6858c3bd37586b48ff964c26a8bf2d257dd21199af7302cada499be927bb0fc5"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="3e3a4a14d0569a32bc001845a9560b6d26f201f42d9f5712b9b66033f875ab78"/>
+            <file src="sqlite3-3.16.2.tar.xz" subdir="sources"
+                sha256sum="bf7b1e8ea7577253b7f8a8287d111d542d1792cf1768edc66541ac851ff92453"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="48f38dd89497f5b53d1e3e4776613628cfa683c03640ac7ba48362b549d56695"/>
         </sources>
         
         <patches>
@@ -36,7 +36,6 @@
                 <file src="patches/10-665363-disable-malloc-usable-size.patch"/>
                 <file src="patches/31-increase_SQLITE_MAX_DEFAULT_PAGE_SIZE_to_32k.patch"/>
                 <file src="patches/02-use-packaged-lempar.c.patch"/>
-                <file src="patches/32-fix-memory-database-slowness.patch"/>
             </patchset>
         </patches>
 

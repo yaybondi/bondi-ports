@@ -14,7 +14,15 @@
         <sources>
             <file src="linux-4.4.45.tar.xz" subdir="sources"
                 sha256sum="22fb59247746a3dd109df6d1485a9972382507a3c0040ac33371b3fd2a021741"/>
+            <file src="patches.bolt.tar.gz" subdir="patches"
+                sha256sum="1f2db4bade570690787002ccd45affa4605aacdcff998878eef07cdcdae7bd8c"/>
         </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/musl-libc-compat-h-fixes.patch"/>
+            </patchset>
+        </patches>
 
         <!-- build rules -->
         <xi:include href="rules.xml"/>

@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="make" architecture-independent="false">
+    <source name="make-dfsg" architecture-independent="false">
         <description>
             <summary>utility for directing compilation</summary>
             <p>
@@ -24,12 +24,12 @@
             <file src="make-dfsg-4.1.tar.gz" subdir="sources"
                 sha256sum="b3ed04fb6718289e4a430afbe2df6ecba9177aad9f6d09aaf38e5409262ca8a3"/>
             <file src="patches.09.tar.gz" subdir="patches"
-                sha256sum="1e1e7a58b396942e4d649ec7291d96671127beb8e5bfd2e657264abe9f578e3a"/>
+                sha256sum="3ef76360f63f59b080debf7fa18ac019002610103060c1e929eff7dd2ac0a5ff"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/make-dfsg.patch"/>
+                <file src="patches/make-dfsg_4.1-9.diff"/>
             </patchset>
         </patches>
 

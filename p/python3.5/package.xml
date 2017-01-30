@@ -15,15 +15,14 @@
         </description>
 
         <sources>
-            <file src="python3.5-3.5.2.tar.xz" subdir="sources"
-                sha256sum="0010f56100b9b74259ebcd5d4b295a32324b58b517403a10d1a2aa7cb22bca40"/>
-            <file src="patches.09.tar.gz" subdir="patches"
-                sha256sum="613e459d9e712b4be83aa02bbb67891500e61f1ca179c57b72365e35ab4bc1d3"/>
+            <file src="python3.5-3.5.3~rc1.tar.xz" subdir="sources"
+                sha256sum="7140482a99df2684333fa4c56d2381d1295a16c5672adfb42e963fe72aebc1ff"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="9c1ef12d6b14e0ef0ff54768768a30ef3099a89b4c1dfef25e99155a65a583a4"/>
         </sources>
         
         <patches>
             <patchset subdir="sources">
-                <file src="patches/hg-updates.diff"/>
                 <file src="patches/deb-setup.diff"/>
                 <file src="patches/deb-locations.diff"/>
                 <file src="patches/distutils-install-layout.diff"/>

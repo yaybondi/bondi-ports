@@ -25,12 +25,19 @@
         <sources>
             <file src="expat-2.2.0.tar.bz2" subdir="sources"
                 sha256sum="d9e50ff2d19b3538bd2127902a89987474e1a4db8e43a66a4d1a712ab9a504ff"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="ae931cf06a2beb4d46f78f5894c60650018bdd1693388f829ee3f1b6eba65596"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="13432b2f62cd2372a9ed93a94f07030e360cf215ed91e90064a60089892e8109"/>
         </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/CVE-2016-9063.patch"/>
+            </patchset>
+        </patches>
 
         <requires>
             <package name="docbook-to-man"/>
+            <package name="autoconf"/>
         </requires>
 
         <xi:include href="rules.xml"/>

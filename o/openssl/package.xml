@@ -28,7 +28,7 @@
             <file src="openssl-1.1.0c.tar.gz" subdir="sources"
                 sha256sum="fc436441a2e05752d31b4e46115eb89709a28aef96d4fe786abe92409b2fd6f5"/>
             <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="83552c756e7a0d63556b8c2981bb9af2cdfa593d5839b17c281cc0d07c6d444e"/>
+                sha256sum="5c6f1b7a8b22451be48f076d2270622f10dd9c01d099b68438120ed699f1f863"/>
         </sources>
         
         <patches>

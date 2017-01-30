@@ -22,7 +22,7 @@
             <file src="readline-7.0.tar.gz" subdir="sources"
                 sha256sum="750d437185286f40a369e1e4f4764eda932b9459b5ec9a731628393dd3d32334"/>
             <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="8dd425a8998c2ac07b281a1cfcffdda62e9b123f467f99ed8b875cca7540ab16"/>
+                sha256sum="49bab59c4ce9475c936a188b9535032557392fa1fa8020484c1daaea64b5b55f"/>
         </sources>
         
         <patches>

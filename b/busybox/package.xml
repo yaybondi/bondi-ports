@@ -22,9 +22,9 @@
             <file src="busybox-1.22.0.tar.bz2" subdir="sources"
                 sha256sum="92f00cd391b7d5fa2215c8450abe2ba15f9d16c226e8855fb21b6c9a5b723a53"/>
             <file src="patches.19.tar.gz" subdir="patches"
-                sha256sum="1fc810db4fce2b1a1f429d272d7c72ebd642d0b56e5567a8834e96644ff75279"/>
-            <file src="patches.extra.tar.gz" subdir="patches"
-                sha256sum="f59d8793c120045b00a075f40e979f0062e130c42f690ed99dcf3f090682261b"/>
+                sha256sum="f0cd9e113f3281b9586d02eea1f42a822dd5f26a89acb0b58d84b898cbc1cdd4"/>
+            <file src="patches.bolt.tar.gz" subdir="patches"
+                sha256sum="04986123d962a883ee3b2a5d5e489e669f83b92625b60abab4b54198efbe6967"/>
         </sources>
         
         <patches>
