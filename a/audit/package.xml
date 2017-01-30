@@ -19,10 +19,8 @@
                 sha256sum="8923917332daa7833bbc0c1d9eb012167093fbad000da4a9630fb3356aff8cdc"/>
             <file src="patches.01.tar.gz" subdir="patches"
                 sha256sum="3239dd345d7523bd9c1b071ed715bfdeb78f9e3769b080b7e40287593e849c91"/>
-            <!--
-            <file src="patches.extra.tar.gz" subdir="patches"
-                sha256sum="9d004f9232887435698b60727cb9c8c66803a92ca4b348306336b4a40e46f2f9"/>
-            -->
+            <file src="patches.bolt.tar.gz" subdir="patches"
+                sha256sum="308f2e51f8f4aa44c3218bdd68a99e557dfcee5521dcdc60a1825767b087bc3f"/>
         </sources>
 
         <patches>
@@ -31,9 +29,7 @@
                 <file src="patches/01-no-refusemanualstop.patch"/>
                 <file src="patches/02-restorecon-path.patch"/>
                 <!-- Bolt -->
-                <!--
-                <file src="patches/fix-includes.patch"/>
-                -->
+                <file src="patches/musl-libc-compat.patch"/>
             </patchset>
         </patches>
 
