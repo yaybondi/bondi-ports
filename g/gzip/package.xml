@@ -19,9 +19,9 @@
             <file src="gzip-1.6.tar.gz" subdir="sources"
                 sha256sum="97eb83b763d9e5ad35f351fe5517e6b71521d7aac7acf3e3cacdb6b1496d8f7e"/>
             <file src="patches.05.tar.gz" subdir="patches"
-                sha256sum="751e29b015729e36cb76076d15268b7ba3a1a3454486646836820e5ead312f90"/>
-            <file src="patches.extra.tar.gz" subdir="patches"
-                sha256sum="e6eaa0767c9811159675750bc5eda577e14d92e889de0651ae90d5e3b4928e28"/>
+                sha256sum="b2915e7a383755ac53a6cd70d3a69832de9adbbad890525960625dab80d2230e"/>
+            <file src="patches.bolt.tar.gz" subdir="patches"
+                sha256sum="c367da0c1b7ba6beb14839f8e91fdb151daff0465eb898461e03374292aa030d"/>
         </sources>
 
         <patches>

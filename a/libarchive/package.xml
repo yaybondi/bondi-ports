@@ -49,7 +49,7 @@
             <file src="libarchive-3.2.1.tar.gz" subdir="sources"
                 sha256sum="72ee1a4e3fd534525f13a0ba1aa7b05b203d186e0c6072a8a4738649d0b3cfd2"/>
             <file src="patches.05.tar.gz" subdir="patches"
-                sha256sum="f6574db24a1d907829ee9d7ff130accf82f6501c3462647e27920d3870a52c89"/>
+                sha256sum="dce7ee595818180bcf3243366d57285a1e25a921b6d469d92872ae8f3012948b"/>
         </sources>
         
         <patches>

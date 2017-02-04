@@ -19,9 +19,9 @@
             <file src="attr-2.4.47.tar.bz2" subdir="sources"
                 sha256sum="6c1208035757f5ce9b516402dd45b8299a53ae4d69ad2c352116f9cb8d7bc274"/>
             <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="134b69c97511752c6f18f796afb5b206c1c3841ffea3d3c04510e36ef5115000"/>
-            <file src="patches.extra.tar.gz" subdir="patches"
-                sha256sum="b74d2199a50c6a852e43a8e05e36ecd36317e72672761e8f88c11f066fd6c6fa"/>
+                sha256sum="e27f4a1e8e717d5620f9e5ebaade37007f47435918d7c6955b7a5f58223d83fc"/>
+            <file src="patches.bolt.tar.gz" subdir="patches"
+                sha256sum="1f9073fe437b1f5e3dc8afa53c39ab1c6355c9a53b31bdbb6efff2fccdeb66da"/>
         </sources>
         
         <patches>

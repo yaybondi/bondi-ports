@@ -20,7 +20,7 @@
             <file src="tar-1.29b.tar.xz" subdir="sources"
                 sha256sum="6a59706ebee384a6cd2fb3ee1dbfbfc20c5c66c7efd7cedb28edc054fca8ba00"/>
             <file src="patches.1.1.tar.gz" subdir="patches"
-                sha256sum="6a0e7db2bf727961d8fa3a25c4f4e92690ce1015798977c03a6df0ed2b4b0f01"/>
+                sha256sum="2386ffa716b8402a1cfebe22b0a23028352f181ac47ebf415b3383bb199e0fdb"/>
         </sources>
         
         <patches>

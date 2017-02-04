@@ -17,9 +17,9 @@
             <file src="tcllib-1.18-dfsg.tar.xz" subdir="sources"
                 sha256sum="ed531a58d28f77f7b2af570c24caec3c213288219315708d0158efe98bcab37e"/>
             <file src="patches.03.tar.gz" subdir="patches"
-                sha256sum="f3b93023fcfc226603ff3cc5ef4f3db80969c4c4796abd55c147f555ee89f4f4"/>
+                sha256sum="1e6bbd347f05fdeb2b8dfca9f815b55b0323e0792bac4c19b37c696c2b387df3"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/nettool.patch"/>
