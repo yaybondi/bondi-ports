@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="zlib1g-dev" section="libdevel">
+    <description>
+        <summary>compression library - development</summary>
+        <p>
+        zlib is a library implementing the deflate compression method found
+        in gzip and PKZIP. This package includes the development support
+        files.
+        </p>
+    </description>
+
+    <requires>
+        <package name="zlib1g" version="=="/>
+        <package name="libc6-dev"/>
+    </requires>
+
+    <contents>
+        <dir src="/usr/include"/>
+        <dir src="/usr/lib"/>
+        <file src="/usr/include/*"/>
+        <file src="/usr/lib/libz.a"/>
+        <file src="/usr/lib/libz.so"/>
+        <file src="/usr/lib/pkgconfig/zlib.pc"/>
+    </contents>
+</package>

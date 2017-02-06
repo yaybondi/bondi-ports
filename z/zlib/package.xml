@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="zlib" architecture-independent="false">
+        <description>
+            <summary>compression library - runtime</summary>
+            <p>
+            zlib is a library implementing the deflate compression method found
+            in gzip and PKZIP. This package includes the shared library.
+            </p>
+        </description>
+
+        <sources>
+            <file src="zlib-1.2.8.dfsg.tar.gz" subdir="sources"
+                sha256sum="2caecc2c3f1ef8b87b8f72b128a03e61c307e8c14f5ec9b422ef7914ba75cf9f"/>
+            <file src="patches.05.tar.gz" subdir="patches"
+                sha256sum="c0b4cbd0df27914c5fa2e6ddb31a76dad1108e5785ee7eec1ae6b965ac368276"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/0001-Restore-gzflags-symbol-for-ABI-compatibility.patch"/>
+                <file src="patches/cflags-for-minizip"/>
+                <file src="patches/use-dso"/>
+                <file src="patches/use-dso-really"/>
+                <file src="patches/CVE-2016-9840"/>
+                <file src="patches/CVE-2016-9841"/>
+                <file src="patches/CVE-2016-9842"/>
+                <file src="patches/CVE-2016-9843"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="binutils" version=">= 2.18.1~cvs20080103-2"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="zlib1g.xml"/>
+    <xi:include href="zlib1g-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
