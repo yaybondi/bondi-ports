@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libgpg-error" architecture-independent="false">
+        <description>
+            <summary>library for common error values and messages in GnuPG components</summary>
+            <p>
+            Library that defines common error values for all GnuPG
+            components. Among these are GPG, GPGSM, GPGME, GPG-Agent, libgcrypt,
+            pinentry, SmartCard Daemon and possibly more in the future.
+            </p>
+        </description>
+
+        <sources>
+            <file src="libgpg-error-1.26.tar.bz2" subdir="sources"
+                sha256sum="4c4bcbc90116932e3acd37b37812d8653b1b189c1904985898e860af818aee69"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="997d7ce15fcd87458d5b692609b30965fd299267c39a6c3d1b15d31ba3a36e80"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/0001-avoid-identifying-as-beta.patch"/>
+                <!--
+                <file src="patches/0002-Measure-revision-by-length-of-debian-changelog.patch"/>
+                -->
+                <file src="patches/0003-avoid-whitespace-in-gpg-error.def-linker-script-for-.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="automake" version=">= 1.14"/>
+            <package name="autoconf"/>
+            <package name="gettext" version=">= 0.19.3"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libgpg-error-dev.xml"/>
+    <xi:include href="libgpg-error0.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
