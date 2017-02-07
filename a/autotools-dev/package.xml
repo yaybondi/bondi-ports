@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="autotools-dev" architecture-independent="true">
+        <description>
+            <summary>Update infrastructure for config.{guess,sub} files</summary>
+            <p>
+            This package installs an up-to-date version of config.guess and
+            config.sub, used by the automake and libtool packages. It provides
+            the canonical copy of those files for other packages as well.
+            </p>
+        </description>
+
+        <sources>
+            <file src="autotools-dev-20161112.1.tar.gz" subdir="sources"
+                sha256sum="57fe1ed11a3d71acf61260b92824e41af9a96f223509b9f45d1d7cb2d2bd95a4"/>
+        </sources>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="autotools-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
