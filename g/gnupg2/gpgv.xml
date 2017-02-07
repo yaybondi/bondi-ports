@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="gpgv" section="utils">
+    <description>
+        <summary>GNU privacy guard - signature verification tool</summary>
+        <p>
+        GnuPG is GNU's tool for secure communication and data storage.
+        </p>
+        <p>
+        gpgv is actually a stripped-down version of gpg which is only able
+        to check signatures. It is somewhat smaller than the fully-blown gpg
+        and uses a different (and simpler) way to check that the public keys
+        used to make the signature are valid. There are no configuration
+        files and only a few options are implemented.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/bin/gpgv"/>
+    </contents>
+</package>

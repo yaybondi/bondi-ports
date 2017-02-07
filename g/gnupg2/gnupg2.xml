@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="gnupg2" section="oldlibs">
+    <description>
+        <summary>GNU privacy guard - a free PGP replacement (dummy transitional package)</summary>
+        <p>
+        GnuPG is GNU's tool for secure communication and data storage.
+        It can be used to encrypt data and to create digital signatures.
+        It includes an advanced key management facility and is compliant
+        with the proposed OpenPGP Internet standard as described in RFC4880.
+        </p>
+        <p>
+        This is a dummy transitional package that provides symlinks from gpg2
+        to gpg.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gnupg" version=">=="/>
+    </requires>
+</package>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="gnupg2" architecture-independent="false">
+        <description>
+            <summary>GNU privacy guard</summary>
+            <p>
+            GnuPG is GNU's tool for secure communication and data storage.
+            It can be used to encrypt data and to create digital signatures.
+            It includes an advanced key management facility and is compliant
+            with the proposed OpenPGP Internet standard as described in RFC4880.
+            </p>
+        </description>
+
+        <sources>
+            <file src="gnupg2-2.1.18.tar.bz2" subdir="sources"
+                sha256sum="d04c6fab7e5562ce4b915b22020e34d4c1a256847690cf149842264fc7cef994"/>
+            <file src="patches.03.tar.gz" subdir="patches"
+                sha256sum="ffb11ea3c449fbd4a052c6a06d5d1f908d52e6e63c3188ac7a59cb0ed42eb329"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/debian-packaging/0001-avoid-beta-warning.patch"/>
+                <file src="patches/block-ptrace-on-agent/0002-Avoid-simple-memory-dumps-via-ptrace.patch"/>
+                <file src="patches/debian-packaging/0003-avoid-regenerating-defsincdate-use-shipped-file.patch"/>
+                <file src="patches/dirmngr-idling/0001-dirmngr-hkp-Avoid-potential-race-condition-when-some.patch"/>
+                <file src="patches/dirmngr-idling/0002-dimrngr-Avoid-need-for-hkp-housekeeping.patch"/>
+                <file src="patches/dirmngr-idling/0004-dirmngr-Avoid-automatically-checking-upstream-swdb.patch"/>
+                <file src="patches/dirmngr-idling/0005-dirmngr-Drop-useless-housekeeping.patch"/>
+                <file src="patches/gpg-agent-idling/0001-agent-Create-framework-of-scheduled-timers.patch"/>
+                <file src="patches/gpg-agent-idling/0002-agent-Allow-threads-to-interrupt-main-select-loop-wi.patch"/>
+                <file src="patches/gpg-agent-idling/0003-agent-Avoid-tight-timer-tick-when-possible.patch"/>
+                <file src="patches/gpg-agent-idling/0004-agent-Avoid-scheduled-checks-on-socket-when-inotify-.patch"/>
+                <file src="patches/0012-tools-Fix-memory-leak.patch"/>
+                <file src="patches/0013-tools-Improve-error-handling.patch"/>
+                <file src="patches/0014-dirmngr-New-option-disable-ipv4.patch"/>
+                <file src="patches/0015-dirmngr-Simplify-error-returning-inside-http.c.patch"/>
+                <file src="patches/0016-gpg-Print-a-warning-on-Tor-problems.patch"/>
+                <file src="patches/0017-agent-Fix-double-free.patch"/>
+                <file src="patches/0018-gpg-Fix-searching-for-mail-addresses-in-keyrings.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="automake"/>
+            <package name="autopoint"/>
+            <package name="autoconf"/>
+            <package name="file"/>
+            <package name="gettext"/>
+            <package name="ghostscript"/>
+            <package name="imagemagick"/>
+            <package name="libassuan-dev" version=">= 2.4.3"/>
+            <package name="libbz2-dev"/>
+            <package name="libcurl4-gnutls-dev"/>
+            <package name="libgcrypt20-dev" version=">= 1.7.0"/>
+            <package name="libgnutls28-dev" version=">= 3.0"/>
+            <package name="libgpg-error-dev" version=">= 1.26-2~"/>
+            <package name="libksba-dev" version=">= 1.3.4"/>
+            <package name="libldap2-dev"/>
+            <package name="libnpth0-dev" version=">= 1.2"/>
+            <package name="libreadline-dev"/>
+            <package name="librsvg2-bin"/>
+            <package name="libsqlite3-dev"/>
+            <package name="libusb-1.0-0-dev"/>
+            <package name="pkg-config"/>
+            <package name="texinfo"/>
+            <package name="transfig"/>
+            <package name="zlib1g-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="gnupg-agent.xml"/>
+    <xi:include href="scdaemon.xml"/>
+    <xi:include href="gpgsm.xml"/>
+    <xi:include href="gnupg.xml"/>
+    <xi:include href="gnupg2.xml"/>
+    <xi:include href="gpgv.xml"/>
+    <xi:include href="gpgv2.xml"/>
+    <xi:include href="dirmngr.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

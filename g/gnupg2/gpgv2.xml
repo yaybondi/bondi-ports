@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="gpgv2" section="oldlibs">
+    <description>
+        <summary>GNU privacy guard - signature verification tool (dummy transitional package)</summary>
+        <p>
+        GnuPG is GNU's tool for secure communication and data storage. gpgv
+        is a stripped-down version of gpg which is only able to check
+        signatures.
+        </p>
+        <p>
+        This is a dummy transitional package that provides symlinks from gpgv2
+        to gpgv.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gpgv" version=">=="/>
+    </requires>
+</package>

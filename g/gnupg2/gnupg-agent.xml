@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="gnupg-agent" section="utils">
+    <description>
+        <summary>GNU privacy guard - cryptographic agent</summary>
+        <p>
+        GnuPG is GNU's tool for secure communication and data storage.
+        It can be used to encrypt data and to create digital signatures.
+        It includes an advanced key management facility and is compliant
+        with the proposed OpenPGP Internet standard as described in RFC4880.
+        </p>
+        <p>
+        This package contains the agent program gpg-agent which handles all
+        secret key material for OpenPGP and S/MIME use. The agent also
+        provides a passphrase cache, which is used by pre-2.1 versions of
+        GnuPG for OpenPGP operations.
+        </p>
+    </description>
+
+    <requires>
+        <package name="pinentry"/>
+    </requires>
+
+    <contents>
+        <file src="/debian/Xsession.d/90gpg-agent"/>
+        <file src="/debian/systemd-user/gpg-agent-browser.socket"/>
+        <file src="/usr/bin/gpg-agent"/>
+        <file src="/usr/bin/gpg-connect-agent"/>
+        <file src="/usr/bin/symcryptrun"/>
+        <file src="/usr/lib/gnupg/gpg-check-pattern"/>
+        <file src="/usr/lib/gnupg/gpg-preset-passphrase"/>
+        <file src="/usr/lib/gnupg/gpg-protect-tool"/>
+        <file src="/doc/examples/systemd-user/gpg-agent-extra.socket"/>
+        <file src="/doc/examples/systemd-user/gpg-agent-ssh.socket"/>
+        <file src="/doc/examples/systemd-user/gpg-agent.service"/>
+        <file src="/doc/examples/systemd-user/gpg-agent.socket"/>
+    </contents>
+</package>

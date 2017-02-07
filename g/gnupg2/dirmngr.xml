@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="dirmngr" section="utils">
+    <description>
+        <summary>GNU privacy guard - network certificate management service</summary>
+        <p>
+        dirmngr is a server for managing and downloading OpenPGP and X.509
+        certificates, as well as updates and status signals related to those
+        certificates. For OpenPGP, this means pulling from the public
+        HKP/HKPS keyservers, or from LDAP servers. For X.509 this includes
+        Certificate Revocation Lists (CRLs) and Online Certificate Status
+        Protocol updates (OCSP). It is capable of using tor for network
+        access.
+        </p>
+        <p>
+        dirmngr is used for network access by gpg, gpgsm, and dirmngr-client,
+        among other tools.
+        </p>
+    </description>
+
+    <requires>
+        <package name="adduser"/>
+        <package name="lsb-base" version=">= 3.2-13"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/dirmngr"/>
+        <file src="/usr/bin/dirmngr-client"/>
+        <file src="/usr/lib/gnupg/dirmngr_ldap"/>
+        <file src="/usr/share/gnupg/dirmngr-conf.skel"/>
+        <file src="/usr/share/gnupg/sks-keyservers.netCA.pem"/>
+        <file src="/doc/examples/systemd-user/dirmngr.service"/>
+        <file src="/doc/examples/systemd-user/dirmngr.socket"/>
+    </contents>
+</package>
