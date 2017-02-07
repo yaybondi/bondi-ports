@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libksba8" section="libs">
+    <description>
+        <summary>X.509 and CMS support library</summary>
+        <p>
+        KSBA (pronounced Kasbah) is a library to make X.509 certificates as
+        well as the CMS easily accessible by other applications. Both
+        specifications are building blocks of S/MIME and TLS.
+        </p>
+        <p>
+        KSBA provides these subsystems: ASN.1 Parser, BER Decoder, BER
+        Encoder, Certificate Handling and CMS Handling.
+        </p>
+        <p>
+        This package contains the runtime library files.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/lib*.so.*"/>
+    </contents>
+</package>
