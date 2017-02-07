@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libassuan-dev" section="libdevel">
+    <description>
+        <summary>IPC library for the GnuPG components -- header files</summary>
+        <p>
+        Libassuan is a small library implementing the so-called "Assuan
+        protocol". This protocol is used for IPC between most newer GnuPG
+        components. Both server and client side functions are provided.
+        </p>
+        <p>
+        This package contains header files and static libraries for libassuan.
+        </p>
+    </description>
+
+    <requires>
+        <package name="dpkg" version=">= 1.15.4"/>
+        <package name="libassuan0" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/debian/tmp/usr/bin"/>
+        <file src="/debian/tmp/usr/include/*.h"/>
+        <file src="/debian/tmp/usr/lib/*.a"/>
+        <file src="/debian/tmp/usr/lib/*.so"/>
+        <file src="/debian/tmp/usr/share/aclocal"/>
+        <file src="/debian/tmp/usr/share/info/*.info*"/>
+    </contents>
+</package>

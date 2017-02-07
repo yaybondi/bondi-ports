@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libassuan0" section="libs">
+    <description>
+        <summary>IPC library for the GnuPG components</summary>
+        <p>
+        Libassuan is a small library implementing the so-called "Assuan
+        protocol". This protocol is used for IPC between most newer GnuPG
+        components. Both server and client side functions are provided.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/debian/tmp/usr/lib/*.so.*"/>
+    </contents>
+</package>
