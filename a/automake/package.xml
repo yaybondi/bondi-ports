@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="automake-1.15" architecture-independent="true">
+        <description>
+            <summary>Tool for generating GNU Standards-compliant Makefiles</summary>
+            <p>
+            Automake is a tool for automatically generating `Makefile.in's from
+            files called `Makefile.am'.
+            </p>
+            <p>
+            The goal of Automake is to remove the burden of Makefile maintenance
+            from the back of the individual GNU maintainer (and put it on the back
+            of the Automake maintainer).
+            </p>
+            <p>
+            The `Makefile.am' is basically a series of `make' macro definitions
+            (with rules being thrown in occasionally). The generated
+            `Makefile.in's are compliant with the GNU Makefile standards.
+            </p>
+            <p>
+            Automake 1.15 fails to work in a number of situations that Automake
+            1.4, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11 and 1.14 did, so previous versions are
+            available as separate packages.
+            </p>
+        </description>
+
+        <sources>
+            <file src="automake-1.15-1.15.tar.xz" subdir="sources"
+                sha256sum="9908c75aabd49d13661d6dcb1bc382252d22cc77bf733a2d55e87f2aa2db8636"/>
+            <file src="patches.06.tar.gz" subdir="patches"
+                sha256sum="1c1310af827ad8d0b3b8795eb11c143b37b0e8ab87b372981cb2135b1528a8bb"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/01-texi-rename.diff"/>
+                <file src="patches/0002-Make-output-of-mdate-sh-deterministic.patch"/>
+                <file src="patches/0003-install-sh-avoid-low-risk-race-in-tmp.patch"/>
+                <file src="patches/0004-Fix-testsuite-failure-caused-by-perl-warnings.patch"/>
+                <file src="patches/0005-Use-system-help2man-if-it-is-available.patch"/>
+                <file src="patches/0006-Disable-t-check12.sh-and-t-check12-w.sh.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="automake.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

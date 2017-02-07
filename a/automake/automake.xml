@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="automake" section="devel">
+    <description>
+        <summary>Tool for generating GNU Standards-compliant Makefiles</summary>
+        <p>
+        Automake is a tool for automatically generating `Makefile.in's from
+        files called `Makefile.am'.
+        </p>
+        <p>
+        The goal of Automake is to remove the burden of Makefile maintenance
+        from the back of the individual GNU maintainer (and put it on the back
+        of the Automake maintainer).
+        </p>
+        <p>
+        The `Makefile.am' is basically a series of `make' macro definitions
+        (with rules being thrown in occasionally). The generated
+        `Makefile.in's are compliant with the GNU Makefile standards.
+        </p>
+    </description>
+
+    <requires>
+        <package name="autoconf" version=">= 2.65"/>
+        <package name="autotools-dev" version=">= 20020320.1"/>
+    </requires>
+
+    <contents>
+        <dir src="/usr/share/aclocal"/>
+        <file src="/usr/bin/*-1.15"/>
+        <file src="/usr/share/*-1.15"/>
+    </contents>
+</package>
