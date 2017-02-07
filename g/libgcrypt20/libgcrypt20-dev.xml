@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgcrypt20-dev" section="libdevel">
+    <description>
+        <summary>LGPL Crypto library - development files</summary>
+        <p>
+        libgcrypt contains cryptographic functions. Many important free
+        ciphers, hash algorithms and public key signing algorithms have been
+        implemented:
+        </p>
+        <p>
+        Arcfour, Blowfish, CAST5, DES, AES, Twofish, Serpent, rfc2268 (rc2), SEED,
+        Poly1305, Camellia, ChaCha20, IDEA, Salsa, CRC, MD2, MD4, MD5, RIPE-MD160,
+        SHA-1, SHA-256, SHA-512, SHA3-224, SHA3-256, SHA3-384, SHA3-512, SHAKE128,
+        SHAKE256 Tiger, Whirlpool, DSA, DSA2, ElGamal, RSA, ECC (Curve25519,
+        sec256k1, GOST R 34.10-2001 and GOST R 34.10-2012, etc.)
+        </p>
+        <p>
+        This package contains header files and libraries for static linking.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libgcrypt20" version="=="/>
+        <package name="libc6-dev"/>
+        <package name="libgpg-error-dev"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/*"/>
+        <file src="/usr/include/*"/>
+        <file src="/usr/lib/lib*.a"/>
+        <file src="/usr/lib/lib*.so"/>
+        <file src="/usr/share/aclocal/*"/>
+    </contents>
+</package>
