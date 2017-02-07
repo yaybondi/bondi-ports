@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="npth" architecture-independent="false">
+        <description>
+            <summary>headers for libnpth0</summary>
+            <p>
+            nPth is a non-preemptive threads implementation using an API very
+            similar to the one known from GNU Pth. It has been designed as a
+            replacement of GNU Pth for non-ancient operating systems. In
+            contrast to GNU Pth it is based on the system's standard threads
+            implementation. Thus nPth allows the use of libraries which are not
+            compatible to GNU Pth.
+            </p>
+            <p>
+            This package contains the headers and static libraries for libnpth0.
+            </p>
+        </description>
+
+        <sources>
+            <file src="npth-1.3.tar.bz2" subdir="sources"
+                sha256sum="bca81940436aed0734eb8d0ff8b179e04cc8c087f5625204419f5f45d736a82a"/>
+        </sources>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libnpth0-dev.xml"/>
+    <xi:include href="libnpth0.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libnpth0-dev" section="libdevel">
+    <description>
+        <summary>headers for libnpth0</summary>
+        <p>
+        nPth is a non-preemptive threads implementation using an API very
+        similar to the one known from GNU Pth. It has been designed as a
+        replacement of GNU Pth for non-ancient operating systems. In
+        contrast to GNU Pth it is based on the system's standard threads
+        implementation. Thus nPth allows the use of libraries which are not
+        compatible to GNU Pth.
+        </p>
+        <p>
+        This package contains the headers and static libraries for libnpth0.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libnpth0" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/*"/>
+        <file src="/usr/include/*"/>
+        <file src="/usr/lib/*.a"/>
+        <file src="/usr/lib/*.so"/>
+        <file src="/usr/share/aclocal/*"/>
+    </contents>
+</package>
