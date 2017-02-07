@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="pinentry-tty" section="utils">
+    <description>
+        <summary>minimal dumb-terminal PIN or pass-phrase entry for GnuPG</summary>
+        <p>
+        This package contains a program that allows for secure entry of PINs or
+        pass phrases. That means it tries to take care that the entered
+        information is not swapped to disk or temporarily stored anywhere.
+        This functionality is particularly useful for entering pass phrases
+        when using encryption software such as GnuPG or e-mail clients using
+        the same. It uses an open protocol and is therefore not tied to
+        particular software.
+        </p>
+        <p>
+        The program contained in this package implements a PIN entry prompt
+        that interacts directly with the controlling terminal. It has
+        minimal dependencies, meaning that it is useful for users working
+        with dumb terminals or similarly constrained environments. There are
+        sibling packages that implement PIN entry dialogs that use curses for
+        friendlier text-mode inputs on non-dumb terminals, and other sibling
+        packages that provide PIN entry dialogs using an X tool kit.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/build-no-libsecret/tty/pinentry-tty"/>
+    </contents>
+</package>
