@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="autoconf" architecture-independent="true">
+        <description>
+            <summary>automatic configure script builder</summary>
+            <p>
+            The standard for FSF source packages. This is only useful if you
+            write your own programs or if you extensively modify other people's 
+            programs.
+            </p>
+            <p>
+            For an extensive library of additional Autoconf macros, install the
+            `autoconf-archive' package.
+            </p>
+            <p>
+            This version of autoconf is not compatible with scripts meant for
+            Autoconf 2.13 or earlier.
+            </p>
+        </description>
+
+        <sources>
+            <file src="autoconf-2.69.tar.xz" subdir="sources"
+                sha256sum="64ebcec9f8ac5b2487125a86a7760d2591ac9e1d3dbd59489633f9de62a57684"/>
+            <file src="patches.10.tar.gz" subdir="patches"
+                sha256sum="95afcd92a2b8888b7f6383b4fcff4ae7300fa642def91a6d4da472dd8bfc6c46"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/atomic.patch"/>
+                <file src="patches/stricter-versioning.patch"/>
+                <file src="patches/texinfo.patch"/>
+                <file src="patches/avoid-undefined-behavior-for-32bit-off_t.patch"/>
+                <file src="patches/AM_PROG_LIBTOOL.patch"/>
+                <file src="patches/add-runstatedir.patch"/>
+                <file src="patches/unescaped-left-brace-warning-fix.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="autoconf.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="autoconf" section="devel">
+    <description>
+        <summary>automatic configure script builder</summary>
+        <p>
+        The standard for FSF source packages. This is only useful if you
+        write your own programs or if you extensively modify other people's 
+        programs.
+        </p>
+        <p>
+        For an extensive library of additional Autoconf macros, install the
+        `autoconf-archive' package.
+        </p>
+        <p>
+        This version of autoconf is not compatible with scripts meant for
+        Autoconf 2.13 or earlier.
+        </p>
+    </description>
+
+    <requires>
+        <package name="perl" version=">> 5.005"/>
+        <package name="m4" version=">= 1.4.13"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin"/>
+        <file src="/usr/share/autoconf"/>
+    </contents>
+</package>
