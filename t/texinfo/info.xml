@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="info" section="doc">
+    <description>
+        <summary>Standalone GNU Info documentation browser</summary>
+        <p>
+        The Info file format is an easily-parsable representation for online
+        documents. This program allows you to view Info documents, like the
+        ones stored in /usr/share/info.
+        </p>
+        <p>
+        Much of the software in Debian comes with its online documentation in
+        the form of Info files, so it is most likely you will want to install it.
+        </p>
+    </description>
+
+    <requires>
+        <package name="install-info"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/info*"/>
+    </contents>
+</package>

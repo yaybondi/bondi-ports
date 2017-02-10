@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="install-info" section="doc">
+    <description>
+        <summary>Manage installed documentation in info format</summary>
+        <p>
+        The install-info utility creates the index of all installed documentation
+        in info format and makes it available to info readers.
+        </p>
+    </description>
+
+    <requires>
+        <package name="dpkg" version=">= 1.16.1"/>
+    </requires>
+
+    <contents>
+        <dir src="/usr/sbin"/>
+        <dir src="/usr/share/info"/>
+        <file src="/usr/bin/install-info"/>
+    </contents>
+</package>

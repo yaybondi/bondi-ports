@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="texinfo" section="text">
+    <description>
+        <summary>Documentation system for on-line information and printed output</summary>
+        <p>
+        Texinfo is a documentation system that uses a single source file to
+        produce both on-line information and printed output.
+        </p>
+        <p>
+        Using Texinfo, you can create a printed document with the normal features
+        of a book, including chapters, sections, cross references, and indices. 
+        From the same Texinfo source file, you can create a menu-driven, on-line
+        Info file with nodes, menus, cross references, and indices.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libtext-unidecode-perl"/>
+        <package name="libxml-libxml-perl"/>
+        <package name="tex-common" version=">= 6"/>
+    </requires>
+
+    <contents>
+        <dir src="/usr/lib/texinfo"/>
+        <dir src="/var/lib/tex-common/fmtutil-cnf"/>
+        <file src="/usr/bin/makeinfo"/>
+        <file src="/usr/bin/pdftexi2dvi"/>
+        <file src="/usr/bin/pod2texi"/>
+        <file src="/usr/bin/texi2any"/>
+        <file src="/usr/bin/texi2dvi"/>
+        <file src="/usr/bin/texi2pdf"/>
+        <file src="/usr/bin/texindex"/>
+        <file src="/usr/lib/texinfo"/>
+        <file src="/usr/share/locale/*/LC_MESSAGES/texinfo*.mo"/>
+        <file src="/usr/share/texinfo"/>
+        <file src="/usr/share/texmf/tex/texinfo/texinfo.tex"/>
+        <file src="/usr/share/texmf/tex/texinfo/txi-??.tex"/>
+    </contents>
+</package>

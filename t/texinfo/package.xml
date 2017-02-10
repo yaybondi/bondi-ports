@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="texinfo" architecture-independent="false">
+        <description>
+            <summary>Documentation system for on-line information and printed output</summary>
+            <p>
+            Texinfo is a documentation system that uses a single source file to
+            produce both on-line information and printed output.
+            </p>
+            <p>
+            Using Texinfo, you can create a printed document with the normal features
+            of a book, including chapters, sections, cross references, and indices. 
+            From the same Texinfo source file, you can create a menu-driven, on-line
+            Info file with nodes, menus, cross references, and indices.
+            </p>
+        </description>
+
+        <sources>
+            <file src="texinfo-6.3.0.dfsg.1.tar.xz" subdir="sources"
+                sha256sum="4fc0dbeb2d3dee8f0bb5b65935f9fee99863b6910e8115110604ced2438f849d"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="a382c809a501d12a40d2b8d85abd5ec08cd492d84f406d2f3057bec04b6453bd"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/warn_missing_tex"/>
+                <file src="patches/numerical-signal-names"/>
+                <file src="patches/dont_build_info"/>
+                <file src="patches/info-manpage-mentiones-nonfree"/>
+                <file src="patches/reproducible-makeinfo"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="libncurses5-dev"/>
+            <package name="gettext"/>
+            <package name="libtext-unidecode-perl"/>
+            <package name="help2man"/>
+            <package name="autotools-dev"/>
+            <package name="libperl-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="texinfo.xml"/>
+    <xi:include href="info.xml"/>
+    <xi:include href="install-info.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
