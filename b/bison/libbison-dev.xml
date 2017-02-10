@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libbison-dev" section="libdevel">
+    <description>
+        <summary>YACC-compatible parser generator - development library</summary>
+        <p>
+        Bison is a general-purpose parser generator that converts a
+        grammar description for an LALR(1) context-free grammar into a C
+        program to parse that grammar. Once you are proficient with Bison, you
+        may use it to develop a wide range of language parsers, from those used
+        in simple desk calculators to complex programming languages.
+        </p>
+        <p>
+        This package provides the liby.a file including functions needed by
+        yacc parsers.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/liby.a"/>
+    </contents>
+</package>

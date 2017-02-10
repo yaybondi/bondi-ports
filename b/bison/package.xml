@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="bison" architecture-independent="false">
+        <description>
+            <summary>YACC-compatible parser generator</summary>
+            <p>
+            Bison is a general-purpose parser generator that converts a
+            grammar description for an LALR(1) context-free grammar into a C
+            program to parse that grammar. Once you are proficient with Bison, you
+            may use it to develop a wide range of language parsers, from those used
+            in simple desk calculators to complex programming languages.
+            </p>
+            <p>
+            Bison is upward compatible with Yacc: all properly-written Yacc
+            grammars ought to work with Bison with no change. Anyone familiar with
+            Yacc should be able to use Bison with little trouble. Documentation of
+            the program is in the bison-doc package.
+            </p>
+        </description>
+
+        <sources>
+            <file src="bison-3.0.4.dfsg.tar.xz" subdir="sources"
+                sha256sum="923b80ae17b292a37b534ddcd694efd53c709e10d8b3371e60e92fc4504517f1"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="aee90645b12c9b78a099afd29b9147b84248bbc069d5d6e87267ced04665b4fa"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/01_inhibit_example_generation"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="gettext"/>
+            <package name="m4" version=">= 1.4-14"/>
+            <package name="autotools-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="bison.xml"/>
+    <xi:include href="libbison-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="bison" section="devel">
+    <description>
+        <summary>YACC-compatible parser generator</summary>
+        <p>
+        Bison is a general-purpose parser generator that converts a
+        grammar description for an LALR(1) context-free grammar into a C
+        program to parse that grammar. Once you are proficient with Bison, you
+        may use it to develop a wide range of language parsers, from those used
+        in simple desk calculators to complex programming languages.
+        </p>
+        <p>
+        Bison is upward compatible with Yacc: all properly-written Yacc
+        grammars ought to work with Bison with no change. Anyone familiar with
+        Yacc should be able to use Bison with little trouble. Documentation of
+        the program is in the bison-doc package.
+        </p>
+    </description>
+
+    <requires>
+        <package name="m4"/>
+        <package name="libbison-dev" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/*"/>
+        <file src="/usr/share/aclocal/bison-i18n.m4"/>
+        <file src="/usr/share/bison/*"/>
+        <file src="/usr/share/bison/*/*"/>
+        <file src="/usr/share/locale/*/*"/>
+    </contents>
+</package>
