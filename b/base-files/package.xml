@@ -1,30 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE control [
-<!ENTITY description SYSTEM "description.xml">
-<!ENTITY rules       SYSTEM "rules.xml">
-<!ENTITY changelog   SYSTEM "changelog.xml">
-]>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <source name="base-files" architecture-independent="true">
-        &description;
+        <xi:include href="description.xml"/>
 
         <sources>
-            <file src="base-files.tar.gz" subdir="install"/>
+            <file src="base-files-1.0.0.tar.gz" subdir="sources"
+                sha256sum="422d4e074e38e74b88120b57da39757f42436c2edd9b39f38e67898206603690"/>
         </sources>
 
-        &rules;
+        <xi:include href="rules.xml"/>
     </source>
 
     <package name="base-files" section="admin">
-        &description;
+        <xi:include href="description.xml"/>
 
         <contents>
             <file src="/"/>
         </contents>
     </package>
 
-    <!-- changelog -->
-    &changelog;
-
+    <xi:include href="changelog.xml"/>
 </control>
