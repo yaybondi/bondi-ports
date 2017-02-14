@@ -6,7 +6,7 @@
 
         <sources>
             <file src="base-files-1.0.0.tar.gz" subdir="sources"
-                sha256sum="422d4e074e38e74b88120b57da39757f42436c2edd9b39f38e67898206603690"/>
+                sha256sum="608023e608a30565da369f264d7457108eb821483489c5decdad86f797fce62b"/>
         </sources>
 
         <xi:include href="rules.xml"/>
