@@ -32,7 +32,7 @@
             <file src="patches.01.tar.gz" subdir="patches"
                 sha256sum="d1c3b2f6c1bc8f6b781db10b12fdaa08e821948328461c1c9d238d79e63cb949"/>
             <file src="patches.bolt.tar.gz" subdir="patches"
-                sha256sum="f7ab10494c441edbf0474d86edcc99b2b55d4509014519532b548352cf0a4669"/>
+                sha256sum="d1645e3ad2f44b8b0e535e358f37b96513e802f26e63715f2f5bcbb5c9f4b643"/>
         </sources>
 
         <patches>
