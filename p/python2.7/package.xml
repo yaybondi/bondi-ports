@@ -53,7 +53,9 @@
                 <file src="patches/disable-sem-check.diff"/>
                 <file src="patches/ctypes-arm.diff"/>
                 <file src="patches/lto-link-flags.diff"/>
+                <!--
                 <file src="patches/multiarch.diff"/>
+                -->
                 <file src="patches/lib2to3-no-pickled-grammar.diff"/>
                 <file src="patches/lib2to3-no-pgen-caching.diff"/>
                 <file src="patches/add-python-config-sh.diff"/>
