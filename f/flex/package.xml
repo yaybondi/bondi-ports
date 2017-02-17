@@ -22,19 +22,15 @@
         <sources>
             <file src="flex-2.6.1.tar.gz" subdir="sources"
                 sha256sum="45ca57aa8c9c2539bc201f602279d8730d20450514b36e867853e212c0e55438"/>
-            <!--
             <file src="patches.bolt.tar.gz" subdir="patches"
-                sha256sum="c41cf60abd6cd099b1eaa531752a00098ee61c8ab7e9074c223d4521cd017e3c"/>
-            -->
+                sha256sum="6246d65b76ffe393bb69c9365a580c3b68ca0ffb994cf73605b3a9c6a2e068bd"/>
         </sources>
 
-        <!--
         <patches>
             <patchset subdir="sources">
-                <file src="patches/fix-signed-unsiged-comp.patch"/>
+                <file src="patches/no-implicit-malloc-decl.patch"/>
             </patchset>
         </patches>
-        -->
 
         <requires>
             <package name="bison"/>
