@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="help2man" section="devel">
+    <description>
+        <summary>Automatic manpage generator</summary>
+        <p>
+        Program to create simple man pages from the --help and
+        --version output of other programs.
+        </p>
+        <p>
+        Since most GNU documentation is now in info format, this provides a
+        way to generate a placeholder man page pointing to that resource while
+        still providing some useful information.
+        </p>
+    </description>
+
+    <requires>
+        <package name="perl" version=">= 5.8.0-7"/>
+    </requires>
+
+</package>
