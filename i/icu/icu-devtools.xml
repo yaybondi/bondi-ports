@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="icu-devtools" section="libdevel">
+    <description>
+        <summary>Development utilities for International Components for Unicode</summary>
+        <p>
+        ICU is a C++ and C library that provides robust and full-featured
+        Unicode and locale support. This package contains programs used to
+        manipulate data files found in the ICU sources and is a dependency of
+        libicu-dev. End users would generally not need to install this package.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/bin/derb"/>
+        <file src="/usr/bin/genbrk"/>
+        <file src="/usr/bin/gencfu"/>
+        <file src="/usr/bin/gencnval"/>
+        <file src="/usr/bin/gendict"/>
+        <file src="/usr/bin/genrb"/>
+        <file src="/usr/bin/icuinfo"/>
+        <file src="/usr/bin/makeconv"/>
+        <file src="/usr/bin/pkgdata"/>
+        <file src="/usr/bin/uconv"/>
+        <file src="/usr/sbin"/>
+    </contents>
+</package>
