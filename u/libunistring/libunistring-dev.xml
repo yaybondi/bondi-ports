@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libunistring-dev" section="libdevel">
+    <description>
+        <summary>Unicode string library for C - development files</summary>
+        <p>
+        The 'libunistring' library implements Unicode strings (in the UTF-8,
+        UTF-16, and UTF-32 encodings), together with functions for Unicode
+        characters (character names, classifications, properties) and
+        functions for string processing (formatted output, width, word
+        breaks, line breaks, normalization, case folding, regular
+        expressions).
+        </p>
+        <p>
+        This package contains the development support files needed to compile
+        and link against libunistring, as well as the documentation in Info
+        and HTML format.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libunistring0" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include/*"/>
+        <file src="/usr/lib/lib*.a"/>
+        <file src="/usr/lib/lib*.so"/>
+    </contents>
+</package>

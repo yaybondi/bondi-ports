@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libunistring0" section="libs">
+    <description>
+        <summary>Unicode string library for C</summary>
+        <p>
+        The 'libunistring' library implements Unicode strings (in the UTF-8,
+        UTF-16, and UTF-32 encodings), together with functions for Unicode
+        characters (character names, classifications, properties) and
+        functions for string processing (formatted output, width, word
+        breaks, line breaks, normalization, case folding, regular
+        expressions).
+        </p>
+        <p>
+        This package contains the shared library.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/lib*.so.*"/>
+    </contents>
+</package>
