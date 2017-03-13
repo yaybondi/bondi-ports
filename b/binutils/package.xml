@@ -15,12 +15,12 @@
         </description>
 
         <sources>
-            <file src="binutils-2.27.51.20161220.tar.gz" subdir="sources"
-                sha256sum="dca9f4e7bd242a2a1d0a5b2c241a32a4a604b6377e01e4923faa1dd726d8815c"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="7737fd743e3fd038eb946e60fd700ebc6fb87e591baa19bf9edfe1fbc3c668b5"/>
+            <file src="binutils-2.27.90.20170124.tar.gz" subdir="sources"
+                sha256sum="b4101b6061f32beb4c9559b7930087a1bb7c6eeb11ddd01ec67ce080e5e9deb5"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="1680dc05d3fc3822c04d0913e919f39e9f83e59ea0e7966c2917168d8ae29b9f"/>
         </sources>
-
+        
         <patches>
             <patchset subdir="sources">
                 <file src="patches/001_ld_makefile_patch.patch"/>
@@ -42,25 +42,22 @@
                 <file src="patches/aarch64-libpath.diff"/>
                 <file src="patches/mips64-default-n64.diff"/>
                 <file src="patches/gold-mips.diff"/>
-                <file src="patches/mips-pt-gnu-stack.diff"/>
-                <file src="patches/pr20649.diff"/>
                 <file src="patches/ld-new-dtags-by-default.diff"/>
+                <file src="patches/pr21074-revert.diff"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="autoconf"/>
+            <package name="autoconf" version=">= 2.64"/>
             <package name="bison"/>
             <package name="flex"/>
             <package name="gettext"/>
             <package name="texinfo"/>
             <package name="dejagnu"/>
-            <package name="quilt"/>
             <package name="chrpath"/>
-            <package name="python3"/>
+            <package name="python3:any"/>
             <package name="file"/>
             <package name="xz-utils"/>
-            <package name="lsb-release"/>
             <package name="zlib1g-dev"/>
         </requires>
 
