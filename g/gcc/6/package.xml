@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-
     <defines>
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
@@ -15,16 +14,16 @@
         </description>
 
         <sources>
-            <file src="gcc-6.2.0-dfsg.tar.xz" subdir="sources"
-                sha256sum="d6c720212539518b3390885b558053ecaddb5a7c8768407ce7c59139cf54f6be"/>
-            <file src="patches.07.tar.gz" subdir="patches"
-                sha256sum="251ffc2b7c3339ec6412106241a8c66a8df047359d06e264b1b3a148c6077293"/>
+            <file src="gcc-6-6.3.0.tar.gz" subdir="sources"
+                sha256sum="04552f04baf6974fb7521191859fb54717385ad659afd822b2995b66ee4e4151"/>
+            <file src="patches.06.tar.gz" subdir="patches"
+                sha256sum="b708cbdf5ac77dfcc2575d63f110234d9b3a8ae5396c39115af21cf6dc87eab4"/>
             <file src="patches.bolt.tar.gz" subdir="patches"
                 sha256sum="9b227119714e4987a173ab48134407f803e58289b4e3a206ba7374f8a42de1bb"/>
         </sources>
 
         <patches>
-            <patchset subdir="sources" strip="2">
+            <patchset subdir="sources">
                 <file src="patches/svn-updates.diff"/>
                 <file src="patches/libiberty-updates.diff"/>
                 <file src="patches/gcc-gfdl-build.diff"/>
@@ -64,9 +63,7 @@
                 <file src="patches/gcc-SOURCE_DATE_EPOCH-2.diff"/>
                 <file src="patches/cmd-go-combine-gccgo-s-ld-and-ldShared-methods.diff"/>
                 <file src="patches/libjava-mips64el.diff"/>
-                <file src="patches/PR55947-revert.diff"/>
                 <file src="patches/gccgo-issue16780.diff"/>
-                <file src="patches/pr77379.diff"/>
                 <file src="patches/vulcan-cpu.diff"/>
                 <file src="patches/vulcan-costs.diff"/>
                 <file src="patches/libffi-pax.diff"/>
@@ -84,12 +81,15 @@
                 <file src="patches/CVE-2016-9841.diff"/>
                 <file src="patches/CVE-2016-9842.diff"/>
                 <file src="patches/CVE-2016-9843.diff"/>
+                <file src="patches/libcc1-compiler-name.diff"/>
+                <file src="patches/mips-pr78176-add-mlxc1-sxc1.diff"/>
+                <file src="patches/mips-loongson3a-use-fused-madd.d.diff"/>
+                <file src="patches/mips-madd4.diff"/>
                 <file src="patches/libstdc++-functexcept.diff"/>
                 <file src="patches/ada-arm.diff"/>
                 <file src="patches/ada-kfreebsd.diff"/>
                 <file src="patches/ada-revert-pr63225.diff"/>
                 <file src="patches/ada-driver-check.diff"/>
-                <file src="patches/ada-gcc-name.diff"/>
                 <file src="patches/ada-default-project-path.diff"/>
                 <file src="patches/ada-library-project-files-soname.diff"/>
                 <file src="patches/ada-link-lib.diff"/>
@@ -103,18 +103,16 @@
                 <!--
                 <file src="patches/gdc-6.diff"/>
                 <file src="patches/gdc-updates.diff"/>
-                <file src="patches/libphobos-soname.diff"/>
                 <file src="patches/libphobos-zlib.diff"/>
                 <file src="patches/gdc-versym-cpu.diff"/>
                 <file src="patches/gdc-versym-os.diff"/>
                 <file src="patches/gdc-frontend-posix.diff"/>
                 <file src="patches/gdc-base-version.diff"/>
                 <file src="patches/gdc-profiledbuild.diff"/>
-                <file src="patches/gdc-libphobos-link.diff"/>
-                <file src="patches/gdc-845377.diff"/>
                 <file src="patches/gdc-texinfo.diff"/>
                 <file src="patches/gdc-libphobos-build.diff"/>
                 -->
+                <file src="patches/pr64735-headers.diff"/>
                 <file src="patches/sys-auxv-header.diff"/>
                 <file src="patches/libcilkrts-targets.diff"/>
                 <file src="patches/arm-multilib-soft.diff"/>
@@ -130,9 +128,7 @@
                 <file src="patches/libjava-multiarch.diff"/>
                 <file src="patches/libjava-nobiarch-check.diff"/>
                 <file src="patches/config-ml.diff"/>
-                <!--
                 <file src="patches/g++-multiarch-incdir.diff"/>
-                -->
                 <file src="patches/canonical-cpppath.diff"/>
                 <file src="patches/gcc-multilib-multiarch.diff"/>
                 <file src="patches/libgomp-kfreebsd-testsuite.diff"/>
