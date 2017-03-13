@@ -55,7 +55,7 @@
             <package name="texinfo"/>
             <package name="dejagnu"/>
             <package name="chrpath"/>
-            <package name="python3:any"/>
+            <package name="python3"/>
             <package name="file"/>
             <package name="xz-utils"/>
             <package name="zlib1g-dev"/>
