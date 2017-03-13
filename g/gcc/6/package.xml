@@ -17,7 +17,7 @@
             <file src="gcc-6-6.3.0.tar.gz" subdir="sources"
                 sha256sum="0c6e4675477b37d27301a083408b4932e0fa3caebc8ddb36710e42d92cd5b347"/>
             <file src="patches.06.tar.gz" subdir="patches"
-                sha256sum="b708cbdf5ac77dfcc2575d63f110234d9b3a8ae5396c39115af21cf6dc87eab4"/>
+                sha256sum="b268bc8bab68e41a70acf2a9d3e186f46f3a2a638f645cddebd2345c9aef508d"/>
             <file src="patches.bolt.tar.gz" subdir="patches"
                 sha256sum="9b227119714e4987a173ab48134407f803e58289b4e3a206ba7374f8a42de1bb"/>
         </sources>
