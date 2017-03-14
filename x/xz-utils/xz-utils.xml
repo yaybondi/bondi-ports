@@ -19,11 +19,11 @@
         improvements for general use:
         </p>
         <p>
-        * 'file' magic for detecting XZ files;
-        * crc64 data integrity check;
-        * limited random-access reading support;
-        * improved support for multithreading (not used in xz-utils);
-        * support for flushing the encoder.
+          <li>'file' magic for detecting XZ files;</li>
+          <li>crc64 data integrity check;</li>
+          <li>limited random-access reading support;</li>
+          <li>improved support for multithreading (not used in xz-utils);</li>
+          <li>support for flushing the encoder.</li>
         </p>
     </description>
 
@@ -40,6 +40,5 @@
         <file src="/usr/bin/xzdiff"/>
         <file src="/usr/bin/xzless"/>
         <file src="/usr/bin/xzmore"/>
-        <file src="/usr/share/locale/*/LC_MESSAGES/xz.mo"/>
     </contents>
 </package>

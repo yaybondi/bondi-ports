@@ -23,7 +23,7 @@
             <file src="xz-utils-5.2.2.tar.xz" subdir="sources"
                 sha256sum="f341b1906ebcdde291dd619399ae944600edc9193619dd0c0110a5f05bfcc89e"/>
             <file src="patches.1.2.tar.gz" subdir="patches"
-                sha256sum="56a9266aee7dd15b32156d19d4e973562e638d360596eee82360effa71fcf57b"/>
+                sha256sum="58a981d168ec36cf84821f2d49f2a98b28c8661d8e5d88de10836979bc18e923"/>
         </sources>
         
         <patches>
@@ -39,7 +39,9 @@
             <package name="automake"/>
             <package name="libtool" version=">= 2.2"/>
             <package name="gettext"/>
-            <package name="cvs"/>
+            <package name="autopoint" version="<< 0.18-1"/>
+            <package name="autopoint"/>
+            <package name="freebsd-glue"/>
         </requires>
 
         <xi:include href="rules.xml"/>

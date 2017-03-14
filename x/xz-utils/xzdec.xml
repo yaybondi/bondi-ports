@@ -16,10 +16,10 @@
         of liblzma installed. However, they have:
         </p>
         <p>
-        * no compression support;
-        * no support for writing to a file other than standard output;
-        * no translated messages;
-        * been optimized for size rather than speed.
+          <li>no compression support;</li>
+          <li>no support for writing to a file other than standard output;</li>
+          <li>no translated messages;</li>
+          <li>been optimized for size rather than speed.</li>
         </p>
         <p>
         For a full-featured xzcat command without these limitations, use
