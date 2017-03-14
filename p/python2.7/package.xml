@@ -19,8 +19,10 @@
                 sha256sum="a4f05a0720ce0fd92626f0278b6b433eee9a6173ddf2bced7957dfb599a5ece1"/>
             <file src="patches.01.tar.gz" subdir="patches"
                 sha256sum="c615ebb1bb2e42f8174e5ed51dc18ffd0ae78b6f5436874a30fe1fd5bfd002f9"/>
+            <file src="patches.bolt.tar.gz" subdir="patches"
+                sha256sum="b853885cb606819f18ce76dbbf4e44d439fe2d6faf2a48bd05ff2669b659ea01"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/issue9189.diff"/>

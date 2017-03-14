@@ -19,8 +19,10 @@
                 sha256sum="7140482a99df2684333fa4c56d2381d1295a16c5672adfb42e963fe72aebc1ff"/>
             <file src="patches.01.tar.gz" subdir="patches"
                 sha256sum="9c1ef12d6b14e0ef0ff54768768a30ef3099a89b4c1dfef25e99155a65a583a4"/>
+            <file src="patches.bolt.tar.gz" subdir="patches"
+                sha256sum="c160f865dbc742d8edee8a1681d52eb3b4185d79553f4cfc846d792d96db89ff"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/deb-setup.diff"/>
