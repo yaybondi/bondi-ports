@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python3-pkg-resources" section="python">
+    <description>
+        <summary>Package Discovery and Resource Access using pkg_resources</summary>
+        <p>
+        The pkg_resources module provides an API for Python libraries to
+        access their resource files, and for extensible applications and
+        frameworks to automatically discover plugins. It also provides
+        runtime support for using C extensions that are inside zipfile-format
+        eggs, support for merging packages that have separately-distributed
+        modules or subpackages, and APIs for managing Python's current
+        "working set" of active packages.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python3-all"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/python3.*/*-packages/pkg_resources"/>
+    </contents>
+</package>

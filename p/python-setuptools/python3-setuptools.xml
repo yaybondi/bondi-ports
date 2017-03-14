@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python3-setuptools" section="python">
+    <description>
+        <summary>Python3 Distutils Enhancements</summary>
+        <p>
+        Extensions to the python-distutils for large or complex distributions.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python3-pkg-resources" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/easy_install3"/>
+        <file src="/usr/lib/python3.*/*-packages/easy_install*"/>
+        <file src="/usr/lib/python3.*/*-packages/setuptools*"/>
+    </contents>
+</package>

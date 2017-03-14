@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="python-setuptools" architecture-independent="true">
+        <description>
+            <summary>Package Discovery and Resource Access using pkg_resources</summary>
+            <p>
+            The pkg_resources module provides an API for Python libraries to
+            access their resource files, and for extensible applications and
+            frameworks to automatically discover plugins. It also provides
+            runtime support for using C extensions that are inside zipfile-format
+            eggs, support for merging packages that have separately-distributed
+            modules or subpackages, and APIs for managing Python's current
+            "working set" of active packages.
+            </p>
+        </description>
+
+        <sources>
+            <file src="python-setuptools-33.1.1.tar.xz" subdir="sources"
+                sha256sum="aeeac1aa49ab17fb2164c380eae40a11a90a21719325d668fba5bd31d5cf72e6"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="fee88b920c0f918b3a5f7ff4982f4492ad6279172a826c7545c4ad285e0443dd"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/install-layout.diff"/>
+                <file src="patches/multiarch-extname.diff"/>
+                <file src="patches/fix-python3.5.diff"/>
+                <file src="patches/no-sphinx-rst.linker.diff"/>
+                <file src="patches/fix-changes-link.diff"/>
+                <file src="patches/multiple-entrypoints.diff"/>
+                <file src="patches/no-SOURCES.txt-in-egg-ingo.diff"/>
+                <file src="patches/reproducible.diff"/>
+                <file src="patches/sorted-requires.diff"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="pypy"/>
+            <package name="python-all"/>
+            <package name="python3-all"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="python-pkg-resources.xml"/>
+    <xi:include href="python-setuptools.xml"/>
+    <xi:include href="python3-pkg-resources.xml"/>
+    <xi:include href="python3-setuptools.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

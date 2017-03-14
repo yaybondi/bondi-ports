@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python-setuptools" section="python">
+    <description>
+        <summary>Python Distutils Enhancements</summary>
+        <p>
+        Extensions to the python-distutils for large or complex distributions.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python-pkg-resources" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/easy_install"/>
+        <file src="/usr/lib/python2.*/*-packages/easy_install*"/>
+        <file src="/usr/lib/python2.*/*-packages/setuptools*"/>
+    </contents>
+</package>
