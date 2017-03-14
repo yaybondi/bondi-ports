@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libxslt1-dev" section="libdevel">
+    <description>
+        <summary>XSLT 1.0 processing library - development kit</summary>
+        <p>
+        XSLT is an XML language for defining transformations of XML files from
+        XML to some other arbitrary format, such as XML, HTML, plain text, etc.
+        using standard XSLT stylesheets. libxslt is a C library which
+        implements XSLT version 1.0.
+        </p>
+        <p>
+        This package contains the development files for libxslt.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libxml2-dev" version=">= 2.6.26"/>
+        <package name="libxslt1.1" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/xslt-config"/>
+        <file src="/usr/lib/libexslt.a"/>
+        <file src="/usr/lib/libexslt.so"/>
+        <file src="/usr/lib/libxslt.a"/>
+        <file src="/usr/lib/libxslt.so"/>
+        <file src="/usr/lib/pkgconfig"/>
+        <file src="/usr/lib/xsltConf.sh"/>
+        <file src="/usr/share/aclocal"/>
+    </contents>
+</package>

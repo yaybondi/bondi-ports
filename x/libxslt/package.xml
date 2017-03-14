@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libxslt" architecture-independent="false">
+        <description>
+            <summary>XSLT 1.0 processing library and utilities</summary>
+            <p>
+            XSLT is an XML language for defining transformations of XML files from
+            XML to some other arbitrary format, such as XML, HTML, plain text, etc.
+            using standard XSLT stylesheets. libxslt is a C library which
+            implements XSLT version 1.0.
+            </p>
+        </description>
+
+        <sources>
+            <file src="libxslt-1.1.29.tar.gz" subdir="sources"
+                sha256sum="b5976e3857837e7617b29f2249ebb5eeac34e249208d31f1fbf7a6ba7a4090ce"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="131506ce63394d5698883f80c495370743b013486dedb400956046422641f79b"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/0001-patch-xslt-config-to-add-private-libraries.patch"/>
+                <file src="patches/0002-fix-autoconf-automake.patch"/>
+                <file src="patches/0003-fix-typo.patch"/>
+                <file src="patches/0004-Make-generate-id-deterministic.patch"/>
+                <file src="patches/0005-Link-with-libm.patch"/>
+                <file src="patches/0006-remove-plugin-in-xslt-config.patch"/>
+                <file src="patches/0007-Fix-heap-overread-in-xsltFormatNumberConversion.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="binutils" version=">= 2.14.90.0.7"/>
+            <package name="libgcrypt11-dev"/>
+            <package name="libxml2-dev" version=">= 2.6.27"/>
+            <package name="perl"/>
+            <package name="python-all-dev" version=">= 2.6.6-3~"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libxslt1.1.xml"/>
+    <xi:include href="libxslt1-dev.xml"/>
+    <xi:include href="xsltproc.xml"/>
+    <xi:include href="python-libxslt1.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

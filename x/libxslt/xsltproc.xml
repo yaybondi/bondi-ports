@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="xsltproc" section="text">
+    <description>
+        <summary>XSLT 1.0 command line processor</summary>
+        <p>
+        XSLT is an XML language for defining transformations of XML files from
+        XML to some other arbitrary format, such as XML, HTML, plain text, etc.
+        using standard XSLT version 1.0 stylesheets.
+        </p>
+        <p>
+        This package contains a command line tool that facilitates XSLT
+        transformations.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/xsltproc"/>
+    </contents>
+</package>
