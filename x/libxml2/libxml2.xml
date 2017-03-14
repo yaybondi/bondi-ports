@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libxml2" section="libs">
+    <description>
+        <summary>GNOME XML library</summary>
+        <p>
+        XML is a metalanguage to let you design your own markup language.
+        A regular markup language defines a way to describe information in
+        a certain class of documents (eg HTML). XML lets you define your
+        own customized markup languages for many classes of document. It
+        can do this because it's written in SGML, the international standard
+        metalanguage for markup languages.
+        </p>
+        <p>
+        This package provides a library providing an extensive API to handle
+        such XML data files.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libxml2.so.*"/>
+    </contents>
+</package>

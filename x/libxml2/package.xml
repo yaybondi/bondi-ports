@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libxml2" architecture-independent="false">
+        <description>
+            <summary>GNOME XML library and utilities</summary>
+            <p>
+            XML is a metalanguage to let you design your own markup language.
+            A regular markup language defines a way to describe information in
+            a certain class of documents (eg HTML). XML lets you define your
+            own customized markup languages for many classes of document. It
+            can do this because it's written in SGML, the international standard
+            metalanguage for markup languages.
+            </p>
+        </description>
+
+        <sources>
+            <file src="libxml2-2.9.4+dfsg1.tar.xz" subdir="sources"
+                sha256sum="a74ad55e346aa0b2b41903e66d21f8f3d2a736b3f41e32496376861ab484184e"/>
+            <file src="patches.2.2.tar.gz" subdir="patches"
+                sha256sum="b1ecbae83bacceb5326e82af5d2dbe6ceb5abe0be0980e4b58b797a68426da11"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/0001-modify-xml2-config-and-pkgconfig-behaviour.patch"/>
+                <file src="patches/0002-fix-python-multiarch-includes.patch"/>
+                <file src="patches/0003-Fix-NULL-pointer-deref-in-XPointer-range-to.patch"/>
+                <file src="patches/0004-Fix-comparison-with-root-node-in-xmlXPathCmpNodes.patch"/>
+                <file src="patches/0005-Fix-XPointer-paths-beginning-with-range-to.patch"/>
+                <file src="patches/0006-Disallow-namespace-nodes-in-XPointer-ranges.patch"/>
+                <file src="patches/0007-Fix-more-NULL-pointer-derefs-in-xpointer.c.patch"/>
+                <file src="patches/0008-Fix-attribute-decoding-during-XML-schema-validation.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autotools-dev"/>
+            <package name="pkg-config"/>
+            <package name="libpython-all-dev"/>
+            <package name="libpython-all-dbg"/>
+            <package name="python-all-dev:any" version=">= 2.7.5-5~"/>
+            <package name="python-all-dbg:any"/>
+            <package name="libpython3-all-dev"/>
+            <package name="libpython3-all-dbg"/>
+            <package name="python3-all-dev:any" version=">= 3.5"/>
+            <package name="python3-all-dbg:any"/>
+            <package name="zlib1g-dev"/>
+            <package name="liblzma-dev"/>
+            <package name="libicu-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libxml2.xml"/>
+    <xi:include href="libxml2-utils.xml"/>
+    <xi:include href="libxml2-dev.xml"/>
+    <xi:include href="python-libxml2.xml"/>
+    <xi:include href="python3-libxml2.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

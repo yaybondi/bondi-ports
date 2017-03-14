@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libxml2-dev" section="libdevel">
+    <description>
+        <summary>Development files for the GNOME XML library</summary>
+        <p>
+        XML is a metalanguage to let you design your own markup language.
+        A regular markup language defines a way to describe information in
+        a certain class of documents (eg HTML). XML lets you define your
+        own customized markup languages for many classes of document. It
+        can do this because it's written in SGML, the international standard
+        metalanguage for markup languages.
+        </p>
+        <p>
+        Install this package if you wish to develop your own programs using
+        the GNOME XML library.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libxml2" version="=="/>
+        <package name="libicu-dev"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/xml2-config"/>
+        <file src="/usr/include/libxml2"/>
+        <file src="/usr/lib/libxml2.a"/>
+        <file src="/usr/lib/libxml2.so"/>
+        <file src="/usr/lib/pkgconfig"/>
+        <file src="/usr/lib/xml2Conf.sh"/>
+        <file src="/usr/share/aclocal"/>
+    </contents>
+</package>

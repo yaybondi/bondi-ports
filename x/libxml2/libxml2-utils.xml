@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libxml2-utils" section="text">
+    <description>
+        <summary>XML utilities</summary>
+        <p>
+        XML is a metalanguage to let you design your own markup language.
+        A regular markup language defines a way to describe information in
+        a certain class of documents (eg HTML). XML lets you define your
+        own customized markup languages for many classes of document. It
+        can do this because it's written in SGML, the international standard
+        metalanguage for markup languages.
+        </p>
+        <p>
+        This package provides xmllint, a tool for validating and reformatting
+        XML documents, and xmlcatalog, a tool to parse and manipulate XML or
+        SGML catalog files.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/xmlcatalog"/>
+        <file src="/usr/bin/xmllint"/>
+    </contents>
+</package>
