@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libmagic-mgc" section="libs">
+    <description>
+        <summary>File type determination library using "magic" numbers (compiled magic file)</summary>
+        <p>
+        This package provides the compiled magic file "magic.mgc". It has
+        been separated from libmagic1 in order to meet the multiarch
+        requirements without breaking applications that expect this file
+        at its absolute path.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/file"/>
+        <file src="/usr/share/file"/>
+        <file src="/usr/share/misc/magic.mgc"/>
+    </contents>
+</package>

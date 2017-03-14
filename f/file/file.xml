@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="file" section="utils">
+    <description>
+        <summary>Recognize the type of data in a file using "magic" numbers</summary>
+        <p>
+        The file command is "a file type guesser", a command-line tool that
+        tells you in words what kind of data a file contains.
+        </p>
+        <p>
+        This package contains the file program itself.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libmagic1" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin"/>
+    </contents>
+</package>

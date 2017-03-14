@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python3-magic" section="python">
+    <description>
+        <summary>Recognize the type of data in a file using "magic" numbers - Python 3 bindings</summary>
+        <p>
+        This package contains the Python 3 bindings for the libmagic file type
+        detection library.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libmagic1" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/python3"/>
+    </contents>
+</package>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="file" architecture-independent="false">
+        <description>
+            <summary>Recognize the type of data in a file using "magic" numbers</summary>
+            <p>
+            The file command is "a file type guesser", a command-line tool that
+            tells you in words what kind of data a file contains.
+            </p>
+            <p>
+            This package contains the file program itself.
+            </p>
+        </description>
+
+        <sources>
+            <file src="file-5.29.tar.xz" subdir="sources"
+                sha256sum="4ab1cd8d4fe9017f8dfcfd6ba81f495a722b75e22bd1a59e6bfd15ac211a2820"/>
+            <file src="patches.03.tar.gz" subdir="patches"
+                sha256sum="b243dba8ba65afef0d7b1a28a5cc62e3250573811f24937d424e83acab76b51d"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/cherry-pick.FILE5_29-38-gafec4e7c.combined.patch"/>
+                <file src="patches/local.support-local-definitions-in-etc-magic.patch"/>
+                <file src="patches/local.don-t-include-libs-in-build.patch"/>
+                <file src="patches/local.mention-posixly-correct-dependent-behaviour-in-usage-message.patch"/>
+                <file src="patches/local.report-gz-as-application-gzip.patch"/>
+                <file src="patches/local.disable-detection-of-vax-coff-executables.patch"/>
+                <file src="patches/local.disable-algol68-detection.patch"/>
+                <file src="patches/local.improve-flash.patch"/>
+            </patchset>
+        </patches>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="file.xml"/>
+    <xi:include href="libmagic1.xml"/>
+    <xi:include href="libmagic-mgc.xml"/>
+    <xi:include href="libmagic-dev.xml"/>
+    <xi:include href="python-magic.xml"/>
+    <xi:include href="python3-magic.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

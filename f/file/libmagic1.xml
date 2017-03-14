@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libmagic1" section="libs">
+    <description>
+        <summary>Recognize the type of data in a file using "magic" numbers - library</summary>
+        <p>
+        This library can be used to classify files according to magic number
+        tests. It implements the core functionality of the file command.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libmagic-mgc" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/etc"/>
+        <file src="/usr/lib/libmagic.so.1"/>
+        <file src="/usr/lib/libmagic.so.1.0.0"/>
+        <file src="/usr/share/misc/magic"/>
+    </contents>
+</package>

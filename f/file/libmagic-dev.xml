@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libmagic-dev" section="libdevel">
+    <description>
+        <summary>Recognize the type of data in a file using "magic" numbers - development</summary>
+        <p>
+        This library can be used to classify files according to magic number
+        tests.
+        </p>
+        <p>
+        This package contains the development files.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libmagic1" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include"/>
+        <file src="/usr/lib/libmagic.a"/>
+        <file src="/usr/lib/libmagic.so"/>
+    </contents>
+</package>
