@@ -42,12 +42,9 @@
             <package name="pkg-config"/>
             <package name="libpython-all-dev"/>
             <package name="libpython-all-dbg"/>
-            <package name="python-all-dev:any" version=">= 2.7.5-5~"/>
-            <package name="python-all-dbg:any"/>
+            <package name="python-all-dev" version=">= 2.7.5-5~"/>
             <package name="libpython3-all-dev"/>
-            <package name="libpython3-all-dbg"/>
-            <package name="python3-all-dev:any" version=">= 3.5"/>
-            <package name="python3-all-dbg:any"/>
+            <package name="python3-all-dev" version=">= 3.5"/>
             <package name="zlib1g-dev"/>
             <package name="liblzma-dev"/>
             <package name="libicu-dev"/>
