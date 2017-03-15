@@ -20,7 +20,7 @@
             <file src="patches.01.tar.gz" subdir="patches"
                 sha256sum="c615ebb1bb2e42f8174e5ed51dc18ffd0ae78b6f5436874a30fe1fd5bfd002f9"/>
             <file src="patches.bolt.tar.gz" subdir="patches"
-                sha256sum="b853885cb606819f18ce76dbbf4e44d439fe2d6faf2a48bd05ff2669b659ea01"/>
+                sha256sum="3734b3dd2c9a29052d12a2a564c726e0aa54307a1a7d880e1dea121fc71f911f"/>
         </sources>
 
         <patches>
@@ -75,6 +75,8 @@
                 <file src="patches/pydoc-use-pager.diff"/>
                 <file src="patches/fix-sslv3-test.diff"/>
                 <file src="patches/issue27239.diff"/>
+                <!-- Bolt OS -->
+                <file src="patches/musl-find-library.diff"/>
             </patchset>
         </patches>
 
