@@ -18,13 +18,13 @@
         The XZ format is similar to the older LZMA format but includes some
         improvements for general use:
         </p>
-        <p>
+        <ul>
           <li>'file' magic for detecting XZ files;</li>
           <li>crc64 data integrity check;</li>
           <li>limited random-access reading support;</li>
           <li>improved support for multithreading (not used in xz-utils);</li>
           <li>support for flushing the encoder.</li>
-        </p>
+        </ul>
     </description>
 
     <requires>

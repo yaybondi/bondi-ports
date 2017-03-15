@@ -15,12 +15,12 @@
         liblzma so they can be used on machines without a compatible version
         of liblzma installed. However, they have:
         </p>
-        <p>
+        <ul>
           <li>no compression support;</li>
           <li>no support for writing to a file other than standard output;</li>
           <li>no translated messages;</li>
           <li>been optimized for size rather than speed.</li>
-        </p>
+        </ul>
         <p>
         For a full-featured xzcat command without these limitations, use
         the xz-utils package instead.
