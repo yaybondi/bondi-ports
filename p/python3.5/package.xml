@@ -20,7 +20,7 @@
             <file src="patches.01.tar.gz" subdir="patches"
                 sha256sum="9c1ef12d6b14e0ef0ff54768768a30ef3099a89b4c1dfef25e99155a65a583a4"/>
             <file src="patches.bolt.tar.gz" subdir="patches"
-                sha256sum="c160f865dbc742d8edee8a1681d52eb3b4185d79553f4cfc846d792d96db89ff"/>
+                sha256sum="9b6e12e78489508b4746a5cf074caad15574ba1732d2a37934083ff4cd702201"/>
         </sources>
 
         <patches>
@@ -47,7 +47,9 @@
                 <file src="patches/lib-argparse.diff"/>
                 <file src="patches/ctypes-arm.diff"/>
                 <file src="patches/lto-link-flags.diff"/>
+                <!--
                 <file src="patches/multiarch.diff"/>
+                -->
                 <file src="patches/lib2to3-no-pickled-grammar.diff"/>
                 <file src="patches/ext-no-libpython-link.diff"/>
                 <file src="patches/test-no-random-order.diff"/>
@@ -63,6 +65,8 @@
                 <file src="patches/pydoc-use-pager.diff"/>
                 <file src="patches/pyhash.diff"/>
                 <file src="patches/lib2to3-no-pgen-caching.diff"/>
+                <!-- Bolt OS -->
+                <file src="patches/musl-find-library.diff"/>
             </patchset>
         </patches>
 
