@@ -39,7 +39,7 @@
             <package name="automake"/>
             <package name="libtool" version=">= 2.2"/>
             <package name="gettext"/>
-            <package name="autopoint" version="&lt; 0.18-1"/>
+            <package name="autopoint" version="&lt;&lt; 0.18-1"/>
             <package name="autopoint"/>
             <package name="freebsd-glue"/>
         </requires>
