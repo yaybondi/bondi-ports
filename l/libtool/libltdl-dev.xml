@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libltdl-dev" section="libdevel">
+    <description>
+        <summary>System independent dlopen wrapper for GNU libtool</summary>
+        <p>
+        This package contains the header files and static libraries for the
+        libltdl package.
+        </p>
+        <p>
+        A small library that aims at hiding the various difficulties of
+        dlopening libraries from programmers. It is a system independent
+        dlopen wrapper for GNU libtool.
+        </p>
+        <p>
+        It supports the following dlopen interfaces:
+        * dlopen (Solaris, Linux and various BSD flavors)
+        * shl_load (HP-UX)
+        * LoadLibrary (Win16 and Win32)
+        * load_add_on (BeOS)
+        * GNU DLD (emulates dynamic linking for static libraries)
+        * libtool's dlpreopen
+        </p>
+    </description>
+
+    <requires>
+        <package name="libltdl7" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libltdl.a"/>
+        <file src="/usr/lib/libltdl.la"/>
+        <file src="/usr/lib/libltdl.so"/>
+        <file src="/usr/share/aclocal/ltdl.m4"/>
+        <file src="/usr/share/libtool/COPYING.LIB"/>
+        <file src="/usr/share/libtool/Makefile.am"/>
+        <file src="/usr/share/libtool/Makefile.in"/>
+        <file src="/usr/share/libtool/README"/>
+        <file src="/usr/share/libtool/aclocal.m4"/>
+        <file src="/usr/share/libtool/config-h.in"/>
+        <file src="/usr/share/libtool/configure"/>
+        <file src="/usr/share/libtool/configure.ac"/>
+        <file src="/usr/share/libtool/libltdl/*"/>
+        <file src="/usr/share/libtool/loaders/*"/>
+        <file src="/usr/share/libtool/lt__alloc.c"/>
+        <file src="/usr/share/libtool/lt__argz.c"/>
+        <file src="/usr/share/libtool/lt__dirent.c"/>
+        <file src="/usr/share/libtool/lt__strl.c"/>
+        <file src="/usr/share/libtool/lt_dlloader.c"/>
+        <file src="/usr/share/libtool/lt_error.c"/>
+        <file src="/usr/share/libtool/ltdl.c"/>
+        <file src="/usr/share/libtool/ltdl.h"/>
+        <file src="/usr/share/libtool/ltdl.mk"/>
+        <file src="/usr/share/libtool/slist.c"/>
+    </contents>
+</package>

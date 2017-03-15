@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libtool" section="devel">
+    <description>
+        <summary>Generic library support script</summary>
+        <p>
+        This is GNU libtool, a generic library support script. Libtool hides
+        the complexity of generating special library types (such as shared
+        libraries) behind a consistent interface. To use libtool, add the
+        new generic library building commands to your Makefile, Makefile.in,
+        or Makefile.am. See the documentation for details. Libtool supports
+        building static libraries on all platforms.
+        </p>
+        <p>
+        Libtool supports generation of C, C++, Fortran and Java libraries.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc"/>
+        <package name="cpp"/>
+        <package name="libc6-dev"/>
+        <package name="file"/>
+        <package name="autotools-dev"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/libtoolize"/>
+        <file src="/usr/share/aclocal/libtool.m4"/>
+        <file src="/usr/share/aclocal/ltargz.m4"/>
+        <file src="/usr/share/aclocal/ltoptions.m4"/>
+        <file src="/usr/share/aclocal/ltsugar.m4"/>
+        <file src="/usr/share/aclocal/ltversion.m4"/>
+        <file src="/usr/share/aclocal/lt~obsolete.m4"/>
+        <file src="/usr/share/libtool/build-aux/*"/>
+    </contents>
+</package>

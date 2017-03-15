@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libltdl7" section="libs">
+    <description>
+        <summary>System independent dlopen wrapper for GNU libtool</summary>
+        <p>
+        This package contains the run-time libltdl library.
+        </p>
+        <p>
+        A small library that aims at hiding the various difficulties of
+        dlopening libraries from programmers. It is a system independent
+        dlopen wrapper for GNU libtool.
+        </p>
+        <p>
+        It supports the following dlopen interfaces:
+        * dlopen (Solaris, Linux and various BSD flavors)
+        * shl_load (HP-UX)
+        * LoadLibrary (Win16 and Win32)
+        * load_add_on (BeOS)
+        * GNU DLD (emulates dynamic linking for static libraries)
+        * libtool's dlpreopen
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/libltdl.so.*"/>
+    </contents>
+</package>
