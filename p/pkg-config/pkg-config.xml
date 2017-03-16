@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="pkg-config" section="devel">
+    <description>
+        <summary>manage compile and link flags for libraries</summary>
+        <p>
+        pkg-config is a system for managing library compile and link flags that 
+        works with automake and autoconf.
+        </p>
+        <p>
+        Increasingly libraries ship with ".pc" files that allow querying of the
+        compiler and linker flags needed to use them through the pkg-config(1)
+        program.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin"/>
+        <file src="/usr/lib"/>
+        <file src="/usr/share"/>
+    </contents>
+</package>

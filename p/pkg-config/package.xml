@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="pkg-config" architecture-independent="false">
+        <description>
+            <summary>manage compile and link flags for libraries</summary>
+            <p>
+            pkg-config is a system for managing library compile and link flags that 
+            works with automake and autoconf.
+            </p>
+            <p>
+            Increasingly libraries ship with ".pc" files that allow querying of the
+            compiler and linker flags needed to use them through the pkg-config(1)
+            program.
+            </p>
+        </description>
+
+        <sources>
+            <file src="pkg-config-0.29.tar.gz" subdir="sources"
+                sha256sum="c8507705d2a10c67f385d66ca2aae31e81770cc0734b4191eb8c489e864a006b"/>
+        </sources>
+
+        <requires>
+            <package name="libglib2.0-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="pkg-config.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
