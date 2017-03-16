@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgio-fam" section="libs">
+    <description>
+        <summary>GLib Input, Output and Streaming Library (fam module)</summary>
+        <p>
+        GIO is the input, output and streaming API of GLib. This package
+        provides a fam file and directory monitoring backend for it.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/gio"/>
+    </contents>
+</package>

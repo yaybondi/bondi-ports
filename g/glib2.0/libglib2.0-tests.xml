@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libglib2.0-tests" section="libs">
+    <description>
+        <summary>GLib library of C routines - installed tests</summary>
+        <p>
+        GLib is a library containing many useful C routines for things such
+        as trees, hashes, lists, and strings. It is a useful general-purpose
+        C library used by projects such as GTK+, GIMP, and GNOME.
+        </p>
+        <p>
+        This package contains test programs, designed to be run as part of a
+        regression testsuite.
+        </p>
+    </description>
+
+    <requires>
+        <package name="shared-mime-info"/>
+    </requires>
+
+    <contents>
+        <dir src="/usr/lib/glib2.0"/>
+        <dir src="/usr/lib/glib2.0/installed-tests"/>
+        <file src="/usr/lib/glib2.0/installed-tests/glib"/>
+        <dir src="/usr/share/installed-tests"/>
+        <file src="/usr/share/installed-tests/glib"/>
+    </contents>
+</package>

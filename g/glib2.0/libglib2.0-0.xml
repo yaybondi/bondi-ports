@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libglib2.0-0" section="libs">
+    <description>
+        <summary>GLib library of C routines</summary>
+        <p>
+        GLib is a library containing many useful C routines for things such
+        as trees, hashes, lists, and strings. It is a useful general-purpose
+        C library used by projects such as GTK+, GIMP, and GNOME.
+        </p>
+        <p>
+        This package contains the shared libraries.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <dir src="/usr/lib/gio"/>
+        <dir src="/usr/lib/gio/modules"/>
+        <dir src="/usr/lib/glib-2.0"/>
+        <file src="/usr/lib/glib-2.0/gio-querymodules" mode="0755"/>
+        <file src="/usr/lib/glib-2.0/glib-compile-resources" mode="0755"/>
+        <file src="/usr/lib/glib-2.0/glib-compile-schemas" mode="0755"/>
+        <file src="/usr/lib/libgio-2.0.so.0"/>
+        <file src="/usr/lib/libgio-2.0.so.0.5000.3"/>
+        <file src="/usr/lib/libglib-2.0.so.0"/>
+        <file src="/usr/lib/libglib-2.0.so.0.5000.3"/>
+        <file src="/usr/lib/libgmodule-2.0.so.0"/>
+        <file src="/usr/lib/libgmodule-2.0.so.0.5000.3"/>
+        <file src="/usr/lib/libgobject-2.0.so.0"/>
+        <file src="/usr/lib/libgobject-2.0.so.0.5000.3"/>
+        <file src="/usr/lib/libgthread-2.0.so.0"/>
+        <file src="/usr/lib/libgthread-2.0.so.0.5000.3"/>
+        <dir src="/usr/share/glib-2.0"/>
+        <dir src="/usr/share/glib-2.0/schemas"/>
+    </contents>
+</package>
