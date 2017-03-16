@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release epoch="1" version="3.5" revision="3bolt1" upstream-version="1:3.5-3"
+        maintainer="Tobias Koch" email="tobias.koch@nonterra.com"
+        date="2017-03-16 11:30:52+03:00">
+        <changeset>
+            <li>Adaptation of Debian sources for Bolt OS</li>
+        </changeset>
+    </release>
+</changelog>

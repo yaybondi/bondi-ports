@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="diffutils" architecture-independent="false">
+        <description>
+            <summary>File comparison utilities</summary>
+            <p>
+            The diffutils package provides the diff, diff3, sdiff, and cmp programs.
+            </p>
+            <p>
+            `diff' shows differences between two files, or each corresponding file
+            in two directories. `cmp' shows the offsets and line numbers where
+            two files differ. `cmp' can also show all the characters that
+            differ between the two files, side by side. `diff3' shows differences
+            among three files. `sdiff' merges two files interactively.
+            </p>
+            <p>
+            The set of differences produced by `diff' can be used to distribute
+            updates to text files (such as program source code) to other people.
+            This method is especially useful when the differences are small compared
+            to the complete files. Given `diff' output, the `patch' program can
+            update, or "patch", a copy of the file.
+            </p>
+        </description>
+
+        <sources>
+            <file src="diffutils-3.5.tar.xz" subdir="sources"
+                sha256sum="dad398ccd5b9faca6b0ab219a036453f62a602a56203ac659b43e889bec35533"/>
+            <file src="patches.03.tar.gz" subdir="patches"
+                sha256sum="4e733aa072fd61c8f60f1979dbfcc54c6ee889643f8beedb4501f4441098097f"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/01-fix-race-condition-in-colors-test.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="texinfo"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="diffutils.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
