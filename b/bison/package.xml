@@ -26,7 +26,7 @@
             <file src="bison-3.0.4.dfsg.tar.xz" subdir="sources"
                 sha256sum="923b80ae17b292a37b534ddcd694efd53c709e10d8b3371e60e92fc4504517f1"/>
             <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="aee90645b12c9b78a099afd29b9147b84248bbc069d5d6e87267ced04665b4fa"/>
+                sha256sum="d9f7aa6cfd828a8c21d3465c8bc01e043ac493ee3267da777979fd7a0f6a3ee4"/>
         </sources>
         
         <patches>

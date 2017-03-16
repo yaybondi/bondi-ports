@@ -27,6 +27,5 @@
         <file src="/usr/share/aclocal/bison-i18n.m4"/>
         <file src="/usr/share/bison/*"/>
         <file src="/usr/share/bison/*/*"/>
-        <file src="/usr/share/locale/*/*"/>
     </contents>
 </package>
