@@ -57,7 +57,7 @@
             <package name="linux-libc-dev"/>
             <package name="libgamin-dev"/>
             <package name="zlib1g-dev"/>
-            <package name="python3:any" version=">= 2.7.5-5~"/>
+            <package name="python3" version=">= 2.7.5-5~"/>
             <package name="libxml2-utils"/>
             <package name="xsltproc"/>
             <package name="docbook-xml"/>
