@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="gperf" section="devel">
+    <description>
+        <summary>Perfect hash function generator</summary>
+        <p>
+        gperf is a program that generates perfect hash functions for sets of
+        key words.
+        </p>
+        <p>
+        A perfect hash function is simply: A hash function and a data structure
+        that allows recognition of a key word in a set of words using exactly 1
+        probe into the data structure.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin"/>
+    </contents>
+</package>

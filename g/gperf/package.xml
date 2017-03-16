@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="gperf" architecture-independent="false">
+        <description>
+            <summary>Perfect hash function generator</summary>
+            <p>
+            gperf is a program that generates perfect hash functions for sets of
+            key words.
+            </p>
+            <p>
+            A perfect hash function is simply: A hash function and a data structure
+            that allows recognition of a key word in a set of words using exactly 1
+            probe into the data structure.
+            </p>
+        </description>
+
+        <sources>
+            <file src="gperf-3.0.4.tar.gz" subdir="sources"
+                sha256sum="767112a204407e62dbc3106647cf839ed544f3cf5d0f0523aaa2508623aad63e"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="42ddee0315e322024c4523d424bea96328efb3be15ceca6d96bfa157fa94c68e"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/0001-Fix-syntex-error-in-Texinfo-documentation-only-build.patch"/>
+                <file src="patches/0002-Use-texi2any-instead-of-texi2html.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="texinfo"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="gperf.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
