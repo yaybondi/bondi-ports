@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="gettext" architecture-independent="false">
+        <description>
+            <summary>GNU Internationalization utilities for the base system</summary>
+            <p>
+            This package includes the gettext and ngettext programs which allow
+            other packages to internationalize the messages given by shell scripts.
+            </p>
+        </description>
+
+        <sources>
+            <file src="gettext-0.19.8.1.tar.xz" subdir="sources"
+                sha256sum="105556dbc5c3fbbc2aa0edb46d22d055748b6f5c7cd7a8d99f8e7eb84e938be4"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="e518f6dc54c3ba480fb2d7cf24b8e67995863211bbedbd98660a60178f525a7b"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/01-do-not-use-java-in-urlget"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="fastjar"/>
+            <package name="default-jdk"/>
+            <package name="file"/>
+            <package name="libncurses5-dev"/>
+            <package name="libxml2-dev"/>
+            <package name="libglib2.0-dev"/>
+            <package name="libcroco3-dev"/>
+            <package name="xz-utils"/>
+            <package name="libunistring-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="gettext-base.xml"/>
+    <xi:include href="gettext.xml"/>
+    <xi:include href="autopoint.xml"/>
+    <xi:include href="libgettextpo0.xml"/>
+    <xi:include href="libasprintf0v5.xml"/>
+    <xi:include href="libasprintf-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

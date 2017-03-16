@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="gettext-base" section="utils">
+    <description>
+        <summary>GNU Internationalization utilities for the base system</summary>
+        <p>
+        This package includes the gettext and ngettext programs which allow
+        other packages to internationalize the messages given by shell scripts.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/envsubst"/>
+        <file src="/usr/bin/gettext"/>
+        <file src="/usr/bin/gettext.sh"/>
+        <file src="/usr/bin/ngettext"/>
+        <dir src="/usr/share/java"/>
+        <file src="/usr/share/java/libintl.jar"/>
+    </contents>
+</package>

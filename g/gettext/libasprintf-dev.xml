@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libasprintf-dev" section="libdevel">
+    <description>
+        <summary>GNU Internationalization library development files</summary>
+        <p>
+        This package contains development files for the libasprintf library.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libasprintf0v5" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include"/>
+        <file src="/usr/lib/libasprintf.a"/>
+        <file src="/usr/lib/libasprintf.so"/>
+    </contents>
+</package>

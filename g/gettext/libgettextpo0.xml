@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgettextpo0" section="libs">
+    <description>
+        <summary>GNU Internationalization library</summary>
+        <p>
+        This package contains the libgettextpo shared library for interfacing
+        programmatically with GNU gettext .po files.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libgettextpo.so.0"/>
+        <file src="/usr/lib/libgettextpo.so.0.5.4"/>
+    </contents>
+</package>

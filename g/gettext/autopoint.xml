@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="autopoint" section="devel">
+    <description>
+        <summary>The autopoint program from GNU gettext</summary>
+        <p>
+        The `autopoint' program copies standard gettext infrastructure files
+        into a source package. It extracts from a macro call of the form
+        `AM_GNU_GETTEXT_VERSION(VERSION)', found in the package's
+        `configure.in' or `configure.ac' file, the gettext version used by the
+        package, and copies the infrastructure files belonging to this version
+        into the package.
+        </p>
+    </description>
+
+    <requires>
+        <package name="xz-utils"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/autopoint"/>
+        <dir src="/usr/share/gettext"/>
+        <file src="/usr/share/gettext/archive.dir.tar.xz"/>
+    </contents>
+</package>

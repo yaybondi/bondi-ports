@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libasprintf0v5" section="libs">
+    <description>
+        <summary>GNU library to use fprintf and friends in C++</summary>
+        <p>
+        This package contains the libasprintf shared library which makes the
+        C formatted output routines (fprintf et al.) usable in C++ programs,
+        for use with the &lt;string&gt; strings and the &lt;iostream&gt; streams.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libasprintf.so.0"/>
+        <file src="/usr/lib/libasprintf.so.0.0.0"/>
+    </contents>
+</package>
