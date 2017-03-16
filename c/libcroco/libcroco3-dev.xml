@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libcroco3-dev" section="libdevel">
+    <description>
+        <summary>Cascading Style Sheet (CSS) parsing and manipulation toolkit</summary>
+        <p>
+        Libcroco provides a parser module that provides:
+        </p>
+        <ul>
+            <li>A SAC like API. SAC stands for Simple API for CSS. SAC is an event driven
+            API which resembles SAX in the xml world.</li>
+            <li>A CSSOM like API. CSSOM stands for Cascading Style Sheet Object Model.</li>
+        </ul>
+        <p>
+        The libcroco parser implements the CSS Level 2 specification, the CSS
+        forward compatibility rules and the CSS cascading rules.
+        </p>
+        <p>
+        Libcroco provides a CSS2 selection engine:
+        </p>
+        <p>
+        Given an xml element node (that obviously comes from an xml document) and
+        a stylesheet cascade, the Libcroco selection engine can evaluate the css
+        selectors of the cascade and return the style properties associated to
+        the xml element node.
+        </p>
+        <p>
+        Note that the xml manipulation toolkit used by the libcroco selection
+        engine at the moment is libxml2.
+        </p>
+        <p>
+        This package contains the header files and static libraries which is
+        needed for developing the GTK+ applications.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libcroco3" version="=="/>
+        <package name="libxml2-dev" version=">= 2.4.23"/>
+        <package name="libglib2.0-dev" version=">= 2.0"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/*.a"/>
+        <file src="/usr/lib/*.so"/>
+        <file src="/usr/lib/pkgconfig"/>
+    </contents>
+</package>

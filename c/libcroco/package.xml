@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libcroco" architecture-independent="false">
+        <description>
+            <summary>Cascading Style Sheet (CSS) parsing and manipulation toolkit</summary>
+            <p>
+            Libcroco provides a parser module that provides:
+            </p>
+            <ul>
+                <li>A SAC like API. SAC stands for Simple API for CSS. SAC is an event driven
+                API which resembles SAX in the xml world.</li>
+                <li>A CSSOM like API. CSSOM stands for Cascading Style Sheet Object Model.</li>
+            </ul>
+            <p>
+            The libcroco parser implements the CSS Level 2 specification, the CSS
+            forward compatibility rules and the CSS cascading rules.
+            </p>
+            <p>
+            Libcroco provides a CSS2 selection engine:
+            </p>
+            <p>
+            Given an xml element node (that obviously comes from an xml document) and
+            a stylesheet cascade, the Libcroco selection engine can evaluate the css
+            selectors of the cascade and return the style properties associated to
+            the xml element node.
+            </p>
+            <p>
+            Note that the xml manipulation toolkit used by the libcroco selection
+            engine at the moment is libxml2.
+            </p>
+        </description>
+
+        <sources>
+            <file src="libcroco-0.6.11.tar.xz" subdir="sources"
+                sha256sum="132b528a948586b0dfa05d7e9e059901bca5a3be675b6071a90a90b81ae5a056"/>
+        </sources>
+
+        <requires>
+            <package name="gtk-doc-tools"/>
+            <package name="gnome-pkg-tools" version=">= 0.7"/>
+            <package name="libxml2-dev" version=">= 2.4.23"/>
+            <package name="libglib2.0-dev" version=">= 2.0"/>
+            <package name="libglib2.0-doc"/>
+            <package name="zlib1g-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libcroco3-dev.xml"/>
+    <xi:include href="libcroco3.xml"/>
+    <xi:include href="libcroco-tools.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
