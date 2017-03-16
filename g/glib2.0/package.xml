@@ -57,14 +57,7 @@
             <package name="linux-libc-dev"/>
             <package name="libgamin-dev"/>
             <package name="zlib1g-dev"/>
-            <package name="desktop-file-utils<!nocheck>"/>
-            <package name="dbus<!nocheck>"/>
-            <package name="shared-mime-info<!nocheck>"/>
-            <package name="tzdata<!nocheck>"/>
-            <package name="xterm<!nocheck>"/>
             <package name="python3:any" version=">= 2.7.5-5~"/>
-            <package name="python3-dbus<!nocheck>"/>
-            <package name="python3-gi<!nocheck>"/>
             <package name="libxml2-utils"/>
             <package name="xsltproc"/>
             <package name="docbook-xml"/>
