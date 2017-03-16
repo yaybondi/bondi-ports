@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="patch" architecture-independent="false">
+        <description>
+            <summary>Apply a diff file to an original</summary>
+            <p>
+            Patch will take a patch file containing any of the four forms
+            of difference listing produced by the diff program and apply
+            those differences to an original file, producing a patched
+            version.
+            </p>
+        </description>
+
+        <sources>
+            <file src="patch-2.7.5.tar.xz" subdir="sources"
+                sha256sum="fd95153655d6b95567e623843a0e77b81612d502ecf78a489a4aed7867caa299"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="cbf709e72095d6db9329dc640fa22d3c962c235c32264661ee2f0a2db76045ee"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/path_max"/>
+                <file src="patches/558485-backupmode"/>
+                <file src="patches/m-merge"/>
+                <file src="patches/patch-bug-1306412.diff"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="ed"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="patch.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

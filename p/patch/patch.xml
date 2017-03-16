@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="patch" section="vcs">
+    <description>
+        <summary>Apply a diff file to an original</summary>
+        <p>
+        Patch will take a patch file containing any of the four forms
+        of difference listing produced by the diff program and apply
+        those differences to an original file, producing a patched
+        version.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin"/>
+    </contents>
+</package>
