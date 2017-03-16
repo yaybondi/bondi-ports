@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libmount1" section="libs">
+    <description>
+        <summary>device mounting library</summary>
+        <p>
+        This device mounting library is used by mount and umount helpers.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libmount*.so.*"/>
+    </contents>
+</package>

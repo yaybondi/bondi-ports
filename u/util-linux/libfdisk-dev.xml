@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libfdisk-dev" section="libdevel">
+    <description>
+        <summary>fdisk partitioning library - headers and static libraries</summary>
+        <p>
+        The libfdisk library is used for manipulating partition tables. It is
+        the core of the fdisk, cfdisk, and sfdisk tools.
+        </p>
+        <p>
+        This package contains the development environment for the fdisk library.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libfdisk1" version="=="/>
+        <package name="libc6-dev"/>
+        <package name="libblkid-dev"/>
+        <package name="uuid-dev"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include/libfdisk"/>
+        <file src="/usr/lib/libfdisk.a"/>
+        <file src="/usr/lib/libfdisk.so"/>
+        <file src="/usr/lib/pkgconfig/fdisk.pc"/>
+    </contents>
+</package>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="mount" section="admin">
+    <description>
+        <summary>tools for mounting and manipulating filesystems</summary>
+        <p>
+        This package provides the mount(8), umount(8), swapon(8),
+        swapoff(8), and losetup(8) commands.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/findmnt"/>
+        <file src="/usr/bin/mount"/>
+        <file src="/usr/bin/umount"/>
+        <file src="/usr/sbin/losetup"/>
+        <file src="/usr/sbin/swapoff"/>
+        <file src="/usr/sbin/swapon"/>
+    </contents>
+</package>

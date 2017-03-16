@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="setpriv" section="admin">
+    <description>
+        <summary>tool to run a program with different Linux privilege settings</summary>
+        <p>
+        This package provides the setpriv command which allows the user to set or
+        query various Linux privilege settings that are inherited across execve.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/setpriv"/>
+    </contents>
+</package>

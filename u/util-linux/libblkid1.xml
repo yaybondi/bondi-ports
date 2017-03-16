@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libblkid1" section="libs">
+    <description>
+        <summary>block device ID library</summary>
+        <p>
+        The blkid library allows system programs such as fsck and mount to
+        quickly and easily find block devices by filesystem UUID or label.
+        This allows system administrators to avoid specifying filesystems by
+        hard-coded device names and use a logical naming system instead.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libblkid*.so.*"/>
+    </contents>
+</package>

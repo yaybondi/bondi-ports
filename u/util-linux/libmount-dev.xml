@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libmount-dev" section="libdevel">
+    <description>
+        <summary>device mounting library - headers and static libraries</summary>
+        <p>
+        This device mounting library is used by mount and umount helpers.
+        </p>
+        <p>
+        This package contains the development environment for the mount library.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libc6-dev"/>
+        <package name="libmount1" version="=="/>
+        <package name="libblkid-dev"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include/libmount"/>
+        <file src="/usr/lib/libmount.a"/>
+        <file src="/usr/lib/libmount.so"/>
+        <file src="/usr/lib/pkgconfig/mount.pc"/>
+    </contents>
+</package>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="uuid-runtime" section="utils">
+    <description>
+        <summary>runtime components for the Universally Unique ID library</summary>
+        <p>
+        The libuuid library generates and parses 128-bit Universally Unique
+        IDs (UUIDs). A UUID is an identifier that is unique within the space
+        of all such identifiers across both space and time. It can be used for
+        multiple purposes, from tagging objects with an extremely short lifetime
+        to reliably identifying very persistent objects across a network.
+        </p>
+        <p>
+        See RFC 4122 for more information.
+        </p>
+        <p>
+        This package contains the uuidgen program and the uuidd daemon.
+        </p>
+        <p>
+        The uuidd daemon is used to generate UUIDs, especially time-based
+        UUIDs, in a secure and guaranteed-unique fashion, even in the face of
+        large numbers of threads trying to grab UUIDs running on different CPUs.
+        It is used by libuuid as well as the uuidgen program.
+        </p>
+    </description>
+
+    <requires>
+        <package name="adduser"/>
+        <package name="passwd"/>
+        <package name="libuuid1" version=">= 2.25-5~"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/uuidgen"/>
+        <file src="/usr/lib/systemd/system/uuidd.*"/>
+        <file src="/usr/sbin/uuidd"/>
+    </contents>
+</package>

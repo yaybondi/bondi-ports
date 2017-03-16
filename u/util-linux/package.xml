@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="util-linux" architecture-independent="false">
+        <description>
+            <summary>miscellaneous system utilities</summary>
+            <p>
+            This package contains a number of important utilities, most of which
+            are oriented towards maintenance of your system. Some of the more
+            important utilities included in this package allow you to partition
+            your hard disk, view kernel messages, and create new filesystems.
+            </p>
+        </description>
+
+        <sources>
+            <file src="util-linux-2.29.1.tar.xz" subdir="sources"
+                sha256sum="0ce40600b934ec2fecfa6bfc4efe6982d051ba96c2832b05201347aec582f54f"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="822685a6a1adbae0e7939210f1fb335a591947914cc16b0aafbf209a5aa4ee60"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/Multiarch-support-in-util-linux-build.patch"/>
+                <file src="patches/man-page-tweaks-cleanup-my_dev_t.h-ancient-stuff.patch"/>
+                <file src="patches/Disable-the-fallback-clause-in-hwclock-when-dev-rtc-.patch"/>
+                <file src="patches/verbose-tests.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="gettext"/>
+            <package name="libcap-ng-dev"/>
+            <package name="libncurses5-dev"/>
+            <package name="libncursesw5-dev"/>
+            <package name="libpam0g-dev"/>
+            <package name="libselinux1-dev" version=">= 2.6-3~"/>
+            <package name="libsystemd-dev"/>
+            <package name="libtool"/>
+            <package name="libudev-dev"/>
+            <package name="pkg-config"/>
+            <package name="systemd"/>
+            <package name="zlib1g-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="mount.xml"/>
+    <xi:include href="libblkid1.xml"/>
+    <xi:include href="libblkid-dev.xml"/>
+    <xi:include href="libfdisk1.xml"/>
+    <xi:include href="libfdisk-dev.xml"/>
+    <xi:include href="libmount1.xml"/>
+    <xi:include href="libmount-dev.xml"/>
+    <xi:include href="libsmartcols1.xml"/>
+    <xi:include href="libsmartcols-dev.xml"/>
+    <xi:include href="libuuid1.xml"/>
+    <xi:include href="uuid-runtime.xml"/>
+    <xi:include href="uuid-dev.xml"/>
+    <xi:include href="setpriv.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

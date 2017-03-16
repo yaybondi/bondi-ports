@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libuuid1" section="libs">
+    <description>
+        <summary>Universally Unique ID library</summary>
+        <p>
+        The libuuid library generates and parses 128-bit Universally Unique
+        IDs (UUIDs). A UUID is an identifier that is unique within the space
+        of all such identifiers across both space and time. It can be used for
+        multiple purposes, from tagging objects with an extremely short lifetime
+        to reliably identifying very persistent objects across a network.
+        </p>
+        <p>
+        See RFC 4122 for more information.
+        </p>
+    </description>
+
+    <requires>
+        <package name="passwd"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libuuid*.so.*"/>
+    </contents>
+</package>

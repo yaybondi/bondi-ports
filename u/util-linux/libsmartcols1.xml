@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libsmartcols1" section="libs">
+    <description>
+        <summary>smart column output alignment library</summary>
+        <p>
+        This smart column output alignment library is used by fdisk utilities.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libsmartcols*.so.*"/>
+    </contents>
+</package>

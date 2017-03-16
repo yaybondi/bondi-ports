@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libfdisk1" section="libs">
+    <description>
+        <summary>fdisk partitioning library</summary>
+        <p>
+        The libfdisk library is used for manipulating partition tables. It is
+        the core of the fdisk, cfdisk, and sfdisk tools.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libfdisk*.so.*"/>
+    </contents>
+</package>
