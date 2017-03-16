@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python3-py" section="python">
+    <description>
+        <summary>Advanced Python development support library (Python 3)</summary>
+        <p>
+        The Codespeak py lib aims at supporting a decent Python development process
+        addressing deployment, versioning and documentation perspectives. It includes:
+        </p>
+        <p>
+        * py.path: path abstractions over local and Subversion files
+        * py.code: dynamic code compile and traceback printing support
+        </p>
+        <p>
+        This package provides the Python 3 modules.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python3-pkg-resources"/>
+    </requires>
+
+    <contents>
+        <dir src="/usr/lib/python3"/>
+        <file src="/usr/lib/python3/dist-packages"/>
+    </contents>
+</package>

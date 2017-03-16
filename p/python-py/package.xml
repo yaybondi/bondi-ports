@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="python-py" architecture-independent="true">
+        <description>
+            <summary>Advanced Python development support library (Python 3)</summary>
+            <p>
+            The Codespeak py lib aims at supporting a decent Python development process
+            addressing deployment, versioning and documentation perspectives. It includes:
+            </p>
+            <p>
+            * py.path: path abstractions over local and Subversion files
+            * py.code: dynamic code compile and traceback printing support
+            </p>
+            <p>
+            This package provides the Python 3 modules.
+            </p>
+        </description>
+
+        <sources>
+            <file src="python-py-1.4.32.tar.gz" subdir="sources"
+                sha256sum="c4b89fd1ff1162375115608d01f77c38cca1d0f28f37fd718005e19b28be41a7"/>
+            <file src="patches.03.tar.gz" subdir="patches"
+                sha256sum="8b0736a3cca5185382d0bddb95b7bb928261be2d7b4c232948c3507e4c25e05b"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/4711179f79a7bd84edf243a89bde47735f9d7ee4.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="python-all" version=">= 2.6.6-3~"/>
+            <package name="python3-all" version=">= 3.1.2-6~"/>
+            <package name="python-setuptools"/>
+            <package name="python3-setuptools"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="python3-py.xml"/>
+    <xi:include href="python-py.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
