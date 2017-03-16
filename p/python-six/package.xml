@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="six" architecture-independent="true">
+        <description>
+            <summary>Python 2 and 3 compatibility library (Python 2 interface)</summary>
+            <p>
+            Six is a Python 2 and 3 compatibility library. It provides utility
+            functions for smoothing over the differences between the Python versions
+            with the goal of writing Python code that is compatible on both Python
+            versions.
+            </p>
+            <p>
+            This package provides Six on the Python 2 module path. It is complemented
+            by python3-six and pypy-six.
+            </p>
+        </description>
+
+        <sources>
+            <file src="six-1.10.0.tar.gz" subdir="sources"
+                sha256sum="105f8d68616f8248e24bf0e9372ef04d3cc10104f1980f54d57b2ce73a5ad56a"/>
+        </sources>
+
+        <requires>
+            <package name="python" version=">= 2.6.6-3~"/>
+            <package name="python-all"/>
+            <package name="python-py"/>
+            <package name="python-pytest"/>
+            <package name="python-setuptools"/>
+            <package name="python3" version=">= 3.1.2-8~"/>
+            <package name="python3-all"/>
+            <package name="python3-py"/>
+            <package name="python3-pytest"/>
+            <package name="python3-setuptools"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="python-six.xml"/>
+    <xi:include href="python3-six.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

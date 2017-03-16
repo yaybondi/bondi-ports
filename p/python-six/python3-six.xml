@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python3-six" section="python">
+    <description>
+        <summary>Python 2 and 3 compatibility library (Python 3 interface)</summary>
+        <p>
+        Six is a Python 2 and 3 compatibility library. It provides utility
+        functions for smoothing over the differences between the Python versions
+        with the goal of writing Python code that is compatible on both Python
+        versions.
+        </p>
+        <p>
+        This package provides Six on the Python 3 module path. It is complemented
+        by python-six and pypy-six.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <dir src="/usr/lib/python3"/>
+        <file src="/usr/lib/python3/dist-packages"/>
+        <dir src="/usr/share/python3"/>
+        <file src="/usr/share/python3/dist"/>
+    </contents>
+</package>
