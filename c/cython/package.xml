@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="cython" architecture-independent="false">
+        <description>
+            <summary>C-Extensions for Python</summary>
+            <p>
+            Cython is a language that makes writing C extensions for the Python language as
+            easy as Python itself. Cython is based on the well-known Pyrex, but supports
+            more cutting edge functionality and optimizations.
+            </p>
+            <p>
+            The Cython language is very close to the Python language, but Cython
+            additionally supports calling C functions and declaring C types on variables
+            and class attributes. This allows the compiler to generate very efficient C
+            code from Cython code.
+            </p>
+            <p>
+            This makes Cython the ideal language for wrapping external C libraries, and
+            for fast C modules that speed up the execution of Python code.
+            </p>
+        </description>
+
+        <sources>
+            <file src="cython-0.25.2.tar.gz" subdir="sources"
+                sha256sum="f141d1f9c27a07b5a93f7dc5339472067e2d7140d1c5a9e20112a5665ca60306"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="b3ac597d3b22520bf940ea23c862bc738323c1462ac917f7326ecf0e90cde86c"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/deb_nopngmath"/>
+                <file src="patches/deb_disable_googleanalytics"/>
+                <file src="patches/honour_SOURCE_DATE_EPOCH_for_copyright_year"/>
+                <file src="patches/debup_workaround_verify_resolution_GH1533"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="python-all-dev" version=">= 2.6.6-3~"/>
+            <package name="python-all-dbg"/>
+            <package name="help2man" version=">= 1.37.1~"/>
+            <package name="python-sphinx"/>
+            <package name="python-numpy"/>
+            <package name="python3-all-dev"/>
+            <package name="python3-all-dbg"/>
+            <package name="python3-numpy"/>
+            <package name="gdb"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="cython.xml"/>
+    <xi:include href="cython3.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
