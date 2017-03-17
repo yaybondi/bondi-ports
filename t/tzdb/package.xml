@@ -18,7 +18,7 @@
 
         <sources>
             <file src="tzdb-2017a.tar.lz" subdir="sources"
-                sha256sum="df3a5c4d0a2cf0cde0b3f35796ccf6c9acfd598b8e70f8dece5404cd7626bbd6"/>
+                sha256sum="4283ece165c6711f7ea415b98413a625b3b65bbd2e205e0f2d23c302ffc1e31c"/>
         </sources>
 
         <requires>
