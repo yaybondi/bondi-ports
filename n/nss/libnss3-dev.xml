@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libnss3-dev" section="libdevel">
+    <description>
+        <summary>Development files for the Network Security Service libraries</summary>
+        <p>
+        This is a set of libraries designed to support cross-platform development
+        of security-enabled client and server applications. It can support SSLv2
+        and v4, TLS, PKCS #5, #7, #11, #12, S/MIME, X.509 v3 certificates and
+        other security standards.
+        </p>
+        <p>
+        Install this package if you wish to develop your own programs using the
+        Network Security Service Libraries.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libnss3" version="=="/>
+        <package name="libnspr4-dev" version=">= 4.6.6-1"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/nss-config"/>
+        <file src="/usr/include/nss"/>
+        <file src="/usr/lib/libcrmf.a"/>
+        <file src="/usr/lib/pkgconfig"/>
+    </contents>
+</package>

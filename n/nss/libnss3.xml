@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libnss3" section="libs">
+    <description>
+        <summary>Network Security Service libraries</summary>
+        <p>
+        This is a set of libraries designed to support cross-platform development
+        of security-enabled client and server applications. It can support SSLv2
+        and v4, TLS, PKCS #5, #7, #11, #12, S/MIME, X.509 v3 certificates and
+        other security standards.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/libnss3.so"/>
+        <file src="/usr/lib/libnssutil3.so"/>
+        <file src="/usr/lib/libsmime3.so"/>
+        <file src="/usr/lib/libssl3.so"/>
+        <file src="/usr/lib/nss"/>
+    </contents>
+</package>

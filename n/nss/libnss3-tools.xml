@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libnss3-tools" section="admin">
+    <description>
+        <summary>Network Security Service tools</summary>
+        <p>
+        This is a set of tools on top of the Network Security Service libraries.
+        This package includes:
+        </p>
+        <ul>
+          <li>certutil: manages certificate and key databases (cert7.db and key3.db)</li>
+          <li>modutil: manages the database of PKCS11 modules (secmod.db)</li>
+          <li>pk12util: imports/exports keys and certificates between the cert/key
+              databases and files in PKCS12 format.</li>
+          <li>shlibsign: creates .chk files for use in FIPS mode.</li>
+          <li>signtool: creates digitally-signed jar archives containing files and/or
+              code.</li>
+          <li>ssltap: proxy requests for an SSL server and display the contents of
+              the messages exchanged between the client and server.</li>
+        </ul>
+    </description>
+
+    <contents>
+        <file src="/usr/bin/certutil"/>
+        <file src="/usr/bin/chktest"/>
+        <file src="/usr/bin/cmsutil"/>
+        <file src="/usr/bin/crlutil"/>
+        <file src="/usr/bin/derdump"/>
+        <file src="/usr/bin/httpserv"/>
+        <file src="/usr/bin/modutil"/>
+        <file src="/usr/bin/nss-addbuiltin"/>
+        <file src="/usr/bin/nss-dbtest"/>
+        <file src="/usr/bin/nss-pp"/>
+        <file src="/usr/bin/ocspclnt"/>
+        <file src="/usr/bin/p7content"/>
+        <file src="/usr/bin/p7env"/>
+        <file src="/usr/bin/p7sign"/>
+        <file src="/usr/bin/p7verify"/>
+        <file src="/usr/bin/pk12util"/>
+        <file src="/usr/bin/pk1sign"/>
+        <file src="/usr/bin/pwdecrypt"/>
+        <file src="/usr/bin/rsaperf"/>
+        <file src="/usr/bin/selfserv"/>
+        <file src="/usr/bin/shlibsign"/>
+        <file src="/usr/bin/signtool"/>
+        <file src="/usr/bin/signver"/>
+        <file src="/usr/bin/ssltap"/>
+        <file src="/usr/bin/strsclnt"/>
+        <file src="/usr/bin/symkeyutil"/>
+        <file src="/usr/bin/tstclnt"/>
+        <file src="/usr/bin/vfychain"/>
+        <file src="/usr/bin/vfyserv"/>
+    </contents>
+</package>

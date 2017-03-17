@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="nss" architecture-independent="false">
+        <description>
+            <summary>Network Security Service libraries</summary>
+            <p>
+            This is a set of libraries designed to support cross-platform development
+            of security-enabled client and server applications. It can support SSLv2
+            and v4, TLS, PKCS #5, #7, #11, #12, S/MIME, X.509 v3 certificates and
+            other security standards.
+            </p>
+        </description>
+
+        <sources>
+            <file src="nss-3.26.2.tar.gz" subdir="sources"
+                sha256sum="13a40a2f97edf5fab3d4c7fdd928e77df36dc539cd8354b6b5d79ab93a131a5a"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="3901f4cadcdd01cc98ba2ffd7cdf1d410c8ce78631aee706b27fedf589aafc72"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/38_hurd.patch"/>
+                <file src="patches/38_kbsd.patch"/>
+                <file src="patches/80_security_tools.patch"/>
+                <file src="patches/85_security_load.patch"/>
+                <file src="patches/38_hppa.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="libnspr4-dev" version=">= 2:4.12"/>
+            <package name="zlib1g-dev"/>
+            <package name="libsqlite3-dev" version=">= 3.3.9"/>
+            <package name="libnss3-tools:native" version=">= 2:3.19-1-1~"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libnss3.xml"/>
+    <xi:include href="libnss3-tools.xml"/>
+    <xi:include href="libnss3-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
