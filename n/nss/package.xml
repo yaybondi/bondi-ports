@@ -36,7 +36,7 @@
             <package name="libnspr4-dev" version=">= 2:4.12"/>
             <package name="zlib1g-dev"/>
             <package name="libsqlite3-dev" version=">= 3.3.9"/>
-            <package name="libnss3-tools:native" version=">= 2:3.19-1-1~"/>
+            <package name="libnss3-tools" version=">= 2:3.19-1-1~"/>
         </requires>
 
         <xi:include href="rules.xml"/>
