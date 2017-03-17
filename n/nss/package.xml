@@ -20,6 +20,8 @@
                 sha256sum="13a40a2f97edf5fab3d4c7fdd928e77df36dc539cd8354b6b5d79ab93a131a5a"/>
             <file src="patches.01.tar.gz" subdir="patches"
                 sha256sum="3901f4cadcdd01cc98ba2ffd7cdf1d410c8ce78631aee706b27fedf589aafc72"/>
+            <file src="patches.bolt.tar.gz" subdir="patches"
+                sha256sum="d2e74b41705d5b896ee51e4cf6df16c027dfd62560c041db0140147c56a6178b"/>
         </sources>
         
         <patches>
@@ -29,6 +31,8 @@
                 <file src="patches/80_security_tools.patch"/>
                 <file src="patches/85_security_load.patch"/>
                 <file src="patches/38_hppa.patch"/>
+                <!-- Bolt OS -->
+                <file src="patches/fix-ssl-loopback-ut-uninit-var.diff"/>
             </patchset>
         </patches>
 
