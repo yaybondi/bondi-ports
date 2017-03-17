@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libnspr4" section="libs">
+    <description>
+        <summary>NetScape Portable Runtime Library</summary>
+        <p>
+        This library provides platform independent non-GUI operating system
+        facilities including:
+        </p>
+        <ul>
+          <li>threads,</li>
+          <li>thread synchronisation,</li>
+          <li>normal file I/O and network I/O,</li>
+          <li>interval timing and calendar time,</li>
+          <li>basic memory management (malloc and free),</li>
+          <li>shared library linking.</li>
+        </ul>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/*.so"/>
+    </contents>
+</package>

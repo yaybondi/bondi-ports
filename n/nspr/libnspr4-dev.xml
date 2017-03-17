@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libnspr4-dev" section="libdevel">
+    <description>
+        <summary>Development files for the NetScape Portable Runtime library</summary>
+        <p>
+        This library provides platform independent non-GUI operating system
+        facilities including:
+        </p>
+        <ul>
+          <li>threads,</li>
+          <li>thread synchronisation,</li>
+          <li>normal file I/O and network I/O,</li>
+          <li>interval timing and calendar time,</li>
+          <li>basic memory management (malloc and free),</li>
+          <li>shared library linking.</li>
+        </ul>
+        <p>
+        Install this package if you wish to develop your own programs using the
+        NetScape Portable Runtime library.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libnspr4" version=">= ${source:Upstream-Version}"/>
+        <package name="libnspr4" version="<==.1~"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/nspr-config"/>
+        <file src="/usr/lib/*.a"/>
+        <file src="/usr/lib/pkgconfig"/>
+        <file src="/usr/share/aclocal"/>
+    </contents>
+</package>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="nspr" architecture-independent="false">
+        <description>
+            <summary>NetScape Portable Runtime Library</summary>
+            <p>
+            This library provides platform independent non-GUI operating system
+            facilities including:
+            </p>
+            <ul>
+              <li>threads,</li>
+              <li>thread synchronisation,</li>
+              <li>normal file I/O and network I/O,</li>
+              <li>interval timing and calendar time,</li>
+              <li>basic memory management (malloc and free),</li>
+              <li>shared library linking.</li>
+            </ul>
+        </description>
+
+        <sources>
+            <file src="nspr-4.12.tar.gz" subdir="sources"
+                sha256sum="e0b10a1e569153668ff8bdea6c7e491b389fab69c2f18285a1ebf7c2ea4269de"/>
+            <file src="patches.06.tar.gz" subdir="patches"
+                sha256sum="f0cde79b03cf7053e09779b548211fe24232224e3bf7beef9503d1ae2663d86c"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/PL_strcmp"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autotools-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libnspr4.xml"/>
+    <xi:include href="libnspr4-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
