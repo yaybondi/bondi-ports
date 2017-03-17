@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="python-dateutil" architecture-independent="true">
+        <description>
+            <summary>powerful extensions to the standard datetime module</summary>
+            <p>
+            It features:
+            </p>
+            <ul>
+              <li>computing of relative deltas (next month, next year, next monday, last week
+                  of month, etc);</li>
+              <li>computing of relative deltas between two given date and/or datetime objects</li>
+              <li>computing of dates based on very flexible recurrence rules, using a superset
+                  of the iCalendar specification. Parsing of RFC strings is supported as well.</li>
+              <li>generic parsing of dates in almost any string format</li>
+              <li>timezone (tzinfo) implementations for tzfile(5) format files
+                  (/etc/localtime, /usr/share/zoneinfo, etc), TZ environment string (in all
+                  known formats), iCalendar format files, given ranges (with help from
+                  relative deltas), local machine timezone, fixed offset timezone, UTC
+                  timezone</li>
+              <li>computing of Easter Sunday dates for any given year, using Western, Orthodox
+                  or Julian algorithms</li>
+            </ul>
+        </description>
+
+        <sources>
+            <file src="python-dateutil-2.5.3.tar.gz" subdir="sources"
+                sha256sum="1408fdb07c6a1fa9997567ce3fcee6a337b39a503d80699e0f213de4aa4b32ed"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="feb96c6a45fce718c7d015a9ea6f07a96d3daa6aed3b4fb47f125058824f47c2"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/Remove_Zoneinfo_Tarball.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="python3"/>
+            <package name="python3-setuptools"/>
+            <package name="python3-six"/>
+            <package name="python-all" version=">= 2.6.6-3~"/>
+            <package name="python-setuptools"/>
+            <package name="python-six"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="python-dateutil.xml"/>
+    <xi:include href="python3-dateutil.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
