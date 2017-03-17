@@ -21,8 +21,7 @@
     </description>
 
     <requires>
-        <package name="libnspr4" version=">= ${source:Upstream-Version}"/>
-        <package name="libnspr4" version="<==.1~"/>
+        <package name="libnspr4" version="=="/>
     </requires>
 
     <contents>
