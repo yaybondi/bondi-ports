@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="ca-certificates" section="misc">
+    <description>
+        <summary>Common CA certificates</summary>
+        <p>
+        Contains the certificate authorities shipped with Mozilla's browser to allow
+        SSL-based applications to check for the authenticity of SSL connections.
+        </p>
+        <p>
+        Please note that the distributor can neither confirm nor deny whether the
+        certificate authorities whose certificates are included in this package
+        have in any way been audited for trustworthiness or RFC 3647 compliance.
+        Full responsibility to assess them belongs to the local system
+        administrator.
+        </p>
+    </description>
+
+    <requires>
+        <package name="openssl" version=">= 1.0.0"/>
+    </requires>
+
+    <contents>
+        <dir src="/etc/ca-certificates"/>
+        <dir src="/etc/ca-certificates/update.d"/>
+        <dir src="/etc/ssl"/>
+        <dir src="/etc/ssl/certs"/>
+        <file src="/usr/sbin"/>
+        <dir src="/usr/share/ca-certificates"/>
+        <file src="/usr/share/ca-certificates/mozilla"/>
+    </contents>
+
+    <maintainer-scripts>
+        <postinst><![CDATA[
+update-ca-certificates --fresh
+        ]]></postinst>
+
+        <postrm><![CDATA[
+remove_dangling_symlinks() {
+    if ! [ -d /etc/ssl/certs ]
+    then
+        return
+    fi
+    echo -n "Removing dangling symlinks from /etc/ssl/certs... "
+    find /etc/ssl/certs -type l -print | while read h
+    do
+        test -f "$h" || rm -f "$h"
+    done
+    echo "done."
+}
+rm -f /etc/ssl/certs/ca-certificates.crt
+remove_dangling_symlinks
+rmdir /usr/local/share/ca-certificates 2>/dev/null || true
+        ]]></postrm>
+
+    </maintainer-scripts>
+
+</package>

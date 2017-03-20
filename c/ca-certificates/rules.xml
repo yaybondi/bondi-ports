@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+# nothing to do
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+cd $XPACK_BUILD_DIR
+make
+cat > ca-certificates.conf <<EOF
+# This file lists certificates that you wish to use or to ignore to be
+# installed in /etc/ssl/certs. The update-ca-certificates command will
+# update /etc/ssl/certs by reading this file.
+#
+# line beginning with # is  a comment.
+# line beginning with ! is a certificate filename to be deselected.
+#
+EOF
+find ./ -type f -a '(' -name '*.crt' -o -name '*.pem' ')' -print | \
+while read CERT
+do
+    echo $CERT | sed "s@^./@@"
+done | \
+sort -u >> ca-certificates.conf
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+cd $XPACK_BUILD_DIR
+install -m 0755 -d $XPACK_INSTALL_DIR/usr/sbin
+install -m 0755 -d $XPACK_INSTALL_DIR/usr/share/ca-certificates
+make DESTDIR=$XPACK_INSTALL_DIR install
+install -m 0755 -d $XPACK_INSTALL_DIR/etc
+install -m 0644 ca-certificates.conf $XPACK_INSTALL_DIR/etc/
+    ]]>
+    </install>
+</rules>

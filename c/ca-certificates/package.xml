@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="ca-certificates" architecture-independent="true">
+        <description>
+            <summary>Common CA certificates</summary>
+            <p>
+            Contains the certificate authorities shipped with Mozilla's browser to allow
+            SSL-based applications to check for the authenticity of SSL connections.
+            </p>
+            <p>
+            Please note that the distributor can neither confirm nor deny whether the
+            certificate authorities whose certificates are included in this package
+            have in any way been audited for trustworthiness or RFC 3647 compliance.
+            Full responsibility to assess them belongs to the local system
+            administrator.
+            </p>
+        </description>
+
+        <sources>
+            <file src="ca-certificates-20161130.tar.xz" subdir="sources"
+                sha256sum="04bca9e142a90a834aca0311f7ced237368d71fee7bd5c9f68ef7f4611aee471"/>
+        </sources>
+
+        <requires>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="ca-certificates.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
