@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libssh2-1" section="libs">
+    <description>
+        <summary>SSH2 client-side library</summary>
+        <p>
+        libssh2 is a client-side C library implementing the SSH2 protocol.
+        It supports regular terminal, SCP and SFTP (v1-v5) sessions;
+        port forwarding, X11 forwarding; password, key-based and
+        keyboard-interactive authentication.
+        </p>
+        <p>
+        This package contains the runtime library.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/*.so.*"/>
+    </contents>
+</package>
