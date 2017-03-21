@@ -39,8 +39,6 @@
                 <file src="patches/11_omit-directories-from-config.patch"/>
                 <file src="patches/12_fix-openssl-connection-timeout.patch"/>
                 <file src="patches/13_CVE-2017-2629.patch"/>
-                <file src="patches/90_gnutls.patch"/>
-                <file src="patches/99_nss.patch"/>
             </patchset>
         </patches>
 
