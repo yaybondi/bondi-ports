@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libcurl4-nss-dev" section="libdevel">
+    <description>
+        <summary>development files and documentation for libcurl (NSS flavour)</summary>
+        <p>
+        libcurl is an easy-to-use client-side URL transfer library, supporting DICT,
+        FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S,
+        RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP.
+        </p>
+        <p>
+        libcurl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP
+        form based upload, proxies, cookies, user+password authentication (Basic,
+        Digest, NTLM, Negotiate, Kerberos), file transfer resume, http proxy tunneling
+        and more!
+        </p>
+        <p>
+        libcurl is free, thread-safe, IPv6 compatible, feature rich, well supported,
+        fast, thoroughly documented and is already used by many known, big and
+        successful companies and numerous applications.
+        </p>
+        <p>
+        This package provides the development files (ie. includes, static library,
+        manual pages) that allow one to build software which uses libcurl.
+        </p>
+        <p>
+        SSL support is provided by NSS.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libcurl3-nss" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/curl-config"/>
+        <file src="/usr/lib/libcurl-nss.a"/>
+        <file src="/usr/lib/libcurl-nss.so"/>
+        <file src="/usr/lib/pkgconfig/libcurl.pc"/>
+    </contents>
+</package>

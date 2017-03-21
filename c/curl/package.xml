@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="curl" architecture-independent="false">
+        <description>
+            <summary>command line tool for transferring data with URL syntax</summary>
+            <p>
+            curl is a command line tool for transferring data with URL syntax, supporting
+            DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3,
+            POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP.
+            </p>
+            <p>
+            curl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form
+            based upload, proxies, cookies, user+password authentication (Basic, Digest,
+            NTLM, Negotiate, kerberos...), file transfer resume, proxy tunneling and a
+            busload of other useful tricks.
+            </p>
+        </description>
+
+        <sources>
+            <file src="curl-7.52.1.tar.gz" subdir="sources"
+                sha256sum="a8984e8b20880b621f61a62d95ff3c0763a3152093a9f9ce4287cfd614add6ae"/>
+            <file src="patches.03.tar.gz" subdir="patches"
+                sha256sum="54f08c8bfaf8afee892e5324ed82605ee65edb1f6d6e070942dc59642d00cc79"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/01_runtests_gdb.patch"/>
+                <file src="patches/03_keep_symbols_compat.patch"/>
+                <file src="patches/04_workaround_as_needed_bug.patch"/>
+                <file src="patches/06_always-disable-valgrind.patch"/>
+                <file src="patches/07_do-not-disable-debug-symbols.patch"/>
+                <file src="patches/08_enable-zsh.patch"/>
+                <file src="patches/09_fix-typo.patch"/>
+                <file src="patches/11_omit-directories-from-config.patch"/>
+                <file src="patches/12_fix-openssl-connection-timeout.patch"/>
+                <file src="patches/13_CVE-2017-2629.patch"/>
+                <file src="patches/90_gnutls.patch"/>
+                <file src="patches/99_nss.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autoconf"/>
+            <package name="automake"/>
+            <package name="ca-certificates"/>
+            <package name="groff-base"/>
+            <package name="libgnutls28-dev"/>
+            <package name="libidn2-0-dev"/>
+            <package name="libkrb5-dev"/>
+            <package name="libldap2-dev"/>
+            <package name="libnghttp2-dev"/>
+            <package name="libnss3-dev"/>
+            <package name="libpsl-dev"/>
+            <package name="librtmp-dev" version=">= 2.4+20131018.git79459a2-3~"/>
+            <package name="libssh2-1-dev"/>
+            <package name="libssl1.0-dev" version="<< 1.1"/>
+            <package name="libtool"/>
+            <package name="python"/>
+            <package name="zlib1g-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="curl.xml"/>
+    <xi:include href="libcurl3.xml"/>
+    <xi:include href="libcurl3-gnutls.xml"/>
+    <xi:include href="libcurl3-nss.xml"/>
+    <xi:include href="libcurl4-openssl-dev.xml"/>
+    <xi:include href="libcurl4-gnutls-dev.xml"/>
+    <xi:include href="libcurl4-nss-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
