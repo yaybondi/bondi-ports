@@ -13,7 +13,7 @@
         </description>
 
         <sources>
-            <file src="nss-1.0.3.tar.gz" subdir="sources"
+            <file src="nss-pem-1.0.3.tar.gz" subdir="sources"
                 sha256sum="1fa82c71220aebfdc2d729cb49c7654dfffb9ee13832df745a1a0a2e84b4d844"/>
         </sources>
         
