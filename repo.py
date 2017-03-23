@@ -267,6 +267,7 @@ class Show:
             description = PackageDescription(description)
 
             print(
+                "-------------------------------------------------------------\n"
                 "Source: %(name)s                      \n"
                 "Version: %(version)s-%(revision)s     \n"
                 "Maintainer: %(maintainer)s <%(email)s>\n"
@@ -283,8 +284,8 @@ class Show:
                 }
             )
 
-            if i + 1 < len(argv):
-                print("")
+            if i + 1 >= len(argv):
+                print("-------------------------------------------------------------")
         #end for
     #end function
 
