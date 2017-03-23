@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libnsspem-dev" section="libdevel">
+    <description>
+        <summary>PEM file reader for Network Security Services (NSS) (development files)</summary>
+        <p>
+        This library enables NSS to read PEM encoded certificates. This package
+        containes the development libraries and headers.  
+        </p>
+    </description>
+
+    <requires>
+        <package name="libnsspem1" version="=="/>
+        <package name="libnspr4-dev"/>
+        <package name="libnss3-dev"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include"/>
+        <file src="/usr/lib/*.a"/>
+    </contents>
+</package>
