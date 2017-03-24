@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release version="0.3.5~20170309" revision="0" maintainer="Tobias Koch"
+     email="tobias.koch@nonterra.com" date="2017-03-25 00:38:00+03:00">
+        <changeset>
+            <li>Initial packaging</li>
+        </changeset>
+    </release>
+</changelog>

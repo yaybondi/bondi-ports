@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <source name="opkg" architecture-independent="false">
+        <description>
+            <summary>OPKG - tiny yet powerful package manager</summary>
+            <p>
+                Opkg is a lightweight package management system. It is written in C and resembles
+            apt/dpkg in operation. It is intended for use on embedded Linux devices.
+            </p>
+            <p>
+                Opkg is maintained, stable, robust and conservative in its memory usage. As best it
+            can, opkg maintains backwards compatibility with ipkg and conforms to a subset of
+            Debian's Policy Manual regarding control files.
+            </p>
+        </description>
+
+        <sources>
+            <file src="opkg-0.3.5~20170309.tar.gz" subdir="sources"
+                sha256sum="bd9e922639c9bf02024b62d9da42c7f78fd2a0b1a936ac1e28fc0b71656fb590"/>
+            <file src="patches.bolt.tar.gz" subdir="patches"
+                sha256sum="88b58eadf2bedc41b0e0b8d91d7e94e772ca1f4517de94865ecece9399ba6df3"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/ssl-curl-without-openssl.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="libc6-dev"/>
+            <package name="libcurl4-nss-dev"/>
+            <package name="libgpgme11-dev"/>
+            <package name="libgpg-error-dev"/>
+        </requires>
+
+        <!-- build rules -->
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <!-- package rules -->
+    <xi:include href="opkg.xml"/>
+    <xi:include href="libopkg1.xml"/>
+    <xi:include href="libopkg-dev.xml"/>
+
+    <!-- changelog -->
+    <xi:include href="changelog.xml"/>
+</control>
