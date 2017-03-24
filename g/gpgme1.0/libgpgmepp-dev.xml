@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgpgmepp-dev" section="libdevel">
+    <description>
+        <summary>C++ and Qt bindings for GPGME (development files)</summary>
+        <p>
+        GpgME++ (aka GpgMEpp) is a C++ wrapper (or C++ bindings) for the
+        GnuPG project's GPGME (GnuPG Made Easy) library.
+        </p>
+        <p>
+        QGpgME is a library that provides GPGME integration with QEventLoop
+        and some Qt datatypes (e.g. QByteArray).
+        </p>
+        <p>
+        This package contains the headers and other files needed to compile
+        against either of these libraries.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libgpgmepp6" version="=="/>
+        <package name="libqgpgme7" version="=="/>
+        <package name="qtbase5-dev"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include/QGpgME"/>
+        <file src="/usr/include/gpgme++"/>
+        <file src="/usr/include/qgpgme"/>
+        <file src="/usr/lib/cmake"/>
+        <file src="/usr/lib/libgpgmepp.a"/>
+        <file src="/usr/lib/libgpgmepp.so"/>
+        <file src="/usr/lib/libqgpgme.a"/>
+        <file src="/usr/lib/libqgpgme.so"/>
+    </contents>
+</package>

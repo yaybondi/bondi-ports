@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="gpgme1.0" architecture-independent="false">
+        <description>
+            <summary>GPGME - GnuPG Made Easy (development files)</summary>
+            <p>
+            GPGME is a wrapper library which provides a C API to access some of the
+            GnuPG functions, such as encrypt, decrypt, sign, verify, ...
+            </p>
+            <p>
+            This package contains the headers and other files needed to compile
+            against this library.
+            </p>
+        </description>
+
+        <sources>
+            <file src="gpgme1.0-1.8.0.tar.bz2" subdir="sources"
+                sha256sum="596097257c2ce22e747741f8ff3d7e24f6e26231fa198a41b2a072e62d1e5d33"/>
+            <file src="patches.03.tar.gz" subdir="patches"
+                sha256sum="76e6f9d920a33d671bd37dfee0943e6fbd890433b9c5a4c38f3f87cdb74ce4a5"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/0001-avoid-identifying-as-beta.patch"/>
+                <file src="patches/0002-Remove-a-forgotten-instance-of-libsuffix.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="automake" version=">= 1.14"/>
+            <package name="gnupg-agent"/>
+            <package name="gnupg2" version=">= 2"/>
+            <package name="gpgsm"/>
+            <package name="libassuan-dev" version=">> 2.0.2"/>
+            <package name="libgpg-error-dev" version=">> 1.17"/>
+            <package name="pkg-config"/>
+            <package name="python-all-dev"/>
+            <package name="python3-all-dev"/>
+            <package name="qtbase5-dev"/>
+            <package name="scdaemon"/>
+            <package name="swig"/>
+            <package name="texinfo"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libgpgme-dev.xml"/>
+    <xi:include href="libgpgme11.xml"/>
+    <xi:include href="python3-gpg.xml"/>
+    <xi:include href="python-gpg.xml"/>
+    <xi:include href="libqgpgme7.xml"/>
+    <xi:include href="libgpgmepp6.xml"/>
+    <xi:include href="libgpgmepp-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

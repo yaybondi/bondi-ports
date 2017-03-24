@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python-gpg" section="python">
+    <description>
+        <summary>Python interface to the GPGME GnuPG encryption library (Python 2)</summary>
+        <p>
+        The "gpg" Python module is, for the most part, a direct interface to
+        the C GPGME library. However, it is re-packaged in a more Pythonic
+        way -- object-oriented with classes and modules. Take a look at the
+        classes defined here -- they correspond directly to certain object
+        types in GPGME for C.
+        </p>
+        <p>
+        Features:
+        * Feature-rich, full implementation of the GPGME library. Supports
+        all GPGME features except interactive editing (coming soon).
+        Callback functions may be written in pure Python.
+        * Ability to sign, encrypt, decrypt, and verify data.
+        * Ability to list keys, export and import keys, and manage the keyring.
+        * Fully object-oriented with convenient classes and modules.
+        </p>
+        <p>
+        This is the official upstream Python 2 binding for GPGME.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/debian/tmp/usr/lib/python2.7/site-packages/gpg*.egg-info"/>
+        <file src="/debian/tmp/usr/lib/python2.7/site-packages/gpg/*.py"/>
+        <file src="/debian/tmp/usr/lib/python2.7/site-packages/gpg/_gpgme*.so"/>
+        <file src="/debian/tmp/usr/lib/python2.7/site-packages/gpg/constants/*.py"/>
+        <file src="/debian/tmp/usr/lib/python2.7/site-packages/gpg/constants/data/*.py"/>
+        <file src="/debian/tmp/usr/lib/python2.7/site-packages/gpg/constants/keylist/*.py"/>
+        <file src="/debian/tmp/usr/lib/python2.7/site-packages/gpg/constants/sig/*.py"/>
+    </contents>
+</package>

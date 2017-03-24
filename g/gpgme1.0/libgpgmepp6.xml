@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgpgmepp6" section="libs">
+    <description>
+        <summary>C++ wrapper library for GPGME</summary>
+        <p>
+        GpgME++ (aka GpgMEpp) is a C++ wrapper (or C++ bindings) for the
+        GnuPG project's GPGME (GnuPG Made Easy) library.
+        </p>
+        <p>
+        This is the official upstream C++ binding for GPGME.
+        </p>
+    </description>
+
+    <requires>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libgpgmepp.so.*"/>
+    </contents>
+</package>

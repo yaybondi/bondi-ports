@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgpgme11" section="libs">
+    <description>
+        <summary>GPGME - GnuPG Made Easy (library)</summary>
+        <p>
+        GPGME is a wrapper library which provides a C API to access some of the
+        GnuPG functions, such as encrypt, decrypt, sign, verify, ...
+        </p>
+        <p>
+        This package contains the library.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gnupg" version=">> 2"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/lib/libgpgme.so.*"/>
+    </contents>
+</package>
