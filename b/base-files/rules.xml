@@ -1,3 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rules>
+    <prepare>
+    <![CDATA[
+
+# pass
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+# pass
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd $BOLT_SOURCE_DIR
+make DESTDIR="$BOLT_INSTALL_DIR" install
+
+    ]]>
+    </install>
 </rules>
+
