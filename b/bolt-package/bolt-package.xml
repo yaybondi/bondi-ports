@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="bolt-package" section="utils">
+    <description>
+        <summary>Bolt OS' package generator</summary>
+        <p>
+        The Bolt OS Package Generator turns a set of source archives and
+        patches into ready-to-install binary packages. Rules for compilation
+        of sources, package contents and a simple changelog are kept in an
+        XML spec format resembling Debian package rules.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python3"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin"/>
+        <file src="/usr/lib"/>
+    </contents>
+</package>

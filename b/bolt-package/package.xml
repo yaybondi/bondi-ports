@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="bolt-package" architecture-independent="false">
+        <description>
+            <summary>Bolt OS' package generator</summary>
+            <p>
+            The Bolt OS Package Generator turns a set of source archives and
+            patches into ready-to-install binary packages. Rules for compilation
+            of sources, package contents and a simple changelog are kept in an
+            XML spec format resembling Debian package rules.
+            </p>
+        </description>
+
+        <sources>
+            <file src="bolt-package-1.0.0.tar.gz" subdir="sources"
+                sha256sum="ff1fe765fa1b9da9a18d68019f49b2ad2df754bacf0a01974156255274dcba41"/>
+        </sources>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="bolt-package.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
