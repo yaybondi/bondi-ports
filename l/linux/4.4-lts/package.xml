@@ -24,10 +24,10 @@
             </patchset>
         </patches>
 
-        <!-- build rules -->
         <xi:include href="rules.xml"/>
     </source>
 
-    <!-- changelog -->
+    <xi:include href="linux-system-headers.xml"/>
+
     <xi:include href="changelog.xml"/>
 </control>

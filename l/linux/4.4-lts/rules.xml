@@ -4,7 +4,8 @@
     <prepare>
     <![CDATA[
 
-true
+cd $BOLT_SOURCE_DIR
+make mrproper
 
     ]]>
     </prepare>
@@ -12,7 +13,8 @@ true
     <build>
     <![CDATA[
 
-true
+cd $BOLT_SOURCE_DIR
+make headers_check
 
     ]]>
     </build>
@@ -20,7 +22,8 @@ true
     <install>
     <![CDATA[
 
-true
+cd $BOLT_SOURCE_DIR
+make INSTALL_HDR_PATH="$BOLT_INSTALL_DIR/usr" headers_install
 
     ]]>
     </install>
