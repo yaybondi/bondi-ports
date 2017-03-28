@@ -3,7 +3,7 @@
     <description>
         <summary>Linux headers that libc was compiled against</summary>
         <p>
-        This package contains the headers that were used to <b>compile</b> the
+        This package contains the headers that were used to compile the
         libc in your system. These headers are independent of the headers
         belonging to your running kernel. If you want the headers corresponding
         to your kernel image, install linux-`uname -r`-headers instead.
@@ -11,6 +11,6 @@
     </description>
 
     <contents>
-        <file src="/usr"/>
+        <file src="/usr/include"/>
     </contents>
 </package>
