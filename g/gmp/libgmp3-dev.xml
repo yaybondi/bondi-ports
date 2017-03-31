@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgmp3-dev" section="libdevel">
+    <description>
+        <summary>Multiprecision arithmetic library developers tools</summary>
+        <p>
+        This is a dummy package that simply pulls in libgmp-dev.
+        It can safely be removed.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libgmp-dev" version="=="/>
+    </requires>
+</package>

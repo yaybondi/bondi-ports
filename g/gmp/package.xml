@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-
-    <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
-    </defines>
-
     <source name="gmp" architecture-independent="false">
         <description>
             <summary>Multiprecision arithmetic library</summary>
             <p>
             GNU MP is a programmer's library for arbitrary precision
-            arithmetic (ie, a bignum package).  It can operate on signed
+            arithmetic (ie, a bignum package). It can operate on signed
             integer, rational, and floating point numeric types.
             </p>
             <p>
@@ -30,6 +25,11 @@
 
         <xi:include href="rules.xml"/>
     </source>
+
+    <xi:include href="libgmp10.xml"/>
+    <xi:include href="libgmpxx4ldbl.xml"/>
+    <xi:include href="libgmp-dev.xml"/>
+    <xi:include href="libgmp3-dev.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>
