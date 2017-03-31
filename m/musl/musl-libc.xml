@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="musl-libc" section="libs">
+    <description>
+        <summary>A small, standards-conformling libc for Linux (runtime)</summary>
+        <p>
+            musl provides consistent quality and implementation behavior
+        from tiny embedded systems to full-fledged servers. Minimal
+        machine-specific code means less chance of breakage on minority
+        architectures and better success with “write once run everywhere”
+        C development.
+        </p>
+        <p>
+            musl's efficiency is unparalleled in Linux libc implementations.
+        Designed from the ground up for static linking, musl carefully avoids
+        pulling in large amounts of code or data that the application will
+        not use. Dynamic linking is also efficient; by integrating the entire
+        standard library implementation, including threads, math, and even the
+        dynamic linker itself into a single shared object, most of the startup
+        time and memory overhead of dynamic linking have been eliminated.
+        </p>
+        <p>
+            This package contains the runtime library and dynamic linker.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/*.so*"/>
+    </contents>
+</package>
