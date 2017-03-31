@@ -11,6 +11,6 @@
     </description>
 
     <contents>
-        <file src="/usr/include"/>
+        <file src="/usr/include/**/*.h"/>
     </contents>
 </package>
