@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libisl-dev" section="libdevel">
+    <description>
+        <summary>manipulating sets and relations of integer points bounded by linear constraints</summary>
+        <p>
+        isl is a library for manipulating sets and relations of integer points
+        bounded by linear constraints. Supported operations on sets include
+        intersection, union, set difference, emptiness check, convex hull,
+        (integer) affine hull, integer projection, and computing the lexicographic
+        minimum using parametric integer programming. It also includes an ILP solver
+        based on generalized basis reduction.
+        </p>
+        <p>
+        This package contains the development files.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libisl15" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include/"/>
+        <file src="/usr/lib/lib*.a"/>
+        <file src="/usr/lib/lib*.so"/>
+        <file src="/usr/lib/pkgconfig/*"/>
+    </contents>
+</package>

@@ -33,11 +33,13 @@
 
         <requires>
             <package name="libgmp-dev"/>
-            <package name="autoconf"/>
         </requires>
 
         <xi:include href="rules.xml"/>
     </source>
+
+    <xi:include href="libisl-dev.xml"/>
+    <xi:include href="libisl15.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control> 
