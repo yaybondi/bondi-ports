@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-
     <defines>
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
     <source name="mpclib3" architecture-independent="false">
         <description>
-            <summary>multiple precision complex floating-point library development package</summary>
+            <summary>multiple precision complex floating-point library</summary>
             <p>
             MPC is a portable library written in C for arbitrary precision
             arithmetic on complex numbers providing correct rounding. For the time
@@ -29,10 +28,17 @@
                 sha256sum="617decc6ea09889fb08ede330917a00b16809b8db88c29c31bfbb49cbf88ecc3"/>
         </sources>
 
-        <!-- build rules -->
+        <requires>
+            <package name="autotools-dev"/>
+            <package name="libmpfr-dev"/>
+            <package name="libgmp-dev"/>
+        </requires>
+
         <xi:include href="rules.xml"/>
     </source>
 
-    <!-- changelog -->
+    <xi:include href="libmpc-dev.xml"/>
+    <xi:include href="libmpc3.xml"/>
+
     <xi:include href="changelog.xml"/>
 </control>
