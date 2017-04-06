@@ -23,7 +23,6 @@
 
     <contents>
         <file src="/usr/include"/>
-        <file src="/usr/lib/*.so"/>
-        <file src="/usr/lib/*.a"/>
+        <file src="/usr/lib/libfl*.{so,a}*"/>
     </contents>
 </package>
