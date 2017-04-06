@@ -12,9 +12,6 @@
             portable way. It is used e.g. for generational garbage collectors
             and stack overflow handlers.
             </p>
-            <p>
-            This package contains the shared library.
-            </p>
         </description>
 
         <sources>

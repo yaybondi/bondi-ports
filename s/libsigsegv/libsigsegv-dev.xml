@@ -17,7 +17,7 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/*"/>
+        <file src="/usr/include"/>
         <file src="/usr/lib/lib*.a"/>
         <file src="/usr/lib/lib*.so"/>
     </contents>

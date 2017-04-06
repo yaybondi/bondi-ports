@@ -3,10 +3,14 @@
     <prepare>
     <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
+autoreconf -vif
+
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+    --enable-relocatable \
+    --enable-shared \
+    --prefix=/usr
 
     ]]>
     </prepare>

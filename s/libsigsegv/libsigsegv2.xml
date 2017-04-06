@@ -12,9 +12,6 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
         <file src="/usr/lib/libsigsegv.so.*"/>
     </contents>
