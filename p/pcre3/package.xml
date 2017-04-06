@@ -20,10 +20,10 @@
         <sources>
             <file src="pcre3-8.39.tar.bz2" subdir="sources"
                 sha256sum="b858099f82483031ee02092711689e7245586ada49e534a06e678b8ea9549e8b"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="8f8ce637501c86f07d78e6f48a0d03341cd087fbff9a8a3172d8707dd63f2c3c"/>
+            <file src="patches.03.tar.gz" subdir="patches"
+                sha256sum="b1d1b42ca1562bb720a0891c168850d67c085cabcf4f1254c2955dff25962e4d"/>
         </sources>
-
+        
         <patches>
             <patchset subdir="sources">
                 <file src="patches/PCRE6_compatible_API.patch"/>
@@ -33,12 +33,10 @@
                 <file src="patches/soname.patch"/>
                 <file src="patches/no_jit_x32_powerpcspe.patch"/>
                 <file src="patches/Disable_JIT_on_sparc64.patch"/>
+                <file src="patches/CVE-2017-6004.patch"/>
+                <file src="patches/upstream-fix-for-cve-2017-7186-upstream-"/>
             </patchset>
         </patches>
-
-        <requires>
-            <package name="autoconf"/>
-        </requires>
 
         <xi:include href="rules.xml"/>
     </source>
@@ -47,6 +45,8 @@
     <xi:include href="libpcrecpp0v5.xml"/>
     <xi:include href="libpcre3-dev.xml"/>
     <xi:include href="pcregrep.xml"/>
+    <xi:include href="libpcre16-3.xml"/>
+    <xi:include href="libpcre32-3.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libpcre16-3" section="libs">
+    <description>
+        <summary>Old Perl 5 Compatible Regular Expression Library - 16 bit runtime files</summary>
+        <p>
+        This is a library of functions to support regular expressions whose syntax
+        and semantics are as close as possible to those of the Perl 5 language.
+        </p>
+        <p>
+        This package contains the 16 bit runtime library.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/libpcre16.so.*"/>
+    </contents>
+</package>
