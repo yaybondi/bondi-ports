@@ -17,7 +17,7 @@
     </description>
 
     <requires>
-        <package name="libc6-dev"/>
+        <package name="musl-libc-dev"/>
         <package name="libpcre3" version="=="/>
         <package name="libpcre16-3" version="=="/>
         <package name="libpcre32-3" version="=="/>
