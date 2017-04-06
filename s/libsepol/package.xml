@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
-    </defines>
-
     <source name="libsepol" architecture-independent="false">
         <description>
             <summary>SELinux library for manipulating binary security policies</summary>
@@ -18,6 +14,12 @@
             based on the concepts of Type Enforcement®, Role-based Access
             Control, and Multi-level Security.
             </p>
+            <p>
+            libsepol provides an API for the manipulation of SELinux binary policies.
+            It is used by checkpolicy (the policy compiler) and similar tools, as well
+            as by programs like load_policy that need to perform specific transformations
+            on binary policies such as customizing policy boolean settings.
+            </p>
         </description>
 
         <sources>
@@ -25,11 +27,14 @@
                 sha256sum="d856d6506054f52abeaa3543ea2f2344595a3dc05d0d873ed7f724f7a16b1874"/>
             <file src="patches.02.tar.gz" subdir="patches"
                 sha256sum="26a59e50249f2092c136312fca90c0282a7f768a6102931b10dfaf0429e0ff56"/>
+            <file src="patches.bolt.tar.gz" subdir="patches"
+                sha256sum="435e0f139bad268b882fbba8bb33e5ffd4bcd4ab2aeb2ae019e53e7991690136"/>
         </sources>
         
         <patches>
             <patchset subdir="sources">
                 <file src="patches/fix_use-after-free_python3.patch"/>
+                <file src="patches/makefile-no-ln-sf-relative.patch"/>
             </patchset>
         </patches>
 
