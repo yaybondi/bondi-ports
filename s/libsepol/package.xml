@@ -33,7 +33,9 @@
         
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/fix_use-after-free_python3.patch"/>
+                <!-- Bolt OS -->
                 <file src="patches/makefile-no-ln-sf-relative.patch"/>
             </patchset>
         </patches>
