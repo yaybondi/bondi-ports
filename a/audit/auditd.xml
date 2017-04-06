@@ -12,10 +12,6 @@
         </p>
     </description>
 
-    <requires>
-        <package name="mawk"/>
-    </requires>
-
     <contents>
         <file src="/etc/audisp/audispd.conf"/>
         <file src="/etc/audisp/plugins.d/af_unix.conf"/>
