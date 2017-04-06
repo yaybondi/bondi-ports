@@ -6,8 +6,14 @@
 
     <source name="musl-fts" architecture-independent="false">
         <description>
-            <summary></summary>
+            <summary>Library with fts functions missing in musl libc</summary>
             <p>
+                The musl-fts package implements the fts functions fts_open, fts_read,
+                fts_children, fts_set and fts_close, which are missing in musl libc.
+            </p>
+            <p>
+                It uses the NetBSD implementation of fts to build a static library
+                /usr/lib/libfts.a and the /usr/include/fts.h header file.
             </p>
         </description>
 
