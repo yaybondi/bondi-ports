@@ -13,16 +13,15 @@
     </description>
 
     <requires>
-        <package name="lsb-base" version=">= 3.0-6"/>
-        <choice>
-            <package name="mawk"/>
-            <package name="gawk"/>
-        </choice>
+        <package name="mawk"/>
     </requires>
 
     <contents>
-        <dir src="/etc/audit"/>
-        <dir src="/var/log/audit"/>
+        <file src="/etc/audisp/audispd.conf"/>
+        <file src="/etc/audisp/plugins.d/af_unix.conf"/>
+        <file src="/etc/audisp/plugins.d/syslog.conf"/>
+        <file src="/etc/audit"/>
+        <file src="/usr/lib/systemd/system/auditd.service"/>
         <file src="/usr/bin/aulast"/>
         <file src="/usr/bin/aulastlog"/>
         <file src="/usr/bin/ausyscall"/>
@@ -34,5 +33,12 @@
         <file src="/usr/sbin/aureport"/>
         <file src="/usr/sbin/ausearch"/>
         <file src="/usr/sbin/autrace"/>
+
+        <!-- explicit mode overrides -->
+        <dir src="/etc/audit" mode="0750"/>
+        <dir src="/etc/audit/rules.d"/>
+        <dir src="/etc/audisp" mode="0750"/>
+        <dir src="/etc/audisp/plugins.d" mode="0750"/>
+        <dir src="/var/log/audit" mode="0750"/>
     </contents>
 </package>

@@ -12,4 +12,8 @@
         manpage.
         </p>
     </description>
+
+    <contents>
+        <file src="/etc/libaudit.conf"/>
+    </contents>
 </package>
