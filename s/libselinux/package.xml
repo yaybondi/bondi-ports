@@ -2,9 +2,23 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
     <source name="libselinux" architecture-independent="false">
         <description>
-            <summary>SELinux utility programs</summary>
+            <summary>SELinux utility programs and libraries</summary>
             <p>
-            This package provides various utility programs for a Security-enhanced
+            This package provides the shared libraries for Security-enhanced
+            Linux that provides interfaces (e.g. library functions for the
+            SELinux kernel APIs like getcon(), other support functions like
+            getseuserbyname()) to SELinux-aware applications. Security-enhanced
+            Linux is a patch of the Linux kernel and a number of utilities with
+            enhanced security functionality designed to add mandatory access
+            controls to Linux. The Security-enhanced Linux kernel contains new
+            architectural components originally developed to improve the security
+            of the Flask operating system. These architectural components provide
+            general support for the enforcement of many kinds of mandatory access
+            control policies, including those based on the concepts of Type
+            Enforcement, Role-based Access Control, and Multi-level Security.
+            </p>
+            <p>
+            This package also provides various utility programs for a Security-enhanced
             Linux system. Security-enhanced Linux is a patch of the Linux kernel
             and a number of utilities with enhanced security functionality
             designed to add mandatory access controls to Linux. This package
@@ -19,7 +33,7 @@
             <file src="patches.03.tar.gz" subdir="patches"
                 sha256sum="64be9a4a3b5db7425c2382e335495f184ae9bff2c7c18232f9942653ff5a298e"/>
             <file src="patches.bolt.tar.gz" subdir="patches"
-                sha256sum="9442ef1412f789d203357aefc5394f6499aad4ecab5cb5cc78a4bae3dbce915a"/>
+                sha256sum="ff5e0f332701ef59a40874cd5134a5e0afef65c4f9322f73a8c616e6d5f994a8"/>
         </sources>
 
         <patches>
@@ -31,6 +45,7 @@
                 <!-- Bolt OS -->
                 <file src="patches/fix-readv-undeclared.patch"/>
                 <file src="patches/fix-sys-errno-include.patch"/>
+                <file src="patches/makefile-no-ln-sf-relative.patch"/>
             </patchset>
         </patches>
 
@@ -39,9 +54,6 @@
             <package name="libsepol1-dev" version=">= 2.6"/>
             <package name="libpcre3-dev"/>
             <package name="pkg-config"/>
-            <package name="python-all-dev" version=">= 2.6.6-3~"/>
-            <package name="python3-all-dev"/>
-            <package name="swig"/>
         </requires>
 
         <xi:include href="rules.xml"/>
