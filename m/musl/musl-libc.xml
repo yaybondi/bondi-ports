@@ -23,6 +23,10 @@
         </p>
     </description>
 
+    <requires>
+        <package name="base-files"/>
+    </requires>
+
     <contents>
         <file src="/usr/lib/*.so*"/>
     </contents>
