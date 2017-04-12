@@ -10,6 +10,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/lib*.so.*"/>
+        <file src="/usr/lib/libffi.so.*"/>
     </contents>
 </package>
