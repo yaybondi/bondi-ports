@@ -20,10 +20,9 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/*"/>
-        <file src="/usr/include/lzma/*"/>
-        <file src="/usr/lib/lib*.a"/>
-        <file src="/usr/lib/lib*.so"/>
-        <file src="/usr/lib/pkgconfig/*"/>
+        <file src="/usr/include"/>
+        <file src="/usr/lib/liblzma.a"/>
+        <file src="/usr/lib/liblzma.so"/>
+        <file src="/usr/lib/pkgconfig"/>
     </contents>
 </package>

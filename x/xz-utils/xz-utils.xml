@@ -27,9 +27,6 @@
         </ul>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
         <file src="/usr/bin/lzmainfo"/>
         <file src="/usr/bin/unxz"/>

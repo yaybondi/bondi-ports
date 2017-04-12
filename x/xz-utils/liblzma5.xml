@@ -14,9 +14,6 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
         <file src="/usr/lib/liblzma.so.*"/>
     </contents>
