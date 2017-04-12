@@ -1,30 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
-    </defines>
-
     <source name="sqlite3" architecture-independent="false">
         <description>
-            <summary>LALR(1) Parser Generator for C or C++</summary>
+            <summary>SQLite 3 database engine</summary>
             <p>
-            Lemon is an LALR(1) parser generator for C or C++. It does the same
-            job as bison and yacc. But lemon is not another bison or yacc
-            clone. It uses a different grammar syntax which is designed to reduce
-            the number of coding errors. Lemon also uses a more sophisticated
-            parsing engine that is faster than yacc and bison and which is both
-            reentrant and thread-safe. Furthermore, Lemon implements features
-            that can be used to eliminate resource leaks, making is suitable for
-            use in long-running programs such as graphical user interfaces or
-            embedded controllers.
+            SQLite is a C library that implements an SQL database engine. 
+            Programs that link with the SQLite library can have SQL database 
+            access without running a separate RDBMS process.
             </p>
         </description>
 
         <sources>
             <file src="sqlite3-3.16.2.tar.xz" subdir="sources"
                 sha256sum="bf7b1e8ea7577253b7f8a8287d111d542d1792cf1768edc66541ac851ff92453"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="48f38dd89497f5b53d1e3e4776613628cfa683c03640ac7ba48362b549d56695"/>
+            <file src="patches.03.tar.gz" subdir="patches"
+                sha256sum="9ca908843f96d34c3d8c076a0fe65a1e1873485f81a230ac323943826b1ff90b"/>
         </sources>
         
         <patches>
@@ -36,20 +26,18 @@
                 <file src="patches/10-665363-disable-malloc-usable-size.patch"/>
                 <file src="patches/31-increase_SQLITE_MAX_DEFAULT_PAGE_SIZE_to_32k.patch"/>
                 <file src="patches/02-use-packaged-lempar.c.patch"/>
+                <file src="patches/32-fix_an_uninitialized_variable_in_the_command-line_shell.patch"/>
+                <file src="patches/35-fix-sqlite3_blob_reopen.patch"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="dpkg-dev" version=">= 1.16.1~"/>
-            <package name="debhelper" version=">= 9"/>
             <package name="autoconf" version=">= 2.59"/>
             <package name="libtool" version=">= 1.5.2"/>
             <package name="automake"/>
             <package name="autotools-dev"/>
             <package name="chrpath"/>
             <package name="libreadline-dev"/>
-            <package name="tcl8.6-dev"/>
-            <package name="dh-autoreconf"/>
         </requires>
 
         <xi:include href="rules.xml"/>
@@ -59,7 +47,6 @@
     <xi:include href="sqlite3.xml"/>
     <xi:include href="libsqlite3-0.xml"/>
     <xi:include href="libsqlite3-dev.xml"/>
-    <xi:include href="libsqlite3-tcl.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>

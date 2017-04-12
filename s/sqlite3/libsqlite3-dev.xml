@@ -14,14 +14,12 @@
 
     <requires>
         <package name="libsqlite3-0" version="=="/>
-        <package name="libc6-dev"/>
     </requires>
 
     <contents>
-        <file src="/usr/include/*.h"/>
+        <file src="/usr/include"/>
         <file src="/usr/lib/libsqlite3.a"/>
-        <file src="/usr/lib/libsqlite3.la"/>
         <file src="/usr/lib/libsqlite3.so"/>
-        <file src="/usr/lib/pkgconfig/sqlite3.pc"/>
+        <file src="/usr/lib/pkgconfig"/>
     </contents>
 </package>

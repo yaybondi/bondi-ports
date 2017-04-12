@@ -17,6 +17,6 @@
 
     <contents>
         <file src="/usr/bin/lemon"/>
-        <file src="/usr/share/lemon/lempar.c"/>
+        <file src="/usr/share/lemon"/>
     </contents>
 </package>

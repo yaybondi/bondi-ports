@@ -3,10 +3,32 @@
     <prepare>
     <![CDATA[
 
+export CFLAGS="-O2 -fno-strict-aliasing \
+    -DSQLITE_SECURE_DELETE -DSQLITE_ENABLE_COLUMN_METADATA \
+    -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS \
+    -DSQLITE_ENABLE_RTREE=1 -DSQLITE_SOUNDEX=1 \
+    -DSQLITE_ENABLE_UNLOCK_NOTIFY \
+    -DSQLITE_OMIT_LOOKASIDE=1 -DSQLITE_ENABLE_DBSTAT_VTAB \
+    -DSQLITE_ENABLE_UPDATE_DELETE_LIMIT=1 \
+    -DSQLITE_ENABLE_LOAD_EXTENSION \
+    -DSQLITE_ENABLE_JSON1 \
+    -DSQLITE_LIKE_DOESNT_MATCH_BLOBS \
+    -DSQLITE_THREADSAFE=1 \
+    -DSQLITE_ENABLE_FTS3_TOKENIZER=1 \
+    -DSQLITE_MAX_SCHEMA_RETRY=25 \
+    -DSQLITE_ENABLE_PREUPDATE_HOOK \
+    -DSQLITE_ENABLE_SESSION \
+    -DSQLITE_MAX_VARIABLE_NUMBER=250000"
+
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
     --prefix=/usr \
-    --disable-nls
+    --enable-threadsafe \
+    --enable-load-extension \
+    --enable-json1 \
+    --enable-fts4 \
+    --enable-fts5 \
+    --disable-tcl
 
     ]]>
     </prepare>
@@ -17,6 +39,9 @@ $BOLT_SOURCE_DIR/configure \
 cd "$BOLT_BUILD_DIR"
 make -j"$BOLT_PARALLEL_JOBS"
 
+make sqldiff
+make lemon
+
     ]]>
     </build>
 
@@ -25,6 +50,11 @@ make -j"$BOLT_PARALLEL_JOBS"
 
 cd "$BOLT_BUILD_DIR"
 make DESTDIR="$BOLT_INSTALL_DIR" install
+
+install -d "$BOLT_INSTALL_DIR/usr/share/lemon"
+install -m 0664 tool/lempar.c "$BOLT_INSTALL_DIR/usr/share/lemon/"
+install -m 0775 sqldiff "$BOLT_INSTALL_DIR/usr/bin"
+install -m 0775 lemon "$BOLT_INSTALL_DIR/usr/bin"
 
     ]]>
     </install>
