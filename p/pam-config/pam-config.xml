@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="pam-config" section="admin">
+    <description>
+        <summary>Utility for generating the common PAM configuration</summary>
+        <p>
+            pam-config is a command line utility to maintain the common PAM
+            configuration files included by most PAM application configuration
+            files. It can be used to configure a system for different network or
+            hardware based authentication schemes. pam-config can also
+            add/adjust/remove other PAM modules and their options.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libpam-runtime"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/sbin/"/>
+    </contents>
+</package>

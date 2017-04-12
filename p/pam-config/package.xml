@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="pam-config" architecture-independent="false">
+        <description>
+            <summary>Utility for generating the common PAM configuration</summary>
+            <p>
+                pam-config is a command line utility to maintain the common PAM
+                configuration files included by most PAM application configuration
+                files. It can be used to configure a system for different network or
+                hardware based authentication schemes. pam-config can also
+                add/adjust/remove other PAM modules and their options.
+            </p>
+        </description>
+
+        <sources>
+            <file src="pam-config-0.91.tar.gz" subdir="sources"
+                sha256sum="dead3f6850cf3f6587f3c648b6b381bf84653459b11bd901d6280d52dbd37d20"/>
+            <file src="patches.bolt.tar.gz" subdir="patches"
+                sha256sum="da8fec8e9d4aaf93df533ff41eed79be4d1f5cc42974e659b56d7045ffc964ad"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <!-- Bolt -->
+                <file src="patches/no-force-cracklib-on-create.patch"/>
+            </patchset>
+        </patches>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="pam-config.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
