@@ -14,6 +14,9 @@
     </requires>
 
     <contents>
+        <dir src="/etc/pam.d"/>
         <dir src="/var/lib/pam"/>
+        <file src="/etc/pam.conf"/>
+        <file src="/etc/pam.d/other"/>
     </contents>
 </package>

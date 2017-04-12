@@ -9,11 +9,6 @@
     </description>
 
     <contents>
-        <file src="/usr/sbin/mkhomedir_helper"/>
-        <file src="/usr/sbin/pam_tally"/>
-        <file src="/usr/sbin/pam_tally2"/>
-        <file src="/usr/sbin/pam_timestamp_check"/>
-        <file src="/usr/sbin/unix_chkpwd"/>
-        <file src="/usr/sbin/unix_update"/>
+        <file src="/usr/sbin/"/>
     </contents>
 </package>

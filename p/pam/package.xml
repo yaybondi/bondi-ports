@@ -20,12 +20,14 @@
         <sources>
             <file src="pam-1.1.8.tar.gz" subdir="sources"
                 sha256sum="4183409a450708a976eca5af561dbf4f0490141a08e86e4a1e649c7c1b094876"/>
+            <file src="pam-etc.tar.gz" subdir="extra"
+                sha256sum="9962c128162a72ea4432f2ec7927bfbe34414041283927ebb62204f2b7e66293"/>
             <file src="patches.3.5.tar.gz" subdir="patches"
                 sha256sum="1f5192fc1a8c8f9c3af46878081033d54902e9637c3da61108d3a40a198abe15"/>
             <file src="patches.bolt.tar.gz" subdir="patches"
                 sha256sum="d60d4bfa7718a49b49086b817966a43d8ace0313c0790cf18ce6e721681a2fa8"/>
         </sources>
-
+        
         <patches>
             <patchset subdir="sources">
                 <!-- Debian -->
@@ -73,7 +75,7 @@
             <package name="libdb-dev"/>
             <package name="libselinux1-dev"/>
             <package name="libaudit-dev"/>
-            <package name="pkg-config"/>
+            <package name="libfl-dev"/>
         </requires>
 
         <xi:include href="rules.xml"/>

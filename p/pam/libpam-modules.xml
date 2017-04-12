@@ -14,7 +14,9 @@
     </requires>
 
     <contents>
+        <dir src="/etc/security"/>
         <file src="/etc/security/*"/>
         <file src="/usr/lib/security/*.so"/>
+        <file src="/usr/lib/security/pam_filter/"/>
     </contents>
 </package>

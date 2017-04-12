@@ -16,11 +16,11 @@
 
     <requires>
         <package name="libpam0g" version="=="/>
-        <package name="libc6-dev"/>
     </requires>
 
     <contents>
         <file src="/usr/include/security/*"/>
         <file src="/usr/lib/*.a"/>
+        <file src="/usr/lib/*.so"/>
     </contents>
 </package>
