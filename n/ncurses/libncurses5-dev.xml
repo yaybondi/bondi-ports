@@ -16,13 +16,13 @@
         <package name="libtinfo5" version="=="/>
         <package name="libncurses5" version="=="/>
         <package name="libtinfo-dev" version="=="/>
-        <package name="libc6-dev"/>
     </requires>
 
     <contents>
         <file src="/usr/bin/ncurses5-config"/>
         <file src="/usr/include/*.h"/>
         <file src="/usr/lib/libcurses.a"/>
+        <file src="/usr/lib/libcurses.so"/>
         <file src="/usr/lib/libform.a"/>
         <file src="/usr/lib/libform.so"/>
         <file src="/usr/lib/libmenu.a"/>

@@ -14,7 +14,6 @@
     </description>
 
     <contents>
-        <dir src="/usr/share/terminfo"/>
         <file src="/etc/terminfo"/>
         <file src="/usr/lib/terminfo"/>
         <file src="/usr/share/tabset"/>

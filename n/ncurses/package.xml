@@ -6,7 +6,7 @@
 
     <source name="ncurses" architecture-independent="false">
         <description>
-            <summary>libraries for terminal handling</summary>
+            <summary>system libraries for terminal handling</summary>
             <p>
             The ncurses library routines are a terminal-independent method of
             updating character screens with reasonable optimization.
@@ -30,7 +30,7 @@
 
         <requires>
             <package name="pkg-config"/>
-            <package name="autotools-dev"/>
+            <package name="autotools"/>
         </requires>
 
         <xi:include href="rules.xml"/>
