@@ -11,6 +11,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/*.so.*"/>
+        <file src="/usr/lib/libexpat.so.*"/>
     </contents>
 </package>

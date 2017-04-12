@@ -15,15 +15,13 @@
 
     <requires>
         <package name="libexpat1" version="=="/>
-        <package name="libc6-dev"/>
     </requires>
 
     <contents>
-        <file src="/usr/share/conftools/expat.m4"/>
         <file src="/usr/include"/>
-        <file src="/usr/lib/*.a"/>
-        <file src="/usr/lib/*.la"/>
-        <file src="/usr/lib/*.so"/>
-        <file src="/usr/lib/pkgconfig/expat.pc"/>
+        <file src="/usr/lib/libexpat.a"/>
+        <file src="/usr/lib/libexpat.so"/>
+        <file src="/usr/lib/pkgconfig"/>
+        <file src="/usr/share/aclocal"/>
     </contents>
 </package>

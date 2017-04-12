@@ -35,11 +35,6 @@
             </patchset>
         </patches>
 
-        <requires>
-            <package name="docbook-to-man"/>
-            <package name="autoconf"/>
-        </requires>
-
         <xi:include href="rules.xml"/>
     </source>
 
