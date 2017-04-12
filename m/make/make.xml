@@ -16,6 +16,7 @@
     </description>
 
     <contents>
-        <file src="/debian/make-first-existing-target"/>
+        <file src="/usr/bin/make"/>
+        <file src="/usr/include/gnumake.h"/>
     </contents>
 </package>

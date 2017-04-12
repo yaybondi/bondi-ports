@@ -23,23 +23,22 @@
         <sources>
             <file src="make-dfsg-4.1.tar.gz" subdir="sources"
                 sha256sum="b3ed04fb6718289e4a430afbe2df6ecba9177aad9f6d09aaf38e5409262ca8a3"/>
-            <file src="patches.09.tar.gz" subdir="patches"
-                sha256sum="3ef76360f63f59b080debf7fa18ac019002610103060c1e929eff7dd2ac0a5ff"/>
+            <file src="patches.9.1.tar.gz" subdir="patches"
+                sha256sum="228c0a6719791dd7fe0e8106947714ca506df17a353040731dc4eaf605d24431"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/make-dfsg_4.1-9.diff"/>
+                <file src="patches/make-dfsg_4.1-9.1.diff"/>
             </patchset>
         </patches>
 
         <requires>
+            <package name="gettext"/>
             <package name="autoconf"/>
             <package name="automake"/>
-            <package name="autopoint"/>
             <package name="file"/>
             <package name="pkg-config"/>
-            <package name="procps"/>
         </requires>
 
         <xi:include href="rules.xml"/>
