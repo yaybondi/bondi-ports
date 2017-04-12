@@ -14,5 +14,6 @@
     </description>
 
     <contents>
+        <file src="/usr/share/readline"/>
     </contents>
 </package>

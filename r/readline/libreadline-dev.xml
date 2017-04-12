@@ -22,5 +22,10 @@
     </requires>
 
     <contents>
+        <file src="/usr/include/readline"/>
+        <file src="/usr/lib/libhistory.a"/>
+        <file src="/usr/lib/libhistory.so"/>
+        <file src="/usr/lib/libreadline.a"/>
+        <file src="/usr/lib/libreadline.so"/>
     </contents>
 </package>

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
-    <release version="7.0" revision="1"
-        upstream-version="7.0-1"
+    <release version="7.0" revision="2bolt1" upstream-version="7.0-2"
         maintainer="Tobias Koch" email="tobias.koch@nonterra.com"
-        date="2017-01-04 11:57:07+03:00">
+        date="2017-04-12 20:13:36+03:00">
         <changeset>
-            <li>Initial adaptation of Debian sources for Bolt OS</li>
+            <li>Adaptation of Debian sources for Bolt OS</li>
         </changeset>
     </release>
 </changelog>

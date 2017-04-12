@@ -18,5 +18,7 @@
     </requires>
 
     <contents>
+        <file src="/usr/lib/libhistory.so.*"/>
+        <file src="/usr/lib/libreadline.so.*"/>
     </contents>
 </package>
