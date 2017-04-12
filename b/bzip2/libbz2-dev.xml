@@ -26,7 +26,6 @@
 
     <requires>
         <package name="libbz2-1.0" version="=="/>
-        <package name="libc6-dev"/>
     </requires>
 
     <contents>
