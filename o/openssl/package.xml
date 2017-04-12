@@ -1,34 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
-    </defines>
-
     <source name="openssl" architecture-independent="false">
         <description>
-            <summary>Secure Sockets Layer toolkit - cryptographic utility</summary>
+            <summary>Secure Sockets Layer toolkit and utilities</summary>
             <p>
             This package is part of the OpenSSL project's implementation of the SSL
             and TLS cryptographic protocols for secure communication over the
             Internet.
             </p>
-            <p>
-            It contains the general-purpose command line binary /usr/bin/openssl,
-            useful for cryptographic operations such as:
-            * creating RSA, DH, and DSA key parameters;
-            * creating X.509 certificates, CSRs, and CRLs;
-            * calculating message digests;
-            * encrypting and decrypting with ciphers;
-            * testing SSL/TLS clients and servers;
-            * handling S/MIME signed or encrypted mail.
-            </p>
         </description>
 
         <sources>
-            <file src="openssl-1.1.0c.tar.gz" subdir="sources"
-                sha256sum="fc436441a2e05752d31b4e46115eb89709a28aef96d4fe786abe92409b2fd6f5"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="5c6f1b7a8b22451be48f076d2270622f10dd9c01d099b68438120ed699f1f863"/>
+            <file src="openssl-1.1.0e.tar.gz" subdir="sources"
+                sha256sum="57be8618979d80c910728cfc99369bf97b2a1abd8f366ab6ebdee8975ad3874c"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="a6c94d1730f585c92aa3c103dc9c26ba06ee6b6b5011ba8a2b6cbd5a4eed2864"/>
         </sources>
         
         <patches>
@@ -38,8 +24,6 @@
                 <file src="patches/no-symbolic.patch"/>
                 <file src="patches/pic.patch"/>
                 <file src="patches/c_rehash-compat.patch"/>
-                <file src="patches/revert_ssl_read.patch"/>
-                <file src="patches/0001-Add-missing-zdelete-for-some-linux-arches.patch"/>
             </patchset>
         </patches>
 

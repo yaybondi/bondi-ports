@@ -18,8 +18,7 @@
     </requires>
 
     <contents>
-        <dir src="/usr/lib"/>
-        <file src="/usr/include"/>
+        <file src="/usr/include/openssl/*"/>
         <file src="/usr/lib/libcrypto.a"/>
         <file src="/usr/lib/libcrypto.so"/>
         <file src="/usr/lib/libssl.a"/>

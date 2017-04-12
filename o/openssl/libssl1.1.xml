@@ -14,7 +14,6 @@
 
     <contents>
         <file src="/usr/lib/*.so.*.*"/>
-        <file src="/usr/lib/*/*.so.*.*"/>
-        <file src="/usr/lib/engines-*"/>
+        <file src="/usr/lib/engines-*/*.so"/>
     </contents>
 </package>

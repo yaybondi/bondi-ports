@@ -20,12 +20,11 @@
     </description>
 
     <contents>
-        <dir src="/etc/ssl/certs"/>
-        <dir src="/etc/ssl/private"/>
+        <dir src="/etc/ssl/private" mode="0710" group="ssl-cert"/>
         <file src="/etc/ssl"/>
-        <file src="/usr/bin"/>
+        <file src="/usr/bin/*"/>
         <file src="/usr/lib/ssl/certs"/>
-        <file src="/usr/lib/ssl/misc"/>
+        <file src="/usr/lib/ssl/misc/*"/>
         <file src="/usr/lib/ssl/openssl.cnf"/>
         <file src="/usr/lib/ssl/private"/>
     </contents>
