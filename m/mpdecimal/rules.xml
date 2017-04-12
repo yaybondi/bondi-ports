@@ -5,8 +5,7 @@
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+    --prefix=/usr
 
     ]]>
     </prepare>

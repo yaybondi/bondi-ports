@@ -9,6 +9,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/lib*.so.*"/>
+        <file src="/usr/lib/libmpdec.so.*"/>
     </contents>
 </package>
