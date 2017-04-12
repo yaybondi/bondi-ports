@@ -16,7 +16,8 @@
 
     <contents>
         <file src="/usr/include/db_cxx.h"/>
-        <file src="/usr/lib/libdb_cxx-*.a"/>
-        <file src="/usr/lib/libdb_cxx.*"/>
+        <file src="/usr/lib/libdb_cxx-5.3.a"/>
+        <file src="/usr/lib/libdb_cxx.a"/>
+        <file src="/usr/lib/libdb_cxx.so"/>
     </contents>
 </package>

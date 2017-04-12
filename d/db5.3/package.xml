@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
-    </defines>
-
     <source name="db5.3" architecture-independent="false">
         <description>
-            <summary>Berkeley v5.3 Database Documentation [html]</summary>
+            <summary>Berkeley v5.3 Database and tools</summary>
             <p>
-            This package contains documentation in HTML format for all of
-            the APIs (C, C++, C#, STL, Java, Tcl) and utilities provided
-            by version 5.3 of Berkeley DB.
+                The Berkeley v5.3 Database library and tools.
             </p>
         </description>
 
@@ -35,13 +29,7 @@
         </patches>
 
         <requires>
-            <package name="autotools-dev" version=">= 20100122.1"/>
-            <package name="autoconf"/>
-            <package name="tcl-dev"/>
-            <package name="procps"/>
-            <package name="javahelper"/>
-            <package name="default-jdk"/>
-            <package name="gcj-native-helper"/>
+            <package name="autotools-dev"/>
         </requires>
 
         <xi:include href="rules.xml"/>
@@ -53,11 +41,6 @@
     <xi:include href="db5.3-sql-util.xml"/>
     <xi:include href="libdb5.3++.xml"/>
     <xi:include href="libdb5.3++-dev.xml"/>
-    <xi:include href="libdb5.3-tcl.xml"/>
-    <xi:include href="libdb5.3-java-jni.xml"/>
-    <xi:include href="libdb5.3-java.xml"/>
-    <xi:include href="libdb5.3-java-gcj.xml"/>
-    <xi:include href="libdb5.3-java-dev.xml"/>
     <xi:include href="libdb5.3-sql-dev.xml"/>
     <xi:include href="libdb5.3-sql.xml"/>
     <xi:include href="libdb5.3-stl-dev.xml"/>

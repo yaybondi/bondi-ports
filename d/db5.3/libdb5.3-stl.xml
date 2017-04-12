@@ -9,6 +9,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libdb_stl-*.so"/>
+        <file src="/usr/lib/libdb_stl-5.3.so"/>
     </contents>
 </package>
