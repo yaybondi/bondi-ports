@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="chrpath" architecture-independent="false">
+        <description>
+            <summary>Tool to edit the rpath in ELF binaries</summary>
+            <p>
+            chrpath allows you to change the rpath (where the application looks 
+            for libraries) in an application. It does not (yet) allow you to 
+            add an rpath if there isn't one already.
+            </p>
+        </description>
+
+        <sources>
+            <file src="chrpath-0.16.tar.gz" subdir="sources"
+                sha256sum="bb0d4c54bac2990e1bdf8132f2c9477ae752859d523e141e72b3b11a12c26e7b"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="c536fef77987e87bced924ca5b27bff46d976dcafb2197dd68c9ab88bcc34a49"/>
+        </sources>
+
+        <requires>
+            <package name="autotools-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="chrpath.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

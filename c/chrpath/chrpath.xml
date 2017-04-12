@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="chrpath" section="utils">
+    <description>
+        <summary>Tool to edit the rpath in ELF binaries</summary>
+        <p>
+        chrpath allows you to change the rpath (where the application looks 
+        for libraries) in an application. It does not (yet) allow you to 
+        add an rpath if there isn't one already.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/bin"/>
+    </contents>
+</package>
