@@ -46,27 +46,15 @@
         </description>
 
         <sources>
-            <file src="libarchive-3.2.1.tar.gz" subdir="sources"
-                sha256sum="72ee1a4e3fd534525f13a0ba1aa7b05b203d186e0c6072a8a4738649d0b3cfd2"/>
-            <file src="patches.05.tar.gz" subdir="patches"
-                sha256sum="dce7ee595818180bcf3243366d57285a1e25a921b6d469d92872ae8f3012948b"/>
+            <file src="libarchive-3.2.2.tar.gz" subdir="sources"
+                sha256sum="691c194ee132d1f0f7a42541f091db811bc2e56f7107e9121be2bc8c04f1060f"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="1f0a19ec50bfc64a2d468fa4b362d6aedda3904bc0fcdb577e54a5a4c0db422f"/>
         </sources>
         
         <patches>
             <patchset subdir="sources">
-                <file src="patches/Ignore-the-MT-encoder-in-XZ-5.2-prerelease-versions.patch"/>
-                <file src="patches/Do-not-use-SIGRTMAX.patch"/>
-                <file src="patches/Typos.patch"/>
-                <file src="patches/Candidate.patch"/>
-                <file src="patches/CPPCheck.patch"/>
-                <file src="patches/Issue-744-part-of-Issue-743-Enforce-sandbox-with-very-lon.patch"/>
-                <file src="patches/Fixes-for-Issue-745-and-Issue-746-from-Doran-Moppert.patch"/>
-                <file src="patches/Test-cases-for-Github-Issue-744-745-and-746.patch"/>
-                <file src="patches/Fix-the-test-cases-for-Issue-745-and-Issue-746.patch"/>
-                <file src="patches/Correct-the-usage-of-PATH_MAX-as-reported-in-Issue-744.patch"/>
-                <file src="patches/Issue-761-Heap-overflow-reading-corrupted-7Zip-files.patch"/>
-                <file src="patches/Issue-747-and-others-Avoid-OOB-read-when-parsing-multiple.patch"/>
-                <file src="patches/Issue-767-Buffer-overflow-printing-a-filename.patch"/>
+                <file src="patches/Fail-with-negative-lha-compsize-in-lha_read_file_header_1.patch"/>
             </patchset>
         </patches>
 
@@ -83,6 +71,7 @@
             <package name="sharutils"/>
             <package name="nettle-dev"/>
             <package name="liblzo2-dev"/>
+            <package name="locales"/>
         </requires>
 
         <xi:include href="rules.xml"/>

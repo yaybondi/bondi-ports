@@ -16,7 +16,4 @@
     <requires>
         <package name="libarchive-tools" version=">=="/>
     </requires>
-
-    <contents>
-    </contents>
 </package>

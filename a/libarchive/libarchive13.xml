@@ -15,6 +15,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/lib*.so.*"/>
+        <file src="/usr/lib/libarchive.so.*"/>
     </contents>
 </package>

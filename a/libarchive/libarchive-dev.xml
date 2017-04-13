@@ -20,8 +20,8 @@
 
     <contents>
         <file src="/usr/include"/>
-        <file src="/usr/lib/lib*.a"/>
-        <file src="/usr/lib/lib*.so"/>
-        <file src="/usr/lib/pkgconfig/*"/>
+        <file src="/usr/lib/libarchive.a"/>
+        <file src="/usr/lib/libarchive.so"/>
+        <file src="/usr/lib/pkgconfig"/>
     </contents>
 </package>

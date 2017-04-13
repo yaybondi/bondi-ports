@@ -29,8 +29,6 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/bsdcat"/>
-        <file src="/usr/bin/bsdcpio"/>
-        <file src="/usr/bin/bsdtar"/>
+        <file src="/usr/bin"/>
     </contents>
 </package>
