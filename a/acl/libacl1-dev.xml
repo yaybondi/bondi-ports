@@ -10,11 +10,13 @@
     </description>
 
     <requires>
-        <package name="libc6-dev"/>
         <package name="libacl1" version="=="/>
-        <package name="libattr1-dev"/>
+        <package name="libattr1-dev" version=">= 1:2.4.46-8"/>
     </requires>
 
     <contents>
+        <file src="/usr/include"/>
+        <file src="/usr/lib/libacl.a"/>
+        <file src="/usr/lib/libacl.so"/>
     </contents>
 </package>

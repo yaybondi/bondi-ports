@@ -9,9 +9,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
+        <file src="/usr/lib/libacl.so.*"/>
     </contents>
 </package>

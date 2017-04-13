@@ -3,10 +3,20 @@
     <prepare>
     <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
+autoreconf -vfi
+
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+    --prefix="$BOLT_INSTALL_DIR/usr" \
+    --enable-gettext=no
+
+# why does this package insist on using gettext?
+echo "
+#define _(x) x
+#define bindtextdomain(x, y)
+#define textdomain(x)
+" >> include/config.h
 
     ]]>
     </prepare>
@@ -24,7 +34,15 @@ make -j"$BOLT_PARALLEL_JOBS"
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+make install
+make install-dev
+make install-lib
+
+rm -f "$BOLT_INSTALL_DIR/usr/lib/libacl.a"
+rm -f "$BOLT_INSTALL_DIR/usr/lib/libacl.la"
+
+mv "$BOLT_INSTALL_DIR/usr/libexec/libacl.a" \
+    "$BOLT_INSTALL_DIR/usr/lib/libacl.a"
 
     ]]>
     </install>
