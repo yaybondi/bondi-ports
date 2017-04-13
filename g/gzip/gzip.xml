@@ -10,8 +10,10 @@
         </p>
     </description>
 
+    <requires>
+    </requires>
+
     <contents>
-        <dir src="/usr/bin"/>
-        <dir src="/usr/share/info"/>
+        <file src="/usr/bin"/>
     </contents>
 </package>

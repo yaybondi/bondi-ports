@@ -3,10 +3,12 @@
     <prepare>
     <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
+autoreconf -vfi
+
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+    --prefix=/usr
 
     ]]>
     </prepare>
@@ -25,6 +27,9 @@ make -j"$BOLT_PARALLEL_JOBS"
 
 cd "$BOLT_BUILD_DIR"
 make DESTDIR="$BOLT_INSTALL_DIR" install
+
+rm -f "$BOLT_INSTALL_DIR/usr/bin/uncompress"
+ln -sf gunzip "$BOLT_INSTALL_DIR/usr/bin/uncompress"
 
     ]]>
     </install>

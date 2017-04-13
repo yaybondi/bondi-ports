@@ -23,7 +23,7 @@
             <file src="patches.bolt.tar.gz" subdir="patches"
                 sha256sum="c367da0c1b7ba6beb14839f8e91fdb151daff0465eb898461e03374292aa030d"/>
         </sources>
-
+        
         <patches>
             <patchset subdir="sources">
                 <!-- Debian -->
