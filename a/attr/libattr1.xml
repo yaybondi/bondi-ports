@@ -8,9 +8,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
+        <file src="/usr/lib/libattr.so.*"/>
     </contents>
 </package>

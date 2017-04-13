@@ -16,10 +16,12 @@
     </description>
 
     <requires>
-        <package name="libc6-dev"/>
         <package name="libattr1" version="=="/>
     </requires>
 
     <contents>
+        <file src="/usr/include/attr"/>
+        <file src="/usr/lib/libattr.a"/>
+        <file src="/usr/lib/libattr.so"/>
     </contents>
 </package>

@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
-    </defines>
-
     <source name="attr" architecture-independent="false">
         <description>
             <summary>Utilities for manipulating filesystem extended attributes</summary>
@@ -12,6 +8,17 @@
             objects, in particular getfattr(1) and setfattr(1).
             An attr(1) command is also provided which is largely compatible
             with the SGI IRIX tool of the same name.
+            </p>
+            <p>
+            attr-dev contains the libraries and header files needed to develop
+            programs which make use of extended attributes. For Linux programs,
+            the documented system call API is the recommended interface, but an
+            SGI IRIX compatibility interface is also provided.
+            </p>
+            <p>
+            Currently only ext2, ext3, JFS and XFS support extended attributes.
+            The SGI IRIX compatibility API built above the Linux system calls is
+            used by programs such as xfsdump(8), xfsrestore(8) and xfs_fsr(8).
             </p>
         </description>
 

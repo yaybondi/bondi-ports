@@ -15,5 +15,6 @@
     </requires>
 
     <contents>
+        <file src="/usr/bin"/>
     </contents>
 </package>
