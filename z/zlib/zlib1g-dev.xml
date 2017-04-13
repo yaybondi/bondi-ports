@@ -11,15 +11,12 @@
 
     <requires>
         <package name="zlib1g" version="=="/>
-        <package name="libc6-dev"/>
     </requires>
 
     <contents>
-        <dir src="/usr/include"/>
-        <dir src="/usr/lib"/>
-        <file src="/usr/include/*"/>
+        <file src="/usr/include"/>
         <file src="/usr/lib/libz.a"/>
         <file src="/usr/lib/libz.so"/>
-        <file src="/usr/lib/pkgconfig/zlib.pc"/>
+        <file src="/usr/lib/pkgconfig"/>
     </contents>
 </package>

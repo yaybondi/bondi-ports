@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
-    </defines>
-
     <source name="zlib" architecture-independent="false">
         <description>
             <summary>compression library - runtime</summary>
@@ -32,10 +28,6 @@
                 <file src="patches/CVE-2016-9843"/>
             </patchset>
         </patches>
-
-        <requires>
-            <package name="binutils" version=">= 2.18.1~cvs20080103-2"/>
-        </requires>
 
         <xi:include href="rules.xml"/>
     </source>
