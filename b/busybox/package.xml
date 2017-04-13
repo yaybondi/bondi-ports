@@ -21,14 +21,14 @@
         <sources>
             <file src="busybox-1.22.0.tar.bz2" subdir="sources"
                 sha256sum="92f00cd391b7d5fa2215c8450abe2ba15f9d16c226e8855fb21b6c9a5b723a53"/>
-            <file src="bolt-extra.tar.gz" subdir="sources"
-                sha256sum="c4c1ca43f2cb79a9198e7d7f96f7f7112b244b66d263a6ef30b4a7bbacc5f94b"/>
             <file src="patches.19.tar.gz" subdir="patches"
                 sha256sum="f0cd9e113f3281b9586d02eea1f42a822dd5f26a89acb0b58d84b898cbc1cdd4"/>
             <file src="patches.bolt.tar.gz" subdir="patches"
-                sha256sum="04986123d962a883ee3b2a5d5e489e669f83b92625b60abab4b54198efbe6967"/>
+                sha256sum="af8cb9d8d002a22bd485a2b596e8d34be4b84907a59f517def21dc9b6f24110d"/>
+            <file src="extra.01.tar.gz" subdir="extra"
+                sha256sum="c4d89970fe93c3ff44fb8e1297e289bffdb498c5234cd4191b7f08c96c26a1af"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <!-- Debian -->
@@ -53,15 +53,13 @@
                 <file src="patches/update-deb-format-support.patch"/>
                 <file src="patches/CVE-2014-9645.patch"/>
                 <!-- Bolt OS -->
-                <file src="patches/defconfig.patch"/>
                 <file src="patches/ifplugd-no-ethernet-h.patch"/>
                 <file src="patches/no-getpwent-r.patch"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="zip"/>
-            <package name="libc-dev"/>
+            <package name="musl-libc-dev"/>
         </requires>
 
         <xi:include href="rules.xml"/>
