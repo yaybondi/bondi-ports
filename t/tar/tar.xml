@@ -11,10 +11,9 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <dir src="/etc"/>
+        <file src="/usr/bin"/>
+        <dir src="/usr/lib/tar"/>
+        <file src="/usr/sbin/rmt-tar"/>
     </contents>
 </package>
