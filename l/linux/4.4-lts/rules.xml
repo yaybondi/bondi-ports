@@ -23,7 +23,14 @@ make headers_check
     <![CDATA[
 
 cd $BOLT_SOURCE_DIR
-make INSTALL_HDR_PATH="$BOLT_INSTALL_DIR/usr" headers_install
+
+if [ "$BOLT_INSTALL_PREFIX" = "/tools" ]; then
+    make INSTALL_HDR_PATH="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
+        ARCH="x86" headers_install
+else
+    make INSTALL_HDR_PATH="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
+        headers_install
+fi
 
     ]]>
     </install>
