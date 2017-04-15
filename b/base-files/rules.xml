@@ -20,7 +20,21 @@
     <![CDATA[
 
 cd $BOLT_SOURCE_DIR
-make DESTDIR="$BOLT_INSTALL_DIR" install
+
+if [ "$BOLT_INSTALL_PREFIX" != "/tools" ]; then
+    make DESTDIR="$BOLT_INSTALL_DIR" install
+else
+    install -d -m 0755 "$BOLT_INSTALL_DIR/tools"
+    install -d -m 0755 "$BOLT_INSTALL_DIR/tools/bin"
+    install -d -m 0755 "$BOLT_INSTALL_DIR/tools/include"
+    install -d -m 0755 "$BOLT_INSTALL_DIR/tools/lib"
+    install -d -m 0755 "$BOLT_INSTALL_DIR/tools/libexec"
+    install -d -m 0755 "$BOLT_INSTALL_DIR/tools/sbin"
+
+    for entry in etc var run tmp; do
+        ln -sf "../$entry" "$BOLT_INSTALL_DIR/tools/$entry"
+    done
+fi
 
     ]]>
     </install>
