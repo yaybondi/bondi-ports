@@ -22,7 +22,7 @@
     </requires>
 
     <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/libfl*.{so,a}*"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libfl*.{so,a}*"/>
     </contents>
 </package>

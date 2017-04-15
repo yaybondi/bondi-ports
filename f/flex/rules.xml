@@ -8,8 +8,10 @@ autoreconf -vfi
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --disable-nls \
+    --build="$BOLT_BUILD_TYPE" \
+    --host="$BOLT_HOST_TYPE"
 
     ]]>
     </prepare>
