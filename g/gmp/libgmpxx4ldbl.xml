@@ -10,6 +10,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libgmpxx.so.*"/>
+        <file src="${prefix}/lib/libgmpxx.so.*"/>
     </contents>
 </package>

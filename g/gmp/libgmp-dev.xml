@@ -23,10 +23,10 @@
     </requires>
 
     <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/libgmp.a"/>
-        <file src="/usr/lib/libgmp.so"/>
-        <file src="/usr/lib/libgmpxx.a"/>
-        <file src="/usr/lib/libgmpxx.so"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libgmp.a"/>
+        <file src="${prefix}/lib/libgmp.so"/>
+        <file src="${prefix}/lib/libgmpxx.a"/>
+        <file src="${prefix}/lib/libgmpxx.so"/>
     </contents>
 </package>

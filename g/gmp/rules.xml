@@ -5,8 +5,10 @@
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --enable-cxx
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --enable-cxx \
+    --build="$BOLT_BUILD_TYPE" \
+    --host="$BOLT_HOST_TYPE"
 
     ]]>
     </prepare>
