@@ -23,9 +23,9 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/selinux/*.h"/>
-        <file src="/usr/lib/*.a"/>
-        <file src="/usr/lib/*.so"/>
-        <file src="/usr/lib/pkgconfig/*.pc"/>
+        <file src="${prefix}/include/selinux/*.h"/>
+        <file src="${prefix}/lib/*.a"/>
+        <file src="${prefix}/lib/*.so"/>
+        <file src="${prefix}/lib/pkgconfig/*.pc"/>
     </contents>
 </package>
