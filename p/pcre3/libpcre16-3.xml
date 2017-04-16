@@ -12,6 +12,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libpcre16.so.*"/>
+        <file src="${prefix}/lib/libpcre16.so.*"/>
     </contents>
 </package>

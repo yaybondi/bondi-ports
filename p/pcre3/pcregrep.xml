@@ -14,6 +14,6 @@
     </description>
 
     <contents>
-        <file src="/usr/bin/pcregrep"/>
+        <file src="${prefix}/bin/pcregrep"/>
     </contents>
 </package>

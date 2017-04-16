@@ -12,6 +12,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libpcrecpp.so.*"/>
+        <file src="${prefix}/lib/libpcrecpp.so.*"/>
     </contents>
 </package>

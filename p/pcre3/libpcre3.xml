@@ -16,7 +16,7 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libpcre.so.*"/>
-        <file src="/usr/lib/libpcreposix.so.*"/>
+        <file src="${prefix}/lib/libpcre.so.*"/>
+        <file src="${prefix}/lib/libpcreposix.so.*"/>
     </contents>
 </package>
