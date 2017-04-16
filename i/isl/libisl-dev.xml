@@ -20,9 +20,9 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/"/>
-        <file src="/usr/lib/lib*.a"/>
-        <file src="/usr/lib/lib*.so"/>
-        <file src="/usr/lib/pkgconfig/*"/>
+        <file src="${prefix}/include/"/>
+        <file src="${prefix}/lib/lib*.a"/>
+        <file src="${prefix}/lib/lib*.so"/>
+        <file src="${prefix}/lib/pkgconfig/*"/>
     </contents>
 </package>

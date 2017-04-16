@@ -15,10 +15,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/usr/lib/lib*.so.*[0-9]"/>
+        <file src="${prefix}/lib/lib*.so.*[0-9]"/>
     </contents>
 </package>
