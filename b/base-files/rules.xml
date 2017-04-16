@@ -30,6 +30,7 @@ else
     install -d -m 0755 "$BOLT_INSTALL_DIR/tools/lib"
     install -d -m 0755 "$BOLT_INSTALL_DIR/tools/libexec"
     install -d -m 0755 "$BOLT_INSTALL_DIR/tools/sbin"
+    install -d -m 0755 "$BOLT_INSTALL_DIR/tools/share"
 
     for entry in etc var run tmp; do
         ln -sf "../$entry" "$BOLT_INSTALL_DIR/tools/$entry"
