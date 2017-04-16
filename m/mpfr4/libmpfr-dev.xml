@@ -22,8 +22,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/*.h"/>
-        <file src="/usr/lib/libmpfr.a"/>
-        <file src="/usr/lib/libmpfr.so"/>
+        <file src="${prefix}/include/*.h"/>
+        <file src="${prefix}/lib/libmpfr.a"/>
+        <file src="${prefix}/lib/libmpfr.so"/>
     </contents>
 </package>

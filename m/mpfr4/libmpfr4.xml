@@ -12,6 +12,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libmpfr.so.*"/>
+        <file src="${prefix}/lib/libmpfr.so.*"/>
     </contents>
 </package>
