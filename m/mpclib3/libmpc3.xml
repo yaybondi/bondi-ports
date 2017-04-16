@@ -19,6 +19,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libmpc.so.*"/>
+        <file src="${prefix}/lib/libmpc.so.*"/>
     </contents>
 </package>
