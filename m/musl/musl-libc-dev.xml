@@ -29,7 +29,7 @@
     </requires>
 
     <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/*.{a,o}"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/*.{a,o}"/>
     </contents>
 </package>

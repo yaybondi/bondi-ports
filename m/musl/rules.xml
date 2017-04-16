@@ -5,11 +5,14 @@
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-sed -i 's@/lib:/usr/local/lib:/usr/lib@/usr/lib:/usr/local/lib@g' ldso/dynlink.c
+
+PF="$BOLT_INSTALL_PREFIX"
+sed -i "s@/lib:/usr/local/lib:/usr/lib@$PF/lib:$PF/local/lib@g" ldso/dynlink.c
 
 ./configure \
-    --prefix=/usr \
-    --syslibdir=/usr/lib
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --syslibdir="$BOLT_INSTALL_PREFIX/lib" \
+    --target="$BOLT_HOST_TYPE"
 
     ]]>
     </prepare>
