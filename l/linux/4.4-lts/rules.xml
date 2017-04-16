@@ -22,15 +22,11 @@ make headers_check
     <install>
     <![CDATA[
 
-cd $BOLT_SOURCE_DIR
+KERNEL_ARCH="`bh_kernel_arch_from_target_triplet $BOLT_HOST_TYPE`"
 
-if [ "$BOLT_INSTALL_PREFIX" = "/tools" ]; then
-    make INSTALL_HDR_PATH="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
-        ARCH="x86" headers_install
-else
-    make INSTALL_HDR_PATH="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
-        headers_install
-fi
+cd $BOLT_SOURCE_DIR
+make INSTALL_HDR_PATH="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
+    ARCH="$KERNEL_ARCH" headers_install
 
     ]]>
     </install>
