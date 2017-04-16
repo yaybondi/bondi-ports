@@ -18,9 +18,9 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/sepol"/>
-        <file src="/usr/lib/libsepol.a"/>
-        <file src="/usr/lib/libsepol.so"/>
-        <file src="/usr/lib/pkgconfig"/>
+        <file src="${prefix}/include/sepol"/>
+        <file src="${prefix}/lib/libsepol.a"/>
+        <file src="${prefix}/lib/libsepol.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
     </contents>
 </package>

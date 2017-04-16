@@ -22,6 +22,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libsepol.so.*"/>
+        <file src="${prefix}/lib/libsepol.so.*"/>
     </contents>
 </package>
