@@ -8,7 +8,7 @@
         </p>
         <p>
             It uses the NetBSD implementation of fts to build a static library
-            /usr/lib/libfts.a and the /usr/include/fts.h header file.
+            ${prefix}/lib/libfts.a and the ${prefix}/include/fts.h header file.
         </p>
         <p>
             This package contains the runtime library.
@@ -16,6 +16,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/*.so.*"/>
+        <file src="${prefix}/lib/*.so.*"/>
     </contents>
 </package>

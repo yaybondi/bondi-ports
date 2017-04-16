@@ -7,7 +7,10 @@ cd $BOLT_SOURCE_DIR
 ./bootstrap.sh
 
 cd $BOLT_BUILD_DIR
-"$BOLT_SOURCE_DIR"/configure --prefix=/usr
+"$BOLT_SOURCE_DIR"/configure \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_BUILD_TYPE" \
+    --host="$BOLT_HOST_TYPE"
 
     ]]>
     </prepare>
