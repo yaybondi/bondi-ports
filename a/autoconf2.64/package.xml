@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="autoconf2.64" architecture-independent="true">
+        <description>
+            <summary>automatic configure script builder (obsolete version)</summary>
+            <p>
+            This obsolete version is required to build GCC (&gt;= 4.3.3), newlib,
+            and probably some others toolchain related packages.
+            </p>
+        </description>
+
+        <sources>
+            <file src="autoconf2.64-2.64+dfsg.tar.gz" subdir="sources"
+                sha256sum="9fce101dfe4705bd807d319818312a5c7755109d0bd47e233e03265e3fd70eba"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="b04502612808193cb08426aaeaf3b861261f30b25f9465ed9431cae0c2ca1925"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/02_autoreconf-aclocal.diff"/>
+                <file src="patches/03_no_autoconf.info.diff"/>
+            </patchset>
+        </patches>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="autoconf2.64.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+$BOLT_SOURCE_DIR/configure \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --disable-nls \
+    --program-suffix=2.64
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make pkgdatadir="$BOLT_INSTALL_PREFIX/share/autoconf2.64" \
+    -j"$BOLT_PARALLEL_JOBS"
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make DESTDIR="$BOLT_INSTALL_DIR" install
+
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/autoconf" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/autoconf2.64"
+
+    ]]>
+    </install>
+</rules>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="autoconf2.64" section="devel">
+    <description>
+        <summary>automatic configure script builder (obsolete version)</summary>
+        <p>
+        This obsolete version is required to build GCC (&gt;= 4.3.3), newlib,
+        and probably some others toolchain related packages.
+        </p>
+    </description>
+
+    <requires>
+        <package name="m4"/>
+        <package name="perl"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin"/>
+        <file src="/usr/share/autoconf2.64"/>
+    </contents>
+</package>
