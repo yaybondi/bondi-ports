@@ -35,6 +35,9 @@ else
     for entry in etc var run tmp; do
         ln -sf "../$entry" "$BOLT_INSTALL_DIR/tools/$entry"
     done
+
+    ln -sf . "$BOLT_INSTALL_DIR/tools/usr"
+    ln -sf . "$BOLT_INSTALL_DIR/tools/tools"
 fi
 
     ]]>
