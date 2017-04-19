@@ -9,6 +9,16 @@ cd "$BOLT_BUILD_DIR"
 PF="$BOLT_INSTALL_PREFIX"
 sed -i "s@/lib:/usr/local/lib:/usr/lib@$PF/lib:$PF/local/lib@g" ldso/dynlink.c
 
+if [ "$BOLT_INSTALL_PREFIX" = "/tools" ]; then
+
+    # to avoid collision with the target musl linker config
+    sed -i 's@/etc/ld-musl-@/etc/ld-musl-tools-@g' ldso/dynlink.c
+
+    # this is the magic redirection patch
+    patch -p1 < "$BOLT_WORK_DIR/patches/bbox-redirect-bin-sh.patch"
+
+fi
+
 ./configure \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --syslibdir="$BOLT_INSTALL_PREFIX/lib" \
