@@ -22,7 +22,7 @@ make headers_check
     <install>
     <![CDATA[
 
-KERNEL_ARCH="`bh_kernel_arch_from_target_triplet $BOLT_HOST_TYPE`"
+KERNEL_ARCH="`bh_kernel_arch_for_target $BOLT_HOST_TYPE`"
 
 cd $BOLT_SOURCE_DIR
 make INSTALL_HDR_PATH="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
