@@ -3,9 +3,12 @@
     <prepare>
     <![CDATA[
 
+export CC="$BOLT_HOST_TYPE-gcc"
+export RANLIB="$BOLT_HOST_TYPE-ranlib"
+
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr
+    --prefix="$BOLT_INSTALL_PREFIX"
 
     ]]>
     </prepare>

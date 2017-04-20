@@ -14,9 +14,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/libz.a"/>
-        <file src="/usr/lib/libz.so"/>
-        <file src="/usr/lib/pkgconfig"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/*.{a,so}"/>
+        <file src="${prefix}/lib/pkgconfig"/>
     </contents>
 </package>
