@@ -15,14 +15,18 @@
         </description>
 
         <sources>
-            <file src="binutils-2.27.90.20170124.tar.gz" subdir="sources"
-                sha256sum="b4101b6061f32beb4c9559b7930087a1bb7c6eeb11ddd01ec67ce080e5e9deb5"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="1680dc05d3fc3822c04d0913e919f39e9f83e59ea0e7966c2917168d8ae29b9f"/>
+            <file src="binutils-2.28.tar.gz" subdir="sources"
+                sha256sum="db29588b0214fa69baa1a9351122cd6d0f081f2e675e6ad2aefc316ddeaf327a"/>
+            <file src="patches.03.tar.gz" subdir="patches"
+                sha256sum="cc1eac89c201b5c7ff792a0ba577b0f76a0b2dcab0cf4df4b5424e1031a56f18"/>
+            <file src="bolt.01.tar.gz" subdir="patches"
+                sha256sum="1c90042635d9f4399cd50ee055676a09df816dab7fe6fc5c3eb15aa326c2f0b2"/>
         </sources>
         
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
+                <file src="patches/branch-updates.diff"/>
                 <file src="patches/001_ld_makefile_patch.patch"/>
                 <file src="patches/002_gprof_profile_arcs.patch"/>
                 <file src="patches/003_gprof_see_also_monitor.patch"/>
@@ -30,7 +34,9 @@
                 <file src="patches/012_check_ldrunpath_length.patch"/>
                 <file src="patches/013_bash_in_ld_testsuite.patch"/>
                 <file src="patches/128_ppc64_powerpc_biarch.patch"/>
+                <!--
                 <file src="patches/129_multiarch_libpath.patch"/>
+                -->
                 <file src="patches/130_gold_disable_testsuite_build.patch"/>
                 <file src="patches/131_ld_bootstrap_testsuite.patch"/>
                 <file src="patches/135_bfd_version.patch"/>
@@ -39,11 +45,25 @@
                 <file src="patches/161_gold_dummy_zoption.diff"/>
                 <file src="patches/164_ld_doc_remove_xref.diff"/>
                 <file src="patches/gprof-build.diff"/>
+                <!--
                 <file src="patches/aarch64-libpath.diff"/>
+                -->
                 <file src="patches/mips64-default-n64.diff"/>
                 <file src="patches/gold-mips.diff"/>
                 <file src="patches/ld-new-dtags-by-default.diff"/>
                 <file src="patches/pr21074-revert.diff"/>
+                <file src="patches/i18n-fr.diff"/>
+                <file src="patches/ppc-lib-search-order.diff"/>
+                <file src="patches/pr21233-mips-only.patch"/>
+                <file src="patches/pr21157.diff"/>
+                <file src="patches/pr21137.diff"/>
+                <file src="patches/pr21156.diff"/>
+                <file src="patches/pr21139.diff"/>
+                <file src="patches/pr21135.diff"/>
+                <file src="patches/pr70909.diff"/>
+
+                <!-- Bolt -->
+                <file src="patches/elf32-em-esc-single-dollar.patch"/>
             </patchset>
         </patches>
 

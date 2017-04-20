@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="binutils" section="devel" xmlns:xi="http://www.w3.org/2001/XInclude">
+<package name="binutils" section="devel">
     <description>
-        <summary>The GNU assembler, linker and binary utilities</summary>
+        <summary>GNU assembler, linker and binary utilities</summary>
         <p>
-            The programs in this package are used to assemble, link and manipulate
-        binary and object files.  They may be used in conjunction with a compiler
+        The programs in this package are used to assemble, link and manipulate
+        binary and object files. They may be used in conjunction with a compiler
         and various libraries to build programs.
         </p>
     </description>
 
     <contents>
         <file src="/usr/bin/*"/>
-        <file src="/usr/lib/lib*.*.so"/>
-        <file src="/usr/lib/ldscripts/"/>
+        <file src="/usr/lib/ldscripts"/>
+        <file src="/usr/lib/libbfd-2.28.so"/>
+        <file src="/usr/lib/libopcodes-2.28.so"/>
     </contents>
 </package>

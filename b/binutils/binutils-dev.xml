@@ -15,9 +15,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/lib/*.{a,la}"/>
-        <file src="/usr/lib/libopcodes.so"/>
-        <file src="/usr/lib/libbfd.so"/>
-        <file src="/usr/include/*"/>
+        <file src="/usr/include"/>
+        <file src="/usr/lib/libbfd.{a,so}"/>
+        <file src="/usr/lib/libopcodes.{a,so}"/>
     </contents>
 </package>
