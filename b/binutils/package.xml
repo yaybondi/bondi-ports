@@ -34,9 +34,7 @@
                 <file src="patches/012_check_ldrunpath_length.patch"/>
                 <file src="patches/013_bash_in_ld_testsuite.patch"/>
                 <file src="patches/128_ppc64_powerpc_biarch.patch"/>
-                <!--
                 <file src="patches/129_multiarch_libpath.patch"/>
-                -->
                 <file src="patches/130_gold_disable_testsuite_build.patch"/>
                 <file src="patches/131_ld_bootstrap_testsuite.patch"/>
                 <file src="patches/135_bfd_version.patch"/>
@@ -45,9 +43,7 @@
                 <file src="patches/161_gold_dummy_zoption.diff"/>
                 <file src="patches/164_ld_doc_remove_xref.diff"/>
                 <file src="patches/gprof-build.diff"/>
-                <!--
                 <file src="patches/aarch64-libpath.diff"/>
-                -->
                 <file src="patches/mips64-default-n64.diff"/>
                 <file src="patches/gold-mips.diff"/>
                 <file src="patches/ld-new-dtags-by-default.diff"/>
