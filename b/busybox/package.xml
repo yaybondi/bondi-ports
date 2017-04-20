@@ -26,7 +26,7 @@
             <file src="patches.bolt.tar.gz" subdir="patches"
                 sha256sum="af8cb9d8d002a22bd485a2b596e8d34be4b84907a59f517def21dc9b6f24110d"/>
             <file src="extra.01.tar.gz" subdir="extra"
-                sha256sum="121882aa515f8147bfff9da76f350dc08e11a21d6495063e3a92b6f183abc4a7"/>
+                sha256sum="cef3a8f1fad2f7246a9170295279fd30e319fb1f3ff8b3b11ee21aaca03e6a94"/>
         </sources>
 
         <patches>
