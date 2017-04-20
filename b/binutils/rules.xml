@@ -28,7 +28,7 @@ $BOLT_SOURCE_DIR/configure  \
     <![CDATA[
 
 cd $BOLT_BUILD_DIR
-make MAKEINFO=true LEXLIB= # -j"$BOLT_PARALLEL_JOBS"
+make MAKEINFO=true LEXLIB= -j"$BOLT_PARALLEL_JOBS"
 
     ]]>
     </build>
