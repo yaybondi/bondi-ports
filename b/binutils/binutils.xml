@@ -9,10 +9,7 @@
         </p>
     </description>
 
-    <contents>
-        <file src="/usr/bin/*"/>
-        <file src="/usr/lib/ldscripts"/>
-        <file src="/usr/lib/libbfd-2.28.so"/>
-        <file src="/usr/lib/libopcodes-2.28.so"/>
+    <contents subdir="binutils">
+        <file src="${prefix}/"/>
     </contents>
 </package>

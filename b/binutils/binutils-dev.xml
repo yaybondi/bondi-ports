@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="binutils-dev" section="devel">
+<package name="binutils-dev" section="devel" build-for="target,tools">
     <description>
         <summary>GNU binary utilities (BFD development files)</summary>
         <p>
@@ -14,9 +14,7 @@
         <package name="binutils" version="=="/>
     </requires>
 
-    <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/libbfd.{a,so}"/>
-        <file src="/usr/lib/libopcodes.{a,so}"/>
+    <contents subdir="binutils-dev">
+        <file src="${prefix}/"/>
     </contents>
 </package>

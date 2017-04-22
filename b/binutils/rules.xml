@@ -2,7 +2,17 @@
 <rules>
 
     <prepare>
-    <![CDATA[
+      <![CDATA[
+
+EXTRA_OPTS=""
+
+if [ "$BOLT_BUILD_FOR" != "cross-tools" ]; then
+    EXTRA_OPTS="--enable-shared --enable-plugins"
+fi
+
+if [ "$BOLT_BUILD_FOR" = "tools" ]; then
+    EXTRA_OPTS="$EXTRA_OPTS --program-prefix=${BOLT_TARGET_TYPE}-"
+fi
 
 cd $BOLT_BUILD_DIR
 $BOLT_SOURCE_DIR/configure  \
@@ -13,13 +23,12 @@ $BOLT_SOURCE_DIR/configure  \
     --disable-nls    \
     --disable-doc    \
     --disable-silent-rules \
-    --enable-shared  \
-    --enable-plugins \
     --with-system-zlib \
     --with-pkgversion="GNU Binutils for Bolt Linux" \
     --build="$BOLT_BUILD_TYPE" \
     --host="$BOLT_HOST_TYPE" \
-    --target="$BOLT_TARGET_TYPE"
+    --target="$BOLT_TARGET_TYPE" \
+    $EXTRA_OPTS
 
     ]]>
     </prepare>
@@ -39,15 +48,60 @@ make MAKEINFO=true LEXLIB= -j"$BOLT_PARALLEL_JOBS"
 cd $BOLT_BUILD_DIR
 make DESTDIR=$BOLT_INSTALL_DIR install
 
-# turn hardlink into symbolic link
-rm "$BOLT_INSTALL_DIR/usr/bin/ld"
-ln -s ld.bfd "$BOLT_INSTALL_DIR/usr/bin/ld"
+if [ "$BOLT_BUILD_FOR" = "target" ]; then
+    rm "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/ld"
+    ln -sf ld.bfd \
+        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/ld"
+else
+    rm "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/${BOLT_TARGET_TYPE}-ld"
+    ln -sf "${BOLT_TARGET_TYPE}-ld.bfd" \
+        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/${BOLT_TARGET_TYPE}-ld"
+fi
 
-# copy additional header files
-for i in demangle.h libiberty.h; do
-    install -m 644 "$BOLT_SOURCE_DIR/include/$i" \
-        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include"
-done
+if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
+    for PROG in "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/${BOLT_TARGET_TYPE}-"*; do
+        BASENAME=`basename $PROG`
+        SHORTNAME=`echo $BASENAME | sed "s/${BOLT_TARGET_TYPE}-//g"`
+
+        ln -sf "$BASENAME" \
+            "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/$SHORTNAME"
+    done
+else
+    for i in demangle.h libiberty.h; do
+        install -m 644 "$BOLT_SOURCE_DIR/include/$i" \
+            "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include"
+    done
+fi
+
+PKG_BINUTILS="$BOLT_INSTALL_DIR/binutils"
+PKG_BINUTILS_DEV="$BOLT_INSTALL_DIR/binutils-dev"
+
+install -d -m 0755 "$PKG_BINUTILS"
+install -d -m 0755 "$PKG_BINUTILS_DEV"
+install -d -m 0755 "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX"
+install -d -m 0755 "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/bin"
+install -d -m 0755 "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/lib"
+
+mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/"* \
+    "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/bin/"
+
+mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/ldscripts" \
+    "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/lib/"
+
+
+if [ "$BOLT_BUILD_FOR" != "cross-tools" ]; then
+    rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/"*.la
+
+    mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/"libbfd-*.so \
+        "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/lib/"
+    mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/"libopcodes-*.so \
+        "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/lib/"
+
+    mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib" \
+        "$PKG_BINUTILS_DEV/$BOLT_INSTALL_PREFIX/"
+    mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include" \
+        "$PKG_BINUTILS_DEV/$BOLT_INSTALL_PREFIX/"
+fi
 
     ]]>
     </install>
