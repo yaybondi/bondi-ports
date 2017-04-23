@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rules>
-
     <prepare>
       <![CDATA[
 
-EXTRA_OPTS=""
-
-if [ "$BOLT_BUILD_FOR" != "cross-tools" ]; then
-    EXTRA_OPTS="--enable-shared --enable-plugins"
+if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
+    EXTRA_OPTS="--disable-shared --disable-plugins \
+        --with-sysroot=/"
+elif [ "$BOLT_BUILD_FOR" = "tools" ]; then
+    EXTRA_OPTS="--enable-shared --enable-plugins --with-sysroot=/tools
+        --program-prefix=${BOLT_TARGET_TYPE}-"
+else
+    EXTRA_OPTS="--enable-shared --enable-plugins --with-sysroot=/
+        --program-prefix=${BOLT_TARGET_TYPE}-"
 fi
 
-if [ "$BOLT_BUILD_FOR" = "tools" ]; then
-    EXTRA_OPTS="$EXTRA_OPTS --program-prefix=${BOLT_TARGET_TYPE}-"
-fi
-
-cd $BOLT_BUILD_DIR
-$BOLT_SOURCE_DIR/configure  \
+cd "$BOLT_BUILD_DIR"
+"$BOLT_SOURCE_DIR/configure"  \
     --prefix="$BOLT_INSTALL_PREFIX" \
-    --with-sysroot=/ \
     --disable-multiarch \
     --disable-multilib \
     --disable-nls    \
@@ -48,17 +47,11 @@ make MAKEINFO=true LEXLIB= -j"$BOLT_PARALLEL_JOBS"
 cd $BOLT_BUILD_DIR
 make DESTDIR=$BOLT_INSTALL_DIR install
 
-if [ "$BOLT_BUILD_FOR" = "target" ]; then
-    rm "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/ld"
-    ln -sf ld.bfd \
-        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/ld"
-else
-    rm "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/${BOLT_TARGET_TYPE}-ld"
-    ln -sf "${BOLT_TARGET_TYPE}-ld.bfd" \
-        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/${BOLT_TARGET_TYPE}-ld"
-fi
+rm "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/${BOLT_TARGET_TYPE}-ld"
+ln -sf "${BOLT_TARGET_TYPE}-ld.bfd" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/${BOLT_TARGET_TYPE}-ld"
 
-if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
+if [ "$BOLT_BUILD_FOR" = "cross-tools" -o "$BOLT_BUILD_FOR" = "target" ]; then
     for PROG in "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/${BOLT_TARGET_TYPE}-"*; do
         BASENAME=`basename $PROG`
         SHORTNAME=`echo $BASENAME | sed "s/${BOLT_TARGET_TYPE}-//g"`
@@ -66,7 +59,9 @@ if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
         ln -sf "$BASENAME" \
             "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/$SHORTNAME"
     done
-else
+fi
+
+if [ "$BOLT_BUILD_FOR" = "tools" -o "$BOLT_BUILD_FOR" = "target" ]; then
     for i in demangle.h libiberty.h; do
         install -m 644 "$BOLT_SOURCE_DIR/include/$i" \
             "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include"
@@ -88,7 +83,6 @@ mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/"* \
 mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/ldscripts" \
     "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/lib/"
 
-
 if [ "$BOLT_BUILD_FOR" != "cross-tools" ]; then
     rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/"*.la
 
@@ -105,5 +99,4 @@ fi
 
     ]]>
     </install>
-
 </rules>
