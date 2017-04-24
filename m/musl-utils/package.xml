@@ -18,7 +18,7 @@
 
         <sources>
             <file src="musl-utils-1.1.12-r7.tar.gz" subdir="sources"
-                sha256sum="b352badc4f5232bac2e5b85499b10d407ac38d65b95dc8887fc55df4ba6d508a"/>
+                sha256sum="1894dce87a729139f629c00deb1e9a1dea3e4520fef5f7fbb7122707243e5e0b"/>
         </sources>
 
         <xi:include href="rules.xml"/>
