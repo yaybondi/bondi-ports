@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="cmake-data" section="devel">
+    <description>
+        <summary>CMake data files (modules, templates and documentation)</summary>
+        <p>
+        This package provides CMake architecture independent data files (modules,
+        templates, documentation etc.). Unless you have cmake installed, you probably
+        do not need this package.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/share/aclocal"/>
+        <file src="/usr/share/cmake-3.7/Help"/>
+        <file src="/usr/share/cmake-3.7/Modules"/>
+        <file src="/usr/share/cmake-3.7/Templates"/>
+        <file src="/usr/share/cmake-3.7/completions"/>
+        <file src="/usr/share/cmake-3.7/include"/>
+    </contents>
+</package>

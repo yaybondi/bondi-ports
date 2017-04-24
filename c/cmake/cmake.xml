@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="cmake" section="devel">
+    <description>
+        <summary>cross-platform, open-source make system</summary>
+        <p>
+        CMake is used to control the software compilation process using
+        simple platform and compiler independent configuration files. CMake
+        generates native makefiles and workspaces that can be used in the
+        compiler environment of your choice. CMake is quite sophisticated: it
+        is possible to support complex environments requiring system
+        configuration, pre-processor generation, code generation, and template
+        instantiation.
+        </p>
+        <p>
+        CMake was developed by Kitware as part of the NLM Insight
+        Segmentation and Registration Toolkit project. The ASCI VIEWS project
+        also provided support in the context of their parallel computation
+        environment. Other sponsors include the Insight, VTK, and VXL open
+        source software communities.
+        </p>
+    </description>
+
+    <requires>
+        <package name="cmake-data" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/cmake"/>
+        <file src="/usr/bin/cpack"/>
+        <file src="/usr/bin/ctest"/>
+    </contents>
+</package>

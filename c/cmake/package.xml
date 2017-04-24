@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="cmake" architecture-independent="false">
+        <description>
+            <summary>cross-platform, open-source make system</summary>
+            <p>
+            CMake is used to control the software compilation process using
+            simple platform and compiler independent configuration files. CMake
+            generates native makefiles and workspaces that can be used in the
+            compiler environment of your choice. CMake is quite sophisticated: it
+            is possible to support complex environments requiring system
+            configuration, pre-processor generation, code generation, and template
+            instantiation.
+            </p>
+            <p>
+            CMake was developed by Kitware as part of the NLM Insight
+            Segmentation and Registration Toolkit project. The ASCI VIEWS project
+            also provided support in the context of their parallel computation
+            environment. Other sponsors include the Insight, VTK, and VXL open
+            source software communities.
+            </p>
+        </description>
+
+        <sources>
+            <file src="cmake-3.7.2.tar.gz" subdir="sources"
+                sha256sum="dc1246c4e6d168ea4d6e042cfba577c1acd65feea27e56f5ff37df920c30cae0"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="92c5df267ea9fb13373a43a953fb6cd6a2c9fa9ae29eee27db35b09d0f8f93ac"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/FindBoost_add_-lpthread_#563479.diff"/>
+                <file src="patches/qt_import_dir_variable.diff"/>
+                <file src="patches/fix-ftbfs-on-kfreebsd.patch"/>
+                <file src="patches/mips-rld-map-rel.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="libarchive-dev" version=">= 2.8.0"/>
+            <package name="libbz2-dev"/>
+            <package name="libcurl4-openssl-dev"/>
+            <package name="libexpat1-dev"/>
+            <package name="libjsoncpp-dev"/>
+            <package name="liblzma-dev"/>
+            <package name="libncurses5-dev"/>
+            <package name="procps"/>
+            <package name="zlib1g-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="cmake.xml"/>
+    <xi:include href="cmake-data.xml"/>
+    <xi:include href="cmake-curses-gui.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

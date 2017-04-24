@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="cmake-curses-gui" section="devel">
+    <description>
+        <summary>curses based user interface for CMake (ccmake)</summary>
+        <p>
+        CMake is used to control the software compilation process using simple
+        platform and compiler independent configuration files. CMake generates native
+        makefiles and workspaces that can be used in the compiler environment of your
+        choice.
+        </p>
+        <p>
+        This package provides the CMake curses interface. Project configuration
+        settings may be specified interactively through this GUI. Brief instructions
+        are provided at the bottom of the terminal when the program is running. The
+        main executable file for this GUI is "ccmake".
+        </p>
+    </description>
+
+    <requires>
+        <package name="cmake" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/ccmake"/>
+    </contents>
+</package>
