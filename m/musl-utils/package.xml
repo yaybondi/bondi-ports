@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="musl-fts" architecture-independent="false">
+        <description>
+            <summary>musl Libc Auxiliary Utilities</summary>
+            <p>
+                This package contains implementations of the utilities
+            iconv, getent and getconf.
+            </p>
+            <p>
+                The sources are taken from the Alpine Linux Project.
+            </p>
+        </description>
+
+        <sources>
+            <file src="musl-utils-1.1.12-r7.tar.gz" subdir="sources"
+                sha256sum="b352badc4f5232bac2e5b85499b10d407ac38d65b95dc8887fc55df4ba6d508a"/>
+        </sources>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="musl-utils.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

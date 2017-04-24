@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="musl-utils" section="admin">
+    <description>
+        <summary>musl Libc Auxiliary Utilities</summary>
+        <p>
+            This package contains implementations of the utilities
+        iconv, getent and getconf.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/bin/*"/>
+    </contents>
+</package>
