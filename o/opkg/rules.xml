@@ -30,12 +30,4 @@ make DESTDIR=$XPACK_INSTALL_DIR install
     ]]>
     </install>
 
-    <clean>
-    <![CDATA[
-
-rm -fr "$XPACK_SOURCE_DIR" "$XPACK_INSTALL_DIR"
-
-    ]]>
-    </clean>
-
 </rules>
