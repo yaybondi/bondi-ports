@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libsolv-tools" section="admin">
+    <description>
+        <summary>dependency solver using a satisfiability algorithm (command-line tools)</summary>
+        <p>
+        This dependency solver code in this package is based on two major, but
+        independent, blocks:
+        </p>
+        <ul>
+          <li>Using a dictionary approach to store and retrieve package
+              and dependency information.</li>
+          <li>Using satisfiability, a well known and researched topic, for
+              resolving package dependencies.</li>
+        </ul>
+        <p>
+        This package contains command-line tools that facilitate using libsolv.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libsolv0" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+    </contents>
+</package>

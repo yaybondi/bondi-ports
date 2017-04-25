@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libsolv0-dev" section="libdevel">
+    <description>
+        <summary>dependency solver using a satisfiability algorithm (development files)</summary>
+        <p>
+        This dependency solver code in this package is based on two major, but
+        independent, blocks:
+        </p>
+        <ul>
+          <li>Using a dictionary approach to store and retrieve package
+              and dependency information.</li>
+          <li>Using satisfiability, a well known and researched topic, for
+              resolving package dependencies.</li>
+        </ul>
+        <p>
+        This package contains development files for libsolv.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libsolv0" version="=="/>
+        <package name="libsolvext0-dev" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/include/solv/bitmap.h"/>
+        <file src="${prefix}/include/solv/chksum.h"/>
+        <file src="${prefix}/include/solv/dataiterator.h"/>
+        <file src="${prefix}/include/solv/dirpool.h"/>
+        <file src="${prefix}/include/solv/evr.h"/>
+        <file src="${prefix}/include/solv/hash.h"/>
+        <file src="${prefix}/include/solv/knownid.h"/>
+        <file src="${prefix}/include/solv/policy.h"/>
+        <file src="${prefix}/include/solv/pool.h"/>
+        <file src="${prefix}/include/solv/poolarch.h"/>
+        <file src="${prefix}/include/solv/poolid.h"/>
+        <file src="${prefix}/include/solv/pooltypes.h"/>
+        <file src="${prefix}/include/solv/poolvendor.h"/>
+        <file src="${prefix}/include/solv/problems.h"/>
+        <file src="${prefix}/include/solv/queue.h"/>
+        <file src="${prefix}/include/solv/repo.h"/>
+        <file src="${prefix}/include/solv/repodata.h"/>
+        <file src="${prefix}/include/solv/rules.h"/>
+        <file src="${prefix}/include/solv/selection.h"/>
+        <file src="${prefix}/include/solv/solvable.h"/>
+        <file src="${prefix}/include/solv/solver.h"/>
+        <file src="${prefix}/include/solv/solverdebug.h"/>
+        <file src="${prefix}/include/solv/solvversion.h"/>
+        <file src="${prefix}/include/solv/strpool.h"/>
+        <file src="${prefix}/include/solv/testcase.h"/>
+        <file src="${prefix}/include/solv/transaction.h"/>
+        <file src="${prefix}/include/solv/util.h"/>
+        <file src="${prefix}/lib/cmake/LibSolv"/>
+        <file src="${prefix}/lib/libsolv.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
+    </contents>
+</package>
