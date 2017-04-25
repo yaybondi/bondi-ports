@@ -24,13 +24,20 @@
                 sha256sum="9444fb5f4db65195bee78024fb0f4251b8c48908635a942723d0e081b512950d"/>
             <file src="patches.01.tar.gz" subdir="patches"
                 sha256sum="f63db791159d315a117a7c79ccd247d28a7a85df57953c696eb3489ee1a4af2b"/>
+            <file src="bolt.01.tar.gz" subdir="patches"
+                sha256sum="247925d9924c8a9d6c0192a2874e3a22b79e4f07cd71766efe9d544ce090dd6e"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/1004_cmake-module-path-fix.patch"/>
                 <file src="patches/1006_various-types.patch"/>
                 <file src="patches/2001_build-for-SUSE-and-find-rpmdb.patch"/>
+
+                <!-- Bolt -->
+                <file src="patches/0001-Add-fallback-fopencookie-implementation.patch"/>
+                <file src="patches/0002-Fixes-to-internal-fopencookie-implementation.patch"/>
             </patchset>
         </patches>
 
