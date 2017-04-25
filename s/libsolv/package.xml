@@ -20,8 +20,8 @@
         </description>
 
         <sources>
-            <file src="libsolv-0.6.24.tar.xz" subdir="sources"
-                sha256sum="9444fb5f4db65195bee78024fb0f4251b8c48908635a942723d0e081b512950d"/>
+            <file src="libsolv-0.6.26.tar.gz" subdir="sources"
+                sha256sum="67a6c327b8965ff61b0bddf939a7225cc94018285838a30faf855e2965fbd122"/>
             <file src="patches.01.tar.gz" subdir="patches"
                 sha256sum="f63db791159d315a117a7c79ccd247d28a7a85df57953c696eb3489ee1a4af2b"/>
             <file src="bolt.01.tar.gz" subdir="patches"

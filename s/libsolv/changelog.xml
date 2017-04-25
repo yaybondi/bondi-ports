@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
-    <release version="0.6.24" revision="1bolt1" upstream-version="0.6.24-1"
+    <release version="0.6.26" revision="1"
         maintainer="Tobias Koch" email="tobias.koch@nonterra.com"
         date="2017-04-25 14:38:55+03:00">
         <changeset>
             <li>Adaptation of Debian sources for Bolt OS</li>
+            <li>Use latest openSUSE upstream release.</li>
         </changeset>
     </release>
 </changelog>
