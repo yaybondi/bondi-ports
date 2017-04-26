@@ -5,7 +5,7 @@
     <![CDATA[
 
 cd $BOLT_SOURCE_DIR
-make mrproper
+make SHELL=/bin/sh mrproper
 
     ]]>
     </prepare>
@@ -14,7 +14,7 @@ make mrproper
     <![CDATA[
 
 cd $BOLT_SOURCE_DIR
-make headers_check
+make SHELL=/bin/sh headers_check
 
     ]]>
     </build>
@@ -25,7 +25,7 @@ make headers_check
 KERNEL_ARCH="`bh_kernel_arch_for_target $BOLT_HOST_TYPE`"
 
 cd $BOLT_SOURCE_DIR
-make INSTALL_HDR_PATH="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
+make SHELL=/bin/sh INSTALL_HDR_PATH="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
     ARCH="$KERNEL_ARCH" headers_install
 
     ]]>
