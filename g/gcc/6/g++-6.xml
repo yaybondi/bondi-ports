@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="g++-6" section="devel">
+    <description>
+        <summary>GNU C++ compiler</summary>
+        <p>
+        This is the GNU C++ compiler, a fairly portable optimizing compiler for C++.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc-6-base" version="=="/>
+        <package name="gcc-6" version="=="/>
+        <package name="libstdc++-6-dev" version="=="/>
+    </requires>
+
+    <contents subdir="g++-6">
+        <file src="/"/>
+    </contents>
+</package>

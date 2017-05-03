@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="cpp-6" section="interpreters">
+    <description>
+        <summary>GNU C preprocessor</summary>
+        <p>
+        A macro processor that is used automatically by the GNU C compiler
+        to transform programs before actual compilation.
+        </p>
+        <p>
+        This package has been separated from gcc for the benefit of those who
+        require the preprocessor but not the compiler.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc-6-base" version="=="/>
+    </requires>
+
+    <contents subdir="cpp-6">
+        <file src="/"/>
+    </contents>
+</package>

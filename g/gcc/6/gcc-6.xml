@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="gcc-6" section="devel">
+    <description>
+        <summary>GNU C compiler</summary>
+        <p>
+        This is the GNU C compiler, a fairly portable optimizing compiler for C.
+        </p>
+    </description>
+
+    <requires>
+        <package name="cpp-6" version="=="/>
+        <package name="gcc-6-base" version="=="/>
+        <package name="libgcc-dev" version="=="/>
+        <package name="binutils" version=">=="/>
+    </requires>
+
+    <contents subdir="gcc-6">
+        <file src="/"/>
+    </contents>
+</package>

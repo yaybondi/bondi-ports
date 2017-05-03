@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="gcc-6-plugin-dev" section="devel" build-for="target,tools">
+    <description>
+        <summary>Files for GNU GCC plugin development.</summary>
+        <p>
+        This package contains (header) files for GNU GCC plugin development. It
+        is only used for the development of GCC plugins, but not needed to run
+        plugins.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc-6-base" version="=="/>
+        <package name="gcc-6" version="=="/>
+        <package name="libgmp-dev" version=">= 2:5.0.1~"/>
+        <package name="libmpc-dev" version=">= 1.0"/>
+    </requires>
+
+    <contents subdir="gcc-6-plugin-dev">
+        <file src="/"/>
+    </contents>
+</package>

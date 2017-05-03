@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgcc-dev" section="libdevel">
+    <description>
+        <summary>GCC support library (development files)</summary>
+        <p>
+        This package contains the headers and static library files necessary for
+        building C programs which use libgcc, libgomp, libquadmath, libssp or libitm.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc-6-base" version="=="/>
+    </requires>
+
+    <contents subdir="libgcc-dev">
+        <file src="/"/>
+    </contents>
+</package>

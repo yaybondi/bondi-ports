@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="gcc-6-base" section="libs">
+    <description>
+        <summary>GCC, the GNU Compiler Collection (base package)</summary>
+        <p>
+        This package contains files common to all languages and libraries
+        contained in the GNU Compiler Collection (GCC).
+        </p>
+    </description>
+
+    <contents subdir="gcc-6-base">
+        <file src="/"/>
+    </contents>
+</package>
