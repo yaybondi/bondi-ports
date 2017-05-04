@@ -141,6 +141,7 @@
                 <!-- Bolt OS -->
                 <file src="patches/fix-libgo-mksysinfo-musl.diff"/>
                 <file src="patches/libgo-squash-cast-qual.diff"/>
+                <file src="patches/230-musl_libssp.patch"/>
             </patchset>
         </patches>
 
