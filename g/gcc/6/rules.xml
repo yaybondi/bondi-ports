@@ -53,6 +53,7 @@ unset LDFLAGS
     --disable-libmpx \
     --disable-libmudflap \
     --disable-libsanitizer \
+    --disable-libssp \
     --enable-shared \
     --enable-libstdcxx-time=yes \
     --enable-linker-build-id \
@@ -102,7 +103,6 @@ find "$FULL_INSTALL" -name "*.la" -exec rm '{}' \;
 rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/share/doc"
 rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/share/info"
 rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/share/man"
-rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib/libssp"*.so*
 
 # these are all provided through the corresponding tools-* packages
 if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
