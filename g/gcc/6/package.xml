@@ -16,10 +16,10 @@
         <sources>
             <file src="gcc-6-6.3.0.tar.gz" subdir="sources"
                 sha256sum="0c6e4675477b37d27301a083408b4932e0fa3caebc8ddb36710e42d92cd5b347"/>
-            <file src="patches.06.tar.gz" subdir="patches"
+            <file src="debian.6.tar.gz" subdir="patches"
                 sha256sum="b268bc8bab68e41a70acf2a9d3e186f46f3a2a638f645cddebd2345c9aef508d"/>
-            <file src="patches.bolt.tar.gz" subdir="patches"
-                sha256sum="06ec4567763e9cf8c0d16fcbad57f918a50fb10090849791231939f80c6c6999"/>
+            <file src="bolt.1.tar.gz" subdir="patches"
+                sha256sum="eab0861e3f85e2f2c813bec9739fa17dc3a6dad1a52d8cdb14e07955a683f3a8"/>
         </sources>
 
         <patches>
