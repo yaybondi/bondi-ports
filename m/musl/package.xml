@@ -24,15 +24,16 @@
         <sources>
             <file src="musl-1.1.16.tar.gz" subdir="sources"
                 sha256sum="937185a5e5d721050306cf106507a006c3f1f86d86cd550024ea7be909071011"/>
-            <file src="patches.01.tar.gz" subdir="patches"
+            <file src="debian.1.tar.gz" subdir="patches"
                 sha256sum="d1c3b2f6c1bc8f6b781db10b12fdaa08e821948328461c1c9d238d79e63cb949"/>
-            <file src="patches.bolt.tar.gz" subdir="patches"
-                sha256sum="dd582da6e016f79f085fa6f3157ee18f616cbc3c4b44e550073c31f32ea6c4a0"/>
+            <file src="bolt.1.tar.gz" subdir="patches"
+                sha256sum="d526fe347f24ee0a10b5d80fb1c8829a67a7262cefd05ec25a74e318668c1adf"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/musl-cdefs.patch"/>
+                <file src="patches/200-add_libssp_nonshared.patch"/>
             </patchset>
         </patches>
 
