@@ -69,13 +69,14 @@ if [ "$BOLT_BUILD_FOR" = "tools" -o "$BOLT_BUILD_FOR" = "target" ]; then
 fi
 
 PKG_BINUTILS="$BOLT_INSTALL_DIR/binutils"
-PKG_BINUTILS_DEV="$BOLT_INSTALL_DIR/binutils-dev"
-
 install -d -m 0755 "$PKG_BINUTILS"
-install -d -m 0755 "$PKG_BINUTILS_DEV"
 install -d -m 0755 "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX"
 install -d -m 0755 "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/bin"
 install -d -m 0755 "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/lib"
+
+PKG_BINUTILS_DEV="$BOLT_INSTALL_DIR/binutils-dev"
+install -d -m 0755 "$PKG_BINUTILS_DEV"
+install -d -m 0755 "$PKG_BINUTILS_DEV/$BOLT_INSTALL_PREFIX"
 
 mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/"* \
     "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/bin/"
