@@ -21,12 +21,10 @@
         <sources>
             <file src="busybox-1.22.0.tar.bz2" subdir="sources"
                 sha256sum="92f00cd391b7d5fa2215c8450abe2ba15f9d16c226e8855fb21b6c9a5b723a53"/>
-            <file src="patches.19.tar.gz" subdir="patches"
+            <file src="debian.19.tar.gz" subdir="patches"
                 sha256sum="f0cd9e113f3281b9586d02eea1f42a822dd5f26a89acb0b58d84b898cbc1cdd4"/>
-            <file src="patches.bolt.tar.gz" subdir="patches"
-                sha256sum="af8cb9d8d002a22bd485a2b596e8d34be4b84907a59f517def21dc9b6f24110d"/>
-            <file src="extra.01.tar.gz" subdir="extra"
-                sha256sum="cef3a8f1fad2f7246a9170295279fd30e319fb1f3ff8b3b11ee21aaca03e6a94"/>
+            <file src="bolt.1.tar.gz" subdir="patches"
+                sha256sum="f0fd8c92102fb9d23aaf86f6ae47e5e39cf251d328396f1d846d4365597bb41a"/>
         </sources>
 
         <patches>
