@@ -10,6 +10,7 @@
 
     <requires>
         <package name="gcc-6-base" version="=="/>
+        <package name="musl-libc-dev"/>
     </requires>
 
     <contents subdir="libgcc-dev">
