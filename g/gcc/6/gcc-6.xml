@@ -8,10 +8,14 @@
     </description>
 
     <requires>
-        <package name="cpp-6" version="=="/>
-        <package name="gcc-6-base" version="=="/>
-        <package name="libgcc-dev" version="=="/>
-        <package name="binutils" version=">=="/>
+        <package name="cpp-6" version="=="
+            cross-tools-prefix="tools-target-"/>
+        <package name="gcc-6-base" version="=="
+            cross-tools-prefix="tools-target-"/>
+        <package name="libgcc-dev" version="=="
+            cross-tools-prefix="tools-target-"/>
+        <package name="binutils" version=">=="
+            cross-tools-prefix="tools-target-"/>
     </requires>
 
     <contents subdir="gcc-6">

@@ -9,8 +9,10 @@
     </description>
 
     <requires>
-        <package name="gcc-6-base" version="=="/>
-        <package name="musl-libc-dev"/>
+        <package name="gcc-6-base" version="=="
+            cross-tools-prefix="tools-target-"/>
+        <package name="musl-libc-dev"
+            cross-tools-prefix=""/>
     </requires>
 
     <contents subdir="libgcc-dev">

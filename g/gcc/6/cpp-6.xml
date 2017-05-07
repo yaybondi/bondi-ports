@@ -13,7 +13,8 @@
     </description>
 
     <requires>
-        <package name="gcc-6-base" version="=="/>
+        <package name="gcc-6-base" version="=="
+            cross-tools-prefix="tools-target-"/>
     </requires>
 
     <contents subdir="cpp-6">

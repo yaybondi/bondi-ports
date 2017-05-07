@@ -8,9 +8,12 @@
     </description>
 
     <requires>
-        <package name="gcc-6-base" version="=="/>
-        <package name="gcc-6" version="=="/>
-        <package name="libstdc++-6-dev" version="=="/>
+        <package name="gcc-6-base" version="=="
+            cross-tools-prefix="tools-target-"/>
+        <package name="gcc-6" version="=="
+            cross-tools-prefix="tools-target-"/>
+        <package name="libstdc++-6-dev" version="=="
+            cross-tools-prefix="tools-target-"/>
     </requires>
 
     <contents subdir="g++-6">

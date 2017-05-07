@@ -14,8 +14,10 @@
     </description>
 
     <requires>
-        <package name="gcc-6-base" version="=="/>
-        <package name="libgcc-dev" version="=="/>
+        <package name="gcc-6-base" version="=="
+            cross-tools-prefix="tools-target-"/>
+        <package name="libgcc-dev" version="=="
+            cross-tools-prefix="tools-target-"/>
     </requires>
 
     <contents subdir="libstdc++-6-dev">
