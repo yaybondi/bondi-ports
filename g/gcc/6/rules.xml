@@ -21,7 +21,7 @@ cd "$BOLT_SOURCE_DIR"
 if [ "$BOLT_BUILD_FOR" = "tools" ]; then
     # fix musl interp to be located in /tools/lib
     grep -rl '"[^"]*/lib/ld-musl' gcc/config | while read filename; do
-        sed -i 's@"[^"]*/lib/ld-musl@"/tool/lib/ld-musl@g' "$filename"
+        sed -i 's@"[^"]*/lib/ld-musl@"/tools/lib/ld-musl@g' "$filename"
     done
 else
     # fix musl interp to be located in /usr/lib
