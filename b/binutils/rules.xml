@@ -3,7 +3,12 @@
     <prepare>
       <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
 if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
+    grep -r 'ldscripts' * | grep -v 'cross-ldscripts' | cut -d':' -f1 | \
+            sort -u | while read FILENAME; do
+        sed -i 's/ldscripts/cross-ldscripts/g' "$FILENAME"
+    done
     EXTRA_OPTS="--disable-shared --disable-plugins \
         --with-sysroot=/"
 elif [ "$BOLT_BUILD_FOR" = "tools" ]; then
@@ -81,8 +86,13 @@ install -d -m 0755 "$PKG_BINUTILS_DEV/$BOLT_INSTALL_PREFIX"
 mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/"* \
     "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/bin/"
 
-mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/ldscripts" \
-    "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/lib/"
+if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
+    mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/cross-ldscripts" \
+        "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/lib/"
+else
+    mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/ldscripts" \
+        "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/lib/"
+fi
 
 if [ "$BOLT_BUILD_FOR" != "cross-tools" ]; then
     rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/"*.la
