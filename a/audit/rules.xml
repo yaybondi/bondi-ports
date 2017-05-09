@@ -5,14 +5,16 @@
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
+    --prefix="$BOLT_INSTALL_PREFIX" \
     --sysconfdir=/etc \
     --disable-zos-remote \
     --enable-shared=audit \
     --with-libcap-ng \
     --with-arm --with-aarch64 \
     --without-python \
-    --without-python3
+    --without-python3 \
+    --build="$BOLT_BUILD_TYPE" \
+    --host="$BOLT_HOST_TYPE"
 
     ]]>
     </prepare>
@@ -33,9 +35,9 @@ cd "$BOLT_BUILD_DIR"
 
 make DESTDIR="$BOLT_INSTALL_DIR" install
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/usr/lib/systemd/system"
+install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/systemd/system"
 install -m 0644 "$BOLT_SOURCE_DIR/init.d/auditd.service" \
-    "$BOLT_INSTALL_DIR/usr/lib/systemd/system"
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/systemd/system"
 
 install -d -m 0755 "$BOLT_INSTALL_DIR/etc/audit/rules.d"
 install -m 0640 "$BOLT_SOURCE_DIR/rules/10-base-config.rules" \

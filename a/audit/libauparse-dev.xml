@@ -14,10 +14,10 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/auparse-defs.h"/>
-        <file src="/usr/include/auparse.h"/>
-        <file src="/usr/lib/libauparse.a"/>
-        <file src="/usr/lib/libauparse.so"/>
-        <file src="/usr/lib/pkgconfig/auparse.pc"/>
+        <file src="${prefix}/include/auparse-defs.h"/>
+        <file src="${prefix}/include/auparse.h"/>
+        <file src="${prefix}/lib/libauparse.a"/>
+        <file src="${prefix}/lib/libauparse.so"/>
+        <file src="${prefix}/lib/pkgconfig/auparse.pc"/>
     </contents>
 </package>

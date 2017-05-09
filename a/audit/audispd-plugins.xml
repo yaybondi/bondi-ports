@@ -17,7 +17,7 @@
     <contents>
         <file src="/etc/audisp/audisp-remote.conf"/>
         <file src="/etc/audisp/plugins.d/au-remote.conf"/>
-        <file src="/usr/sbin/audisp-remote"/>
+        <file src="${prefix}/sbin/audisp-remote"/>
 
         <!-- explicit mode overrides -->
         <dir src="/etc/audisp" mode="0750"/>

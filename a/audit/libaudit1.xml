@@ -14,6 +14,6 @@
     </requires>
 
     <contents>
-        <file src="/usr/lib/libaudit.so.*"/>
+        <file src="${prefix}/lib/libaudit.so.*"/>
     </contents>
 </package>

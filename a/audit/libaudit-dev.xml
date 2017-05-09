@@ -15,10 +15,10 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/libaudit.h"/>
-        <file src="/usr/lib/libaudit.a"/>
-        <file src="/usr/lib/libaudit.so"/>
-        <file src="/usr/lib/pkgconfig/audit.pc"/>
-        <file src="/usr/share/aclocal/audit.m4"/>
+        <file src="${prefix}/include/libaudit.h"/>
+        <file src="${prefix}/lib/libaudit.a"/>
+        <file src="${prefix}/lib/libaudit.so"/>
+        <file src="${prefix}/lib/pkgconfig/audit.pc"/>
+        <file src="${prefix}/share/aclocal/audit.m4"/>
     </contents>
 </package>

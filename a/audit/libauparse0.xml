@@ -13,6 +13,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libauparse.so.*"/>
+        <file src="${prefix}/lib/libauparse.so.*"/>
     </contents>
 </package>
