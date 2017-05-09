@@ -13,6 +13,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libsigsegv.so.*"/>
+        <file src="${prefix}/lib/libsigsegv.so.*"/>
     </contents>
 </package>

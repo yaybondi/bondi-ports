@@ -10,7 +10,9 @@ cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
     --enable-relocatable \
     --enable-shared \
-    --prefix=/usr
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_BUILD_TYPE" \
+    --host="$BOLT_HOST_TYPE"
 
     ]]>
     </prepare>
