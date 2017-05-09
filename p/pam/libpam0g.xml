@@ -13,6 +13,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/lib*.so.*"/>
+        <file src="${prefix}/lib/lib*.so.*"/>
     </contents>
 </package>

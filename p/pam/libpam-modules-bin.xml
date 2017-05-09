@@ -9,6 +9,6 @@
     </description>
 
     <contents>
-        <file src="/usr/sbin/"/>
+        <file src="${prefix}/sbin/"/>
     </contents>
 </package>

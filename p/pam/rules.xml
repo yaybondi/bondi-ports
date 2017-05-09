@@ -8,7 +8,9 @@ autoreconf -vfi
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_BUILD_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
     --sysconfdir=/etc \
     --disable-nls \
     --disable-cracklib \
@@ -16,7 +18,8 @@ $BOLT_SOURCE_DIR/configure \
     --disable-rpath \
     --enable-shared \
     --enable-static \
-    --includedir="/usr/include/security"
+    --enable-db=no \
+    --includedir="$BOLT_INSTALL_PREFIX/include/security"
 
     ]]>
     </prepare>
@@ -25,7 +28,7 @@ $BOLT_SOURCE_DIR/configure \
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+make CC="${BOLT_TARGET_TYPE}-gcc" -j"$BOLT_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -44,8 +47,11 @@ install -m 644 "$BOLT_WORK_DIR/extra/etc/pam.d/other" \
     "$BOLT_INSTALL_DIR/etc/pam.d/"
 
 cd "$BOLT_INSTALL_DIR"
-mv sbin usr/
-mv lib  usr/
+
+if [ "$BOLT_BUILD_FOR" = "target" ]; then
+    mv sbin usr/
+    mv lib  usr/
+fi
 
     ]]>
     </install>
