@@ -9,8 +9,7 @@ if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
             sort -u | while read FILENAME; do
         sed -i 's/ldscripts/cross-ldscripts/g' "$FILENAME"
     done
-    EXTRA_OPTS="--disable-shared --disable-plugins \
-        --with-sysroot=/"
+    EXTRA_OPTS="--disable-shared --enable-plugins --with-sysroot=/"
 elif [ "$BOLT_BUILD_FOR" = "tools" ]; then
     EXTRA_OPTS="--enable-shared --enable-plugins --with-sysroot=/tools
         --program-prefix=${BOLT_TARGET_TYPE}-"
