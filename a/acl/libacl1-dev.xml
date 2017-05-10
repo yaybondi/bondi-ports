@@ -15,8 +15,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/libacl.a"/>
-        <file src="/usr/lib/libacl.so"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libacl.a"/>
+        <file src="${prefix}/lib/libacl.so"/>
     </contents>
 </package>
