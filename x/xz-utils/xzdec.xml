@@ -28,7 +28,7 @@
     </description>
 
     <contents>
-        <file src="/usr/bin/lzmadec"/>
-        <file src="/usr/bin/xzdec"/>
+        <file src="${prefix}/bin/lzmadec"/>
+        <file src="${prefix}/bin/xzdec"/>
     </contents>
 </package>

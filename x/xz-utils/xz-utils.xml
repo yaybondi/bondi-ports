@@ -28,14 +28,14 @@
     </description>
 
     <contents>
-        <file src="/usr/bin/lzmainfo"/>
-        <file src="/usr/bin/unxz"/>
-        <file src="/usr/bin/xz"/>
-        <file src="/usr/bin/xz*grep"/>
-        <file src="/usr/bin/xzcat"/>
-        <file src="/usr/bin/xzcmp"/>
-        <file src="/usr/bin/xzdiff"/>
-        <file src="/usr/bin/xzless"/>
-        <file src="/usr/bin/xzmore"/>
+        <file src="${prefix}/bin/lzmainfo"/>
+        <file src="${prefix}/bin/unxz"/>
+        <file src="${prefix}/bin/xz"/>
+        <file src="${prefix}/bin/xz*grep"/>
+        <file src="${prefix}/bin/xzcat"/>
+        <file src="${prefix}/bin/xzcmp"/>
+        <file src="${prefix}/bin/xzdiff"/>
+        <file src="${prefix}/bin/xzless"/>
+        <file src="${prefix}/bin/xzmore"/>
     </contents>
 </package>
