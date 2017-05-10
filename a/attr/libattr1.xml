@@ -9,6 +9,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libattr.so.*"/>
+        <file src="${prefix}/lib/libattr.so.*"/>
     </contents>
 </package>

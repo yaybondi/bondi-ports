@@ -20,8 +20,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/attr"/>
-        <file src="/usr/lib/libattr.a"/>
-        <file src="/usr/lib/libattr.so"/>
+        <file src="${prefix}/include/attr"/>
+        <file src="${prefix}/lib/libattr.a"/>
+        <file src="${prefix}/lib/libattr.so"/>
     </contents>
 </package>
