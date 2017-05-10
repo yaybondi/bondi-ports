@@ -5,7 +5,9 @@
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_BUILD_TYPE" \
+    --host="$BOLT_HOST_TYPE"
 
     ]]>
     </prepare>
@@ -19,7 +21,12 @@ make -j"$BOLT_PARALLEL_JOBS"
 rm -rf examples/rlfe
 cp -a "$BOLT_SOURCE_DIR/examples/rlfe" "$BOLT_BUILD_DIR/examples/"
 ln -sf "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/examples/rlfe/readline"
-cd "$BOLT_BUILD_DIR/examples/rlfe" && ./configure --prefix=/usr
+
+cd "$BOLT_BUILD_DIR/examples/rlfe" && ./configure \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE"
+
 make -C "$BOLT_BUILD_DIR/examples/rlfe" \
     CFLAGS="$CFLAGS -D_GNU_SOURCE" CPPFLAGS="$CPPFLAGS" \
     LDFLAGS="$LDFLAGS -g -L$BOLT_BUILD_DIR/shlib" \
@@ -34,7 +41,8 @@ make -C "$BOLT_BUILD_DIR/examples/rlfe" \
 cd "$BOLT_BUILD_DIR"
 make DESTDIR="$BOLT_INSTALL_DIR" install
 
-cp -p "$BOLT_BUILD_DIR/examples/rlfe/rlfe" "$BOLT_INSTALL_DIR/usr/bin/"
+cp -p "$BOLT_BUILD_DIR/examples/rlfe/rlfe" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/"
 
     ]]>
     </install>
