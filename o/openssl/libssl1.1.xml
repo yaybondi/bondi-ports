@@ -13,7 +13,7 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/*.so.*.*"/>
-        <file src="/usr/lib/engines-*/*.so"/>
+        <file src="${prefix}/lib/*.so.*.*"/>
+        <file src="${prefix}/lib/engines-*/*.so"/>
     </contents>
 </package>

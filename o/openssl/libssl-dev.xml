@@ -18,11 +18,11 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/openssl/*"/>
-        <file src="/usr/lib/libcrypto.a"/>
-        <file src="/usr/lib/libcrypto.so"/>
-        <file src="/usr/lib/libssl.a"/>
-        <file src="/usr/lib/libssl.so"/>
-        <file src="/usr/lib/pkgconfig"/>
+        <file src="${prefix}/include/openssl/*"/>
+        <file src="${prefix}/lib/libcrypto.a"/>
+        <file src="${prefix}/lib/libcrypto.so"/>
+        <file src="${prefix}/lib/libssl.a"/>
+        <file src="${prefix}/lib/libssl.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
     </contents>
 </package>

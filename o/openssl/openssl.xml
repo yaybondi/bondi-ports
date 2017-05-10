@@ -8,7 +8,7 @@
         Internet.
         </p>
         <p>
-        It contains the general-purpose command line binary /usr/bin/openssl,
+        It contains the general-purpose command line binary ${prefix}/bin/openssl,
         useful for cryptographic operations such as:
         * creating RSA, DH, and DSA key parameters;
         * creating X.509 certificates, CSRs, and CRLs;
@@ -22,10 +22,10 @@
     <contents>
         <dir src="/etc/ssl/private" mode="0710" group="ssl-cert"/>
         <file src="/etc/ssl"/>
-        <file src="/usr/bin/*"/>
-        <file src="/usr/lib/ssl/certs"/>
-        <file src="/usr/lib/ssl/misc/*"/>
-        <file src="/usr/lib/ssl/openssl.cnf"/>
-        <file src="/usr/lib/ssl/private"/>
+        <file src="${prefix}/bin/*"/>
+        <file src="${prefix}/lib/ssl/certs"/>
+        <file src="${prefix}/lib/ssl/misc/*"/>
+        <file src="${prefix}/lib/ssl/openssl.cnf"/>
+        <file src="${prefix}/lib/ssl/private"/>
     </contents>
 </package>

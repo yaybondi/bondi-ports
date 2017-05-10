@@ -3,10 +3,13 @@
     <prepare>
     <![CDATA[
 
+export MACHINE="`echo $BOLT_HOST_TYPE | cut -d'-' -f1`"
+
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/config \
-    --prefix=/usr \
-    --openssldir=/usr/lib/ssl \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --cross-compile-prefix="${BOLT_HOST_TYPE}-" \
+    --openssldir="$BOLT_INSTALL_PREFIX/lib/ssl" \
     --libdir=lib \
     \
     no-idea no-mdc2 no-rc5 no-zlib no-ssl3 no-ssl3-method \
@@ -33,8 +36,8 @@ make DESTDIR="$BOLT_INSTALL_DIR" install
 mkdir -p "$BOLT_INSTALL_DIR/etc/ssl"
 
 for item in certs openssl.cnf private; do
-    mv "$BOLT_INSTALL_DIR/usr/lib/ssl/$item" "$BOLT_INSTALL_DIR/etc/ssl/"
-    ln -s "/etc/ssl/$item" "$BOLT_INSTALL_DIR/usr/lib/ssl/"
+    mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/ssl/$item" "$BOLT_INSTALL_DIR/etc/ssl/"
+    ln -s "/etc/ssl/$item" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/ssl/"
 done
 
 chmod 0700 "$BOLT_INSTALL_DIR/etc/ssl/private"
