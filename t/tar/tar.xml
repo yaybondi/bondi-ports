@@ -12,8 +12,8 @@
     </description>
 
     <contents>
-        <file src="/usr/bin"/>
-        <dir src="/usr/lib/tar"/>
-        <file src="/usr/sbin/rmt-tar"/>
+        <file src="${prefix}/bin"/>
+        <dir src="${prefix}/lib/tar"/>
+        <file src="${prefix}/sbin/rmt-tar"/>
     </contents>
 </package>

@@ -8,9 +8,11 @@ autoreconf -vfi
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_BUILD_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
     --disable-nls \
-    --libexecdir=/usr/lib/tar \
+    --libexecdir="$BOLT_INSTALL_PREFIX/lib/tar" \
     --enable-backup-scripts \
     --with-lzma=xz \
     --disable-silent-rules
@@ -33,11 +35,11 @@ make -j"$BOLT_PARALLEL_JOBS"
 cd "$BOLT_BUILD_DIR"
 make DESTDIR="$BOLT_INSTALL_DIR" install
 
-mv "$BOLT_INSTALL_DIR/usr/lib/tar/rmt" "$BOLT_INSTALL_DIR/usr/sbin/rmt-tar"
-mv "$BOLT_INSTALL_DIR/usr/sbin/backup" "$BOLT_INSTALL_DIR/usr/sbin/tar-backup"
-mv "$BOLT_INSTALL_DIR/usr/sbin/restore" "$BOLT_INSTALL_DIR/usr/sbin/tar-restore"
-mv "$BOLT_INSTALL_DIR/usr/lib/tar/backup.sh" "$BOLT_INSTALL_DIR/usr/lib/tar/"
-mv "$BOLT_INSTALL_DIR/usr/lib/tar/dump-remind" "$BOLT_INSTALL_DIR/usr/lib/tar/"
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/tar/rmt" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin/rmt-tar"
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin/backup" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin/tar-backup"
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin/restore" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin/tar-restore"
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/tar/backup.sh" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/tar/"
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/tar/dump-remind" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/tar/"
 
     ]]>
     </install>

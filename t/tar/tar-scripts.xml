@@ -9,8 +9,8 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/tar"/>
-        <file src="/usr/sbin/tar-backup"/>
-        <file src="/usr/sbin/tar-restore"/>
+        <file src="${prefix}/lib/tar"/>
+        <file src="${prefix}/sbin/tar-backup"/>
+        <file src="${prefix}/sbin/tar-restore"/>
     </contents>
 </package>
