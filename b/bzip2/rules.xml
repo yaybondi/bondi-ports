@@ -12,7 +12,7 @@ true
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+make CC="${BOLT_HOST_TYPE}-gcc" -j"$BOLT_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -21,17 +21,17 @@ make -j"$BOLT_PARALLEL_JOBS"
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-make PREFIX="$BOLT_INSTALL_DIR/usr" install
+make PREFIX="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" install
 
-ln -sf bzdiff "$BOLT_INSTALL_DIR/usr/bin/bzcmp"
-ln -sf bzgrep "$BOLT_INSTALL_DIR/usr/bin/bzegrep"
-ln -sf bzgrep "$BOLT_INSTALL_DIR/usr/bin/bzfgrep"
-ln -sf bzmore "$BOLT_INSTALL_DIR/usr/bin/bzless"
+ln -sf bzdiff "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzcmp"
+ln -sf bzgrep "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzegrep"
+ln -sf bzgrep "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzfgrep"
+ln -sf bzmore "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzless"
 
-rm "$BOLT_INSTALL_DIR/usr/bin/bzcat" "$BOLT_INSTALL_DIR/usr/bin/bzip2"
+rm "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzcat" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzip2"
 
-ln -sf bunzip2 "$BOLT_INSTALL_DIR/usr/bin/bzcat"
-ln -sf bunzip2 "$BOLT_INSTALL_DIR/usr/bin/bzip2"
+ln -sf bunzip2 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzcat"
+ln -sf bunzip2 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzip2"
 
     ]]>
     </install>

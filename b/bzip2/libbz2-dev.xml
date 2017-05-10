@@ -29,8 +29,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/libbz2.a"/>
-        <file src="/usr/lib/libbz2.so"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libbz2.a"/>
+        <file src="${prefix}/lib/libbz2.so"/>
     </contents>
 </package>

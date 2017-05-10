@@ -25,6 +25,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libbz2.so.*"/>
+        <file src="${prefix}/lib/libbz2.so.*"/>
     </contents>
 </package>
