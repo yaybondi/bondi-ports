@@ -3,6 +3,9 @@
     <prepare>
     <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
+bh_autotools_dev_update
+
 export CFLAGS="-O2 -fno-strict-aliasing \
     -DSQLITE_SECURE_DELETE -DSQLITE_ENABLE_COLUMN_METADATA \
     -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS \
@@ -21,14 +24,17 @@ export CFLAGS="-O2 -fno-strict-aliasing \
     -DSQLITE_MAX_VARIABLE_NUMBER=250000"
 
 cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
+"$BOLT_SOURCE_DIR/configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_BUILD_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
     --enable-threadsafe \
     --enable-load-extension \
     --enable-json1 \
     --enable-fts4 \
     --enable-fts5 \
-    --disable-tcl
+    --disable-tcl \
+    --disable-readline
 
     ]]>
     </prepare>
@@ -51,10 +57,10 @@ make lemon
 cd "$BOLT_BUILD_DIR"
 make DESTDIR="$BOLT_INSTALL_DIR" install
 
-install -d "$BOLT_INSTALL_DIR/usr/share/lemon"
-install -m 0664 tool/lempar.c "$BOLT_INSTALL_DIR/usr/share/lemon/"
-install -m 0775 sqldiff "$BOLT_INSTALL_DIR/usr/bin"
-install -m 0775 lemon "$BOLT_INSTALL_DIR/usr/bin"
+install -d "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/lemon"
+install -m 0664 tool/lempar.c "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/lemon/"
+install -m 0775 sqldiff "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin"
+install -m 0775 lemon "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin"
 
     ]]>
     </install>

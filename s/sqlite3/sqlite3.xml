@@ -14,7 +14,7 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/sqldiff"/>
-        <file src="/usr/bin/sqlite3"/>
+        <file src="${prefix}/bin/sqldiff"/>
+        <file src="${prefix}/bin/sqlite3"/>
     </contents>
 </package>

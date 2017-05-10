@@ -10,6 +10,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libsqlite3.so.*"/>
+        <file src="${prefix}/lib/libsqlite3.so.*"/>
     </contents>
 </package>

@@ -16,7 +16,7 @@
     </description>
 
     <contents>
-        <file src="/usr/bin/lemon"/>
-        <file src="/usr/share/lemon"/>
+        <file src="${prefix}/bin/lemon"/>
+        <file src="${prefix}/share/lemon"/>
     </contents>
 </package>
