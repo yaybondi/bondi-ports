@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
     <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
+        <def name="BOLT_BUILD_DIR" value="sources"/>
     </defines>
 
     <source name="autotools-dev" architecture-independent="true">
@@ -16,7 +16,7 @@
 
         <sources>
             <file src="autotools-dev-20161112.1.tar.gz" subdir="sources"
-                sha256sum="57fe1ed11a3d71acf61260b92824e41af9a96f223509b9f45d1d7cb2d2bd95a4"/>
+                sha256sum="2e10a7da4a8e6b62449487037ff48d6ac830265fffdd2e89a66c62201234c75c"/>
         </sources>
 
         <xi:include href="rules.xml"/>

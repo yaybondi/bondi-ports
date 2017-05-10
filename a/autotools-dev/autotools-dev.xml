@@ -7,25 +7,9 @@
         config.sub, used by the automake and libtool packages. It provides
         the canonical copy of those files for other packages as well.
         </p>
-        <p>
-        It also documents in /usr/share/doc/autotools-dev/README.Debian.gz
-        best practices and guidelines for using autoconf, automake and
-        friends on Debian packages. This is a must-read for any developers
-        packaging software that uses the GNU autotools, or GNU gettext.
-        </p>
-        <p>
-        Additionally this package provides seamless integration into Debhelper
-        or CDBS, allowing maintainers to easily update config.{guess,sub} files
-        in their packages.
-        </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <dir src="/usr/bin"/>
-        <dir src="/usr/share/misc"/>
-        <dir src="/usr/share/perl5/Debian/Debhelper/Sequence"/>
+        <file src="${prefix}/share/misc"/>
     </contents>
 </package>
