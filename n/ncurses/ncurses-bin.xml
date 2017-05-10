@@ -14,15 +14,15 @@
     </description>
 
     <contents>
-        <file src="/usr/bin/captoinfo"/>
-        <file src="/usr/bin/clear"/>
-        <file src="/usr/bin/infocmp"/>
-        <file src="/usr/bin/infotocap"/>
-        <file src="/usr/bin/reset"/>
-        <file src="/usr/bin/tabs"/>
-        <file src="/usr/bin/tic"/>
-        <file src="/usr/bin/toe"/>
-        <file src="/usr/bin/tput"/>
-        <file src="/usr/bin/tset"/>
+        <file src="${prefix}/bin/captoinfo"/>
+        <file src="${prefix}/bin/clear"/>
+        <file src="${prefix}/bin/infocmp"/>
+        <file src="${prefix}/bin/infotocap"/>
+        <file src="${prefix}/bin/reset"/>
+        <file src="${prefix}/bin/tabs"/>
+        <file src="${prefix}/bin/tic"/>
+        <file src="${prefix}/bin/toe"/>
+        <file src="${prefix}/bin/tput"/>
+        <file src="${prefix}/bin/tset"/>
     </contents>
 </package>

@@ -15,7 +15,7 @@
 
     <contents>
         <file src="/etc/terminfo"/>
-        <file src="/usr/lib/terminfo"/>
-        <file src="/usr/share/tabset"/>
+        <file src="${prefix}/lib/terminfo"/>
+        <file src="${prefix}/share/tabset"/>
     </contents>
 </package>

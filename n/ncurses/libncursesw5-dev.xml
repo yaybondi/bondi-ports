@@ -22,21 +22,21 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/ncursesw5-config"/>
-        <file src="/usr/include/ncursesw"/>
-        <file src="/usr/lib/libformw.a"/>
-        <file src="/usr/lib/libformw.so"/>
-        <file src="/usr/lib/libmenuw.a"/>
-        <file src="/usr/lib/libmenuw.so"/>
-        <file src="/usr/lib/libncurses++w.a"/>
-        <file src="/usr/lib/libncursesw.a"/>
-        <file src="/usr/lib/libncursesw.so"/>
-        <file src="/usr/lib/libpanelw.a"/>
-        <file src="/usr/lib/libpanelw.so"/>
-        <file src="/usr/lib/pkgconfig/formw.pc"/>
-        <file src="/usr/lib/pkgconfig/menuw.pc"/>
-        <file src="/usr/lib/pkgconfig/ncurses++w.pc"/>
-        <file src="/usr/lib/pkgconfig/ncursesw.pc"/>
-        <file src="/usr/lib/pkgconfig/panelw.pc"/>
+        <file src="${prefix}/bin/ncursesw5-config"/>
+        <file src="${prefix}/include/ncursesw"/>
+        <file src="${prefix}/lib/libformw.a"/>
+        <file src="${prefix}/lib/libformw.so"/>
+        <file src="${prefix}/lib/libmenuw.a"/>
+        <file src="${prefix}/lib/libmenuw.so"/>
+        <file src="${prefix}/lib/libncurses++w.a"/>
+        <file src="${prefix}/lib/libncursesw.a"/>
+        <file src="${prefix}/lib/libncursesw.so"/>
+        <file src="${prefix}/lib/libpanelw.a"/>
+        <file src="${prefix}/lib/libpanelw.so"/>
+        <file src="${prefix}/lib/pkgconfig/formw.pc"/>
+        <file src="${prefix}/lib/pkgconfig/menuw.pc"/>
+        <file src="${prefix}/lib/pkgconfig/ncurses++w.pc"/>
+        <file src="${prefix}/lib/pkgconfig/ncursesw.pc"/>
+        <file src="${prefix}/lib/pkgconfig/panelw.pc"/>
     </contents>
 </package>

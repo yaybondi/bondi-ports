@@ -17,9 +17,9 @@
     </requires>
 
     <contents>
-        <file src="/usr/lib/libformw.so.*"/>
-        <file src="/usr/lib/libmenuw.so.*"/>
-        <file src="/usr/lib/libncursesw.so.*"/>
-        <file src="/usr/lib/libpanelw.so.*"/>
+        <file src="${prefix}/lib/libformw.so.*"/>
+        <file src="${prefix}/lib/libmenuw.so.*"/>
+        <file src="${prefix}/lib/libncursesw.so.*"/>
+        <file src="${prefix}/lib/libpanelw.so.*"/>
     </contents>
 </package>

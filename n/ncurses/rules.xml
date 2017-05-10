@@ -7,7 +7,8 @@ cd "$BOLT_BUILD_DIR"
 mkdir -p curses && cd curses
 
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --host="$BOLT_HOST_TYPE" \
     --sysconfdir=/etc \
     --enable-echo \
     --enable-const \
@@ -17,8 +18,8 @@ $BOLT_SOURCE_DIR/configure \
     --disable-rpath \
     --disable-lp64 \
     --with-default-terminfo-dir=/etc/terminfo \
-    --with-terminfo-dirs="/etc/terminfo:/usr/lib/terminfo:/usr/share/terminfo" \
-    --with-pkg-config-libdir="/usr/lib/pkgconfig" \
+    --with-terminfo-dirs="/etc/terminfo:$BOLT_INSTALL_PREFIX/lib/terminfo:$BOLT_INSTALL_PREFIX/share/terminfo" \
+    --with-pkg-config-libdir="$BOLT_INSTALL_PREFIX/lib/pkgconfig" \
     --with-ticlib=tic \
     --with-termlib=tinfo \
     --with-versioned-syms \
@@ -37,8 +38,9 @@ cd "$BOLT_BUILD_DIR"
 mkdir -p cursesw && cd cursesw
 
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --includedir=/usr/include/ncursesw \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --host="$BOLT_HOST_TYPE" \
+    --includedir="$BOLT_INSTALL_PREFIX/include/ncursesw" \
     --sysconfdir=/etc \
     --enable-echo \
     --enable-const \
@@ -50,8 +52,8 @@ $BOLT_SOURCE_DIR/configure \
     --disable-lp64 \
     --with-ncursesw \
     --with-default-terminfo-dir=/etc/terminfo \
-    --with-terminfo-dirs="/etc/terminfo:/usr/lib/terminfo:/usr/share/terminfo" \
-    --with-pkg-config-libdir="/usr/lib/pkgconfig" \
+    --with-terminfo-dirs="/etc/terminfo:$BOLT_INSTALL_PREFIX/lib/terminfo:$BOLT_INSTALL_PREFIX/share/terminfo" \
+    --with-pkg-config-libdir="$BOLT_INSTALL_PREFIX/lib/pkgconfig" \
     --with-ticlib=tic \
     --with-termlib=tinfo \
     --with-versioned-syms \
@@ -101,33 +103,43 @@ cd "$BOLT_BUILD_DIR/cursesw"
 make DESTDIR="$BOLT_INSTALL_DIR" install
 
 # Debian uses a linker script instead of a symlink.
-rm -f "$BOLT_INSTALL_DIR/usr/lib/libtermcap.so"
-echo "GROUP( libtinfo.so )" > "$BOLT_INSTALL_DIR/usr/lib/libtermcap.so"
-ln -sf libtinfo.a "$BOLT_INSTALL_DIR/usr/lib/libtermcap.a"
+rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libtermcap.so"
+echo "GROUP( libtinfo.so )" > "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libtermcap.so"
+ln -sf libtinfo.a "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libtermcap.a"
 
 # Always add -ltinfo when linking with -lncurses or -lnursesw
-rm -f "$BOLT_INSTALL_DIR/usr/lib/libncurses.so"
-echo "INPUT(libncurses.so.5 -ltinfo)" > "$BOLT_INSTALL_DIR/usr/lib/libncurses.so"
-rm -f "$BOLT_INSTALL_DIR/usr/lib/libncursesw.so"
-echo "INPUT(libncursesw.so.5 -ltinfo)" > "$BOLT_INSTALL_DIR/usr/lib/libncursesw.so"
+rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libncurses.so"
+echo "INPUT(libncurses.so.5 -ltinfo)" > "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libncurses.so"
+rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libncursesw.so"
+echo "INPUT(libncursesw.so.5 -ltinfo)" > "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libncursesw.so"
 
 # Move terminfo files to the right place.
-mv "$BOLT_INSTALL_DIR/etc/terminfo" "$BOLT_INSTALL_DIR/usr/share/terminfo"
+mv "$BOLT_INSTALL_DIR/etc/terminfo" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/terminfo"
 
 # Remove blacklisted terminal types and other stuff we don't install
-cd "$BOLT_INSTALL_DIR/usr/share/terminfo" && rm -f $BADTERMINFO && cd -
+cd "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/terminfo" && rm -f $BADTERMINFO && cd -
 
 # Move ncurses-base terminfo entries to /lib/terminfo.
 for f in $LIBTERMINFOFILES; do
-    dir="$BOLT_INSTALL_DIR/usr/lib/terminfo/$(dirname $f)"
+    dir="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/terminfo/$(dirname $f)"
     mkdir -p "$dir"
-    if [ -f "$BOLT_INSTALL_DIR/usr/share/terminfo/$f" ]; then
-        mv "$BOLT_INSTALL_DIR/usr/share/terminfo/$f" "$dir"
+    if [ -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/terminfo/$f" ]; then
+        mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/terminfo/$f" "$dir"
     fi
 done
 
 # Create an empty /etc/terminfo for the sysadmin.
 mkdir -p "$BOLT_INSTALL_DIR/etc/terminfo"
+
+# Symlinks libcurses.a and libcurses.so seem to be missing when prefix != /usr
+if [ ! -e "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libcurses.a" ]; then
+    ln -sf libncurses.a \
+        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libcurses.a"
+fi
+if [ ! -e "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libcurses.so" ]; then
+    ln -sf libncurses.so \
+        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libcurses.so"
+fi
 
     ]]>
     </install>

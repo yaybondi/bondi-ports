@@ -19,23 +19,23 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/ncurses5-config"/>
-        <file src="/usr/include/*.h"/>
-        <file src="/usr/lib/libcurses.a"/>
-        <file src="/usr/lib/libcurses.so"/>
-        <file src="/usr/lib/libform.a"/>
-        <file src="/usr/lib/libform.so"/>
-        <file src="/usr/lib/libmenu.a"/>
-        <file src="/usr/lib/libmenu.so"/>
-        <file src="/usr/lib/libncurses++.a"/>
-        <file src="/usr/lib/libncurses.a"/>
-        <file src="/usr/lib/libncurses.so"/>
-        <file src="/usr/lib/libpanel.a"/>
-        <file src="/usr/lib/libpanel.so"/>
-        <file src="/usr/lib/pkgconfig/form.pc"/>
-        <file src="/usr/lib/pkgconfig/menu.pc"/>
-        <file src="/usr/lib/pkgconfig/ncurses++.pc"/>
-        <file src="/usr/lib/pkgconfig/ncurses.pc"/>
-        <file src="/usr/lib/pkgconfig/panel.pc"/>
+        <file src="${prefix}/bin/ncurses5-config"/>
+        <file src="${prefix}/include/*.h"/>
+        <file src="${prefix}/lib/libcurses.a"/>
+        <file src="${prefix}/lib/libcurses.so"/>
+        <file src="${prefix}/lib/libform.a"/>
+        <file src="${prefix}/lib/libform.so"/>
+        <file src="${prefix}/lib/libmenu.a"/>
+        <file src="${prefix}/lib/libmenu.so"/>
+        <file src="${prefix}/lib/libncurses++.a"/>
+        <file src="${prefix}/lib/libncurses.a"/>
+        <file src="${prefix}/lib/libncurses.so"/>
+        <file src="${prefix}/lib/libpanel.a"/>
+        <file src="${prefix}/lib/libpanel.so"/>
+        <file src="${prefix}/lib/pkgconfig/form.pc"/>
+        <file src="${prefix}/lib/pkgconfig/menu.pc"/>
+        <file src="${prefix}/lib/pkgconfig/ncurses++.pc"/>
+        <file src="${prefix}/lib/pkgconfig/ncurses.pc"/>
+        <file src="${prefix}/lib/pkgconfig/panel.pc"/>
     </contents>
 </package>

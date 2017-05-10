@@ -13,6 +13,6 @@
     </description>
 
     <contents>
-        <file src="/usr/share/terminfo"/>
+        <file src="${prefix}/share/terminfo"/>
     </contents>
 </package>

@@ -12,7 +12,7 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libtic.so.*"/>
-        <file src="/usr/lib/libtinfo.so.*"/>
+        <file src="${prefix}/lib/libtic.so.*"/>
+        <file src="${prefix}/lib/libtinfo.so.*"/>
     </contents>
 </package>

@@ -17,9 +17,9 @@
     </requires>
 
     <contents>
-        <file src="/usr/lib/libform.so.*"/>
-        <file src="/usr/lib/libmenu.so.*"/>
-        <file src="/usr/lib/libncurses.so.*"/>
-        <file src="/usr/lib/libpanel.so.*"/>
+        <file src="${prefix}/lib/libform.so.*"/>
+        <file src="${prefix}/lib/libmenu.so.*"/>
+        <file src="${prefix}/lib/libncurses.so.*"/>
+        <file src="${prefix}/lib/libpanel.so.*"/>
     </contents>
 </package>
