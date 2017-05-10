@@ -18,10 +18,10 @@
     </requires>
 
     <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/libexpat.a"/>
-        <file src="/usr/lib/libexpat.so"/>
-        <file src="/usr/lib/pkgconfig"/>
-        <file src="/usr/share/aclocal"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libexpat.a"/>
+        <file src="${prefix}/lib/libexpat.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
+        <file src="${prefix}/share/aclocal"/>
     </contents>
 </package>
