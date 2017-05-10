@@ -4,16 +4,21 @@
     <![CDATA[
 
 cd "$BOLT_SOURCE_DIR"
+bh_autotools_dev_update
 autoreconf -vfi
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_BUILD_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
     --without-openssl \
+    --without-xml2 \
     --with-nettle \
     --enable-bsdtar=shared \
     --enable-bsdcpio=shared \
-    --enable-bsdcat=shared
+    --enable-bsdcat=shared \
+    --disable-silent-rules
 
     ]]>
     </prepare>
