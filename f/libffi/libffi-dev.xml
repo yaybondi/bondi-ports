@@ -18,10 +18,10 @@
     </requires>
 
     <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/libffi.a"/>
-        <file src="/usr/lib/libffi.so"/>
-        <file src="/usr/lib/libffi_pic.a"/>
-        <file src="/usr/lib/pkgconfig"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libffi.a"/>
+        <file src="${prefix}/lib/libffi.so"/>
+        <file src="${prefix}/lib/libffi_pic.a"/>
+        <file src="${prefix}/lib/pkgconfig"/>
     </contents>
 </package>

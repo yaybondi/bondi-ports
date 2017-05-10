@@ -5,8 +5,9 @@
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_BUILD_TYPE" \
+    --host="$BOLT_HOST_TYPE"
 
     ]]>
     </prepare>
@@ -27,7 +28,7 @@ cd "$BOLT_BUILD_DIR"
 make DESTDIR="$BOLT_INSTALL_DIR" install
 
 cp "$BOLT_BUILD_DIR/.libs/libffi_convenience.a" \
-    "$BOLT_INSTALL_DIR/usr/lib/libffi_pic.a"
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libffi_pic.a"
 
     ]]>
     </install>
