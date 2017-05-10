@@ -13,8 +13,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/libmpdec.a"/>
-        <file src="/usr/lib/libmpdec.so"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libmpdec.a"/>
+        <file src="${prefix}/lib/libmpdec.so"/>
     </contents>
 </package>
