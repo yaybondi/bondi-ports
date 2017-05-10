@@ -3,12 +3,17 @@
     <prepare>
     <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
+bh_autotools_dev_update
+
 cd "$BOLT_BUILD_DIR/build_unix"
 ../dist/configure \
-    --prefix=/usr \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_BUILD_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
     --localstatedir=/var \
     --sysconfdir=/etc \
-    --libexecdir=/usr/lib \
+    --libexecdir="$BOLT_INSTALL_PREFIX/lib" \
     --enable-cxx \
     --enable-compat185 \
     --enable-sql \
@@ -33,7 +38,7 @@ make -j"$BOLT_PARALLEL_JOBS"
 cd "$BOLT_BUILD_DIR/build_unix"
 make DESTDIR="$BOLT_INSTALL_DIR" install
 
-cd "$BOLT_INSTALL_DIR/usr/bin"
+cd "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin"
 for prog in db_*; do
     newname=`echo $prog | sed 's/db_/db5.3_/g'`
     mv $prog $newname

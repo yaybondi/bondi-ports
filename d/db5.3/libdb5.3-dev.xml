@@ -13,10 +13,10 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/db.h"/>
-        <file src="/usr/include/db_185.h"/>
-        <file src="/usr/lib/libdb-5.3.a"/>
-        <file src="/usr/lib/libdb.a"/>
-        <file src="/usr/lib/libdb.so"/>
+        <file src="${prefix}/include/db.h"/>
+        <file src="${prefix}/include/db_185.h"/>
+        <file src="${prefix}/lib/libdb-5.3.a"/>
+        <file src="${prefix}/lib/libdb.a"/>
+        <file src="${prefix}/lib/libdb.so"/>
     </contents>
 </package>

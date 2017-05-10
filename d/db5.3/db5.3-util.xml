@@ -22,18 +22,18 @@
     </description>
 
     <contents>
-        <file src="/usr/bin/db5.3_archive"/>
-        <file src="/usr/bin/db5.3_checkpoint"/>
-        <file src="/usr/bin/db5.3_deadlock"/>
-        <file src="/usr/bin/db5.3_dump"/>
-        <file src="/usr/bin/db5.3_hotbackup"/>
-        <file src="/usr/bin/db5.3_load"/>
-        <file src="/usr/bin/db5.3_log_verify"/>
-        <file src="/usr/bin/db5.3_printlog"/>
-        <file src="/usr/bin/db5.3_recover"/>
-        <file src="/usr/bin/db5.3_replicate"/>
-        <file src="/usr/bin/db5.3_stat"/>
-        <file src="/usr/bin/db5.3_upgrade"/>
-        <file src="/usr/bin/db5.3_verify"/>
+        <file src="${prefix}/bin/db5.3_archive"/>
+        <file src="${prefix}/bin/db5.3_checkpoint"/>
+        <file src="${prefix}/bin/db5.3_deadlock"/>
+        <file src="${prefix}/bin/db5.3_dump"/>
+        <file src="${prefix}/bin/db5.3_hotbackup"/>
+        <file src="${prefix}/bin/db5.3_load"/>
+        <file src="${prefix}/bin/db5.3_log_verify"/>
+        <file src="${prefix}/bin/db5.3_printlog"/>
+        <file src="${prefix}/bin/db5.3_recover"/>
+        <file src="${prefix}/bin/db5.3_replicate"/>
+        <file src="${prefix}/bin/db5.3_stat"/>
+        <file src="${prefix}/bin/db5.3_upgrade"/>
+        <file src="${prefix}/bin/db5.3_verify"/>
     </contents>
 </package>

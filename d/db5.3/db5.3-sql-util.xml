@@ -10,6 +10,6 @@
     </description>
 
     <contents>
-        <file src="/usr/bin/db5.3_sql"/>
+        <file src="${prefix}/bin/db5.3_sql"/>
     </contents>
 </package>

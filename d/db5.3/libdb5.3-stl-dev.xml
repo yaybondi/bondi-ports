@@ -13,21 +13,21 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/dbstl_base_iterator.h"/>
-        <file src="/usr/include/dbstl_common.h"/>
-        <file src="/usr/include/dbstl_container.h"/>
-        <file src="/usr/include/dbstl_dbc.h"/>
-        <file src="/usr/include/dbstl_dbt.h"/>
-        <file src="/usr/include/dbstl_element_ref.h"/>
-        <file src="/usr/include/dbstl_exception.h"/>
-        <file src="/usr/include/dbstl_inner_utility.h"/>
-        <file src="/usr/include/dbstl_map.h"/>
-        <file src="/usr/include/dbstl_resource_manager.h"/>
-        <file src="/usr/include/dbstl_set.h"/>
-        <file src="/usr/include/dbstl_utility.h"/>
-        <file src="/usr/include/dbstl_vector.h"/>
-        <file src="/usr/lib/libdb_stl-5.3.a"/>
-        <file src="/usr/lib/libdb_stl.a"/>
-        <file src="/usr/lib/libdb_stl.so"/>
+        <file src="${prefix}/include/dbstl_base_iterator.h"/>
+        <file src="${prefix}/include/dbstl_common.h"/>
+        <file src="${prefix}/include/dbstl_container.h"/>
+        <file src="${prefix}/include/dbstl_dbc.h"/>
+        <file src="${prefix}/include/dbstl_dbt.h"/>
+        <file src="${prefix}/include/dbstl_element_ref.h"/>
+        <file src="${prefix}/include/dbstl_exception.h"/>
+        <file src="${prefix}/include/dbstl_inner_utility.h"/>
+        <file src="${prefix}/include/dbstl_map.h"/>
+        <file src="${prefix}/include/dbstl_resource_manager.h"/>
+        <file src="${prefix}/include/dbstl_set.h"/>
+        <file src="${prefix}/include/dbstl_utility.h"/>
+        <file src="${prefix}/include/dbstl_vector.h"/>
+        <file src="${prefix}/lib/libdb_stl-5.3.a"/>
+        <file src="${prefix}/lib/libdb_stl.a"/>
+        <file src="${prefix}/lib/libdb_stl.so"/>
     </contents>
 </package>

@@ -9,6 +9,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libdb_cxx-5.3.so"/>
+        <file src="${prefix}/lib/libdb_cxx-5.3.so"/>
     </contents>
 </package>
