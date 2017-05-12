@@ -50,6 +50,7 @@
 
     <xi:include href="libgcrypt20-dev.xml"/>
     <xi:include href="libgcrypt20.xml"/>
+    <xi:include href="libgcrypt11-dev.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>

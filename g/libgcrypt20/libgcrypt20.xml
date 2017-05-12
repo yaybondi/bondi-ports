@@ -16,10 +16,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/lib/*/lib*.so.*"/>
+        <file src="${prefix}/lib/libgcrypt.so.*"/>
     </contents>
 </package>

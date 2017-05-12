@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgcrypt11-dev" section="oldlibs">
+    <description>
+        <summary>transitional libgcrypt11-dev package</summary>
+        <p>
+        This is a transitional dummy package to ease the migration from
+        libgcrypt11-dev to libgcrypt20-dev. You can safely remove this package.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libgcrypt20-dev" version=">=="/>
+    </requires>
+</package>

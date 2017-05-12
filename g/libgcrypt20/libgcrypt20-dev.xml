@@ -26,10 +26,10 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/*"/>
-        <file src="/usr/include/*"/>
-        <file src="/usr/lib/lib*.a"/>
-        <file src="/usr/lib/lib*.so"/>
-        <file src="/usr/share/aclocal/*"/>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libgcrypt.a"/>
+        <file src="${prefix}/lib/libgcrypt.so"/>
+        <file src="${prefix}/share/aclocal"/>
     </contents>
 </package>
