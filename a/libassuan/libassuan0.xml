@@ -13,7 +13,6 @@
     </requires>
 
     <contents>
-        <file src="${prefix}/lib/libassuan.so.0"/>
-        <file src="${prefix}/lib/libassuan.so.0.7.3"/>
+        <file src="${prefix}/lib/libassuan.so.*"/>
     </contents>
 </package>
