@@ -18,11 +18,10 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/*"/>
-        <file src="/usr/include/*"/>
-        <file src="/usr/lib/libgpg-error.a"/>
-        <file src="/usr/lib/libgpg-error.la"/>
-        <file src="/usr/lib/libgpg-error.so"/>
-        <file src="/usr/share/aclocal/*.m4"/>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libgpg-error.a"/>
+        <file src="${prefix}/lib/libgpg-error.so"/>
+        <file src="${prefix}/share/aclocal"/>
     </contents>
 </package>
