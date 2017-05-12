@@ -4,7 +4,7 @@
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
+"$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --libexecdir="$BOLT_INSTALL_PREFIX/lib/gnupg" \
     --host="$BOLT_HOST_TYPE" \
