@@ -17,7 +17,6 @@
     </description>
 
     <contents>
-        <file src="${prefix}/lib/libksba.so.8"/>
-        <file src="${prefix}/lib/libksba.so.8.11.6"/>
+        <file src="${prefix}/lib/libksba.so.*"/>
     </contents>
 </package>
