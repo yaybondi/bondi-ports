@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-telnet-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the telnet package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>telnet</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="telnet"/>
+    </conflicts>
+
+    <replaces>
+        <package name="telnet"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/telnet"/>
+    </contents>
+</package>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
     <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
+        <def name="BOLT_BUILD_DIR" value="sources"/>
     </defines>
 
     <source name="busybox" architecture-independent="false">
@@ -24,7 +24,7 @@
             <file src="debian.19.tar.gz" subdir="patches"
                 sha256sum="f0cd9e113f3281b9586d02eea1f42a822dd5f26a89acb0b58d84b898cbc1cdd4"/>
             <file src="bolt.1.tar.gz" subdir="patches"
-                sha256sum="bb412de69baf3dabaf39beece6a545007685ed6b41dcc82fcf59e6d3c24606e0"/>
+                sha256sum="114cda8ae0cd986531296a4e273641e9e41c51b0382c2ad2ab61eb1262492d01"/>
         </sources>
 
         <patches>
@@ -64,6 +64,90 @@
     </source>
 
     <xi:include href="busybox.xml"/>
+
+    <xi:include href="applets/adduser.xml"/>
+    <xi:include href="applets/adjtimex.xml"/>
+    <xi:include href="applets/arping.xml"/>
+    <xi:include href="applets/ash.xml"/>
+    <xi:include href="applets/bash.xml"/>
+    <xi:include href="applets/beep.xml"/>
+    <xi:include href="applets/binutils.xml"/>
+    <xi:include href="applets/bridge-utils.xml"/>
+    <xi:include href="applets/bsdmainutils.xml"/>
+    <xi:include href="applets/bsdutils.xml"/>
+    <xi:include href="applets/busybox-syslogd.xml"/>
+    <xi:include href="applets/conspy.xml"/>
+    <xi:include href="applets/coreutils.xml"/>
+    <xi:include href="applets/cpio.xml"/>
+    <xi:include href="applets/cron.xml"/>
+    <xi:include href="applets/dash.xml"/>
+    <xi:include href="applets/dc.xml"/>
+    <xi:include href="applets/debianutils.xml"/>
+    <xi:include href="applets/diffutils.xml"/>
+    <xi:include href="applets/dnsutils.xml"/>
+    <xi:include href="applets/dos2unix.xml"/>
+    <xi:include href="applets/ed.xml"/>
+    <xi:include href="applets/eject.xml"/>
+    <xi:include href="applets/fbset.xml"/>
+    <xi:include href="applets/findutils.xml"/>
+    <xi:include href="applets/gawk.xml"/>
+    <xi:include href="applets/grep.xml"/>
+    <xi:include href="applets/hostname.xml"/>
+    <xi:include href="applets/ifenslave.xml"/>
+    <xi:include href="applets/ifplugd.xml"/>
+    <xi:include href="applets/ifupdown.xml"/>
+    <xi:include href="applets/inetutils-ping.xml"/>
+    <xi:include href="applets/ipcalc.xml"/>
+    <xi:include href="applets/iproute2.xml"/>
+    <xi:include href="applets/ipsvd.xml"/>
+    <xi:include href="applets/kbd.xml"/>
+    <xi:include href="applets/kmod.xml"/>
+    <xi:include href="applets/less.xml"/>
+    <xi:include href="applets/loadlin.xml"/>
+    <xi:include href="applets/login.xml"/>
+    <xi:include href="applets/lrzsz.xml"/>
+    <xi:include href="applets/lsof.xml"/>
+    <xi:include href="applets/microcom.xml"/>
+    <xi:include href="applets/misc.xml"/>
+    <xi:include href="applets/mount.xml"/>
+    <xi:include href="applets/mtd-utils.xml"/>
+    <xi:include href="applets/nbd-client.xml"/>
+    <xi:include href="applets/ncurses-bin.xml"/>
+    <xi:include href="applets/netcat-traditional.xml"/>
+    <xi:include href="applets/net-tools.xml"/>
+    <xi:include href="applets/ntp.xml"/>
+    <xi:include href="applets/passwd.xml"/>
+    <xi:include href="applets/pciutils.xml"/>
+    <xi:include href="applets/powertop.xml"/>
+    <xi:include href="applets/procps.xml"/>
+    <xi:include href="applets/pscan.xml"/>
+    <xi:include href="applets/psmisc.xml"/>
+    <xi:include href="applets/rdate.xml"/>
+    <xi:include href="applets/rfkill.xml"/>
+    <xi:include href="applets/runit-init.xml"/>
+    <xi:include href="applets/sed.xml"/>
+    <xi:include href="applets/setserial.xml"/>
+    <xi:include href="applets/sha3.xml"/>
+    <xi:include href="applets/sharutils.xml"/>
+    <xi:include href="applets/smemcap.xml"/>
+    <xi:include href="applets/sysstat.xml"/>
+    <xi:include href="applets/sysvinit-utils.xml"/>
+    <xi:include href="applets/telnet.xml"/>
+    <xi:include href="applets/tftp.xml"/>
+    <xi:include href="applets/time.xml"/>
+    <xi:include href="applets/traceroute.xml"/>
+    <xi:include href="applets/udhcpc.xml"/>
+    <xi:include href="applets/udhcpd.xml"/>
+    <xi:include href="applets/uml-utilities.xml"/>
+    <xi:include href="applets/usbutils.xml"/>
+    <xi:include href="applets/util-linux.xml"/>
+    <xi:include href="applets/vim-nox.xml"/>
+    <xi:include href="applets/vlan.xml"/>
+    <xi:include href="applets/vlock.xml"/>
+    <xi:include href="applets/watchdog.xml"/>
+    <xi:include href="applets/wget.xml"/>
+    <xi:include href="applets/whois.xml"/>
+    <xi:include href="applets/xterm.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>

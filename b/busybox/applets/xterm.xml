@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-xterm-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the xterm package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>resize</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="xterm"/>
+    </conflicts>
+
+    <replaces>
+        <package name="xterm"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/resize"/>
+    </contents>
+</package>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="busybox" section="utils">
+<package name="busybox" section="admin">
     <description>
         <summary>Tiny utilities for small and embedded systems</summary>
         <p>
@@ -17,7 +17,13 @@
         </p>
     </description>
 
+    <requires>
+        <package name="base-files"/>
+    </requires>
+
     <contents>
-        <file src="/usr/bin"/>
+        <dir src="/etc/network"/>
+        <dir src="/usr/share/udhcpc"/>
+        <file src="${prefix}/bin/busybox"/>
     </contents>
 </package>

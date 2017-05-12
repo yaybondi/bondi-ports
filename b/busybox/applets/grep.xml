@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-grep-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the grep package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>egrep</li>
+            <li>fgrep</li>
+            <li>grep</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="grep"/>
+    </conflicts>
+
+    <replaces>
+        <package name="grep"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/egrep"/>
+        <file src="/usr/bin/fgrep"/>
+        <file src="/usr/bin/grep"/>
+    </contents>
+</package>

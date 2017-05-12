@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-lrzsz-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the lrzsz package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>rx</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="lrzsz"/>
+    </conflicts>
+
+    <replaces>
+        <package name="lrzsz"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/rx"/>
+    </contents>
+</package>

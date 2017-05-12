@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-busybox-syslogd-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the busybox-syslogd package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>klogd</li>
+            <li>logread</li>
+            <li>syslogd</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="busybox-syslogd"/>
+    </conflicts>
+
+    <replaces>
+        <package name="busybox-syslogd"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/sbin/klogd"/>
+        <file src="/usr/sbin/logread"/>
+        <file src="/usr/sbin/syslogd"/>
+    </contents>
+</package>

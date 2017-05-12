@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-mtd-utils-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the mtd-utils package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>flashcp</li>
+            <li>flash_eraseall</li>
+            <li>flash_lock</li>
+            <li>flash_unlock</li>
+            <li>nanddump</li>
+            <li>nandwrite</li>
+            <li>ubiattach</li>
+            <li>ubidetach</li>
+            <li>ubimkvol</li>
+            <li>ubirmvol</li>
+            <li>ubirsvol</li>
+            <li>ubiupdatevol</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="mtd-utils"/>
+    </conflicts>
+
+    <replaces>
+        <package name="mtd-utils"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/sbin/flashcp"/>
+        <file src="/usr/sbin/flash_eraseall"/>
+        <file src="/usr/sbin/flash_lock"/>
+        <file src="/usr/sbin/flash_unlock"/>
+        <file src="/usr/sbin/nanddump"/>
+        <file src="/usr/sbin/nandwrite"/>
+        <file src="/usr/sbin/ubiattach"/>
+        <file src="/usr/sbin/ubidetach"/>
+        <file src="/usr/sbin/ubimkvol"/>
+        <file src="/usr/sbin/ubirmvol"/>
+        <file src="/usr/sbin/ubirsvol"/>
+        <file src="/usr/sbin/ubiupdatevol"/>
+    </contents>
+</package>

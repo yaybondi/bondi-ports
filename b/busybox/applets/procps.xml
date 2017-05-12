@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-procps-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the procps package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>free</li>
+            <li>kill</li>
+            <li>pgrep</li>
+            <li>pkill</li>
+            <li>pmap</li>
+            <li>ps</li>
+            <li>pwdx</li>
+            <li>top</li>
+            <li>uptime</li>
+            <li>watch</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="procps"/>
+    </conflicts>
+
+    <replaces>
+        <package name="procps"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/free"/>
+        <file src="/usr/bin/kill"/>
+        <file src="/usr/bin/pgrep"/>
+        <file src="/usr/bin/pkill"/>
+        <file src="/usr/bin/pmap"/>
+        <file src="/usr/bin/ps"/>
+        <file src="/usr/bin/pwdx"/>
+        <file src="/usr/bin/top"/>
+        <file src="/usr/bin/uptime"/>
+        <file src="/usr/bin/watch"/>
+    </contents>
+</package>

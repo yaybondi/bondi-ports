@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-net-tools-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the net-tools package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>netstat</li>
+            <li>arp</li>
+            <li>ifconfig</li>
+            <li>iptunnel</li>
+            <li>nameif</li>
+            <li>route</li>
+            <li>slattach</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="net-tools"/>
+    </conflicts>
+
+    <replaces>
+        <package name="net-tools"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/netstat"/>
+        <file src="/usr/sbin/arp"/>
+        <file src="/usr/sbin/ifconfig"/>
+        <file src="/usr/sbin/iptunnel"/>
+        <file src="/usr/sbin/nameif"/>
+        <file src="/usr/sbin/route"/>
+        <file src="/usr/sbin/slattach"/>
+    </contents>
+</package>

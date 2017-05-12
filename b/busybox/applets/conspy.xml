@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-conspy-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the conspy package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>conspy</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="conspy"/>
+    </conflicts>
+
+    <replaces>
+        <package name="conspy"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/conspy"/>
+    </contents>
+</package>

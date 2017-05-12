@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-util-linux-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the util-linux package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>chrt</li>
+            <li>dmesg</li>
+            <li>flock</li>
+            <li>getopt</li>
+            <li>ionice</li>
+            <li>ipcrm</li>
+            <li>ipcs</li>
+            <li>last</li>
+            <li>more</li>
+            <li>mountpoint</li>
+            <li>rev</li>
+            <li>setsid</li>
+            <li>taskset</li>
+            <li>blkid</li>
+            <li>blockdev</li>
+            <li>findfs</li>
+            <li>fstrim</li>
+            <li>getty</li>
+            <li>hwclock</li>
+            <li>mkswap</li>
+            <li>pivot_root</li>
+            <li>readprofile</li>
+            <li>rtcwake</li>
+            <li>sulogin</li>
+            <li>switch_root</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="util-linux"/>
+    </conflicts>
+
+    <replaces>
+        <package name="util-linux"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/chrt"/>
+        <file src="/usr/bin/dmesg"/>
+        <file src="/usr/bin/flock"/>
+        <file src="/usr/bin/getopt"/>
+        <file src="/usr/bin/ionice"/>
+        <file src="/usr/bin/ipcrm"/>
+        <file src="/usr/bin/ipcs"/>
+        <file src="/usr/bin/last"/>
+        <file src="/usr/bin/more"/>
+        <file src="/usr/bin/mountpoint"/>
+        <file src="/usr/bin/rev"/>
+        <file src="/usr/bin/setsid"/>
+        <file src="/usr/bin/taskset"/>
+        <file src="/usr/sbin/blkid"/>
+        <file src="/usr/sbin/blockdev"/>
+        <file src="/usr/sbin/findfs"/>
+        <file src="/usr/sbin/fstrim"/>
+        <file src="/usr/sbin/getty"/>
+        <file src="/usr/sbin/hwclock"/>
+        <file src="/usr/sbin/mkswap"/>
+        <file src="/usr/sbin/pivot_root"/>
+        <file src="/usr/sbin/readprofile"/>
+        <file src="/usr/sbin/rtcwake"/>
+        <file src="/usr/sbin/sulogin"/>
+        <file src="/usr/sbin/switch_root"/>
+    </contents>
+</package>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-bsdmainutils-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the bsdmainutils package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>cal</li>
+            <li>hd</li>
+            <li>hexdump</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="bsdmainutils"/>
+    </conflicts>
+
+    <replaces>
+        <package name="bsdmainutils"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/cal"/>
+        <file src="/usr/bin/hd"/>
+        <file src="/usr/bin/hexdump"/>
+    </contents>
+</package>

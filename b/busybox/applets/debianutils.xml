@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-debianutils-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the debianutils package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>run-parts</li>
+            <li>which</li>
+            <li>add-shell</li>
+            <li>remove-shell</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="debianutils"/>
+    </conflicts>
+
+    <replaces>
+        <package name="debianutils"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/run-parts"/>
+        <file src="/usr/bin/which"/>
+        <file src="/usr/sbin/add-shell"/>
+        <file src="/usr/sbin/remove-shell"/>
+    </contents>
+</package>

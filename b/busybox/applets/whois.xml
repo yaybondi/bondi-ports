@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-whois-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the whois package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>mkpasswd</li>
+            <li>whois</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="whois"/>
+    </conflicts>
+
+    <replaces>
+        <package name="whois"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/mkpasswd"/>
+        <file src="/usr/bin/whois"/>
+    </contents>
+</package>

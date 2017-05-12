@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-kbd-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the kbd package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>chvt</li>
+            <li>deallocvt</li>
+            <li>fgconsole</li>
+            <li>kbd_mode</li>
+            <li>openvt</li>
+            <li>setkeycodes</li>
+            <li>showkey</li>
+            <li>setlogcons</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="kbd"/>
+    </conflicts>
+
+    <replaces>
+        <package name="kbd"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/chvt"/>
+        <file src="/usr/bin/deallocvt"/>
+        <file src="/usr/bin/fgconsole"/>
+        <file src="/usr/bin/kbd_mode"/>
+        <file src="/usr/bin/openvt"/>
+        <file src="/usr/bin/setkeycodes"/>
+        <file src="/usr/bin/showkey"/>
+        <file src="/usr/sbin/setlogcons"/>
+    </contents>
+</package>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-misc-symlinks" section="admin">
+    <description>
+        <summary>Uncategorized busybox symlinks</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>catv</li>
+            <li>cryptpw</li>
+            <li>cttyhack</li>
+            <li>dumpkmap</li>
+            <li>fsync</li>
+            <li>ftpget</li>
+            <li>ftpput</li>
+            <li>nmeter</li>
+            <li>pipe_progress</li>
+            <li>ttysize</li>
+            <li>udhcpc6</li>
+            <li>usleep</li>
+            <li>crond</li>
+            <li>devmem</li>
+            <li>dhcprelay</li>
+            <li>dnsd</li>
+            <li>ether-wake</li>
+            <li>fakeidentd</li>
+            <li>fbsplash</li>
+            <li>httpd</li>
+            <li>inotifyd</li>
+            <li>ipaddr</li>
+            <li>iplink</li>
+            <li>iproute</li>
+            <li>iprule</li>
+            <li>loadfont</li>
+            <li>loadkmap</li>
+            <li>makedevs</li>
+            <li>raidautorun</li>
+            <li>rdev</li>
+            <li>readahead</li>
+            <li>setconsole</li>
+            <li>tftpd</li>
+            <li>zcip</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <contents>
+        <file src="/usr/bin/["/>
+        <file src="/usr/bin/[["/>
+        <file src="/usr/bin/catv"/>
+        <file src="/usr/bin/cryptpw"/>
+        <file src="/usr/bin/cttyhack"/>
+        <file src="/usr/bin/dumpkmap"/>
+        <file src="/usr/bin/fsync"/>
+        <file src="/usr/bin/ftpget"/>
+        <file src="/usr/bin/ftpput"/>
+        <file src="/usr/bin/nmeter"/>
+        <file src="/usr/bin/pipe_progress"/>
+        <file src="/usr/bin/ttysize"/>
+        <file src="/usr/bin/udhcpc6"/>
+        <file src="/usr/bin/usleep"/>
+        <file src="/usr/sbin/crond"/>
+        <file src="/usr/sbin/devmem"/>
+        <file src="/usr/sbin/dhcprelay"/>
+        <file src="/usr/sbin/dnsd"/>
+        <file src="/usr/sbin/ether-wake"/>
+        <file src="/usr/sbin/fakeidentd"/>
+        <file src="/usr/sbin/fbsplash"/>
+        <file src="/usr/sbin/httpd"/>
+        <file src="/usr/sbin/inotifyd"/>
+        <file src="/usr/sbin/ipaddr"/>
+        <file src="/usr/sbin/iplink"/>
+        <file src="/usr/sbin/iproute"/>
+        <file src="/usr/sbin/iprule"/>
+        <file src="/usr/sbin/loadfont"/>
+        <file src="/usr/sbin/loadkmap"/>
+        <file src="/usr/sbin/makedevs"/>
+        <file src="/usr/sbin/raidautorun"/>
+        <file src="/usr/sbin/rdev"/>
+        <file src="/usr/sbin/readahead"/>
+        <file src="/usr/sbin/setconsole"/>
+        <file src="/usr/sbin/tftpd"/>
+        <file src="/usr/sbin/zcip"/>
+    </contents>
+</package>

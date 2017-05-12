@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-dos2unix-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the dos2unix package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>dos2unix</li>
+            <li>unix2dos</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="dos2unix"/>
+    </conflicts>
+
+    <replaces>
+        <package name="dos2unix"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/dos2unix"/>
+        <file src="/usr/bin/unix2dos"/>
+    </contents>
+</package>

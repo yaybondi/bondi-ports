@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-sha3-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the libdigest-sha3-perl package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>sha3sum</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="libdigest-sha3-perl"/>
+    </conflicts>
+
+    <replaces>
+        <package name="libdigest-sha3-perl"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/sha3sum"/>
+    </contents>
+</package>

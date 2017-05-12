@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-sharutils-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the sharutils package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>uudecode</li>
+            <li>uuencode</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="sharutils"/>
+    </conflicts>
+
+    <replaces>
+        <package name="sharutils"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/uudecode"/>
+        <file src="/usr/bin/uuencode"/>
+    </contents>
+</package>

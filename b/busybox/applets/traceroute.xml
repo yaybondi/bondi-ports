@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-traceroute-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the traceroute package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>traceroute</li>
+            <li>traceroute6</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="traceroute"/>
+    </conflicts>
+
+    <replaces>
+        <package name="traceroute"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/traceroute"/>
+        <file src="/usr/bin/traceroute6"/>
+    </contents>
+</package>

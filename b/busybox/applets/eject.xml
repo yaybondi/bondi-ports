@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-eject-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the eject package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>eject</li>
+            <li>volname</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="eject"/>
+    </conflicts>
+
+    <replaces>
+        <package name="eject"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/eject"/>
+        <file src="/usr/bin/volname"/>
+    </contents>
+</package>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-netcat-traditional-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the netcat-traditional package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>nc</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="netcat-traditional"/>
+    </conflicts>
+
+    <replaces>
+        <package name="netcat-traditional"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/nc"/>
+    </contents>
+</package>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-vlock-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the vlock package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>vlock</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="vlock"/>
+    </conflicts>
+
+    <replaces>
+        <package name="vlock"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/vlock"/>
+    </contents>
+</package>

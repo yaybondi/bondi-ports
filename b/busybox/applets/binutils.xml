@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-binutils-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the binutils package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>strings</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="binutils"/>
+    </conflicts>
+
+    <replaces>
+        <package name="binutils"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/bin/strings"/>
+    </contents>
+</package>

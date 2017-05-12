@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-fbset-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the fbset package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>fbset</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="fbset"/>
+    </conflicts>
+
+    <replaces>
+        <package name="fbset"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/sbin/fbset"/>
+    </contents>
+</package>

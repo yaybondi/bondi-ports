@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-uml-utilities-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the uml-utilities package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>tunctl</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="uml-utilities"/>
+    </conflicts>
+
+    <replaces>
+        <package name="uml-utilities"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/sbin/tunctl"/>
+    </contents>
+</package>

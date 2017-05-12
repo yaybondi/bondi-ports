@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-ifplugd-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the ifplugd package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>ifplugd</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="base-files"/>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="ifplugd"/>
+    </conflicts>
+
+    <replaces>
+        <package name="ifplugd"/>
+    </replaces>
+
+    <contents>
+        <file src="/usr/sbin/ifplugd"/>
+    </contents>
+</package>

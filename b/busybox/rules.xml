@@ -3,10 +3,16 @@
     <prepare>
     <![CDATA[
 
-cd $BOLT_BUILD_DIR
-$BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+cd "$BOLT_SOURCE_DIR"
+
+cp "$BOLT_WORK_DIR/patches/configs/defconfig" .config
+sed -e "s@CONFIG_CROSS_COMPILER_PREFIX=\"\"@CONFIG_CROSS_COMPILER_PREFIX=\"$BOLT_HOST_TYPE-\"@g" -i .config
+
+if [ "$BOLT_BUILD_FOR" = "tools" ]; then
+    sed -e "s@CONFIG_SYSROOT=\"\"@CONFIG_SYSROOT=\"/tools\"@g" -i .config
+else
+    sed -e "s@CONFIG_SYSROOT=\"\"@CONFIG_SYSROOT=\"/\"@g" -i .config
+fi
 
     ]]>
     </prepare>
@@ -15,7 +21,7 @@ $BOLT_SOURCE_DIR/configure \
     <![CDATA[
 
 cd $BOLT_BUILD_DIR
-make -j$BOLT_PARALLEL_JOBS
+make V=1 SKIP_STRIP=y -j$BOLT_PARALLEL_JOBS
 
     ]]>
     </build>
@@ -24,7 +30,11 @@ make -j$BOLT_PARALLEL_JOBS
     <![CDATA[
 
 cd $BOLT_BUILD_DIR
-make DESTDIR=$BOLT_INSTALL_DIR install
+make CONFIG_PREFIX="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" install
+
+rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/uname"
+cp "$BOLT_WORK_DIR/patches/scripts/uname" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/uname"
 
     ]]>
     </install>
