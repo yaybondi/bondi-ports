@@ -15,10 +15,10 @@
     </description>
 
     <requires>
-        <package name="perl-base" version=">="/>
+        <package name="perl-base" version=">=="/>
     </requires>
 
     <contents>
-        <file src="/usr/share/perl"/>
+        <file src="${prefix}/share/perl"/>
     </contents>
 </package>

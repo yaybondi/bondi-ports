@@ -10,11 +10,11 @@
     <requires>
         <package name="perl" version="=="/>
         <package name="libperl5.24" version="=="/>
-        <package name="libc6-dev"/>
+        <package name="musl-libc-dev"/>
     </requires>
 
     <contents>
-        <file src="/usr/lib/libperl.a"/>
-        <file src="/usr/lib/libperl.so"/>
+        <file src="${prefix}/lib/libperl.a"/>
+        <file src="${prefix}/lib/libperl.so"/>
     </contents>
 </package>

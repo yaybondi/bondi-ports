@@ -6,32 +6,21 @@
 
     <source name="perl" architecture-independent="false">
         <description>
-            <summary>Larry Wall's Practical Extraction and Report Language</summary>
+            <summary>Perl</summary>
             <p>
-            Perl is a highly capable, feature-rich programming language with over
-            20 years of development. Perl 5 runs on over 100 platforms from
-            portables to mainframes. Perl is suitable for both rapid prototyping
-            and large scale development projects.
-            </p>
-            <p>
-            Perl 5 supports many programming styles, including procedural,
-            functional, and object-oriented. In addition to this, it is supported
-            by an ever-growing collection of reusable modules which accelerate
-            development. Some of these modules include Web frameworks, database
-            integration, networking protocols, and encryption. Perl provides
-            interfaces to C and C++ for custom extension development.
+            Perl is a scripting language used in many system scripts and utilities.
             </p>
         </description>
 
         <sources>
-            <file src="perl-5.24.1~rc4.tar.xz" subdir="sources"
-                sha256sum="6da6333809eb2b35b17ee3c25b7f0327da32fad7214b296b662ccd9883b8bc59"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="0a3c9617d1f612d598760966fd55ae00b2e3a89e91eb9323ac5dbe79b429202a"/>
+            <file src="perl-5.24.1.tar.xz" subdir="sources"
+                sha256sum="03a77bac4505c270f1890ece75afc7d4b555090b41aa41ea478747e23b2afb3f"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="09e7cf2058b5730f16383d337ce8d4c04b93ef57dac48d03a32206f48f3a0d2b"/>
             <file src="patches.bolt.tar.gz" subdir="patches"
                 sha256sum="6bb635c06f69a23c20fcaec5cfeba9a6cc5f78fc4f7e12d5bca0c122d95dde9d"/>
         </sources>
-
+        
         <patches>
             <patchset subdir="sources">
                 <!-- Debian -->
@@ -98,7 +87,9 @@
                 <file src="patches/fixes/test-builder-warning.diff"/>
                 <file src="patches/fixes/longdblinf-randomness.diff"/>
                 <file src="patches/debian/installman-utf8.diff"/>
-                <!-- Bolt OS -->
+                <file src="patches/fixes/list_assign_leak.diff"/>
+                <file src="patches/fixes/perlfunc_inc_doc.diff"/>
+                <!-- Bolt -->
                 <file src="patches/cross-musl-config-sh.patch"/>
             </patchset>
         </patches>

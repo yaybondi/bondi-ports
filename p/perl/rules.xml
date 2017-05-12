@@ -3,10 +3,87 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+cd "$BOLT_SOURCE_DIR"
+
+###############################################################################
+# Set some variables
+###############################################################################
+MAJOR_MINOR="`echo '#include "./patchlevel.h"
+SET PERL_REVISION.PERL_VERSION' | gcc -E -DPERL_PATCHLEVEL_H_IMPLICIT -  | sed -n '/^SET /{s///;s/ //gp;}'`"
+PATCHLEVEL="`echo '#include "./patchlevel.h"
+SET PERL_SUBVERSION' | gcc -E -DPERL_PATCHLEVEL_H_IMPLICIT -  | sed -n '/^SET/{s///;s/ //gp;}'`"
+FULL_VERSION="$MAJOR_MINOR.$PATCHLEVEL"
+
+###############################################################################
+# Build against system zlib
+###############################################################################
+export BUILD_BZIP2=0
+export BZIP2_INCLUDE="$BOLT_INSTALL_PREFIX/include"
+export BZIP2_LIB="$BOLT_INSTALL_PREFIX/lib"
+
+if [ "$BOLT_BUILD_FOR" = "target" ]; then
+    SYSROOT="/"
+else
+    SYSROOT="/tools"
+fi
+
+###############################################################################
+# Configure duplicate source trees for shared and static build
+###############################################################################
+for variant in shared static; do
+    cp -a "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/$variant"
+    OPTS="-Uuseshrplib"
+    if [ "$variant" = "shared" ]; then
+        OPTS="-Duseshrplib -Dlibperl=libperl.so.$FULL_VERSION -Dplibpth=$BOLT_INSTALL_PREFIX/lib"
+    fi
+
+    ###########################################################################
+    # Run configuration script
+    ###########################################################################
+    cd "$BOLT_BUILD_DIR/$variant"
+    ./Configure \
+        -Dusethreads                                                    \
+        -Duselargefiles                                                 \
+        -Dccflags=""                                                    \
+        -Dcccdlflags="-fPIC"                                            \
+        -Darchname="$BOLT_HOST_TYPE"                                    \
+        -Dtargetarch="$BOLT_HOST_TYPE"                                  \
+        -Dsysroot="$SYSROOT"                                            \
+        -Dcc="${BOLT_HOST_TYPE}-gcc"                                    \
+        -Dcpp="${BOLT_HOST_TYPE}-cpp"                                   \
+        -Dld="${BOLT_HOST_TYPE}-gcc"                                    \
+        -Dprefix="$BOLT_INSTALL_PREFIX"                                 \
+        -Dprivlib="$BOLT_INSTALL_PREFIX/share/perl/$MAJOR_MINOR"        \
+        -Darchlib="$BOLT_INSTALL_PREFIX/lib/perl/$MAJOR_MINOR"          \
+        -Dvendorprefix="$BOLT_INSTALL_PREFIX"                           \
+        -Dvendorlib="$BOLT_INSTALL_PREFIX/share/perl5"                  \
+        -Dvendorarch="$BOLT_INSTALL_PREFIX/lib/perl5"                   \
+        -Dsiteprefix="$BOLT_INSTALL_PREFIX/local"                       \
+        -Dsitelib="$BOLT_INSTALL_PREFIX/local/share/perl/$FULL_VERSION" \
+        -Dsitearch="$BOLT_INSTALL_PREFIX/local/lib/perl/$FULL_VERSION"  \
+        -Dman1dir="$BOLT_INSTALL_PREFIX/share/man/man1"                 \
+        -Dman3dir="$BOLT_INSTALL_PREFIX/share/man/man3"                 \
+        -Dsiteman1dir="$BOLT_INSTALL_PREFIX/local/man/man1"             \
+        -Dsiteman3dir="$BOLT_INSTALL_PREFIX/local/man/man3"             \
+        -Dman1ext=1                                                     \
+        -Dman3ext=3perl                                                 \
+        -Dpager="$BOLT_INSTALL_PREFIX/bin/pager"                        \
+        -Uafs                                                           \
+        -Ud_csh                                                         \
+        -Ud_ualarm                                                      \
+        -Uusesfio                                                       \
+        -Uusenm                                                         \
+        -DDEBUGGING="-g"                                                \
+        -Doptimize="-O2"                                                \
+        $OPTS -des
+done
+
+###############################################################################
+# Disable rpath, libperl will be moved to $BOLT_INSTALL_PREFIX/lib
+###############################################################################
+
+sed -i "/^CCDLFLAGS/{s/-Wl,-rpath,\$BOLT_INSTALL_PREFIX[^ ]\+//g}" \
+	$BOLT_BUILD_DIR/shared/Makefile
 
     ]]>
     </prepare>
@@ -14,8 +91,33 @@ $BOLT_SOURCE_DIR/configure \
     <build>
     <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
+
+###############################################################################
+# Set some variables
+###############################################################################
+MAJOR_MINOR="`echo '#include "./patchlevel.h"
+SET PERL_REVISION.PERL_VERSION' | gcc -E -DPERL_PATCHLEVEL_H_IMPLICIT -  | sed -n '/^SET /{s///;s/ //gp;}'`"
+PATCHLEVEL="`echo '#include "./patchlevel.h"
+SET PERL_SUBVERSION' | gcc -E -DPERL_PATCHLEVEL_H_IMPLICIT -  | sed -n '/^SET/{s///;s/ //gp;}'`"
+FULL_VERSION="$MAJOR_MINOR.$PATCHLEVEL"
+
 cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+
+###############################################################################
+# Run build
+###############################################################################
+for variant in shared static; do
+    make -C "$BOLT_BUILD_DIR/$variant" -j"$BOLT_PARALLEL_JOBS"
+done
+
+###############################################################################
+# Regenerate shared library and add soname
+###############################################################################
+cd "$BOLT_BUILD_DIR/shared/"
+rm -f libperl.so.$FULL_VERSION
+make SHRPLDFLAGS="\$(LDDLFLAGS) -Wl,-soname,libperl.so.$MAJOR_MINOR" libperl.so.$FULL_VERSION
+ln -s libperl.so.$FULL_VERSION "$BOLT_BUILD_DIR/shared/libperl.so.$MAJOR_MINOR"
 
     ]]>
     </build>
@@ -23,8 +125,42 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
+cd "$BOLT_SOURCE_DIR"
+
+###############################################################################
+# Set some variables
+###############################################################################
+MAJOR_MINOR="`echo '#include "./patchlevel.h"
+SET PERL_REVISION.PERL_VERSION' | gcc -E -DPERL_PATCHLEVEL_H_IMPLICIT -  | sed -n '/^SET /{s///;s/ //gp;}'`"
+PATCHLEVEL="`echo '#include "./patchlevel.h"
+SET PERL_SUBVERSION' | gcc -E -DPERL_PATCHLEVEL_H_IMPLICIT -  | sed -n '/^SET/{s///;s/ //gp;}'`"
+FULL_VERSION="$MAJOR_MINOR.$PATCHLEVEL"
+
+cd "$BOLT_BUILD_DIR/shared"
+
+###############################################################################
+# Install the shared version
+###############################################################################
 make DESTDIR="$BOLT_INSTALL_DIR" install
+
+mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/perl/$MAJOR_MINOR/CORE/libperl.so.$FULL_VERSION" \
+	"$BOLT_INSTALL_DIR$BOLT_INSTALL_PREFIX/lib/"
+ln -sf libperl.so.$FULL_VERSION \
+	"$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libperl.so.$MAJOR_MINOR"
+ln -sf libperl.so.$FULL_VERSION \
+	"$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libperl.so"
+
+chmod 644 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libperl.so.$FULL_VERSION"
+
+###############################################################################
+# Copy the static library
+###############################################################################
+cp -va "$BOLT_BUILD_DIR/static/libperl.a" "$BOLT_INSTALL_DIR$BOLT_INSTALL_PREFIX/lib/"
+
+###############################################################################
+# Fix permissions
+###############################################################################
+find "$BOLT_INSTALL_DIR/" -exec chmod u+w '{}' ';'
 
     ]]>
     </install>

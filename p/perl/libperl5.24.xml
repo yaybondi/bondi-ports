@@ -18,5 +18,7 @@
     </requires>
 
     <contents>
+        <file src="${prefix}/lib/libperl.so.*"/>
+        <file src="${prefix}/lib/perl"/>
     </contents>
 </package>
