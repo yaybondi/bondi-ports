@@ -21,7 +21,7 @@
 
     <requires>
         <package name="libgcrypt20" version="=="/>
-        <package name="libc6-dev"/>
+        <package name="musl-libc-dev"/>
         <package name="libgpg-error-dev"/>
     </requires>
 
