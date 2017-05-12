@@ -20,10 +20,10 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/*"/>
-        <file src="/usr/include/*"/>
-        <file src="/usr/lib/*.a"/>
-        <file src="/usr/lib/*.so"/>
-        <file src="/usr/share/aclocal/*"/>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libnpth.a"/>
+        <file src="${prefix}/lib/libnpth.so"/>
+        <file src="${prefix}/share/aclocal"/>
     </contents>
 </package>

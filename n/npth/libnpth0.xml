@@ -12,10 +12,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/usr/lib/*.so.*"/>
+        <file src="${prefix}/lib/libnpth.so.*"/>
     </contents>
 </package>

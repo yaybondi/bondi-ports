@@ -6,7 +6,7 @@
 
     <source name="npth" architecture-independent="false">
         <description>
-            <summary>headers for libnpth0</summary>
+            <summary>A non-preemptive threads implementation</summary>
             <p>
             nPth is a non-preemptive threads implementation using an API very
             similar to the one known from GNU Pth. It has been designed as a
@@ -14,9 +14,6 @@
             contrast to GNU Pth it is based on the system's standard threads
             implementation. Thus nPth allows the use of libraries which are not
             compatible to GNU Pth.
-            </p>
-            <p>
-            This package contains the headers and static libraries for libnpth0.
             </p>
         </description>
 
