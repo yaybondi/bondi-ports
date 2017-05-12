@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
-    </defines>
-
     <source name="tzdb" architecture-independent="true">
         <description>
             <summary>time zone and daylight-saving time data</summary>
@@ -20,9 +16,6 @@
             <file src="tzdb-2017a.tar.lz" subdir="sources"
                 sha256sum="4283ece165c6711f7ea415b98413a625b3b65bbd2e205e0f2d23c302ffc1e31c"/>
         </sources>
-
-        <requires>
-        </requires>
 
         <xi:include href="rules.xml"/>
     </source>

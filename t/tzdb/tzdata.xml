@@ -12,6 +12,6 @@
     </description>
 
     <contents>
-        <file src="/usr/share/zoneinfo"/>
+        <file src="${prefix}/share/zoneinfo"/>
     </contents>
 </package>
