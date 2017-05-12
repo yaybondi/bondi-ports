@@ -22,10 +22,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/build-no-libsecret/tty/pinentry-tty"/>
+        <file src="${prefix}/bin/pinentry-tty"/>
     </contents>
 </package>

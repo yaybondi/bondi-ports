@@ -22,10 +22,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/build-no-libsecret/curses/pinentry-curses"/>
+        <file src="${prefix}/bin/pinentry-curses"/>
     </contents>
 </package>

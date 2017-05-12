@@ -4,9 +4,19 @@
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+"$BOLT_SOURCE_DIR/configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --host="$BOLT_HOST_TYPE" \
+    --build="$BOLT_HOST_TYPE" \
+    --with-libassuan-prefix="$BOLT_INSTALL_PREFIX" \
+    --with-libgpg-error-prefix="$BOLT_INSTALL_PREFIX" \
+    --disable-pinentry-gtk2 \
+    --disable-pinentry-gnome3 \
+    --disable-libsecret \
+    --disable-pinentry-qt5 \
+    --disable-rpath \
+    --enable-pinentry-tty \
+    --enable-pinentry-curses
 
     ]]>
     </prepare>

@@ -16,44 +16,35 @@
             the same. It uses an open protocol and is therefore not tied to
             particular software.
             </p>
-            <p>
-            The program contained in this package implements a PIN entry dialog
-            using the curses tool kit, meaning that it is useful for users
-            working in text mode without the X Window System. There are sibling
-            packages that implement PIN entry dialogs that use an X tool kit. If
-            you install any of the graphical packages then this package is not
-            necessary because the sibling packages automatically fall back to
-            text mode if X is not active.
-            </p>
         </description>
 
         <sources>
             <file src="pinentry-1.0.0.tar.bz2" subdir="sources"
                 sha256sum="1672c2edc1feb036075b187c0773787b2afd0544f55025c645a71b4c2f79275a"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="705206a8ea17af75947daf31f958e077f857bea1699f3bec1c932630062c885d"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="02e3a14c2f21f5f28118282724c58e90d845359a296fb323da24d2cff52dbfbf"/>
         </sources>
         
         <patches>
             <patchset subdir="sources">
                 <file src="patches/0001-avoid-self-describing-as-a-beta.patch"/>
                 <file src="patches/0002-Fix-linkage-problem-in-tty-and-emacs-pinentries.patch"/>
+                <file src="patches/0003-Fix-spelling-errors.patch"/>
+                <file src="patches/0004-gnome3-Fix-CONFIRM-condition.patch"/>
+                <file src="patches/0005-gnome3-Use-the-program-name-as-default-title.patch"/>
+                <file src="patches/0006-gtk2-Fix-a-problem-with-fvwm.patch"/>
+                <file src="patches/0007-gtk2-When-X11-input-grabbing-fails-try-again-over-0..patch"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="debhelper" version=">= 10"/>
-            <package name="dh-autoreconf"/>
             <package name="libassuan-dev" version=">= 2.1.0"/>
             <package name="libgcr-3-dev"/>
             <package name="libglib2.0-dev" version=">= 2.15.5"/>
             <package name="libgpg-error-dev" version=">= 1.16"/>
-            <package name="libgtk2.0-dev" version=">= 2.4.0"/>
             <package name="libncurses5-dev"/>
             <package name="libncursesw5-dev"/>
-            <package name="libsecret-1-dev"/>
             <package name="m4"/>
-            <package name="qtbase5-dev"/>
             <package name="texinfo"/>
         </requires>
 
@@ -62,11 +53,6 @@
 
     <xi:include href="pinentry-curses.xml"/>
     <xi:include href="pinentry-tty.xml"/>
-    <xi:include href="pinentry-qt.xml"/>
-    <xi:include href="pinentry-qt4.xml"/>
-    <xi:include href="pinentry-gtk2.xml"/>
-    <xi:include href="pinentry-gnome3.xml"/>
-    <xi:include href="pinentry-doc.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>
