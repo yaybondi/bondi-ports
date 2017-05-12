@@ -21,10 +21,10 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/ksba-config"/>
-        <file src="/usr/include/*"/>
-        <file src="/usr/lib/lib*.a"/>
-        <file src="/usr/lib/lib*.so"/>
-        <file src="/usr/share/aclocal/ksba.m4"/>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libksba.a"/>
+        <file src="${prefix}/lib/libksba.so"/>
+        <file src="${prefix}/share/aclocal"/>
     </contents>
 </package>
