@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="busybox-vim-nox-symlinks" section="admin">
+<package name="busybox-vi-symlinks" section="admin">
     <description>
-        <summary>Substitutes for (some) programs from the vim-nox package</summary>
+        <summary>Substitutes for (some) programs from the vi(m) packages</summary>
         <p>
             This package contains the symbolic links for the following applets:
         </p>

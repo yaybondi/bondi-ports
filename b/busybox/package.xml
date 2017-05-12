@@ -113,7 +113,7 @@
     <xi:include href="applets/mtd-utils.xml"/>
     <xi:include href="applets/nbd-client.xml"/>
     <xi:include href="applets/ncurses-bin.xml"/>
-    <xi:include href="applets/netcat-traditional.xml"/>
+    <xi:include href="applets/netcat.xml"/>
     <xi:include href="applets/net-tools.xml"/>
     <xi:include href="applets/ntp.xml"/>
     <xi:include href="applets/passwd.xml"/>
@@ -141,7 +141,7 @@
     <xi:include href="applets/uml-utilities.xml"/>
     <xi:include href="applets/usbutils.xml"/>
     <xi:include href="applets/util-linux.xml"/>
-    <xi:include href="applets/vim-nox.xml"/>
+    <xi:include href="applets/vi.xml"/>
     <xi:include href="applets/vlan.xml"/>
     <xi:include href="applets/vlock.xml"/>
     <xi:include href="applets/watchdog.xml"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="busybox-netcat-traditional-symlinks" section="admin">
+<package name="busybox-netcat-symlinks" section="admin">
     <description>
         <summary>Substitutes for (some) programs from the netcat-traditional package</summary>
         <p>
