@@ -2,13 +2,20 @@
 <rules>
     <prepare>
     <![CDATA[
-# nothing to do
+
+true
+
     ]]>
     </prepare>
 
     <build>
     <![CDATA[
-cd $XPACK_BUILD_DIR
+
+if [ "$BOLT_BUILD_FOR" != "target" ]; then
+    exit 0
+fi
+
+cd $BOLT_BUILD_DIR
 make
 cat > ca-certificates.conf <<EOF
 # This file lists certificates that you wish to use or to ignore to be
@@ -19,23 +26,39 @@ cat > ca-certificates.conf <<EOF
 # line beginning with ! is a certificate filename to be deselected.
 #
 EOF
-find ./ -type f -a '(' -name '*.crt' -o -name '*.pem' ')' -print | \
+find ./mozilla -type f -a '(' -name '*.crt' -o -name '*.pem' ')' -print | \
 while read CERT
 do
     echo $CERT | sed "s@^./@@"
 done | \
 sort -u >> ca-certificates.conf
+
     ]]>
     </build>
 
     <install>
     <![CDATA[
-cd $XPACK_BUILD_DIR
-install -m 0755 -d $XPACK_INSTALL_DIR/usr/sbin
-install -m 0755 -d $XPACK_INSTALL_DIR/usr/share/ca-certificates
-make DESTDIR=$XPACK_INSTALL_DIR install
-install -m 0755 -d $XPACK_INSTALL_DIR/etc
-install -m 0644 ca-certificates.conf $XPACK_INSTALL_DIR/etc/
+
+if [ "$BOLT_BUILD_FOR" != "target" ]; then
+    exit 0
+fi
+
+cd "$BOLT_BUILD_DIR"
+
+install -m 0755 -d "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin"
+install -m 0755 -d "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/ca-certificates"
+install -m 0755 -d "$BOLT_INSTALL_DIR/etc"
+install -m 0755 -d "$BOLT_INSTALL_DIR/etc/ca-certificates"
+install -m 0755 -d "$BOLT_INSTALL_DIR/etc/ca-certificates/update.d"
+install -m 0755 -d "$BOLT_INSTALL_DIR/etc/ssl"
+install -m 0755 -d "$BOLT_INSTALL_DIR/etc/ssl/certs"
+
+make DESTDIR="$BOLT_INSTALL_DIR" install
+
+install -m 0644 ca-certificates.conf "$BOLT_INSTALL_DIR/etc/"
+install -m 0755 sbin/update-ca-certificates \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin/"
+
     ]]>
     </install>
 </rules>

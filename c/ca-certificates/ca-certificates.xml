@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="ca-certificates" section="misc">
+<package name="ca-certificates" section="misc" build-for="target">
     <description>
         <summary>Common CA certificates</summary>
         <p>
@@ -24,9 +24,9 @@
         <dir src="/etc/ca-certificates/update.d"/>
         <dir src="/etc/ssl"/>
         <dir src="/etc/ssl/certs"/>
-        <file src="/usr/sbin"/>
-        <dir src="/usr/share/ca-certificates"/>
-        <file src="/usr/share/ca-certificates/mozilla"/>
+        <file src="${prefix}/sbin"/>
+        <dir src="${prefix}/share/ca-certificates"/>
+        <file src="${prefix}/share/ca-certificates/mozilla"/>
     </contents>
 
     <maintainer-scripts>
