@@ -13,16 +13,14 @@
     </description>
 
     <requires>
-        <package name="dpkg" version=">= 1.15.4"/>
         <package name="libassuan0" version="=="/>
     </requires>
 
     <contents>
-        <file src="/debian/tmp/usr/bin"/>
-        <file src="/debian/tmp/usr/include/*.h"/>
-        <file src="/debian/tmp/usr/lib/*.a"/>
-        <file src="/debian/tmp/usr/lib/*.so"/>
-        <file src="/debian/tmp/usr/share/aclocal"/>
-        <file src="/debian/tmp/usr/share/info/*.info*"/>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libassuan.a"/>
+        <file src="${prefix}/lib/libassuan.so"/>
+        <file src="${prefix}/share/aclocal"/>
     </contents>
 </package>
