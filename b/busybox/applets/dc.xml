@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/dc"/>
+        <file src="${prefix}/bin/dc"/>
     </contents>
 </package>

@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/setserial"/>
+        <file src="${prefix}/bin/setserial"/>
     </contents>
 </package>

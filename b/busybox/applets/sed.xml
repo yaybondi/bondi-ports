@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/sed"/>
+        <file src="${prefix}/bin/sed"/>
     </contents>
 </package>

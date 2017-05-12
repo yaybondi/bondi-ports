@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/ifenslave"/>
+        <file src="${prefix}/sbin/ifenslave"/>
     </contents>
 </package>

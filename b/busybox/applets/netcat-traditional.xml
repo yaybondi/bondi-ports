@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/nc"/>
+        <file src="${prefix}/bin/nc"/>
     </contents>
 </package>

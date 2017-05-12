@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/cmp"/>
+        <file src="${prefix}/bin/cmp"/>
     </contents>
 </package>

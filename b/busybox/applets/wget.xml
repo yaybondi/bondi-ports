@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/wget"/>
+        <file src="${prefix}/bin/wget"/>
     </contents>
 </package>

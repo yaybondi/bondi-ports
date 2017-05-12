@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/losetup"/>
+        <file src="${prefix}/sbin/losetup"/>
     </contents>
 </package>

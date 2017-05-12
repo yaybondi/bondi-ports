@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/tftp"/>
+        <file src="${prefix}/bin/tftp"/>
     </contents>
 </package>

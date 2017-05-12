@@ -26,8 +26,8 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/klogd"/>
-        <file src="/usr/sbin/logread"/>
-        <file src="/usr/sbin/syslogd"/>
+        <file src="${prefix}/sbin/klogd"/>
+        <file src="${prefix}/sbin/logread"/>
+        <file src="${prefix}/sbin/syslogd"/>
     </contents>
 </package>

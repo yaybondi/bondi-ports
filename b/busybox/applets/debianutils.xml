@@ -27,9 +27,9 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/run-parts"/>
-        <file src="/usr/bin/which"/>
-        <file src="/usr/sbin/add-shell"/>
-        <file src="/usr/sbin/remove-shell"/>
+        <file src="${prefix}/bin/run-parts"/>
+        <file src="${prefix}/bin/which"/>
+        <file src="${prefix}/sbin/add-shell"/>
+        <file src="${prefix}/sbin/remove-shell"/>
     </contents>
 </package>

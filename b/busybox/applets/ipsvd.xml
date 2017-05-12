@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/tcpsvd"/>
+        <file src="${prefix}/bin/tcpsvd"/>
     </contents>
 </package>

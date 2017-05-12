@@ -23,7 +23,7 @@
 
     <contents>
         <dir src="/etc/network"/>
-        <dir src="/usr/share/udhcpc"/>
+        <dir src="${prefix}/share/udhcpc"/>
         <file src="${prefix}/bin/busybox"/>
     </contents>
 </package>

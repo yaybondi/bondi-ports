@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/pscan"/>
+        <file src="${prefix}/bin/pscan"/>
     </contents>
 </package>

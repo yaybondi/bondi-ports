@@ -26,8 +26,8 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/cal"/>
-        <file src="/usr/bin/hd"/>
-        <file src="/usr/bin/hexdump"/>
+        <file src="${prefix}/bin/cal"/>
+        <file src="${prefix}/bin/hd"/>
+        <file src="${prefix}/bin/hexdump"/>
     </contents>
 </package>

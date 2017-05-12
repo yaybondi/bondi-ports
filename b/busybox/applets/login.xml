@@ -25,7 +25,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/login"/>
-        <file src="/usr/bin/su"/>
+        <file src="${prefix}/bin/login"/>
+        <file src="${prefix}/bin/su"/>
     </contents>
 </package>

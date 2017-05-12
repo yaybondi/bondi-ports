@@ -25,7 +25,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/passwd"/>
-        <file src="/usr/sbin/chpasswd"/>
+        <file src="${prefix}/bin/passwd"/>
+        <file src="${prefix}/sbin/chpasswd"/>
     </contents>
 </package>

@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/vlock"/>
+        <file src="${prefix}/bin/vlock"/>
     </contents>
 </package>

@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/tunctl"/>
+        <file src="${prefix}/sbin/tunctl"/>
     </contents>
 </package>

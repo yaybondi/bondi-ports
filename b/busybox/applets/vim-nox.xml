@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/vi"/>
+        <file src="${prefix}/bin/vi"/>
     </contents>
 </package>

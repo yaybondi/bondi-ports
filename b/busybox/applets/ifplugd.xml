@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/ifplugd"/>
+        <file src="${prefix}/sbin/ifplugd"/>
     </contents>
 </package>

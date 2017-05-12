@@ -33,15 +33,15 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/free"/>
-        <file src="/usr/bin/kill"/>
-        <file src="/usr/bin/pgrep"/>
-        <file src="/usr/bin/pkill"/>
-        <file src="/usr/bin/pmap"/>
-        <file src="/usr/bin/ps"/>
-        <file src="/usr/bin/pwdx"/>
-        <file src="/usr/bin/top"/>
-        <file src="/usr/bin/uptime"/>
-        <file src="/usr/bin/watch"/>
+        <file src="${prefix}/bin/free"/>
+        <file src="${prefix}/bin/kill"/>
+        <file src="${prefix}/bin/pgrep"/>
+        <file src="${prefix}/bin/pkill"/>
+        <file src="${prefix}/bin/pmap"/>
+        <file src="${prefix}/bin/ps"/>
+        <file src="${prefix}/bin/pwdx"/>
+        <file src="${prefix}/bin/top"/>
+        <file src="${prefix}/bin/uptime"/>
+        <file src="${prefix}/bin/watch"/>
     </contents>
 </package>

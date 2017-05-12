@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/watchdog"/>
+        <file src="${prefix}/sbin/watchdog"/>
     </contents>
 </package>

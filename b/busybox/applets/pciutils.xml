@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/lspci"/>
+        <file src="${prefix}/bin/lspci"/>
     </contents>
 </package>

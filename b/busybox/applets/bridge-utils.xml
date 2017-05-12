@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/brctl"/>
+        <file src="${prefix}/sbin/brctl"/>
     </contents>
 </package>

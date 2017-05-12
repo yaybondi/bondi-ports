@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/ipcalc"/>
+        <file src="${prefix}/bin/ipcalc"/>
     </contents>
 </package>

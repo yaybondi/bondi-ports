@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/nbd-client"/>
+        <file src="${prefix}/sbin/nbd-client"/>
     </contents>
 </package>

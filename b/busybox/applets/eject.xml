@@ -25,7 +25,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/eject"/>
-        <file src="/usr/bin/volname"/>
+        <file src="${prefix}/bin/eject"/>
+        <file src="${prefix}/bin/volname"/>
     </contents>
 </package>

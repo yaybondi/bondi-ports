@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/runlevel"/>
+        <file src="${prefix}/sbin/runlevel"/>
     </contents>
 </package>

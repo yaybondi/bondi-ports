@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/rfkill"/>
+        <file src="${prefix}/sbin/rfkill"/>
     </contents>
 </package>

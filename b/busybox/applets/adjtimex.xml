@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/adjtimex"/>
+        <file src="${prefix}/sbin/adjtimex"/>
     </contents>
 </package>

@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/mt"/>
+        <file src="${prefix}/bin/mt"/>
     </contents>
 </package>

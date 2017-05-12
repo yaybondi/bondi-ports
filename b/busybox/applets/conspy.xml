@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/conspy"/>
+        <file src="${prefix}/bin/conspy"/>
     </contents>
 </package>

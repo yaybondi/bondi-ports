@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/ed"/>
+        <file src="${prefix}/bin/ed"/>
     </contents>
 </package>

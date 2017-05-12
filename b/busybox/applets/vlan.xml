@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/vconfig"/>
+        <file src="${prefix}/sbin/vconfig"/>
     </contents>
 </package>

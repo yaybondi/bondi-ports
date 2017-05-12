@@ -31,13 +31,13 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/chvt"/>
-        <file src="/usr/bin/deallocvt"/>
-        <file src="/usr/bin/fgconsole"/>
-        <file src="/usr/bin/kbd_mode"/>
-        <file src="/usr/bin/openvt"/>
-        <file src="/usr/bin/setkeycodes"/>
-        <file src="/usr/bin/showkey"/>
-        <file src="/usr/sbin/setlogcons"/>
+        <file src="${prefix}/bin/chvt"/>
+        <file src="${prefix}/bin/deallocvt"/>
+        <file src="${prefix}/bin/fgconsole"/>
+        <file src="${prefix}/bin/kbd_mode"/>
+        <file src="${prefix}/bin/openvt"/>
+        <file src="${prefix}/bin/setkeycodes"/>
+        <file src="${prefix}/bin/showkey"/>
+        <file src="${prefix}/sbin/setlogcons"/>
     </contents>
 </package>

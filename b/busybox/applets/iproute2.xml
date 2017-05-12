@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/ip"/>
+        <file src="${prefix}/sbin/ip"/>
     </contents>
 </package>

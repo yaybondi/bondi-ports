@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/powertop"/>
+        <file src="${prefix}/sbin/powertop"/>
     </contents>
 </package>

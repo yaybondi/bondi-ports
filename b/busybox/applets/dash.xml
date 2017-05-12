@@ -24,6 +24,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/sh"/>
+        <file src="${prefix}/bin/sh"/>
     </contents>
 </package>
