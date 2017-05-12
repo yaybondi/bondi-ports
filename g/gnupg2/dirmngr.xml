@@ -22,7 +22,6 @@
             <package name="busybox-adduser-symlinks"/>
             <package name="adduser"/>
         </choice>
-        <package name="lsb-base" version=">= 3.2-13"/>
     </requires>
 
     <contents>
