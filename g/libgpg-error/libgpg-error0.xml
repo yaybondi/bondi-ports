@@ -10,7 +10,6 @@
     </description>
 
     <contents>
-        <file src="${prefix}/lib/libgpg-error.so.0"/>
-        <file src="${prefix}/lib/libgpg-error.so.0.21.0"/>
+        <file src="${prefix}/lib/libgpg-error.so.*"/>
     </contents>
 </package>
