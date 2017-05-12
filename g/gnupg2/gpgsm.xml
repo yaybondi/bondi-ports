@@ -20,6 +20,6 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/gpgsm"/>
+        <file src="${prefix}/bin/gpgsm"/>
     </contents>
 </package>

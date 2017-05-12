@@ -17,21 +17,16 @@
     </description>
 
     <requires>
-        <package name="pinentry"/>
+        <package name="pinentry-curses"/>
     </requires>
 
     <contents>
-        <file src="/debian/Xsession.d/90gpg-agent"/>
-        <file src="/debian/systemd-user/gpg-agent-browser.socket"/>
-        <file src="/usr/bin/gpg-agent"/>
-        <file src="/usr/bin/gpg-connect-agent"/>
-        <file src="/usr/bin/symcryptrun"/>
-        <file src="/usr/lib/gnupg/gpg-check-pattern"/>
-        <file src="/usr/lib/gnupg/gpg-preset-passphrase"/>
-        <file src="/usr/lib/gnupg/gpg-protect-tool"/>
-        <file src="/doc/examples/systemd-user/gpg-agent-extra.socket"/>
-        <file src="/doc/examples/systemd-user/gpg-agent-ssh.socket"/>
-        <file src="/doc/examples/systemd-user/gpg-agent.service"/>
-        <file src="/doc/examples/systemd-user/gpg-agent.socket"/>
+        <file src="${prefix}/bin/gpg-agent"/>
+        <file src="${prefix}/bin/gpg-connect-agent"/>
+        <dir src="${prefix}/lib/gnupg"/>
+        <file src="${prefix}/lib/gnupg/gpg-check-pattern" mode="0755"/>
+        <file src="${prefix}/lib/gnupg/gpg-preset-passphrase" mode="0755"/>
+        <file src="${prefix}/lib/gnupg/gpg-protect-tool" mode="0755"/>
+        <file src="${prefix}/lib/gnupg2"/>
     </contents>
 </package>

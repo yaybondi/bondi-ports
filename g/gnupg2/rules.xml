@@ -5,8 +5,17 @@
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --libexecdir="$BOLT_INSTALL_PREFIX/lib/gnupg" \
+    --host="$BOLT_HOST_TYPE" \
+    --build="$BOLT_HOST_TYPE" \
+    --with-gpg-error-prefix="$BOLT_INSTALL_PREFIX" \
+    --with-libgcrypt-prefix="$BOLT_INSTALL_PREFIX" \
+    --with-libassuan-prefix="$BOLT_INSTALL_PREFIX" \
+    --with-ksba-prefix="$BOLT_INSTALL_PREFIX" \
+    --with-npth-prefix="$BOLT_INSTALL_PREFIX" \
+    --disable-doc \
+    --disable-rpath
 
     ]]>
     </prepare>
@@ -25,6 +34,21 @@ make -j"$BOLT_PARALLEL_JOBS"
 
 cd "$BOLT_BUILD_DIR"
 make DESTDIR="$BOLT_INSTALL_DIR" install
+
+install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/gnupg2"
+ln -sf ../gnupg/gpg-preset-passphrase \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/gnupg2/gpg-preset-passphrase"
+ln -sf ../gnupg/gpg-protect-tool \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/gnupg2/gpg-protect-tool"
+
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/gpg2" \
+        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/gpg"
+ln -sf "gpg" \
+        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/gpg2"
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/gpgv2" \
+        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/gpgv"
+ln -sf "gpgv" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/gpgv2"
 
     ]]>
     </install>

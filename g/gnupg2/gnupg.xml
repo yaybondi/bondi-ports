@@ -9,7 +9,7 @@
         with the proposed OpenPGP Internet standard as described in RFC4880.
         </p>
         <p>
-        This package contains /usr/bin/gpg and some helper utilities like
+        This package contains ${prefix}/bin/gpg and some helper utilities like
         gpgconf and kbxutil.
         </p>
     </description>
@@ -19,18 +19,14 @@
     </requires>
 
     <contents>
-        <file src="/build/tools/gpg-zip"/>
-        <file src="/build/tools/gpgsplit"/>
-        <file src="/debian/migrate-pubring-from-classic-gpg"/>
-        <file src="/usr/bin/gpg"/>
-        <file src="/usr/bin/gpgconf"/>
-        <file src="/usr/bin/gpgparsemail"/>
-        <file src="/usr/bin/kbxutil"/>
-        <file src="/usr/bin/watchgnupg"/>
-        <file src="/usr/sbin/addgnupghome"/>
-        <file src="/usr/sbin/applygnupgdefaults"/>
-        <file src="/usr/share/gnupg/distsigkey.gpg"/>
-        <file src="/usr/share/gnupg/gpg-conf.skel"/>
-        <file src="/tools/lspgpot"/>
+        <file src="${prefix}/bin/gpg"/>
+        <file src="${prefix}/bin/gpgconf"/>
+        <file src="${prefix}/bin/gpgparsemail"/>
+        <file src="${prefix}/bin/kbxutil"/>
+        <file src="${prefix}/bin/watchgnupg"/>
+        <file src="${prefix}/sbin"/>
+        <dir src="${prefix}/share/gnupg"/>
+        <file src="${prefix}/share/gnupg/distsigkey.gpg"/>
+        <file src="${prefix}/share/gnupg/gpg-conf.skel"/>
     </contents>
 </package>

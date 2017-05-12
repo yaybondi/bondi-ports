@@ -16,4 +16,8 @@
     <requires>
         <package name="gpgv" version=">=="/>
     </requires>
+
+    <contents>
+        <file src="${prefix}/bin/gpgv2"/>
+    </contents>
 </package>

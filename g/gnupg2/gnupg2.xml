@@ -17,4 +17,8 @@
     <requires>
         <package name="gnupg" version=">=="/>
     </requires>
+
+    <contents>
+        <file src="${prefix}/bin/gpg2"/>
+    </contents>
 </package>
