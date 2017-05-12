@@ -14,17 +14,16 @@
 
     <requires>
         <package name="libassuan-dev"/>
-        <package name="libc6-dev"/>
+        <package name="musl-libc-dev"/>
         <package name="libgpg-error-dev"/>
         <package name="libgpgme11" version="=="/>
     </requires>
 
     <contents>
-        <file src="/usr/bin/gpgme-config"/>
-        <file src="/usr/bin/gpgme-tool"/>
-        <file src="/usr/include/gpgme.h"/>
-        <file src="/usr/lib/libgpgme.a"/>
-        <file src="/usr/lib/libgpgme.so"/>
-        <file src="/usr/share/aclocal"/>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/include/gpgme.h"/>
+        <file src="${prefix}/lib/libgpgme.a"/>
+        <file src="${prefix}/lib/libgpgme.so"/>
+        <file src="${prefix}/share/aclocal"/>
     </contents>
 </package>

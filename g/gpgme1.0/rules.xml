@@ -4,9 +4,19 @@
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+"$BOLT_SOURCE_DIR/configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --with-gpg-error-prefix="$BOLT_INSTALL_PREFIX" \
+    --with-libgcrypt-prefix="$BOLT_INSTALL_PREFIX" \
+    --with-libassuan-prefix="$BOLT_INSTALL_PREFIX" \
+    --with-ksba-prefix="$BOLT_INSTALL_PREFIX" \
+    --with-npth-prefix="$BOLT_INSTALL_PREFIX" \
+    --disable-doc \
+    --disable-rpath \
+    --enable-shared \
+    --enable-static
 
     ]]>
     </prepare>

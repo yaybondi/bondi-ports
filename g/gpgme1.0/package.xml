@@ -52,9 +52,6 @@
 
     <xi:include href="libgpgme-dev.xml"/>
     <xi:include href="libgpgme11.xml"/>
-    <xi:include href="python3-gpg.xml"/>
-    <xi:include href="python-gpg.xml"/>
-    <xi:include href="libqgpgme7.xml"/>
     <xi:include href="libgpgmepp6.xml"/>
     <xi:include href="libgpgmepp-dev.xml"/>
 

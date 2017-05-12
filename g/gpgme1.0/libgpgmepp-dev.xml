@@ -18,18 +18,13 @@
 
     <requires>
         <package name="libgpgmepp6" version="=="/>
-        <package name="libqgpgme7" version="=="/>
-        <package name="qtbase5-dev"/>
     </requires>
 
     <contents>
-        <file src="/usr/include/QGpgME"/>
-        <file src="/usr/include/gpgme++"/>
-        <file src="/usr/include/qgpgme"/>
-        <file src="/usr/lib/cmake"/>
-        <file src="/usr/lib/libgpgmepp.a"/>
-        <file src="/usr/lib/libgpgmepp.so"/>
-        <file src="/usr/lib/libqgpgme.a"/>
-        <file src="/usr/lib/libqgpgme.so"/>
+        <file src="${prefix}/include/gpgme++"/>
+        <dir src="${prefix}/lib/cmake"/>
+        <file src="${prefix}/lib/cmake/Gpgmepp"/>
+        <file src="${prefix}/lib/libgpgmepp.a"/>
+        <file src="${prefix}/lib/libgpgmepp.so"/>
     </contents>
 </package>

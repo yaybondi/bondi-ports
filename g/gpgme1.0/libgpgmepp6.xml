@@ -11,10 +11,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/usr/lib/libgpgmepp.so.*"/>
+        <file src="${prefix}/lib/libgpgmepp.so.*"/>
     </contents>
 </package>

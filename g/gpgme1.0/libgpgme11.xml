@@ -16,6 +16,7 @@
     </requires>
 
     <contents>
-        <file src="/usr/lib/libgpgme.so.*"/>
+        <file src="${prefix}/lib/libgpgme-pthread.so.*"/>
+        <file src="${prefix}/lib/libgpgme.so.*"/>
     </contents>
 </package>
