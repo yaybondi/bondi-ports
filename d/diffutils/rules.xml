@@ -3,10 +3,18 @@
     <prepare>
     <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
+bh_autotools_dev_update
+
+autoreconf -vfi
+
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_BUILD_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --disable-nls \
+    --disable-silent-rules
 
     ]]>
     </prepare>
@@ -24,7 +32,7 @@ make -j"$BOLT_PARALLEL_JOBS"
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+make -C src DESTDIR="$BOLT_INSTALL_DIR" install
 
     ]]>
     </install>
