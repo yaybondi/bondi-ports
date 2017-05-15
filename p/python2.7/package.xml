@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
-    </defines>
-
     <source name="python2.7" architecture-independent="false">
         <description>
             <summary>Interactive high-level object-oriented language (version 2.7)</summary>
@@ -17,14 +13,15 @@
         <sources>
             <file src="python2.7-2.7.13.tar.gz" subdir="sources"
                 sha256sum="a4f05a0720ce0fd92626f0278b6b433eee9a6173ddf2bced7957dfb599a5ece1"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="c615ebb1bb2e42f8174e5ed51dc18ffd0ae78b6f5436874a30fe1fd5bfd002f9"/>
+            <file src="patches.02.tar.gz" subdir="patches"
+                sha256sum="fbac6cf4a7a3fe6acb5f9a4f843a49c00addfe881c7435ba6e0d25a92f719696"/>
             <file src="patches.bolt.tar.gz" subdir="patches"
                 sha256sum="3734b3dd2c9a29052d12a2a564c726e0aa54307a1a7d880e1dea121fc71f911f"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/issue9189.diff"/>
                 <file src="patches/build-libpython.diff"/>
                 <file src="patches/deb-setup.diff"/>
@@ -46,6 +43,7 @@
                 <file src="patches/setup-modules-ssl.diff"/>
                 <file src="patches/makesetup-bashism.diff"/>
                 <file src="patches/hurd-disable-nonworking-constants.diff"/>
+                <file src="patches/enable-fpectl.diff"/>
                 <file src="patches/statvfs-f_flag-constants.diff"/>
                 <file src="patches/issue9012a.diff"/>
                 <file src="patches/link-system-expat.diff"/>
@@ -81,10 +79,9 @@
         </patches>
 
         <requires>
-            <package name="gcc" version=">= 4:6.1"/>
+            <package name="gcc" version=">= 4:6.3"/>
             <package name="autoconf"/>
             <package name="autotools-dev"/>
-            <package name="lsb-release"/>
             <package name="sharutils"/>
             <package name="libreadline-dev"/>
             <package name="libtinfo-dev"/>
@@ -95,6 +92,7 @@
             <package name="zlib1g-dev"/>
             <package name="libbz2-dev"/>
             <package name="libexpat1-dev"/>
+            <package name="libbluetooth-dev"/>
             <package name="locales"/>
             <package name="libsqlite3-dev"/>
             <package name="libffi-dev" version=">= 3.0.5"/>
@@ -104,7 +102,7 @@
             <package name="net-tools"/>
             <package name="bzip2"/>
             <package name="time"/>
-            <package name="libdb-dev"/>
+            <package name="libdb-dev" version="&lt;&lt; 1:6.0"/>
             <package name="libgdbm-dev"/>
             <package name="python"/>
             <package name="help2man"/>

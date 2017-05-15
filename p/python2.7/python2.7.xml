@@ -12,9 +12,14 @@
     <requires>
         <package name="python2.7-minimal" version="=="/>
         <package name="libpython2.7-stdlib" version="=="/>
-        <package name="mime-support"/>
     </requires>
 
     <contents>
+        <dir src="${prefix}/lib/python2.7"/>
+        <dir src="${prefix}/lib/python2.7/lib-dynload"/>
+        <file src="${prefix}/bin/2to3-2.7"/>
+        <file src="${prefix}/bin/pdb2.7"/>
+        <file src="${prefix}/bin/pydoc2.7"/>
+        <file src="${prefix}/bin/pygettext2.7"/>
     </contents>
 </package>

@@ -3,10 +3,28 @@
     <prepare>
     <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
+autoreconf -vfi
+
+# this is necesary for ffi lib loading to work
+if [ "$BOLT_BUILD_FOR" = "tools" ]; then
+    sed -i 's@paths = \["/usr/local/lib", "/usr/lib"\]@paths = ["/tools/local/lib", "/tools/lib"]@' \
+        Lib/ctypes/util.py
+fi
+
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --enable-shared \
+    --enable-ipv6 \
+    --enable-unicode=ucs4 \
+    --with-computed-gotos \
+    --without-ensurepip \
+    --with-system-expat \
+    --with-system-ffi \
+    --with-dbmliborder=bdb:gdbm
 
     ]]>
     </prepare>
@@ -25,6 +43,30 @@ make -j"$BOLT_PARALLEL_JOBS"
 
 cd "$BOLT_BUILD_DIR"
 make DESTDIR="$BOLT_INSTALL_DIR" install
+
+cd "$BOLT_INSTALL_DIR"
+
+rm -f  "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/"*idle*
+rm -fr "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python2.7/idlelib"
+
+find . -type f -a -name '*.pyo' -exec rm -f '{}' \;
+
+cp "$BOLT_SOURCE_DIR/Tools/i18n/pygettext.py" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pygettext2.7"
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pydoc" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pydoc2.7"
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/2to3" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/2to3-2.7"
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python2.7/config/libpython2.7.a" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib"
+ln -sf ../../libpython2.7.a \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python2.7/config/libpython2.7.a"
+ln -sf ../../libpython2.7.so \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python2.7/config/libpython2.7.so"
+ln -sf libpython2.7.so.1.0 \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libpython2.7.so.1"
+ln -sf ../lib/python2.7/pdb.py \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pdb2.7"
 
     ]]>
     </install>

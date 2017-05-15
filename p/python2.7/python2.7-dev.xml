@@ -20,5 +20,6 @@
     </requires>
 
     <contents>
+        <file src="${prefix}/bin/python2.7-config"/>
     </contents>
 </package>
