@@ -18,8 +18,4 @@
         <package name="libpython2.7" version="=="/>
         <package name="libexpat1-dev"/>
     </requires>
-
-    <contents>
-        <file src="${prefix}/bin/python2.7-config"/>
-    </contents>
 </package>
