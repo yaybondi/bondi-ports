@@ -6,10 +6,12 @@
         Perl is a scripting language used in many system scripts and utilities.
         </p>
         <p>
-        This package provides a Perl interpreter and the small subset of the
-        standard run-time library required to perform basic tasks. For a full
-        Perl installation, install "perl" (and its dependencies, "perl-modules-5.24"
-        and "perl-doc").
+        This package is not separately maintained on Bolt OS. It exists only
+        for the sake of keeping package naming compatibility with Debian. All
+        modules are in packages libperl and perl-modules.
+        </p>
+        <p>
+        This package contains the Perl interpreter without any modules.
         </p>
     </description>
 
