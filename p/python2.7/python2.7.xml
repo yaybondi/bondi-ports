@@ -17,6 +17,7 @@
     <contents>
         <dir src="${prefix}/lib/python2.7"/>
         <dir src="${prefix}/lib/python2.7/lib-dynload"/>
+        <dir src="${prefix}/lib/python2.7/dist-packages"/>
         <file src="${prefix}/bin/2to3-2.7"/>
         <file src="${prefix}/bin/pdb2.7"/>
         <file src="${prefix}/bin/pydoc2.7"/>

@@ -49,8 +49,6 @@ cd "$BOLT_INSTALL_DIR"
 rm -f  "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/"*idle*
 rm -fr "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python2.7/idlelib"
 
-find . -type f -a -name '*.pyo' -exec rm -f '{}' \;
-
 cp "$BOLT_SOURCE_DIR/Tools/i18n/pygettext.py" \
     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pygettext2.7"
 mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pydoc" \
