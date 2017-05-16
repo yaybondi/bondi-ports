@@ -15,16 +15,17 @@
         </description>
 
         <sources>
-            <file src="python3.5-3.5.3~rc1.tar.xz" subdir="sources"
-                sha256sum="7140482a99df2684333fa4c56d2381d1295a16c5672adfb42e963fe72aebc1ff"/>
+            <file src="python3.5-3.5.3.tar.xz" subdir="sources"
+                sha256sum="eefe2ad6575855423ab630f5b51a8ef6e5556f774584c06beab4926f930ddbb0"/>
             <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="9c1ef12d6b14e0ef0ff54768768a30ef3099a89b4c1dfef25e99155a65a583a4"/>
+                sha256sum="b680c1d6b25068716e07f60eced40ed38cd18b8284eea525907ab180e8f2529e"/>
             <file src="patches.bolt.tar.gz" subdir="patches"
                 sha256sum="b9dba35030dd349ab0d1919a3459e9763f60d2c3a2f3e1b0c4f5669900634086"/>
         </sources>
-
+        
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/deb-setup.diff"/>
                 <file src="patches/deb-locations.diff"/>
                 <file src="patches/distutils-install-layout.diff"/>
@@ -75,6 +76,7 @@
             <package name="sharutils"/>
             <package name="libreadline-dev"/>
             <package name="libncursesw5-dev" version=">= 5.3"/>
+            <package name="gcc" version=">= 4:6.3"/>
             <package name="zlib1g-dev"/>
             <package name="libbz2-dev"/>
             <package name="liblzma-dev"/>
@@ -94,6 +96,7 @@
             <package name="netbase"/>
             <package name="bzip2"/>
             <package name="time"/>
+            <package name="python3"/>
             <package name="net-tools"/>
             <package name="xvfb"/>
             <package name="xauth"/>

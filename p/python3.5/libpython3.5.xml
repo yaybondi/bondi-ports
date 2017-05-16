@@ -18,5 +18,6 @@
     </requires>
 
     <contents>
+        <file src="${prefix}/lib/libpython3.5m.so.*"/>
     </contents>
 </package>

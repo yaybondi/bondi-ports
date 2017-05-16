@@ -14,9 +14,10 @@
 
     <requires>
         <package name="python3.5" version="=="/>
-        <package name="python-pip-whl" version=">= 8.1.0-2"/>
     </requires>
 
     <contents>
+        <file src="${prefix}/bin/pyvenv-3.5"/>
+        <file src="${prefix}/lib/python3.5/ensurepip"/>
     </contents>
 </package>

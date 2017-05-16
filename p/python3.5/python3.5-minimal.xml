@@ -5,8 +5,6 @@
         <p>
         This package contains the interpreter and some essential modules. It can
         be used in the boot process for some basic tasks.
-        See /usr/share/doc/python3.5-minimal/README.Debian for a list of the modules
-        contained in this package.
         </p>
     </description>
 
@@ -15,5 +13,6 @@
     </requires>
 
     <contents>
+        <file src="${prefix}/bin/python3.5?"/>
     </contents>
 </package>

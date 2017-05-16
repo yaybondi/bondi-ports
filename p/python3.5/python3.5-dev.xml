@@ -18,7 +18,4 @@
         <package name="libpython3.5" version="=="/>
         <package name="libexpat1-dev"/>
     </requires>
-
-    <contents>
-    </contents>
 </package>

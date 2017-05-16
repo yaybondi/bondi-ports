@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
-    <release version="3.5.3~rc1" revision="1"
-        upstream-version="3.5.3~rc1-1"
+    <release version="3.5.3" revision="1bolt1" upstream-version="3.5.3-1"
         maintainer="Tobias Koch" email="tobias.koch@nonterra.com"
-        date="2017-02-01 15:57:00+03:00">
+        date="2017-05-15 21:37:31+03:00">
         <changeset>
-            <li>Initial adaptation of Debian sources for Bolt OS</li>
+            <li>Adaptation of Debian sources for Bolt OS</li>
         </changeset>
     </release>
 </changelog>
