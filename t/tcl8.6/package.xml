@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
-    </defines>
-
     <source name="tcl8.6" architecture-independent="false">
         <description>
-            <summary>Tcl (the Tool Command Language) v8.6</summary>
+            <summary>Tcl (the Tool Command Language) v8.6 - shell</summary>
             <p>
             Tcl is a powerful, easy to use, embeddable, cross-platform interpreted
             scripting language. This package contains the Tcl shell which you need

@@ -15,8 +15,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/lib/*.so"/>
-        <file src="/usr/lib/*.so.*"/>
-        <file src="/usr/share/tcltk/tcl8.6"/>
+        <file src="${prefix}/lib/libtcl8.6.so"/>
+        <file src="${prefix}/lib/libtcl8.6.so.*"/>
+        <file src="${prefix}/share/tcltk/tcl8.6"/>
     </contents>
 </package>

@@ -10,19 +10,15 @@
     </description>
 
     <requires>
-        <package name="dpkg-dev" version=">= 1.16.1~"/>
         <package name="zlib1g-dev"/>
         <package name="libtcl8.6" version="=="/>
         <package name="tcl8.6"/>
     </requires>
 
     <contents>
-        <dir src="/usr/share/aclocal"/>
-        <file src="/debian/tclConfig.sh"/>
-        <file src="/debian/tclooConfig.sh"/>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/*.a"/>
-        <file src="/usr/lib/tcl*/*.sh"/>
-        <file src="/usr/share/aclocal/*.m4"/>
+        <file src="${prefix}/include/tcl8.6"/>
+        <file src="${prefix}/lib/libtcl8.6.a"/>
+        <file src="${prefix}/lib/libtclstub8.6.a"/>
+        <file src="${prefix}/lib/tcl8.6"/>
     </contents>
 </package>
