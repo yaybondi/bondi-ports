@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="gawk" section="interpreters">
+    <description>
+        <summary>GNU awk, a pattern scanning and processing language</summary>
+        <p>
+        `awk', a program that you can use to select particular records in a
+        file and perform operations upon them.
+        </p>
+        <p>
+        Gawk is the GNU Project's implementation of the AWK programming language.
+        It conforms to the definition of the language in the POSIX 1003.2 Command
+        Language And Utilities Standard. This version in turn is based on the
+        description in The AWK Programming Language, by Aho, Kernighan, and
+        Weinberger, with the additional features defined in the System V Release
+        4 version of UNIX awk. Gawk also provides more recent Bell Labs awk
+        extensions, and some GNU-specific extensions.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/awk"/>
+        <file src="${prefix}/lib/gawk"/>
+        <file src="${prefix}/share/awk"/>
+    </contents>
+</package>

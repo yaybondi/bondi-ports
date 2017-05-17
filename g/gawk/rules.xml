@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+cd "$BOLT_SOURCE_DIR"
+autoreconf -vfi || true
+
+cd "$BOLT_BUILD_DIR"
+AWK=awk \
+"$BOLT_SOURCE_DIR/configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --libexecdir="$BOLT_INSTALL_PREFIX/lib" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --disable-rpath \
+    --disable-nls
+
+touch -d "2000-01-01" \
+    doc/gawktexi.in doc/gawk.texi doc/gawkinet.texi \
+    doc/gawk.info doc/gawkinet.info doc/sidebar.awk
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make -j"$BOLT_PARALLEL_JOBS"
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make DESTDIR="$BOLT_INSTALL_DIR" install
+
+rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/awk" 
+rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/gawk-"*
+
+    ]]>
+    </install>
+</rules>

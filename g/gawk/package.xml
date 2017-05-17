@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <source name="gawk" architecture-independent="false">
+        <description>
+            <summary>GNU awk, a pattern scanning and processing language</summary>
+            <p>
+            `awk', a program that you can use to select particular records in a
+            file and perform operations upon them.
+            </p>
+            <p>
+            Gawk is the GNU Project's implementation of the AWK programming language.
+            It conforms to the definition of the language in the POSIX 1003.2 Command
+            Language And Utilities Standard. This version in turn is based on the
+            description in The AWK Programming Language, by Aho, Kernighan, and
+            Weinberger, with the additional features defined in the System V Release
+            4 version of UNIX awk. Gawk also provides more recent Bell Labs awk
+            extensions, and some GNU-specific extensions.
+            </p>
+        </description>
+
+        <sources>
+            <file src="gawk-4.1.4+dfsg.tar.xz" subdir="sources"
+                sha256sum="62a789829601bdcd3617b068dca9e4bba484d26de263646254b6a63c0406b9ef"/>
+            <file src="patches.01.tar.gz" subdir="patches"
+                sha256sum="b8895e9ed43ceef4480842b44b40b44ad144c21dd53900700b5ac8f617e106e9"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/01-fix-manpages.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autotools-dev"/>
+            <package name="bison"/>
+            <package name="gettext"/>
+            <package name="libmpfr-dev"/>
+            <package name="libreadline-dev"/>
+            <package name="libsigsegv-dev"/>
+            <package name="locales" version=">= 0"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="gawk.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
