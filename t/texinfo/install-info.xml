@@ -8,13 +8,7 @@
         </p>
     </description>
 
-    <requires>
-        <package name="dpkg" version=">= 1.16.1"/>
-    </requires>
-
     <contents>
-        <dir src="/usr/sbin"/>
-        <dir src="/usr/share/info"/>
-        <file src="/usr/bin/install-info"/>
+        <file src="${prefix}/bin/install-info"/>
     </contents>
 </package>

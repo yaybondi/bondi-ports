@@ -3,10 +3,22 @@
     <prepare>
     <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
+autoreconf -vfi || true
+
 cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+
+AWK="$BOLT_INSTALL_PREFIX/bin/awk" \
+PERL="$BOLT_INSTALL_PREFIX/bin/perl" \
+"./configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --disable-nls \
+    --disable-rpath
+
+# prevent this from being re-generated
+touch texindex/texindex.awk
 
     ]]>
     </prepare>
