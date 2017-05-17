@@ -16,6 +16,11 @@
         (with rules being thrown in occasionally). The generated
         `Makefile.in's are compliant with the GNU Makefile standards.
         </p>
+        <p>
+        Automake 1.15 fails to work in a number of situations that Automake
+        1.4, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11 and 1.14 did, so previous versions are
+        available as separate packages.
+        </p>
     </description>
 
     <requires>
@@ -24,8 +29,9 @@
     </requires>
 
     <contents>
-        <dir src="/usr/share/aclocal"/>
-        <file src="/usr/bin/*-1.15"/>
-        <file src="/usr/share/*-1.15"/>
+        <file src="${prefix}/bin"/>
+        <dir src="${prefix}/share/aclocal"/>
+        <file src="${prefix}/share/aclocal-1.15"/>
+        <file src="${prefix}/share/automake-1.15"/>
     </contents>
 </package>
