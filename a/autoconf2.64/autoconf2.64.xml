@@ -14,7 +14,7 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin"/>
-        <file src="/usr/share/autoconf2.64"/>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/share/autoconf2.64"/>
     </contents>
 </package>

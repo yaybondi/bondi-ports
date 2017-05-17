@@ -3,10 +3,29 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
+cd "$BOLT_SOURCE_DIR"
+bh_autotools_dev_update
+
+echo "\
+ac_cv_path_EGREP='$BOLT_INSTALL_PREFIX/bin/grep -E'
+ac_cv_path_EXPR=$BOLT_INSTALL_PREFIX/bin/expr
+ac_cv_path_GREP=$BOLT_INSTALL_PREFIX/bin/grep
+ac_cv_path_M4=$BOLT_INSTALL_PREFIX/bin/m4
+ac_cv_path_PERL=$BOLT_INSTALL_PREFIX/bin/perl
+ac_cv_path_SED=$BOLT_INSTALL_PREFIX/bin/sed
+ac_cv_path_install='$BOLT_INSTALL_PREFIX/bin/install -c'
+ac_cv_path_mkdir=$BOLT_INSTALL_PREFIX/bin/mkdir
+" > config.site
+
+if [ "$BOLT_BUILD_FOR" = "tools" ]; then
+    sed -i 's@/usr/bin/autom4te2.64@/tools/bin/autom4te2.64@g' \
+        bin/autoreconf.in
+fi
+
+export CONFIG_SITE="config.site"
+
+./configure \
     --prefix="$BOLT_INSTALL_PREFIX" \
-    --disable-nls \
     --program-suffix=2.64
 
     ]]>
