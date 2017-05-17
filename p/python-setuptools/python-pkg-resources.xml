@@ -14,10 +14,10 @@
     </description>
 
     <requires>
-        <package name="python3-all"/>
+        <package name="python2.7"/>
     </requires>
 
-    <contents>
-        <file src="/usr/lib/python2.*/*-packages/pkg_resources"/>
+    <contents subdir="python2" collect-py-cache-files="true">
+        <file src="${prefix}/lib/python2.*/*-packages/pkg_resources/**/*"/>
     </contents>
 </package>

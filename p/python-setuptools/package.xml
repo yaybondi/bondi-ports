@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
-    </defines>
-
     <source name="python-setuptools" architecture-independent="true">
         <description>
             <summary>Package Discovery and Resource Access using pkg_resources</summary>
@@ -41,8 +37,8 @@
 
         <requires>
             <package name="pypy"/>
-            <package name="python-all"/>
-            <package name="python3-all"/>
+            <package name="python2.7"/>
+            <package name="python3.5"/>
         </requires>
 
         <xi:include href="rules.xml"/>

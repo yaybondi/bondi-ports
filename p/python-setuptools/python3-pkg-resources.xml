@@ -14,10 +14,10 @@
     </description>
 
     <requires>
-        <package name="python3-all"/>
+        <package name="python3.5"/>
     </requires>
 
-    <contents>
-        <file src="/usr/lib/python3.*/*-packages/pkg_resources"/>
+    <contents subdir="python3" collect-py-cache-files="true">
+        <file src="${prefix}/lib/python3*/*-packages/pkg_resources/**/*"/>
     </contents>
 </package>
