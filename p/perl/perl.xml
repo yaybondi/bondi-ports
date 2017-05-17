@@ -19,43 +19,11 @@
     </description>
 
     <requires>
-        <package name="perl-base" version="=="/>
-        <package name="perl-modules-5.24" version=">=="/>
         <package name="libperl5.24" version="=="/>
     </requires>
 
     <contents>
         <dir src="/etc/perl"/>
-        <file src="${prefix}/bin/c2ph"/>
-        <file src="${prefix}/bin/corelist"/>
-        <file src="${prefix}/bin/cpan"/>
-        <file src="${prefix}/bin/enc2xs"/>
-        <file src="${prefix}/bin/encguess"/>
-        <file src="${prefix}/bin/h2ph"/>
-        <file src="${prefix}/bin/h2xs"/>
-        <file src="${prefix}/bin/instmodsh"/>
-        <file src="${prefix}/bin/json_pp"/>
-        <file src="${prefix}/bin/libnetcfg"/>
-        <file src="${prefix}/bin/perlbug"/>
-        <file src="${prefix}/bin/perldoc"/>
-        <file src="${prefix}/bin/perlivp"/>
-        <file src="${prefix}/bin/perlthanks"/>
-        <file src="${prefix}/bin/piconv"/>
-        <file src="${prefix}/bin/pl2pm"/>
-        <file src="${prefix}/bin/pod2html"/>
-        <file src="${prefix}/bin/pod2man"/>
-        <file src="${prefix}/bin/pod2text"/>
-        <file src="${prefix}/bin/pod2usage"/>
-        <file src="${prefix}/bin/podchecker"/>
-        <file src="${prefix}/bin/podselect"/>
-        <file src="${prefix}/bin/prove"/>
-        <file src="${prefix}/bin/pstruct"/>
-        <file src="${prefix}/bin/ptar"/>
-        <file src="${prefix}/bin/ptardiff"/>
-        <file src="${prefix}/bin/ptargrep"/>
-        <file src="${prefix}/bin/shasum"/>
-        <file src="${prefix}/bin/splain"/>
-        <file src="${prefix}/bin/xsubpp"/>
-        <file src="${prefix}/bin/zipdetails"/>
+        <file src="${prefix}/bin/*"/>
     </contents>
 </package>

@@ -109,7 +109,6 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="perl-base.xml"/>
     <xi:include href="libperl5.24.xml"/>
     <xi:include href="libperl-dev.xml"/>
     <xi:include href="perl-modules-5.24.xml"/>
