@@ -48,6 +48,9 @@ install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/tcltk/"
 mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/"expect* \
     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/tcltk/"
 
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/mkpasswd" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/expect_mkpasswd"
+
     ]]>
     </install>
 </rules>
