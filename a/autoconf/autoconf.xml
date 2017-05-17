@@ -18,12 +18,12 @@
     </description>
 
     <requires>
-        <package name="perl" version=">> 5.005"/>
-        <package name="m4" version=">= 1.4.13"/>
+        <package name="perl"/>
+        <package name="m4"/>
     </requires>
 
     <contents>
-        <file src="/usr/bin"/>
-        <file src="/usr/share/autoconf"/>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/share/autoconf"/>
     </contents>
 </package>
