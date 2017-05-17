@@ -43,20 +43,12 @@ if [ ! -e "$BOLT_INSTALL_PREFIX/bin/python3" ]; then
     ln -sf "python3.5" "$BOLT_INSTALL_PREFIX/bin/python3"
 fi
 
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/python" ]; then
-    ln -sf "python3.5" "$BOLT_INSTALL_PREFIX/bin/python"
-fi
-
         ]]></postinst>
 
         <postrm><![CDATA[
 
 if [ ! -e "$BOLT_INSTALL_PREFIX/bin/python3" ]; then
     rm -f "$BOLT_INSTALL_PREFIX/bin/python3"
-fi
-
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/python" ]; then
-    rm -f "$BOLT_INSTALL_PREFIX/bin/python"
 fi
 
         ]]></postrm>
