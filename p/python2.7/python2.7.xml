@@ -14,6 +14,20 @@
         <package name="libpython2.7-stdlib" version="=="/>
     </requires>
 
+    <provides>
+        <package name="python2-all"/>
+        <package name="python2"/>
+        <package name="python-all"/>
+        <package name="python"/>
+    </provides>
+
+    <conflicts>
+        <package name="python2-all"/>
+        <package name="python2"/>
+        <package name="python-all"/>
+        <package name="python"/>
+    </conflicts>
+
     <contents subdir="all">
         <dir src="${prefix}/lib/python2.7"/>
         <dir src="${prefix}/lib/python2.7/lib-dynload"/>

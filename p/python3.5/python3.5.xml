@@ -14,6 +14,16 @@
         <package name="libpython3.5-stdlib" version="=="/>
     </requires>
 
+    <provides>
+        <package name="python3-all"/>
+        <package name="python3"/>
+    </provides>
+
+    <conflicts>
+        <package name="python3-all"/>
+        <package name="python3"/>
+    </conflicts>
+
     <contents subdir="all">
         <dir src="${prefix}/lib/python3"/>
         <dir src="${prefix}/lib/python3.5"/>
