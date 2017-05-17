@@ -17,4 +17,8 @@
         <package name="perl" version=">= 5.8.0-7"/>
     </requires>
 
+    <contents>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/lib/help2man"/>
+    </contents>
 </package>
