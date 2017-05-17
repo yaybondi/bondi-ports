@@ -16,7 +16,7 @@
         <package name="python3.5" version="=="/>
     </requires>
 
-    <contents>
+    <contents subdir="python3.5-venv">
         <file src="${prefix}/bin/pyvenv-3.5"/>
         <file src="${prefix}/lib/python3.5/ensurepip"/>
     </contents>

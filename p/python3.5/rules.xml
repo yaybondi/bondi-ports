@@ -42,26 +42,66 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
+for ENTRY in all libpython3.5-dev python3.5-venv; do
+    mkdir -p "$BOLT_INSTALL_DIR/$ENTRY"
+done
+
+FULL_INSTALL="$BOLT_INSTALL_DIR/all"
+
 cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+make DESTDIR="$FULL_INSTALL" install
 
-cd "$BOLT_INSTALL_DIR"
-
-rm -f  "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/"*idle*
-rm -fr "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python3.5/idlelib"
+rm -f  "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/"*idle*
+rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.5/idlelib"
+rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.5/turtledemo"
 
 cp "$BOLT_SOURCE_DIR/Tools/i18n/pygettext.py" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pygettext3.5"
-mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python3.5/config-3.5m/libpython3.5m.a" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib"
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/pygettext3.5"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.5/config-3.5m/libpython3.5m.a" \
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib"
 ln -sf ../../libpython3.5m.a \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python3.5/config-3.5m/libpython3.5m.a"
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.5/config-3.5m/libpython3.5m.a"
 ln -sf ../../libpython3.5m.so \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python3.5/config-3.5m/libpython3.5m.so"
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.5/config-3.5m/libpython3.5m.so"
 ln -sf libpython3.5m.so.1.0 \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libpython3.5m.so.1"
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/libpython3.5m.so.1"
 ln -sf ../lib/python3.5/pdb.py \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pdb3.5"
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/pdb3.5"
+
+cd "$FULL_INSTALL"
+find . -type d -a \( -name "test" -o -name "tests" \) -prune -exec rm -fr '{}' ';'
+
+# -------------------------------------------------------------------------
+PKG_PATH="$BOLT_INSTALL_DIR/libpython3.5-dev"
+# -------------------------------------------------------------------------
+
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.5"
+
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX"/bin/python3.5*-config \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/include" \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/pkgconfig" \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.5"/config-3.5* \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.5/"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/"libpython3.5*.a \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/"libpython3.5*.so \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/"
+
+# -------------------------------------------------------------------------
+PKG_PATH="$BOLT_INSTALL_DIR/python3.5-venv"
+# -------------------------------------------------------------------------
+
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.5"
+
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/"bin/pyvenv-* \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.5/ensurepip" \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.5"
 
     ]]>
     </install>

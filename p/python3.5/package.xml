@@ -108,8 +108,6 @@
     <xi:include href="python3.5.xml"/>
     <xi:include href="python3.5-venv.xml"/>
     <xi:include href="libpython3.5-stdlib.xml"/>
-    <xi:include href="python3.5-minimal.xml"/>
-    <xi:include href="libpython3.5-minimal.xml"/>
     <xi:include href="libpython3.5.xml"/>
     <xi:include href="python3.5-dev.xml"/>
     <xi:include href="libpython3.5-dev.xml"/>

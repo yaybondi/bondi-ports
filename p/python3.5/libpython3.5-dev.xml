@@ -22,24 +22,7 @@
         <package name="libexpat1-dev"/>
     </requires>
 
-    <contents>
-        <file src="${prefix}/bin/python3.5-config"/>
-        <file src="${prefix}/bin/python3.5m-config"/>
-        <file src="${prefix}/include"/>
-        <file src="${prefix}/lib/libpython3.5m.a"/>
-        <file src="${prefix}/lib/libpython3.5m.so"/>
-        <file src="${prefix}/lib/pkgconfig"/>
-        <file src="${prefix}/lib/python3.5/config-3.5m/Makefile"/>
-        <file src="${prefix}/lib/python3.5/config-3.5m/Setup"/>
-        <file src="${prefix}/lib/python3.5/config-3.5m/Setup.config"/>
-        <file src="${prefix}/lib/python3.5/config-3.5m/Setup.local"/>
-        <file src="${prefix}/lib/python3.5/config-3.5m/config.c"/>
-        <file src="${prefix}/lib/python3.5/config-3.5m/config.c.in"/>
-        <file src="${prefix}/lib/python3.5/config-3.5m/install-sh" mode="0755"/>
-        <file src="${prefix}/lib/python3.5/config-3.5m/libpython3.5m.a"/>
-        <file src="${prefix}/lib/python3.5/config-3.5m/libpython3.5m.so"/>
-        <file src="${prefix}/lib/python3.5/config-3.5m/makesetup" mode="0755"/>
-        <file src="${prefix}/lib/python3.5/config-3.5m/python-config.py" mode="0755"/>
-        <file src="${prefix}/lib/python3.5/config-3.5m/python.o"/>
+    <contents subdir="libpython3.5-dev">
+        <file src="/"/>
     </contents>
 </package>

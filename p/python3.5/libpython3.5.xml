@@ -17,7 +17,7 @@
         <package name="libpython3.5-stdlib" version="=="/>
     </requires>
 
-    <contents>
-        <file src="${prefix}/lib/libpython3.5m.so.*"/>
+    <contents subdir="all">
+        <file src="${prefix}/lib/libpython3.5*.so.*"/>
     </contents>
 </package>
