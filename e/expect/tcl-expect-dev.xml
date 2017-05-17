@@ -22,7 +22,7 @@
     </requires>
 
     <contents>
-        <file src="/usr/lib/*.a"/>
-        <file src="/usr/include/*"/>
+        <file src="${prefix}/include/tcl8.6"/>
+        <file src="${prefix}/lib/libexpect.so"/>
     </contents>
 </package>

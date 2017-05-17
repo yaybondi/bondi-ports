@@ -17,7 +17,6 @@
     </description>
 
     <contents>
-        <file src="/usr/bin/expect"/>
-        <file src="/usr/bin/expect_*"/>
+        <file src="${prefix}/bin"/>
     </contents>
 </package>

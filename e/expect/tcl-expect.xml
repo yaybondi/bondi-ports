@@ -21,7 +21,7 @@
     </requires>
 
     <contents>
-        <file src="/usr/lib/*.so.*"/>
-        <file src="/usr/lib/tcltk/*/*"/>
+        <file src="${prefix}/lib/libexpect.so.*"/>
+        <file src="${prefix}/lib/tcltk/expect5.45"/>
     </contents>
 </package>

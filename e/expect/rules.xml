@@ -3,10 +3,21 @@
     <prepare>
     <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
+bh_autotools_dev_update
+autoreconf -vfi
+
 cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+"$BOLT_SOURCE_DIR/configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --includedir="$BOLT_INSTALL_PREFIX/include/tcl8.6" \
+    --enable-shared \
+    --enable-threads \
+    --disable-nls \
+    --with-tcl="$BOLT_INSTALL_PREFIX/lib/tcl8.6" \
+    --with-tclinclude="$BOLT_INSTALL_PREFIX/include/tcl8.6"
 
     ]]>
     </prepare>
@@ -15,7 +26,7 @@ $BOLT_SOURCE_DIR/configure \
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+make SONAME=libexpect.so.5.45 -j"$BOLT_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -25,6 +36,17 @@ make -j"$BOLT_PARALLEL_JOBS"
 
 cd "$BOLT_BUILD_DIR"
 make DESTDIR="$BOLT_INSTALL_DIR" install
+
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/expect5.45/libexpect5.45.so" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libexpect.so.5.45"
+ln -sf libexpect.so.5.45 \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libexpect.so.5"
+ln -sf libexpect.so.5.45 \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libexpect.so"
+
+install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/tcltk/"
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/"expect* \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/tcltk/"
 
     ]]>
     </install>
