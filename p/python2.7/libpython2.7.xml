@@ -17,7 +17,7 @@
         <package name="libpython2.7-stdlib" version="=="/>
     </requires>
 
-    <contents>
+    <contents subdir="all">
         <file src="${prefix}/lib/libpython2.7.so.*"/>
     </contents>
 </package>

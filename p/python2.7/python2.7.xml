@@ -10,11 +10,11 @@
     </description>
 
     <requires>
-        <package name="python2.7-minimal" version="=="/>
+        <package name="libpython2.7" version="=="/>
         <package name="libpython2.7-stdlib" version="=="/>
     </requires>
 
-    <contents>
+    <contents subdir="all">
         <dir src="${prefix}/lib/python2.7"/>
         <dir src="${prefix}/lib/python2.7/lib-dynload"/>
         <dir src="${prefix}/lib/python2.7/dist-packages"/>
@@ -22,5 +22,32 @@
         <file src="${prefix}/bin/pdb2.7"/>
         <file src="${prefix}/bin/pydoc2.7"/>
         <file src="${prefix}/bin/pygettext2.7"/>
+        <file src="${prefix}/bin/python2.7*"/>
     </contents>
+
+    <maintainer-scripts>
+        <postinst><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/python2" ]; then
+    ln -sf "python2.7" "$BOLT_INSTALL_PREFIX/bin/python2"
+fi
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/python" ]; then
+    ln -sf "python2.7" "$BOLT_INSTALL_PREFIX/bin/python"
+fi
+
+        ]]></postinst>
+
+        <postrm><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/python2" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/python2"
+fi
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/python" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/python"
+fi
+
+        ]]></postrm>
+    </maintainer-scripts>
 </package>

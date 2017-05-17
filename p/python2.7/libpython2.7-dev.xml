@@ -22,22 +22,7 @@
         <package name="libexpat1-dev"/>
     </requires>
 
-    <contents>
-        <file src="${prefix}/bin/python2.7-config"/>
-        <file src="${prefix}/include/python2.7"/>
-        <file src="${prefix}/lib/libpython2.7.a"/>
-        <file src="${prefix}/lib/libpython2.7.so"/>
-        <file src="${prefix}/lib/pkgconfig"/>
-        <file src="${prefix}/lib/python2.7/config/Makefile"/>
-        <file src="${prefix}/lib/python2.7/config/Setup"/>
-        <file src="${prefix}/lib/python2.7/config/Setup.config"/>
-        <file src="${prefix}/lib/python2.7/config/Setup.local"/>
-        <file src="${prefix}/lib/python2.7/config/config.c"/>
-        <file src="${prefix}/lib/python2.7/config/config.c.in"/>
-        <file src="${prefix}/lib/python2.7/config/install-sh" mode="0755"/>
-        <file src="${prefix}/lib/python2.7/config/libpython2.7.a"/>
-        <file src="${prefix}/lib/python2.7/config/libpython2.7.so"/>
-        <file src="${prefix}/lib/python2.7/config/makesetup" mode="0755"/>
-        <file src="${prefix}/lib/python2.7/config/python.o"/>
+    <contents subdir="libpython2.7-dev">
+        <file src="/"/>
     </contents>
 </package>

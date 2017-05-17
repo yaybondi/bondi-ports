@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
     <source name="python2.7" architecture-independent="false">
         <description>
             <summary>Interactive high-level object-oriented language (version 2.7)</summary>
@@ -115,8 +119,6 @@
 
     <xi:include href="python2.7.xml"/>
     <xi:include href="libpython2.7-stdlib.xml"/>
-    <xi:include href="python2.7-minimal.xml"/>
-    <xi:include href="libpython2.7-minimal.xml"/>
     <xi:include href="libpython2.7.xml"/>
     <xi:include href="python2.7-dev.xml"/>
     <xi:include href="libpython2.7-dev.xml"/>

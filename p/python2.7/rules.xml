@@ -41,30 +41,59 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
+for ENTRY in all libpython2.7-dev python2.7-venv; do
+    mkdir -p "$BOLT_INSTALL_DIR/$ENTRY"
+done
+
+FULL_INSTALL="$BOLT_INSTALL_DIR/all"
+
 cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+make DESTDIR="$FULL_INSTALL" install
 
-cd "$BOLT_INSTALL_DIR"
-
-rm -f  "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/"*idle*
-rm -fr "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python2.7/idlelib"
+rm -f  "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/"*idle*
+rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python2.7/idlelib"
+rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python2.7/turtledemo"
 
 cp "$BOLT_SOURCE_DIR/Tools/i18n/pygettext.py" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pygettext2.7"
-mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pydoc" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pydoc2.7"
-mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/2to3" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/2to3-2.7"
-mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python2.7/config/libpython2.7.a" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib"
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/pygettext2.7"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/pydoc" \
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/pydoc2.7"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/2to3" \
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/2to3-2.7"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python2.7/config/libpython2.7.a" \
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib"
 ln -sf ../../libpython2.7.a \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python2.7/config/libpython2.7.a"
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python2.7/config/libpython2.7.a"
 ln -sf ../../libpython2.7.so \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python2.7/config/libpython2.7.so"
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python2.7/config/libpython2.7.so"
 ln -sf libpython2.7.so.1.0 \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libpython2.7.so.1"
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/libpython2.7.so.1"
 ln -sf ../lib/python2.7/pdb.py \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pdb2.7"
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/pdb2.7"
+
+cd "$FULL_INSTALL"
+find . -type d -a \( -name "test" -o -name "tests" \) -prune -exec rm -fr '{}' ';'
+find . -type f -a -name "*.egg-info" -exec rm -f '{}' ';'
+
+# -------------------------------------------------------------------------
+PKG_PATH="$BOLT_INSTALL_DIR/libpython2.7-dev"
+# -------------------------------------------------------------------------
+
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python2.7"
+
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX"/bin/python2.7*-config \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/include" \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/pkgconfig" \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python2.7"/config \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python2.7/"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/"libpython2.7*.a \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/"libpython2.7*.so \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/"
 
     ]]>
     </install>
