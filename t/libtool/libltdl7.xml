@@ -11,17 +11,19 @@
         dlopen wrapper for GNU libtool.
         </p>
         <p>
-        It supports the following dlopen interfaces:
-        * dlopen (Solaris, Linux and various BSD flavors)
-        * shl_load (HP-UX)
-        * LoadLibrary (Win16 and Win32)
-        * load_add_on (BeOS)
-        * GNU DLD (emulates dynamic linking for static libraries)
-        * libtool's dlpreopen
+            It supports the following dlopen interfaces:
         </p>
+        <ul>
+            <li>dlopen (Solaris, Linux and various BSD flavors)</li>
+            <li>shl_load (HP-UX)</li>
+            <li>LoadLibrary (Win16 and Win32)</li>
+            <li>load_add_on (BeOS)</li>
+            <li>GNU DLD (emulates dynamic linking for static libraries)</li>
+            <li>libtool's dlpreopen</li>
+        </ul>
     </description>
 
     <contents>
-        <file src="/usr/lib/libltdl.so.*"/>
+        <file src="${prefix}/lib/libltdl.so.*"/>
     </contents>
 </package>

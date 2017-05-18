@@ -23,6 +23,6 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/libtool"/>
+        <file src="${prefix}/bin/libtool"/>
     </contents>
 </package>

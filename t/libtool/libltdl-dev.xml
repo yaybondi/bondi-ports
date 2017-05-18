@@ -12,14 +12,16 @@
         dlopen wrapper for GNU libtool.
         </p>
         <p>
-        It supports the following dlopen interfaces:
-        * dlopen (Solaris, Linux and various BSD flavors)
-        * shl_load (HP-UX)
-        * LoadLibrary (Win16 and Win32)
-        * load_add_on (BeOS)
-        * GNU DLD (emulates dynamic linking for static libraries)
-        * libtool's dlpreopen
+            It supports the following dlopen interfaces:
         </p>
+        <ul>
+            <li>dlopen (Solaris, Linux and various BSD flavors)</li>
+            <li>shl_load (HP-UX)</li>
+            <li>LoadLibrary (Win16 and Win32)</li>
+            <li>load_add_on (BeOS)</li>
+            <li>GNU DLD (emulates dynamic linking for static libraries)</li>
+            <li>libtool's dlpreopen</li>
+        </ul>
     </description>
 
     <requires>
@@ -27,29 +29,29 @@
     </requires>
 
     <contents>
-        <file src="/usr/lib/libltdl.a"/>
-        <file src="/usr/lib/libltdl.la"/>
-        <file src="/usr/lib/libltdl.so"/>
-        <file src="/usr/share/aclocal/ltdl.m4"/>
-        <file src="/usr/share/libtool/COPYING.LIB"/>
-        <file src="/usr/share/libtool/Makefile.am"/>
-        <file src="/usr/share/libtool/Makefile.in"/>
-        <file src="/usr/share/libtool/README"/>
-        <file src="/usr/share/libtool/aclocal.m4"/>
-        <file src="/usr/share/libtool/config-h.in"/>
-        <file src="/usr/share/libtool/configure"/>
-        <file src="/usr/share/libtool/configure.ac"/>
-        <file src="/usr/share/libtool/libltdl/*"/>
-        <file src="/usr/share/libtool/loaders/*"/>
-        <file src="/usr/share/libtool/lt__alloc.c"/>
-        <file src="/usr/share/libtool/lt__argz.c"/>
-        <file src="/usr/share/libtool/lt__dirent.c"/>
-        <file src="/usr/share/libtool/lt__strl.c"/>
-        <file src="/usr/share/libtool/lt_dlloader.c"/>
-        <file src="/usr/share/libtool/lt_error.c"/>
-        <file src="/usr/share/libtool/ltdl.c"/>
-        <file src="/usr/share/libtool/ltdl.h"/>
-        <file src="/usr/share/libtool/ltdl.mk"/>
-        <file src="/usr/share/libtool/slist.c"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libltdl.a"/>
+        <file src="${prefix}/lib/libltdl.so"/>
+        <file src="${prefix}/share/aclocal/ltdl.m4"/>
+        <file src="${prefix}/share/libtool/COPYING.LIB"/>
+        <file src="${prefix}/share/libtool/Makefile.am"/>
+        <file src="${prefix}/share/libtool/Makefile.in"/>
+        <file src="${prefix}/share/libtool/README"/>
+        <file src="${prefix}/share/libtool/aclocal.m4"/>
+        <file src="${prefix}/share/libtool/config-h.in"/>
+        <file src="${prefix}/share/libtool/configure" mode="0755"/>
+        <file src="${prefix}/share/libtool/configure.ac"/>
+        <file src="${prefix}/share/libtool/libltdl"/>
+        <file src="${prefix}/share/libtool/loaders"/>
+        <file src="${prefix}/share/libtool/lt__alloc.c"/>
+        <file src="${prefix}/share/libtool/lt__argz.c"/>
+        <file src="${prefix}/share/libtool/lt__dirent.c"/>
+        <file src="${prefix}/share/libtool/lt__strl.c"/>
+        <file src="${prefix}/share/libtool/lt_dlloader.c"/>
+        <file src="${prefix}/share/libtool/lt_error.c"/>
+        <file src="${prefix}/share/libtool/ltdl.c"/>
+        <file src="${prefix}/share/libtool/ltdl.h"/>
+        <file src="${prefix}/share/libtool/ltdl.mk"/>
+        <file src="${prefix}/share/libtool/slist.c"/>
     </contents>
 </package>

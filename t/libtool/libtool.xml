@@ -24,13 +24,13 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/libtoolize"/>
-        <file src="/usr/share/aclocal/libtool.m4"/>
-        <file src="/usr/share/aclocal/ltargz.m4"/>
-        <file src="/usr/share/aclocal/ltoptions.m4"/>
-        <file src="/usr/share/aclocal/ltsugar.m4"/>
-        <file src="/usr/share/aclocal/ltversion.m4"/>
-        <file src="/usr/share/aclocal/lt~obsolete.m4"/>
-        <file src="/usr/share/libtool/build-aux/*"/>
+        <file src="${prefix}/bin/libtoolize"/>
+        <file src="${prefix}/share/aclocal/libtool.m4"/>
+        <file src="${prefix}/share/aclocal/ltargz.m4"/>
+        <file src="${prefix}/share/aclocal/ltoptions.m4"/>
+        <file src="${prefix}/share/aclocal/ltsugar.m4"/>
+        <file src="${prefix}/share/aclocal/ltversion.m4"/>
+        <file src="${prefix}/share/aclocal/lt~obsolete.m4"/>
+        <file src="${prefix}/share/libtool/build-aux"/>
     </contents>
 </package>
