@@ -19,7 +19,7 @@
     </requires>
 
     <provides>
-        <package name="gcc"/>
+        <package name="gcc" cross-tools-prefix=""/>
     </provides>
 
     <contents subdir="gcc-6">

@@ -17,7 +17,7 @@
     </requires>
 
     <provides>
-        <package name="g++"/>
+        <package name="g++" cross-tools-prefix=""/>
     </provides>
 
     <contents subdir="g++-6">
