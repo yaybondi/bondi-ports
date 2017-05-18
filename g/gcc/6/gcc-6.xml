@@ -18,6 +18,10 @@
             cross-tools-prefix="tools-target-"/>
     </requires>
 
+    <provides>
+        <package name="gcc"/>
+    </provides>
+
     <contents subdir="gcc-6">
         <file src="/"/>
     </contents>

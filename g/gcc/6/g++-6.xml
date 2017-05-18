@@ -16,6 +16,10 @@
             cross-tools-prefix="tools-target-"/>
     </requires>
 
+    <provides>
+        <package name="g++"/>
+    </provides>
+
     <contents subdir="g++-6">
         <file src="/"/>
     </contents>
