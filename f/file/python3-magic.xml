@@ -12,7 +12,7 @@
         <package name="libmagic1" version="=="/>
     </requires>
 
-    <contents>
-        <file src="/usr/lib/python3"/>
+    <contents subdir="python3" collect-py-cache-files="true">
+        <file src="${prefix}/lib/python*/**/*.py*"/>
     </contents>
 </package>

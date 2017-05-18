@@ -10,9 +10,9 @@
         </p>
     </description>
 
-    <contents>
-        <file src="/usr/lib/file"/>
-        <file src="/usr/share/file"/>
-        <file src="/usr/share/misc/magic.mgc"/>
+    <contents subdir="magic">
+        <file src="${prefix}/lib/file"/>
+        <file src="${prefix}/share/file"/>
+        <file src="${prefix}/share/misc/magic.mgc"/>
     </contents>
 </package>

@@ -15,9 +15,9 @@
         <package name="libmagic1" version="=="/>
     </requires>
 
-    <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/libmagic.a"/>
-        <file src="/usr/lib/libmagic.so"/>
+    <contents subdir="magic">
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libmagic.a"/>
+        <file src="${prefix}/lib/libmagic.so"/>
     </contents>
 </package>

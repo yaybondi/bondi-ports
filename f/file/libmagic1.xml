@@ -12,10 +12,7 @@
         <package name="libmagic-mgc" version="=="/>
     </requires>
 
-    <contents>
-        <file src="/etc"/>
-        <file src="/usr/lib/libmagic.so.1"/>
-        <file src="/usr/lib/libmagic.so.1.0.0"/>
-        <file src="/usr/share/misc/magic"/>
+    <contents subdir="magic">
+        <file src="${prefix}/lib/libmagic.so.*"/>
     </contents>
 </package>

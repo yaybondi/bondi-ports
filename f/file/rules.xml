@@ -3,10 +3,17 @@
     <prepare>
     <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
+bh_autotools_dev_update
+autoreconf -vfi
+
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --enable-static \
+    --disable-silent-rules
 
     ]]>
     </prepare>
@@ -23,8 +30,24 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
+for ENTRY in magic python2 python3; do
+    install -d -m 0755 "$BOLT_INSTALL_DIR/$ENTRY"
+done
+
+FULL_INSTALL="$BOLT_INSTALL_DIR/magic"
+
 cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+make DESTDIR="$FULL_INSTALL" install
+
+install -d -m 0755 "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/file"
+install -d -m 0755 "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/share/file"
+
+ln -sf ../../share/misc/magic.mgc "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/file/magic.mgc"
+ln -sf ../../share/misc/magic.mgc "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/share/file/magic.mgc"
+
+cd python
+bh_python_install --py2 "$BOLT_INSTALL_DIR/python2"
+bh_python_install --py3 "$BOLT_INSTALL_DIR/python3"
 
     ]]>
     </install>

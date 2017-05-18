@@ -15,7 +15,7 @@
         <package name="libmagic1" version="=="/>
     </requires>
 
-    <contents>
-        <file src="/usr/bin"/>
+    <contents subdir="magic">
+        <file src="${prefix}/bin"/>
     </contents>
 </package>
