@@ -17,6 +17,10 @@
             cross-tools-prefix="tools-target-"/>
     </requires>
 
+    <provides>
+        <package name="cpp" cross-tools-prefix=""/>
+    </provides>
+
     <contents subdir="cpp-6">
         <file src="/"/>
     </contents>
