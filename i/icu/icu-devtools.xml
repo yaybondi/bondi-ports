@@ -10,9 +10,6 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
         <file src="${prefix}/bin/derb"/>
         <file src="${prefix}/bin/genbrk"/>
