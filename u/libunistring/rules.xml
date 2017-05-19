@@ -3,10 +3,22 @@
     <prepare>
     <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
+bh_autotools_dev_update
+autoreconf -vfi
+
+sed -i \
+    -e 's@fseterr\.c@@g' \
+    -e 's@fseterr\.lo@@g' \
+    -e 's@fseterr\.h@@g' \
+    lib/Makefile.in
+
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --disable-rpath
 
     ]]>
     </prepare>

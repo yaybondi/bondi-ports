@@ -16,6 +16,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/lib*.so.*"/>
+        <file src="${prefix}/lib/libunistring.so.*"/>
     </contents>
 </package>
