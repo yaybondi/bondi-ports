@@ -13,10 +13,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/usr/bin/xsltproc"/>
+        <file src="${prefix}/bin/xsltproc"/>
     </contents>
 </package>

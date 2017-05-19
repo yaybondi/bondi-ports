@@ -18,8 +18,8 @@
         <package name="python-libxml2"/>
     </requires>
 
-    <contents>
-        <file src="/usr/lib/python*/*-packages/*.py*"/>
-        <file src="/usr/lib/python*/*-packages/*.so"/>
+    <contents collect-py-cache-files="true">
+        <file src="${prefix}/lib/python*/*-packages/*.py*"/>
+        <file src="${prefix}/lib/python*/*-packages/*.so"/>
     </contents>
 </package>

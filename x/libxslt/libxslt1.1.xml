@@ -14,11 +14,8 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/usr/lib/libexslt.so.*"/>
-        <file src="/usr/lib/libxslt.so.*"/>
+        <file src="${prefix}/lib/libexslt.so.*"/>
+        <file src="${prefix}/lib/libxslt.so.*"/>
     </contents>
 </package>
