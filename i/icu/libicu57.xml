@@ -10,6 +10,13 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/lib*.so.*"/>
+        <file src="${prefix}/lib/libicudata.so.*"/>
+        <file src="${prefix}/lib/libicui18n.so.*"/>
+        <file src="${prefix}/lib/libicuio.so.*"/>
+        <file src="${prefix}/lib/libicule.so.*"/>
+        <file src="${prefix}/lib/libiculx.so.*"/>
+        <file src="${prefix}/lib/libicutest.so.*"/>
+        <file src="${prefix}/lib/libicutu.so.*"/>
+        <file src="${prefix}/lib/libicuuc.so.*"/>
     </contents>
 </package>

@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
-    </defines>
-
     <source name="icu" architecture-independent="false">
         <description>
             <summary>International Components for Unicode</summary>
@@ -17,8 +13,8 @@
         <sources>
             <file src="icu-57.1.tar.gz" subdir="sources"
                 sha256sum="ff8c67cb65949b1e7808f2359f2b80f722697048e90e7cfc382ec1fe229e9581"/>
-            <file src="patches.05.tar.gz" subdir="patches"
-                sha256sum="507d8dba07675d8becb20af2e100ec18ce2b8177b323c2a220a05781bbd1a230"/>
+            <file src="patches.06.tar.gz" subdir="patches"
+                sha256sum="615a3d36568d74dd44942c6ef209e3f3338f35080c6a8547284088850b55cbce"/>
         </sources>
         
         <patches>
@@ -34,6 +30,7 @@
                 <file src="patches/CVE-2016-0494.patch"/>
                 <file src="patches/CVE-2016-6293.patch"/>
                 <file src="patches/CVE-2016-7415.patch"/>
+                <file src="patches/CVE-2017-7867_CVE-2017-7868.patch"/>
             </patchset>
         </patches>
 

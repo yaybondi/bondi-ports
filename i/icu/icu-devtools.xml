@@ -10,17 +10,20 @@
         </p>
     </description>
 
+    <requires>
+    </requires>
+
     <contents>
-        <file src="/usr/bin/derb"/>
-        <file src="/usr/bin/genbrk"/>
-        <file src="/usr/bin/gencfu"/>
-        <file src="/usr/bin/gencnval"/>
-        <file src="/usr/bin/gendict"/>
-        <file src="/usr/bin/genrb"/>
-        <file src="/usr/bin/icuinfo"/>
-        <file src="/usr/bin/makeconv"/>
-        <file src="/usr/bin/pkgdata"/>
-        <file src="/usr/bin/uconv"/>
-        <file src="/usr/sbin"/>
+        <file src="${prefix}/bin/derb"/>
+        <file src="${prefix}/bin/genbrk"/>
+        <file src="${prefix}/bin/gencfu"/>
+        <file src="${prefix}/bin/gencnval"/>
+        <file src="${prefix}/bin/gendict"/>
+        <file src="${prefix}/bin/genrb"/>
+        <file src="${prefix}/bin/icuinfo"/>
+        <file src="${prefix}/bin/makeconv"/>
+        <file src="${prefix}/bin/pkgdata"/>
+        <file src="${prefix}/bin/uconv"/>
+        <file src="${prefix}/sbin"/>
     </contents>
 </package>
