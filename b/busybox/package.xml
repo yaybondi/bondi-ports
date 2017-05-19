@@ -90,7 +90,7 @@
     <xi:include href="applets/eject.xml"/>
     <xi:include href="applets/fbset.xml"/>
     <xi:include href="applets/findutils.xml"/>
-    <xi:include href="applets/gawk.xml"/>
+    <xi:include href="applets/awk.xml"/>
     <xi:include href="applets/grep.xml"/>
     <xi:include href="applets/hostname.xml"/>
     <xi:include href="applets/ifenslave.xml"/>
