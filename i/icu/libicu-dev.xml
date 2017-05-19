@@ -12,7 +12,7 @@
     <requires>
         <package name="libicu57" version="=="/>
         <package name="icu-devtools" version=">=="/>
-        <package name="libc6-dev"/>
+        <package name="musl-libc-dev"/>
         <package name="libstdc++-6-dev"/>
     </requires>
 
