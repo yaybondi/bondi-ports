@@ -17,11 +17,8 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/usr/bin/xmlcatalog"/>
-        <file src="/usr/bin/xmllint"/>
+        <file src="${prefix}/bin/xmlcatalog"/>
+        <file src="${prefix}/bin/xmllint"/>
     </contents>
 </package>

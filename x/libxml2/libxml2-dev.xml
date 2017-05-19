@@ -22,12 +22,12 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/xml2-config"/>
-        <file src="/usr/include/libxml2"/>
-        <file src="/usr/lib/libxml2.a"/>
-        <file src="/usr/lib/libxml2.so"/>
-        <file src="/usr/lib/pkgconfig"/>
-        <file src="/usr/lib/xml2Conf.sh"/>
-        <file src="/usr/share/aclocal"/>
+        <file src="${prefix}/bin/xml2-config"/>
+        <file src="${prefix}/include/libxml2"/>
+        <file src="${prefix}/lib/libxml2.a"/>
+        <file src="${prefix}/lib/libxml2.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
+        <file src="${prefix}/lib/xml2Conf.sh"/>
+        <file src="${prefix}/share/aclocal"/>
     </contents>
 </package>

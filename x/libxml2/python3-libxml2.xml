@@ -16,11 +16,8 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
-    <contents>
-        <file src="/usr/lib/python3*/*-packages/*.py*"/>
-        <file src="/usr/lib/python3*/*-packages/*.so"/>
+    <contents collect-py-cache-files="true">
+        <file src="${prefix}/lib/python3*/*-packages/*.py*"/>
+        <file src="${prefix}/lib/python3*/*-packages/*.so"/>
     </contents>
 </package>

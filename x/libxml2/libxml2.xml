@@ -16,10 +16,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/usr/lib/libxml2.so.*"/>
+        <file src="${prefix}/lib/libxml2.so.*"/>
     </contents>
 </package>
