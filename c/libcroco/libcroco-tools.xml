@@ -33,10 +33,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/usr/bin/csslint*"/>
+        <file src="${prefix}/bin/csslint*"/>
     </contents>
 </package>

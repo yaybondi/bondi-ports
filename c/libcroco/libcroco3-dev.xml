@@ -40,8 +40,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/lib/*.a"/>
-        <file src="/usr/lib/*.so"/>
-        <file src="/usr/lib/pkgconfig"/>
+        <file src="${prefix}/lib/*.a"/>
+        <file src="${prefix}/lib/*.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
     </contents>
 </package>
