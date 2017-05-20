@@ -15,17 +15,16 @@
 
     <requires>
         <package name="libglib2.0-0" version="=="/>
-        <package name="libglib2.0-data"/>
     </requires>
 
     <contents>
-        <file src="/usr/bin/gapplication"/>
-        <file src="/usr/bin/gdbus"/>
-        <file src="/usr/bin/gio"/>
-        <file src="/usr/bin/gio-querymodules"/>
-        <file src="/usr/bin/glib-compile-resources"/>
-        <file src="/usr/bin/glib-compile-schemas"/>
-        <file src="/usr/bin/gresource"/>
-        <file src="/usr/bin/gsettings"/>
+        <file src="${prefix}/bin/gapplication"/>
+        <file src="${prefix}/bin/gdbus"/>
+        <file src="${prefix}/bin/gio"/>
+        <file src="${prefix}/bin/gio-querymodules"/>
+        <file src="${prefix}/bin/glib-compile-resources"/>
+        <file src="${prefix}/bin/glib-compile-schemas"/>
+        <file src="${prefix}/bin/gresource"/>
+        <file src="${prefix}/bin/gsettings"/>
     </contents>
 </package>

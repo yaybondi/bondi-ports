@@ -3,10 +3,27 @@
     <prepare>
     <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
+bh_autotools_dev_update
+
+export LDFLAGS="$LDFLAGS -Wl,-z,defs -Wl,--no-as-needed -Wl,-O1"
+export LIBFFI_CFLAGS="-I$BOLT_INSTALL_PREFIX/include"
+export LIBFFI_LIBS="-lffi"
+export PCRE_CFLAGS="-I$BOLT_INSTALL_PREFIX/include"
+export PCRE_LIBS="-lpcre"
+
 cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+"$BOLT_SOURCE_DIR/configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --with-pcre=system \
+    --with-python="$BOLT_INSTALL_PREFIX/bin/python3" \
+    --disable-gtk-doc \
+    --enable-static \
+    --enable-debug=minimum \
+    --disable-libmount \
+    --disable-silent-rules \
 
     ]]>
     </prepare>

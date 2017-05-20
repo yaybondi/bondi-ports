@@ -23,36 +23,30 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/gdbus-codegen"/>
-        <file src="/usr/bin/glib-genmarshal"/>
-        <file src="/usr/bin/glib-gettextize"/>
-        <file src="/usr/bin/glib-mkenums"/>
-        <file src="/usr/bin/gobject-query"/>
-        <file src="/usr/bin/gtester"/>
-        <file src="/usr/bin/gtester-report"/>
-        <dir src="/usr/include/gio-unix-2.0"/>
-        <file src="/usr/include/gio-unix-2.0/gio"/>
-        <file src="/usr/include/glib-2.0"/>
-        <dir src="/usr/lib/glib-2.0"/>
-        <file src="/usr/lib/glib-2.0/include"/>
-        <file src="/usr/lib/libgio-2.0.a"/>
-        <file src="/usr/lib/libgio-2.0.so"/>
-        <file src="/usr/lib/libglib-2.0.a"/>
-        <file src="/usr/lib/libglib-2.0.so"/>
-        <file src="/usr/lib/libgmodule-2.0.a"/>
-        <file src="/usr/lib/libgmodule-2.0.so"/>
-        <file src="/usr/lib/libgobject-2.0.a"/>
-        <file src="/usr/lib/libgobject-2.0.so"/>
-        <file src="/usr/lib/libgthread-2.0.a"/>
-        <file src="/usr/lib/libgthread-2.0.so"/>
-        <file src="/usr/lib/pkgconfig"/>
-        <file src="/usr/share/aclocal"/>
-        <dir src="/usr/share/glib-2.0"/>
-        <file src="/usr/share/glib-2.0/codegen"/>
-        <dir src="/usr/share/glib-2.0/gettext"/>
-        <file src="/usr/share/glib-2.0/gettext/po"/>
-        <file src="/usr/share/glib-2.0/schemas"/>
-        <dir src="/usr/share/python3"/>
-        <file src="/usr/share/python3/runtime.d"/>
+        <file src="${prefix}/bin/gdbus-codegen"/>
+        <file src="${prefix}/bin/glib-genmarshal"/>
+        <file src="${prefix}/bin/glib-gettextize"/>
+        <file src="${prefix}/bin/glib-mkenums"/>
+        <file src="${prefix}/bin/gobject-query"/>
+        <file src="${prefix}/bin/gtester"/>
+        <file src="${prefix}/bin/gtester-report"/>
+        <file src="${prefix}/include/gio-unix-2.0/gio"/>
+        <file src="${prefix}/include/glib-2.0"/>
+        <file src="${prefix}/lib/glib-2.0/include"/>
+        <file src="${prefix}/lib/libgio-2.0.a"/>
+        <file src="${prefix}/lib/libgio-2.0.so"/>
+        <file src="${prefix}/lib/libglib-2.0.a"/>
+        <file src="${prefix}/lib/libglib-2.0.so"/>
+        <file src="${prefix}/lib/libgmodule-2.0.a"/>
+        <file src="${prefix}/lib/libgmodule-2.0.so"/>
+        <file src="${prefix}/lib/libgobject-2.0.a"/>
+        <file src="${prefix}/lib/libgobject-2.0.so"/>
+        <file src="${prefix}/lib/libgthread-2.0.a"/>
+        <file src="${prefix}/lib/libgthread-2.0.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
+        <file src="${prefix}/share/aclocal"/>
+        <file src="${prefix}/share/glib-2.0/codegen"/>
+        <file src="${prefix}/share/glib-2.0/gettext/po"/>
+        <file src="${prefix}/share/glib-2.0/schemas"/>
     </contents>
 </package>

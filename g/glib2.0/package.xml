@@ -20,8 +20,8 @@
         <sources>
             <file src="glib2.0-2.50.3.tar.xz" subdir="sources"
                 sha256sum="82ee94bf4c01459b6b00cb9db0545c2237921e3060c0b74cff13fbc020cfd999"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="b3961c9249c22d1ddd434d265ffca0b5a3334713901004cf859eaac2cd4cd4b6"/>
+            <file src="debian.2.tar.gz" subdir="patches"
+                sha256sum="9854c50e1fffc093e79a1c00b0783960300b1c1b09f2309db9d7ebe6b970a64f"/>
         </sources>
         
         <patches>
@@ -40,6 +40,7 @@
                 <file src="patches/0001-timer-test-use-volatile-for-locals.patch"/>
                 <file src="patches/skip-broken-timer-test.patch"/>
                 <file src="patches/0001-Fix-trashing-on-overlayfs.patch"/>
+                <file src="patches/tests-gdatetime-Use-a-real-rather-than-invented-time.patch"/>
             </patchset>
         </patches>
 
@@ -57,7 +58,14 @@
             <package name="linux-libc-dev"/>
             <package name="libgamin-dev"/>
             <package name="zlib1g-dev"/>
+            <package name="desktop-file-utils"/>
+            <package name="dbus"/>
+            <package name="shared-mime-info"/>
+            <package name="tzdata"/>
+            <package name="xterm"/>
             <package name="python3" version=">= 2.7.5-5~"/>
+            <package name="python3-dbus"/>
+            <package name="python3-gi"/>
             <package name="libxml2-utils"/>
             <package name="xsltproc"/>
             <package name="docbook-xml"/>
@@ -69,11 +77,8 @@
     </source>
 
     <xi:include href="libglib2.0-0.xml"/>
-    <xi:include href="libglib2.0-tests.xml"/>
     <xi:include href="libglib2.0-bin.xml"/>
     <xi:include href="libglib2.0-dev.xml"/>
-    <xi:include href="libglib2.0-data.xml"/>
-    <xi:include href="libgio-fam.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>

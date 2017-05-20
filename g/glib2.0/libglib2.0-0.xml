@@ -12,27 +12,16 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <dir src="/usr/lib/gio"/>
-        <dir src="/usr/lib/gio/modules"/>
-        <dir src="/usr/lib/glib-2.0"/>
-        <file src="/usr/lib/glib-2.0/gio-querymodules" mode="0755"/>
-        <file src="/usr/lib/glib-2.0/glib-compile-resources" mode="0755"/>
-        <file src="/usr/lib/glib-2.0/glib-compile-schemas" mode="0755"/>
-        <file src="/usr/lib/libgio-2.0.so.0"/>
-        <file src="/usr/lib/libgio-2.0.so.0.5000.3"/>
-        <file src="/usr/lib/libglib-2.0.so.0"/>
-        <file src="/usr/lib/libglib-2.0.so.0.5000.3"/>
-        <file src="/usr/lib/libgmodule-2.0.so.0"/>
-        <file src="/usr/lib/libgmodule-2.0.so.0.5000.3"/>
-        <file src="/usr/lib/libgobject-2.0.so.0"/>
-        <file src="/usr/lib/libgobject-2.0.so.0.5000.3"/>
-        <file src="/usr/lib/libgthread-2.0.so.0"/>
-        <file src="/usr/lib/libgthread-2.0.so.0.5000.3"/>
-        <dir src="/usr/share/glib-2.0"/>
-        <dir src="/usr/share/glib-2.0/schemas"/>
+        <dir src="${prefix}/lib/gio"/>
+        <dir src="${prefix}/lib/gio/modules"/>
+        <dir src="${prefix}/lib/glib-2.0"/>
+        <file src="${prefix}/lib/libgio-2.0.so.*"/>
+        <file src="${prefix}/lib/libglib-2.0.so.*"/>
+        <file src="${prefix}/lib/libgmodule-2.0.so.*"/>
+        <file src="${prefix}/lib/libgobject-2.0.so.*"/>
+        <file src="${prefix}/lib/libgthread-2.0.so.*"/>
+        <dir src="${prefix}/share/glib-2.0"/>
+        <dir src="${prefix}/share/glib-2.0/schemas"/>
     </contents>
 </package>
