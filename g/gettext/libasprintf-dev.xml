@@ -12,8 +12,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/libasprintf.a"/>
-        <file src="/usr/lib/libasprintf.so"/>
+        <file src="${prefix}/include/autosprintf.h"/>
+        <file src="${prefix}/lib/libasprintf.a"/>
+        <file src="${prefix}/lib/libasprintf.so"/>
     </contents>
 </package>

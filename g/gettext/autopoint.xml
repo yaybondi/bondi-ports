@@ -17,8 +17,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/autopoint"/>
-        <dir src="/usr/share/gettext"/>
-        <file src="/usr/share/gettext/archive.dir.tar.xz"/>
+        <file src="${prefix}/bin/autopoint"/>
+        <dir src="${prefix}/share/gettext"/>
+        <file src="${prefix}/share/gettext/archive.dir.tar.xz"/>
     </contents>
 </package>

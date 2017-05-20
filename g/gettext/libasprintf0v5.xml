@@ -9,11 +9,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/usr/lib/libasprintf.so.0"/>
-        <file src="/usr/lib/libasprintf.so.0.0.0"/>
+        <file src="${prefix}/lib/libasprintf.so.*"/>
     </contents>
 </package>

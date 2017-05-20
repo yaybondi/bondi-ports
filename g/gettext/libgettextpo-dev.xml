@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgettextpo-dev" section="libdevel">
+    <description>
+        <summary>GNU Internationalization library development files</summary>
+        <p>
+        This package contains development files for the libgettextpo library.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libgettextpo0" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/include/gettext-po.h"/>
+        <file src="${prefix}/lib/libgettextpo.a"/>
+        <file src="${prefix}/lib/libgettextpo.so"/>
+    </contents>
+</package>

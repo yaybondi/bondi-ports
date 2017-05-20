@@ -13,41 +13,36 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/gettextize"/>
-        <file src="/usr/bin/msgattrib"/>
-        <file src="/usr/bin/msgcat"/>
-        <file src="/usr/bin/msgcmp"/>
-        <file src="/usr/bin/msgcomm"/>
-        <file src="/usr/bin/msgconv"/>
-        <file src="/usr/bin/msgen"/>
-        <file src="/usr/bin/msgexec"/>
-        <file src="/usr/bin/msgfilter"/>
-        <file src="/usr/bin/msgfmt"/>
-        <file src="/usr/bin/msggrep"/>
-        <file src="/usr/bin/msginit"/>
-        <file src="/usr/bin/msgmerge"/>
-        <file src="/usr/bin/msgunfmt"/>
-        <file src="/usr/bin/msguniq"/>
-        <file src="/usr/bin/recode-sr-latin"/>
-        <file src="/usr/bin/xgettext"/>
-        <file src="/usr/lib/gettext"/>
-        <file src="/usr/lib/libgettextlib-0.19.8.1.so"/>
-        <file src="/usr/lib/libgettextsrc-0.19.8.1.so"/>
-        <file src="/usr/lib/preloadable_libintl.so"/>
-        <file src="/usr/share/aclocal"/>
-        <dir src="/usr/share/gettext"/>
-        <dir src="/usr/share/gettext-0.19.8"/>
-        <file src="/usr/share/gettext-0.19.8/its"/>
-        <file src="/usr/share/gettext/ABOUT-NLS"/>
-        <file src="/usr/share/gettext/config.rpath" mode="0755"/>
-        <file src="/usr/share/gettext/gettext.h"/>
-        <file src="/usr/share/gettext/intl"/>
-        <file src="/usr/share/gettext/javaversion.class"/>
-        <file src="/usr/share/gettext/msgunfmt.tcl"/>
-        <file src="/usr/share/gettext/po"/>
-        <file src="/usr/share/gettext/projects"/>
-        <file src="/usr/share/gettext/styles"/>
-        <dir src="/usr/share/java"/>
-        <file src="/usr/share/java/gettext.jar"/>
+        <file src="${prefix}/bin/gettextize"/>
+        <file src="${prefix}/bin/msgattrib"/>
+        <file src="${prefix}/bin/msgcat"/>
+        <file src="${prefix}/bin/msgcmp"/>
+        <file src="${prefix}/bin/msgcomm"/>
+        <file src="${prefix}/bin/msgconv"/>
+        <file src="${prefix}/bin/msgen"/>
+        <file src="${prefix}/bin/msgexec"/>
+        <file src="${prefix}/bin/msgfilter"/>
+        <file src="${prefix}/bin/msgfmt"/>
+        <file src="${prefix}/bin/msggrep"/>
+        <file src="${prefix}/bin/msginit"/>
+        <file src="${prefix}/bin/msgmerge"/>
+        <file src="${prefix}/bin/msgunfmt"/>
+        <file src="${prefix}/bin/msguniq"/>
+        <file src="${prefix}/bin/recode-sr-latin"/>
+        <file src="${prefix}/bin/xgettext"/>
+        <file src="${prefix}/lib/gettext"/>
+        <file src="${prefix}/lib/libgettextlib-*.*.so"/>
+        <file src="${prefix}/lib/libgettextsrc-*.*.so"/>
+        <file src="${prefix}/share/aclocal"/>
+        <file src="${prefix}/share/gettext-*.*/its/**/*"/>
+        <file src="${prefix}/share/gettext/ABOUT-NLS"/>
+        <file src="${prefix}/share/gettext/config.rpath" mode="0755"/>
+        <file src="${prefix}/share/gettext/gettext.h"/>
+        <file src="${prefix}/share/gettext/intl"/>
+        <file src="${prefix}/share/gettext/javaversion.class"/>
+        <file src="${prefix}/share/gettext/msgunfmt.tcl"/>
+        <file src="${prefix}/share/gettext/po"/>
+        <file src="${prefix}/share/gettext/projects"/>
+        <file src="${prefix}/share/gettext/styles"/>
     </contents>
 </package>

@@ -8,11 +8,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/usr/lib/libgettextpo.so.0"/>
-        <file src="/usr/lib/libgettextpo.so.0.5.4"/>
+        <file src="${prefix}/lib/libgettextpo.so.*"/>
     </contents>
 </package>

@@ -12,11 +12,9 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/envsubst"/>
-        <file src="/usr/bin/gettext"/>
-        <file src="/usr/bin/gettext.sh"/>
-        <file src="/usr/bin/ngettext"/>
-        <dir src="/usr/share/java"/>
-        <file src="/usr/share/java/libintl.jar"/>
+        <file src="${prefix}/bin/envsubst"/>
+        <file src="${prefix}/bin/gettext"/>
+        <file src="${prefix}/bin/gettext.sh"/>
+        <file src="${prefix}/bin/ngettext"/>
     </contents>
 </package>

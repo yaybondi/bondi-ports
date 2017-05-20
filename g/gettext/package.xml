@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
-    </defines>
-
     <source name="gettext" architecture-independent="false">
         <description>
             <summary>GNU Internationalization utilities for the base system</summary>
@@ -45,6 +41,7 @@
     <xi:include href="gettext.xml"/>
     <xi:include href="autopoint.xml"/>
     <xi:include href="libgettextpo0.xml"/>
+    <xi:include href="libgettextpo-dev.xml"/>
     <xi:include href="libasprintf0v5.xml"/>
     <xi:include href="libasprintf-dev.xml"/>
 
