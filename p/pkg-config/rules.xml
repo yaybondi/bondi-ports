@@ -3,9 +3,18 @@
     <prepare>
     <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
+bh_autotools_dev_update
+autoreconf -vfi --no-recursive
+
+export GLIB_CFLAGS="-I$BOLT_INSTALL_PREFIX/include/glib-2.0 -I$BOLT_INSTALL_PREFIX/lib/glib-2.0/include"
+export GLIB_LIBS="-lglib-2.0"
+
 cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
+"$BOLT_SOURCE_DIR/configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
     --disable-nls
 
     ]]>
@@ -25,6 +34,13 @@ make -j"$BOLT_PARALLEL_JOBS"
 
 cd "$BOLT_BUILD_DIR"
 make DESTDIR="$BOLT_INSTALL_DIR" install
+
+if [ -e "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-pkg-config" ]; then
+    rm "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pkg-config"
+else
+    mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pkg-config" \
+        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-pkg-config"
+fi
 
     ]]>
     </install>
