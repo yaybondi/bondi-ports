@@ -13,7 +13,7 @@
               of the iCalendar specification. Parsing of RFC strings is supported as well.</li>
           <li>generic parsing of dates in almost any string format</li>
           <li>timezone (tzinfo) implementations for tzfile(5) format files
-              (/etc/localtime, /usr/share/zoneinfo, etc), TZ environment string (in all
+              (/etc/localtime, ${prefix}/share/zoneinfo, etc), TZ environment string (in all
               known formats), iCalendar format files, given ranges (with help from
               relative deltas), local machine timezone, fixed offset timezone, UTC
               timezone</li>
@@ -26,7 +26,7 @@
         <package name="tzdata"/>
     </requires>
 
-    <contents>
-        <file src="/usr/lib/python3/dist-packages"/>
+    <contents subdir="python3" collect-py-cache-files="true">
+        <file src="${prefix}/lib/python3/dist-packages"/>
     </contents>
 </package>
