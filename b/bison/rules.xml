@@ -4,9 +4,26 @@
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+"$BOLT_SOURCE_DIR/configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --disable-nls \
+    --disable-silent-rules
+
+# Touch all files in the dependency tree of bison.info to
+# inhibit makeinfo invocation in the build process.
+install -d doc/figs
+touch --date="2000-01-01" \
+        doc/bison.info \
+        doc/bison.texi \
+        doc/bison.help \
+        doc/figs/example.txt \
+        doc/figs/example-reduce.txt \
+        doc/figs/example-shift.txt \
+        doc/*.texi \
+        build-aux/cross-options.pl \
+        src/getargs.c
 
     ]]>
     </prepare>

@@ -15,10 +15,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/usr/lib/liby.a"/>
+        <file src="${prefix}/lib/liby.a"/>
     </contents>
 </package>

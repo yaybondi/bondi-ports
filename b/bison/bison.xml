@@ -23,9 +23,9 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/*"/>
-        <file src="/usr/share/aclocal/bison-i18n.m4"/>
-        <file src="/usr/share/bison/*"/>
-        <file src="/usr/share/bison/*/*"/>
+        <file src="${prefix}/bin/*"/>
+        <file src="${prefix}/share/aclocal/bison-i18n.m4"/>
+        <file src="${prefix}/share/bison/*"/>
+        <file src="${prefix}/share/bison/*/*"/>
     </contents>
 </package>
