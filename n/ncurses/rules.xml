@@ -3,6 +3,12 @@
     <prepare>
     <![CDATA[
 
+if [ "$BOLT_BUILD_FOR" = "tools" ]; then
+    NCURSESW_INCLUDE_DIR="$BOLT_INSTALL_PREFIX/include"
+else
+    NCURSESW_INCLUDE_DIR="$BOLT_INSTALL_PREFIX/include/ncursesw"
+fi
+
 cd "$BOLT_BUILD_DIR"
 mkdir -p curses && cd curses
 
@@ -41,7 +47,7 @@ mkdir -p cursesw && cd cursesw
 "$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --host="$BOLT_HOST_TYPE" \
-    --includedir="$BOLT_INSTALL_PREFIX/include/ncursesw" \
+    --includedir="$NCURSESW_INCLUDE_DIR" \
     --sysconfdir=/etc \
     --enable-echo \
     --enable-const \
