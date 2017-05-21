@@ -19,8 +19,7 @@
         <package name="python-pkg-resources"/>
     </requires>
 
-    <contents>
-        <dir src="/usr/lib/python2.7"/>
-        <file src="/usr/lib/python2.7/dist-packages"/>
+    <contents subdir="python2" collect-py-cache-files="true">
+        <file src="${prefix}/lib/python2.7/dist-packages"/>
     </contents>
 </package>

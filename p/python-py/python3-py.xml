@@ -19,8 +19,7 @@
         <package name="python3-pkg-resources"/>
     </requires>
 
-    <contents>
-        <dir src="/usr/lib/python3"/>
-        <file src="/usr/lib/python3/dist-packages"/>
+    <contents subdir="python3" collect-py-cache-files="true">
+        <file src="${prefix}/lib/python3/dist-packages"/>
     </contents>
 </package>
