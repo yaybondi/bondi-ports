@@ -14,13 +14,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
-    <contents>
-        <dir src="/usr/lib/python2.7"/>
-        <file src="/usr/lib/python2.7/dist-packages"/>
-        <dir src="/usr/share/python"/>
-        <file src="/usr/share/python/dist"/>
+    <contents subdir="python2" collect-py-cache-files="true">
+        <file src="${prefix}/lib/python2.7/dist-packages"/>
     </contents>
 </package>

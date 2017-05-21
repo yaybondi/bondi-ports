@@ -14,13 +14,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
-    <contents>
-        <dir src="/usr/lib/python3"/>
-        <file src="/usr/lib/python3/dist-packages"/>
-        <dir src="/usr/share/python3"/>
-        <file src="/usr/share/python3/dist"/>
+    <contents subdir="python3" collect-py-cache-files="true">
+        <file src="${prefix}/lib/python3/dist-packages"/>
     </contents>
 </package>
