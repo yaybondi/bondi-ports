@@ -153,6 +153,7 @@ if [ -d "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/ncurses" ]; then
     mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/ncurses/"* \
         "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include"
     rmdir "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/ncurses/"
+    sed -i 's@ncurses/@@g' "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/"*.h
 fi
 
     ]]>
