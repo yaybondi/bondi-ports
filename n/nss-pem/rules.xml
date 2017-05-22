@@ -2,11 +2,19 @@
 <rules>
     <prepare>
     <![CDATA[
+    
+export CPPFLAGS="$CPPFLAGS -I$BOLT_INSTALL_PREFIX/include/nss -I$BOLT_INSTALL_PREFIX/include/nspr \
+    -I$BOLT_INSTALL_PREFIX/include/nss/private -I$BOLT_INSTALL_PREFIX/include/nspr/private"
+
+cd "$BOLT_SOURCE_DIR"
+bh_autotools_dev_update
+autoreconf -vi
 
 cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+"$BOLT_SOURCE_DIR/configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE"
 
     ]]>
     </prepare>

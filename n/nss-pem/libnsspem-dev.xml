@@ -15,7 +15,7 @@
     </requires>
 
     <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/*.a"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/*.a"/>
     </contents>
 </package>
