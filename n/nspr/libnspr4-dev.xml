@@ -25,9 +25,9 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/nspr-config"/>
-        <file src="/usr/lib/*.a"/>
-        <file src="/usr/lib/pkgconfig"/>
-        <file src="/usr/share/aclocal"/>
+        <file src="${prefix}/bin/nspr-config"/>
+        <file src="${prefix}/lib/*.a"/>
+        <file src="${prefix}/lib/pkgconfig"/>
+        <file src="${prefix}/share/aclocal"/>
     </contents>
 </package>

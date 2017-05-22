@@ -16,10 +16,7 @@
         </ul>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/usr/lib/*.so"/>
+        <file src="${prefix}/lib/*.so"/>
     </contents>
 </package>
