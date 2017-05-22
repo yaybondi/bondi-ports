@@ -19,12 +19,8 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
-    <contents>
-        <file src="/usr/bin/cygdb3"/>
-        <file src="/usr/bin/cython3"/>
-        <file src="/usr/lib/python3/dist-packages"/>
+    <contents subdir="python3" collect-py-cache-files="true">
+        <file src="${prefix}/bin/*"/>
+        <file src="${prefix}/lib/python3/dist-packages"/>
     </contents>
 </package>
