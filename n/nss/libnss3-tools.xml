@@ -20,34 +20,34 @@
     </description>
 
     <contents>
-        <file src="/usr/bin/certutil"/>
-        <file src="/usr/bin/chktest"/>
-        <file src="/usr/bin/cmsutil"/>
-        <file src="/usr/bin/crlutil"/>
-        <file src="/usr/bin/derdump"/>
-        <file src="/usr/bin/httpserv"/>
-        <file src="/usr/bin/modutil"/>
-        <file src="/usr/bin/nss-addbuiltin"/>
-        <file src="/usr/bin/nss-dbtest"/>
-        <file src="/usr/bin/nss-pp"/>
-        <file src="/usr/bin/ocspclnt"/>
-        <file src="/usr/bin/p7content"/>
-        <file src="/usr/bin/p7env"/>
-        <file src="/usr/bin/p7sign"/>
-        <file src="/usr/bin/p7verify"/>
-        <file src="/usr/bin/pk12util"/>
-        <file src="/usr/bin/pk1sign"/>
-        <file src="/usr/bin/pwdecrypt"/>
-        <file src="/usr/bin/rsaperf"/>
-        <file src="/usr/bin/selfserv"/>
-        <file src="/usr/bin/shlibsign"/>
-        <file src="/usr/bin/signtool"/>
-        <file src="/usr/bin/signver"/>
-        <file src="/usr/bin/ssltap"/>
-        <file src="/usr/bin/strsclnt"/>
-        <file src="/usr/bin/symkeyutil"/>
-        <file src="/usr/bin/tstclnt"/>
-        <file src="/usr/bin/vfychain"/>
-        <file src="/usr/bin/vfyserv"/>
+        <file src="${prefix}/bin/certutil"/>
+        <file src="${prefix}/bin/chktest"/>
+        <file src="${prefix}/bin/cmsutil"/>
+        <file src="${prefix}/bin/crlutil"/>
+        <file src="${prefix}/bin/derdump"/>
+        <file src="${prefix}/bin/httpserv"/>
+        <file src="${prefix}/bin/modutil"/>
+        <file src="${prefix}/bin/nss-addbuiltin"/>
+        <file src="${prefix}/bin/nss-dbtest"/>
+        <file src="${prefix}/bin/nss-pp"/>
+        <file src="${prefix}/bin/ocspclnt"/>
+        <file src="${prefix}/bin/p7content"/>
+        <file src="${prefix}/bin/p7env"/>
+        <file src="${prefix}/bin/p7sign"/>
+        <file src="${prefix}/bin/p7verify"/>
+        <file src="${prefix}/bin/pk12util"/>
+        <file src="${prefix}/bin/pk1sign"/>
+        <file src="${prefix}/bin/pwdecrypt"/>
+        <file src="${prefix}/bin/rsaperf"/>
+        <file src="${prefix}/bin/selfserv"/>
+        <file src="${prefix}/bin/shlibsign"/>
+        <file src="${prefix}/bin/signtool"/>
+        <file src="${prefix}/bin/signver"/>
+        <file src="${prefix}/bin/ssltap"/>
+        <file src="${prefix}/bin/strsclnt"/>
+        <file src="${prefix}/bin/symkeyutil"/>
+        <file src="${prefix}/bin/tstclnt"/>
+        <file src="${prefix}/bin/vfychain"/>
+        <file src="${prefix}/bin/vfyserv"/>
     </contents>
 </package>

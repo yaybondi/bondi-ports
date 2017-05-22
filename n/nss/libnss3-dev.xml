@@ -20,9 +20,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/nss-config"/>
-        <file src="/usr/include/nss"/>
-        <file src="/usr/lib/libcrmf.a"/>
-        <file src="/usr/lib/pkgconfig"/>
+        <file src="${prefix}/include/nss"/>
+        <file src="${prefix}/lib/*.a"/>
+        <file src="${prefix}/lib/pkgconfig"/>
     </contents>
 </package>

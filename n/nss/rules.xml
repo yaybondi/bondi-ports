@@ -3,10 +3,7 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+true
 
     ]]>
     </prepare>
@@ -15,7 +12,58 @@ $BOLT_SOURCE_DIR/configure \
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+
+DISTDIR="`pwd`/dist"
+CFLAGS="$CFLAGS -Wall -pipe"
+MACHINE="`echo $BOLT_HOST_TYPE | cut -d'-' -f1`"
+
+if [ "`bh_os_bits $BOLT_HOST_TYPE`" = "64" ]; then
+    EXTRA_FLAGS="USE_64=1"
+else
+    EXTRA_FLAGS="USE_64=0"
+fi
+
+make -C nss/coreconf/nsinstall \
+    SOURCE_PREFIX="$DISTDIR" \
+    SOURCE_MD_DIR="$DISTDIR" \
+    DIST="$DISTDIR" \
+    OBJDIR_NAME=OBJS \
+    OS_TEST="$MACHINE" \
+    KERNEL=linux \
+    ARCHFLAG= \
+    CC="${BOLT_HOST_TYPE}-gcc" \
+    CXX="${BOLT_HOST_TYPE}-g++" \
+    CCC="${BOLT_HOST_TYPE}-g++" \
+    RANLIB="${BOLT_HOST_TYPE}-ranlib" \
+    AR="${BOLT_HOST_TYPE}-ar cr \$@" \
+    $EXTRA_FLAGS
+
+make -C nss \
+    all \
+    SOURCE_PREFIX="$DISTDIR" \
+    SOURCE_MD_DIR="$DISTDIR" \
+    DIST="$DISTDIR" \
+    OBJDIR_NAME=OBJS \
+    OS_TEST="$MACHINE" \
+    KERNEL=linux \
+    ARCHFLAG= \
+    CC="${BOLT_HOST_TYPE}-gcc" \
+    CXX="${BOLT_HOST_TYPE}-g++" \
+    CCC="${BOLT_HOST_TYPE}-g++" \
+    RANLIB="${BOLT_HOST_TYPE}-ranlib" \
+    AR="${BOLT_HOST_TYPE}-ar cr \$@" \
+    MOZILLA_CLIENT=1 \
+    NSPR_INCLUDE_DIR="$BOLT_INSTALL_PREFIX/include/nspr" \
+    NSPR_LIB_DIR="$BOLT_INSTALL_PREFIX/lib/" \
+    BUILD_OPT=1 \
+    NS_USE_GCC=1 \
+    OPTIMIZER="$CFLAGS $CPPFLAGS" \
+    LDFLAGS="$LDFLAGS \$(ARCHFLAG) \$(ZDEFS_FLAG)" \
+    DSO_LDOPTS="-shared \$(LDFLAGS)" \
+    NSS_USE_SYSTEM_SQLITE=1 \
+    NSS_ENABLE_ECC=1 \
+    CHECKLOC= \
+    $EXTRA_FLAGS
 
     ]]>
     </build>
@@ -24,7 +72,73 @@ make -j"$BOLT_PARALLEL_JOBS"
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+
+DISTDIR="`pwd`/dist"
+NSS_TOOLS="
+    certutil
+    chktest
+    cmsutil
+    crlutil
+    derdump
+    httpserv
+    modutil
+    ocspclnt
+    p7content
+    p7env
+    p7sign
+    p7verify
+    pk12util
+    pk1sign
+    pwdecrypt
+    rsaperf
+    selfserv
+    shlibsign
+    signtool
+    signver
+    ssltap
+    strsclnt
+    symkeyutil
+    tstclnt
+    vfychain
+    vfyserv"
+
+# directories
+install -m 755 -d \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/nss" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/pkgconfig" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/nss" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/nss/private"
+
+# libraries
+install -m 644 "$DISTDIR/lib/libnss3.so"        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libnss3.so"
+install -m 644 "$DISTDIR/lib/libnssutil3.so"    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libnssutil3.so"
+install -m 644 "$DISTDIR/lib/libsmime3.so"      "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libsmime3.so"
+install -m 644 "$DISTDIR/lib/libssl3.so"        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libssl3.so"
+
+install -m 644 "$DISTDIR/lib/libfreebl3.so"     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/nss/libfreebl3.so"
+install -m 644 "$DISTDIR/lib/libfreeblpriv3.so" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/nss/libfreeblpriv3.so"
+install -m 644 "$DISTDIR/lib/libsoftokn3.so"    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/nss/libsoftokn3.so"
+install -m 644 "$DISTDIR/lib/libnssdbm3.so"     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/nss/libnssdbm3.so"
+install -m 644 "$DISTDIR/lib/libnssckbi.so"     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/nss/libnssckbi.so"
+
+# these are needed to compile nss-pem
+install -m 644 "$DISTDIR/lib/libcrmf.a"         "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libcrmf.a"
+install -m 644 "$DISTDIR/lib/libfreebl.a"       "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libfreebl.a"
+install -m 644 "$DISTDIR/lib/libnssb.a"         "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libnssb.a"
+install -m 644 "$DISTDIR/lib/libnssckfw.a"      "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libnssckfw.a"
+
+# header files
+install -m 644 "$DISTDIR"/public/nss/*          "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/nss/"
+install -m 644 "$DISTDIR"/private/nss/*         "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/nss/private"
+
+# executables
+for TOOL in $NSS_TOOLS; do
+    install -m 755 "$DISTDIR/bin/$TOOL" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/$TOOL"
+done
+for TOOL in addbuiltin dbtest pp; do
+    install -m 755 "$DISTDIR/bin/$TOOL" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/nss-$TOOL"
+done
 
     ]]>
     </install>

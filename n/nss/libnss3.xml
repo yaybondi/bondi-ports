@@ -11,10 +11,10 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libnss3.so"/>
-        <file src="/usr/lib/libnssutil3.so"/>
-        <file src="/usr/lib/libsmime3.so"/>
-        <file src="/usr/lib/libssl3.so"/>
-        <file src="/usr/lib/nss"/>
+        <file src="${prefix}/lib/libnss3.so"/>
+        <file src="${prefix}/lib/libnssutil3.so"/>
+        <file src="${prefix}/lib/libsmime3.so"/>
+        <file src="${prefix}/lib/libssl3.so"/>
+        <file src="${prefix}/lib/nss"/>
     </contents>
 </package>
