@@ -11,12 +11,15 @@
         <sources>
             <file src="db5.3-5.3.28.tar.xz" subdir="sources"
                 sha256sum="e1f85c8b6ebd0ed3ca72fa0ae97b65006f6d0bd0cd6f4ac24bed103cb5497bf5"/>
-            <file src="patches.12.tar.gz" subdir="patches"
+            <file src="debian.12.tar.gz" subdir="patches"
                 sha256sum="04af0cb1c1146a7f478b29c51b6e1b7a8931afc63b653d034803bec53d8cd867"/>
+            <file src="bolt.2.tar.gz" subdir="patches"
+                sha256sum="d4379f150e801daf512be6a5efaa786f2a9ac8bf6d1842c4ddaffd5614eaf624"/>
         </sources>
         
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/002-versioned_symbols.patch"/>
                 <file src="patches/003-jni_javac.patch"/>
                 <file src="patches/004-tclsleep.patch"/>
@@ -25,6 +28,8 @@
                 <file src="patches/007-link-sql-libs.patch"/>
                 <file src="patches/mmap_extend-mode-requires-page-aligned-extends.patch"/>
                 <file src="patches/008-autoconf-in-lang-sql-sqlite.patch"/>
+                <!-- Bolt -->
+                <file src="patches/narkoleptik-atomic.patch"/>
             </patchset>
         </patches>
 
