@@ -10,6 +10,8 @@ autoreconf -vfi
 # temporary work-around, this has been fixed upstream
 sed -i 's@#     include <asm/sigcontext.h>@@g' os_dep.c
 
+export CFLAGS="$CFLAGS -DNO_GETCONTEXT=1"
+
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
     --prefix="$BOLT_INSTALL_PREFIX" \
