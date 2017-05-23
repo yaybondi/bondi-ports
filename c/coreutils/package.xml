@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="coreutils" architecture-independent="false">
+        <description>
+            <summary>GNU core utilities</summary>
+            <p>
+            This package contains the basic file, shell and text manipulation
+            utilities which are expected to exist on every operating system.
+            </p>
+            <p>
+            Specifically, this package includes: 
+            arch base64 basename cat chcon chgrp chmod chown chroot cksum comm cp
+            csplit cut date dd df dir dircolors dirname du echo env expand expr
+            factor false flock fmt fold groups head hostid id install join link ln
+            logname ls md5sum mkdir mkfifo mknod mktemp mv nice nl nohup nproc numfmt
+            od paste pathchk pinky pr printenv printf ptx pwd readlink realpath rm 
+            rmdir runcon sha*sum seq shred sleep sort split stat stty sum sync tac 
+            tail tee test timeout touch tr true truncate tsort tty uname unexpand 
+            uniq unlink users vdir wc who whoami yes
+            </p>
+        </description>
+
+        <sources>
+            <file src="coreutils-8.26.tar.xz" subdir="sources"
+                sha256sum="155e94d748f8e2bc327c66e0cbebdb8d6ab265d2f37c3c928f7bf6c3beba9a8e"/>
+            <file src="debian.3.tar.gz" subdir="patches"
+                sha256sum="c77240be8914fde3981f176a8233d49102236f8e21fa486d76f2a766a74494ff"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/ppc_sha256_flags.patch"/>
+                <file src="patches/date_tz_handling"/>
+                <file src="patches/no_ls_quoting.patch"/>
+                <file src="patches/61_whoips.patch"/>
+                <file src="patches/63_dd-appenderrors.patch"/>
+                <file src="patches/72_id_checkngroups.patch"/>
+                <file src="patches/85_timer_settime.patch"/>
+                <file src="patches/99_kfbsd_fstat_patch.patch"/>
+                <file src="patches/99_hppa_longlong.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="gettext" version=">= 0.10.37"/>
+            <package name="autotools-dev"/>
+            <package name="texinfo" version=">= 4.2"/>
+            <package name="groff"/>
+            <package name="libattr1-dev"/>
+            <package name="libacl1-dev"/>
+            <package name="libselinux1-dev" version=">= 1.32"/>
+            <package name="gperf"/>
+            <package name="bison"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="coreutils.xml"/>
+    <xi:include href="coreutils-join.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
