@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libatomic-ops-dev" section="libdevel">
+    <description>
+        <summary>A library for atomic operations (development files)</summary>
+        <p>
+        Libatomic-ops implements a large collection of operations, each one
+        of which is a combination of an (optional) atomic memory operation,
+        and a memory barrier. It also implements associated feature-test
+        macros that determine whether a particular operation is available
+        on the current target hardware (either directly or by synthesis).
+        Libatomic-ops attempts to replace various existing files with similar
+        goals, since they usually do not handle differences in memory barrier
+        styles with sufficient generality.
+        </p>
+        <p>
+        This package provides the header files and documentation needed by
+        developers.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib"/>
+    </contents>
+</package>

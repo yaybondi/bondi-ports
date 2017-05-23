@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libatomic-ops" architecture-independent="false">
+        <description>
+            <summary>A library for atomic operations (development files)</summary>
+            <p>
+            Libatomic-ops implements a large collection of operations, each one
+            of which is a combination of an (optional) atomic memory operation,
+            and a memory barrier. It also implements associated feature-test
+            macros that determine whether a particular operation is available
+            on the current target hardware (either directly or by synthesis).
+            Libatomic-ops attempts to replace various existing files with similar
+            goals, since they usually do not handle differences in memory barrier
+            styles with sufficient generality.
+            </p>
+            <p>
+            This package provides the header files and documentation needed by
+            developers.
+            </p>
+        </description>
+
+        <sources>
+            <file src="libatomic-ops-7.4.4.tar.gz" subdir="sources"
+                sha256sum="9b9c120f5e377e6934ab0da369ee740e1ae32b80af0489d47518920e9561c7bd"/>
+            <file src="debian.3.tar.gz" subdir="patches"
+                sha256sum="105164b11b672878fb55104f54e64e288bdbc682470d3f7578e017b7e06042ac"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/0001-Basic-support-of-TILE-Gx-and-TILEPro-CPUs.patch"/>
+                <file src="patches/0002-Use-LLD-and-SCD-instructions-on-mips64.patch"/>
+                <file src="patches/0003-Support-n32-ABI-for-mips64.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autotools-dev"/>
+            <package name="patchutils" version=">= 0.2.25"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libatomic-ops-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
