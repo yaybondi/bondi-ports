@@ -10,7 +10,7 @@ autoreconf -vfi
 # temporary work-around, this has been fixed upstream
 sed -i 's@#     include <asm/sigcontext.h>@@g' os_dep.c
 
-export CFLAGS="$CFLAGS -DNO_GETCONTEXT=1"
+export CFLAGS="$CFLAGS -D_GNU_SOURCE -DNO_GETCONTEXT -DUSE_MMAP -DHAVE_DL_ITERATE_PHDR"
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
@@ -19,8 +19,7 @@ $BOLT_SOURCE_DIR/configure \
     --host="$BOLT_HOST_TYPE" \
     --sysconfdir=/etc \
     --localstatedir=/var/lib \
-    --enable-cplusplus \
-    --with-tags=CXX
+    --enable-cplusplus
 
     ]]>
     </prepare>
