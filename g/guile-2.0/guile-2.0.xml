@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="guile-2.0" section="lisp">
+    <description>
+        <summary>GNU extension language and Scheme interpreter</summary>
+        <p>
+        Guile is a Scheme implementation designed for real world programming,
+        providing a rich Unix interface, a module system, an interpreter, and
+        many extension languages. Guile can be used as a standard #! style
+        interpreter, via #!${prefix}/bin/guile, or as an extension language for
+        other applications via libguile.
+        </p>
+    </description>
+
+    <requires>
+        <package name="guile-2.0-libs" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/bin/guile"/>
+    </contents>
+</package>

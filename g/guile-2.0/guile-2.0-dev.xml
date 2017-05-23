@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="guile-2.0-dev" section="lisp">
+    <description>
+        <summary>Development files for Guile 2.0</summary>
+        <p>
+        This package contains files needed for development using Guile 2.0.
+        </p>
+        <p>
+        Guile is a Scheme implementation designed for real world programming,
+        providing a rich Unix interface, a module system, an interpreter, and
+        many extension languages. Guile can be used as a standard #! style
+        interpreter, via #!${prefix}/bin/guile, or as an extension language for
+        other applications via libguile.
+        </p>
+    </description>
+
+    <requires>
+        <package name="guile-2.0" version="=="/>
+        <package name="guile-2.0-libs" version="=="/>
+        <package name="musl-libc-dev"/>
+        <package name="libncurses5-dev"/>
+        <package name="libreadline6-dev"/>
+        <package name="libltdl-dev"/>
+        <package name="libgmp-dev"/>
+        <package name="libgc-dev"/>
+        <package name="pkg-config"/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/bin/guild"/>
+        <file src="${prefix}/bin/guile-config"/>
+        <file src="${prefix}/bin/guile-snarf"/>
+        <file src="${prefix}/bin/guile-tools"/>
+        <file src="${prefix}/include/guile/2.0"/>
+        <file src="${prefix}/lib/libguile-*.a"/>
+        <file src="${prefix}/lib/libguile-*.so"/>
+        <file src="${prefix}/lib/libguilereadline-*.a"/>
+        <file src="${prefix}/lib/pkgconfig"/>
+        <file src="${prefix}/share/aclocal"/>
+        <file src="${prefix}/share/guile/2.0/scripts"/>
+    </contents>
+</package>

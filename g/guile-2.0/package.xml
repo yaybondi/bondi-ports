@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="guile-2.0" architecture-independent="false">
+        <description>
+            <summary>GNU extension language and Scheme interpreter</summary>
+            <p>
+            Guile is a Scheme implementation designed for real world programming,
+            providing a rich Unix interface, a module system, an interpreter, and
+            many extension languages. Guile can be used as a standard #! style
+            interpreter, via #!/usr/bin/guile, or as an extension language for
+            other applications via libguile.
+            </p>
+        </description>
+
+        <sources>
+            <file src="guile-2.0-2.0.13+1.tar.xz" subdir="sources"
+                sha256sum="ecf63aa152cf962752325c2dcd6af1bd575441b984fde847a280ea852ff9eddd"/>
+            <file src="debian.4.tar.gz" subdir="patches"
+                sha256sum="5c922987ba1b605c22bae4dad8ef8dce10bd7d1870e0edaeba9d58e2cbfd1f11"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/0001-Mark-mutex-with-owner-not-retained-threads-test-as-u.patch"/>
+                <file src="patches/0002-Look-for-guile-procedures.txt-in-pkglibdir.patch"/>
+                <file src="patches/0003-tests-Avoid-race-condition-in-REPL-server-test.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="libtool"/>
+            <package name="autoconf"/>
+            <package name="automake"/>
+            <package name="libncurses5-dev"/>
+            <package name="libreadline6-dev"/>
+            <package name="libltdl-dev"/>
+            <package name="libgmp-dev"/>
+            <package name="texinfo"/>
+            <package name="flex"/>
+            <package name="libunistring-dev"/>
+            <package name="libgc-dev"/>
+            <package name="libffi-dev"/>
+            <package name="pkg-config"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="guile-2.0.xml"/>
+    <xi:include href="guile-2.0-dev.xml"/>
+    <xi:include href="guile-2.0-libs.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
