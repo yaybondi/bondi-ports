@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="gengetopt" section="devel">
+    <description>
+        <summary>skeleton main.c generator</summary>
+        <p>
+        gengetopt reads an interface description file, and writes a skeleton
+        main.c file. gengetopt supports: long and short options, 11 types of
+        parameters (including flag, int, double, string, and function call),
+        and a usage message.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/share/gengetopt"/>
+    </contents>
+</package>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="gengetopt" architecture-independent="false">
+        <description>
+            <summary>skeleton main.c generator</summary>
+            <p>
+            gengetopt reads an interface description file, and writes a skeleton
+            main.c file. gengetopt supports: long and short options, 11 types of
+            parameters (including flag, int, double, string, and function call),
+            and a usage message.
+            </p>
+        </description>
+
+        <sources>
+            <file src="gengetopt-2.22.6+dfsg0.tar.gz" subdir="sources"
+                sha256sum="ef73f03e65836ce8888a9e5a90d09c0156a801e032169235b5a0d0b549c6f1da"/>
+            <file src="debian.1.tar.gz" subdir="patches"
+                sha256sum="b4e43a08b7154781701dfea29ca5d50b783f41d64bd0e91b2bf5c7396a390aa9"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/01man.patch"/>
+                <file src="patches/9001-dfsg.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="flex"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="gengetopt.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
