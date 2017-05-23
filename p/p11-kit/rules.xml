@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+export PKG_CONFIG="${BOLT_HOST_TYPE}-pkg-config"
+
+cd "$BOLT_SOURCE_DIR"
+bh_autotools_dev_update
+autoreconf -vi
+
+cd "$BOLT_BUILD_DIR"
+"$BOLT_SOURCE_DIR/configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --disable-silent-rules \
+    --with-trust-paths=/etc/ssl/certs/ca-certificates.crt \
+    --with-hash-impl=internal \
+    --disable-nls \
+    --disable-doc
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make -j"$BOLT_PARALLEL_JOBS"
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make DESTDIR="$BOLT_INSTALL_DIR" install
+
+cd "$BOLT_INSTALL_DIR"
+find . -name "*.la" -exec rm '{}' ';'
+
+ln -sf "libp11-kit.so" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/p11-kit-proxy.so"
+
+    ]]>
+    </install>
+</rules>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="p11-kit" section="misc">
+    <description>
+        <summary>p11-glue utilities</summary>
+        <p>
+        The p11-kit library provides a way to load and enumerate Public-Key
+        Cryptography Standard #11 modules, along with a standard configuration
+        setup for installing PKCS#11 modules so that they're discoverable. It
+        also solves problems with coordinating the use of PKCS#11 by different
+        components or libraries living in the same process.
+        </p>
+        <p>
+        This package contains the p11-kit tool for listing PKCS#11 modules.
+        </p>
+    </description>
+
+    <requires>
+        <package name="p11-kit-modules" version=">=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/share/p11-kit/modules"/>
+    </contents>
+</package>

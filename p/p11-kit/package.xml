@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <source name="p11-kit" architecture-independent="false">
+        <description>
+            <summary>library for loading and coordinating access to PKCS#11 modules - development</summary>
+            <p>
+            The p11-kit library provides a way to load and enumerate Public-Key
+            Cryptography Standard #11 modules, along with a standard configuration
+            setup for installing PKCS#11 modules so that they're discoverable. It
+            also solves problems with coordinating the use of PKCS#11 by different
+            components or libraries living in the same process.
+            </p>
+            <p>
+            This package contains the documentation and development headers required
+            to build applications using the p11-kit library.
+            </p>
+        </description>
+
+        <sources>
+            <file src="p11-kit-0.23.3.tar.gz" subdir="sources"
+                sha256sum="d487f04dba3f9e8256f53034c59c944ca45fd7b8434c095da6a74079644dcd82"/>
+            <file src="debian.2.tar.gz" subdir="patches"
+                sha256sum="e226e07a8a1856fe38abfdc64bdcf6c77cc65b55eb7b567c86d42a07ea0f45b9"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/30_nogetauxvalonbsd.diff"/>
+                <file src="patches/35_hurd_enable_secure.diff"/>
+                <file src="patches/enable_locale.diff"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="pkg-config"/>
+            <package name="libtasn1-6-dev"/>
+            <package name="libffi-dev"/>
+            <package name="automake" version=">= 1.12"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libp11-kit-dev.xml"/>
+    <xi:include href="libp11-kit0.xml"/>
+    <xi:include href="p11-kit.xml"/>
+    <xi:include href="p11-kit-modules.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
