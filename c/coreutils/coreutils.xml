@@ -19,6 +19,10 @@
         </p>
     </description>
 
+    <requires>
+        <package name="coreutils-join"/>
+    </requires>
+
     <contents>
         <file src="${prefix}/bin"/>
         <file src="${prefix}/lib/coreutils"/>
