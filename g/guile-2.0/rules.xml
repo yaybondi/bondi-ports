@@ -12,7 +12,7 @@ ln -sf "$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-pkg-config" .mybin/pkg-config
 export PATH="`pwd`/.mybin:$PATH"
 
 # trigger a cross build and use guile from /tools if available
-if [ "$BOLT_BUILD_FOR" = "tools" ] && [ -e "/tools/bin/guile" ]; then
+if [ "$BOLT_BUILD_FOR" = "target" ] && [ -e "/tools/bin/guile" ]; then
     export GUILE_FOR_BUILD="/tools/bin/guile"
     MY_BUILD_TYPE="`bh_spoof_target_triplet $BOLT_HOST_TYPE`"
     export CC_FOR_BUILD="${BOLT_HOST_TYPE}-gcc"
