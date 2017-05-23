@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libtasn1-6" architecture-independent="false">
+        <description>
+            <summary>Manage ASN.1 structures</summary>
+            <p>
+            Manage ASN1 (Abstract Syntax Notation One) structures.
+            The main features of this library are:
+            </p>
+            <ul>
+                <li>on-line ASN1 structure management that doesn't require any C code
+                    file generation.</li>
+                <li>off-line ASN1 structure management with C code file generation
+                    containing an array.</li>
+                <li>DER (Distinguish Encoding Rules) encoding</li>
+                <li>no limits for INTEGER and ENUMERATED values</li>
+            </ul>
+        </description>
+
+        <sources>
+            <file src="libtasn1-6-4.10.tar.gz" subdir="sources"
+                sha256sum="681a4d9a0d259f2125713f2e5766c5809f151b3a1392fd91390f780b4b8f5a02"/>
+        </sources>
+
+        <requires>
+            <package name="bison"/>
+            <package name="help2man"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libtasn1-6-dev.xml"/>
+    <xi:include href="libtasn1-6.xml"/>
+    <xi:include href="libtasn1-bin.xml"/>
+    <xi:include href="libtasn1-3-bin.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

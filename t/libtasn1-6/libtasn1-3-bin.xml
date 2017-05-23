@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libtasn1-3-bin" section="oldlibs">
+    <description>
+        <summary>transitional libtasn1-3-bin package</summary>
+        <p>
+        This is a transitional dummy package to ease the migration from
+        libtasn1-3-bin to libtasn1-bin. You can safely remove this package.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libtasn1-bin" version=">=="/>
+    </requires>
+</package>

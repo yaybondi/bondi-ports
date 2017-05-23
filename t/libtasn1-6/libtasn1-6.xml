@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libtasn1-6" section="libs">
+    <description>
+        <summary>Manage ASN.1 structures (runtime)</summary>
+        <p>
+        Manage ASN1 (Abstract Syntax Notation One) structures.
+        The main features of this library are:
+        </p>
+        <ul>
+            <li>on-line ASN1 structure management that doesn't require any C code
+                file generation.</li>
+            <li>off-line ASN1 structure management with C code file generation
+                containing an array.</li>
+            <li>DER (Distinguish Encoding Rules) encoding</li>
+            <li>no limits for INTEGER and ENUMERATED values</li>
+        </ul>
+        <p>
+        This package contains runtime libraries.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/lib/libtasn1.so.*"/>
+    </contents>
+</package>
