@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libidn11" section="libs">
+    <description>
+        <summary>GNU Libidn library, implementation of IETF IDN specifications</summary>
+        <p>
+        GNU Libidn is a fully documented implementation of the Stringprep,
+        Punycode and IDNA specifications. Libidn's purpose is to encode and
+        decode internationalized domain names. The Nameprep, XMPP, SASLprep,
+        and iSCSI profiles are supported.
+        </p>
+        <p>
+        This package contains the shared library.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/lib/libidn.so.*"/>
+    </contents>
+</package>

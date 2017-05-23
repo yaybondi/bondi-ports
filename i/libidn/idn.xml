@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="idn" section="misc">
+    <description>
+        <summary>Command line interface to GNU Libidn</summary>
+        <p>
+        GNU Libidn is a fully documented implementation of the Stringprep,
+        Punycode and IDNA specifications. Libidn's purpose is to encode and
+        decode internationalized domain names. The Nameprep, XMPP, SASLprep,
+        and iSCSI profiles are supported.
+        </p>
+        <p>
+        This package contains the idn command-line tool.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+    </contents>
+</package>

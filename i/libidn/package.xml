@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libidn" architecture-independent="false">
+        <description>
+            <summary>Command line and Emacs interface to GNU Libidn</summary>
+            <p>
+            GNU Libidn is a fully documented implementation of the Stringprep,
+            Punycode and IDNA specifications. Libidn's purpose is to encode and
+            decode internationalized domain names. The Nameprep, XMPP, SASLprep,
+            and iSCSI profiles are supported.
+            </p>
+            <p>
+            This package contains the idn command-line tool and its Emacs lisp
+            interface.
+            </p>
+        </description>
+
+        <sources>
+            <file src="libidn-1.33.tar.gz" subdir="sources"
+                sha256sum="44a7aab635bb721ceef6beecc4d49dfd19478325e1b47f3196f7d2acc4930e19"/>
+        </sources>
+
+        <requires>
+            <package name="autopoint" version=">= 0.19.3"/>
+            <package name="gengetopt"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="idn.xml"/>
+    <xi:include href="libidn11-dev.xml"/>
+    <xi:include href="libidn11.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
