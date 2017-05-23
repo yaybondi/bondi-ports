@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgc1c2" section="libs">
+    <description>
+        <summary>conservative garbage collector for C and C++</summary>
+        <p>
+        Boehm-Demers-Weiser's GC is a garbage collecting storage allocator that is
+        intended to be used as a plug-in replacement for C's malloc or C++'s new().
+        </p>
+        <p>
+        It allows you to allocate memory basically as you normally would without
+        explicitly deallocating memory that is no longer useful. The collector
+        automatically recycles memory when it determines that it can no longer be
+        used.
+        </p>
+        <p>
+        This version of the collector is thread safe, has C++ support and uses the
+        defaults for everything else. However, it does not work as a drop-in malloc(3)
+        replacement.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/lib/libgc.so.*"/>
+        <file src="${prefix}/lib/libgccpp.so.*"/>
+    </contents>
+</package>

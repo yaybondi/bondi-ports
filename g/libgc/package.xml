@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libgc" architecture-independent="false">
+        <description>
+            <summary>conservative garbage collector for C and C++</summary>
+            <p>
+            Boehm-Demers-Weiser's GC is a garbage collecting storage allocator that is
+            intended to be used as a plug-in replacement for C's malloc or C++'s new().
+            </p>
+            <p>
+            It allows you to allocate memory basically as you normally would without
+            explicitly deallocating memory that is no longer useful. The collector
+            automatically recycles memory when it determines that it can no longer be
+            used.
+            </p>
+            <p>
+            This version of the collector is thread safe, has C++ support and uses the
+            defaults for everything else. However, it does not work as a drop-in malloc(3)
+            replacement.
+            </p>
+        </description>
+
+        <sources>
+            <file src="libgc-7.4.2.tar.gz" subdir="sources"
+                sha256sum="09f21d38dd42bced14d6875f55804cb1b5e6bc486da7980187ecd2e768739c62"/>
+            <file src="debian.8.tar.gz" subdir="patches"
+                sha256sum="baa5940a1d6fdd89e900b76b4aca373dd9a73baea55c35107424e901267012c7"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/02-manpage.diff"/>
+                <file src="patches/enable-threads-on-hurd.diff"/>
+                <file src="patches/enable-parallel-mark-where-supported.diff"/>
+                <file src="patches/fix-location-of-assembly-files.diff"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="libatomic-ops-dev" version=">= 7.3~"/>
+            <package name="pkg-config"/>
+            <package name="pkg-kde-tools"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libgc1c2.xml"/>
+    <xi:include href="libgc-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

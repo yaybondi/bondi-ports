@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+cd "$BOLT_SOURCE_DIR"
+bh_autotools_dev_update
+autoreconf -vfi
+
+# temporary work-around, this has been fixed upstream
+sed -i 's@#     include <asm/sigcontext.h>@@g' os_dep.c
+
+cd "$BOLT_BUILD_DIR"
+$BOLT_SOURCE_DIR/configure \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --sysconfdir=/etc \
+    --localstatedir=/var/lib \
+    --enable-cplusplus \
+    --with-tags=CXX
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make -j"$BOLT_PARALLEL_JOBS"
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make DESTDIR="$BOLT_INSTALL_DIR" install
+
+    ]]>
+    </install>
+</rules>

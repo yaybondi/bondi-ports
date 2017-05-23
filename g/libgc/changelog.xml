@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release epoch="1" version="7.4.2" revision="8bolt1" upstream-version="1:7.4.2-8"
+        maintainer="Tobias Koch" email="tobias.koch@nonterra.com"
+        date="2017-05-23 09:50:45+03:00">
+        <changeset>
+            <li>Adaptation of Debian sources for Bolt OS</li>
+        </changeset>
+    </release>
+</changelog>
