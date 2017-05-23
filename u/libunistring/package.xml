@@ -18,11 +18,14 @@
                 sha256sum="610d3ec724fbdaa654afe3cff20b9f4d504be3fd296fded2e0f7f764041006a3"/>
             <file src="patches.0.1.tar.gz" subdir="patches"
                 sha256sum="ea7c3f622207d755eb62fc3cd53845dc0c4d55c1a52fca1b8b203aae84441004"/>
+            <file src="bolt.2.tar.gz" subdir="patches"
+                sha256sum="62bc79a3614c79fd891597357af3f46d4d5cd8203f98a63eb884b5726f2f08a0"/>
         </sources>
         
         <patches>
             <patchset subdir="sources">
                 <file src="patches/float-endian-detection.patch"/>
+                <file src="patches/update-fseterr-h.patch"/>
             </patchset>
         </patches>
 

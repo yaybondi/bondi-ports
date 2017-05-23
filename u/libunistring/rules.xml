@@ -7,11 +7,15 @@ cd "$BOLT_SOURCE_DIR"
 bh_autotools_dev_update
 autoreconf -vfi
 
+# begin hack
 sed -i \
     -e 's@fseterr\.c@@g' \
     -e 's@fseterr\.lo@@g' \
     -e 's@fseterr\.h@@g' \
     lib/Makefile.in
+
+export CFLAGS="$CFLAGS -DHAVE___FSETERR=1"
+# end hack
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
