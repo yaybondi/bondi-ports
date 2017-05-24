@@ -4,6 +4,9 @@
     <![CDATA[
 
 cd "$BOLT_SOURCE_DIR"
+GUILE_VERSION="`cat NEWS |grep 'Changes in' | head -n1 | cut -d' ' -f3`"
+echo "$GUILE_VERSION" > .version
+cp -a .version .tarball-version
 ./autogen.sh
 
 cd "$BOLT_BUILD_DIR"
