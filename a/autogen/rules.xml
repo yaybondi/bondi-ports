@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+cd "$BOLT_SOURCE_DIR"
+bh_autotools_dev_update
+autoreconf -vi --no-recursive
+
+export SHELL="$BOLT_INSTALL_PREFIX/bin/sh"
+
+cd "$BOLT_BUILD_DIR"
+"$BOLT_SOURCE_DIR/configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --disable-silent-rules \
+    --enable-timeout=78 \
+    --with-libxml2-libs="`${BOLT_HOST_TYPE}-pkg-config --libs libxml-2.0`" \
+    --with-libxml2-cflags="`${BOLT_HOST_TYPE}-pkg-config --cflags libxml-2.0`" \
+    --disable-nls \
+    --disable-rpath \
+    --with-packager="Bolt"
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make -j"$BOLT_PARALLEL_JOBS"
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+export SHELL="$BOLT_INSTALL_PREFIX/bin/sh"
+
+cd "$BOLT_BUILD_DIR"
+make top_srcdir="`pwd`" top_builddir="`pwd`" \
+    DESTDIR="$BOLT_INSTALL_DIR" install
+
+    ]]>
+    </install>
+</rules>

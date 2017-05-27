@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <source name="autogen" architecture-independent="false">
+        <description>
+            <summary>automated text file generator</summary>
+            <p>
+            AutoGen is a tool designed for generating program files that contain
+            repetitive text with varied substitutions. This is especially valuable if
+            there are several blocks of such text that must be kept synchronized.
+            </p>
+            <p>
+            Included with AutoGen is a tool that virtually eliminates the hassle of
+            processing options, keeping usage text up to date and so on. This tool
+            allows you to specify several program attributes, innumerable options and
+            option attributes, then it produces all the code necessary to parse and
+            handle the command line and initialization file options.
+            </p>
+            <p>
+            This package contains the development tools. libopts25-dev contains the
+            static libraries and header files. libopts25 contains the shared libraries.
+            autogen-doc contains the PostScript and HTML documentation.
+            </p>
+        </description>
+
+        <sources>
+            <file src="autogen-5.18.12.tar.xz" subdir="sources"
+                sha256sum="be3ba62e883185b6ee8475edae97d7197d701d6b9ad9c3d2df53697110c1bfd8"/>
+            <file src="debian.3.tar.gz" subdir="patches"
+                sha256sum="84f0a519ccf93d9d74eab1539832091ff6782cb134c19317e8d93b07284cd5d4"/>
+            <file src="bolt.1.tar.gz" subdir="patches"
+                sha256sum="51b81f0729a5bf5b117231640f6695b06de030a52a56b829a966412bd1eb3986"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <!-- Debian -->
+                <file src="patches/05_cross_pkg_config.diff"/>
+                <file src="patches/10_libopts_tarball_perms.diff"/>
+                <!-- Bolt -->
+                <file src="patches/boostrap-shlib-no-bashism.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autotools-dev"/>
+            <package name="gperf"/>
+            <package name="guile-2.0-dev" version=">= 2.0.11+1-0"/>
+            <package name="libxml2-dev"/>
+            <package name="pkg-config"/>
+            <package name="tar" version=">= 1.28"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="autogen.xml"/>
+    <xi:include href="libopts25.xml"/>
+    <xi:include href="libopts25-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

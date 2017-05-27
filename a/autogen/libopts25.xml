@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libopts25" section="libs">
+    <description>
+        <summary>automated option processing library based on autogen</summary>
+        <p>
+        This package contains the shared libraries needed by binaries that use
+        autoopts for option processing. The package containing the header files
+        and static libraries is libopts25-dev. The package containing the
+        development tools is autogen.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/lib/libopts.so.*"/>
+    </contents>
+</package>

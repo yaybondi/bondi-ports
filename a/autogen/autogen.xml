@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="autogen" section="devel">
+    <description>
+        <summary>automated text file generator</summary>
+        <p>
+        AutoGen is a tool designed for generating program files that contain
+        repetitive text with varied substitutions. This is especially valuable if
+        there are several blocks of such text that must be kept synchronized.
+        </p>
+        <p>
+        Included with AutoGen is a tool that virtually eliminates the hassle of
+        processing options, keeping usage text up to date and so on. This tool
+        allows you to specify several program attributes, innumerable options and
+        option attributes, then it produces all the code necessary to parse and
+        handle the command line and initialization file options.
+        </p>
+        <p>
+        This package contains the development tools. libopts25-dev contains the
+        static libraries and header files. libopts25 contains the shared libraries.
+        autogen-doc contains the PostScript and HTML documentation.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libopts25-dev" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/lib/autogen"/>
+        <file src="${prefix}/lib/pkgconfig"/>
+        <file src="${prefix}/share/aclocal/autoopts.m4"/>
+        <file src="${prefix}/share/autogen"/>
+    </contents>
+</package>
