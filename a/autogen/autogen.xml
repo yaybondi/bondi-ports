@@ -29,7 +29,6 @@
         <file src="${prefix}/bin"/>
         <file src="${prefix}/lib/autogen"/>
         <file src="${prefix}/lib/pkgconfig"/>
-        <file src="${prefix}/share/aclocal/autoopts.m4"/>
         <file src="${prefix}/share/autogen"/>
     </contents>
 </package>
