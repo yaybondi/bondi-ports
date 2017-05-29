@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libprotobuf10" section="libs">
+    <description>
+        <summary>protocol buffers C++ library</summary>
+        <p>
+        Protocol buffers are a flexible, efficient, automated mechanism for
+        serializing structured data - similar to XML, but smaller, faster, and
+        simpler. You define how you want your data to be structured once, then you can
+        use special generated source code to easily write and read your structured
+        data to and from a variety of data streams and using a variety of languages.
+        You can even update your data structure without breaking deployed programs
+        that are compiled against the "old" format.
+        </p>
+        <p>
+        Google uses Protocol Buffers for almost all of its internal RPC protocols and
+        file formats.
+        </p>
+        <p>
+        This package contains the runtime library needed for C++ applications.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/lib/libprotobuf.so.*"/>
+    </contents>
+</package>

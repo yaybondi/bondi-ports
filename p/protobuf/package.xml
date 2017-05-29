@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <source name="protobuf" architecture-independent="false">
+        <description>
+            <summary>protocol buffers library</summary>
+            <p>
+            Protocol buffers are a flexible, efficient, automated mechanism for
+            serializing structured data - similar to XML, but smaller, faster, and
+            simpler. You define how you want your data to be structured once, then you can
+            use special generated source code to easily write and read your structured
+            data to and from a variety of data streams and using a variety of languages.
+            You can even update your data structure without breaking deployed programs
+            that are compiled against the "old" format.
+            </p>
+            <p>
+            Google uses Protocol Buffers for almost all of its internal RPC protocols and
+            file formats.
+            </p>
+        </description>
+
+        <sources>
+            <file src="protobuf-3.0.0.tar.gz" subdir="sources"
+                sha256sum="f5b3563f118f1d3d6e001705fa7082e8fc3bda50038ac3dff787650795734146"/>
+            <file src="debian.9.tar.gz" subdir="patches"
+                sha256sum="76dff42bdc1aebf4841f602d28ad2571930674c4ad9c9f1dcb733051c353d88c"/>
+            <file src="bolt.1.tar.gz" subdir="patches"
+                sha256sum="3243572b8a290be47c3f3a44b852564f773e7a4a67e8efcbb3a1ee811ff6b6e0"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <!-- Debian -->
+                <file src="patches/Restore-New-Callback-into-google-protobuf-namespace.patch"/>
+                <file src="patches/expect_death.patch"/>
+                <file src="patches/hurd.patch"/>
+                <file src="patches/java-test-scope.patch"/>
+                <file src="patches/misleading-indentation.patch"/>
+                <file src="patches/s390x.patch"/>
+                <file src="patches/sparc64.patch"/>
+                <file src="patches/python3_long_fix.patch"/>
+                <!-- Bolt -->
+                <file src="patches/genscript-no-bashism.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="g++" version=">= 4:4.7"/>
+            <package name="zlib1g-dev"/>
+            <package name="google-mock"/>
+            <package name="libgtest-dev"/>
+            <package name="python-all" version=">= 2.7"/>
+            <package name="libpython-all-dev" version=">= 2.7"/>
+            <package name="python3-all" version=">= 3.3"/>
+            <package name="libpython3-all-dev" version=">= 3.3"/>
+            <package name="python-setuptools"/>
+            <package name="python3-setuptools"/>
+            <package name="python-google-apputils"/>
+            <package name="python3-six"/>
+            <package name="xmlto"/>
+            <package name="unzip"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libprotobuf10.xml"/>
+    <xi:include href="libprotobuf-lite10.xml"/>
+    <xi:include href="libprotobuf-dev.xml"/>
+    <xi:include href="libprotoc10.xml"/>
+    <xi:include href="libprotoc-dev.xml"/>
+    <xi:include href="protobuf-compiler.xml"/>
+    <xi:include href="python-protobuf.xml"/>
+    <xi:include href="python3-protobuf.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
