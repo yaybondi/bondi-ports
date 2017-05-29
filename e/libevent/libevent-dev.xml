@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libevent-dev" section="libdevel">
+    <description>
+        <summary>Asynchronous event notification library (development files)</summary>
+        <p>
+        Libevent is an asynchronous event notification library that provides a 
+        mechanism to execute a callback function when a specific event occurs
+        on a file descriptor or after a timeout has been reached.
+        </p>
+        <p>
+        This package includes development files for compiling against libevent.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libevent-2.0-5" version="=="/>
+        <package name="libevent-core-2.0-5" version="=="/>
+        <package name="libevent-extra-2.0-5" version="=="/>
+        <package name="libevent-pthreads-2.0-5" version="=="/>
+        <package name="libevent-openssl-2.0-5" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libevent.a"/>
+        <file src="${prefix}/lib/libevent.so"/>
+        <file src="${prefix}/lib/libevent_core.a"/>
+        <file src="${prefix}/lib/libevent_core.so"/>
+        <file src="${prefix}/lib/libevent_extra.a"/>
+        <file src="${prefix}/lib/libevent_extra.so"/>
+        <file src="${prefix}/lib/libevent_openssl.a"/>
+        <file src="${prefix}/lib/libevent_openssl.so"/>
+        <file src="${prefix}/lib/libevent_pthreads.a"/>
+        <file src="${prefix}/lib/libevent_pthreads.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
+    </contents>
+</package>

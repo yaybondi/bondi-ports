@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libevent-core-2.0-5" section="libs">
+    <description>
+        <summary>Asynchronous event notification library (core)</summary>
+        <p>
+        Libevent is an asynchronous event notification library that provides a
+        mechanism to execute a callback function when a specific event occurs
+        on a file descriptor or after a timeout has been reached.
+        </p>
+        <p>
+        It is meant to replace the asynchronous event loop found in
+        event driven network servers. Currently, libevent supports /dev/poll,
+        kqueue(2), event ports, select(2), poll(2) and epoll(4).
+        </p>
+        <p>
+        The libevent_core library includes event loops, timers, buffer code,
+        and various small compatibility functions.
+        </p>
+        <p>
+        If you're writing software that only uses libevent's event loop, you
+        should link against only the libevent_core library.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/lib/libevent_core-2.0.so.*"/>
+    </contents>
+</package>

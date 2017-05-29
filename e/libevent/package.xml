@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libevent" architecture-independent="false">
+        <description>
+            <summary>Asynchronous event notification library (development files)</summary>
+            <p>
+            Libevent is an asynchronous event notification library that provides a 
+            mechanism to execute a callback function when a specific event occurs
+            on a file descriptor or after a timeout has been reached.
+            </p>
+            <p>
+            This package includes development files for compiling against libevent.
+            </p>
+        </description>
+
+        <sources>
+            <file src="libevent-2.0.21-stable.tar.gz" subdir="sources"
+                sha256sum="22a530a8a5ba1cb9c080cba033206b17dacd21437762155c6d30ee6469f574f5"/>
+            <file src="debian.3.tar.gz" subdir="patches"
+                sha256sum="d8b86906b7d5c6087b12463aa232e99acfb5f3ce8416e856b9a509bbaa7d1d92"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/build_with_no_undefined.patch"/>
+                <file src="patches/dh-autoreconf"/>
+                <file src="patches/20d6d445.patch"/>
+                <file src="patches/openssl_1.1.patch"/>
+                <file src="patches/0001-evdns-fix-searching-empty-hostnames.patch"/>
+                <file src="patches/0002-test-dns-regression-for-empty-hostname.patch"/>
+                <file src="patches/0003-evdns-name_parse-fix-remote-stack-overread.patch"/>
+                <file src="patches/0004-evutil_parse_sockaddr_port-fix-buffer-overflow.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="libssl-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libevent-dev.xml"/>
+    <xi:include href="libevent-2.0-5.xml"/>
+    <xi:include href="libevent-core-2.0-5.xml"/>
+    <xi:include href="libevent-extra-2.0-5.xml"/>
+    <xi:include href="libevent-pthreads-2.0-5.xml"/>
+    <xi:include href="libevent-openssl-2.0-5.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
