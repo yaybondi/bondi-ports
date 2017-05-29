@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="fstrm" architecture-independent="false">
+        <description>
+            <summary>Frame Streams (fstrm) library</summary>
+            <p>
+            Frame Streams is a light weight, binary clean protocol that allows for the
+            transport of arbitrarily encoded data payload sequences with minimal framing
+            overhead -- just four bytes per data frame. Frame Streams does not specify an
+            encoding format for data frames and can be used with any data serialization
+            format that produces byte sequences, such as Protocol Buffers, XML, JSON,
+            MessagePack, YAML, etc. Frame Streams can be used as both a streaming
+            transport over a reliable byte stream socket (TCP sockets, TLS connections,
+            AF_UNIX sockets, etc.) for data in motion as well as a file format for data
+            at rest. A "Content Type" header identifies the type of payload being carried
+            over an individual Frame Stream and allows cooperating programs to determine
+            how to interpret a given sequence of data payloads.
+            </p>
+            <p>
+            This is the "fstrm" implementation of Frame Streams in C.
+            </p>
+            <p>
+            This package contains the shared library.
+            </p>
+        </description>
+
+        <sources>
+            <file src="fstrm-0.3.0.tar.gz" subdir="sources"
+                sha256sum="ad41e5a6e50ea59a5096bab27c2358ad9ba34bc1b848e307c7d592d930c8d844"/>
+        </sources>
+
+        <requires>
+            <package name="pkg-config"/>
+            <package name="libevent-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libfstrm0.xml"/>
+    <xi:include href="libfstrm-dev.xml"/>
+    <xi:include href="fstrm-bin.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
