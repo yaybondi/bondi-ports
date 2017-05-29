@@ -28,9 +28,9 @@
     </requires>
 
     <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/libfstrm.a"/>
-        <file src="/usr/lib/libfstrm.so"/>
-        <file src="/usr/lib/pkgconfig"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libfstrm.a"/>
+        <file src="${prefix}/lib/libfstrm.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
     </contents>
 </package>

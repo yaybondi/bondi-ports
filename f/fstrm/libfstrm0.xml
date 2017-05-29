@@ -24,6 +24,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libfstrm.so.*"/>
+        <file src="${prefix}/lib/libfstrm.so.*"/>
     </contents>
 </package>
