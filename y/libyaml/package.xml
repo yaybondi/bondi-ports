@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libyaml" architecture-independent="false">
+        <description>
+            <summary>Fast YAML 1.1 parser and emitter library</summary>
+            <p>
+            LibYAML is a C library for parsing and emitting data in YAML 1.1, a
+            human-readable data serialization format.
+            </p>
+        </description>
+
+        <sources>
+            <file src="libyaml-0.1.7.tar.gz" subdir="sources"
+                sha256sum="8088e457264a98ba451a90b8661fcb4f9d6f478f7265d48322a196cec2480729"/>
+        </sources>
+
+        <requires>
+            <package name="autotools-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libyaml-0-2.xml"/>
+    <xi:include href="libyaml-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

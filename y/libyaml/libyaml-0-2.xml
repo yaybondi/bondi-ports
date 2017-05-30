@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libyaml-0-2" section="libs">
+    <description>
+        <summary>Fast YAML 1.1 parser and emitter library</summary>
+        <p>
+        LibYAML is a C library for parsing and emitting data in YAML 1.1, a
+        human-readable data serialization format.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/lib/libyaml-0.so.*"/>
+    </contents>
+</package>

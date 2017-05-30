@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libyaml-dev" section="libdevel">
+    <description>
+        <summary>Fast YAML 1.1 parser and emitter library (development)</summary>
+        <p>
+        LibYAML is a C library for parsing and emitting data in YAML 1.1, a
+        human-readable data serialization format.
+        </p>
+        <p>
+        This package contains development headers and static libraries.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libyaml-0-2" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libyaml.a"/>
+        <file src="${prefix}/lib/libyaml.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
+    </contents>
+</package>
