@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="chicken-bin" section="lisp">
+    <description>
+        <summary>Practical and portable Scheme system - compiler</summary>
+        <p>
+        CHICKEN is a Scheme compiler which compiles a subset of R5RS into C.
+        It uses the ideas presented in Baker's paper "Cheney on the MTA", and
+        has a small core and is easily extendable.
+        </p>
+        <p>
+        This package contains the compiler.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libchicken-dev" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+        <file src="/var/lib/chicken/8"/>
+    </contents>
+</package>

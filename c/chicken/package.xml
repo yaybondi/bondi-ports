@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <source name="chicken" architecture-independent="false">
+        <description>
+            <summary>Practical and portable Scheme system</summary>
+            <p>
+            CHICKEN is a Scheme compiler which compiles a subset of R5RS into C.
+            It uses the ideas presented in Baker's paper "Cheney on the MTA", and
+            has a small core and is easily extendable.
+            </p>
+        </description>
+
+        <sources>
+            <file src="chicken-4.11.0.tar.gz" subdir="sources"
+                sha256sum="e3dc2b8f95b6a3cd59c85b5bb6bdb2bd9cefc45b5d536a20cad74e3c63f4ad89"/>
+            <file src="debian.1.tar.gz" subdir="patches"
+                sha256sum="60c591a7d9b51c62071b9f3b3016fc55bd46f25cf1430c6ec06b9fdd79ad561e"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/fix-manpages.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="texinfo"/>
+            <package name="chrpath"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="chicken-bin.xml"/>
+    <xi:include href="libchicken8.xml"/>
+    <xi:include href="libchicken-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

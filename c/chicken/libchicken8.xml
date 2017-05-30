@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libchicken8" section="libs">
+    <description>
+        <summary>Practical and portable Scheme system - runtime</summary>
+        <p>
+        CHICKEN is a Scheme compiler which compiles a subset of R5RS into C. 
+        It uses the ideas presented in Baker's paper "Cheney on the MTA", and 
+        has a small core and is easily extendable.
+        </p>
+        <p>
+        This package contains the shared library needed to run programs using
+        chicken.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/lib/libchicken.so.*"/>
+        <file src="${prefix}/share/chicken"/>
+    </contents>
+</package>

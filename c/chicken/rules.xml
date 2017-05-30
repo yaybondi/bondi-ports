@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+cd "$BOLT_SOURCE_DIR"
+find . -name "*.c" -exec touch '{}' ';'
+
+cd "$BOLT_BUILD_DIR"
+mkdir .mybin
+
+if [ "$BOLT_BUILD_FOR" = "tools" ]; then
+    ln -s $BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-gcc    .mybin/gcc
+    ln -s $BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-ld     .mybin/ld
+    ln -s $BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-ranlib .mybin/ranlib
+    ln -s $BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-as     .mybin/as
+fi
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+export PATH="$BOLT_BUILD_DIR:$BOLT_BUILD_DIR/.mybin:$PATH"
+
+cd "$BOLT_BUILD_DIR"
+make PREFIX="$BOLT_INSTALL_PREFIX" \
+    PLATFORM=linux \
+    C_COMPILER_OPTIMIZATION_OPTIONS="$CFLAGS $CPPFLAGS" \
+    VARDIR=/var/lib/
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+export PATH="$BOLT_BUILD_DIR:$BOLT_BUILD_DIR/.mybin:$PATH"
+
+cd "$BOLT_BUILD_DIR"
+make PREFIX="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
+    PLATFORM=linux \
+    LINKER_LINK_SHARED_DLOADABLE_OPTIONS="-L. -shared $LDFLAGS,-R'.'" \
+    LINKER_LINK_SHARED_PROGRAM_OPTIONS="$LDFLAGS,-R'.'" \
+    LIBCHICKEN_SO_LINKER_OPTIONS="$LDFLAGS,-soname,libchicken.so.8" \
+    VARDIR="$BOLT_INSTALL_DIR/var/lib" install
+
+rm -fr $BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/chicken/doc
+
+    ]]>
+    </install>
+</rules>
