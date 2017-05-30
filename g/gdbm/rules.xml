@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+export CFLAGS="$CFLAGS -O2 -g -Wall -D_REENTRANT"
+
+cd "$BOLT_SOURCE_DIR"
+libtoolize --copy --force
+aclocal
+autoconf
+bh_autotools_dev_update
+
+sed -i 's@$(INSTALL) -T@$(INSTALL)@g' Makefile.in
+
+cd "$BOLT_BUILD_DIR"
+"$BOLT_SOURCE_DIR/configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    finish_cmds=""
+
+echo "/* We use fcntl locking (POSIX) instead of flock (BSD) */" >> autoconf.h
+echo "#undef HAVE_FLOCK" >> autoconf.h
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make
+
+# no clue why this comes out wrong
+chmod 644 gdbm.h
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make BINOWN="`whoami`" BINGRP="`whoami`" \
+    prefix="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
+    infodir="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/info" \
+    man3dir="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/man/man3" \
+    install install-compat
+
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/ndbm.h" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/gdbm-ndbm.h"
+
+    ]]>
+    </install>
+</rules>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="gdbm" architecture-independent="false">
+        <description>
+            <summary>GNU dbm database routines (runtime version)</summary>
+            <p>
+            GNU dbm ('gdbm') is a library of database functions that use extendible
+            hashing and works similarly to the standard UNIX 'dbm' functions.
+            </p>
+            <p>
+            The basic use of 'gdbm' is to store key/data pairs in a data file, thus
+            providing a persistent version of the 'dictionary' Abstract Data Type
+            ('hash' to perl programmers).
+            </p>
+        </description>
+
+        <sources>
+            <file src="gdbm-1.8.3.tar.bz2" subdir="sources"
+                sha256sum="1d5995b6e9e6be4ff62c8126d019f184a083dd8e6f75f6c74b9fe023b5b9440e"/>
+            <file src="debian.14.tar.gz" subdir="patches"
+                sha256sum="2fb9a314cee96f39cc431468174aecdf317dc08a0c3637992509b413c0b4d720"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <!-- Debian -->
+                <file src="patches/01_texinfo-usr-local.patch"/>
+                <file src="patches/02_zero-headers.patch"/>
+                <file src="patches/03-Makefile.in.patch"/>
+                <file src="patches/04_fix-gdbm-compat-linking.patch"/>
+                <file src="patches/05_handle-short-read.patch"/>
+                <file src="patches/06_manpage-cleanup.patch"/>
+                <file src="patches/07-link-flags.patch"/>
+                <file src="patches/08-709905-gdbm.texinfo.patch"/>
+                <file src="patches/09-stop-recording-build-date.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="texinfo"/>
+            <package name="libtool"/>
+            <package name="automake"/>
+            <package name="autoconf"/>
+            <package name="autotools-dev"/>
+            <package name="strip-nondeterminism"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libgdbm3.xml"/>
+    <xi:include href="libgdbm-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

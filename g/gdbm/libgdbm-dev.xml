@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgdbm-dev" section="libdevel">
+    <description>
+        <summary>GNU dbm database routines (development files)</summary>
+        <p>
+        GNU dbm ('gdbm') is a library of database functions that use extendible 
+        hashing and works similarly to the standard UNIX 'dbm' functions. This 
+        package includes development support files.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libc6-dev"/>
+        <package name="libgdbm3" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libgdbm.a"/>
+        <file src="${prefix}/lib/libgdbm.so"/>
+        <file src="${prefix}/lib/libgdbm_compat.a"/>
+        <file src="${prefix}/lib/libgdbm_compat.so"/>
+    </contents>
+</package>
