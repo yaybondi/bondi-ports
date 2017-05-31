@@ -21,8 +21,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/ruby-2.4.0"/>
-        <file src="/usr/lib/libruby-2.4.so"/>
-        <file src="/usr/lib/pkgconfig"/>
+        <file src="${prefix}/include/ruby-2.4.0"/>
+        <file src="${prefix}/lib/libruby-2.4.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
     </contents>
 </package>

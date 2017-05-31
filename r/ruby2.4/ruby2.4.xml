@@ -19,7 +19,7 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin"/>
+        <file src="${prefix}/bin"/>
         <dir src="/var/lib/gems"/>
         <dir src="/var/lib/gems/2.4.0"/>
     </contents>
