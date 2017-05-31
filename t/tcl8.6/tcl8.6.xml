@@ -12,4 +12,22 @@
     <contents>
         <file src="${prefix}/bin"/>
     </contents>
+
+    <maintainer-scripts>
+        <postinst><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/tclsh" ]; then
+    ln -sf "tclsh8.6" "$BOLT_INSTALL_PREFIX/bin/tclsh"
+fi
+
+        ]]></postinst>
+
+        <postrm><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/tclsh" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/tclsh"
+fi
+
+        ]]></postrm>
+    </maintainer-scripts>
 </package>
