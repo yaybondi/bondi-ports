@@ -17,7 +17,7 @@
 
         <sources>
             <file src="bolt-package-1.0.0.tar.gz" subdir="sources"
-                sha256sum="3c39ed1886c770f4b72c374869d8f00ef4844f39fcef1b45ce8d71bd58c5047c"/>
+                sha256sum="c895d775ed75c1b75bf72d10b943d48bf7e8e31d0a0c6d9de72aa12f1367ddbe"/>
         </sources>
 
         <xi:include href="rules.xml"/>
