@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="protobuf-c-compiler" section="devel">
+    <description>
+        <summary>Protocol Buffers C compiler (protobuf-c)</summary>
+        <p>
+        Protocol Buffers are a flexible, efficient, automated mechanism for
+        serializing structured data - similar to XML, but smaller, faster, and
+        simpler. You define how you want your data to be structured once, then you can
+        use special generated source code to easily write and read your structured
+        data to and from a variety of data streams and using a variety of languages.
+        You can even update your data structure without breaking deployed programs
+        that are compiled against the "old" format.
+        </p>
+        <p>
+        This is the "protobuf-c" implementation of Protocol Buffers in C.
+        </p>
+        <p>
+        This package contains the "protoc-c" code generator that creates C stubs from
+        Protocol Buffers .proto files. These stubs must be compiled and linked against
+        the libprotobuf-c support library.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+    </contents>
+</package>
