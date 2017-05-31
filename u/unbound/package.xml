@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="unbound" architecture-independent="false">
+        <description>
+            <summary>library implementing DNS resolution and validation</summary>
+            <p>
+            libunbound performs and validates DNS lookups; it can be used to convert
+            hostnames to IP addresses and back and obtain other information from the
+            DNS. Cryptographic validation of results is performed with DNSSEC.
+            </p>
+        </description>
+
+        <sources>
+            <file src="unbound-1.6.0.tar.gz" subdir="sources"
+                sha256sum="6b7db874e6debda742fee8869d722e5a17faf1086e93c911b8564532aeeffab7"/>
+            <file src="debian.3.tar.gz" subdir="patches"
+                sha256sum="ee0ba473141c5faf1ddfd8a518a62973bd6dab7a518d67a79eddfae93f5f5fab"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/debian-changes"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autoconf"/>
+            <package name="autotools-dev"/>
+            <package name="bison"/>
+            <package name="flex"/>
+            <package name="libevent-dev"/>
+            <package name="libexpat1-dev"/>
+            <package name="libfstrm-dev"/>
+            <package name="libprotobuf-c-dev"/>
+            <package name="libssl-dev"/>
+            <package name="libtool"/>
+            <package name="nettle-dev"/>
+            <package name="pkg-config"/>
+            <package name="protobuf-c-compiler"/>
+            <package name="python-all-dev" version=">= 2.6.6-3~"/>
+            <package name="libpython-all-dev" version=">= 2.6.6-3~"/>
+            <package name="python3-all-dev"/>
+            <package name="libpython3-all-dev"/>
+            <package name="swig"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libunbound-dev.xml"/>
+    <xi:include href="libunbound2.xml"/>
+    <xi:include href="python-unbound.xml"/>
+    <xi:include href="python3-unbound.xml"/>
+    <xi:include href="unbound.xml"/>
+    <xi:include href="unbound-anchor.xml"/>
+    <xi:include href="unbound-host.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

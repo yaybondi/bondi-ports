@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="unbound" section="net">
+    <description>
+        <summary>validating, recursive, caching DNS resolver</summary>
+        <p>
+        Unbound is a recursive-only caching DNS server which can perform DNSSEC
+        validation of results. It implements only a minimal amount of authoritative
+        service to prevent leakage to the root nameservers: forward lookups for
+        localhost, reverse for 127.0.0.1 and ::1, and NXDOMAIN for zones served by
+        AS112. Stub and forward zones are supported.
+        </p>
+        <p>
+        This package contains the unbound daemon.
+        </p>
+    </description>
+
+    <requires>
+        <package name="adduser"/>
+        <package name="dns-root-data"/>
+        <package name="openssl"/>
+        <package name="unbound-anchor"/>
+    </requires>
+
+    <contents>
+        <file src="/etc/unbound"/>
+        <file src="${prefix}/sbin/unbound"/>
+        <file src="${prefix}/sbin/unbound-checkconf"/>
+        <file src="${prefix}/sbin/unbound-control"/>
+        <file src="${prefix}/sbin/unbound-control-setup"/>
+        <dir src="/var/lib/unbound"/>
+    </contents>
+</package>

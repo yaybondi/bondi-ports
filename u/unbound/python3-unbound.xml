@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python3-unbound" section="python">
+    <description>
+        <summary>library implementing DNS resolution and validation (Python3 bindings)</summary>
+        <p>
+        Python3 extension module for libunbound.
+        </p>
+        <p>
+        libunbound performs and validates DNS lookups; it can be used to convert
+        hostnames to IP addresses and back and obtain other information from the
+        DNS. Cryptographic validation of results is performed with DNSSEC.
+        </p>
+    </description>
+
+    <contents collect-py-cache-files="true">
+        <file src="${prefix}/lib/python3/dist-packages"/>
+    </contents>
+</package>

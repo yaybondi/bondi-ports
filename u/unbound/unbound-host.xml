@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="unbound-host" section="net">
+    <description>
+        <summary>reimplementation of the 'host' command</summary>
+        <p>
+        This package provides the 'unbound-host' program that is bundled with the
+        Unbound domain name server. This version differs from the one provided in the
+        package called host, which is from NIKHEF, and bind9-host, which is from ISC,
+        and has a similar but different set of features and options.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+    </contents>
+</package>

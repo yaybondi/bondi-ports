@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libunbound-dev" section="libdevel">
+    <description>
+        <summary>static library, header files, and docs for libunbound</summary>
+        <p>
+        Static library, header files, and documentation for libunbound.
+        </p>
+        <p>
+        libunbound performs and validates DNS lookups; it can be used to convert
+        hostnames to IP addresses and back and obtain other information from the
+        DNS. Cryptographic validation of results is performed with DNSSEC.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libunbound2" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libunbound.a"/>
+        <file src="${prefix}/lib/libunbound.so"/>
+    </contents>
+</package>

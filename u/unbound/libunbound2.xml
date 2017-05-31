@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libunbound2" section="libs">
+    <description>
+        <summary>library implementing DNS resolution and validation</summary>
+        <p>
+        libunbound performs and validates DNS lookups; it can be used to convert
+        hostnames to IP addresses and back and obtain other information from the
+        DNS. Cryptographic validation of results is performed with DNSSEC.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/lib/libunbound.so.*"/>
+    </contents>
+</package>
