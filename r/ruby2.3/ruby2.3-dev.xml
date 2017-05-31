@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="ruby2.3-dev" section="ruby">
+    <description>
+        <summary>Header files for compiling extension modules for the Ruby 2.3</summary>
+        <p>
+        Ruby is the interpreted scripting language for quick and easy
+        object-oriented programming. It has many features to process text
+        files and to do system management tasks (as in perl). It is simple,
+        straight-forward, and extensible.
+        </p>
+        <p>
+        This package contains the header files and the mkmf library, necessary
+        to make extension library for Ruby 2.3. It is also required to build
+        many gems.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libgmp-dev"/>
+        <package name="libruby2.3" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include/ruby-2.3.0"/>
+        <file src="/usr/lib/libruby-2.3-static.a"/>
+        <file src="/usr/lib/libruby-2.3.so"/>
+        <file src="/usr/lib/pkgconfig"/>
+    </contents>
+</package>
