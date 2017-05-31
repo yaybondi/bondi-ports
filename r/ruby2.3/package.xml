@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="ruby2.3" architecture-independent="false">
+    <source name="ruby2.4" architecture-independent="false">
         <description>
             <summary>Interpreter of object-oriented scripting language Ruby</summary>
             <p>
@@ -14,23 +14,15 @@
             straight-forward, and extensible.
             </p>
             <p>
-            In the name of this package, `2.3' indicates the Ruby library compatibility
-            version. This package currently provides the `2.3.x' branch of Ruby.
+            In the name of this package, `2.4' indicates the Ruby library compatibility
+            version. This package currently provides the `2.4.x' branch of Ruby.
             </p>
         </description>
 
         <sources>
-            <file src="ruby2.3-2.3.3.tar.xz" subdir="sources"
-                sha256sum="799796bb740832c7257f45089fdbd9cd57686cac033f88d0b078063b6d3d77ad"/>
-            <file src="debian.1.tar.gz" subdir="patches"
-                sha256sum="e40bf3a6d7898c021d7c1c7f99075f47f892b88905725709594e9baf61769a33"/>
+            <file src="ruby-2.4.1.tar.gz" subdir="sources"
+                sha256sum="39687a693aa270197083e89aeb35c6a310a3f9e9df7dbec706457dce253a32f8"/>
         </sources>
-        
-        <patches>
-            <patchset subdir="sources">
-                <file src="patches/debian-changes"/>
-            </patchset>
-        </patches>
 
         <requires>
             <package name="autotools-dev"/>
@@ -60,9 +52,9 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="ruby2.3.xml"/>
-    <xi:include href="libruby2.3.xml"/>
-    <xi:include href="ruby2.3-dev.xml"/>
+    <xi:include href="ruby2.4.xml"/>
+    <xi:include href="libruby2.4.xml"/>
+    <xi:include href="ruby2.4-dev.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>

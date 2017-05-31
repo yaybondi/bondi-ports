@@ -3,10 +3,43 @@
     <prepare>
     <![CDATA[
 
+RUBY_VERSION="2.4"
+
+cd "$BOLT_SOURCE_DIR"
+touch config.guess config.sub tool/config.guess tool/config.sub
+bh_autotools_dev_update
+autoreconf -vfi
+
+if [ -e "/tools/bin/ruby" ]; then
+    EXTRA_OPTS="--with-baseruby=/tools/bin/ruby"
+else
+    EXTRA_OPTS=""
+fi
+
 cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+mkdir .mybin
+ln -sf "$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-pkg-config" .mybin/pkg-config
+export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
+
+SHELL="/usr/bin/sh" \
+"$BOLT_SOURCE_DIR/configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_BUILD_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --target="$BOLT_HOST_TYPE" \
+    --program-suffix="$RUBY_VERSION" \
+    --with-soname=ruby-"$RUBY_VERSION" \
+    --with-sitedir="$BOLT_INSTALL_PREFIX/local/lib/site_ruby" \
+    --with-sitearchdir="$BOLT_INSTALL_PREFIX/local/lib/site_ruby" \
+    --enable-shared \
+    --enable-static \
+    --enable-ipv6 \
+    --with-dbm-type=gdbm_compat \
+    --disable-install-doc \
+    --disable-install-rdoc \
+    --disable-install-capi \
+    --disable-rpath \
+    $EXTRA_OPTS
 
     ]]>
     </prepare>
@@ -14,8 +47,9 @@ $BOLT_SOURCE_DIR/configure \
     <build>
     <![CDATA[
 
+export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
 cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+make V=1 SHELL="/usr/bin/sh" -j"$BOLT_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -23,8 +57,9 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
+export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
 cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+make V=1 SHELL="/usr/bin/sh" DESTDIR="$BOLT_INSTALL_DIR" install
 
     ]]>
     </install>
