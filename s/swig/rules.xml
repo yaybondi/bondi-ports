@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+"$BOLT_SOURCE_DIR/configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --without-php \
+    --with-python="$BOLT_INSTALL_PREFIX/bin/python" \
+    --with-ruby="$BOLT_INSTALL_PREFIX/bin/ruby" \
+    --with-chicken="$BOLT_INSTALL_PREFIX/bin/chicken" \
+    --with-swiglibdir="$BOLT_INSTALL_PREFIX/share/swig3.0" \
+    --without-mzscheme \
+    --program-suffix=3.0
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make -j"$BOLT_PARALLEL_JOBS"
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make DESTDIR="$BOLT_INSTALL_DIR" install
+
+    ]]>
+    </install>
+</rules>

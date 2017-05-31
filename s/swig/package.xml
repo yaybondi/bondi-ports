@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="swig" architecture-independent="false">
+        <description>
+            <summary>Generate scripting interfaces to C/C++ code</summary>
+            <p>
+            SWIG is a compiler that makes it easy to integrate C and C++ code
+            with other languages including Perl, Tcl, Ruby, Python, Java,
+            Guile, Mzscheme, Chicken, OCaml, Pike, and C#.
+            </p>
+            <p>
+            Swig takes a set of ANSI C/C++ declarations and generates an
+            interface for them to your favorite scripting language.
+            </p>
+        </description>
+
+        <sources>
+            <file src="swig-3.0.10.tar.gz" subdir="sources"
+                sha256sum="2939aae39dec06095462f1b95ce1c958ac80d07b926e48871046d17c0094f44c"/>
+            <file src="debian.1.1.tar.gz" subdir="patches"
+                sha256sum="177efa7aa521fe704c0f251e632e529d3ddc5a1386189d48a93410f7eabca2bd"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/ccache-rename.diff"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="bison"/>
+            <package name="default-jdk"/>
+            <package name="guile-2.0-dev"/>
+            <package name="libchicken-dev"/>
+            <package name="libperl-dev"/>
+            <package name="libpcre3-dev"/>
+            <package name="python-dev"/>
+            <package name="ruby"/>
+            <package name="ruby-dev"/>
+            <package name="tcl-dev"/>
+            <package name="tk-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="swig3.0.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

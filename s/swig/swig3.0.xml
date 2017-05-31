@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="swig3.0" section="interpreters">
+    <description>
+        <summary>Generate scripting interfaces to C/C++ code</summary>
+        <p>
+        SWIG is a compiler that makes it easy to integrate C and C++ code
+        with other languages including Perl, Tcl, Ruby, Python, Java, 
+        Guile, Mzscheme, Chicken, OCaml, Pike, and C#.
+        </p>
+        <p>
+        Swig takes a set of ANSI C/C++ declarations and generates an 
+        interface for them to your favorite scripting language.
+        </p>
+    </description>
+
+    <provides>
+        <package name="swig"/>
+    </provides>
+
+    <contents>
+        <file src="${prefix}/bin/ccache-swig3.0"/>
+        <file src="${prefix}/bin/swig3.0"/>
+        <file src="${prefix}/share/swig3.0"/>
+    </contents>
+
+    <maintainer-scripts>
+        <postinst><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/swig" ]; then
+    ln -sf "swig3.0" "$BOLT_INSTALL_PREFIX/bin/swig"
+fi
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/swig3" ]; then
+    ln -sf "swig3.0" "$BOLT_INSTALL_PREFIX/bin/swig3"
+fi
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ccache-swig" ]; then
+    ln -sf "ccache-swig3.0" "$BOLT_INSTALL_PREFIX/bin/ccache-swig"
+fi
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ccache-swig3" ]; then
+    ln -sf "ccache-swig3.0" "$BOLT_INSTALL_PREFIX/bin/ccache-swig3"
+fi
+
+        ]]></postinst>
+
+        <postrm><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/swig" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/swig"
+fi
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/swig3" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/swig3"
+fi
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ccache-swig" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/ccache-swig"
+fi
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ccache-swig3" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/ccache-swig3"
+fi
+
+        ]]></postrm>
+    </maintainer-scripts>
+</package>
