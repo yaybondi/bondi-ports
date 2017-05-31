@@ -14,10 +14,6 @@
         </p>
     </description>
 
-    <requires>
-        <package name="rubygems-integration" version=">= 1.8"/>
-    </requires>
-
     <contents>
         <file src="${prefix}/bin"/>
         <dir src="/var/lib/gems"/>
