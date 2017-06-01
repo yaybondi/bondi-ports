@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="gnutls-bin" section="net">
+    <description>
+        <summary>GNU TLS library - commandline utilities</summary>
+        <p>
+        GnuTLS is a portable library which implements the Transport Layer
+        Security (TLS 1.0, 1.1, 1.2) and Secure Sockets Layer (SSL) 3.0 and Datagram
+        Transport Layer Security (DTLS 1.0, 1.2) protocols.
+        </p>
+        <p>
+        This package contains a commandline interface to the GNU TLS library, which
+        can be used to set up secure connections from e.g. shell scripts, debugging
+        connection issues or managing certificates.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+    </contents>
+</package>

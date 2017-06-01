@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+"$BOLT_SOURCE_DIR/configure" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --enable-ld-version-script \
+    --enable-cxx \
+    --enable-static \
+    --without-lzo \
+    --enable-libdane \
+    --without-tpm \
+    --disable-guile \
+    --disable-heartbeat-support \
+    --enable-openssl-compatibility \
+    --with-included-unistring \
+    --disable-silent-rules \
+    --with-unbound-root-key-file="$BOLT_INSTALL_PREFIX/share/dns/root.key" \
+    --with-default-trust-store-file=/etc/ssl/certs/ca-certificates.crt \
+    --with-packager=Bolt \
+    --disable-gtk-doc \
+    --disable-doc
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make -j"$BOLT_PARALLEL_JOBS"
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make DESTDIR="$BOLT_INSTALL_DIR" install
+
+    ]]>
+    </install>
+</rules>

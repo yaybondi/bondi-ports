@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgnutls30" section="libs">
+    <description>
+        <summary>GNU TLS library - main runtime library</summary>
+        <p>
+        GnuTLS is a portable library which implements the Transport Layer
+        Security (TLS 1.0, 1.1, 1.2) and Secure Sockets Layer (SSL) 3.0 and Datagram
+        Transport Layer Security (DTLS 1.0, 1.2) protocols.
+        </p>
+        <p>
+        This package contains the main runtime library.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libgmp10" version=">= 2:6"/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/lib/libgnutls.so.*"/>
+    </contents>
+</package>

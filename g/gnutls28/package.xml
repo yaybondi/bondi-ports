@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="gnutls28" architecture-independent="false">
+        <description>
+            <summary>GNU TLS library - development files</summary>
+            <p>
+            GnuTLS is a portable library which implements the Transport Layer
+            Security (TLS 1.0, 1.1, 1.2) and Secure Sockets Layer (SSL) 3.0 and Datagram
+            Transport Layer Security (DTLS 1.0, 1.2) protocols.
+            </p>
+            <p>
+            GnuTLS features support for:
+            </p>
+            <ul>
+                <li>TLS extensions: server name indication, max record size, opaque PRF
+                    input, etc.</li>
+                <li>authentication using the SRP protocol.</li>
+                <li>authentication using both X.509 certificates and OpenPGP keys.</li>
+                <li>TLS Pre-Shared-Keys (PSK) extension.</li>
+                <li>Inner Application (TLS/IA) extension.</li>
+                <li>X.509 and OpenPGP certificate handling.</li>
+                <li>X.509 Proxy Certificates (RFC 3820).</li>
+                <li>all the strong encryption algorithms (including SHA-256/384/512 and
+                    Camellia (RFC 4132)).</li>
+            </ul>
+        </description>
+
+        <sources>
+            <file src="gnutls28-3.5.8.tar.xz" subdir="sources"
+                sha256sum="0e97f243ae72b70307d684b84c7fe679385aa7a7a0e37e5be810193dcc17d4ff"/>
+            <file src="debian.5.tar.gz" subdir="patches"
+                sha256sum="3a7d223ca60b841ed18c24adcc77e15b9d31ac6bd90877db01542990abf1f65a"/>
+        </sources>
+        
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/14_version_gettextcat.diff"/>
+                <file src="patches/30_guile-snarf.diff"/>
+                <file src="patches/35_01_opencdk-improved-error-code-checking-in-the-stream-r.patch"/>
+                <file src="patches/35_01_z_opencdk-read-packet.c-corrected-typo-in-type-cast.patch"/>
+                <file src="patches/35_02_Disable-AVX-support-when-it-is-not-supported-by-the-.patch"/>
+                <file src="patches/35_03_Address-test-suite-failure-due-to-timezone-differenc.patch"/>
+                <file src="patches/35_04_gnutls_pkcs11_obj_list_import_url4-always-return-an-.patch"/>
+                <file src="patches/35_05_cdk_pkt_read-enforce-packet-limits.patch"/>
+                <file src="patches/35_05_opencdk-read_attribute-account-buffer-size.patch"/>
+                <file src="patches/35_06_opencdk-do-not-parse-any-secret-keys-in-packet-when-.patch"/>
+                <file src="patches/35_07_Enforce-the-max-packet-length-for-OpenPGP-subpackets.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="nettle-dev" version=">= 3.1"/>
+            <package name="zlib1g-dev"/>
+            <package name="libtasn1-6-dev" version=">= 4.9"/>
+            <package name="autotools-dev"/>
+            <package name="libp11-kit-dev" version=">= 0.23.1"/>
+            <package name="pkg-config"/>
+            <package name="chrpath"/>
+            <package name="libidn11-dev" version=">= 1.31"/>
+            <package name="autogen" version=">= 1:5.16-0"/>
+            <package name="bison"/>
+            <package name="libgmp-dev" version=">= 2:6"/>
+            <package name="libopts25-dev"/>
+            <package name="automake" version=">= 1:1.12.2"/>
+            <package name="libunbound-dev" version=">= 1.5.10-1"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libgnutls28-dev.xml"/>
+    <xi:include href="libgnutls30.xml"/>
+    <xi:include href="gnutls-bin.xml"/>
+    <xi:include href="libgnutlsxx28.xml"/>
+    <xi:include href="libgnutls-openssl27.xml"/>
+    <xi:include href="libgnutls-dane0.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

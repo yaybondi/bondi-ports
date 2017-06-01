@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgnutls-dane0" section="libs">
+    <description>
+        <summary>GNU TLS library - DANE security support</summary>
+        <p>
+        Security (TLS 1.0, 1.1, 1.2) and Secure Sockets Layer (SSL) 3.0 and Datagram
+        Transport Layer Security (DTLS 1.0, 1.2) protocols.
+        </p>
+        <p>
+        This package contains the runtime library for DANE (DNS-based Authentication
+        of Named Entities) support.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libgnutls30" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/lib/libgnutls-dane.so.*"/>
+    </contents>
+</package>
