@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="dns-root-data" architecture-independent="true">
+        <description>
+            <summary>DNS root data including root zone and DNSSEC key</summary>
+            <p>
+            This package contains various root zone related data as published
+            by IANA to be used by various DNS software as a common source
+            of DNS root zone data, namely:
+            </p>
+            <ul>
+                <li>Root Hints (root.hints)</li>
+                <li>Root Trust Anchors (root.key, root.ds)</li>
+            </ul>
+        </description>
+
+        <sources>
+            <file src="dns-root-data_2015052300+h+1.tar.xz" subdir="sources"
+                sha256sum="aebd10df78d6cc364ab4298f21b5c91e17ed3c7ad312eb9aa7eff21e3385c898"/>
+            <file src="dns-root-data-prebuilt_2015052300+h+1.tar.gz" subdir="build"
+                sha256sum="d9baa57684300f8e254c422b7ce87b8ec0bcf00ab5dda5a5a9a59771786e1c5a"/>
+        </sources>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="dns-root-data.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

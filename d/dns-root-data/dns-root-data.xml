@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="dns-root-data" section="misc">
+    <description>
+        <summary>DNS root data including root zone and DNSSEC key</summary>
+        <p>
+        This package contains various root zone related data as published
+        by IANA to be used by various DNS software as a common source
+        of DNS root zone data, namely:
+        </p>
+        <ul>
+            <li>Root Hints (root.hints)</li>
+            <li>Root Trust Anchors (root.key, root.ds)</li>
+        </ul>
+    </description>
+
+    <contents>
+        <file src="${prefix}/share/dns"/>
+    </contents>
+</package>
