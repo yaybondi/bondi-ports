@@ -15,8 +15,11 @@
     </description>
 
     <requires>
-        <package name="adduser"/>
         <package name="dns-root-data"/>
+        <choice>
+            <package name="adduser"/>
+            <package name="busybox-adduser-symlinks"/>
+        </choice>
         <package name="openssl"/>
         <package name="unbound-anchor"/>
     </requires>
