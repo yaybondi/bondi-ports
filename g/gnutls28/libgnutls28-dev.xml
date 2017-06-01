@@ -18,7 +18,7 @@
         <package name="libgnutlsxx28" version="=="/>
         <package name="libgnutls-dane0" version="=="/>
         <package name="nettle-dev"/>
-        <package name="libc6-dev"/>
+        <package name="musl-libc-dev"/>
         <package name="zlib1g-dev"/>
         <package name="libtasn1-6-dev"/>
         <package name="libp11-kit-dev"/>
