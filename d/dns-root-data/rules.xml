@@ -21,6 +21,10 @@ true
 
 cp -a "$BOLT_BUILD_DIR/"* "$BOLT_INSTALL_DIR/"
 
+if [ "$BOLT_BUILD_FOR" = "tools" ]; then
+    mv "$BOLT_INSTALL_DIR/usr" "$BOLT_INSTALL_DIR/tools"
+fi
+
     ]]>
     </install>
 </rules>
