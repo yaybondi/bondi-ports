@@ -22,26 +22,9 @@
     </requires>
 
     <contents>
-        <file src="${prefix}/include/solv/pool_fileconflicts.h"/>
-        <file src="${prefix}/include/solv/repo_arch.h"/>
-        <file src="${prefix}/include/solv/repo_content.h"/>
-        <file src="${prefix}/include/solv/repo_cudf.h"/>
         <file src="${prefix}/include/solv/repo_deb.h"/>
-        <file src="${prefix}/include/solv/repo_deltainfoxml.h"/>
-        <file src="${prefix}/include/solv/repo_helix.h"/>
-        <file src="${prefix}/include/solv/repo_mdk.h"/>
-        <file src="${prefix}/include/solv/repo_products.h"/>
-        <file src="${prefix}/include/solv/repo_pubkey.h"/>
-        <file src="${prefix}/include/solv/repo_releasefile_products.h"/>
-        <file src="${prefix}/include/solv/repo_repomdxml.h"/>
-        <file src="${prefix}/include/solv/repo_rpmdb.h"/>
-        <file src="${prefix}/include/solv/repo_rpmmd.h"/>
         <file src="${prefix}/include/solv/repo_solv.h"/>
-        <file src="${prefix}/include/solv/repo_susetags.h"/>
-        <file src="${prefix}/include/solv/repo_updateinfoxml.h"/>
         <file src="${prefix}/include/solv/repo_write.h"/>
-        <file src="${prefix}/include/solv/repo_zyppdb.h"/>
-        <file src="${prefix}/include/solv/solv_pgpvrfy.h"/>
         <file src="${prefix}/include/solv/solv_xfopen.h"/>
         <file src="${prefix}/include/solv/tools_util.h"/>
         <file src="${prefix}/lib/libsolvext.so"/>
