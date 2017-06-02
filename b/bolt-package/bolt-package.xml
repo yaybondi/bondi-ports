@@ -12,10 +12,17 @@
 
     <requires>
         <package name="python3"/>
+        <package name="python3-dateutil"/>
+        <package name="python3-lxml"/>
+        <package name="python3-magic"/>
+        <package name="binutils" tools-prefix="tools-target-"/>
+        <package name="binutils" tools-prefix="tools-"/>
+        <package name="chrpath"/>
+        <package name="libarchive-dev"/>
     </requires>
 
     <contents>
-        <file src="/usr/bin"/>
-        <file src="/usr/lib"/>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/lib"/>
     </contents>
 </package>

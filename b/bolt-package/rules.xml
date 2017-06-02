@@ -3,10 +3,7 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+true
 
     ]]>
     </prepare>
@@ -14,8 +11,8 @@ $BOLT_SOURCE_DIR/configure \
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BOLT_SOURCE_DIR"
+bh_python_install --py3 --build
 
     ]]>
     </build>
@@ -23,8 +20,13 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BOLT_SOURCE_DIR"
+bh_python_install --py3 --install "$BOLT_INSTALL_DIR"
+
+cd "$BOLT_INSTALL_DIR"
+find . -name "*.egg-info" -prune -exec rm -fr '{}' ';'
+
+rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/deb2bolt"
 
     ]]>
     </install>
