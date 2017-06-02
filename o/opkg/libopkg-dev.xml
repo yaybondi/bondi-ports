@@ -21,8 +21,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/"/>
-        <file src="/usr/lib/*.{so,a}"/>
-        <file src="/usr/lib/pkgconfig/"/>
+        <file src="${prefix}/include/"/>
+        <file src="${prefix}/lib/*.{so,a}"/>
+        <file src="${prefix}/lib/pkgconfig/"/>
     </contents>
 </package>

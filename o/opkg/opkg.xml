@@ -14,9 +14,10 @@
     </description>
 
     <contents>
-        <file src="/usr/bin"/>
+        <file src="${prefix}/bin"/>
         <dir src="/var/cache/opkg"/>
         <dir src="/var/lib/opkg"/>
+        <dir src="/var/lib/opkg/info"/>
         <dir src="/etc/opkg"/>
     </contents>
 </package>

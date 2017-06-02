@@ -28,7 +28,7 @@
         </patches>
 
         <requires>
-            <package name="libc6-dev"/>
+            <package name="musl-libc-dev"/>
             <package name="libcurl4-nss-dev"/>
             <package name="libgpgme11-dev"/>
             <package name="libgpg-error-dev"/>

@@ -17,7 +17,7 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/*.so.*"/>
+        <file src="${prefix}/lib/*.so.*"/>
     </contents>
 
     <requires>
