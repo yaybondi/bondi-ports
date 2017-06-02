@@ -21,6 +21,6 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/ccmake"/>
+        <file src="${prefix}/bin/ccmake"/>
     </contents>
 </package>

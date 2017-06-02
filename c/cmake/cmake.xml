@@ -25,8 +25,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/cmake"/>
-        <file src="/usr/bin/cpack"/>
-        <file src="/usr/bin/ctest"/>
+        <file src="${prefix}/bin/cmake"/>
+        <file src="${prefix}/bin/cpack"/>
+        <file src="${prefix}/bin/ctest"/>
     </contents>
 </package>
