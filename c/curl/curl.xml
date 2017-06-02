@@ -19,7 +19,7 @@
         <package name="libcurl3" version="=="/>
     </requires>
 
-    <contents>
-        <file src="/usr/bin/curl"/>
+    <contents subdir="openssl">
+        <file src="${prefix}/bin/curl"/>
     </contents>
 </package>

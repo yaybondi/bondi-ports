@@ -31,10 +31,14 @@
         <package name="libcurl3-nss" version="=="/>
     </requires>
 
-    <contents>
-        <file src="/usr/bin/curl-config"/>
-        <file src="/usr/lib/libcurl-nss.a"/>
-        <file src="/usr/lib/libcurl-nss.so"/>
-        <file src="/usr/lib/pkgconfig/libcurl.pc"/>
+    <contents subdir="nss">
+        <file src="${prefix}/bin/curl-config"/>
+        <file src="${prefix}/include/curl"/>
+        <file src="${prefix}/lib/libcurl-nss.a"/>
+        <file src="${prefix}/lib/libcurl-nss.so"/>
+        <file src="${prefix}/lib/libcurl.a"/>
+        <file src="${prefix}/lib/libcurl.so"/>
+        <file src="${prefix}/lib/pkgconfig/libcurl.pc"/>
+        <file src="${prefix}/share/aclocal/libcurl.m4"/>
     </contents>
 </package>

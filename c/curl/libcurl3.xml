@@ -23,7 +23,7 @@
         </p>
     </description>
 
-    <contents>
-        <file src="/usr/lib/libcurl.so.4*"/>
+    <contents subdir="openssl">
+        <file src="${prefix}/lib/libcurl.so.*"/>
     </contents>
 </package>

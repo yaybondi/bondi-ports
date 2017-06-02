@@ -1,12 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rules>
+
     <prepare>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
-    --disable-nls
+export PKG_CONFIG="$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-pkg-config"
+
+# duplicate source tree
+for t in openssl gnutls nss
+do
+    cp -a "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/$t"
+done
+
+# patch for non openssl builds
+patch -f -p1 -d "$BOLT_BUILD_DIR/gnutls" -i "$BOLT_WORK_DIR/patches/"??_gnutls.patch
+patch -f -p1 -d "$BOLT_BUILD_DIR/nss"    -i "$BOLT_WORK_DIR/patches/"??_gnutls.patch
+patch -f -p1 -d "$BOLT_BUILD_DIR/nss"    -i "$BOLT_WORK_DIR/patches/"??_nss.patch
+
+# rebuild configuration
+for t in openssl gnutls nss
+do
+    cd "$BOLT_BUILD_DIR/$t" && ./buildconf
+    # HACK: We cannot safely use LD_LIBRARY_PATH inside bbox.
+    sed -i 's@export LD_LIBRARY_PATH@@g' configure
+done
+
+# run configure in all source trees
+CONFIGURE_ARGS="
+    --prefix=$BOLT_INSTALL_PREFIX 
+    --mandir=$BOLT_INSTALL_PREFIX/share/man
+    --host=$BOLT_HOST_TYPE
+    --build=$BOLT_BUILD_TYPE
+    --disable-symbol-hiding
+    --enable-versioned-symbols
+    --enable-threaded-resolver
+    --enable-ipv6
+    --with-lber-lib=lber
+    --with-gssapi=$BOLT_INSTALL_PREFIX
+    --with-nss=$BOLT_INSTALL_PREFIX
+    --without-libidn2
+"
+
+cd "$BOLT_BUILD_DIR/openssl"
+./configure $CONFIGURE_ARGS \
+    --with-ca-path=/etc/ssl/certs
+
+cd "$BOLT_BUILD_DIR/gnutls"
+./configure $CONFIGURE_ARGS \
+    --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt \
+    --without-ssl --with-gnutls --without-libssh2
+
+cd "$BOLT_BUILD_DIR/nss"
+LIBS="-lssl3 -lnspr4 -lplds4" CFLAGS="$CFLAGS -I$BOLT_INSTALL_PREFIX/include/nspr -I$BOLT_INSTALL_PREFIX/include/nss" \
+./configure $CONFIGURE_ARGS \
+    --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt \
+    --without-ssl --with-nss --without-libssh2
 
     ]]>
     </prepare>
@@ -14,8 +62,10 @@ $BOLT_SOURCE_DIR/configure \
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+for t in openssl gnutls nss
+do
+    make -j"$BOLT_PARALLEL_JOBS" -C "$BOLT_BUILD_DIR/$t"
+done
 
     ]]>
     </build>
@@ -23,8 +73,20 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+for t in openssl gnutls nss
+do
+    mkdir -p "$BOLT_INSTALL_DIR/$t"
+    make -C "$BOLT_BUILD_DIR/$t" DESTDIR="$BOLT_INSTALL_DIR/$t" install
+
+    # compatibility symlinks
+    if [ "$t" = "openssl" ]; then
+        ln -s libcurl.so.4 "$BOLT_INSTALL_DIR/$t/$BOLT_INSTALL_PREFIX/lib/libcurl.so.3"
+    else
+        ln -s "libcurl-$t.so.4" "$BOLT_INSTALL_DIR/$t/$BOLT_INSTALL_PREFIX/lib/libcurl-$t.so.3"
+        ln -s "libcurl-$t.so"   "$BOLT_INSTALL_DIR/$t/$BOLT_INSTALL_PREFIX/lib/libcurl.so"
+        ln -s "libcurl-$t.a"    "$BOLT_INSTALL_DIR/$t/$BOLT_INSTALL_PREFIX/lib/libcurl.a"
+    fi
+done
 
     ]]>
     </install>

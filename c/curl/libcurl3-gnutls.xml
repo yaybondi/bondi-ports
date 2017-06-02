@@ -23,7 +23,7 @@
         </p>
     </description>
 
-    <contents>
-        <file src="/usr/lib/libcurl-gnutls.so.4*"/>
+    <contents subdir="gnutls">
+        <file src="${prefix}/lib/libcurl-gnutls.so.*"/>
     </contents>
 </package>

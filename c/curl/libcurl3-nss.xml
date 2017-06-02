@@ -23,7 +23,7 @@
         </p>
     </description>
 
-    <contents>
-        <file src="/usr/lib/libcurl-nss.so.4*"/>
+    <contents subdir="nss">
+        <file src="${prefix}/lib/libcurl-nss.so.*"/>
     </contents>
 </package>

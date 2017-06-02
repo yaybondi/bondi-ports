@@ -6,25 +6,30 @@
 
     <source name="curl" architecture-independent="false">
         <description>
-            <summary>command line tool for transferring data with URL syntax</summary>
+            <summary>Easy-to-use client-side URL transfer library</summary>
             <p>
-            curl is a command line tool for transferring data with URL syntax, supporting
-            DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3,
-            POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP.
+            libcurl is an easy-to-use client-side URL transfer library, supporting DICT,
+            FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S,
+            RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP.
             </p>
             <p>
-            curl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form
-            based upload, proxies, cookies, user+password authentication (Basic, Digest,
-            NTLM, Negotiate, kerberos...), file transfer resume, proxy tunneling and a
-            busload of other useful tricks.
+            libcurl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP
+            form based upload, proxies, cookies, user+password authentication (Basic,
+            Digest, NTLM, Negotiate, Kerberos), file transfer resume, http proxy tunneling
+            and more!
+            </p>
+            <p>
+            libcurl is free, thread-safe, IPv6 compatible, feature rich, well supported,
+            fast, thoroughly documented and is already used by many known, big and
+            successful companies and numerous applications.
             </p>
         </description>
 
         <sources>
             <file src="curl-7.52.1.tar.gz" subdir="sources"
                 sha256sum="a8984e8b20880b621f61a62d95ff3c0763a3152093a9f9ce4287cfd614add6ae"/>
-            <file src="patches.03.tar.gz" subdir="patches"
-                sha256sum="54f08c8bfaf8afee892e5324ed82605ee65edb1f6d6e070942dc59642d00cc79"/>
+            <file src="debian.5.tar.gz" subdir="patches"
+                sha256sum="169ad2bc74d761ea1b91417284dd15f3db1f5558720466e2f1e734e75c3761eb"/>
         </sources>
         
         <patches>
@@ -39,6 +44,13 @@
                 <file src="patches/11_omit-directories-from-config.patch"/>
                 <file src="patches/12_fix-openssl-connection-timeout.patch"/>
                 <file src="patches/13_CVE-2017-2629.patch"/>
+                <file src="patches/14_fix-connect-regression.patch"/>
+                <file src="patches/15_CVE-2017-7407.patch"/>
+                <file src="patches/16_CVE-2017-7468.patch"/>
+                <!--
+                <file src="patches/90_gnutls.patch"/>
+                <file src="patches/99_nss.patch"/>
+                -->
             </patchset>
         </patches>
 
