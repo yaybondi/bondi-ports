@@ -31,6 +31,11 @@
         <package name="libcurl3-nss" version="=="/>
     </requires>
 
+    <conflicts>
+        <package name="libcurl4-openssl-dev"/>
+        <package name="libcurl4-gnutls-dev"/>
+    </conflicts>
+
     <contents subdir="nss">
         <file src="${prefix}/bin/curl-config"/>
         <file src="${prefix}/include/curl"/>
