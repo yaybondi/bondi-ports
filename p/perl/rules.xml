@@ -108,7 +108,8 @@ cd "$BOLT_BUILD_DIR"
 # Run build
 ###############################################################################
 for variant in shared static; do
-    make -C "$BOLT_BUILD_DIR/$variant" -j"$BOLT_PARALLEL_JOBS"
+    make ranlib="$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-ranlib" \
+        -C "$BOLT_BUILD_DIR/$variant" -j"$BOLT_PARALLEL_JOBS"
 done
 
 ###############################################################################
