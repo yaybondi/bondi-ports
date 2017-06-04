@@ -3,7 +3,9 @@
     <prepare>
     <![CDATA[
 
-true
+cd "$BOLT_BUILD_DIR"
+mkdir -p .mybin
+ln -sf "$BOLT_INSTALL_PREFIX/bin/nspr-config" .mybin/nspr-config
 
     ]]>
     </prepare>
@@ -11,6 +13,7 @@ true
     <build>
     <![CDATA[
 
+export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
 cd "$BOLT_BUILD_DIR"
 
 DISTDIR="`pwd`/dist"
