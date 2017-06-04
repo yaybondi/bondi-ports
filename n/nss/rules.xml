@@ -23,7 +23,7 @@ MACHINE="`echo $BOLT_HOST_TYPE | cut -d'-' -f1`"
 if [ "`bh_os_bits $BOLT_HOST_TYPE`" = "64" ]; then
     EXTRA_FLAGS="USE_64=1"
 else
-    EXTRA_FLAGS="USE_64=0"
+    EXTRA_FLAGS=""
 fi
 
 make -C nss/coreconf/nsinstall \
