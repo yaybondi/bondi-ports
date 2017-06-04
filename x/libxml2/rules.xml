@@ -18,12 +18,7 @@ mkdir -p "$BOLT_BUILD_DIR/bindir"
 ln -sf "$BOLT_INSTALL_PREFIX/bin/icu-config" "$BOLT_BUILD_DIR/bindir"
 export PATH="$BOLT_BUILD_DIR/bindir:$PATH"
 
-if [ -e "/tools/bin/python2" ]; then
-    export PYTHON="/tools/bin/python2"
-else
-    export PYTHON="/usr/bin/python2"
-fi
-
+export PYTHON="$BOLT_INSTALL_PREFIX/bin/python2"
 cp -a "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/python2"
 cd "$BOLT_BUILD_DIR/python2"
 
@@ -39,12 +34,7 @@ cd "$BOLT_BUILD_DIR/python2"
 make PYTHON_INCLUDES="-I=$BOLT_INSTALL_PREFIX/include/python2.7" \
     -j"$BOLT_PARALLEL_JOBS"
 
-if [ -e "/tools/bin/python3" ]; then
-    export PYTHON="/tools/bin/python3"
-else
-    export PYTHON="/usr/bin/python3"
-fi
-
+export PYTHON="$BOLT_INSTALL_PREFIX/bin/python3"
 cp -a "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/python3"
 cd "$BOLT_BUILD_DIR/python3"
 
