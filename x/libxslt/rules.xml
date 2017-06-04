@@ -18,12 +18,7 @@ ln -sf "$BOLT_INSTALL_PREFIX/bin/icu-config" "$BOLT_BUILD_DIR/bindir"
 ln -sf "$BOLT_INSTALL_PREFIX/bin/libgcrypt-config" "$BOLT_BUILD_DIR/bindir"
 export PATH="$BOLT_BUILD_DIR/bindir:$PATH"
 
-if [ -e "/tools/bin/python2" ]; then
-    export PYTHON="/tools/bin/python2"
-else
-    export PYTHON="/usr/bin/python2"
-fi
-
+export PYTHON="$BOLT_INSTALL_PREFIX/bin/python2"
 cp -a "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/python2"
 cd "$BOLT_BUILD_DIR/python2"
 autoreconf -vfi
