@@ -3,7 +3,10 @@
     <prepare>
     <![CDATA[
 
-true
+cd "$BOLT_BUILD_DIR"
+mkdir -p .mybin
+ln -sf "$BOLT_INSTALL_PREFIX/bin/xml2-config" .mybin/xml2-config
+ln -sf "$BOLT_INSTALL_PREFIX/bin/xslt-config" .mybin/xslt-config
 
     ]]>
     </prepare>
@@ -11,6 +14,7 @@ true
     <build>
     <![CDATA[
 
+export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
 cd "$BOLT_SOURCE_DIR"
 
 bh_python_install --py2 --build
@@ -22,6 +26,7 @@ bh_python_install --py3 --build
     <install>
     <![CDATA[
 
+export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
 cd "$BOLT_SOURCE_DIR"
 
 install -d -m 0755 "$BOLT_INSTALL_DIR/python2"
