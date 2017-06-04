@@ -37,6 +37,11 @@ autoreconf -vfi
     --with-icu \
     --with-python="$BOLT_INSTALL_PREFIX/bin/python2"
 
+# HACK: this fixes a problem with lib path detection
+if [ "$BOLT_INSTALL_PREFIX" != "/tools" ]; then
+    sed -i 's@-L/tools/lib@-L/usr/lib@g' Makefile
+fi
+
 make PYTHON_INCLUDES="=$BOLT_INSTALL_PREFIX/include/python2.7" \
     -j"$BOLT_PARALLEL_JOBS"
 
