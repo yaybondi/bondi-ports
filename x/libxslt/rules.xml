@@ -39,7 +39,7 @@ autoreconf -vfi
 
 # HACK: this fixes a problem with lib path detection
 if [ "$BOLT_INSTALL_PREFIX" != "/tools" ]; then
-    sed -i 's@-L/tools/lib@-L/usr/lib@g' Makefile
+    find . -name "Makefile" -exec sed -i 's@-L/tools/lib@-L/usr/lib@g' '{}' ';'
 fi
 
 make PYTHON_INCLUDES="=$BOLT_INSTALL_PREFIX/include/python2.7" \
