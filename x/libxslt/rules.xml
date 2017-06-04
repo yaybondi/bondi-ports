@@ -16,6 +16,7 @@ bh_autotools_dev_update
 mkdir -p "$BOLT_BUILD_DIR/bindir"
 ln -sf "$BOLT_INSTALL_PREFIX/bin/icu-config" "$BOLT_BUILD_DIR/bindir"
 ln -sf "$BOLT_INSTALL_PREFIX/bin/libgcrypt-config" "$BOLT_BUILD_DIR/bindir"
+ln -sf "$BOLT_INSTALL_PREFIX/bin/xml2-config" "$BOLT_BUILD_DIR/bindir"
 export PATH="$BOLT_BUILD_DIR/bindir:$PATH"
 
 if [ -e "/tools/bin/python2" ]; then
