@@ -38,7 +38,7 @@ cd "$BOLT_BUILD_DIR/python2"
 
 # HACK: this fixes a problem with lib path detection
 if [ "$BOLT_INSTALL_PREFIX" != "/tools" ]; then
-    sed -i 's@-L/tools/lib@-L/usr/lib@g' Makefile
+    find . -name "Makefile" -exec sed -i 's@-L/tools/lib@-L/usr/lib@g' '{}' ';'
 fi
 
 make PYTHON_INCLUDES="-I=$BOLT_INSTALL_PREFIX/include/python2.7" \
@@ -64,7 +64,7 @@ cd "$BOLT_BUILD_DIR/python3"
 
 # HACK: this fixes a problem with lib path detection
 if [ "$BOLT_INSTALL_PREFIX" != "/tools" ]; then
-    sed -i 's@-L/tools/lib@-L/usr/lib@g' Makefile
+    find . -name "Makefile" -exec sed -i 's@-L/tools/lib@-L/usr/lib@g' '{}' ';'
 fi
 
 make PYTHON_INCLUDES="-I=$BOLT_INSTALL_PREFIX/include/python3.5m" \
