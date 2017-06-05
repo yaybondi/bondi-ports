@@ -22,7 +22,8 @@
 cd $BOLT_SOURCE_DIR
 
 if [ "$BOLT_INSTALL_PREFIX" != "/tools" ]; then
-    make DESTDIR="$BOLT_INSTALL_DIR" install
+    make OSBITS="`bh_os_bits $BOLT_HOST_TYPE`" \
+        DESTDIR="$BOLT_INSTALL_DIR" install
 else
     install -d -m 0755 "$BOLT_INSTALL_DIR/tools"
     install -d -m 0755 "$BOLT_INSTALL_DIR/tools/bin"
@@ -38,6 +39,9 @@ else
 
     ln -sf . "$BOLT_INSTALL_DIR/tools/usr"
     ln -sf . "$BOLT_INSTALL_DIR/tools/tools"
+
+    # just assume it's always x86_64
+    ln -sf lib "$BOLT_INSTALL_DIR/tools/lib64
 fi
 
     ]]>

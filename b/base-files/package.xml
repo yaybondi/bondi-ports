@@ -5,8 +5,8 @@
         <xi:include href="description.xml"/>
 
         <sources>
-            <file src="base-files-1.0.4.tar.gz" subdir="sources"
-                sha256sum="c3d44c310346d02d1a752f970b085a78a8b24807228a9caadec2206845d713c4"/>
+            <file src="base-files-1.0.5.tar.gz" subdir="sources"
+                sha256sum="71bd5c0a5581055baf256c3d13867b7a08e74c67af438932ca50656e4e5d554d"/>
         </sources>
 
         <xi:include href="rules.xml"/>
