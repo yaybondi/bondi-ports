@@ -41,7 +41,7 @@ else
     ln -sf . "$BOLT_INSTALL_DIR/tools/tools"
 
     # just assume it's always x86_64
-    ln -sf lib "$BOLT_INSTALL_DIR/tools/lib64
+    ln -sf lib "$BOLT_INSTALL_DIR/tools/lib64"
 fi
 
     ]]>
