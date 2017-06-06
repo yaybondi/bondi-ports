@@ -21,6 +21,7 @@ cd "$BOLT_BUILD_DIR"
     --disable-silent-rules \
     --with-unbound-root-key-file="$BOLT_INSTALL_PREFIX/share/dns/root.key" \
     --with-default-trust-store-file=/etc/ssl/certs/ca-certificates.crt \
+    --with-autoopts-config="$BOLT_INSTALL_PREFIX/bin/autoopts-config" \
     --with-packager=Bolt \
     --disable-gtk-doc \
     --disable-doc
