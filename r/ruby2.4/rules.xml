@@ -12,8 +12,10 @@ autoreconf -vfi
 
 if [ -e "/tools/bin/ruby" ]; then
     EXTRA_OPTS="--with-baseruby=/tools/bin/ruby"
+    MY_BUILD_TYPE="$BOLT_TOOLS_TYPE"
 else
     EXTRA_OPTS=""
+    MY_BUILD_TYPE="$BOLT_BUILD_TYPE"
 fi
 
 cd "$BOLT_BUILD_DIR"
@@ -24,7 +26,7 @@ export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
 SHELL="/usr/bin/sh" \
 "$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_BUILD_TYPE" \
+    --build="$MY_BUILD_TYPE" \
     --host="$BOLT_HOST_TYPE" \
     --target="$BOLT_HOST_TYPE" \
     --program-suffix="$RUBY_VERSION" \
