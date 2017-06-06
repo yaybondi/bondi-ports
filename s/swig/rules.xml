@@ -3,6 +3,8 @@
     <prepare>
     <![CDATA[
 
+export PCRE_CONFIG="$BOLT_INSTALL_PREFIX/bin/pcre-config"
+
 cd "$BOLT_BUILD_DIR"
 "$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
