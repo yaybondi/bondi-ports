@@ -17,8 +17,14 @@ ln -sf "$BOLT_INSTALL_PREFIX/bin/xslt-config" .mybin/xslt-config
 export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
 cd "$BOLT_SOURCE_DIR"
 
-bh_python_install --py2 --build
-bh_python_install --py3 --build
+bh_python_install --py2 --build \
+    -- \
+    --with-xslt-config="$BOLT_INSTALL_PREFIX/bin/xslt-config" \
+    --with-xml2-config="$BOLT_INSTALL_PREFIX/bin/xml2-config"
+bh_python_install --py3 --build \
+    -- \
+    --with-xslt-config="$BOLT_INSTALL_PREFIX/bin/xslt-config" \
+    --with-xml2-config="$BOLT_INSTALL_PREFIX/bin/xml2-config"
 
     ]]>
     </build>
@@ -32,8 +38,16 @@ cd "$BOLT_SOURCE_DIR"
 install -d -m 0755 "$BOLT_INSTALL_DIR/python2"
 install -d -m 0755 "$BOLT_INSTALL_DIR/python3"
 
-bh_python_install --py2 --install "$BOLT_INSTALL_DIR/python2"
-bh_python_install --py3 --install "$BOLT_INSTALL_DIR/python3"
+bh_python_install --py2 --install \
+    --root "$BOLT_INSTALL_DIR/python2" \
+    -- \
+    --with-xslt-config="$BOLT_INSTALL_PREFIX/bin/xslt-config" \
+    --with-xml2-config="$BOLT_INSTALL_PREFIX/bin/xml2-config"
+bh_python_install --py3 --install \
+    --root "$BOLT_INSTALL_DIR/python3" \
+    -- \
+    --with-xslt-config="$BOLT_INSTALL_PREFIX/bin/xslt-config" \
+    --with-xml2-config="$BOLT_INSTALL_PREFIX/bin/xml2-config"
 
 cd "$BOLT_INSTALL_DIR"
 find . -name "*.egg-info" -prune -exec rm -fr '{}' ';'

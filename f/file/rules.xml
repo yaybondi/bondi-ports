@@ -46,8 +46,8 @@ ln -sf ../../share/misc/magic.mgc "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/file/m
 ln -sf ../../share/misc/magic.mgc "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/share/file/magic.mgc"
 
 cd python
-bh_python_install --py2 "$BOLT_INSTALL_DIR/python2"
-bh_python_install --py3 "$BOLT_INSTALL_DIR/python3"
+bh_python_install --py2 --root "$BOLT_INSTALL_DIR/python2"
+bh_python_install --py3 --root "$BOLT_INSTALL_DIR/python3"
 
     ]]>
     </install>

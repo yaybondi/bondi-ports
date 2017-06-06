@@ -24,8 +24,8 @@ cd "$BOLT_SOURCE_DIR"
 mkdir -p "$BOLT_INSTALL_DIR/python2"
 mkdir -p "$BOLT_INSTALL_DIR/python3"
 
-bh_python_install --py2 "$BOLT_INSTALL_DIR/python2"
-bh_python_install --py3 "$BOLT_INSTALL_DIR/python3"
+bh_python_install --py2 --root "$BOLT_INSTALL_DIR/python2"
+bh_python_install --py3 --root "$BOLT_INSTALL_DIR/python3"
 
 cd "$BOLT_INSTALL_DIR"
 find . -name "*.egg-info" -prune -exec rm -fr '{}' ';'
