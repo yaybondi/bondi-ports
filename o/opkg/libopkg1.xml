@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libopkg1" section="libs">
     <description>
-        <summary>OPKG - tiny yet powerful package manager (development)</summary>
+        <summary>OPKG - tiny yet powerful package manager (runtime libs)</summary>
         <p>
             Opkg is a lightweight package management system. It is written in C and resembles
         apt/dpkg in operation. It is intended for use on embedded Linux devices.
@@ -12,7 +12,7 @@
         Debian's Policy Manual regarding control files.
         </p>
         <p>
-            This package contains headers and libraries for development.
+            This package contains the runtime library.
         </p>
     </description>
 
