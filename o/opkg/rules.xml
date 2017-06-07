@@ -42,9 +42,9 @@ make -j"$BOLT_PARALLEL_JOBS"
 cd "$BOLT_BUILD_DIR"
 make DESTDIR="$BOLT_INSTALL_DIR" install
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/libopkg"
+install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/opkg"
 find "$BOLT_SOURCE_DIR/libopkg/" -name "*.h" -exec echo install -m 644 '{}' \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/libopkg" ';'
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/opkg" ';'
 
     ]]>
     </install>
