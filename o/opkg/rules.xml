@@ -4,11 +4,14 @@
     <prepare>
     <![CDATA[
 
+export PKG_CONFIG="$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-pkg-config"
+
 cd "$BOLT_SOURCE_DIR"
 bh_autotools_dev_update
 autoreconf -vfi
 
 cd "$BOLT_BUILD_DIR"
+GPGERR_CONFIG="$BOLT_INSTALL_PREFIX/bin/gpg-error-config" \
 "$BOLT_SOURCE_DIR"/configure \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --sysconfdir=/etc \
@@ -17,7 +20,9 @@ cd "$BOLT_BUILD_DIR"
     --host="$BOLT_HOST_TYPE" \
     --disable-silent-rules \
     --enable-ssl-curl \
-    --with-libsolv
+    --enable-sha256 \
+    --with-libsolv \
+    --with-gpgme-prefix="$BOLT_INSTALL_PREFIX"
 
     ]]>
     </prepare>
