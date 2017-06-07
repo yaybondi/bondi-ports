@@ -43,7 +43,7 @@ cd "$BOLT_BUILD_DIR"
 make DESTDIR="$BOLT_INSTALL_DIR" install
 
 install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/opkg"
-find "$BOLT_SOURCE_DIR/libopkg/" -name "*.h" -exec echo install -m 644 '{}' \
+find "$BOLT_SOURCE_DIR/libopkg/" -name "*.h" -exec install -m 644 '{}' \
     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/opkg" ';'
 
     ]]>
