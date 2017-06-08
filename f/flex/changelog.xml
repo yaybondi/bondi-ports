@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
     <release version="2.6.1" revision="1.3bolt1" upstream-version="2.6.1-1.3"
-        maintainer="Tobias Koch" email="tobias.koch@nonterra.com"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2017-04-06 14:10:34+03:00">
         <changeset>
             <li>Adaptation of Debian sources for Bolt OS</li>

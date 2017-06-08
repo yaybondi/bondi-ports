@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
     <release version="2.0.13+1" revision="4bolt2" upstream-version="2.0.13+1-4"
-        maintainer="Tobias Koch" email="tobias.koch@nonterra.com"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2017-05-23 09:45:27+03:00">
         <changeset>
             <li>Adaptation of Debian sources for Bolt OS</li>

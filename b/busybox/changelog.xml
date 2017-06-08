@@ -2,7 +2,7 @@
 <changelog>
     <release epoch="1" version="1.22.0" revision="19"
         upstream-version="1:1.22.0-19"
-        maintainer="Tobias Koch" email="tobias.koch@nonterra.com"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2016-12-23 23:52:00+03:00">
         <changeset>
             <li>Adaptation of Debian sources for Bolt OS</li>

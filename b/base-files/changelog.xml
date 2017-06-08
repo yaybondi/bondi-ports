@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
     <release version="1.0.5" revision="1" maintainer="Tobias Koch"
-     email="tobias.koch@nonterra.com" date="2017-06-05 11:01:00+03:00">
+     email="tobias.koch@gmail.com" date="2017-06-05 11:01:00+03:00">
         <changeset>
             <li>Have 'lib64' symlinks</li>
         </changeset>
     </release>
     <release version="1.0.4" revision="1" maintainer="Tobias Koch"
-     email="tobias.koch@nonterra.com" date="2017-04-01 09:43:00+03:00">
+     email="tobias.koch@gmail.com" date="2017-04-01 09:43:00+03:00">
         <changeset>
             <li>Create all symlinks relative</li>
         </changeset>
     </release>
     <release version="1.0.3" revision="1" maintainer="Tobias Koch"
-     email="tobias.koch@nonterra.com" date="2017-04-01 00:12:00+03:00">
+     email="tobias.koch@gmail.com" date="2017-04-01 00:12:00+03:00">
         <changeset>
             <li>Adapt /etc/profile to name changes in /etc/target</li>
         </changeset>
     </release>
     <release version="1.0.2" revision="1" maintainer="Tobias Koch"
-     email="tobias.koch@nonterra.com" date="2017-03-25 21:12:00+03:00">
+     email="tobias.koch@gmail.com" date="2017-03-25 21:12:00+03:00">
         <changeset>
             <li>Fix /var/run and /var/lock symlinks</li>
             <li>Shell prompt shows target name and type (via /etc/profile)</li>
         </changeset>
     </release>
     <release version="1.0.0" revision="1" maintainer="Tobias Koch"
-     email="tobias.koch@nonterra.com" date="2017-02-13 14:35:00+03:00">
+     email="tobias.koch@gmail.com" date="2017-02-13 14:35:00+03:00">
         <changeset>
             <li>Initial packaging</li>
         </changeset>
