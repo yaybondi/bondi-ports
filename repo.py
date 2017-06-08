@@ -64,7 +64,7 @@ class PackageDescription:
     BLOCK_ELEMENTS_STYLE = """\
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:bolt="http://www.nonterra.com/2011/XSL/XPack"
+  xmlns:bolt="http://schema.boltlinux.org/2011/XSL/BoltPack"
   extension-element-prefixes="bolt">
 
   <xsl:output method="text" omit-xml-declaration="yes" encoding="UTF-8"/>
@@ -118,7 +118,7 @@ class PackageDescription:
     #end function
 
     def full_description(self):
-        ns_uri = "http://www.nonterra.com/2011/XSL/XPack"
+        ns_uri = "http://schema.boltlinux.org/2011/XSL/BoltPack"
         ns = etree.FunctionNamespace(ns_uri)
         ns.prefix = "bolt"
         ns["block_format"] = PackageDescription.CustomXPath.block_format
