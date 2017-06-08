@@ -10,8 +10,8 @@ touch config.guess config.sub tool/config.guess tool/config.sub
 bh_autotools_dev_update
 autoreconf -vfi
 
-if [ -e "/tools/bin/ruby2.4" ]; then
-    EXTRA_OPTS="--with-baseruby=/tools/bin/ruby2.4"
+if [ -e "/tools/bin/ruby${RUBY_VERSION}" ]; then
+    EXTRA_OPTS="--with-baseruby=/tools/bin/ruby${RUBY_VERSION}"
     MY_BUILD_TYPE="$BOLT_TOOLS_TYPE"
 elif [ -e "/tools/bin/ruby" ]; then
     EXTRA_OPTS="--with-baseruby=/tools/bin/ruby"
@@ -25,6 +25,10 @@ cd "$BOLT_BUILD_DIR"
 mkdir .mybin
 ln -sf "$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-pkg-config" .mybin/pkg-config
 export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
+
+# the configure script does not detect isnan/isinf as macros (from Alpine Linux)
+export ac_cv_func_isnan=yes
+export ac_cv_func_isinf=yes
 
 SHELL="/usr/bin/sh" \
 "$BOLT_SOURCE_DIR/configure" \
