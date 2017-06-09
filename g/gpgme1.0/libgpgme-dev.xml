@@ -19,6 +19,14 @@
         <package name="libgpgme11" version="=="/>
     </requires>
 
+    <provides>
+        <package name="libgpgme11-dev" version="=="/>
+    </provides>
+
+    <replaces>
+        <package name="libgpgme11-dev"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin"/>
         <file src="${prefix}/include/gpgme.h"/>
