@@ -13,6 +13,8 @@ $BOLT_SOURCE_DIR/configure \
     --host="$BOLT_HOST_TYPE" \
     --sysconfdir=/etc \
     --libdir="$BOLT_INSTALL_PREFIX/lib" \
+    --bindir="$BOLT_INSTALL_PREFIX/bin" \
+    --sbindir="$BOLT_INSTALL_PREFIX/sbin" \
     --disable-nls \
     --disable-cracklib \
     --disable-nis \
@@ -48,11 +50,6 @@ install -m 644 "$BOLT_WORK_DIR/extra/etc/pam.d/other" \
     "$BOLT_INSTALL_DIR/etc/pam.d/"
 
 cd "$BOLT_INSTALL_DIR"
-
-if [ "$BOLT_BUILD_FOR" = "target" ]; then
-    mv sbin usr/
-    mv lib  usr/
-fi
 
     ]]>
     </install>
