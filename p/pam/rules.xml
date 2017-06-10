@@ -12,6 +12,7 @@ $BOLT_SOURCE_DIR/configure \
     --build="$BOLT_BUILD_TYPE" \
     --host="$BOLT_HOST_TYPE" \
     --sysconfdir=/etc \
+    --libdir="$BOLT_INSTALL_PREFIX/lib" \
     --disable-nls \
     --disable-cracklib \
     --disable-nis \
