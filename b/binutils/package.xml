@@ -17,8 +17,8 @@
         <sources>
             <file src="binutils-2.28.tar.gz" subdir="sources"
                 sha256sum="db29588b0214fa69baa1a9351122cd6d0f081f2e675e6ad2aefc316ddeaf327a"/>
-            <file src="patches.03.tar.gz" subdir="patches"
-                sha256sum="cc1eac89c201b5c7ff792a0ba577b0f76a0b2dcab0cf4df4b5424e1031a56f18"/>
+            <file src="debian.5.tar.gz" subdir="patches"
+                sha256sum="a85c33893ea408b40722873a72d0bcd9c0c41d3ee47daee9429a2277df03a1c0"/>
             <file src="bolt.01.tar.gz" subdir="patches"
                 sha256sum="1c90042635d9f4399cd50ee055676a09df816dab7fe6fc5c3eb15aa326c2f0b2"/>
         </sources>
@@ -50,13 +50,21 @@
                 <file src="patches/pr21074-revert.diff"/>
                 <file src="patches/i18n-fr.diff"/>
                 <file src="patches/ppc-lib-search-order.diff"/>
-                <file src="patches/pr21233-mips-only.patch"/>
                 <file src="patches/pr21157.diff"/>
                 <file src="patches/pr21137.diff"/>
                 <file src="patches/pr21156.diff"/>
                 <file src="patches/pr21139.diff"/>
                 <file src="patches/pr21135.diff"/>
                 <file src="patches/pr70909.diff"/>
+                <file src="patches/pr21342.diff"/>
+                <file src="patches/pr21412.diff"/>
+                <file src="patches/pr21414.diff"/>
+                <file src="patches/pr21431.diff"/>
+                <file src="patches/pr21434.diff"/>
+                <file src="patches/pr21432.diff"/>
+                <file src="patches/pr21438.diff"/>
+                <file src="patches/pr21440.diff"/>
+                <file src="patches/gold-sparc-fix.diff"/>
 
                 <!-- Bolt -->
                 <file src="patches/elf32-em-esc-single-dollar.patch"/>
