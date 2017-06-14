@@ -15,6 +15,7 @@ export PATH="`pwd`/.mybin:$PATH"
 
 ../dist/configure \
     --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
     --host="$BOLT_HOST_TYPE" \
     --localstatedir=/var \
     --sysconfdir=/etc \
