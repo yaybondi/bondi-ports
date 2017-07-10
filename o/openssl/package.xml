@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
     <source name="openssl" architecture-independent="false">
         <description>
             <summary>Secure Sockets Layer toolkit and utilities</summary>

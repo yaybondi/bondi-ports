@@ -5,15 +5,20 @@
 
 export MACHINE="`echo $BOLT_HOST_TYPE | cut -d'-' -f1`"
 
-cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/config \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --cross-compile-prefix="${BOLT_HOST_TYPE}-" \
-    --openssldir="$BOLT_INSTALL_PREFIX/lib/ssl" \
-    --libdir=lib \
-    \
-    no-idea no-mdc2 no-rc5 no-zlib no-ssl3 no-ssl3-method \
-    no-async enable-rfc3779 enable-cms
+for build_type in "shared" "no-shared"; do
+    mkdir -p "$BOLT_BUILD_DIR/$build_type"
+
+    cd "$BOLT_BUILD_DIR/$build_type"
+    $BOLT_SOURCE_DIR/Configure $build_type \
+        --prefix="$BOLT_INSTALL_PREFIX" \
+        --cross-compile-prefix="${BOLT_HOST_TYPE}-" \
+        --openssldir="$BOLT_INSTALL_PREFIX/lib/ssl" \
+        --libdir=lib \
+        \
+        no-idea no-mdc2 no-rc5 no-zlib no-ssl3 no-ssl3-method \
+        no-async enable-rfc3779 enable-cms \
+        "linux-$MACHINE"
+done
 
     ]]>
     </prepare>
@@ -21,8 +26,9 @@ $BOLT_SOURCE_DIR/config \
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+for build_type in "shared" "no-shared"; do
+    make -C "$BOLT_BUILD_DIR/$build_type" -j"$BOLT_PARALLEL_JOBS"
+done
 
     ]]>
     </build>
@@ -30,8 +36,8 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+make -C "$BOLT_BUILD_DIR/shared" DESTDIR="$BOLT_INSTALL_DIR" install
+cp -a "$BOLT_BUILD_DIR/no-shared/"*.a "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib"
 
 mkdir -p "$BOLT_INSTALL_DIR/etc/ssl"
 
