@@ -5,6 +5,9 @@
 
 export MACHINE="`echo $BOLT_HOST_TYPE | cut -d'-' -f1`"
 
+cd "$BOLT_SOURCE_DIR"
+sed -i 's/linux-mips64/linux64-mips64/g' config
+
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/config \
     --prefix="$BOLT_INSTALL_PREFIX" \
