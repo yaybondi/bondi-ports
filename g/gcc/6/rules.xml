@@ -45,6 +45,7 @@ unset LDFLAGS
 
 "$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
+    --libdir="$BOLT_INSTALL_PREFIX/lib" \
     --libexecdir="$BOLT_INSTALL_PREFIX/lib" \
     --with-default-libstdcxx-abi=new \
     --with-system-zlib \
