@@ -45,7 +45,6 @@ unset LDFLAGS
 
 "$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
-    --libdir="$BOLT_INSTALL_PREFIX/lib" \
     --libexecdir="$BOLT_INSTALL_PREFIX/lib" \
     --with-default-libstdcxx-abi=new \
     --with-system-zlib \
@@ -97,6 +96,14 @@ FULL_INSTALL="$BOLT_INSTALL_DIR/all"
 
 cd "$BOLT_BUILD_DIR"
 make DESTDIR="$FULL_INSTALL" install
+
+# we never use 'lib64', move everything to 'lib'
+if [ -d "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib64" ]; then
+    mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib64/"* \
+        "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/"
+    rmdir "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib64/"
+    ln -sf lib "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib64"
+fi
 
 if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
     PATH_OFFSET="$BOLT_TARGET_TYPE"
