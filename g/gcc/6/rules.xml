@@ -99,10 +99,18 @@ make DESTDIR="$FULL_INSTALL" install
 
 # we never use 'lib64', move everything to 'lib'
 if [ -d "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib64" ]; then
+    mkdir -p "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/"
     mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib64/"* \
         "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/"
     rmdir "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib64/"
     ln -sf lib "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib64"
+fi
+if [ -d "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/mips64el-linux-musl/lib64" ]; then
+    mkdir -p "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/mips64el-linux-musl/lib"
+    mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/mips64el-linux-musl/lib64/"* \
+        "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/mips64el-linux-musl/lib/"
+    rmdir "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/mips64el-linux-musl/lib64/"
+    ln -sf lib "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/mips64el-linux-musl/lib64"
 fi
 
 if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
