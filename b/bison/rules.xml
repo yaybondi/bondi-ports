@@ -34,7 +34,7 @@ touch doc/bison.info
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+make
 
     ]]>
     </build>
