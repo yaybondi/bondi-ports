@@ -30,6 +30,8 @@ make DESTDIR="$BOLT_INSTALL_DIR" install
 cp "$BOLT_BUILD_DIR/.libs/libffi_convenience.a" \
     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libffi_pic.a"
 
+bh_unify_lib64_with_lib "$BOLT_INSTALL_DIR"
+
     ]]>
     </install>
 </rules>
