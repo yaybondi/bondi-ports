@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="2.10" revision="5bolt2" upstream-version="2.10-5"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2017-11-05 16:54:00+01:00">
+        <changeset>
+            <li>Add SIGSEGV_FAULT_STACKPOINTER patch for PowerPC</li>
+        </changeset>
+    </release>
     <release version="2.10" revision="5bolt1" upstream-version="2.10-5"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2017-04-06 13:54:17+03:00">
