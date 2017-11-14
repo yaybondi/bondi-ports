@@ -24,14 +24,15 @@
         <sources>
             <file src="musl-1.1.18.tar.gz" subdir="sources"
                 sha256sum="d017ee5d01aec0c522a1330fdff06b1e428cb409e1db819cc4935d5da4a5a118"/>
-            <file src="bolt.1.tar.gz" subdir="patches"
-                sha256sum="a235de621eca522a2e1ff5297b77cd8987eb673b96932ec1905e031fef4a3e02"/>
+            <file src="bolt.2.tar.gz" subdir="patches"
+                sha256sum="4cbc02b7b89dcb343a09115d27094c8cb3f001e983f4c1314c2f709482c2a8e3"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/musl-cdefs.patch"/>
                 <file src="patches/200-add_libssp_nonshared.patch"/>
+                <file src="patches/fix-crash-double-libc-load.patch"/>
             </patchset>
         </patches>
 

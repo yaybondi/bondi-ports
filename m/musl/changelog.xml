@@ -4,6 +4,14 @@
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2017-11-05 11:13:00+01:00">
         <changeset>
+            <li>Add Rich Felker's patch to fix crash in code preventing
+                double libc.so loads</li>
+        </changeset>
+    </release>
+    <release version="1.1.18" revision="1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2017-11-05 11:13:00+01:00">
+        <changeset>
             <li>Upgrade to version 1.1.18</li>
         </changeset>
     </release>
