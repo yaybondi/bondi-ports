@@ -43,15 +43,6 @@ unset CPPFLAGS
 unset CXXFLAGS
 unset LDFLAGS
 
-case "$BOLT_TARGET_TYPE" in
-    powerpc*)
-        AM_EXTRA_OPTS="libgcc_cv_dfp=no"
-        ;;
-    *)
-        AM_EXTRA_OPTS=""
-        ;;
-esac
-
 "$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --libexecdir="$BOLT_INSTALL_PREFIX/lib" \
@@ -76,14 +67,20 @@ esac
     --host="$BOLT_HOST_TYPE" \
     --target="$BOLT_TARGET_TYPE" \
     `bh_gcc_config_for_machine $BOLT_TARGET_TYPE` \
-    $EXTRA_OPTS \
-    $AM_EXTRA_OPTS
+    $EXTRA_OPTS
 
     ]]>
     </prepare>
 
     <build>
     <![CDATA[
+
+# HACK: to disable compilation of DFP support in libgcc
+case "$BOLT_TARGET_TYPE" in
+    powerpc*)
+        export libgcc_cv_dfp=no
+        ;;
+esac
 
 cd "$BOLT_BUILD_DIR"
 make -j"$BOLT_PARALLEL_JOBS"
