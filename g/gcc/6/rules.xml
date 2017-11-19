@@ -52,7 +52,7 @@ case "$BOLT_TARGET_TYPE" in
         ;;
 esac
 
-$AM_EXTRA_OPTS "$BOLT_SOURCE_DIR/configure" \
+"$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --libexecdir="$BOLT_INSTALL_PREFIX/lib" \
     --with-default-libstdcxx-abi=new \
@@ -76,7 +76,8 @@ $AM_EXTRA_OPTS "$BOLT_SOURCE_DIR/configure" \
     --host="$BOLT_HOST_TYPE" \
     --target="$BOLT_TARGET_TYPE" \
     `bh_gcc_config_for_machine $BOLT_TARGET_TYPE` \
-    $EXTRA_OPTS
+    $EXTRA_OPTS \
+    $AM_EXTRA_OPTS
 
     ]]>
     </prepare>
