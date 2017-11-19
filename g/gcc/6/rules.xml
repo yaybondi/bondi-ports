@@ -43,7 +43,16 @@ unset CPPFLAGS
 unset CXXFLAGS
 unset LDFLAGS
 
-"$BOLT_SOURCE_DIR/configure" \
+case "$BOLT_TARGET_TYPE" in
+    powerpc*)
+        AM_EXTRA_OPTS="libgcc_cv_dfp=no"
+        ;;
+    *)
+        AM_EXTRA_OPTS=""
+        ;;
+esac
+
+$AM_EXTRA_OPTS "$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --libexecdir="$BOLT_INSTALL_PREFIX/lib" \
     --with-default-libstdcxx-abi=new \
@@ -105,12 +114,12 @@ if [ -d "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib64" ]; then
     rmdir "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib64/"
     ln -sf lib "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib64"
 fi
-if [ -d "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/mips64el-linux-musl/lib64" ]; then
-    mkdir -p "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/mips64el-linux-musl/lib"
-    mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/mips64el-linux-musl/lib64/"* \
-        "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/mips64el-linux-musl/lib/"
-    rmdir "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/mips64el-linux-musl/lib64/"
-    ln -sf lib "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/mips64el-linux-musl/lib64"
+if [ -d "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$BOLT_TARGET_TYPE/lib64" ]; then
+    mkdir -p "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$BOLT_TARGET_TYPE/lib"
+    mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$BOLT_TARGET_TYPE/lib64/"* \
+        "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$BOLT_TARGET_TYPE/lib/"
+    rmdir "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$BOLT_TARGET_TYPE/lib64/"
+    ln -sf lib "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$BOLT_TARGET_TYPE/lib64"
 fi
 
 if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
