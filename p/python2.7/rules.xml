@@ -6,16 +6,28 @@
 cd "$BOLT_SOURCE_DIR"
 autoreconf -vfi
 
-# this is necesary for ffi lib loading to work
 if [ "$BOLT_BUILD_FOR" = "tools" ]; then
+    # this is necesary for ffi lib loading to work
     sed -i 's@paths = \["/usr/local/lib", "/usr/lib"\]@paths = ["/tools/local/lib", "/tools/lib"]@' \
         Lib/ctypes/util.py
+
+    # we trigger a cross-build to work around some bug on powerpc64le
+    BUILD_TYPE="`echo $BOLT_HOST_TYPE | sed s'/-tools-/-cross-/g'`"
+
+    echo "\
+ac_cv_file__dev_ptmx=yes
+ac_cv_file__dev_ptc=yes
+" > "$BOLT_BUILD_DIR/config.site"
+
+    export CONFIG_SITE="config.site"
+else
+    BUILD_TYPE="$BOLT_HOST_TYPE"
 fi
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
     --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_HOST_TYPE" \
+    --build="$BUILD_TYPE" \
     --host="$BOLT_HOST_TYPE" \
     --enable-shared \
     --enable-ipv6 \
