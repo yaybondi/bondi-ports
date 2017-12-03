@@ -15,17 +15,15 @@ cd "$BOLT_BUILD_DIR"
 # inhibit makeinfo invocation in the build process.
 install -d doc/figs
 touch --date="2000-01-01" \
-        doc/* \
+        doc/bison.info \
         doc/bison.texi \
+        doc/bison.help \
         doc/figs/example.txt \
         doc/figs/example-reduce.txt \
         doc/figs/example-shift.txt \
-        doc/bison.help \
+        doc/*.texi \
         build-aux/cross-options.pl \
         src/getargs.c
-
-# order is important, of course!
-touch doc/bison.info
 
     ]]>
     </prepare>
