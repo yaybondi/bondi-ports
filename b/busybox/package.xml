@@ -80,7 +80,6 @@
     <xi:include href="applets/coreutils.xml"/>
     <xi:include href="applets/cpio.xml"/>
     <xi:include href="applets/cron.xml"/>
-    <xi:include href="applets/dash.xml"/>
     <xi:include href="applets/dc.xml"/>
     <xi:include href="applets/debianutils.xml"/>
     <xi:include href="applets/diffutils.xml"/>
