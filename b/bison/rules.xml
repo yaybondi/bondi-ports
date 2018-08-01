@@ -14,7 +14,7 @@ cd "$BOLT_BUILD_DIR"
 # Touch all files in the dependency tree of bison.info to
 # inhibit makeinfo invocation in the build process.
 install -d doc/figs
-touch -t 197001010000.01 \
+touch -t 200001010000.01 \
         doc/bison.info \
         doc/bison.texi \
         doc/bison.help \
