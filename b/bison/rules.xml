@@ -25,6 +25,9 @@ touch -t 200001010000.01 \
         build-aux/cross-options.pl \
         src/getargs.c
 
+# Somehow this fixes sporadic build failures.
+touch Makefile.in
+
     ]]>
     </prepare>
 
