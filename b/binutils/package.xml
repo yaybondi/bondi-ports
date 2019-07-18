@@ -15,18 +15,16 @@
         </description>
 
         <sources>
-            <file src="binutils-2.28.tar.gz" subdir="sources"
-                sha256sum="db29588b0214fa69baa1a9351122cd6d0f081f2e675e6ad2aefc316ddeaf327a"/>
-            <file src="debian.5.tar.gz" subdir="patches"
-                sha256sum="a85c33893ea408b40722873a72d0bcd9c0c41d3ee47daee9429a2277df03a1c0"/>
-            <file src="bolt.01.tar.gz" subdir="patches"
-                sha256sum="1c90042635d9f4399cd50ee055676a09df816dab7fe6fc5c3eb15aa326c2f0b2"/>
+            <file src="binutils-2.31.1.tar.xz" subdir="sources"
+                sha256sum="e398a2d579faa0f2b5a988add5f7481af8e21a21f63b6ea5702e6f517960c5eb"/>
+            <file src="debian-patches-16.tar.gz" subdir="patches"
+                sha256sum="79f3c7dbf9d03a07d31bcf196048ab620991abfdfae113dd18954c4cf5b86f97"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
-                <!-- Debian -->
                 <file src="patches/branch-updates.diff"/>
+                <file src="patches/branch-no-development.diff"/>
                 <file src="patches/001_ld_makefile_patch.patch"/>
                 <file src="patches/002_gprof_profile_arcs.patch"/>
                 <file src="patches/003_gprof_see_also_monitor.patch"/>
@@ -46,28 +44,10 @@
                 <file src="patches/aarch64-libpath.diff"/>
                 <file src="patches/mips64-default-n64.diff"/>
                 <file src="patches/gold-mips.diff"/>
-                <file src="patches/ld-new-dtags-by-default.diff"/>
-                <file src="patches/pr21074-revert.diff"/>
                 <file src="patches/i18n-fr.diff"/>
-                <file src="patches/ppc-lib-search-order.diff"/>
-                <file src="patches/pr21157.diff"/>
-                <file src="patches/pr21137.diff"/>
-                <file src="patches/pr21156.diff"/>
-                <file src="patches/pr21139.diff"/>
-                <file src="patches/pr21135.diff"/>
-                <file src="patches/pr70909.diff"/>
-                <file src="patches/pr21342.diff"/>
-                <file src="patches/pr21412.diff"/>
-                <file src="patches/pr21414.diff"/>
-                <file src="patches/pr21431.diff"/>
-                <file src="patches/pr21434.diff"/>
-                <file src="patches/pr21432.diff"/>
-                <file src="patches/pr21438.diff"/>
-                <file src="patches/pr21440.diff"/>
-                <file src="patches/gold-sparc-fix.diff"/>
-
-                <!-- Bolt -->
-                <file src="patches/elf32-em-esc-single-dollar.patch"/>
+                <file src="patches/gold-no-keep-files-mapped.diff"/>
+                <file src="patches/pr24276.diff"/>
+                <file src="patches/infinity-notes.diff"/>
             </patchset>
         </patches>
 
