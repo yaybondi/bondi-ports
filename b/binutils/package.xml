@@ -57,7 +57,6 @@
             <package name="flex"/>
             <package name="gettext"/>
             <package name="texinfo"/>
-            <package name="dejagnu"/>
             <package name="chrpath"/>
             <package name="python3"/>
             <package name="file"/>
