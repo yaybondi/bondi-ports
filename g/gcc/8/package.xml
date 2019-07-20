@@ -14,18 +14,14 @@
         </description>
 
         <sources>
-            <file src="gcc-8-8.3.0.tar.gz" subdir="sources"
-                sha256sum="ee3fd608f66e5737f20cf71b176cfbf58f7c1d190ad6def33d57610cdae8eac2"/>
+            <file src="gcc-8.3.0-dfsg.tar.xz" subdir="sources"
+                sha256sum="f0cae581373cd7da7771a503e22b55d2833490cdb29e064a302cf3212f7f2ac4"/>
             <file src="debian-patches-6.tar.gz" subdir="patches"
                 sha256sum="2e92ed4bf1426c386d8f668d86c4397c98f060975006a0563f6d730e79b11488"/>
-            <file src="gcc-8-8.3.0-6.debdiff.gz" subdir="patches"
-                sha256sum="211e5e1022e115abbcb9eeb39cf4bf84958c4e8469c0cbe430569947a04c5415"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/gcc-8-8.3.0-6.debdiff"/>
-
                 <file src="patches/svn-updates.diff"/>
                 <file src="patches/gcc-gfdl-build.diff"/>
                 <file src="patches/gcc-textdomain.diff"/>
