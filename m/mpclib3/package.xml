@@ -30,6 +30,12 @@
                 sha256sum="84b10a4ae958b3015e136b75be5fee22961255d19be655f7d0adae8d4f3bc977"/>
         </sources>
 
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/mpclib3-1.1.0-1.debdiff"/>
+            </patchset>
+        </patches>
+
         <requires>
             <package name="autotools-dev"/>
             <package name="libmpfr-dev" version=">= 4.0.0"/>
