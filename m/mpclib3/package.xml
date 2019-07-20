@@ -24,13 +24,15 @@
         </description>
 
         <sources>
-            <file src="mpclib3-1.0.3.tar.gz" subdir="sources"
-                sha256sum="617decc6ea09889fb08ede330917a00b16809b8db88c29c31bfbb49cbf88ecc3"/>
+            <file src="mpclib3-1.1.0.tar.gz" subdir="sources"
+                sha256sum="6985c538143c1208dcb1ac42cedad6ff52e267b47e5f970183a3e75125b43c2e"/>
+            <file src="mpclib3-1.1.0-1.debdiff.gz" subdir="patches"
+                sha256sum="84b10a4ae958b3015e136b75be5fee22961255d19be655f7d0adae8d4f3bc977"/>
         </sources>
 
         <requires>
             <package name="autotools-dev"/>
-            <package name="libmpfr-dev"/>
+            <package name="libmpfr-dev" version=">= 4.0.0"/>
             <package name="libgmp-dev"/>
         </requires>
 
