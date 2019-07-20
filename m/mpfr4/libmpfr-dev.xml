@@ -5,7 +5,7 @@
         <p>
         This development package provides the header files and the symbolic
         links to allow compilation and linking of programs that use the libraries
-        provided in the libmpfr4 package.
+        provided in the libmpfr6 package.
         </p>
         <p>
         MPFR provides a library for multiple-precision floating-point computation
@@ -18,12 +18,13 @@
 
     <requires>
         <package name="libgmp-dev"/>
-        <package name="libmpfr4" version="=="/>
+        <package name="libmpfr6" version="=="/>
     </requires>
 
     <contents>
         <file src="${prefix}/include/*.h"/>
         <file src="${prefix}/lib/libmpfr.a"/>
         <file src="${prefix}/lib/libmpfr.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
     </contents>
 </package>

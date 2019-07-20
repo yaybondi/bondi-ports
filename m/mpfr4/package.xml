@@ -17,8 +17,10 @@
         </description>
 
         <sources>
-            <file src="mpfr4-3.1.5.tar.xz" subdir="sources"
-                sha256sum="015fde82b3979fbe5f83501986d328331ba8ddf008c1ff3da3c238f49ca062bc"/>
+            <file src="mpfr4-4.0.2.tar.xz" subdir="sources"
+                sha256sum="1d3be708604eae0e42d578ba93b390c2a145f17743a744d8f3f8c2ad5855a38a"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="3a23d660dafaa21bbdf05067d5f31a398ef20205aeedc5377fe5607123a11439"/>
         </sources>
 
         <requires>
@@ -28,7 +30,7 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="libmpfr4.xml"/>
+    <xi:include href="libmpfr6.xml"/>
     <xi:include href="libmpfr-dev.xml"/>
 
     <xi:include href="changelog.xml"/>
