@@ -16,7 +16,7 @@
     </description>
 
     <requires>
-        <package name="libisl15" version="=="/>
+        <package name="libisl19" version="=="/>
     </requires>
 
     <contents>
