@@ -94,8 +94,8 @@ make -j"$BOLT_PARALLEL_JOBS"
 GCC_VERSION="`cat $BOLT_SOURCE_DIR/gcc/FULL-VER`"
 
 for ENTRY in all cpp-6 fixincludes g++-6 gcc-6 gcc-6-base libatomic1 libcc1-0 \
-        libcilkrts5 libgcc libgcc-dev libgomp1 libitm1 libmpx2 libquadmath0 \
-        libstdc++6 libstdc++-6-dev gcc-6-plugin-dev; do
+        libgcc libgcc-dev libgomp1 libitm1 libmpx2 libquadmath0 libstdc++6 \
+        libstdc++-6-dev gcc-6-plugin-dev; do
     install -d -m 0755 "$BOLT_INSTALL_DIR/$ENTRY"
 done
 
@@ -254,14 +254,6 @@ PKG_PATH="$BOLT_INSTALL_DIR/libcc1-0"
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib"
 mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/"libcc*.so.* \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib" || true
-
-# -------------------------------------------------------------------------
-PKG_PATH="$BOLT_INSTALL_DIR/libcilkrts5"
-# -------------------------------------------------------------------------
-
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib"
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib/libcilkrts"*.so.* \
-    "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib" || true
 
 # -------------------------------------------------------------------------
 PKG_PATH="$BOLT_INSTALL_DIR/libgcc"

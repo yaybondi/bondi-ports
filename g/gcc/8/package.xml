@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="gcc-6">
+        <description>
+            <summary>GCC, the GNU Compiler Collection (base package)</summary>
+            <p>
+            This package contains files common to all languages and libraries
+            contained in the GNU Compiler Collection (GCC).
+            </p>
+        </description>
+
+        <sources>
+            <file src="gcc-8-8.3.0.tar.gz" subdir="sources"
+                sha256sum="ee3fd608f66e5737f20cf71b176cfbf58f7c1d190ad6def33d57610cdae8eac2"/>
+            <file src="debian-patches-6.tar.gz" subdir="patches"
+                sha256sum="2e92ed4bf1426c386d8f668d86c4397c98f060975006a0563f6d730e79b11488"/>
+            <file src="gcc-8-8.3.0-6.debdiff.gz" subdir="patches"
+                sha256sum="211e5e1022e115abbcb9eeb39cf4bf84958c4e8469c0cbe430569947a04c5415"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/svn-updates.diff"/>
+                <file src="patches/gcc-gfdl-build.diff"/>
+                <file src="patches/gcc-textdomain.diff"/>
+                <file src="patches/gcc-driver-extra-langs.diff"/>
+                <file src="patches/gcc-hash-style-gnu.diff"/>
+                <file src="patches/libstdc++-pic.diff"/>
+                <file src="patches/libstdc++-doclink.diff"/>
+                <file src="patches/libstdc++-man-3cxx.diff"/>
+                <file src="patches/libstdc++-test-installed.diff"/>
+                <file src="patches/alpha-no-ev4-directive.diff"/>
+                <file src="patches/note-gnu-stack.diff"/>
+                <file src="patches/libgomp-omp_h-multilib.diff"/>
+                <file src="patches/libgo-testsuite.diff"/>
+                <file src="patches/libgo-cleanfiles.diff"/>
+                <file src="patches/gcc-target-include-asm.diff"/>
+                <file src="patches/libgo-revert-timeout-exp.diff"/>
+                <file src="patches/libgo-setcontext-config.diff"/>
+                <file src="patches/gcc-auto-build.diff"/>
+                <file src="patches/kfreebsd-unwind.diff"/>
+                <file src="patches/libitm-no-fortify-source.diff"/>
+                <file src="patches/sparc64-biarch-long-double-128.diff"/>
+                <file src="patches/pr66368.diff"/>
+                <file src="patches/pr67590.diff"/>
+                <file src="patches/libjit-ldflags.diff"/>
+                <file src="patches/libffi-pax.diff"/>
+                <file src="patches/libffi-race-condition.diff"/>
+                <file src="patches/gcc-foffload-default.diff"/>
+                <file src="patches/gcc-fuse-ld-lld.diff"/>
+                <file src="patches/cuda-float128.diff"/>
+                <file src="patches/libffi-mipsen-r6.diff"/>
+                <file src="patches/t-libunwind-elf-Wl-z-defs.diff"/>
+                <file src="patches/gcc-alpha-bs-ignore.diff"/>
+                <file src="patches/libffi-riscv.diff"/>
+                <file src="patches/libffi-riscv64-go.diff"/>
+                <file src="patches/gcc-force-cross-layout.diff"/>
+                <file src="patches/kfreebsd-decimal-float.diff"/>
+                <file src="patches/powerpcspe_remove_many.diff"/>
+                <file src="patches/ia64-disable-selective-scheduling.diff"/>
+                <file src="patches/pr89412.diff"/>
+                <file src="patches/pr87808.diff"/>
+                <file src="patches/pr88419-revert.diff"/>
+                <file src="patches/pr89981.diff"/>
+                <file src="patches/gcc-as-needed-push-pop.diff"/>
+                <file src="patches/ada-arm.diff"/>
+                <file src="patches/ada-gcc-name.diff"/>
+                <file src="patches/ada-verbose.diff"/>
+                <file src="patches/ada-link-lib.diff"/>
+                <file src="patches/ada-libgnatvsn.diff"/>
+                <file src="patches/ada-gnattools-cross.diff"/>
+                <file src="patches/ada-tools-move-ldflags.diff"/>
+                <file src="patches/ada-sjlj.diff"/>
+                <file src="patches/ada-lib-info-source-date-epoch.diff"/>
+                <file src="patches/ada-armel-libatomic.diff"/>
+                <file src="patches/ada-kfreebsd.diff"/>
+                <file src="patches/ada-drop-termio-h.diff"/>
+                <file src="patches/ada-749574.diff"/>
+                <file src="patches/ada-lib-info-file-prefix-map.diff"/>
+                <file src="patches/ada-perl-shebang.diff"/>
+                <file src="patches/gdc-8.diff"/>
+                <file src="patches/gdc-targetdm.diff"/>
+                <file src="patches/gdc-updates.diff"/>
+                <file src="patches/libphobos-zlib.diff"/>
+                <file src="patches/gdc-frontend-posix.diff"/>
+                <file src="patches/gdc-profiledbuild.diff"/>
+                <file src="patches/gdc-sparc-fix.diff"/>
+                <file src="patches/gdc-shared-by-default.diff"/>
+                <file src="patches/gdc-cross-build.diff"/>
+                <file src="patches/gdc-texinfo.diff"/>
+                <file src="patches/gdc-libphobos-build.diff"/>
+                <file src="patches/sys-auxv-header.diff"/>
+                <file src="patches/arm-multilib-soft.diff"/>
+                <file src="patches/arm-multilib-defaults.diff"/>
+                <file src="patches/gcc-ice-dump.diff"/>
+                <file src="patches/gcc-ice-apport.diff"/>
+                <file src="patches/skip-bootstrap-multilib.diff"/>
+                <file src="patches/libffi-ro-eh_frame_sect.diff"/>
+                <file src="patches/libffi-mips.diff"/>
+                <file src="patches/gcc-multiarch.diff"/>
+                <file src="patches/config-ml.diff"/>
+                <!--
+                <file src="patches/g++-multiarch-incdir.diff"/>
+                -->
+                <file src="patches/canonical-cpppath.diff"/>
+                <file src="patches/gcc-multilib-multiarch.diff"/>
+                <file src="patches/libgomp-kfreebsd-testsuite.diff"/>
+                <file src="patches/go-testsuite.diff"/>
+                <file src="patches/ada-changes-in-autogen-output.diff"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="libc-dev"/>
+            <package name="m4"/>
+            <package name="libtool"/>
+            <package name="autoconf2.64"/>
+            <package name="dwz"/>
+            <package name="gawk"/>
+            <package name="lzma"/>
+            <package name="xz-utils"/>
+            <package name="patchutils"/>
+            <package name="zlib1g-dev"/>
+            <package name="binutils"/>
+            <package name="bison"/>
+            <package name="flex"/>
+            <package name="gettext"/>
+            <package name="texinfo"/>
+            <package name="libisl-dev" version=">= 0.20"/>
+            <package name="libmpc-dev" version=">= 1.0"/>
+            <package name="libmpfr-dev" version=">= 3.0.0-9~"/>
+            <package name="libgmp-dev" version=">= 2:5.0.1~"/>
+            <package name="lib32z1-dev"/>
+            <package name="lib64z1-dev"/>
+            <package name="chrpath"/>
+            <package name="pkg-config"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="cpp-8.xml"/>
+    <xi:include href="fixincludes.xml"/>
+    <xi:include href="g++-8.xml"/>
+    <xi:include href="gcc-8.xml"/>
+    <xi:include href="gcc-8-base.xml"/>
+    <xi:include href="gcc-8-plugin-dev.xml"/>
+    <xi:include href="libatomic1.xml"/>
+    <xi:include href="libcc1-0.xml"/>
+    <xi:include href="libgcc.xml"/>
+    <xi:include href="libgcc-dev.xml"/>
+    <xi:include href="libgomp1.xml"/>
+    <xi:include href="libitm1.xml"/>
+    <xi:include href="libstdc++-8-dev.xml"/>
+    <xi:include href="libstdc++6.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
