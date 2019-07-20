@@ -19,8 +19,6 @@
         <sources>
             <file src="mpfr4-4.0.2.tar.xz" subdir="sources"
                 sha256sum="1d3be708604eae0e42d578ba93b390c2a145f17743a744d8f3f8c2ad5855a38a"/>
-            <file src="debian-patches-1.tar.gz" subdir="patches"
-                sha256sum="3a23d660dafaa21bbdf05067d5f31a398ef20205aeedc5377fe5607123a11439"/>
         </sources>
 
         <requires>
