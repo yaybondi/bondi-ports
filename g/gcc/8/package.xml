@@ -13,11 +13,25 @@
             </p>
         </description>
 
+        <!-- MAINTAINER NOTES:
+          -
+          - Debian keep several tarballs inside the orig tarball. Extract the
+          - orig tarball and retrieve the ones you need.
+          -
+          - To get the patches, the "patch" target has to be executed. Then
+          -
+          -     sed -i 's/\(\+\+\+\|\-\-\-\) \([^/]\+\)\/src\//\1 \2\//g'
+          -
+          - to fix the path offset.
+          -
+          - Disable Ada and D related patches and g++-multiarch-incdir.diff.
+         -->
+
         <sources>
             <file src="gcc-8.3.0-dfsg.tar.xz" subdir="sources"
                 sha256sum="f0cae581373cd7da7771a503e22b55d2833490cdb29e064a302cf3212f7f2ac4"/>
             <file src="debian-patches-6.tar.gz" subdir="patches"
-                sha256sum="2e92ed4bf1426c386d8f668d86c4397c98f060975006a0563f6d730e79b11488"/>
+                sha256sum="d252e89bde13036f2286ab6660df73bc6e58eb61e91f699492c4999a1f6ea012"/>
         </sources>
 
         <patches>
@@ -65,6 +79,7 @@
                 <file src="patches/pr88419-revert.diff"/>
                 <file src="patches/pr89981.diff"/>
                 <file src="patches/gcc-as-needed-push-pop.diff"/>
+                <!--
                 <file src="patches/ada-arm.diff"/>
                 <file src="patches/ada-gcc-name.diff"/>
                 <file src="patches/ada-verbose.diff"/>
@@ -91,6 +106,7 @@
                 <file src="patches/gdc-cross-build.diff"/>
                 <file src="patches/gdc-texinfo.diff"/>
                 <file src="patches/gdc-libphobos-build.diff"/>
+                -->
                 <file src="patches/sys-auxv-header.diff"/>
                 <file src="patches/arm-multilib-soft.diff"/>
                 <file src="patches/arm-multilib-defaults.diff"/>
@@ -108,7 +124,9 @@
                 <file src="patches/gcc-multilib-multiarch.diff"/>
                 <file src="patches/libgomp-kfreebsd-testsuite.diff"/>
                 <file src="patches/go-testsuite.diff"/>
+                <!--
                 <file src="patches/ada-changes-in-autogen-output.diff"/>
+                -->
             </patchset>
         </patches>
 
