@@ -24,6 +24,8 @@
 
         <patches>
             <patchset subdir="sources">
+                <file src="patches/gcc-8-8.3.0-6.debdiff"/>
+
                 <file src="patches/svn-updates.diff"/>
                 <file src="patches/gcc-gfdl-build.diff"/>
                 <file src="patches/gcc-textdomain.diff"/>
