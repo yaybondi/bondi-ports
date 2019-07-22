@@ -20,16 +20,17 @@
         </description>
 
         <sources>
-            <file src="libcap-ng-0.7.7.tar.gz" subdir="sources"
-                sha256sum="615549ce39b333f6b78baee0c0b4ef18bc726c6bf1cca123dfd89dd963f6d06b"/>
-            <file src="patches.03.tar.gz" subdir="patches"
-                sha256sum="673123075a4d2baeb339e484090d683f538aca4c39d77d48b22b9b653541f4a1"/>
+            <file src="libcap-ng-0.7.9.tar.gz" subdir="sources"
+                sha256sum="4a1532bcf3731aade40936f6d6a586ed5a66ca4c7455e1338d1f6c3e09221328"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="95601610422e58d34cfc6c173940d3635427d513cbb4db1cca8492e814d1f7d5"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/01_manpage_description.patch"/>
                 <file src="patches/02_fix_armel_segfault_memset.patch"/>
+                <file src="patches/03_fix_mask_dso_unloadable.patch"/>
             </patchset>
         </patches>
 
