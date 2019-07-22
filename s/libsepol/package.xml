@@ -23,18 +23,14 @@
         </description>
 
         <sources>
-            <file src="libsepol-2.6.tar.gz" subdir="sources"
-                sha256sum="d856d6506054f52abeaa3543ea2f2344595a3dc05d0d873ed7f724f7a16b1874"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="26a59e50249f2092c136312fca90c0282a7f768a6102931b10dfaf0429e0ff56"/>
-            <file src="patches.bolt.tar.gz" subdir="patches"
-                sha256sum="435e0f139bad268b882fbba8bb33e5ffd4bcd4ab2aeb2ae019e53e7991690136"/>
+            <file src="libsepol-2.8.tar.gz" subdir="sources"
+                sha256sum="3ad6916a8352bef0bad49acc8037a5f5b48c56f94e4cb4e1959ca475fa9d24d6"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
+                sha256sum="bb53dd099947a982268602757113eed3a90bfbc0b35c35249a437ce3d439c13e"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
-                <!-- Debian -->
-                <file src="patches/fix_use-after-free_python3.patch"/>
                 <!-- Bolt OS -->
                 <file src="patches/makefile-no-ln-sf-relative.patch"/>
             </patchset>
