@@ -15,24 +15,16 @@
         </description>
 
         <sources>
-            <file src="libsigsegv-2.10.tar.gz" subdir="sources"
-                sha256sum="8460a4a3dd4954c3d96d7a4f5dd5bc4d9b76f5754196aa245287553b26d2199a"/>
-            <file src="patches.5.tar.gz" subdir="patches"
-                sha256sum="55238735bd389fdcb4738a4d4f2f39d5d0777154e13cc8f2ab5247a88b0f6572"/>
-            <file src="bolt.2.tar.gz" subdir="patches"
-                sha256sum="90321ecbbbbe42ddace6726df46c975ea85132964404cf9605dfa78299af96b0"/>
+            <file src="libsigsegv-2.12.tar.gz" subdir="sources"
+                sha256sum="3ae1af359eebaa4ffc5896a1aee3568c052c99879316a1ab57f8fe1789c390b6"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
+                sha256sum="218105a7d08e54d5f7320efbf6ca0b28adfc67a16f38facc26f8d57f33416afd"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
-                <!-- Debian -->
-                <file src="patches/configure-patch-for-kfreebsd-debian.patch"/>
-                <file src="patches/no-stackhandler-on-s390.patch"/>
-                <file src="patches/sparc-fix-sigsegv-fault-stackpointer-definition.patch"/>
-                <file src="patches/aarch64-stack-direction.patch"/>
                 <!-- Bolt -->
                 <file src="patches/musl-uses-posix-fault.patch"/>
-                <file src="patches/fault-stack-pointer-powerpc.patch"/>
             </patchset>
         </patches>
 
