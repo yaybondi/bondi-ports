@@ -20,10 +20,10 @@
         <sources>
             <file src="pcre3-8.39.tar.bz2" subdir="sources"
                 sha256sum="b858099f82483031ee02092711689e7245586ada49e534a06e678b8ea9549e8b"/>
-            <file src="patches.03.tar.gz" subdir="patches"
-                sha256sum="b1d1b42ca1562bb720a0891c168850d67c085cabcf4f1254c2955dff25962e4d"/>
+            <file src="debian-patches-12.tar.gz" subdir="patches"
+                sha256sum="2d8b9a8e1c0b88104a54f0d6d1919305c8c33366adddbb3b7c2a8350343fa58c"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/PCRE6_compatible_API.patch"/>
@@ -35,6 +35,7 @@
                 <file src="patches/Disable_JIT_on_sparc64.patch"/>
                 <file src="patches/CVE-2017-6004.patch"/>
                 <file src="patches/upstream-fix-for-cve-2017-7186-upstream-"/>
+                <file src="patches/patch-from-mariadb-to-fix-stack-frame-si"/>
             </patchset>
         </patches>
 
