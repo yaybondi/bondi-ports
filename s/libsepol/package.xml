@@ -25,16 +25,7 @@
         <sources>
             <file src="libsepol-2.8.tar.gz" subdir="sources"
                 sha256sum="3ad6916a8352bef0bad49acc8037a5f5b48c56f94e4cb4e1959ca475fa9d24d6"/>
-            <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="bb53dd099947a982268602757113eed3a90bfbc0b35c35249a437ce3d439c13e"/>
         </sources>
-
-        <patches>
-            <patchset subdir="sources">
-                <!-- Bolt OS -->
-                <file src="patches/makefile-no-ln-sf-relative.patch"/>
-            </patchset>
-        </patches>
 
         <requires>
             <package name="file"/>
