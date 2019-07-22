@@ -28,30 +28,22 @@
         </description>
 
         <sources>
-            <file src="libselinux-2.6.tar.gz" subdir="sources"
-                sha256sum="4ea2dde50665c202253ba5caac7738370ea0337c47b251ba981c60d24e1a118a"/>
-            <file src="patches.03.tar.gz" subdir="patches"
-                sha256sum="64be9a4a3b5db7425c2382e335495f184ae9bff2c7c18232f9942653ff5a298e"/>
-            <file src="patches.bolt.tar.gz" subdir="patches"
-                sha256sum="ff5e0f332701ef59a40874cd5134a5e0afef65c4f9322f73a8c616e6d5f994a8"/>
+            <file src="libselinux-2.8.tar.gz" subdir="sources"
+                sha256sum="31db96ec7643ce10912b3c3f98506a08a9116dcfe151855fd349c3fda96187e1"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
+                sha256sum="b7476e38ce80d78b687f56f5839f83abe850c8521269939d5a8324f500262446"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <!-- Debian -->
-                <file src="patches/fix-makefile-bugs.patch"/>
-                <file src="patches/fix-cross-compile.patch"/>
-                <file src="patches/fix_python3_bindings.patch"/>
                 <!-- Bolt OS -->
                 <file src="patches/fix-readv-undeclared.patch"/>
-                <file src="patches/fix-sys-errno-include.patch"/>
-                <file src="patches/makefile-no-ln-sf-relative.patch"/>
             </patchset>
         </patches>
 
         <requires>
             <package name="file"/>
-            <package name="libsepol1-dev" version=">= 2.6"/>
+            <package name="libsepol1-dev" version=">= 2.8"/>
             <package name="libpcre3-dev"/>
             <package name="pkg-config"/>
         </requires>
