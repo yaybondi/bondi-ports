@@ -21,13 +21,15 @@
         <sources>
             <file src="readline-7.0.tar.gz" subdir="sources"
                 sha256sum="750d437185286f40a369e1e4f4764eda932b9459b5ec9a731628393dd3d32334"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="015a3a6ffe76babfc7b45ec1f8cefda265be1d7a4fd45ad62f042348e81b0a80"/>
+            <file src="debian-patches-5.tar.gz" subdir="patches"
+                sha256sum="1d75c6f63de78eabeac5c96067414aadc7fa10c8a490d1a7a96e4b8f8e1b6917"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/readline70-001.diff"/>
+                <file src="patches/readline70-002.diff"/>
+                <file src="patches/readline70-003.diff"/>
                 <file src="patches/rl-attribute.diff"/>
                 <file src="patches/rl-header.diff"/>
                 <file src="patches/rl-no-cross-check.diff"/>
@@ -43,7 +45,7 @@
 
         <requires>
             <package name="libtinfo-dev"/>
-            <package name="libncursesw5-dev" version=">= 5.6"/>
+            <package name="libncursesw5-dev"/>
             <package name="awk"/>
             <package name="texinfo"/>
             <package name="autotools-dev"/>
