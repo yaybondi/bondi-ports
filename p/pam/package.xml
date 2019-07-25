@@ -23,7 +23,7 @@
             <file src="debian-patches-5.tar.gz" subdir="patches"
                 sha256sum="b282c02574aff974c2107bbca9ea3caceb1080c04617bcda3ea42829fa6b58e5"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="7fd90fca291acf6cc39ce05c79680549973aa70c4dfcbf3a96a5364ed9954cf6"/>
+                sha256sum="713f8a15e7119760f16c849f7f67f83a8b9f387aa423fb1af3bc00e375ab6dd4"/>
             <file src="pam-etc.tar.gz" subdir="extra"
                 sha256sum="9962c128162a72ea4432f2ec7927bfbe34414041283927ebb62204f2b7e66293"/>
         </sources>
