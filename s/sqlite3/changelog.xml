@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="3.27.2" revision="3bolt1" upstream-version="3.27.2-3"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2019-07-25 22:39:16+02:00">
+        <changeset>
+            <li>Upgrade to latest version from Debian Buster.</li>
+        </changeset>
+    </release>
     <release version="3.16.2" revision="3bolt1" upstream-version="3.16.2-3"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2017-04-12 18:37:49+03:00">

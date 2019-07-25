@@ -11,12 +11,14 @@
         </description>
 
         <sources>
-            <file src="sqlite3-3.16.2.tar.xz" subdir="sources"
-                sha256sum="bf7b1e8ea7577253b7f8a8287d111d542d1792cf1768edc66541ac851ff92453"/>
-            <file src="patches.03.tar.gz" subdir="patches"
-                sha256sum="9ca908843f96d34c3d8c076a0fe65a1e1873485f81a230ac323943826b1ff90b"/>
+            <file src="sqlite3-3.27.2.tar.xz" subdir="sources"
+                sha256sum="6cb1606bbc38270739d256b5ab1cf94dccf5b2a3b4cbceb0545aac76f6ef40f2"/>
+            <file src="sqlite3-www-3.27.2.tar.xz" subdir="sources/www"
+                sha256sum="b50bea0e1974b33bcb2cec4c29fcdeecd8f960020ce0310b15fb123938844bee"/>
+            <file src="debian-patches-3.tar.gz" subdir="patches"
+                sha256sum="13d71794f6f63c9b9c3b119217cacfb1d42e6cf4877916e43a692c6e1f9614fd"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/10-520466-libsqlite3-depends-on-libdl.patch"/>
@@ -26,8 +28,15 @@
                 <file src="patches/10-665363-disable-malloc-usable-size.patch"/>
                 <file src="patches/31-increase_SQLITE_MAX_DEFAULT_PAGE_SIZE_to_32k.patch"/>
                 <file src="patches/02-use-packaged-lempar.c.patch"/>
-                <file src="patches/32-fix_an_uninitialized_variable_in_the_command-line_shell.patch"/>
-                <file src="patches/35-fix-sqlite3_blob_reopen.patch"/>
+                <file src="patches/40-use_unsigned_integers_to_count_the_number_of_pages.patch"/>
+                <file src="patches/41-fix_a_crash_that_could_occur.patch"/>
+                <file src="patches/42-ensure_that_ALTER_TABLE_commands_open_statement_transactions.patch"/>
+                <file src="patches/43-fix_an_fts5_problem_with_interleaving.patch"/>
+                <file src="patches/44-fix_a_buffer_overread_when_running_fts5_prefix_queries.patch"/>
+                <file src="patches/45-CVE-2019-8457.patch"/>
+                <file src="patches/46-probably_CVE-2019-5018.patch"/>
+                <file src="patches/47-probably_CVE-2019-5827_part1.patch"/>
+                <file src="patches/48-probably_CVE-2019-5827_part2.patch"/>
             </patchset>
         </patches>
 
