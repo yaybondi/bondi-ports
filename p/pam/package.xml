@@ -23,7 +23,7 @@
             <file src="debian-patches-5.tar.gz" subdir="patches"
                 sha256sum="b282c02574aff974c2107bbca9ea3caceb1080c04617bcda3ea42829fa6b58e5"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="d60d4bfa7718a49b49086b817966a43d8ace0313c0790cf18ce6e721681a2fa8"/>
+                sha256sum="7fd90fca291acf6cc39ce05c79680549973aa70c4dfcbf3a96a5364ed9954cf6"/>
             <file src="pam-etc.tar.gz" subdir="extra"
                 sha256sum="9962c128162a72ea4432f2ec7927bfbe34414041283927ebb62204f2b7e66293"/>
         </sources>
@@ -58,6 +58,7 @@
                 <file src="patches/fix-autoreconf.patch"/>
                 <!-- Bolt -->
                 <file src="patches/gentoo-fix-compat.patch"/>
+                <file src="patches/gentoo-no-strndupa.patch"/>
                 <file src="patches/disable-mod-rhosts.patch"/>
             </patchset>
         </patches>
