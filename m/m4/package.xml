@@ -20,7 +20,15 @@
         <sources>
             <file src="m4-1.4.18.tar.xz" subdir="sources"
                 sha256sum="f2c1e86ca0a404ff281631bdc8377638992744b175afb806e25871a24a934e07"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="8d250ede7c3a1ed0ff9dc89a341b39b2ef336cc9fc4f314622ddd1608ea8d014"/>
         </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/01-fix-ftbfs-with-glibc-2.28.patch"/>
+            </patchset>
+        </patches>
 
         <requires>
             <package name="libsigsegv-dev"/>
