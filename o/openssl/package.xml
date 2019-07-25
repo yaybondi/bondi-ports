@@ -11,12 +11,12 @@
         </description>
 
         <sources>
-            <file src="openssl-1.1.0e.tar.gz" subdir="sources"
-                sha256sum="57be8618979d80c910728cfc99369bf97b2a1abd8f366ab6ebdee8975ad3874c"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="a6c94d1730f585c92aa3c103dc9c26ba06ee6b6b5011ba8a2b6cbd5a4eed2864"/>
+            <file src="openssl-1.1.1c.tar.gz" subdir="sources"
+                sha256sum="f6fb3079ad15076154eda9413fed42877d668e7069d9b87396d0804fdb3f4c90"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="2b8d59480d9f7d18f32b27114b5500d20a098a1aa34fc4cf24fc26ca22b7c1f6"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/debian-targets.patch"/>
@@ -24,6 +24,7 @@
                 <file src="patches/no-symbolic.patch"/>
                 <file src="patches/pic.patch"/>
                 <file src="patches/c_rehash-compat.patch"/>
+                <file src="patches/Set-systemwide-default-settings-for-libssl-users.patch"/>
             </patchset>
         </patches>
 
