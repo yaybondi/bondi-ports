@@ -9,17 +9,14 @@
         </description>
 
         <sources>
-            <file src="db5.3-5.3.28.tar.xz" subdir="sources"
-                sha256sum="e1f85c8b6ebd0ed3ca72fa0ae97b65006f6d0bd0cd6f4ac24bed103cb5497bf5"/>
-            <file src="debian.12.tar.gz" subdir="patches"
-                sha256sum="04af0cb1c1146a7f478b29c51b6e1b7a8931afc63b653d034803bec53d8cd867"/>
-            <file src="bolt.2.tar.gz" subdir="patches"
-                sha256sum="d4379f150e801daf512be6a5efaa786f2a9ac8bf6d1842c4ddaffd5614eaf624"/>
+            <file src="db5.3-5.3.28+dfsg1.tar.xz" subdir="sources"
+                sha256sum="b19bf3dd8ce74b95a7b215be9a7c8489e8e8f18da60d64d6340a06e75f497749"/>
+            <file src="debian-patches-0.5.tar.gz" subdir="patches"
+                sha256sum="621d4ea41f64d80c147d482e07cfd3db67f7366e5e8b299052797981745e190b"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
-                <!-- Debian -->
                 <file src="patches/002-versioned_symbols.patch"/>
                 <file src="patches/003-jni_javac.patch"/>
                 <file src="patches/004-tclsleep.patch"/>
@@ -28,8 +25,9 @@
                 <file src="patches/007-link-sql-libs.patch"/>
                 <file src="patches/mmap_extend-mode-requires-page-aligned-extends.patch"/>
                 <file src="patches/008-autoconf-in-lang-sql-sqlite.patch"/>
-                <!-- Bolt -->
-                <file src="patches/narkoleptik-atomic.patch"/>
+                <file src="patches/CVE-2017-10140-cwd-db_config.patch"/>
+                <file src="patches/009-java-10.patch"/>
+                <file src="patches/010-__atomic_compare_exchange.patch"/>
             </patchset>
         </patches>
 
