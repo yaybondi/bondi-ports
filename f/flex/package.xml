@@ -20,15 +20,16 @@
         </description>
 
         <sources>
-            <file src="flex-2.6.1.tar.gz" subdir="sources"
-                sha256sum="45ca57aa8c9c2539bc201f602279d8730d20450514b36e867853e212c0e55438"/>
-            <file src="patches.bolt.tar.gz" subdir="patches"
-                sha256sum="6246d65b76ffe393bb69c9365a580c3b68ca0ffb994cf73605b3a9c6a2e068bd"/>
+            <file src="flex-2.6.4.tar.gz" subdir="sources"
+                sha256sum="e87aae032bf07c26f85ac0ed3250998c37621d95f8bd748b31f15b33c45ee995"/>
+            <file src="flex-2.6.4-6.2.debdiff.gz" subdir="patches"
+                sha256sum="7853e12f05d41b401b73077411f01b21c9d15f8b6a2ea69c94e40c9b63401460"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/no-implicit-malloc-decl.patch"/>
+                <!-- Debian -->
+                <file src="patches/flex-2.6.4-6.2.debdiff"/>
             </patchset>
         </patches>
 
