@@ -25,16 +25,22 @@
         <sources>
             <file src="bzip2-1.0.6.tar.bz2" subdir="sources"
                 sha256sum="d70a9ccd8bdf47e302d96c69fecd54925f45d9c7b966bb4ef5f56b770960afa7"/>
-            <file src="patches.8.1.tar.gz" subdir="patches"
-                sha256sum="442e83d7e876dcb244b287f9a952908705168b9e19153e72350833c21058563d"/>
+            <file src="debian-patches-9.1.tar.gz" subdir="patches"
+                sha256sum="cb179859bf08615359fb9b92f88db83edea6e610bf1c9a7127f697c0169e55c4"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/10-bzip2.1.patch"/>
                 <file src="patches/20-legacy.patch"/>
-                <file src="patches/30-bzip2-harden.patch"/>
+                <file src="patches/xml-manual-escape.diff"/>
+                <file src="patches/help-option.diff"/>
+                <file src="patches/makefile.diff"/>
+                <file src="patches/bzip2recover-race-open-output.diff"/>
                 <file src="patches/bzip2recover-CVE-2016-3189.patch"/>
+                <file src="patches/bzdiff-tmpdir-spaces.diff"/>
+                <file src="patches/40-bzdiff-l.patch"/>
+                <file src="patches/Make-sure-nSelectors-is-not-out-of-range.patch"/>
             </patchset>
         </patches>
 
