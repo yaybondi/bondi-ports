@@ -14,12 +14,12 @@
         </description>
 
         <sources>
-            <file src="ncurses-6.0+20161126.tar.gz" subdir="sources"
-                sha256sum="e4b9cf1cfcf5a2db7df1d36402967783ba759246c8ff5a17a85ffd7e79296ec0"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="cf1a7ea09968e1d92983b10d2f42eb8e8429a3fd43f07c99f901df7ec2e812d7"/>
+            <file src="ncurses-6.1+20181013.tar.gz" subdir="sources"
+                sha256sum="aeb1d098ee90b39a763b57b00da19ff5bbb573dea077f98fbd85d59444bb3b59"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="bd57da152b595c6b01fcb7ca41ef29fd14fc63cb5f920b60ad1d3393cfc181fa"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/01-debian-no-ada-doc.diff"/>
