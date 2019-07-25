@@ -6,32 +6,26 @@
 
     <source name="expat" architecture-independent="false">
         <description>
-            <summary>XML parsing C library - development kit (64bit)</summary>
+            <summary>XML parsing C library</summary>
             <p>
-            This package contains the header file and development libraries of
-            expat, the C library for parsing XML. Expat is a stream oriented XML
-            parser. This means that you register handlers with the parser prior
-            to starting the parse. These handlers are called when the parser
-            discovers the associated structures in the document being parsed. A
-            start tag is an example of the kind of structures for which you may
-            register handlers.
-            </p>
-            <p>
-            This package includes the development support files for building 64 bit
-            applications.
+            Expat is a stream oriented XML parser. This means that you register
+            handlers with the parser prior to starting the parse. These handlers
+            are called when the parser discovers the associated structures in the
+            document being parsed. A start tag is an example of the kind of
+            structures for which you may register handlers.
             </p>
         </description>
 
         <sources>
-            <file src="expat-2.2.0.tar.bz2" subdir="sources"
-                sha256sum="d9e50ff2d19b3538bd2127902a89987474e1a4db8e43a66a4d1a712ab9a504ff"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="13432b2f62cd2372a9ed93a94f07030e360cf215ed91e90064a60089892e8109"/>
+            <file src="expat-2.2.6.tar.gz" subdir="sources"
+                sha256sum="574499cba22a599393e28d99ecfa1e7fc85be7d6651d543045244d5b561cb7ff"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="90964daba4bb95f1ddc61f4baa0e6ff596840c3acdbee509169252f7ddb150cd"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/CVE-2016-9063.patch"/>
+                <file src="patches/Fix_extraction_of_namespace_prefix_from_XML_name.patch"/>
             </patchset>
         </patches>
 
