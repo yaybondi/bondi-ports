@@ -16,25 +16,22 @@
         </description>
 
         <sources>
-            <file src="gzip-1.6.tar.gz" subdir="sources"
-                sha256sum="97eb83b763d9e5ad35f351fe5517e6b71521d7aac7acf3e3cacdb6b1496d8f7e"/>
-            <file src="patches.05.tar.gz" subdir="patches"
-                sha256sum="b2915e7a383755ac53a6cd70d3a69832de9adbbad890525960625dab80d2230e"/>
-            <file src="patches.bolt.tar.gz" subdir="patches"
-                sha256sum="c367da0c1b7ba6beb14839f8e91fdb151daff0465eb898461e03374292aa030d"/>
+            <file src="gzip-1.9.tar.gz" subdir="sources"
+                sha256sum="5d2d3a3432ef32f24cdb060d278834507b481a75adeca18850c73592f778f6ad"/>
+            <file src="debian-patches-3.tar.gz" subdir="patches"
+                sha256sum="91791187d8cf320ba7369fae9a370673afc9e05545588527942175bf38174b4f"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
-                <!-- Debian -->
-                <file src="patches/rsyncable.diff"/>
                 <file src="patches/sigpipe.diff"/>
-                <file src="patches/zgrep-man-diff"/>
-                <file src="patches/gnulib-mingw-w64.diff"/>
-                <file src="patches/man-page-typo.diff"/>
                 <file src="patches/gzip_reproducible_build.diff"/>
-                <!-- Bolt OS -->
-                <file src="patches/gnulib-musl-compat.patch"/>
+                <file src="patches/zgrep-syntax-error.diff"/>
+                <file src="patches/0001-gzip-port-better-to-mingw.patch"/>
+                <file src="patches/0001-gzip-port-better-to-mingw-again.patch"/>
+                <file src="patches/gnulib-4af4a4a71827c0bc5.patch"/>
+                <file src="patches/disable-broken-Wabi.patch"/>
+                <file src="patches/disable-Werror.patch"/>
             </patchset>
         </patches>
 
