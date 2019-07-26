@@ -20,19 +20,9 @@
         </description>
 
         <sources>
-            <file src="xz-utils-5.2.2.tar.xz" subdir="sources"
-                sha256sum="f341b1906ebcdde291dd619399ae944600edc9193619dd0c0110a5f05bfcc89e"/>
-            <file src="patches.1.2.tar.gz" subdir="patches"
-                sha256sum="58a981d168ec36cf84821f2d49f2a98b28c8661d8e5d88de10836979bc18e923"/>
+            <file src="xz-utils-5.2.4.tar.xz" subdir="sources"
+                sha256sum="9717ae363760dedf573dad241420c5fea86256b65bc21d2cf71b2b12f0544f4b"/>
         </sources>
-        
-        <patches>
-            <patchset subdir="sources">
-                <file src="patches/liblzma-skip-ABI-incompatible-check-when-liblzma.so.patch"/>
-                <file src="patches/liblzma-make-dlopen-based-liblzma2-compatibility-opt.patch"/>
-                <file src="patches/kfreebsd-link-against-libfreebsd-glue.patch"/>
-            </patchset>
-        </patches>
 
         <requires>
             <package name="autoconf" version=">= 2.64~"/>
