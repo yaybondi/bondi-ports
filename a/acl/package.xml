@@ -10,19 +10,20 @@
         </description>
 
         <sources>
-            <file src="acl-2.2.52.tar.bz2" subdir="sources"
-                sha256sum="59d05b38af76baf2eddccbf08c7968a17451cc785ffecc657fcb46ce32b2631d"/>
-            <file src="patches.03.tar.gz" subdir="patches"
-                sha256sum="84c3a1196c792bcd93fe73df6a44ae1986b2c6a89ae3426045a130d846047b70"/>
+            <file src="acl-2.2.53.tar.gz" subdir="sources"
+                sha256sum="06be9865c6f418d851ff4494e12406568353b891ffe1f596b34693c387af26c7"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="c802c523f51303b3fd8a885a7b3c8d4ceb55fe394ce9c72266f8a743b7940d43"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
-                <file src="patches/01-configure.in.patch"/>
-                <file src="patches/02-687535-fix-missing-ldflags.patch"/>
-                <file src="patches/10-590240-move-binaries-to-root-bin-dir.patch"/>
-                <file src="patches/11-636512-fix-ftbfs4hurd.patch"/>
-                <file src="patches/12-643588-acl-autoconf-version-check.patch"/>
+                <file src="patches/build-no-PATH_MAX.patch"/>
+                <file src="patches/build-require-autoconf-version.patch"/>
+                <file src="patches/build-define-ENODATA.patch"/>
+                <file src="patches/man-fix-typos.patch"/>
+                <file src="patches/man-ref-mount.patch"/>
+                <file src="patches/man-setfacl-restore-stdin.patch"/>
             </patchset>
         </patches>
 
