@@ -23,22 +23,27 @@
         </description>
 
         <sources>
-            <file src="attr-2.4.47.tar.bz2" subdir="sources"
-                sha256sum="6c1208035757f5ce9b516402dd45b8299a53ae4d69ad2c352116f9cb8d7bc274"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="e27f4a1e8e717d5620f9e5ebaade37007f47435918d7c6955b7a5f58223d83fc"/>
-            <file src="patches.bolt.tar.gz" subdir="patches"
-                sha256sum="1f9073fe437b1f5e3dc8afa53c39ab1c6355c9a53b31bdbb6efff2fccdeb66da"/>
+            <file src="attr-2.4.48.tar.gz" subdir="sources"
+                sha256sum="5ead72b358ec709ed00bbf7a9eaef1654baad937c001c044fe8b74c57f5324e7"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="8f5c1ce51e941684241b19191df7ba2dd0d4af5126cf5101e1158f6b87c6fcf2"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
-                <!-- Debian -->
-                <file src="patches/01-configure.in.patch"/>
-                <file src="patches/02-687531-fix-missing-ldflags.patch"/>
-                <file src="patches/12-643587-attr-autoconf-version-check.patch"/>
-                <!-- Bolt OS -->
-                <file src="patches/fix-cdecls-throw-in-xattr-h.patch"/>
+                <file src="patches/0001-test-escape-left-brace-in-a-regex-in-test-run.patch"/>
+                <file src="patches/0002-man-fix-bold-style-in-SEE-ALSO-section.patch"/>
+                <file src="patches/0003-man-standardize-AUTHORS-section.patch"/>
+                <file src="patches/0004-Enable-large-file-support-on-systems-that-do-not-ena.patch"/>
+                <file src="patches/0005-getfattr.1-by-default-only-user-namespace-attributes.patch"/>
+                <file src="patches/0006-attr_list.3-Fix-the-attributes.h-include-path.patch"/>
+                <file src="patches/0007-Switch-back-to-syscall.patch"/>
+                <file src="patches/0008-attr_multi-attr_multif-Don-t-set-errno-to-EINVAL.patch"/>
+                <file src="patches/0009-attr_list-attr_listf-Guard-against-unterminated-buff.patch"/>
+                <file src="patches/build-require-autoconf-version.patch"/>
+                <file src="patches/syscalls-linux.patch"/>
+                <file src="patches/compat-xattr-header.patch"/>
+                <file src="patches/man-pages-typo-fixes.patch"/>
             </patchset>
         </patches>
 
