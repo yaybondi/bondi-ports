@@ -21,15 +21,15 @@
         </description>
 
         <sources>
-            <file src="make-dfsg-4.1.tar.gz" subdir="sources"
-                sha256sum="b3ed04fb6718289e4a430afbe2df6ecba9177aad9f6d09aaf38e5409262ca8a3"/>
-            <file src="patches.9.1.tar.gz" subdir="patches"
-                sha256sum="228c0a6719791dd7fe0e8106947714ca506df17a353040731dc4eaf605d24431"/>
+            <file src="make-dfsg-4.2.1.tar.gz" subdir="sources"
+                sha256sum="480405e8995796ea47cc54b281b7855280f0d815d296a1af1993eeeb72074e39"/>
+            <file src="make-dfsg-4.2.1-1.2.debdiff.gz" subdir="patches"
+                sha256sum="80e0b96cee381391a5d3322317075e23d8474c92c5fa4fecd334bc2e0920887b"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/make-dfsg_4.1-9.1.diff"/>
+                <file src="patches/make-dfsg-4.2.1-1.2.debdiff"/>
             </patchset>
         </patches>
 
