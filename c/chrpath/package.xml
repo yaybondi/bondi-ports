@@ -17,9 +17,15 @@
         <sources>
             <file src="chrpath-0.16.tar.gz" subdir="sources"
                 sha256sum="bb0d4c54bac2990e1bdf8132f2c9477ae752859d523e141e72b3b11a12c26e7b"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="c536fef77987e87bced924ca5b27bff46d976dcafb2197dd68c9ab88bcc34a49"/>
+            <file src="chrpath-0.16-2.debdiff.gz" subdir="patches"
+                sha256sum="c4cf462fe0b88683ba81183bc1e6f73c58d371b2add8af163e1d432d59115669"/>
         </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/chrpath-0.16-2.debdiff"/>
+            </patchset>
+        </patches>
 
         <requires>
             <package name="autotools-dev"/>
