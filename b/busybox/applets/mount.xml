@@ -6,12 +6,15 @@
             This package contains the symbolic links for the following applets:
         </p>
         <ul>
+            <li>mount</li>
+            <li>umount</li>
             <li>losetup</li>
+            <li>swapoff</li>
+            <li>swapon</li>
         </ul>
     </description>
 
     <requires>
-        <package name="base-files"/>
         <package name="busybox"/>
     </requires>
 
@@ -24,6 +27,10 @@
     </replaces>
 
     <contents>
+        <file src="${prefix}/bin/mount"/>
+        <file src="${prefix}/bin/umount"/>
         <file src="${prefix}/sbin/losetup"/>
+        <file src="${prefix}/sbin/swapoff"/>
+        <file src="${prefix}/sbin/swapon"/>
     </contents>
 </package>

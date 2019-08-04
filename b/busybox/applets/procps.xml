@@ -15,12 +15,12 @@
             <li>pwdx</li>
             <li>top</li>
             <li>uptime</li>
+            <li>w</li>
             <li>watch</li>
         </ul>
     </description>
 
     <requires>
-        <package name="base-files"/>
         <package name="busybox"/>
     </requires>
 
@@ -42,6 +42,7 @@
         <file src="${prefix}/bin/pwdx"/>
         <file src="${prefix}/bin/top"/>
         <file src="${prefix}/bin/uptime"/>
+        <file src="${prefix}/bin/w"/>
         <file src="${prefix}/bin/watch"/>
     </contents>
 </package>

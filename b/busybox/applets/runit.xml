@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-runit-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the runit package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>chpst</li>
+            <li>runsv</li>
+            <li>runsvdir</li>
+            <li>sv</li>
+            <li>svlogd</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="runit"/>
+    </conflicts>
+
+    <replaces>
+        <package name="runit"/>
+    </replaces>
+
+    <contents>
+        <file src="${prefix}/bin/chpst"/>
+        <file src="${prefix}/bin/runsv"/>
+        <file src="${prefix}/bin/runsvdir"/>
+        <file src="${prefix}/bin/sv"/>
+        <file src="${prefix}/sbin/svlogd"/>
+    </contents>
+</package>

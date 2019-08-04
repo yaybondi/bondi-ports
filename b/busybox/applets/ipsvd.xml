@@ -7,11 +7,11 @@
         </p>
         <ul>
             <li>tcpsvd</li>
+            <li>udpsvd</li>
         </ul>
     </description>
 
     <requires>
-        <package name="base-files"/>
         <package name="busybox"/>
     </requires>
 
@@ -25,5 +25,6 @@
 
     <contents>
         <file src="${prefix}/bin/tcpsvd"/>
+        <file src="${prefix}/bin/udpsvd"/>
     </contents>
 </package>

@@ -7,12 +7,11 @@
         </p>
         <ul>
             <li>login</li>
-            <li>su</li>
+            <li>nologin</li>
         </ul>
     </description>
 
     <requires>
-        <package name="base-files"/>
         <package name="busybox"/>
     </requires>
 
@@ -26,6 +25,6 @@
 
     <contents>
         <file src="${prefix}/bin/login"/>
-        <file src="${prefix}/bin/su"/>
+        <file src="${prefix}/sbin/nologin"/>
     </contents>
 </package>

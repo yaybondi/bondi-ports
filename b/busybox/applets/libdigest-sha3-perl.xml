@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="busybox-netcat-symlinks" section="admin">
+<package name="busybox-libdigest-sha3-perl-symlinks" section="admin">
     <description>
-        <summary>Substitutes for (some) programs from the netcat-traditional package</summary>
+        <summary>Substitutes for (some) programs from the libdigest-sha3-perl package</summary>
         <p>
             This package contains the symbolic links for the following applets:
         </p>
         <ul>
-            <li>nc</li>
+            <li>sha3sum</li>
         </ul>
     </description>
 
     <requires>
-        <package name="base-files"/>
         <package name="busybox"/>
     </requires>
 
     <conflicts>
-        <package name="netcat-traditional"/>
+        <package name="libdigest-sha3-perl"/>
     </conflicts>
 
     <replaces>
-        <package name="netcat-traditional"/>
+        <package name="libdigest-sha3-perl"/>
     </replaces>
 
     <contents>
-        <file src="${prefix}/bin/nc"/>
+        <file src="${prefix}/bin/sha3sum"/>
     </contents>
 </package>

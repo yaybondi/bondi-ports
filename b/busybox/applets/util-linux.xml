@@ -6,22 +6,33 @@
             This package contains the symbolic links for the following applets:
         </p>
         <ul>
+            <li>blkdiscard</li>
             <li>chrt</li>
             <li>dmesg</li>
+            <li>fallocate</li>
             <li>flock</li>
             <li>getopt</li>
             <li>ionice</li>
             <li>ipcrm</li>
             <li>ipcs</li>
             <li>last</li>
+            <li>linux32</li>
+            <li>linux64</li>
             <li>more</li>
             <li>mountpoint</li>
+            <li>nsenter</li>
             <li>rev</li>
+            <li>setarch</li>
+            <li>setpriv</li>
             <li>setsid</li>
+            <li>su</li>
             <li>taskset</li>
+            <li>unshare</li>
             <li>blkid</li>
             <li>blockdev</li>
+            <li>fdformat</li>
             <li>findfs</li>
+            <li>fsfreeze</li>
             <li>fstrim</li>
             <li>getty</li>
             <li>hwclock</li>
@@ -35,7 +46,6 @@
     </description>
 
     <requires>
-        <package name="base-files"/>
         <package name="busybox"/>
     </requires>
 
@@ -48,22 +58,33 @@
     </replaces>
 
     <contents>
+        <file src="${prefix}/bin/blkdiscard"/>
         <file src="${prefix}/bin/chrt"/>
         <file src="${prefix}/bin/dmesg"/>
+        <file src="${prefix}/bin/fallocate"/>
         <file src="${prefix}/bin/flock"/>
         <file src="${prefix}/bin/getopt"/>
         <file src="${prefix}/bin/ionice"/>
         <file src="${prefix}/bin/ipcrm"/>
         <file src="${prefix}/bin/ipcs"/>
         <file src="${prefix}/bin/last"/>
+        <file src="${prefix}/bin/linux32"/>
+        <file src="${prefix}/bin/linux64"/>
         <file src="${prefix}/bin/more"/>
         <file src="${prefix}/bin/mountpoint"/>
+        <file src="${prefix}/bin/nsenter"/>
         <file src="${prefix}/bin/rev"/>
+        <file src="${prefix}/bin/setarch"/>
+        <file src="${prefix}/bin/setpriv"/>
         <file src="${prefix}/bin/setsid"/>
+        <file src="${prefix}/bin/su"/>
         <file src="${prefix}/bin/taskset"/>
+        <file src="${prefix}/bin/unshare"/>
         <file src="${prefix}/sbin/blkid"/>
         <file src="${prefix}/sbin/blockdev"/>
+        <file src="${prefix}/sbin/fdformat"/>
         <file src="${prefix}/sbin/findfs"/>
+        <file src="${prefix}/sbin/fsfreeze"/>
         <file src="${prefix}/sbin/fstrim"/>
         <file src="${prefix}/sbin/getty"/>
         <file src="${prefix}/sbin/hwclock"/>

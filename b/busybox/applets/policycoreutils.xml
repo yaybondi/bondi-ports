@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-policycoreutils-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the policycoreutils package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>load_policy</li>
+            <li>restorecon</li>
+            <li>sestatus</li>
+            <li>setfiles</li>
+            <li>setsebool</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="policycoreutils"/>
+    </conflicts>
+
+    <replaces>
+        <package name="policycoreutils"/>
+    </replaces>
+
+    <contents>
+        <file src="${prefix}/sbin/load_policy"/>
+        <file src="${prefix}/sbin/restorecon"/>
+        <file src="${prefix}/sbin/sestatus"/>
+        <file src="${prefix}/sbin/setfiles"/>
+        <file src="${prefix}/sbin/setsebool"/>
+    </contents>
+</package>

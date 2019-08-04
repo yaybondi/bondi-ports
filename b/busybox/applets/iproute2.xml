@@ -7,11 +7,16 @@
         </p>
         <ul>
             <li>ip</li>
+            <li>tc</li>
+            <li>ipaddr</li>
+            <li>iplink</li>
+            <li>ipneigh</li>
+            <li>iproute</li>
+            <li>iprule</li>
         </ul>
     </description>
 
     <requires>
-        <package name="base-files"/>
         <package name="busybox"/>
     </requires>
 
@@ -25,5 +30,11 @@
 
     <contents>
         <file src="${prefix}/sbin/ip"/>
+        <file src="${prefix}/sbin/tc"/>
+        <file src="${prefix}/sbin/ipaddr"/>
+        <file src="${prefix}/sbin/iplink"/>
+        <file src="${prefix}/sbin/ipneigh"/>
+        <file src="${prefix}/sbin/iproute"/>
+        <file src="${prefix}/sbin/iprule"/>
     </contents>
 </package>

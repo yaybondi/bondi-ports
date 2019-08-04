@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-vim-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the vim package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>vi</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="vim"/>
+    </conflicts>
+
+    <replaces>
+        <package name="vim"/>
+    </replaces>
+
+    <contents>
+        <file src="${prefix}/bin/vi"/>
+    </contents>
+</package>

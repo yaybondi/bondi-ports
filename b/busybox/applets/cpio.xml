@@ -6,12 +6,12 @@
             This package contains the symbolic links for the following applets:
         </p>
         <ul>
+            <li>cpio</li>
             <li>mt</li>
         </ul>
     </description>
 
     <requires>
-        <package name="base-files"/>
         <package name="busybox"/>
     </requires>
 
@@ -24,6 +24,7 @@
     </replaces>
 
     <contents>
+        <file src="${prefix}/bin/cpio"/>
         <file src="${prefix}/bin/mt"/>
     </contents>
 </package>

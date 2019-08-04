@@ -6,11 +6,13 @@
             This package contains the symbolic links for the following applets:
         </p>
         <ul>
-            <li>[</li>
-            <li>[[</li>
+            <li>bin/[</li>
+            <li>bin/[[</li>
+            <li>arch</li>
             <li>base64</li>
             <li>basename</li>
             <li>cat</li>
+            <li>chcon</li>
             <li>chgrp</li>
             <li>chmod</li>
             <li>chown</li>
@@ -27,6 +29,7 @@
             <li>env</li>
             <li>expand</li>
             <li>expr</li>
+            <li>factor</li>
             <li>false</li>
             <li>fold</li>
             <li>groups</li>
@@ -34,6 +37,7 @@
             <li>hostid</li>
             <li>id</li>
             <li>install</li>
+            <li>link</li>
             <li>ln</li>
             <li>logname</li>
             <li>ls</li>
@@ -44,8 +48,12 @@
             <li>mktemp</li>
             <li>mv</li>
             <li>nice</li>
+            <li>nl</li>
             <li>nohup</li>
+            <li>nproc</li>
+            <li>nuke</li>
             <li>od</li>
+            <li>paste</li>
             <li>printenv</li>
             <li>printf</li>
             <li>pwd</li>
@@ -53,10 +61,13 @@
             <li>realpath</li>
             <li>rm</li>
             <li>rmdir</li>
+            <li>runcon</li>
             <li>seq</li>
             <li>sha1sum</li>
             <li>sha256sum</li>
             <li>sha512sum</li>
+            <li>shred</li>
+            <li>shuf</li>
             <li>sleep</li>
             <li>sort</li>
             <li>split</li>
@@ -72,11 +83,14 @@
             <li>touch</li>
             <li>tr</li>
             <li>true</li>
+            <li>truncate</li>
             <li>tty</li>
             <li>uname</li>
             <li>unexpand</li>
             <li>uniq</li>
+            <li>unlink</li>
             <li>users</li>
+            <li>usleep</li>
             <li>wc</li>
             <li>who</li>
             <li>whoami</li>
@@ -86,7 +100,6 @@
     </description>
 
     <requires>
-        <package name="base-files"/>
         <package name="busybox"/>
     </requires>
 
@@ -99,9 +112,13 @@
     </replaces>
 
     <contents>
+        <file src="${prefix}/bin/["/>
+        <file src="${prefix}/bin/[["/>
+        <file src="${prefix}/bin/arch"/>
         <file src="${prefix}/bin/base64"/>
         <file src="${prefix}/bin/basename"/>
         <file src="${prefix}/bin/cat"/>
+        <file src="${prefix}/bin/chcon"/>
         <file src="${prefix}/bin/chgrp"/>
         <file src="${prefix}/bin/chmod"/>
         <file src="${prefix}/bin/chown"/>
@@ -118,6 +135,7 @@
         <file src="${prefix}/bin/env"/>
         <file src="${prefix}/bin/expand"/>
         <file src="${prefix}/bin/expr"/>
+        <file src="${prefix}/bin/factor"/>
         <file src="${prefix}/bin/false"/>
         <file src="${prefix}/bin/fold"/>
         <file src="${prefix}/bin/groups"/>
@@ -125,6 +143,7 @@
         <file src="${prefix}/bin/hostid"/>
         <file src="${prefix}/bin/id"/>
         <file src="${prefix}/bin/install"/>
+        <file src="${prefix}/bin/link"/>
         <file src="${prefix}/bin/ln"/>
         <file src="${prefix}/bin/logname"/>
         <file src="${prefix}/bin/ls"/>
@@ -135,8 +154,12 @@
         <file src="${prefix}/bin/mktemp"/>
         <file src="${prefix}/bin/mv"/>
         <file src="${prefix}/bin/nice"/>
+        <file src="${prefix}/bin/nl"/>
         <file src="${prefix}/bin/nohup"/>
+        <file src="${prefix}/bin/nproc"/>
+        <file src="${prefix}/bin/nuke"/>
         <file src="${prefix}/bin/od"/>
+        <file src="${prefix}/bin/paste"/>
         <file src="${prefix}/bin/printenv"/>
         <file src="${prefix}/bin/printf"/>
         <file src="${prefix}/bin/pwd"/>
@@ -144,10 +167,13 @@
         <file src="${prefix}/bin/realpath"/>
         <file src="${prefix}/bin/rm"/>
         <file src="${prefix}/bin/rmdir"/>
+        <file src="${prefix}/bin/runcon"/>
         <file src="${prefix}/bin/seq"/>
         <file src="${prefix}/bin/sha1sum"/>
         <file src="${prefix}/bin/sha256sum"/>
         <file src="${prefix}/bin/sha512sum"/>
+        <file src="${prefix}/bin/shred"/>
+        <file src="${prefix}/bin/shuf"/>
         <file src="${prefix}/bin/sleep"/>
         <file src="${prefix}/bin/sort"/>
         <file src="${prefix}/bin/split"/>
@@ -163,11 +189,14 @@
         <file src="${prefix}/bin/touch"/>
         <file src="${prefix}/bin/tr"/>
         <file src="${prefix}/bin/true"/>
+        <file src="${prefix}/bin/truncate"/>
         <file src="${prefix}/bin/tty"/>
         <file src="${prefix}/bin/uname"/>
         <file src="${prefix}/bin/unexpand"/>
         <file src="${prefix}/bin/uniq"/>
+        <file src="${prefix}/bin/unlink"/>
         <file src="${prefix}/bin/users"/>
+        <file src="${prefix}/bin/usleep"/>
         <file src="${prefix}/bin/wc"/>
         <file src="${prefix}/bin/who"/>
         <file src="${prefix}/bin/whoami"/>

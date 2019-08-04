@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="busybox-rfkill-symlinks" section="admin">
+<package name="busybox-openbsd-inetd-symlinks" section="admin">
     <description>
-        <summary>Substitutes for (some) programs from the rfkill package</summary>
+        <summary>Substitutes for (some) programs from the openbsd-inetd package</summary>
         <p>
             This package contains the symbolic links for the following applets:
         </p>
         <ul>
-            <li>rfkill</li>
+            <li>inetd</li>
         </ul>
     </description>
 
     <requires>
-        <package name="base-files"/>
         <package name="busybox"/>
     </requires>
 
     <conflicts>
-        <package name="rfkill"/>
+        <package name="openbsd-inetd"/>
     </conflicts>
 
     <replaces>
-        <package name="rfkill"/>
+        <package name="openbsd-inetd"/>
     </replaces>
 
     <contents>
-        <file src="${prefix}/sbin/rfkill"/>
+        <file src="${prefix}/sbin/inetd"/>
     </contents>
 </package>

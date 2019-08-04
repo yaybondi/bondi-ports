@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-i2c-tools-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the i2c-tools package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>i2cdetect</li>
+            <li>i2cdump</li>
+            <li>i2cget</li>
+            <li>i2cset</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="i2c-tools"/>
+    </conflicts>
+
+    <replaces>
+        <package name="i2c-tools"/>
+    </replaces>
+
+    <contents>
+        <file src="${prefix}/sbin/i2cdetect"/>
+        <file src="${prefix}/sbin/i2cdump"/>
+        <file src="${prefix}/sbin/i2cget"/>
+        <file src="${prefix}/sbin/i2cset"/>
+    </contents>
+</package>

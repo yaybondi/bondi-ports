@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="busybox-vi-symlinks" section="admin">
+<package name="busybox-patch-symlinks" section="admin">
     <description>
-        <summary>Substitutes for (some) programs from the vi(m) packages</summary>
+        <summary>Substitutes for (some) programs from the patch package</summary>
         <p>
             This package contains the symbolic links for the following applets:
         </p>
         <ul>
-            <li>vi</li>
+            <li>patch</li>
         </ul>
     </description>
 
     <requires>
-        <package name="base-files"/>
         <package name="busybox"/>
     </requires>
 
     <conflicts>
-        <package name="vim-nox"/>
+        <package name="patch"/>
     </conflicts>
 
     <replaces>
-        <package name="vim-nox"/>
+        <package name="patch"/>
     </replaces>
 
     <contents>
-        <file src="${prefix}/bin/vi"/>
+        <file src="${prefix}/bin/patch"/>
     </contents>
 </package>

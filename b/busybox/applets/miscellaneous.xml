@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="busybox-misc-symlinks" section="admin">
+<package name="busybox-miscellaneous-symlinks" section="admin">
     <description>
-        <summary>Uncategorized busybox symlinks</summary>
+        <summary>Substitutes for (some) programs from the miscellaneous package</summary>
         <p>
             This package contains the symbolic links for the following applets:
         </p>
         <ul>
-            <li>catv</li>
             <li>cryptpw</li>
             <li>cttyhack</li>
             <li>dumpkmap</li>
+            <li>fdflush</li>
             <li>fsync</li>
             <li>ftpget</li>
             <li>ftpput</li>
             <li>nmeter</li>
-            <li>pipe_progress</li>
+            <li>resume</li>
+            <li>ssl_client</li>
             <li>ttysize</li>
             <li>udhcpc6</li>
-            <li>usleep</li>
             <li>crond</li>
             <li>devmem</li>
             <li>dhcprelay</li>
@@ -26,43 +26,39 @@
             <li>fakeidentd</li>
             <li>fbsplash</li>
             <li>httpd</li>
-            <li>inotifyd</li>
-            <li>ipaddr</li>
-            <li>iplink</li>
-            <li>iproute</li>
-            <li>iprule</li>
             <li>loadfont</li>
             <li>loadkmap</li>
             <li>makedevs</li>
+            <li>mdev</li>
+            <li>popmaildir</li>
             <li>raidautorun</li>
             <li>rdev</li>
             <li>readahead</li>
+            <li>run-init</li>
             <li>setconsole</li>
             <li>tftpd</li>
+            <li>uevent</li>
             <li>zcip</li>
         </ul>
     </description>
 
     <requires>
-        <package name="base-files"/>
         <package name="busybox"/>
     </requires>
 
     <contents>
-        <file src="${prefix}/bin/["/>
-        <file src="${prefix}/bin/[["/>
-        <file src="${prefix}/bin/catv"/>
         <file src="${prefix}/bin/cryptpw"/>
         <file src="${prefix}/bin/cttyhack"/>
         <file src="${prefix}/bin/dumpkmap"/>
+        <file src="${prefix}/bin/fdflush"/>
         <file src="${prefix}/bin/fsync"/>
         <file src="${prefix}/bin/ftpget"/>
         <file src="${prefix}/bin/ftpput"/>
         <file src="${prefix}/bin/nmeter"/>
-        <file src="${prefix}/bin/pipe_progress"/>
+        <file src="${prefix}/bin/resume"/>
+        <file src="${prefix}/bin/ssl_client"/>
         <file src="${prefix}/bin/ttysize"/>
         <file src="${prefix}/bin/udhcpc6"/>
-        <file src="${prefix}/bin/usleep"/>
         <file src="${prefix}/sbin/crond"/>
         <file src="${prefix}/sbin/devmem"/>
         <file src="${prefix}/sbin/dhcprelay"/>
@@ -71,19 +67,18 @@
         <file src="${prefix}/sbin/fakeidentd"/>
         <file src="${prefix}/sbin/fbsplash"/>
         <file src="${prefix}/sbin/httpd"/>
-        <file src="${prefix}/sbin/inotifyd"/>
-        <file src="${prefix}/sbin/ipaddr"/>
-        <file src="${prefix}/sbin/iplink"/>
-        <file src="${prefix}/sbin/iproute"/>
-        <file src="${prefix}/sbin/iprule"/>
         <file src="${prefix}/sbin/loadfont"/>
         <file src="${prefix}/sbin/loadkmap"/>
         <file src="${prefix}/sbin/makedevs"/>
+        <file src="${prefix}/sbin/mdev"/>
+        <file src="${prefix}/sbin/popmaildir"/>
         <file src="${prefix}/sbin/raidautorun"/>
         <file src="${prefix}/sbin/rdev"/>
         <file src="${prefix}/sbin/readahead"/>
+        <file src="${prefix}/sbin/run-init"/>
         <file src="${prefix}/sbin/setconsole"/>
         <file src="${prefix}/sbin/tftpd"/>
+        <file src="${prefix}/sbin/uevent"/>
         <file src="${prefix}/sbin/zcip"/>
     </contents>
 </package>

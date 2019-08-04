@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-gzip-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the gzip package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>gunzip</li>
+            <li>gzip</li>
+            <li>zcat</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="gzip"/>
+    </conflicts>
+
+    <replaces>
+        <package name="gzip"/>
+    </replaces>
+
+    <contents>
+        <file src="${prefix}/bin/gunzip"/>
+        <file src="${prefix}/bin/gzip"/>
+        <file src="${prefix}/bin/zcat"/>
+    </contents>
+</package>

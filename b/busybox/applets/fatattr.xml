@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-fatattr-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the fatattr package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>fatattr</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="fatattr"/>
+    </conflicts>
+
+    <replaces>
+        <package name="fatattr"/>
+    </replaces>
+
+    <contents>
+        <file src="${prefix}/bin/fatattr"/>
+    </contents>
+</package>

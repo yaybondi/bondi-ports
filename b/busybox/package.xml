@@ -19,40 +19,29 @@
         </description>
 
         <sources>
-            <file src="busybox-1.22.0.tar.bz2" subdir="sources"
-                sha256sum="92f00cd391b7d5fa2215c8450abe2ba15f9d16c226e8855fb21b6c9a5b723a53"/>
-            <file src="debian.19.tar.gz" subdir="patches"
-                sha256sum="f0cd9e113f3281b9586d02eea1f42a822dd5f26a89acb0b58d84b898cbc1cdd4"/>
-            <file src="bolt.2.tar.gz" subdir="patches"
-                sha256sum="1e972d5f2998d2038195864f4fee60bf1b4425872b0df8ef71ec8c2637dca37a"/>
+            <file src="busybox-1.30.1.tar.bz2" subdir="sources"
+                sha256sum="3d1d04a4dbd34048f4794815a5c48ebb9eb53c5277e09ffffc060323b95dfbdc"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="8cc7ddda0b5e034e70fbd4e4da13ee031807be7b64ab638f93ac779ae5db051e"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
+                sha256sum="7a4bb606827c2c68a7d7416862a72bb886fd087db2fc01e982e2bc42c9a59c4f"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <!-- Debian -->
-                <file src="patches/1.22.1.diff"/>
-                <file src="patches/ash-in-bash-compat-mode-always-export-SHLVL.diff"/>
-                <file src="patches/libbb-fix-parsing-of-10101010-datetime-form.diff"/>
-                <file src="patches/testsuite-fix-last-which-change.diff"/>
-                <file src="patches/libarchive-open_zipped-does-not-need-to-check-extensions.diff"/>
-                <file src="patches/libbb-open_zipped-should-not-fail-on-non-compressed-files.diff"/>
-                <file src="patches/zcat:-complain-if-input-is-not-compressed.diff"/>
-                <file src="patches/lzop-add-overflow-check-CVE-2014-4607.patch"/>
-                <file src="patches/do-not-fail-on-missing-SIGPWR.patch"/>
-                <file src="patches/find:-support-perm-_BITS.diff"/>
+                <file src="patches/cherry-pick.1_30_0-35-g74d9f1ba3.udhcpc-when-decoding-dhcp-subnet-ensure-it-is-4-bytes-long.patch"/>
+                <file src="patches/cherry-pick.1_30_0-110-gbb3a9531b.ip-fix-ip-o-link.patch"/>
+                <file src="patches/u-mount-FreeBSD-support.patch"/>
+                <file src="patches/swaponoff-FreeBSD-support.patch"/>
                 <file src="patches/shell-ash-export-HOME.patch"/>
                 <file src="patches/version.patch"/>
                 <file src="patches/init-console.patch"/>
-                <file src="patches/u-mount-FreeBSD-support.patch"/>
-                <file src="patches/swaponoff-FreeBSD-support.patch"/>
-                <file src="patches/modprobe-read-modules-builtin.patch"/>
                 <file src="patches/stop-checking-ancient-kernel-version.patch"/>
-                <file src="patches/iproute-support-onelink-route-option-and-print-route-flags.patch"/>
-                <file src="patches/update-deb-format-support.patch"/>
-                <file src="patches/CVE-2014-9645.patch"/>
-                <!-- Bolt OS -->
-                <file src="patches/ifplugd-no-ethernet-h.patch"/>
-                <file src="patches/no-getpwent-r.patch"/>
+                <file src="patches/revert-9c143ce52da11ec3d21a3491c3749841d3dc10f0.patch"/>
+                <file src="patches/temp-deb-installer-hack.patch"/>
+                <file src="patches/install-readlink-in-bin.patch"/>
+                <file src="patches/ignore-ip-valid_lft.patch"/>
             </patchset>
         </patches>
 
@@ -65,21 +54,28 @@
 
     <xi:include href="busybox.xml"/>
 
+    <xi:include href="applets/acpid.xml"/>
     <xi:include href="applets/adduser.xml"/>
     <xi:include href="applets/adjtimex.xml"/>
     <xi:include href="applets/arping.xml"/>
     <xi:include href="applets/ash.xml"/>
+    <xi:include href="applets/attr.xml"/>
     <xi:include href="applets/bash.xml"/>
+    <xi:include href="applets/bcron.xml"/>
+    <xi:include href="applets/bc.xml"/>
     <xi:include href="applets/beep.xml"/>
-    <xi:include href="applets/binutils.xml"/>
+    <xi:include href="applets/binutils-multiarch.xml"/>
     <xi:include href="applets/bridge-utils.xml"/>
     <xi:include href="applets/bsdmainutils.xml"/>
     <xi:include href="applets/bsdutils.xml"/>
-    <xi:include href="applets/busybox-syslogd.xml"/>
+    <xi:include href="applets/busybox-all-symlinks.xml"/>
+    <xi:include href="applets/bzip2.xml"/>
+    <xi:include href="applets/citadel-server.xml"/>
     <xi:include href="applets/conspy.xml"/>
     <xi:include href="applets/coreutils.xml"/>
     <xi:include href="applets/cpio.xml"/>
-    <xi:include href="applets/cron.xml"/>
+    <xi:include href="applets/daemontools.xml"/>
+    <xi:include href="applets/dash.xml"/>
     <xi:include href="applets/dc.xml"/>
     <xi:include href="applets/debianutils.xml"/>
     <xi:include href="applets/diffutils.xml"/>
@@ -87,48 +83,64 @@
     <xi:include href="applets/dos2unix.xml"/>
     <xi:include href="applets/ed.xml"/>
     <xi:include href="applets/eject.xml"/>
+    <xi:include href="applets/fatattr.xml"/>
     <xi:include href="applets/fbset.xml"/>
     <xi:include href="applets/findutils.xml"/>
-    <xi:include href="applets/awk.xml"/>
+    <xi:include href="applets/gawk.xml"/>
     <xi:include href="applets/grep.xml"/>
+    <xi:include href="applets/gzip.xml"/>
+    <xi:include href="applets/hexedit.xml"/>
     <xi:include href="applets/hostname.xml"/>
+    <xi:include href="applets/i2c-tools.xml"/>
     <xi:include href="applets/ifenslave.xml"/>
     <xi:include href="applets/ifplugd.xml"/>
     <xi:include href="applets/ifupdown.xml"/>
+    <xi:include href="applets/inetutils-ftpd.xml"/>
     <xi:include href="applets/inetutils-ping.xml"/>
+    <xi:include href="applets/inetutils-telnetd.xml"/>
     <xi:include href="applets/ipcalc.xml"/>
     <xi:include href="applets/iproute2.xml"/>
     <xi:include href="applets/ipsvd.xml"/>
     <xi:include href="applets/kbd.xml"/>
     <xi:include href="applets/kmod.xml"/>
     <xi:include href="applets/less.xml"/>
+    <xi:include href="applets/libdigest-sha3-perl.xml"/>
     <xi:include href="applets/loadlin.xml"/>
     <xi:include href="applets/login.xml"/>
     <xi:include href="applets/lrzsz.xml"/>
     <xi:include href="applets/lsof.xml"/>
+    <xi:include href="applets/lsscsi.xml"/>
+    <xi:include href="applets/maildrop.xml"/>
     <xi:include href="applets/microcom.xml"/>
-    <xi:include href="applets/misc.xml"/>
+    <xi:include href="applets/miscellaneous.xml"/>
+    <xi:include href="applets/molly-guard.xml"/>
     <xi:include href="applets/mount.xml"/>
     <xi:include href="applets/mtd-utils.xml"/>
     <xi:include href="applets/nbd-client.xml"/>
     <xi:include href="applets/ncurses-bin.xml"/>
-    <xi:include href="applets/netcat.xml"/>
+    <xi:include href="applets/netcat-traditional.xml"/>
     <xi:include href="applets/net-tools.xml"/>
     <xi:include href="applets/ntp.xml"/>
+    <xi:include href="applets/openbsd-inetd.xml"/>
+    <xi:include href="applets/orville-write.xml"/>
+    <xi:include href="applets/parted.xml"/>
     <xi:include href="applets/passwd.xml"/>
+    <xi:include href="applets/patch.xml"/>
     <xi:include href="applets/pciutils.xml"/>
+    <xi:include href="applets/policycoreutils.xml"/>
     <xi:include href="applets/powertop.xml"/>
     <xi:include href="applets/procps.xml"/>
     <xi:include href="applets/pscan.xml"/>
     <xi:include href="applets/psmisc.xml"/>
     <xi:include href="applets/rdate.xml"/>
-    <xi:include href="applets/rfkill.xml"/>
     <xi:include href="applets/runit-init.xml"/>
+    <xi:include href="applets/runit.xml"/>
     <xi:include href="applets/sed.xml"/>
+    <xi:include href="applets/selinux-utils.xml"/>
     <xi:include href="applets/setserial.xml"/>
-    <xi:include href="applets/sha3.xml"/>
     <xi:include href="applets/sharutils.xml"/>
     <xi:include href="applets/smemcap.xml"/>
+    <xi:include href="applets/syslogd.xml"/>
     <xi:include href="applets/sysstat.xml"/>
     <xi:include href="applets/sysvinit-utils.xml"/>
     <xi:include href="applets/telnet.xml"/>
@@ -138,15 +150,18 @@
     <xi:include href="applets/udhcpc.xml"/>
     <xi:include href="applets/udhcpd.xml"/>
     <xi:include href="applets/uml-utilities.xml"/>
+    <xi:include href="applets/unzip.xml"/>
     <xi:include href="applets/usbutils.xml"/>
     <xi:include href="applets/util-linux.xml"/>
-    <xi:include href="applets/vi.xml"/>
+    <xi:include href="applets/vim.xml"/>
     <xi:include href="applets/vlan.xml"/>
     <xi:include href="applets/vlock.xml"/>
     <xi:include href="applets/watchdog.xml"/>
     <xi:include href="applets/wget.xml"/>
     <xi:include href="applets/whois.xml"/>
     <xi:include href="applets/xterm.xml"/>
+    <xi:include href="applets/xxd.xml"/>
+    <xi:include href="applets/xz-utils.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>

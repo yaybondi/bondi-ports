@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="busybox-awk-symlinks" section="admin">
+<package name="busybox-gawk-symlinks" section="admin">
     <description>
         <summary>Substitutes for (some) programs from the gawk package</summary>
         <p>
@@ -11,9 +11,16 @@
     </description>
 
     <requires>
-        <package name="base-files"/>
         <package name="busybox"/>
     </requires>
+
+    <conflicts>
+        <package name="gawk"/>
+    </conflicts>
+
+    <replaces>
+        <package name="gawk"/>
+    </replaces>
 
     <contents>
         <file src="${prefix}/bin/awk"/>

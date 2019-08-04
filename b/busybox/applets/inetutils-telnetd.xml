@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-inetutils-telnetd-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the inetutils-telnetd package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>telnetd</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="inetutils-telnetd"/>
+    </conflicts>
+
+    <replaces>
+        <package name="inetutils-telnetd"/>
+    </replaces>
+
+    <contents>
+        <file src="${prefix}/sbin/telnetd"/>
+    </contents>
+</package>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-xxd-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the xxd package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>xxd</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="xxd"/>
+    </conflicts>
+
+    <replaces>
+        <package name="xxd"/>
+    </replaces>
+
+    <contents>
+        <file src="${prefix}/bin/xxd"/>
+    </contents>
+</package>

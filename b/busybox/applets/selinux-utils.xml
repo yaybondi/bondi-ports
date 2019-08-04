@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-selinux-utils-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the selinux-utils package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>getenforce</li>
+            <li>getsebool</li>
+            <li>matchpathcon</li>
+            <li>selinuxenabled</li>
+            <li>setenforce</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="selinux-utils"/>
+    </conflicts>
+
+    <replaces>
+        <package name="selinux-utils"/>
+    </replaces>
+
+    <contents>
+        <file src="${prefix}/sbin/getenforce"/>
+        <file src="${prefix}/sbin/getsebool"/>
+        <file src="${prefix}/sbin/matchpathcon"/>
+        <file src="${prefix}/sbin/selinuxenabled"/>
+        <file src="${prefix}/sbin/setenforce"/>
+    </contents>
+</package>

@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="busybox-binutils-symlinks" section="admin">
+<package name="busybox-binutils-multiarch-symlinks" section="admin">
     <description>
-        <summary>Substitutes for (some) programs from the binutils package</summary>
+        <summary>Substitutes for (some) programs from the binutils-multiarch package</summary>
         <p>
             This package contains the symbolic links for the following applets:
         </p>
         <ul>
+            <li>ar</li>
             <li>strings</li>
         </ul>
     </description>
 
     <requires>
-        <package name="base-files"/>
         <package name="busybox"/>
     </requires>
 
     <conflicts>
-        <package name="binutils"/>
+        <package name="binutils-multiarch"/>
     </conflicts>
 
     <replaces>
-        <package name="binutils"/>
+        <package name="binutils-multiarch"/>
     </replaces>
 
     <contents>
+        <file src="${prefix}/bin/ar"/>
         <file src="${prefix}/bin/strings"/>
     </contents>
 </package>

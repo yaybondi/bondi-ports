@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-bzip2-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the bzip2 package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>bunzip2</li>
+            <li>bzcat</li>
+            <li>bzip2</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="bzip2"/>
+    </conflicts>
+
+    <replaces>
+        <package name="bzip2"/>
+    </replaces>
+
+    <contents>
+        <file src="${prefix}/bin/bunzip2"/>
+        <file src="${prefix}/bin/bzcat"/>
+        <file src="${prefix}/bin/bzip2"/>
+    </contents>
+</package>

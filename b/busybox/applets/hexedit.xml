@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-hexedit-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the hexedit package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>hexedit</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="hexedit"/>
+    </conflicts>
+
+    <replaces>
+        <package name="hexedit"/>
+    </replaces>
+
+    <contents>
+        <file src="${prefix}/bin/hexedit"/>
+    </contents>
+</package>

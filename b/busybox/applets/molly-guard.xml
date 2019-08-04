@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-molly-guard-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the molly-guard package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>halt</li>
+            <li>poweroff</li>
+            <li>reboot</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="molly-guard"/>
+    </conflicts>
+
+    <replaces>
+        <package name="molly-guard"/>
+    </replaces>
+
+    <contents>
+        <file src="${prefix}/sbin/halt"/>
+        <file src="${prefix}/sbin/poweroff"/>
+        <file src="${prefix}/sbin/reboot"/>
+    </contents>
+</package>

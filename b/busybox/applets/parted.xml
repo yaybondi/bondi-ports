@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-parted-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the parted package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>partprobe</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="parted"/>
+    </conflicts>
+
+    <replaces>
+        <package name="parted"/>
+    </replaces>
+
+    <contents>
+        <file src="${prefix}/sbin/partprobe"/>
+    </contents>
+</package>

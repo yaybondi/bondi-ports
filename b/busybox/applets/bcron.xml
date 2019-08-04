@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-bcron-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the bcron package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>crontab</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="bcron"/>
+    </conflicts>
+
+    <replaces>
+        <package name="bcron"/>
+    </replaces>
+
+    <contents>
+        <file src="${prefix}/bin/crontab"/>
+    </contents>
+</package>

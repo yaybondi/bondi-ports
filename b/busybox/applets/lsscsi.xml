@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="busybox-lsscsi-symlinks" section="admin">
+    <description>
+        <summary>Substitutes for (some) programs from the lsscsi package</summary>
+        <p>
+            This package contains the symbolic links for the following applets:
+        </p>
+        <ul>
+            <li>lsscsi</li>
+        </ul>
+    </description>
+
+    <requires>
+        <package name="busybox"/>
+    </requires>
+
+    <conflicts>
+        <package name="lsscsi"/>
+    </conflicts>
+
+    <replaces>
+        <package name="lsscsi"/>
+    </replaces>
+
+    <contents>
+        <file src="${prefix}/bin/lsscsi"/>
+    </contents>
+</package>
