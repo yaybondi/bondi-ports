@@ -27,7 +27,6 @@ export MY_TEMPLATE_B="\
     </description>
 
     <requires>
-        <package name=\"base-files\"/>
         <package name=\"busybox\"/>
     </requires>
 
@@ -48,6 +47,24 @@ export MY_TEMPLATE_D="\
 
 export MY_TEMPLATE_E="\
     </contents>
+</package>\
+"
+
+export MY_TEMPLATE_F="\
+<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<package name=\"busybox-all-symlinks\" section=\"admin\">
+    <description>
+        <summary>Install all available Busybox symlinks</summary>
+        <p>
+            This package depends on all available busybox-*-symlinks packages.
+        </p>
+    </description>
+
+    <requires>\
+"
+
+export MY_TEMPLATE_G="\
+    </requires>
 </package>\
 "
 
@@ -76,7 +93,7 @@ do
         if [ -n "$pkg" ]; then
             cat "$MY_CONFLICTS/conflicts.tmp" >> "$MY_CONFLICTS/$pkg.conflicts"
         else
-            pkg="unknown"
+            pkg="miscellaneous"
         fi
 
         rm -f "$MY_CONFLICTS/conflicts.tmp"
@@ -121,3 +138,11 @@ done
 
 rm -f "$MY_XMLDIR/busybox.xml"
 
+echo "$MY_TEMPLATE_F" > "busybox-all-symlinks.xml"
+for xml_file in `ls $MY_XMLDIR`
+do
+    PKG_NAME="`basename $xml_file .xml`"
+    echo "        <package name=\"busybox-$PKG_NAME-symlinks\"/>" >> "busybox-all-symlinks.xml"
+done
+echo "$MY_TEMPLATE_G" >> "busybox-all-symlinks.xml"
+mv "busybox-all-symlinks.xml" "$MY_XMLDIR/"
