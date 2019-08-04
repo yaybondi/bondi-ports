@@ -2,6 +2,13 @@
 <changelog>
     <release version="1.3.5" revision="2bolt1" upstream-version="1.3.5-2"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2019-08-05 00:09:21+02:00">
+        <changeset>
+            <li>Upgrade to latest version from Debian Buster.</li>
+        </changeset>
+    </release>
+    <release version="1.3.5" revision="2bolt1" upstream-version="1.3.5-2"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2017-05-12 12:12:13+03:00">
         <changeset>
             <li>Adaptation of Debian sources for Bolt OS</li>
