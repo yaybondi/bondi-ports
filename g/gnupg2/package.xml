@@ -16,43 +16,36 @@
         </description>
 
         <sources>
-            <file src="gnupg2-2.1.18.tar.bz2" subdir="sources"
-                sha256sum="d04c6fab7e5562ce4b915b22020e34d4c1a256847690cf149842264fc7cef994"/>
-            <file src="patches.06.tar.gz" subdir="patches"
-                sha256sum="8763ddb94a7940b09e8646f91b72afc4d17c89849e88943b29a2f0cb515f060c"/>
+            <file src="gnupg2-2.2.12.tar.bz2" subdir="sources"
+                sha256sum="db030f8b4c98640e91300d36d516f1f4f8fe09514a94ea9fc7411ee1a34082cb"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="ca459a5acf3ebc56a261d650b555e48fa049e1a2beb4b4e8ec3bf2dae02c47b7"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
-                <file src="patches/debian-packaging/0001-avoid-beta-warning.patch"/>
-                <file src="patches/block-ptrace-on-agent/0002-Avoid-simple-memory-dumps-via-ptrace.patch"/>
-                <file src="patches/debian-packaging/0003-avoid-regenerating-defsincdate-use-shipped-file.patch"/>
-                <file src="patches/dirmngr-idling/0001-dirmngr-hkp-Avoid-potential-race-condition-when-some.patch"/>
-                <file src="patches/dirmngr-idling/0002-dimrngr-Avoid-need-for-hkp-housekeeping.patch"/>
-                <file src="patches/dirmngr-idling/0004-dirmngr-Avoid-automatically-checking-upstream-swdb.patch"/>
-                <file src="patches/dirmngr-idling/0005-dirmngr-Drop-useless-housekeeping.patch"/>
-                <file src="patches/gpg-agent-idling/0001-agent-Create-framework-of-scheduled-timers.patch"/>
-                <file src="patches/gpg-agent-idling/0002-agent-Allow-threads-to-interrupt-main-select-loop-wi.patch"/>
-                <file src="patches/gpg-agent-idling/0003-agent-Avoid-tight-timer-tick-when-possible.patch"/>
-                <file src="patches/gpg-agent-idling/0004-agent-Avoid-scheduled-checks-on-socket-when-inotify-.patch"/>
-                <file src="patches/0012-tools-Fix-memory-leak.patch"/>
-                <file src="patches/0013-tools-Improve-error-handling.patch"/>
-                <file src="patches/0014-dirmngr-New-option-disable-ipv4.patch"/>
-                <file src="patches/0015-dirmngr-Simplify-error-returning-inside-http.c.patch"/>
-                <file src="patches/0016-gpg-Print-a-warning-on-Tor-problems.patch"/>
-                <file src="patches/0017-agent-Fix-double-free.patch"/>
-                <file src="patches/0018-gpg-Fix-searching-for-mail-addresses-in-keyrings.patch"/>
-                <file src="patches/0019-dirmngr-New-option-no-use-tor-and-internal-changes.patch"/>
-                <file src="patches/0020-gpg-Remove-period-at-end-of-warning.patch"/>
-                <file src="patches/0021-gpg-Add-newline-to-output.patch"/>
-                <file src="patches/0022-gpg-Only-print-out-TOFU-statistics-for-conflicts-in-.patch"/>
-                <file src="patches/0023-gpg-If-there-is-a-TOFU-conflict-elide-the-too-few-me.patch"/>
-                <file src="patches/0024-gpg-Ensure-TOFU-bindings-associated-with-UTKs-are-re.patch"/>
-                <file src="patches/0025-gpg-Don-t-assume-that-strtoul-interprets-as-0.patch"/>
-                <file src="patches/0026-gpg-More-diagnostics-for-a-launched-pinentry.patch"/>
-                <file src="patches/0027-doc-Clarify-abbreviation-of-help.patch"/>
-                <file src="patches/0028-scd-Backport-two-fixes-from-master.patch"/>
-                <file src="patches/0029-scd-Fix-use-case-of-PC-SC.patch"/>
+                <file src="patches/debian-packaging/avoid-beta-warning.patch"/>
+                <file src="patches/debian-packaging/avoid-regenerating-defsincdate-use-shipped-file.patch"/>
+                <file src="patches/block-ptrace-on-secret-daemons/Avoid-simple-memory-dumps-via-ptrace.patch"/>
+                <file src="patches/dirmngr-idling/dirmngr-hkp-Avoid-potential-race-condition-when-some.patch"/>
+                <file src="patches/dirmngr-idling/dirmngr-Avoid-need-for-hkp-housekeeping.patch"/>
+                <file src="patches/dirmngr-idling/dirmngr-Avoid-automatically-checking-upstream-swdb.patch"/>
+                <file src="patches/gpg-agent-idling/agent-Create-framework-of-scheduled-timers.patch"/>
+                <file src="patches/gpg-agent-idling/agent-Allow-threads-to-interrupt-main-select-loop-wi.patch"/>
+                <file src="patches/gpg-agent-idling/agent-Avoid-tight-timer-tick-when-possible.patch"/>
+                <file src="patches/gpg-agent-idling/agent-Avoid-scheduled-checks-on-socket-when-inotify-.patch"/>
+                <file src="patches/from-master/gpgsm-default-to-3072-bit-keys.patch"/>
+                <file src="patches/from-master/gpg-default-to-3072-bit-RSA-keys.patch"/>
+                <file src="patches/from-master/gpg-default-to-AES-256.patch"/>
+                <file src="patches/from-master/common-Fix-gnupg_wait_processes.patch"/>
+                <file src="patches/from-master/scd-Distinguish-cancel-by-user-and-protocol-error.patch"/>
+                <file src="patches/from-master/agent-Fix-cancellation-handling-for-scdaemon.patch"/>
+                <file src="patches/update-defaults/gpg-Default-to-SHA-512-for-all-signature-types-on-RS.patch"/>
+                <file src="patches/update-defaults/gpg-Prefer-SHA-512-and-SHA-384-in-personal-digest.patch"/>
+                <file src="patches/from-master/gpg-Fix-comparison.patch"/>
+                <file src="patches/show-revocation-cert/gpg-Print-revocation-certificate-details-when-showing-wit.patch"/>
+                <file src="patches/Make-gpg-zip-use-tar-from-PATH.patch"/>
+                <file src="patches/fix-spelling.patch"/>
             </patchset>
         </patches>
 
@@ -61,8 +54,6 @@
             <package name="autopoint"/>
             <package name="file"/>
             <package name="gettext"/>
-            <package name="ghostscript"/>
-            <package name="imagemagick"/>
             <package name="libassuan-dev" version=">= 2.4.3"/>
             <package name="libbz2-dev"/>
             <package name="libcurl4-gnutls-dev"/>
@@ -70,15 +61,10 @@
             <package name="libgnutls28-dev" version=">= 3.0"/>
             <package name="libgpg-error-dev" version=">= 1.26-2~"/>
             <package name="libksba-dev" version=">= 1.3.4"/>
-            <package name="libldap2-dev"/>
             <package name="libnpth0-dev" version=">= 1.2"/>
             <package name="libreadline-dev"/>
-            <package name="librsvg2-bin"/>
             <package name="libsqlite3-dev"/>
-            <package name="libusb-1.0-0-dev"/>
-            <package name="pkg-config"/>
             <package name="texinfo"/>
-            <package name="transfig"/>
             <package name="zlib1g-dev"/>
         </requires>
 
