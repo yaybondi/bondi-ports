@@ -6,7 +6,7 @@
 
     <source name="libgcrypt20" architecture-independent="false">
         <description>
-            <summary>LGPL Crypto library - documentation</summary>
+            <summary>LGPL Crypto library</summary>
             <p>
             libgcrypt contains cryptographic functions. Many important free
             ciphers, hash algorithms and public key signing algorithms have been
@@ -14,28 +14,26 @@
             </p>
             <p>
             Arcfour, Blowfish, CAST5, DES, AES, Twofish, Serpent, rfc2268 (rc2), SEED,
-            Poly1305, Camellia, ChaCha20, IDEA, Salsa, CRC, MD2, MD4, MD5, RIPE-MD160,
-            SHA-1, SHA-256, SHA-512, SHA3-224, SHA3-256, SHA3-384, SHA3-512, SHAKE128,
-            SHAKE256 Tiger, Whirlpool, DSA, DSA2, ElGamal, RSA, ECC (Curve25519,
-            sec256k1, GOST R 34.10-2001 and GOST R 34.10-2012, etc.)
-            </p>
-            <p>
-            This package contains developer documentation.
+            Poly1305, Camellia, ChaCha20, IDEA, Salsa, Blake-2, CRC, MD2, MD4, MD5,
+            RIPE-MD160, SHA-1, SHA-256, SHA-512, SHA3-224, SHA3-256, SHA3-384, SHA3-512,
+            SHAKE128, SHAKE256, Tiger, Whirlpool, DSA, DSA2, ElGamal, RSA, ECC
+            (Curve25519, sec256k1, GOST R 34.10-2001 and GOST R 34.10-2012, etc.)
             </p>
         </description>
 
         <sources>
-            <file src="libgcrypt20-1.7.6.tar.bz2" subdir="sources"
-                sha256sum="626aafee84af9d2ce253d2c143dc1c0902dda045780cc241f39970fc60be05bc"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="4ad7bf03fee47255facd683802ec5c3ebf1b0bce3777072f4d739799f3719a39"/>
+            <file src="libgcrypt20-1.8.4.tar.bz2" subdir="sources"
+                sha256sum="f638143a0672628fde0cad745e9b14deb85dffb175709cacc1f4fe24b93f2227"/>
+            <file src="debian-patches-5.tar.gz" subdir="patches"
+                sha256sum="299f5a0441c3e8877cdb0225f332e64f723aec2f95af8bb411bfcc0ac335aa3e"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/12_lessdeps_libgcrypt-config.diff"/>
                 <file src="patches/15_multiarchpath_in_-L.diff"/>
                 <file src="patches/25_norevisionfromgit.diff"/>
+                <file src="patches/30_doc-Fix-library-initialization-examples.patch"/>
             </patchset>
         </patches>
 
