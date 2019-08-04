@@ -15,19 +15,15 @@
         </description>
 
         <sources>
-            <file src="libgpg-error-1.26.tar.bz2" subdir="sources"
-                sha256sum="4c4bcbc90116932e3acd37b37812d8653b1b189c1904985898e860af818aee69"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="997d7ce15fcd87458d5b692609b30965fd299267c39a6c3d1b15d31ba3a36e80"/>
+            <file src="libgpg-error-1.35.tar.bz2" subdir="sources"
+                sha256sum="cbd5ee62a8a8c88d48c158fff4fc9ead4132aacd1b4a56eb791f9f997d07e067"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="14c49174fa3099ee24c1668700876d0ece2aae261c15d7a330caad104dc11023"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
-                <file src="patches/0001-avoid-identifying-as-beta.patch"/>
-                <!--
-                <file src="patches/0002-Measure-revision-by-length-of-debian-changelog.patch"/>
-                -->
-                <file src="patches/0003-avoid-whitespace-in-gpg-error.def-linker-script-for-.patch"/>
+                <file src="patches/0001-Remove-upstream-git-fanciness.patch"/>
             </patchset>
         </patches>
 
