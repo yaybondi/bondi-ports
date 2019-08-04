@@ -13,14 +13,16 @@
         </description>
 
         <sources>
-            <file src="perl-5.24.1.tar.xz" subdir="sources"
-                sha256sum="03a77bac4505c270f1890ece75afc7d4b555090b41aa41ea478747e23b2afb3f"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="09e7cf2058b5730f16383d337ce8d4c04b93ef57dac48d03a32206f48f3a0d2b"/>
-            <file src="patches.bolt.tar.gz" subdir="patches"
+            <file src="perl-5.28.1.tar.xz" subdir="sources"
+                sha256sum="fea7162d4cca940a387f0587b93f6737d884bf74d8a9d7cfd978bc12cd0b202d"/>
+            <file src="perl-regen-configure-5.28.1.tar.xz" subdir="sources/regen-configure"
+                sha256sum="5873b81af4514d3910ab1a8267b15ff8c0e2100dbae4edfd10b65ef72cd31ef8"/>
+            <file src="debian-patches-6.tar.gz" subdir="patches"
+                sha256sum="46fdbd22527ae9f2bda224858dab61f0cbad3eedb6a7cf9dad176804d6f25c75"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="6bb635c06f69a23c20fcaec5cfeba9a6cc5f78fc4f7e12d5bca0c122d95dde9d"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <!-- Debian -->
@@ -38,57 +40,53 @@
                 <file src="patches/debian/instmodsh_doc.diff"/>
                 <file src="patches/debian/ld_run_path.diff"/>
                 <file src="patches/debian/libnet_config_path.diff"/>
-                <file src="patches/debian/mod_paths.diff"/>
-                <file src="patches/debian/prune_libs.diff"/>
-                <file src="patches/fixes/net_smtp_docs.diff"/>
                 <file src="patches/debian/perlivp.diff"/>
-                <file src="patches/debian/deprecate-with-apt.diff"/>
                 <file src="patches/debian/squelch-locale-warnings.diff"/>
-                <file src="patches/debian/skip-upstream-git-tests.diff"/>
                 <file src="patches/debian/patchlevel.diff"/>
-                <file src="patches/debian/skip-kfreebsd-crash.diff"/>
                 <file src="patches/fixes/document_makemaker_ccflags.diff"/>
                 <file src="patches/debian/find_html2text.diff"/>
                 <file src="patches/debian/perl5db-x-terminal-emulator.patch"/>
                 <file src="patches/debian/cpan-missing-site-dirs.diff"/>
                 <file src="patches/fixes/memoize_storable_nstore.diff"/>
-                <file src="patches/debian/regen-skip.diff"/>
                 <file src="patches/debian/makemaker-pasthru.diff"/>
                 <file src="patches/debian/makemaker-manext.diff"/>
-                <file src="patches/debian/devel-ppport-reproducibility.diff"/>
-                <file src="patches/debian/encode-unicode-bom-doc.diff"/>
                 <file src="patches/debian/kfreebsd-softupdates.diff"/>
                 <file src="patches/fixes/autodie-scope.diff"/>
-                <file src="patches/fixes/crosscompile-no-targethost.diff"/>
                 <file src="patches/fixes/memoize-pod.diff"/>
-                <file src="patches/fixes/ok-pod.diff"/>
                 <file src="patches/debian/hurd-softupdates.diff"/>
-                <file src="patches/fixes/nntp_docs.diff"/>
                 <file src="patches/fixes/math_complex_doc_great_circle.diff"/>
                 <file src="patches/fixes/math_complex_doc_see_also.diff"/>
                 <file src="patches/fixes/math_complex_doc_angle_units.diff"/>
                 <file src="patches/fixes/cpan_web_link.diff"/>
-                <file src="patches/fixes/time_piece_doc.diff"/>
-                <file src="patches/fixes/perlbug-refactor.diff"/>
-                <file src="patches/fixes/perlbug-linewrap.diff"/>
-                <file src="patches/fixes/hurd_sigaction.diff"/>
-                <file src="patches/fixes/hurd_hints.diff"/>
-                <file src="patches/fixes/extutils-parsexs-reproducibility.diff"/>
-                <file src="patches/debian/CVE-2016-1238/sitecustomize-in-etc.diff"/>
-                <file src="patches/debian/CVE-2016-1238/test-suite-without-dot.diff"/>
-                <file src="patches/debian/CVE-2016-1238/eumm-without-dot.diff"/>
-                <file src="patches/debian/CVE-2016-1238/cpan-without-dot.diff"/>
-                <file src="patches/debian/document_inc_removal.diff"/>
-                <file src="patches/fixes/extutils_makemaker_reproducible.diff"/>
-                <file src="patches/debian/CVE-2016-1238/remove-inc-test.diff"/>
-                <file src="patches/debian/customized.diff"/>
-                <file src="patches/fixes/file_path_hurd_errno.diff"/>
                 <file src="patches/debian/hppa_op_optimize_workaround.diff"/>
-                <file src="patches/fixes/test-builder-warning.diff"/>
-                <file src="patches/fixes/longdblinf-randomness.diff"/>
                 <file src="patches/debian/installman-utf8.diff"/>
-                <file src="patches/fixes/list_assign_leak.diff"/>
-                <file src="patches/fixes/perlfunc_inc_doc.diff"/>
+                <file src="patches/fixes/getopt-long-4.diff"/>
+                <file src="patches/debian/hppa_opmini_optimize_workaround.diff"/>
+                <file src="patches/debian/sh4_op_optimize_workaround.diff"/>
+                <file src="patches/debian/perldoc-pager.diff"/>
+                <file src="patches/debian/prune_libs.diff"/>
+                <file src="patches/debian/mod_paths.diff"/>
+                <file src="patches/debian/configure-regen.diff"/>
+                <file src="patches/debian/deprecate-with-apt.diff"/>
+                <file src="patches/debian/disable-stack-check.diff"/>
+                <file src="patches/debian/gdbm-fatal.diff"/>
+                <file src="patches/fixes/storable-recursion.diff"/>
+                <file src="patches/fixes/caretx-fallback.diff"/>
+                <file src="patches/fixes/eumm-usrmerge.diff"/>
+                <file src="patches/fixes/errno-include-path.diff"/>
+                <file src="patches/fixes/kfreebsd-renameat.diff"/>
+                <file src="patches/fixes/time-local-2020.diff"/>
+                <file src="patches/fixes/inplace-editing-bugfix/part1.diff"/>
+                <file src="patches/fixes/inplace-editing-bugfix/part2.diff"/>
+                <file src="patches/fixes/inplace-editing-bugfix/part3.diff"/>
+                <file src="patches/fixes/fix-manifest-failures.diff"/>
+                <file src="patches/fixes/pipe-open-bugfix/part1.diff"/>
+                <file src="patches/fixes/pipe-open-bugfix/part2.diff"/>
+                <file src="patches/fixes/storable-probing/prereq1.diff"/>
+                <file src="patches/fixes/storable-probing/prereq2.diff"/>
+                <file src="patches/fixes/storable-probing/disable-probing.diff"/>
+                <file src="patches/debian/perlbug-editor.diff"/>
+                <file src="patches/fixes/posix-mbrlen.diff"/>
                 <!-- Bolt -->
                 <file src="patches/cross-musl-config-sh.patch"/>
             </patchset>
@@ -103,7 +101,7 @@
             <package name="procps"/>
             <package name="zlib1g-dev"/>
             <package name="libbz2-dev"/>
-            <package name="libc6-dev" version=">= 2.19-9"/>
+            <package name="libc-dev"/>
         </requires>
 
         <xi:include href="rules.xml"/>
