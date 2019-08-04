@@ -15,12 +15,12 @@
         </description>
 
         <sources>
-            <file src="libassuan-2.4.3.tar.bz2" subdir="sources"
-                sha256sum="22843a3bdb256f59be49842abf24da76700354293a066d82ade8134bb5aa2b71"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="d25e83ba7c8f1618cf37b7cd405d00e1486ed8b4fd0ee7539804e66a568f40a8"/>
+            <file src="libassuan-2.5.2.tar.bz2" subdir="sources"
+                sha256sum="986b1bf277e375f7a960450fbb8ffbd45294d06598916ad4ebf79aee0cb788e7"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="4ef7223e801a3d8d04a109304d72406b3b0a9b25fd14b1ad257051c018e91a87"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/0001-avoid-linker-errors-when-cross-building-for-win32.patch"/>
