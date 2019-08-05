@@ -7,9 +7,14 @@
 # 4. Move the config.sh script into the 'Cross' folder and create patch
 #
 
+BASEDIR=/home/build/spool/aarch64
+SYSROOT="$BASEDIR/sys-root"
+TOOLDIR="$BASEDIR/tools"
+VERSION="5.28"
+
 ./Configure \
     -Dtargetarch=x86_64-cross-linux-musl \
-    -Dsysroot=/home/tobias/spool/sys-root/tools \
+    -Dsysroot=$SYSROOT/tools \
     -Dusethreads \
     -Duselargefiles \
     -Dcc=x86_64-cross-linux-musl-gcc \
@@ -21,14 +26,14 @@
     -Dcccdlflags=-fPIC \
     -Darchname=x86_64-cross-linux-musl \
     -Dprefix=/tools \
-    -Dprivlib=/tools/share/perl/5.24 \
-    -Darchlib=/tools/lib/perl/5.24 \
+    -Dprivlib=/tools/share/perl/$VERSION \
+    -Darchlib=/tools/lib/perl/$VERSION \
     -Dvendorprefix=/tools \
     -Dvendorlib=/tools/share/perl5 \
-    -Dvendorarch=/tools/lib/perl5/5.24 \
+    -Dvendorarch=/tools/lib/perl5/$VERSION \
     -Dsiteprefix=/tools/local \
-    -Dsitelib=/tools/local/share/perl/5.24.1 \
-    -Dsitearch=/tools/local/lib/perl/5.24.1 \
+    -Dsitelib=/tools/local/share/perl/$VERSION.1 \
+    -Dsitearch=/tools/local/lib/perl/$VERSION.1 \
     -Dman1dir=/tools/share/man/man1 \
     -Dman3dir=/tools/share/man/man3 \
     -Dsiteman1dir=/tools/local/man/man1 \
@@ -49,5 +54,13 @@
     -Doptimize="-O2" \
     -dEs \
     -Duseshrplib \
-    -Dlibperl=libperl.so.5.24.1
+    -Dlibperl=libperl.so.$VERSION.1
 
+REPLACE=$(echo $SYSROOT | sed -e 's/[\/&]/\\&/g')
+sed -i "s@$REPLACE@##BOLT_SYSROOT_DIR##@g" config.sh
+
+REPLACE=$(echo $TOOLDIR | sed -e 's/[\/&]/\\&/g')
+sed -i "s@$REPLACE@##BOLT_HOST_TOOLS_DIR##@g" config.sh
+
+sed -i "s@hostperl=''@hostperl='../host/miniperl'@g" config.sh
+sed -i "s@hostgenerate=''@hostgenerate='../host/geneate_uudmap'@g" config.sh
