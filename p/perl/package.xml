@@ -42,7 +42,9 @@
                 <file src="patches/debian/libnet_config_path.diff"/>
                 <file src="patches/debian/perlivp.diff"/>
                 <file src="patches/debian/squelch-locale-warnings.diff"/>
+                <!--
                 <file src="patches/debian/patchlevel.diff"/>
+                -->
                 <file src="patches/fixes/document_makemaker_ccflags.diff"/>
                 <file src="patches/debian/find_html2text.diff"/>
                 <file src="patches/debian/perl5db-x-terminal-emulator.patch"/>
