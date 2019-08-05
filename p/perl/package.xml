@@ -20,7 +20,7 @@
             <file src="debian-patches-6.tar.gz" subdir="patches"
                 sha256sum="46fdbd22527ae9f2bda224858dab61f0cbad3eedb6a7cf9dad176804d6f25c75"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="49e2cc14db8bd8b6df207141faa6be02d82661a0ca44899bc38bd595d9fcc367"/>
+                sha256sum="b327c9ed370766199a6b6328a1a0e0f9e65736a287913b6c1ea191cc5162a6c2"/>
         </sources>
 
         <patches>
