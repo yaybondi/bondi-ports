@@ -3,7 +3,7 @@
     <prepare>
     <![CDATA[
 
-RUBY_VERSION="2.4"
+RUBY_VERSION="2.5"
 
 cd "$BOLT_SOURCE_DIR"
 touch config.guess config.sub tool/config.guess tool/config.sub

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="ruby2.4-dev" section="ruby">
+<package name="ruby2.5-dev" section="ruby">
     <description>
-        <summary>Header files for compiling extension modules for the Ruby 2.4</summary>
+        <summary>Header files for compiling extension modules for the Ruby 2.5</summary>
         <p>
         Ruby is the interpreted scripting language for quick and easy
         object-oriented programming. It has many features to process text
@@ -10,19 +10,20 @@
         </p>
         <p>
         This package contains the header files and the mkmf library, necessary
-        to make extension library for Ruby 2.4. It is also required to build
+        to make extension library for Ruby 2.5. It is also required to build
         many gems.
         </p>
     </description>
 
     <requires>
         <package name="libgmp-dev"/>
-        <package name="libruby2.4" version="=="/>
+        <package name="libruby2.5" version="=="/>
     </requires>
 
     <contents>
-        <file src="${prefix}/include/ruby-2.4.0"/>
-        <file src="${prefix}/lib/libruby-2.4.so"/>
-        <file src="${prefix}/lib/pkgconfig"/>
+        <file src="/usr/include/ruby-2.5.0"/>
+        <file src="/usr/include/x86_64-linux-gnu/ruby-2.5.0/ruby"/>
+        <file src="/usr/lib/libruby-2.5.so"/>
+        <file src="/usr/lib/pkgconfig"/>
     </contents>
 </package>
