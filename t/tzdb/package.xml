@@ -13,8 +13,8 @@
         </description>
 
         <sources>
-            <file src="tzdb-2017a.tar.lz" subdir="sources"
-                sha256sum="4283ece165c6711f7ea415b98413a625b3b65bbd2e205e0f2d23c302ffc1e31c"/>
+            <file src="tzdb-2019b.tar.lz" subdir="sources"
+                sha256sum="180adb8a6d9653a4892b9b1bf59ed0290a9fbfd3755f2f116cd46f2084ab02ef"/>
         </sources>
 
         <xi:include href="rules.xml"/>
