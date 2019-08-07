@@ -19,7 +19,15 @@
         <sources>
             <file src="ca-certificates-20190110.tar.xz" subdir="sources"
                 sha256sum="ee4bf0f4c6398005f5b5ca4e0b87b82837ac5c3b0280a1cb3a63c47555c3a675"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
+                sha256sum="9b066c8d4768635642d84b767a28c988b563a598cbea4e893efdd24a9d5bb815"/>
         </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/root-only-restorecon.diff"/>
+            </patchset>
+        </patches>
 
         <xi:include href="rules.xml"/>
     </source>
