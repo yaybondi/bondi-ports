@@ -16,24 +16,27 @@
         </description>
 
         <sources>
-            <file src="patch-2.7.5.tar.xz" subdir="sources"
-                sha256sum="fd95153655d6b95567e623843a0e77b81612d502ecf78a489a4aed7867caa299"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="cbf709e72095d6db9329dc640fa22d3c962c235c32264661ee2f0a2db76045ee"/>
+            <file src="patch-2.7.6.tar.xz" subdir="sources"
+                sha256sum="ac610bda97abe0d9f6b7c963255a11dcb196c25e337c61f94e4778d632f1d8fd"/>
+            <file src="debian-patches-3+deb10u1.tar.gz" subdir="patches"
+                sha256sum="ca0d509d7701666b6e702eaceed63ecac395f650a067a16555c6f0d55df5be92"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/path_max"/>
                 <file src="patches/558485-backupmode"/>
                 <file src="patches/m-merge"/>
-                <file src="patches/patch-bug-1306412.diff"/>
+                <file src="patches/Fix_segfault_with_mangled_rename_patch.patch"/>
+                <file src="patches/Allow_input_files_to_be_missing_for_ed-style_patches.patch"/>
+                <file src="patches/Fix_arbitrary_command_execution_in_ed-style_patches.patch"/>
+                <file src="patches/0001-Fix-ed-style-test-failure.patch"/>
+                <file src="patches/0002-CVE-2019-13636.patch"/>
+                <file src="patches/0003-CVE-2019-13638.patch"/>
+                <file src="patches/0004-Do_not_leak_temporary_file.patch"/>
+                <file src="patches/0005-Do_not_leak_temporary_file_on_failed_multi-file.patch"/>
             </patchset>
         </patches>
-
-        <requires>
-            <package name="ed"/>
-        </requires>
 
         <xi:include href="rules.xml"/>
     </source>
