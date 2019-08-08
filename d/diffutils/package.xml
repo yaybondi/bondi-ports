@@ -27,15 +27,16 @@
         </description>
 
         <sources>
-            <file src="diffutils-3.5.tar.xz" subdir="sources"
-                sha256sum="dad398ccd5b9faca6b0ab219a036453f62a602a56203ac659b43e889bec35533"/>
-            <file src="patches.03.tar.gz" subdir="patches"
-                sha256sum="4e733aa072fd61c8f60f1979dbfcc54c6ee889643f8beedb4501f4441098097f"/>
+            <file src="diffutils-3.7.tar.xz" subdir="sources"
+                sha256sum="b3a7a6221c3dc916085f0d205abf6b8e1ba443d4dd965118da364a1dc1cb3a26"/>
+            <file src="debian-patches-3.tar.gz" subdir="patches"
+                sha256sum="8d8cb9404ef0bc59478074241f4d9d0eeabf6ae0666a42804a1766818c2b98c8"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/01-fix-race-condition-in-colors-test.patch"/>
+                <file src="patches/02-disable-colors-test.patch"/>
             </patchset>
         </patches>
 
