@@ -16,7 +16,7 @@
 
         <sources>
             <file src="autotools-dev-20180224.1.tar.xz" subdir="sources"
-                sha256sum="355a4d8461dfedebd2c5194603197712a10f71e20de73a35ab6e90b7acf3e837"/>
+                sha256sum="c9d8bacff4caa38c4d32a61b32acf5184124c1ca356a9483007bcb9bb9a913fa"/>
         </sources>
 
         <xi:include href="rules.xml"/>
