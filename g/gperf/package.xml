@@ -19,16 +19,15 @@
         </description>
 
         <sources>
-            <file src="gperf-3.0.4.tar.gz" subdir="sources"
-                sha256sum="767112a204407e62dbc3106647cf839ed544f3cf5d0f0523aaa2508623aad63e"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="42ddee0315e322024c4523d424bea96328efb3be15ceca6d96bfa157fa94c68e"/>
+            <file src="gperf-3.1.tar.gz" subdir="sources"
+                sha256sum="1f88819b78187350e7e6ca24b5e15cbf4083659773508d3f018b9b525e9d1cb8"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="95935ad3fad10e9c2c9cedc9f259576d378bfc7405b64eb2a371a5198ab45a17"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
-                <file src="patches/0001-Fix-syntex-error-in-Texinfo-documentation-only-build.patch"/>
-                <file src="patches/0002-Use-texi2any-instead-of-texi2html.patch"/>
+                <file src="patches/0001-Use-texi2any-instead-of-texi2html.patch"/>
             </patchset>
         </patches>
 
