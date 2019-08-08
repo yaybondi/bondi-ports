@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libpython3.5-stdlib" section="python">
+<package name="libpython3.7-stdlib" section="python">
     <description>
-        <summary>Interactive high-level object-oriented language (standard library, version 3.5)</summary>
+        <summary>Interactive high-level object-oriented language (standard library, version 3.7)</summary>
         <p>
-        Python is a high-level, interactive, object-oriented language. Its 3.5 version
+        Python is a high-level, interactive, object-oriented language. Its 3.7 version
         includes an extensive class library with lots of goodies for
         network programming, system administration, sounds and graphics.
         </p>
         <p>
-        This package contains Python 3.5's standard library. It is normally not
-        used on its own, but as a dependency of python3.5.
+        This package contains Python 3.7's standard library. It is normally not
+        used on its own, but as a dependency of python3.7.
         </p>
     </description>
 
     <contents collect-py-cache-files="true" subdir="all">
-        <file src="${prefix}/lib/python3.5/"/>
+        <file src="${prefix}/lib/python3.7/"/>
     </contents>
 </package>

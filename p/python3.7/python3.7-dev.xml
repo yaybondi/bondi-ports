@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="python3.5-dev" section="python">
+<package name="python3.7-dev" section="python">
     <description>
-        <summary>Header files and a static library for Python (v3.5)</summary>
+        <summary>Header files and a static library for Python (v3.7)</summary>
         <p>
         Header files, a static library and development tools for building
-        Python (v3.5) modules, extending the Python interpreter or embedding
-        Python (v3.5) in applications.
+        Python (v3.7) modules, extending the Python interpreter or embedding
+        Python (v3.7) in applications.
         </p>
     </description>
 
     <requires>
-        <package name="python3.5" version="=="/>
-        <package name="libpython3.5-dev" version="=="/>
+        <package name="python3.7" version="=="/>
+        <package name="libpython3.7-dev" version="=="/>
         <package name="libexpat1-dev"/>
     </requires>
 </package>

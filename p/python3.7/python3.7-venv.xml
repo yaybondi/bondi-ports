@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="python3.5-venv" section="python">
+<package name="python3.7-venv" section="python">
     <description>
-        <summary>Interactive high-level object-oriented language (pyvenv binary, version 3.5)</summary>
+        <summary>Interactive high-level object-oriented language (pyvenv binary, version 3.7)</summary>
         <p>
-        Python is a high-level, interactive, object-oriented language. Its 3.5 version
+        Python is a high-level, interactive, object-oriented language. Its 3.7 version
         includes an extensive class library with lots of goodies for
         network programming, system administration, sounds and graphics.
         </p>
         <p>
-        This package contains the pyvenv-3.5 binary.
+        This package contains the pyvenv-3.7 binary.
         </p>
     </description>
 
     <requires>
-        <package name="python3.5" version="=="/>
+        <package name="python3.7" version="=="/>
     </requires>
 
-    <contents subdir="python3.5-venv">
-        <file src="${prefix}/bin/pyvenv-3.5"/>
-        <file src="${prefix}/lib/python3.5/ensurepip"/>
+    <contents subdir="python3.7-venv">
+        <file src="${prefix}/bin/pyvenv-3.7"/>
+        <file src="${prefix}/lib/python3.7/ensurepip"/>
     </contents>
 </package>

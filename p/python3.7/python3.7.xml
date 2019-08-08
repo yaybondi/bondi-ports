@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="python3.5" section="python">
+<package name="python3.7" section="python">
     <description>
-        <summary>Interactive high-level object-oriented language (version 3.5)</summary>
+        <summary>Interactive high-level object-oriented language (version 3.7)</summary>
         <p>
-        Python is a high-level, interactive, object-oriented language. Its 3.5 version
+        Python is a high-level, interactive, object-oriented language. Its 3.7 version
         includes an extensive class library with lots of goodies for
         network programming, system administration, sounds and graphics.
         </p>
     </description>
 
     <requires>
-        <package name="libpython3.5" version="=="/>
-        <package name="libpython3.5-stdlib" version="=="/>
+        <package name="libpython3.7" version="=="/>
+        <package name="libpython3.7-stdlib" version="=="/>
     </requires>
 
     <provides>
@@ -26,25 +26,25 @@
 
     <contents subdir="all">
         <dir src="${prefix}/lib/python3"/>
-        <dir src="${prefix}/lib/python3.5"/>
-        <dir src="${prefix}/lib/python3.5/lib-dynload"/>
+        <dir src="${prefix}/lib/python3.7"/>
+        <dir src="${prefix}/lib/python3.7/lib-dynload"/>
         <dir src="${prefix}/lib/python3/dist-packages"/>
-        <file src="${prefix}/bin/2to3-3.5"/>
-        <file src="${prefix}/bin/pdb3.5"/>
-        <file src="${prefix}/bin/pydoc3.5"/>
-        <file src="${prefix}/bin/pygettext3.5"/>
-        <file src="${prefix}/bin/python3.5*"/>
+        <file src="${prefix}/bin/2to3-3.7"/>
+        <file src="${prefix}/bin/pdb3.7"/>
+        <file src="${prefix}/bin/pydoc3.7"/>
+        <file src="${prefix}/bin/pygettext3.7"/>
+        <file src="${prefix}/bin/python3.7*"/>
     </contents>
 
     <maintainer-scripts>
         <postinst><![CDATA[
 
 if [ ! -e "$BOLT_INSTALL_PREFIX/bin/python3" ]; then
-    ln -sf "python3.5" "$BOLT_INSTALL_PREFIX/bin/python3"
+    ln -sf "python3.7" "$BOLT_INSTALL_PREFIX/bin/python3"
 fi
 
 if [ ! -e "$BOLT_INSTALL_PREFIX/bin/python" ]; then
-    ln -sf "python3.5" "$BOLT_INSTALL_PREFIX/bin/python"
+    ln -sf "python3.7" "$BOLT_INSTALL_PREFIX/bin/python"
 fi
 
         ]]></postinst>

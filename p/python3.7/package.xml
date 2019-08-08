@@ -4,28 +4,29 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="python3.5" architecture-independent="false">
+    <source name="python3.7" architecture-independent="false">
         <description>
-            <summary>Interactive high-level object-oriented language (version 3.5)</summary>
+            <summary>Interactive high-level object-oriented language (version 3.7)</summary>
             <p>
-            Python is a high-level, interactive, object-oriented language. Its 3.5 version
+            Python is a high-level, interactive, object-oriented language. Its 3.7 version
             includes an extensive class library with lots of goodies for
             network programming, system administration, sounds and graphics.
             </p>
         </description>
 
         <sources>
-            <file src="python3.5-3.5.3.tar.xz" subdir="sources"
-                sha256sum="eefe2ad6575855423ab630f5b51a8ef6e5556f774584c06beab4926f930ddbb0"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="b680c1d6b25068716e07f60eced40ed38cd18b8284eea525907ab180e8f2529e"/>
-            <file src="patches.bolt.tar.gz" subdir="patches"
+            <file src="python3.7-3.7.3.tar.xz" subdir="sources"
+                sha256sum="da60b54064d4cfcd9c26576f6df2690e62085123826cff2e667e72a91952d318"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="7dd09c69c330df2d678c5e0eea8bc30f1166fab296e509fa1f9d2105cd937d03"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="b9dba35030dd349ab0d1919a3459e9763f60d2c3a2f3e1b0c4f5669900634086"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <!-- Debian -->
+                <file src="patches/revert-profile-opt-changes.diff"/>
                 <file src="patches/deb-setup.diff"/>
                 <file src="patches/deb-locations.diff"/>
                 <file src="patches/distutils-install-layout.diff"/>
@@ -39,11 +40,7 @@
                 <file src="patches/platform-lsbrelease.diff"/>
                 <file src="patches/bdist-wininst-notfound.diff"/>
                 <file src="patches/profiled-build.diff"/>
-                <file src="patches/makesetup-bashism.diff"/>
-                <file src="patches/hurd-disable-nonworking-constants.diff"/>
-                <file src="patches/enable-fpectl.diff"/>
                 <file src="patches/langpack-gettext.diff"/>
-                <file src="patches/no-large-file-support.diff"/>
                 <file src="patches/disable-sem-check.diff"/>
                 <file src="patches/lib-argparse.diff"/>
                 <file src="patches/ctypes-arm.diff"/>
@@ -55,17 +52,18 @@
                 <file src="patches/ext-no-libpython-link.diff"/>
                 <file src="patches/test-no-random-order.diff"/>
                 <file src="patches/multiarch-extname.diff"/>
-                <file src="patches/distutils-init.diff"/>
                 <file src="patches/tempfile-minimal.diff"/>
                 <file src="patches/disable-some-tests.diff"/>
                 <file src="patches/ensurepip-wheels.diff"/>
                 <file src="patches/ensurepip-disabled.diff"/>
-                <file src="patches/mpdecimal-version.diff"/>
                 <file src="patches/mangle-fstack-protector.diff"/>
                 <file src="patches/reproducible-buildinfo.diff"/>
                 <file src="patches/pydoc-use-pager.diff"/>
-                <file src="patches/pyhash.diff"/>
-                <file src="patches/lib2to3-no-pgen-caching.diff"/>
+                <file src="patches/local-doc-references.diff"/>
+                <file src="patches/doc-build-texinfo.diff"/>
+                <file src="patches/build-math-object.diff"/>
+                <file src="patches/issue35998.diff"/>
+                <file src="patches/arm-alignment.diff"/>
                 <!-- Bolt OS -->
                 <file src="patches/musl-find-library.diff"/>
             </patchset>
@@ -73,7 +71,6 @@
 
         <requires>
             <package name="autoconf"/>
-            <package name="sharutils"/>
             <package name="libreadline-dev"/>
             <package name="libncursesw5-dev" version=">= 5.3"/>
             <package name="gcc" version=">= 4:6.3"/>
@@ -82,35 +79,24 @@
             <package name="liblzma-dev"/>
             <package name="libgdbm-dev"/>
             <package name="libdb-dev"/>
-            <package name="tk-dev"/>
-            <package name="blt-dev" version=">= 2.4z"/>
             <package name="libssl-dev"/>
             <package name="libexpat1-dev"/>
             <package name="libmpdec-dev" version=">= 2.4"/>
-            <package name="libbluetooth-dev"/>
-            <package name="locales"/>
             <package name="libsqlite3-dev"/>
             <package name="libffi-dev" version=">= 3.0.5"/>
-            <package name="libgpm2"/>
-            <package name="mime-support"/>
-            <package name="netbase"/>
             <package name="bzip2"/>
-            <package name="time"/>
             <package name="python3"/>
-            <package name="net-tools"/>
-            <package name="xvfb"/>
-            <package name="xauth"/>
         </requires>
 
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="python3.5.xml"/>
-    <xi:include href="python3.5-venv.xml"/>
-    <xi:include href="libpython3.5-stdlib.xml"/>
-    <xi:include href="libpython3.5.xml"/>
-    <xi:include href="python3.5-dev.xml"/>
-    <xi:include href="libpython3.5-dev.xml"/>
+    <xi:include href="python3.7.xml"/>
+    <xi:include href="python3.7-venv.xml"/>
+    <xi:include href="libpython3.7-stdlib.xml"/>
+    <xi:include href="libpython3.7.xml"/>
+    <xi:include href="python3.7-dev.xml"/>
+    <xi:include href="libpython3.7-dev.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>

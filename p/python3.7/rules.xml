@@ -42,7 +42,7 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-for ENTRY in all libpython3.5-dev python3.5-venv; do
+for ENTRY in all libpython3.7-dev python3.7-venv; do
     mkdir -p "$BOLT_INSTALL_DIR/$ENTRY"
 done
 
@@ -52,56 +52,56 @@ cd "$BOLT_BUILD_DIR"
 make DESTDIR="$FULL_INSTALL" install
 
 rm -f  "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/"*idle*
-rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.5/idlelib"
-rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.5/turtledemo"
+rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.7/idlelib"
+rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.7/turtledemo"
 
 cp "$BOLT_SOURCE_DIR/Tools/i18n/pygettext.py" \
-    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/pygettext3.5"
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.5/config-3.5m/libpython3.5m.a" \
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/pygettext3.7"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.7/config-3.7m/libpython3.7m.a" \
     "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib"
-ln -sf ../../libpython3.5m.a \
-    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.5/config-3.5m/libpython3.5m.a"
-ln -sf ../../libpython3.5m.so \
-    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.5/config-3.5m/libpython3.5m.so"
-ln -sf libpython3.5m.so.1.0 \
-    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/libpython3.5m.so.1"
-ln -sf ../lib/python3.5/pdb.py \
-    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/pdb3.5"
+ln -sf ../../libpython3.7m.a \
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.7/config-3.7m/libpython3.7m.a"
+ln -sf ../../libpython3.7m.so \
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.7/config-3.7m/libpython3.7m.so"
+ln -sf libpython3.7m.so.1.0 \
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/libpython3.7m.so.1"
+ln -sf ../lib/python3.7/pdb.py \
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/pdb3.7"
 
 cd "$FULL_INSTALL"
 find . -type d -a \( -name "test" -o -name "tests" \) -prune -exec rm -fr '{}' ';'
 
 # -------------------------------------------------------------------------
-PKG_PATH="$BOLT_INSTALL_DIR/libpython3.5-dev"
+PKG_PATH="$BOLT_INSTALL_DIR/libpython3.7-dev"
 # -------------------------------------------------------------------------
 
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.5"
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.7"
 
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX"/bin/python3.5*-config \
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX"/bin/python3.7*-config \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
 mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/include" \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/"
 mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/pkgconfig" \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib"
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.5"/config-3.5* \
-    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.5/"
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/"libpython3.5*.a \
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.7"/config-3.7* \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.7/"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/"libpython3.7*.a \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/"
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/"libpython3.5*.so \
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/"libpython3.7*.so \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/"
 
 # -------------------------------------------------------------------------
-PKG_PATH="$BOLT_INSTALL_DIR/python3.5-venv"
+PKG_PATH="$BOLT_INSTALL_DIR/python3.7-venv"
 # -------------------------------------------------------------------------
 
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.5"
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.7"
 
 mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/"bin/pyvenv-* \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.5/ensurepip" \
-    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.5"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.7/ensurepip" \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.7"
 
     ]]>
     </install>

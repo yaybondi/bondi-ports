@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libpython3.5" section="libs">
+<package name="libpython3.7" section="libs">
     <description>
-        <summary>Shared Python runtime library (version 3.5)</summary>
+        <summary>Shared Python runtime library (version 3.7)</summary>
         <p>
-        Python is a high-level, interactive, object-oriented language. Its 3.5 version
+        Python is a high-level, interactive, object-oriented language. Its 3.7 version
         includes an extensive class library with lots of goodies for
         network programming, system administration, sounds and graphics.
         </p>
@@ -14,10 +14,10 @@
     </description>
 
     <requires>
-        <package name="libpython3.5-stdlib" version="=="/>
+        <package name="libpython3.7-stdlib" version="=="/>
     </requires>
 
     <contents subdir="all">
-        <file src="${prefix}/lib/libpython3.5*.so.*"/>
+        <file src="${prefix}/lib/libpython3.7*.so.*"/>
     </contents>
 </package>
