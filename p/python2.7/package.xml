@@ -15,68 +15,18 @@
         </description>
 
         <sources>
-            <file src="python2.7-2.7.13.tar.gz" subdir="sources"
-                sha256sum="a4f05a0720ce0fd92626f0278b6b433eee9a6173ddf2bced7957dfb599a5ece1"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="fbac6cf4a7a3fe6acb5f9a4f843a49c00addfe881c7435ba6e0d25a92f719696"/>
-            <file src="patches.bolt.tar.gz" subdir="patches"
+            <file src="python2.7-2.7.16.tar.gz" subdir="sources"
+                sha256sum="01da813a3600876f03f46db11cc5c408175e99f03af2ba942ef324389a83bad5"/>
+            <file src="python2.7-2.7.16-2.debdiff.gz" subdir="patches"
+                sha256sum="6ef1adb23d697d68a41d41cf97822179569852bce7b6ab5613b664a158f1609c"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="3734b3dd2c9a29052d12a2a564c726e0aa54307a1a7d880e1dea121fc71f911f"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <!-- Debian -->
-                <file src="patches/issue9189.diff"/>
-                <file src="patches/build-libpython.diff"/>
-                <file src="patches/deb-setup.diff"/>
-                <file src="patches/deb-locations.diff"/>
-                <file src="patches/site-locations.diff"/>
-                <file src="patches/distutils-install-layout.diff"/>
-                <file src="patches/locale-module.diff"/>
-                <file src="patches/distutils-link.diff"/>
-                <file src="patches/distutils-sysconfig.diff"/>
-                <file src="patches/test-sundry.diff"/>
-                <file src="patches/tkinter-import.diff"/>
-                <file src="patches/link-opt.diff"/>
-                <file src="patches/debug-build.diff"/>
-                <file src="patches/hotshot-import.diff"/>
-                <file src="patches/profiled-build.diff"/>
-                <file src="patches/no-zip-on-sys.path.diff"/>
-                <file src="patches/platform-lsbrelease.diff"/>
-                <file src="patches/bdist-wininst-notfound.diff"/>
-                <file src="patches/setup-modules-ssl.diff"/>
-                <file src="patches/makesetup-bashism.diff"/>
-                <file src="patches/hurd-disable-nonworking-constants.diff"/>
-                <file src="patches/enable-fpectl.diff"/>
-                <file src="patches/statvfs-f_flag-constants.diff"/>
-                <file src="patches/issue9012a.diff"/>
-                <file src="patches/link-system-expat.diff"/>
-                <file src="patches/plat-gnukfreebsd.diff"/>
-                <file src="patches/link-whole-archive.diff"/>
-                <file src="patches/bsddb-libpath.diff"/>
-                <file src="patches/disable-sem-check.diff"/>
-                <file src="patches/ctypes-arm.diff"/>
-                <file src="patches/lto-link-flags.diff"/>
-                <!--
-                <file src="patches/multiarch.diff"/>
-                -->
-                <file src="patches/lib2to3-no-pickled-grammar.diff"/>
-                <file src="patches/lib2to3-no-pgen-caching.diff"/>
-                <file src="patches/add-python-config-sh.diff"/>
-                <file src="patches/ext-no-libpython-link.diff"/>
-                <file src="patches/build-hash.diff"/>
-                <file src="patches/libffi-shared.diff"/>
-                <file src="patches/atomic-pyc-rename.diff"/>
-                <file src="patches/revert-unittest-loader-symlinks19352.diff"/>
-                <file src="patches/enable-sqlite-loadext.diff"/>
-                <file src="patches/installed-testsuite.diff"/>
-                <file src="patches/ensurepip-wheels.diff"/>
-                <file src="patches/ensurepip-disabled.diff"/>
-                <file src="patches/mangle-fstack-protector.diff"/>
-                <file src="patches/reproducible-buildinfo.diff"/>
-                <file src="patches/pydoc-use-pager.diff"/>
-                <file src="patches/fix-sslv3-test.diff"/>
-                <file src="patches/issue27239.diff"/>
+                <file src="patches/python2.7-2.7.16-2.debdiff"/>
                 <!-- Bolt OS -->
                 <file src="patches/musl-find-library.diff"/>
             </patchset>
@@ -86,32 +36,19 @@
             <package name="gcc" version=">= 4:6.3"/>
             <package name="autoconf"/>
             <package name="autotools-dev"/>
-            <package name="sharutils"/>
             <package name="libreadline-dev"/>
             <package name="libtinfo-dev"/>
             <package name="libncursesw5-dev" version=">= 5.3"/>
-            <package name="tk-dev"/>
-            <package name="blt-dev" version=">= 2.4z"/>
             <package name="libssl-dev"/>
             <package name="zlib1g-dev"/>
             <package name="libbz2-dev"/>
             <package name="libexpat1-dev"/>
-            <package name="libbluetooth-dev"/>
-            <package name="locales"/>
             <package name="libsqlite3-dev"/>
             <package name="libffi-dev" version=">= 3.0.5"/>
-            <package name="libgpm2"/>
-            <package name="mime-support"/>
-            <package name="netbase"/>
-            <package name="net-tools"/>
             <package name="bzip2"/>
-            <package name="time"/>
             <package name="libdb-dev" version="&lt;&lt; 1:6.0"/>
             <package name="libgdbm-dev"/>
             <package name="python"/>
-            <package name="help2man"/>
-            <package name="xvfb"/>
-            <package name="xauth"/>
         </requires>
 
         <xi:include href="rules.xml"/>
