@@ -8,15 +8,15 @@
         <description>
             <summary>Update infrastructure for config.{guess,sub} files</summary>
             <p>
-            This package installs an up-to-date version of config.guess and
+            This package contains an up-to-date version of config.guess and
             config.sub, used by the automake and libtool packages. It provides
             the canonical copy of those files for other packages as well.
             </p>
         </description>
 
         <sources>
-            <file src="autotools-dev-20161112.1.tar.gz" subdir="sources"
-                sha256sum="2e10a7da4a8e6b62449487037ff48d6ac830265fffdd2e89a66c62201234c75c"/>
+            <file src="autotools-dev-20180224.1.tar.xz" subdir="sources"
+                sha256sum="355a4d8461dfedebd2c5194603197712a10f71e20de73a35ab6e90b7acf3e837"/>
         </sources>
 
         <xi:include href="rules.xml"/>
