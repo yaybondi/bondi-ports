@@ -58,7 +58,9 @@
                 <file src="sources/debian/patches/disable-sem-check.diff"/>
                 <file src="sources/debian/patches/ctypes-arm.diff"/>
                 <file src="sources/debian/patches/lto-link-flags.diff"/>
+                <!--
                 <file src="sources/debian/patches/multiarch.diff"/>
+                -->
                 <file src="sources/debian/patches/lib2to3-no-pickled-grammar.diff"/>
                 <file src="sources/debian/patches/add-python-config-sh.diff"/>
                 <file src="sources/debian/patches/ext-no-libpython-link.diff"/>
