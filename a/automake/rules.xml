@@ -4,7 +4,7 @@
     <![CDATA[
 
 cd "$BOLT_SOURCE_DIR"
-./bootstrap.sh
+./bootstrap
 autoreconf -vi
 
 cd "$BOLT_BUILD_DIR"
