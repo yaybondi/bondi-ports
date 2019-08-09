@@ -15,30 +15,28 @@
         </description>
 
         <sources>
-            <file src="python-setuptools-33.1.1.tar.xz" subdir="sources"
-                sha256sum="aeeac1aa49ab17fb2164c380eae40a11a90a21719325d668fba5bd31d5cf72e6"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="fee88b920c0f918b3a5f7ff4982f4492ad6279172a826c7545c4ad285e0443dd"/>
+            <file src="python-setuptools-40.8.0.tar.xz" subdir="sources"
+                sha256sum="b0525dea743dd9a34c3523b5bd75ed6ef0763d389f96e7df448904169d8ce772"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="4e6a3137e74b802d81dae00e3a7facc39967f37c4d62124c3bce9b42b6bb024f"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/install-layout.diff"/>
                 <file src="patches/multiarch-extname.diff"/>
-                <file src="patches/fix-python3.5.diff"/>
                 <file src="patches/no-sphinx-rst.linker.diff"/>
                 <file src="patches/fix-changes-link.diff"/>
-                <file src="patches/multiple-entrypoints.diff"/>
                 <file src="patches/no-SOURCES.txt-in-egg-ingo.diff"/>
                 <file src="patches/reproducible.diff"/>
                 <file src="patches/sorted-requires.diff"/>
+                <file src="patches/PKG-INFO-output-reproducible.diff"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="pypy"/>
             <package name="python2.7"/>
-            <package name="python3.5"/>
+            <package name="python3.7"/>
         </requires>
 
         <xi:include href="rules.xml"/>
