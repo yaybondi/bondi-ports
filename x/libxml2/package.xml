@@ -20,10 +20,10 @@
         <sources>
             <file src="libxml2-2.9.4+dfsg1.tar.xz" subdir="sources"
                 sha256sum="a74ad55e346aa0b2b41903e66d21f8f3d2a736b3f41e32496376861ab484184e"/>
-            <file src="patches.2.2.tar.gz" subdir="patches"
-                sha256sum="b1ecbae83bacceb5326e82af5d2dbe6ceb5abe0be0980e4b58b797a68426da11"/>
+            <file src="debian-patches-7.tar.gz" subdir="patches"
+                sha256sum="ecd3dba9984d4af63bf88365c920e4365cc4ec57b9a5488c9b380fbef244aea2"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/0001-modify-xml2-config-and-pkgconfig-behaviour.patch"/>
@@ -34,6 +34,17 @@
                 <file src="patches/0006-Disallow-namespace-nodes-in-XPointer-ranges.patch"/>
                 <file src="patches/0007-Fix-more-NULL-pointer-derefs-in-xpointer.c.patch"/>
                 <file src="patches/0008-Fix-attribute-decoding-during-XML-schema-validation.patch"/>
+                <file src="patches/0009-Increase-buffer-space-for-port-in-HTTP-redirect-supp.patch"/>
+                <file src="patches/0010-Prevent-unwanted-external-entity-reference.patch"/>
+                <file src="patches/0011-Fix-handling-of-parameter-entity-references.patch"/>
+                <file src="patches/0012-Fix-buffer-size-checks-in-xmlSnprintfElementContent.patch"/>
+                <file src="patches/0013-Fix-type-confusion-in-xmlValidateOneNamespace.patch"/>
+                <file src="patches/0014-Fix-NULL-pointer-deref-in-xmlDumpElementContent.patch"/>
+                <file src="patches/0015-Check-for-integer-overflow-in-memory-debug-code.patch"/>
+                <file src="patches/0016-Fix-copy-paste-errors-in-error-messages.patch"/>
+                <file src="patches/0017-python-remove-single-use-of-_PyVerify_fd.patch"/>
+                <file src="patches/0018-Fix-XPath-stack-frame-logic.patch"/>
+                <file src="patches/0019-CVE-2017-8872.patch"/>
             </patchset>
         </patches>
 
