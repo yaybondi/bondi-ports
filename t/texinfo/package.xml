@@ -16,19 +16,21 @@
         </description>
 
         <sources>
-            <file src="texinfo-6.3.0.dfsg.1.tar.xz" subdir="sources"
-                sha256sum="4fc0dbeb2d3dee8f0bb5b65935f9fee99863b6910e8115110604ced2438f849d"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="a382c809a501d12a40d2b8d85abd5ec08cd492d84f406d2f3057bec04b6453bd"/>
+            <file src="texinfo-6.5.0.dfsg.1.tar.xz" subdir="sources"
+                sha256sum="4a0eedf0d4220b50d7aa1ee8098804959b3d3fd7d225e0eb3427f1761fe56106"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="1164ce61a560245d11c194d9c5051d0cf7b73fd9212c118109018612416a01ac"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/warn_missing_tex"/>
                 <file src="patches/numerical-signal-names"/>
                 <file src="patches/dont_build_info"/>
                 <file src="patches/info-manpage-mentiones-nonfree"/>
-                <file src="patches/reproducible-makeinfo"/>
+                <file src="patches/update-texinfo-tex"/>
+                <file src="patches/perl-528-fixes"/>
+                <file src="patches/Update-locale-handling-for-Perl-5.28"/>
             </patchset>
         </patches>
 
