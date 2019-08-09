@@ -14,10 +14,10 @@
         </description>
 
         <sources>
-            <file src="tcllib-1.18-dfsg.tar.xz" subdir="sources"
-                sha256sum="ed531a58d28f77f7b2af570c24caec3c213288219315708d0158efe98bcab37e"/>
-            <file src="patches.03.tar.gz" subdir="patches"
-                sha256sum="1e6bbd347f05fdeb2b8dfca9f815b55b0323e0792bac4c19b37c696c2b387df3"/>
+            <file src="tcllib-1.19-dfsg.tar.xz" subdir="sources"
+                sha256sum="bea20af4336144d6d1d65853eb05ad2333396e254fa36cf154424562a280ff3a"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="686aa3831943f0e1fad6cfbe664424014629507fcb4643af8507ab80eea0cbb9"/>
         </sources>
 
         <patches>
