@@ -46,7 +46,9 @@
                 <file src="patches/local.report-gz-as-application-gzip.patch"/>
                 <file src="patches/local.disable-detection-of-vax-coff-executables.patch"/>
                 <file src="patches/local.disable-algol68-detection.patch"/>
+                <!--
                 <file src="patches/local.extra-magic.patch"/>
+                -->
                 <file src="patches/local.manpage-seccomp-is-disabled.patch"/>
             </patchset>
         </patches>
