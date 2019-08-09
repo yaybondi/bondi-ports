@@ -23,14 +23,15 @@
         <sources>
             <file src="libtool-2.4.6.tar.xz" subdir="sources"
                 sha256sum="7c87a8c2c8c0fc9cd5019e402bed4292462d00a718a7cd5f11218153bf28b26f"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="3ea6acf019c262056478c6825b5c868f2cf7c6493d5af30eb136a45cd38c790b"/>
+            <file src="debian-patches-9.tar.gz" subdir="patches"
+                sha256sum="9ff465754a8084e52b5af11fb0ac36d93ec75c82f1dc9a51c684e374ee724ca4"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/0001-libtool-fix-GCC-linking-with-specs.patch"/>
                 <file src="patches/0003-libtoolize-fix-infinite-recursion-in-m4.patch"/>
+                <file src="patches/0011-libtool-optimizing-options-parser-hooks.patch"/>
                 <file src="patches/0015-syntax-check-fix-sed-syntax-errors.patch"/>
                 <file src="patches/0020-libtool-fix-GCC-clang-linking-with-fsanitize.patch"/>
                 <file src="patches/link_all_deplibs.patch"/>
@@ -45,9 +46,11 @@
                 <file src="patches/no_hostname.patch"/>
                 <file src="patches/bootstrap_options.conf"/>
                 <file src="patches/version_string.patch"/>
+                <file src="patches/grep-spaces.patch"/>
+                <file src="patches/libtool-eval-nm.patch"/>
+                <file src="patches/0025-libtool-pass-use-ld.patch"/>
             </patchset>
         </patches>
-
         <requires>
             <package name="file"/>
             <package name="automake" version=">= 1:1.14.1-3"/>
