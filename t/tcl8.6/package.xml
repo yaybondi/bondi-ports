@@ -2,21 +2,20 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
     <source name="tcl8.6" architecture-independent="false">
         <description>
-            <summary>Tcl (the Tool Command Language) v8.6 - shell</summary>
+            <summary>Tcl (the Tool Command Language) v8.6</summary>
             <p>
             Tcl is a powerful, easy to use, embeddable, cross-platform interpreted
-            scripting language. This package contains the Tcl shell which you need
-            to run Tcl scripts. This version includes thread support.
+            scripting language.
             </p>
         </description>
 
         <sources>
-            <file src="tcl8.6-8.6.6+dfsg.tar.gz" subdir="sources"
-                sha256sum="3e3b0be89738711cfa7f700b801dc3b924843092db237dfcbc3602a1f8ed2f29"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="483e6f7be85b4519126c49bc308f0f28e6e2a2633617ca18547eaf0d0eba22a1"/>
+            <file src="tcl8.6-8.6.9+dfsg.tar.gz" subdir="sources"
+                sha256sum="e0a220012a61fd4bd07e0e6b3391a8884c16608b37a00f22726614d721c50659"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="a4c52478a8de5bce283f1abf13f0cc335522c54accf1a4a7bb179054ef97a5d4"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/tcllibrary.diff"/>
