@@ -19,12 +19,10 @@
         </description>
 
         <sources>
-            <file src="expect-5.45.tar.gz" subdir="sources"
-                sha256sum="b28dca90428a3b30e650525cdc16255d76bb6ccd65d448be53e620d95d5cc040"/>
-            <file src="patches.07.tar.gz" subdir="patches"
-                sha256sum="bb46f722615ca90e43b3e4f9fa01a6acb451b649d7f22328b821d34f91f0383d"/>
-            <file src="patches.bolt.tar.gz" subdir="patches"
-                sha256sum="cbbe6e9db23c3de1622cd319fbdf02ef2c1b8e38fd2ff392c126640403b51b63"/>
+            <file src="expect-5.45.4.tar.gz" subdir="sources"
+                sha256sum="d082bf340fdb7a85b1e4e5df4d967d0140835db34a8a035c3102abb5eb62d450"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="05d42651b6e2e040097bf8bd42da24e0b064a651426c606fd3b072ecf710d18e"/>
         </sources>
 
         <patches>
@@ -42,11 +40,9 @@
                 <file src="patches/16-logfile.patch"/>
                 <file src="patches/18-non-linux.patch"/>
                 <file src="patches/22-segfault-with-stubs.patch"/>
-                <file src="patches/23-memmove.patch"/>
                 <file src="patches/24-format.patch"/>
-                <file src="patches/25-matchlen.patch"/>
-                <file src="patches/26-eof-handling.patch"/>
-                <file src="patches/27-exp_chan.patch"/>
+                <file src="patches/28-cross.patch"/>
+                <file src="patches/29-suggest-tk.patch"/>
             </patchset>
         </patches>
 
