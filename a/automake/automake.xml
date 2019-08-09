@@ -17,9 +17,9 @@
         `Makefile.in's are compliant with the GNU Makefile standards.
         </p>
         <p>
-        Automake 1.15 fails to work in a number of situations that Automake
-        1.4, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11 and 1.14 did, so previous versions are
-        available as separate packages.
+        Automake 1.16 fails to work in a number of situations that Automake
+        1.11, and 1.15 did, so some previous versions are available as separate
+        packages.
         </p>
     </description>
 
