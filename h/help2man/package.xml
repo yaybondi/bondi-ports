@@ -19,8 +19,8 @@
         </description>
 
         <sources>
-            <file src="help2man-1.47.4.tar.xz" subdir="sources"
-                sha256sum="d4ecf697d13f14dd1a78c5995f06459bff706fd1ce593d1c02d81667c0207753"/>
+            <file src="help2man-1.47.8.tar.xz" subdir="sources"
+                sha256sum="528f6a81ad34cbc76aa7dce5a82f8b3d2078ef065271ab81fda033842018a8dc"/>
         </sources>
 
         <requires>
