@@ -5,32 +5,26 @@
             <summary>International Components for Unicode</summary>
             <p>
             ICU is a C++ and C library that provides robust and full-featured
-            Unicode and locale support. This package contains the runtime
-            libraries for ICU.
+            Unicode and locale support.
             </p>
         </description>
 
         <sources>
-            <file src="icu-57.1.tar.gz" subdir="sources"
-                sha256sum="ff8c67cb65949b1e7808f2359f2b80f722697048e90e7cfc382ec1fe229e9581"/>
-            <file src="patches.06.tar.gz" subdir="patches"
-                sha256sum="615a3d36568d74dd44942c6ef209e3f3338f35080c6a8547284088850b55cbce"/>
+            <file src="icu-63.1.tar.xz" subdir="sources"
+                sha256sum="347d0e6c39c3538b812c10c6c83815d4a089d578380387ae7d94c5b820948e82"/>
+            <file src="debian-patches-6.tar.gz" subdir="patches"
+                sha256sum="d0995cb030374333e77d2abd30c77a9623f34a507ec16c588e0c983b6b14a972"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/icudata-stdlibs.patch"/>
                 <file src="patches/gennorm2-man.patch"/>
                 <file src="patches/icuinfo-man.patch"/>
-                <file src="patches/malayalam-rendering.patch"/>
-                <file src="patches/indic-ccmp.patch"/>
-                <file src="patches/CVE-2014-6585.patch"/>
-                <file src="patches/CVE-2015-4760.patch"/>
                 <file src="patches/hurd-fix.diff"/>
-                <file src="patches/CVE-2016-0494.patch"/>
-                <file src="patches/CVE-2016-6293.patch"/>
-                <file src="patches/CVE-2016-7415.patch"/>
-                <file src="patches/CVE-2017-7867_CVE-2017-7868.patch"/>
+                <file src="patches/layout-test-fix.patch"/>
+                <file src="patches/ICU-20246_Fixing_another_integer_overflow_in_number_parsing.patch"/>
+                <file src="patches/ICU-20208_uspoof.cpp_function_checkImpl_should_be_static.patch"/>
             </patchset>
         </patches>
 
