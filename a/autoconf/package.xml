@@ -21,10 +21,10 @@
         <sources>
             <file src="autoconf-2.69.tar.xz" subdir="sources"
                 sha256sum="64ebcec9f8ac5b2487125a86a7760d2591ac9e1d3dbd59489633f9de62a57684"/>
-            <file src="patches.10.tar.gz" subdir="patches"
-                sha256sum="95afcd92a2b8888b7f6383b4fcff4ae7300fa642def91a6d4da472dd8bfc6c46"/>
+            <file src="debian-patches-11.tar.gz" subdir="patches"
+                sha256sum="3dbf8fcd55ce4d52cd9ecca07afb08e561bce5728fb8376ed45ea937d58433b2"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/atomic.patch"/>
@@ -34,6 +34,7 @@
                 <file src="patches/AM_PROG_LIBTOOL.patch"/>
                 <file src="patches/add-runstatedir.patch"/>
                 <file src="patches/unescaped-left-brace-warning-fix.patch"/>
+                <file src="patches/mmap-leak-fix.patch"/>
             </patchset>
         </patches>
 
