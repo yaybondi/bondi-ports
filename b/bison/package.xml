@@ -19,12 +19,12 @@
         </description>
 
         <sources>
-            <file src="bison-3.0.4.dfsg.tar.xz" subdir="sources"
-                sha256sum="923b80ae17b292a37b534ddcd694efd53c709e10d8b3371e60e92fc4504517f1"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="d9f7aa6cfd828a8c21d3465c8bc01e043ac493ee3267da777979fd7a0f6a3ee4"/>
+            <file src="bison-3.3.2.dfsg.tar.xz" subdir="sources"
+                sha256sum="2648db8ef3eaf40d0d9747a9dc40b9190cc7eebebd9200f68e88bca0186fedb0"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="4e4dbcd903229ebf6b22288fb0fae097a0932e4da1bf1a8042ab6c171b568afa"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/01_inhibit_example_generation"/>
