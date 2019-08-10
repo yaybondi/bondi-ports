@@ -16,10 +16,10 @@
         </description>
 
         <sources>
-            <file src="libxslt-1.1.29.tar.gz" subdir="sources"
-                sha256sum="b5976e3857837e7617b29f2249ebb5eeac34e249208d31f1fbf7a6ba7a4090ce"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="131506ce63394d5698883f80c495370743b013486dedb400956046422641f79b"/>
+            <file src="libxslt-1.1.32.tar.gz" subdir="sources"
+                sha256sum="526ecd0abaf4a7789041622c3950c0e7f2c4c8835471515fd77eec684a355460"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="9770cabdf01fdf452aa5417330766a3fe82e6a669ca4206bf2a24cb37f6bcac7"/>
         </sources>
 
         <patches>
@@ -28,18 +28,16 @@
                 <file src="patches/0002-fix-autoconf-automake.patch"/>
                 <file src="patches/0003-fix-typo.patch"/>
                 <file src="patches/0004-Make-generate-id-deterministic.patch"/>
-                <file src="patches/0005-Link-with-libm.patch"/>
-                <file src="patches/0006-remove-plugin-in-xslt-config.patch"/>
-                <file src="patches/0007-Fix-heap-overread-in-xsltFormatNumberConversion.patch"/>
+                <file src="patches/0005-remove-plugin-in-xslt-config.patch"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="binutils" version=">= 2.14.90.0.7"/>
-            <package name="libgcrypt11-dev"/>
-            <package name="libxml2-dev" version=">= 2.6.27"/>
+            <package name="binutils"/>
+            <package name="libgcrypt20-dev"/>
+            <package name="python-all-dev"/>
+            <package name="libxml2-dev"/>
             <package name="perl"/>
-            <package name="python-all-dev" version=">= 2.6.6-3~"/>
         </requires>
 
         <xi:include href="rules.xml"/>
