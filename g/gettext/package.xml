@@ -12,19 +12,26 @@
         <sources>
             <file src="gettext-0.19.8.1.tar.xz" subdir="sources"
                 sha256sum="105556dbc5c3fbbc2aa0edb46d22d055748b6f5c7cd7a8d99f8e7eb84e938be4"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="e518f6dc54c3ba480fb2d7cf24b8e67995863211bbedbd98660a60178f525a7b"/>
+            <file src="debian-patches-9.tar.gz" subdir="patches"
+                sha256sum="1a0bdc665f2581a8f0fd55f8436c5d0e005af98419384803efa47500b092aabd"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
-                <file src="patches/01-do-not-use-java-in-urlget"/>
+                <file src="patches/01-do-not-use-java-in-urlget.patch"/>
+                <file src="patches/02-msgfmt-remove-pot-creation-date.patch"/>
+                <file src="patches/03-avoid-extraneous-nul-bytes.patch"/>
+                <file src="patches/04-fix-msgunfmt-heap-corruption.patch"/>
+                <file src="patches/05-fix-crash-xgettext-with-its.patch"/>
+                <file src="patches/06-java9-support.patch"/>
+                <file src="patches/07-java11-support.patch"/>
+                <file src="patches/08-java-future-support.patch"/>
+                <file src="patches/09-fix-crash-with-po-file-input.patch"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="fastjar"/>
-            <package name="default-jdk"/>
+            <package name="g++" version=">= 4:7"/>
             <package name="file"/>
             <package name="libncurses5-dev"/>
             <package name="libxml2-dev"/>
@@ -32,6 +39,7 @@
             <package name="libcroco3-dev"/>
             <package name="xz-utils"/>
             <package name="libunistring-dev"/>
+            <package name="bison"/>
         </requires>
 
         <xi:include href="rules.xml"/>
