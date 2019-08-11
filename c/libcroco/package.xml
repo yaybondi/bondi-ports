@@ -31,16 +31,22 @@
         </description>
 
         <sources>
-            <file src="libcroco-0.6.11.tar.xz" subdir="sources"
-                sha256sum="132b528a948586b0dfa05d7e9e059901bca5a3be675b6071a90a90b81ae5a056"/>
+            <file src="libcroco-0.6.12.tar.xz" subdir="sources"
+                sha256sum="ddc4b5546c9fb4280a5017e2707fbd4839034ed1aba5b7d4372212f34f84f860"/>
+            <file src="debian-patches-3.tar.gz" subdir="patches"
+                sha256sum="bd023da843374c82a895307743ecbf5dd7c52502700f5e6d04a32bf1bd0e138b"/>
         </sources>
 
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/CVE-2017-7960-heap-buffer-overflow.patch"/>
+                <file src="patches/CVE-2017-7961-double-to-long-check.patch"/>
+            </patchset>
+        </patches>
+
         <requires>
-            <package name="gtk-doc-tools"/>
-            <package name="gnome-pkg-tools" version=">= 0.7"/>
             <package name="libxml2-dev" version=">= 2.4.23"/>
             <package name="libglib2.0-dev" version=">= 2.0"/>
-            <package name="libglib2.0-doc"/>
             <package name="zlib1g-dev"/>
         </requires>
 
