@@ -22,17 +22,9 @@
         </description>
 
         <sources>
-            <file src="nspr-4.12.tar.gz" subdir="sources"
-                sha256sum="e0b10a1e569153668ff8bdea6c7e491b389fab69c2f18285a1ebf7c2ea4269de"/>
-            <file src="patches.06.tar.gz" subdir="patches"
-                sha256sum="f0cde79b03cf7053e09779b548211fe24232224e3bf7beef9503d1ae2663d86c"/>
+            <file src="nspr-4.20.tar.gz" subdir="sources"
+                sha256sum="2c8964913da89ffbaf464d49ce44d79e8804e1794ef9a8c52a7bff7224d1556e"/>
         </sources>
-        
-        <patches>
-            <patchset subdir="sources">
-                <file src="patches/PL_strcmp"/>
-            </patchset>
-        </patches>
 
         <requires>
             <package name="autotools-dev"/>
