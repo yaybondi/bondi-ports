@@ -20,20 +20,18 @@
         </description>
 
         <sources>
-            <file src="six-1.10.0.tar.gz" subdir="sources"
-                sha256sum="105f8d68616f8248e24bf0e9372ef04d3cc10104f1980f54d57b2ce73a5ad56a"/>
+            <file src="six-1.12.0.tar.gz" subdir="sources"
+                sha256sum="d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"/>
         </sources>
 
         <requires>
             <package name="python" version=">= 2.6.6-3~"/>
             <package name="python-all"/>
             <package name="python-py"/>
-            <package name="python-pytest"/>
             <package name="python-setuptools"/>
             <package name="python3" version=">= 3.1.2-8~"/>
             <package name="python3-all"/>
             <package name="python3-py"/>
-            <package name="python3-pytest"/>
             <package name="python3-setuptools"/>
         </requires>
 
