@@ -17,17 +17,9 @@
         </description>
 
         <sources>
-            <file src="python-py-1.4.32.tar.gz" subdir="sources"
-                sha256sum="c4b89fd1ff1162375115608d01f77c38cca1d0f28f37fd718005e19b28be41a7"/>
-            <file src="patches.03.tar.gz" subdir="patches"
-                sha256sum="8b0736a3cca5185382d0bddb95b7bb928261be2d7b4c232948c3507e4c25e05b"/>
+            <file src="python-py-1.7.0.tar.gz" subdir="sources"
+                sha256sum="bf92637198836372b520efcba9e020c330123be8ce527e535d185ed4b6f45694"/>
         </sources>
-        
-        <patches>
-            <patchset subdir="sources">
-                <file src="patches/4711179f79a7bd84edf243a89bde47735f9d7ee4.patch"/>
-            </patchset>
-        </patches>
 
         <requires>
             <package name="python-all" version=">= 2.6.6-3~"/>
