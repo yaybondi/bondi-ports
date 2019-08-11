@@ -18,59 +18,48 @@
         </description>
 
         <sources>
-            <file src="glib2.0-2.50.3.tar.xz" subdir="sources"
-                sha256sum="82ee94bf4c01459b6b00cb9db0545c2237921e3060c0b74cff13fbc020cfd999"/>
-            <file src="debian.2.tar.gz" subdir="patches"
-                sha256sum="9854c50e1fffc093e79a1c00b0783960300b1c1b09f2309db9d7ebe6b970a64f"/>
+            <file src="glib2.0-2.58.3.tar.xz" subdir="sources"
+                sha256sum="8f43c31767e88a25da72b52a40f3301fefc49a665b56dc10ee7cc9565cbe7481"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="f741bb3802ad8351695e8970c982f01554f941ee86149f27a32da4303ec6b82a"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
+                <file src="patches/gdbusmessage-Fix-check-on-upper-limit-of-message-size.patch"/>
+                <file src="patches/mainloop-test-Fix-race-conditions.patch"/>
+                <file src="patches/closures-test-Avoid-timeout-on-ARM64-CPUs.patch"/>
+                <file src="patches/gfile-Limit-access-to-files-when-copying.patch"/>
                 <file src="patches/01_gettext-desktopfiles.patch"/>
-                <file src="patches/02_gettext-desktopfiles-ubuntu.patch"/>
-                <file src="patches/03_disble_glib_compile_schemas_warning.patch"/>
-                <file src="patches/04_homedir_env.patch"/>
-                <file src="patches/06_thread_test_ignore_prctl_fail.patch"/>
-                <file src="patches/07_disable_tests_on_slow_archs.patch"/>
-                <file src="patches/61_glib-compile-binaries-path.patch"/>
-                <file src="patches/90_gio-modules-multiarch-compat.patch"/>
-                <file src="patches/skip-brokwn-dbus-appinfo-test.patch"/>
-                <file src="patches/Do-not-attempt-to-autolaunch-a-session-dbus-daemon-w.patch"/>
                 <file src="patches/81-skip-monitor-test-on-non-linux.patch"/>
                 <file src="patches/0001-timer-test-use-volatile-for-locals.patch"/>
-                <file src="patches/skip-broken-timer-test.patch"/>
-                <file src="patches/0001-Fix-trashing-on-overlayfs.patch"/>
-                <file src="patches/tests-gdatetime-Use-a-real-rather-than-invented-time.patch"/>
+                <file src="patches/gwakeuptest-Be-less-parallel-unless-invoked-with-m-slow.patch"/>
+                <file src="patches/debian/02_gettext-desktopfiles-ubuntu.patch"/>
+                <file src="patches/debian/03_disble_glib_compile_schemas_warning.patch"/>
+                <file src="patches/debian/04_homedir_env.patch"/>
+                <file src="patches/debian/06_thread_test_ignore_prctl_fail.patch"/>
+                <file src="patches/debian/61_glib-compile-binaries-path.patch"/>
+                <file src="patches/debian/90_gio-modules-multiarch-compat.patch"/>
+                <file src="patches/debian/Look-for-gio-launch-desktop-in-libdir-glib-2.0.patch"/>
+                <file src="patches/debian/closures-test-Skip-on-arm-unless-flaky-tests-are-allowed.patch"/>
+                <file src="patches/debian/Disable-some-tests-on-slow-architectures-which-keep-faili.patch"/>
+                <file src="patches/debian/Skip-test-which-performs-some-unreliable-floating-point-c.patch"/>
+                <file src="patches/debian/Skip-unreliable-test_threaded_singleton-by-default.patch"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="cdbs" version=">= 0.4.93"/>
-            <package name="pkg-config" version=">= 0.16.0"/>
             <package name="gettext"/>
-            <package name="autotools-dev"/>
-            <package name="gnome-pkg-tools" version=">= 0.11"/>
-            <package name="libelf-dev" version=">= 0.142"/>
-            <package name="libmount-dev" version=">= 2.28"/>
-            <package name="libpcre3-dev" version=">= 1:8.35"/>
-            <package name="gtk-doc-tools" version=">= 1.20"/>
+            <package name="libffi-dev"/>
+            <package name="libpcre3-dev"/>
             <package name="libselinux1-dev"/>
-            <package name="linux-libc-dev"/>
-            <package name="libgamin-dev"/>
-            <package name="zlib1g-dev"/>
-            <package name="desktop-file-utils"/>
-            <package name="dbus"/>
-            <package name="shared-mime-info"/>
-            <package name="tzdata"/>
-            <package name="xterm"/>
-            <package name="python3" version=">= 2.7.5-5~"/>
-            <package name="python3-dbus"/>
-            <package name="python3-gi"/>
             <package name="libxml2-utils"/>
+            <package name="libc-dev"/>
+            <package name="pkg-config"/>
+            <package name="python3"/>
+            <package name="tzdata"/>
             <package name="xsltproc"/>
-            <package name="docbook-xml"/>
-            <package name="docbook-xsl"/>
-            <package name="libffi-dev" version=">= 3.0.0"/>
+            <package name="zlib1g-dev"/>
         </requires>
 
         <xi:include href="rules.xml"/>
