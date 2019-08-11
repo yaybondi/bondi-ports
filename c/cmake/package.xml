@@ -26,20 +26,9 @@
         </description>
 
         <sources>
-            <file src="cmake-3.7.2.tar.gz" subdir="sources"
-                sha256sum="dc1246c4e6d168ea4d6e042cfba577c1acd65feea27e56f5ff37df920c30cae0"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="92c5df267ea9fb13373a43a953fb6cd6a2c9fa9ae29eee27db35b09d0f8f93ac"/>
+            <file src="cmake-3.13.4.tar.gz" subdir="sources"
+                sha256sum="fdd928fee35f472920071d1c7f1a6a2b72c9b25e04f7a37b409349aef3f20e9b"/>
         </sources>
-
-        <patches>
-            <patchset subdir="sources">
-                <file src="patches/FindBoost_add_-lpthread_#563479.diff"/>
-                <file src="patches/qt_import_dir_variable.diff"/>
-                <file src="patches/fix-ftbfs-on-kfreebsd.patch"/>
-                <file src="patches/mips-rld-map-rel.patch"/>
-            </patchset>
-        </patches>
 
         <requires>
             <package name="libarchive-dev" version=">= 2.8.0"/>
