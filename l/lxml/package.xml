@@ -26,29 +26,21 @@
         </description>
 
         <sources>
-            <file src="lxml-3.7.1.tar.gz" subdir="sources"
-                sha256sum="1c7f6771838300787cfa1bb3ed6512e9dc78e60ecb308a8ed49ac956569c1cca"/>
+            <file src="lxml-4.3.2.tar.gz" subdir="sources"
+                sha256sum="3a9d8521c89bf6f2a929c3d12ad3ad7392c774c327ea809fd08a13be6b3bc05f"/>
         </sources>
 
         <requires>
             <package name="python-all-dev" version=">= 2.6.6-1~"/>
-            <package name="python-all-dbg"/>
             <package name="python3-all-dev" version=">= 3.3.3"/>
-            <package name="python3-all-dbg"/>
             <package name="python-pyrex" version=">= 0.9.4.1"/>
             <package name="libxml2-dev"/>
             <package name="libxslt1-dev"/>
             <package name="zlib1g-dev"/>
             <package name="python-setuptools"/>
             <package name="python3-setuptools" version=">= 0.6.29"/>
-            <package name="python-bs4"/>
-            <package name="python3-bs4"/>
-            <package name="python-html5lib"/>
-            <package name="python3-html5lib"/>
             <package name="cython"/>
-            <package name="cython-dbg"/>
             <package name="cython3"/>
-            <package name="cython3-dbg"/>
         </requires>
 
         <xi:include href="rules.xml"/>
