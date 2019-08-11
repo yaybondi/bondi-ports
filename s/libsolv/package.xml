@@ -20,11 +20,11 @@
         </description>
 
         <sources>
-            <file src="libsolv-0.6.26.tar.gz" subdir="sources"
-                sha256sum="67a6c327b8965ff61b0bddf939a7225cc94018285838a30faf855e2965fbd122"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="f63db791159d315a117a7c79ccd247d28a7a85df57953c696eb3489ee1a4af2b"/>
-            <file src="bolt.01.tar.gz" subdir="patches"
+            <file src="libsolv-0.6.35.tar.gz" subdir="sources"
+                sha256sum="4b679353b62f31cc0aa27ab41d426995e96f0ab3048d95cf0d62e4bc65ac21e7"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="eca6daa4d8664aa0c97f4a166a0e0f0ec9486a89c9befc1ccd713d3f77999cbc"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="247925d9924c8a9d6c0192a2874e3a22b79e4f07cd71766efe9d544ce090dd6e"/>
         </sources>
 
@@ -33,8 +33,6 @@
                 <!-- Debian -->
                 <file src="patches/1004_cmake-module-path-fix.patch"/>
                 <file src="patches/1006_various-types.patch"/>
-                <file src="patches/2001_build-for-SUSE-and-find-rpmdb.patch"/>
-
                 <!-- Bolt -->
                 <file src="patches/0001-Add-fallback-fopencookie-implementation.patch"/>
                 <file src="patches/0002-Fixes-to-internal-fopencookie-implementation.patch"/>
