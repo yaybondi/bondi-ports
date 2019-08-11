@@ -24,12 +24,12 @@
         </description>
 
         <sources>
-            <file src="python-dateutil-2.5.3.tar.gz" subdir="sources"
-                sha256sum="1408fdb07c6a1fa9997567ce3fcee6a337b39a503d80699e0f213de4aa4b32ed"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="feb96c6a45fce718c7d015a9ea6f07a96d3daa6aed3b4fb47f125058824f47c2"/>
+            <file src="python-dateutil-2.7.3.tar.gz" subdir="sources"
+                sha256sum="e27001de32f627c22380a688bcc43ce83504a7bc5da472209b4c70f02829f0b8"/>
+            <file src="debian-patches-3.tar.gz" subdir="patches"
+                sha256sum="ab6de5a3d222284715adc2fbef0d2367510e368b043100a60b272d30f5a19f7e"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/Remove_Zoneinfo_Tarball.patch"/>
