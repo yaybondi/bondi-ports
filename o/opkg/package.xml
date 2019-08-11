@@ -15,9 +15,9 @@
         </description>
 
         <sources>
-            <file src="opkg-0.3.5~20170309.tar.gz" subdir="sources"
-                sha256sum="bd9e922639c9bf02024b62d9da42c7f78fd2a0b1a936ac1e28fc0b71656fb590"/>
-            <file src="patches.bolt.tar.gz" subdir="patches"
+            <file src="opkg-0.4.1.tar.gz" subdir="sources"
+                sha256sum="0e0292825f0f23405a63241876fc1a60493fd39a5c28408390f656007e1d44ab"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="88b58eadf2bedc41b0e0b8d91d7e94e772ca1f4517de94865ecece9399ba6df3"/>
         </sources>
 
@@ -28,7 +28,7 @@
         </patches>
 
         <requires>
-            <package name="musl-libc-dev"/>
+            <package name="libc-dev"/>
             <package name="libcurl4-nss-dev"/>
             <package name="libgpgme11-dev"/>
             <package name="libgpg-error-dev"/>

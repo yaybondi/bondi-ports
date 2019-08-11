@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="0.4.1" revision="1" maintainer="Tobias Koch"
+     email="tobias.koch@gmail.com" date="2019-08-11 17:47:00+02:00">
+        <changeset>
+            <li>Upgrade to version 0.4.1.</li>
+        </changeset>
+    </release>
     <release version="0.3.5~20170309" revision="0" maintainer="Tobias Koch"
      email="tobias.koch@gmail.com" date="2017-03-25 00:38:00+03:00">
         <changeset>
