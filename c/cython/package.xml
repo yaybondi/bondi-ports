@@ -25,31 +25,26 @@
         </description>
 
         <sources>
-            <file src="cython-0.25.2.tar.gz" subdir="sources"
-                sha256sum="f141d1f9c27a07b5a93f7dc5339472067e2d7140d1c5a9e20112a5665ca60306"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="b3ac597d3b22520bf940ea23c862bc738323c1462ac917f7326ecf0e90cde86c"/>
+            <file src="cython-0.29.2.tar.gz" subdir="sources"
+                sha256sum="2ac187ff998a95abb7fae452b5178f91e1a713698c9ced89836c94e6b1d3f41e"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="30f45f57c3a0cb31f179328c78efb2396778cfcd41db9c53def276d332495dab"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/deb_nopngmath"/>
                 <file src="patches/deb_disable_googleanalytics"/>
                 <file src="patches/honour_SOURCE_DATE_EPOCH_for_copyright_year"/>
                 <file src="patches/debup_workaround_verify_resolution_GH1533"/>
+                <file src="patches/disable_tests.patch"/>
             </patchset>
         </patches>
 
         <requires>
             <package name="python-all-dev" version=">= 2.6.6-3~"/>
-            <package name="python-all-dbg"/>
             <package name="help2man" version=">= 1.37.1~"/>
-            <package name="python-sphinx"/>
-            <package name="python-numpy"/>
             <package name="python3-all-dev"/>
-            <package name="python3-all-dbg"/>
-            <package name="python3-numpy"/>
-            <package name="gdb"/>
         </requires>
 
         <xi:include href="rules.xml"/>
