@@ -26,27 +26,25 @@
         </description>
 
         <sources>
-            <file src="curl-7.52.1.tar.gz" subdir="sources"
-                sha256sum="a8984e8b20880b621f61a62d95ff3c0763a3152093a9f9ce4287cfd614add6ae"/>
-            <file src="debian.5.tar.gz" subdir="patches"
-                sha256sum="169ad2bc74d761ea1b91417284dd15f3db1f5558720466e2f1e734e75c3761eb"/>
+            <file src="curl-7.64.0.tar.gz" subdir="sources"
+                sha256sum="cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="958ae891e3a103ea0ac0ac06f7b6973db40df8a20f278764afe0e71ecc0194ab"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
-                <file src="patches/01_runtests_gdb.patch"/>
-                <file src="patches/03_keep_symbols_compat.patch"/>
                 <file src="patches/04_workaround_as_needed_bug.patch"/>
                 <file src="patches/06_always-disable-valgrind.patch"/>
                 <file src="patches/07_do-not-disable-debug-symbols.patch"/>
                 <file src="patches/08_enable-zsh.patch"/>
-                <file src="patches/09_fix-typo.patch"/>
                 <file src="patches/11_omit-directories-from-config.patch"/>
-                <file src="patches/12_fix-openssl-connection-timeout.patch"/>
-                <file src="patches/13_CVE-2017-2629.patch"/>
-                <file src="patches/14_fix-connect-regression.patch"/>
-                <file src="patches/15_CVE-2017-7407.patch"/>
-                <file src="patches/16_CVE-2017-7468.patch"/>
+                <file src="patches/12_zsh.patch"/>
+                <file src="patches/13_singlesocket-fix-the-sincebefore-placement.patch"/>
+                <file src="patches/14_connection_check-set-data-to-the-transfer-doing-the-.patch"/>
+                <file src="patches/15_connection_check-restore-original-conn-data-after-th.patch"/>
+                <file src="patches/16_tftp-use-the-current-blksize-for-recvfrom.patch"/>
+                <file src="patches/17_CURL_MAX_INPUT_LENGTH-largest-acceptable-string-inpu.patch"/>
                 <!--
                 <file src="patches/90_gnutls.patch"/>
                 <file src="patches/99_nss.patch"/>
