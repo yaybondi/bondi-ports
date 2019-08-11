@@ -18,16 +18,19 @@
         </description>
 
         <sources>
-            <file src="gpgme1.0-1.8.0.tar.bz2" subdir="sources"
-                sha256sum="596097257c2ce22e747741f8ff3d7e24f6e26231fa198a41b2a072e62d1e5d33"/>
-            <file src="patches.03.tar.gz" subdir="patches"
-                sha256sum="76e6f9d920a33d671bd37dfee0943e6fbd890433b9c5a4c38f3f87cdb74ce4a5"/>
+            <file src="gpgme1.0-1.12.0.tar.bz2" subdir="sources"
+                sha256sum="b4dc951c3743a60e2e120a77892e9e864fb936b2e58e7c77e8581f4d050e8cd8"/>
+            <file src="debian-patches-6.tar.gz" subdir="patches"
+                sha256sum="d623d6ee43223cae7c0637764cb401960bae74bea98693608a12ccd7d0ac72b3"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/0001-avoid-identifying-as-beta.patch"/>
-                <file src="patches/0002-Remove-a-forgotten-instance-of-libsuffix.patch"/>
+                <file src="patches/0002-python-do-not-export-HAVE_CXX11-definition.patch"/>
+                <file src="patches/0003-python-Auto-check-for-all-installed-python-versions.patch"/>
+                <file src="patches/0004-Avoid-Y2038-problem-on-32-bit-architectures.patch"/>
+                <file src="patches/0005-qt-Use-tofu-conflict-test-keys-without-expiry.patch"/>
             </patchset>
         </patches>
 
