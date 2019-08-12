@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+true
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+true
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd "$BOLT_SOURCE_DIR"
+
+mkdir -p "$BOLT_INSTALL_DIR/python2"
+mkdir -p "$BOLT_INSTALL_DIR/python3"
+
+bh_python_install --py2 --root "$BOLT_INSTALL_DIR/python2"
+bh_python_install --py3 --root "$BOLT_INSTALL_DIR/python3"
+
+cd "$BOLT_INSTALL_DIR"
+find . -name "*.egg-info" -prune -exec rm -fr '{}' ';'
+
+mv python2/usr/bin/html2text python2/usr/bin/html2markdown.py2
+mv python3/usr/bin/html2text python3/usr/bin/html2markdown.py3
+
+    ]]>
+    </install>
+</rules>

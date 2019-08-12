@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python3-html2text" section="python">
+    <description>
+        <summary>Python module for converting HTML to Markdown text (Python3 version)</summary>
+        <p>
+        html2text is a Python module that converts a page of HTML into clean,
+        easy-to-read plain ASCII text. Better yet, that ASCII also happens to be
+        valid Markdown (a text-to-HTML format).
+        </p>
+        <p>
+        This package contains the Python 3 version of the library, and a script,
+        html2markdown.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python3" version=">= 3.3.2-2~"/>
+    </requires>
+
+    <contents subdir="python3" collect-py-cache-files="true">
+        <file src="/usr/bin/html2markdown.py3"/>
+        <file src="/usr/lib/python3/dist-packages"/>
+    </contents>
+</package>
