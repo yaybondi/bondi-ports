@@ -14,7 +14,7 @@
     </description>
 
     <requires>
-        <package name="gcc-6-base" version="=="
+        <package name="gcc-8-base" version="=="
             cross-tools-prefix="tools-target-"/>
         <package name="libgcc-dev" version="=="
             cross-tools-prefix="tools-target-"/>

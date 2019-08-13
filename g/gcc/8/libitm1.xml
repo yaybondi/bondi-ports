@@ -14,7 +14,7 @@
     </description>
 
     <requires>
-        <package name="gcc-6-base" version="=="/>
+        <package name="gcc-8-base" version="=="/>
     </requires>
 
     <contents subdir="libitm1">

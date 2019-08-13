@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="gcc-6-base" section="libs">
+<package name="gcc-8-base" section="libs">
     <description>
         <summary>GCC, the GNU Compiler Collection (base package)</summary>
         <p>
@@ -8,7 +8,7 @@
         </p>
     </description>
 
-    <contents subdir="gcc-6-base">
+    <contents subdir="gcc-8-base">
         <file src="/"/>
     </contents>
 </package>

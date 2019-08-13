@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="gcc-6" section="devel">
+<package name="gcc-8" section="devel">
     <description>
         <summary>GNU C compiler</summary>
         <p>
@@ -8,9 +8,9 @@
     </description>
 
     <requires>
-        <package name="cpp-6" version="=="
+        <package name="cpp-8" version="=="
             cross-tools-prefix="tools-target-"/>
-        <package name="gcc-6-base" version="=="
+        <package name="gcc-8-base" version="=="
             cross-tools-prefix="tools-target-"/>
         <package name="libgcc-dev" version="=="
             cross-tools-prefix="tools-target-"/>
@@ -22,7 +22,7 @@
         <package name="gcc" cross-tools-prefix=""/>
     </provides>
 
-    <contents subdir="gcc-6">
+    <contents subdir="gcc-8">
         <file src="/"/>
     </contents>
 </package>
