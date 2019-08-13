@@ -91,7 +91,7 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-GCC_VERSION="`cat $BOLT_SOURCE_DIR/gcc/FULL-VER`"
+GCC_VERSION="`cat $BOLT_SOURCE_DIR/gcc/BASE-VER`"
 
 for ENTRY in all cpp-8 fixincludes g++-8 gcc-8 gcc-8-base libatomic1 libcc1-0 \
         libgcc libgcc-dev libgomp1 libitm1 libmpx2 libquadmath0 libstdc++6 \
@@ -166,31 +166,31 @@ PKG_PATH="$BOLT_INSTALL_DIR/cpp-8"
 # -------------------------------------------------------------------------
 
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8"
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION"
 
 mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/"*cpp \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8/cc1" \
-    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8"
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8/liblto_plugin.so"* \
-    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION/cc1" \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION/liblto_plugin.so"* \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION"
 
 # -------------------------------------------------------------------------
 PKG_PATH="$BOLT_INSTALL_DIR/fixincludes"
 # -------------------------------------------------------------------------
 
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8"
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION"
 
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8/install-tools" \
-    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION/install-tools" \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION"
 install -m 0755 "$BOLT_SOURCE_DIR/fixincludes/fixinc.in" \
-    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8/install-tools/fixinc.sh"
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION/install-tools/fixinc.sh"
 
 echo \
 "#! /bin/sh
 
-PATH=\"$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8/install-tools:\$PATH\"
+PATH=\"$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION/install-tools:\$PATH\"
 export TARGET_MACHINE=\"$BOLT_TARGET_TYPE\"
 exec fixinc.sh \"\$@\"
 " > "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin/fixincludes"
@@ -200,44 +200,43 @@ PKG_PATH="$BOLT_INSTALL_DIR/g++-8"
 # -------------------------------------------------------------------------
 
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8"
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION"
 
 mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/"*g++ \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
 mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/"*c++ \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8/cc1plus" \
-    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION/cc1plus" \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION"
 
 # -------------------------------------------------------------------------
 PKG_PATH="$BOLT_INSTALL_DIR/gcc-8"
 # -------------------------------------------------------------------------
 
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8/plugin"
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION/plugin"
 
 mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/"* \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8/collect"* \
-    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8"
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8/lto"* \
-    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION/collect"* \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION/lto"* \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION"
 mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib/"*.spec \
-    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8" || true
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8/plugin/libcc1plugin.so"* \
-    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8/plugin"
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION" || true
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION/plugin/libcc1plugin.so"* \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION/plugin"
 
 if [ "$BOLT_BUILD_FOR" != "cross-tools" ]; then
     ln -s ../../../libcc1.so.0 \
-        "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8/libcc1.so"
+        "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION/libcc1.so"
 fi
 
 # -------------------------------------------------------------------------
 PKG_PATH="$BOLT_INSTALL_DIR/gcc-8-base"
 # -------------------------------------------------------------------------
 
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8"
-ln -s 8 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION"
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION"
 
 # -------------------------------------------------------------------------
 PKG_PATH="$BOLT_INSTALL_DIR/libatomic1"
@@ -301,7 +300,7 @@ PKG_PATH="$BOLT_INSTALL_DIR/libstdc++-6-dev"
 
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/include"
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib"
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/share/gcc-8/python"
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/share/gcc-$GCC_VERSION/python"
 
 mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/include/c++" \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/include"
@@ -315,17 +314,17 @@ mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib/libsupc++"*.a \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib"
 
 if [ "$BOLT_BUILD_FOR" != "cross-tools" ]; then
-    mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/share/gcc-8/python/libstdcxx" \
-        "$PKG_PATH/$BOLT_INSTALL_PREFIX/share/gcc-8/python"
+    mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/share/gcc-$GCC_VERSION/python/libstdcxx" \
+        "$PKG_PATH/$BOLT_INSTALL_PREFIX/share/gcc-$GCC_VERSION/python"
 fi
 
 # -------------------------------------------------------------------------
 PKG_PATH="$BOLT_INSTALL_DIR/gcc-8-plugin-dev"
 # -------------------------------------------------------------------------
 
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8"
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8/plugin" \
-    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/8" || true
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION/plugin" \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION" || true
 
 # -------------------------------------------------------------------------
 PKG_PATH="$BOLT_INSTALL_DIR/libstdc++6"
