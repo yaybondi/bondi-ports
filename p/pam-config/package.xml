@@ -17,12 +17,12 @@
         </description>
 
         <sources>
-            <file src="pam-config-0.91.tar.gz" subdir="sources"
-                sha256sum="dead3f6850cf3f6587f3c648b6b381bf84653459b11bd901d6280d52dbd37d20"/>
-            <file src="patches.bolt.tar.gz" subdir="patches"
+            <file src="pam-config-1.1.tar.gz" subdir="sources"
+                sha256sum="2b252064f89f3f867f0818cf6212002927146a48322d4a05eabc3a5eb0de5dd5"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="da8fec8e9d4aaf93df533ff41eed79be4d1f5cc42974e659b56d7045ffc964ad"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <!-- Bolt -->
