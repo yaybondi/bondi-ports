@@ -31,13 +31,14 @@
             <file src="libselinux-2.8.tar.gz" subdir="sources"
                 sha256sum="31db96ec7643ce10912b3c3f98506a08a9116dcfe151855fd349c3fda96187e1"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="b7476e38ce80d78b687f56f5839f83abe850c8521269939d5a8324f500262446"/>
+                sha256sum="bce868fade5bc32aaaa4ab2ce8232b8cec04934a5b4a9d39d27f66b6fffa7cdf"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <!-- Bolt OS -->
                 <file src="patches/fix-readv-undeclared.patch"/>
+                <file src="patches/makefile-no-ln-sf-relative.patch"/>
             </patchset>
         </patches>
 
