@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="busybox-binutils-multiarch-symlinks" section="admin">
+<package name="busybox-binutils-symlinks" section="admin">
     <description>
-        <summary>Substitutes for (some) programs from the binutils-multiarch package</summary>
+        <summary>Substitutes for (some) programs from the binutils package</summary>
         <p>
             This package contains the symbolic links for the following applets:
         </p>
@@ -16,11 +16,11 @@
     </requires>
 
     <conflicts>
-        <package name="binutils-multiarch"/>
+        <package name="binutils"/>
     </conflicts>
 
     <replaces>
-        <package name="binutils-multiarch"/>
+        <package name="binutils"/>
     </replaces>
 
     <contents>

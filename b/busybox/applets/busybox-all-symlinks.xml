@@ -18,7 +18,7 @@
         <package name="busybox-bcron-symlinks"/>
         <package name="busybox-bc-symlinks"/>
         <package name="busybox-beep-symlinks"/>
-        <package name="busybox-binutils-multiarch-symlinks"/>
+        <package name="busybox-binutils-symlinks"/>
         <package name="busybox-bridge-utils-symlinks"/>
         <package name="busybox-bsdmainutils-symlinks"/>
         <package name="busybox-bsdutils-symlinks"/>

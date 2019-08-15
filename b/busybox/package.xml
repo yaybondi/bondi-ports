@@ -64,7 +64,7 @@
     <xi:include href="applets/bcron.xml"/>
     <xi:include href="applets/bc.xml"/>
     <xi:include href="applets/beep.xml"/>
-    <xi:include href="applets/binutils-multiarch.xml"/>
+    <xi:include href="applets/binutils.xml"/>
     <xi:include href="applets/bridge-utils.xml"/>
     <xi:include href="applets/bsdmainutils.xml"/>
     <xi:include href="applets/bsdutils.xml"/>
