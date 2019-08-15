@@ -5,21 +5,14 @@
 
 cd "$BOLT_SOURCE_DIR"
 bh_autotools_dev_update
-autoreconf -vfi
+autoreconf -v -fi
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
+    --prefix="$BOLT_INSTALL_PREFIX" \
     --build="$BOLT_BUILD_TYPE" \
     --host="$BOLT_HOST_TYPE" \
     --enable-gettext=no
-
-# why does this package insist on using gettext?
-echo "
-#define _(x) x
-#define bindtextdomain(x, y)
-#define textdomain(x)
-" >> include/config.h
 
     ]]>
     </prepare>
@@ -37,9 +30,7 @@ make -j"$BOLT_PARALLEL_JOBS"
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-make install
-make install-dev
-make install-lib
+make DESTDIR="$BOLT_INSTALL_DIR" install
 
     ]]>
     </install>
