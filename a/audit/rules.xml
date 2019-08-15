@@ -3,6 +3,9 @@
     <prepare>
     <![CDATA[
 
+cd "$BOLT_SOURCE_DIR"
+autoreconf -v -fi
+
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
     --prefix="$BOLT_INSTALL_PREFIX" \
