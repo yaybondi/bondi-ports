@@ -3,10 +3,12 @@
     <prepare>
     <![CDATA[
 
+(cd "$BOLT_SOURCE_DIR/expat" && ./buildconf.sh)
+
 mkdir -p "$BOLT_BUILD_DIR/expat"
 
 cd "$BOLT_BUILD_DIR/expat"
-$BOLT_SOURCE_DIR/configure \
+$BOLT_SOURCE_DIR/expat/configure \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --build="$BOLT_BUILD_TYPE" \
     --host="$BOLT_HOST_TYPE"
@@ -30,7 +32,7 @@ cd "$BOLT_BUILD_DIR/expat"
 make DESTDIR="$BOLT_INSTALL_DIR" install
 
 install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/aclocal"
-install -m 0644 "$BOLT_SOURCE_DIR/conftools/expat.m4" \
+install -m 0644 "$BOLT_SOURCE_DIR/expat/conftools/expat.m4" \
     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/aclocal"
 
     ]]>
