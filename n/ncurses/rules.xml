@@ -39,7 +39,8 @@ mkdir -p curses && cd curses
     --without-profile \
     --without-debug \
     --without-ada \
-    --without-tests
+    --without-tests \
+    --disable-stripping
 
 cd "$BOLT_BUILD_DIR"
 mkdir -p cursesw && cd cursesw
@@ -73,7 +74,8 @@ mkdir -p cursesw && cd cursesw
     --without-profile \
     --without-debug \
     --without-ada \
-    --without-tests
+    --without-tests \
+    --disable-stripping
 
     ]]>
     </prepare>
