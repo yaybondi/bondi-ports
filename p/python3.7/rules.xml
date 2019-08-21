@@ -55,14 +55,18 @@ rm -f  "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/"*idle*
 rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.7/idlelib"
 rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.7/turtledemo"
 
+PYTHON3_CONFIG_DIR=$(
+    echo "$FULL_INSTALL/$BOLT_INSTALL_PREFIX"/lib/python3.7/config-3.7m-*
+)
+
 cp "$BOLT_SOURCE_DIR/Tools/i18n/pygettext.py" \
     "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/pygettext3.7"
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.7/config-3.7m/libpython3.7m.a" \
+mv "$PYTHON3_CONFIG_DIR/libpython3.7m.a" \
     "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib"
 ln -sf ../../libpython3.7m.a \
-    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.7/config-3.7m/libpython3.7m.a"
+    "$PYTHON3_CONFIG_DIR/libpython3.7m.a"
 ln -sf ../../libpython3.7m.so \
-    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.7/config-3.7m/libpython3.7m.so"
+    "$PYTHON3_CONFIG_DIR/libpython3.7m.so"
 ln -sf libpython3.7m.so.1.0 \
     "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/libpython3.7m.so.1"
 ln -sf ../lib/python3.7/pdb.py \

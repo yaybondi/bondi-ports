@@ -51,7 +51,9 @@
                 <file src="patches/lib2to3-no-pickled-grammar.diff"/>
                 <file src="patches/ext-no-libpython-link.diff"/>
                 <file src="patches/test-no-random-order.diff"/>
+                <!--
                 <file src="patches/multiarch-extname.diff"/>
+                -->
                 <file src="patches/tempfile-minimal.diff"/>
                 <file src="patches/disable-some-tests.diff"/>
                 <file src="patches/ensurepip-wheels.diff"/>
