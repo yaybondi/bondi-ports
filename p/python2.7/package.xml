@@ -78,8 +78,10 @@
                 <file src="sources/debian/patches/issue27239.diff"/>
                 <file src="sources/debian/patches/rename-md5-init.diff"/>
                 <file src="sources/debian/patches/local-doc-references.diff"/>
-                <file src="sources/debian/patches/m-i-p-s-r6.diff"/>
-                <file src="sources/debian/patches/multiarch-libc.diff"/>
+		<file src="sources/debian/patches/m-i-p-s-r6.diff"/>
+		<!--
+		<file src="sources/debian/patches/multiarch-libc.diff"/>
+		-->
                 <file src="sources/debian/patches/issue36216.diff"/>
                 <file src="sources/debian/patches/issue35907.diff"/>
 
