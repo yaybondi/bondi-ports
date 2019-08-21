@@ -22,7 +22,7 @@ if [ "$BOLT_BUILD_FOR" = "tools" ]; then
         bin/autoreconf.in
 fi
 
-export CONFIG_SITE="config.site"
+export CONFIG_SITE="./config.site"
 
 ./configure \
     --prefix="$BOLT_INSTALL_PREFIX" \
