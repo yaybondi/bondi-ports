@@ -18,7 +18,7 @@
         </p>
         <p>
         Automake 1.16 fails to work in a number of situations that Automake
-        1.11, and 1.15 did, so some previous versions are available as separate
+        1.11, and 1.16 did, so some previous versions are available as separate
         packages.
         </p>
     </description>
@@ -31,7 +31,7 @@
     <contents>
         <file src="${prefix}/bin"/>
         <dir src="${prefix}/share/aclocal"/>
-        <file src="${prefix}/share/aclocal-1.15"/>
-        <file src="${prefix}/share/automake-1.15"/>
+        <file src="${prefix}/share/aclocal-1.16"/>
+        <file src="${prefix}/share/automake-1.16"/>
     </contents>
 </package>
