@@ -29,7 +29,6 @@
         <file src="${prefix}/bin/dirmngr-client"/>
         <dir src="${prefix}/lib/gnupg"/>
         <dir src="${prefix}/share/gnupg"/>
-        <file src="${prefix}/share/gnupg/dirmngr-conf.skel"/>
         <file src="${prefix}/share/gnupg/sks-keyservers.netCA.pem"/>
     </contents>
 </package>

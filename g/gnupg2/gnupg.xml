@@ -27,6 +27,5 @@
         <file src="${prefix}/sbin"/>
         <dir src="${prefix}/share/gnupg"/>
         <file src="${prefix}/share/gnupg/distsigkey.gpg"/>
-        <file src="${prefix}/share/gnupg/gpg-conf.skel"/>
     </contents>
 </package>

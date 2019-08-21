@@ -41,12 +41,8 @@ ln -sf ../gnupg/gpg-preset-passphrase \
 ln -sf ../gnupg/gpg-protect-tool \
     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/gnupg2/gpg-protect-tool"
 
-mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/gpg2" \
-        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/gpg"
 ln -sf "gpg" \
         "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/gpg2"
-mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/gpgv2" \
-        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/gpgv"
 ln -sf "gpgv" \
     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/gpgv2"
 
