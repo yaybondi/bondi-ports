@@ -6,6 +6,8 @@
 cd "$BOLT_SOURCE_DIR"
 bh_autotools_dev_update
 
+NOCONFIGURE="1" ./autogen.sh
+
 export LDFLAGS="$LDFLAGS -Wl,-z,defs -Wl,--no-as-needed -Wl,-O1"
 export LIBFFI_CFLAGS="-I$BOLT_INSTALL_PREFIX/include"
 export LIBFFI_LIBS="-lffi"
