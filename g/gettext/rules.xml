@@ -6,6 +6,8 @@
 cd "$BOLT_SOURCE_DIR"
 bh_autotools_dev_update
 
+autoreconf -v
+
 export CFLAGS="`echo $CFLAGS | sed 's@-Werror=format-security@@g'`"
 export CXXFLAGS="`echo $CFLAGS | sed 's@-Werror=format-security@@g'`"
 
@@ -15,6 +17,7 @@ $BOLT_SOURCE_DIR/configure \
     --build="$BOLT_HOST_TYPE" \
     --host="$BOLT_HOST_TYPE" \
     --enable-threads \
+    --disable-rpath \
     --disable-nls \
     --disable-openmp \
     --disable-native-java \
