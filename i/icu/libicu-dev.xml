@@ -10,7 +10,7 @@
     </description>
 
     <requires>
-        <package name="libicu57" version="=="/>
+        <package name="libicu63" version="=="/>
         <package name="icu-devtools" version=">=="/>
         <package name="musl-libc-dev"/>
         <package name="libstdc++-6-dev"/>
@@ -18,26 +18,11 @@
 
     <contents>
         <file src="${prefix}/bin/icu-config"/>
-        <file src="${prefix}/include/layout"/>
-        <file src="${prefix}/include/unicode"/>
+        <file src="${prefix}/include"/>
         <file src="${prefix}/lib/icu"/>
-        <file src="${prefix}/lib/libicudata.a"/>
-        <file src="${prefix}/lib/libicudata.so"/>
-        <file src="${prefix}/lib/libicui18n.a"/>
-        <file src="${prefix}/lib/libicui18n.so"/>
-        <file src="${prefix}/lib/libicuio.a"/>
-        <file src="${prefix}/lib/libicuio.so"/>
-        <file src="${prefix}/lib/libicule.a"/>
-        <file src="${prefix}/lib/libicule.so"/>
-        <file src="${prefix}/lib/libiculx.a"/>
-        <file src="${prefix}/lib/libiculx.so"/>
-        <file src="${prefix}/lib/libicutest.a"/>
-        <file src="${prefix}/lib/libicutest.so"/>
-        <file src="${prefix}/lib/libicutu.a"/>
-        <file src="${prefix}/lib/libicutu.so"/>
-        <file src="${prefix}/lib/libicuuc.a"/>
-        <file src="${prefix}/lib/libicuuc.so"/>
+        <file src="${prefix}/lib/libicu*.a"/>
+        <file src="${prefix}/lib/libicu*.so"/>
         <file src="${prefix}/lib/pkgconfig"/>
-        <file src="${prefix}/share/icu/57.1"/>
+        <file src="${prefix}/share/icu"/>
     </contents>
 </package>

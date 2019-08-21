@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libicu63" section="libs">
+    <description>
+        <summary>International Components for Unicode</summary>
+        <p>
+        ICU is a C++ and C library that provides robust and full-featured
+        Unicode and locale support. This package contains the runtime
+        libraries for ICU.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/lib/libicu*.so.*"/>
+    </contents>
+</package>

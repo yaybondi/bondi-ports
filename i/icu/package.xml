@@ -35,7 +35,7 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="libicu57.xml"/>
+    <xi:include href="libicu63.xml"/>
     <xi:include href="libicu-dev.xml"/>
     <xi:include href="icu-devtools.xml"/>
 
