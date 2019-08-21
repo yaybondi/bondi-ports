@@ -4,7 +4,7 @@
     <![CDATA[
 
 cd "$BOLT_SOURCE_DIR"
-autoreconf -vfi || true
+#autoreconf -vfi || true
 
 cd "$BOLT_BUILD_DIR"
 
@@ -17,8 +17,11 @@ PERL="$BOLT_INSTALL_PREFIX/bin/perl" \
     --disable-nls \
     --disable-rpath
 
+touch aclocal.m4
+touch Makefile.in
+
 # prevent this from being re-generated
-touch texindex/texindex.awk
+#touch texindex/texindex.awk
 
     ]]>
     </prepare>
