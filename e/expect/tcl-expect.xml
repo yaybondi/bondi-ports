@@ -22,6 +22,6 @@
 
     <contents>
         <file src="${prefix}/lib/libexpect.so.*"/>
-        <file src="${prefix}/lib/tcltk/expect5.45"/>
+        <file src="${prefix}/lib/tcltk/expect5.45.4"/>
     </contents>
 </package>

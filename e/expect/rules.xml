@@ -37,7 +37,7 @@ make SONAME=libexpect.so.5.45 -j"$BOLT_PARALLEL_JOBS"
 cd "$BOLT_BUILD_DIR"
 make DESTDIR="$BOLT_INSTALL_DIR" install
 
-mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/expect5.45/libexpect5.45.so" \
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/expect5.45.4/libexpect5.45.4.so" \
     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libexpect.so.5.45"
 ln -sf libexpect.so.5.45 \
     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libexpect.so.5"
