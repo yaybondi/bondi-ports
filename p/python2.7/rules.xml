@@ -85,7 +85,6 @@ ln -sf ../lib/python2.7/pdb.py \
 
 cd "$FULL_INSTALL"
 find . -type d -a \( -name "test" -o -name "tests" \) -prune -exec rm -fr '{}' ';'
-find . -type f -a -name "*.egg-info" -exec rm -f '{}' ';'
 
 # -------------------------------------------------------------------------
 PKG_PATH="$BOLT_INSTALL_DIR/libpython2.7-dev"

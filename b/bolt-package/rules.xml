@@ -23,11 +23,6 @@ bh_python_install --py3 --build
 cd "$BOLT_SOURCE_DIR"
 bh_python_install --py3 --install --root "$BOLT_INSTALL_DIR"
 
-cd "$BOLT_INSTALL_DIR"
-find . -name "*.egg-info" -prune -exec rm -fr '{}' ';'
-
-rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/deb2bolt"
-
     ]]>
     </install>
 </rules>

@@ -15,5 +15,6 @@
         <file src="${prefix}/bin/easy_install3"/>
         <file src="${prefix}/lib/python3*/*-packages/easy_install*"/>
         <file src="${prefix}/lib/python3*/*-packages/setuptools/**/*"/>
+        <file src="${prefix}/lib/python3*/*-packages/setuptools-*.egg-info/**/*"/>
     </contents>
 </package>
