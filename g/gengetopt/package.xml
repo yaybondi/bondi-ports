@@ -18,14 +18,15 @@
         <sources>
             <file src="gengetopt-2.22.6+dfsg0.tar.gz" subdir="sources"
                 sha256sum="ef73f03e65836ce8888a9e5a90d09c0156a801e032169235b5a0d0b549c6f1da"/>
-            <file src="debian.1.tar.gz" subdir="patches"
-                sha256sum="b4e43a08b7154781701dfea29ca5d50b783f41d64bd0e91b2bf5c7396a390aa9"/>
+            <file src="debian-patches-3.tar.gz" subdir="patches"
+                sha256sum="c805a407f3ddc99073a024c6ecf5bcf1b43a0e8ec78c30b28f9ddbf2ff03ac49"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/01man.patch"/>
                 <file src="patches/9001-dfsg.patch"/>
+                <file src="patches/makefile-dependencies.patch"/>
             </patchset>
         </patches>
 
