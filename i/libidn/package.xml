@@ -22,11 +22,23 @@
         <sources>
             <file src="libidn-1.33.tar.gz" subdir="sources"
                 sha256sum="44a7aab635bb721ceef6beecc4d49dfd19478325e1b47f3196f7d2acc4930e19"/>
+            <file src="debian-patches-2.2.tar.gz" subdir="patches"
+                sha256sum="7b7443c15c4458b6b38d990b6e951da6e5c3424b2a95b2d3de3397b9cd4a41b1"/>
         </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/0001-lib-puny_decode-Fix-integer-overflow-found-by-fuzzin.patch"/>
+                <file src="patches/0002-Update-intprops.h-for-gcc-7-compatibility.patch"/>
+                <file src="patches/0003-Increase-value-for-Wframe-larger-than-gcc-7.patch"/>
+                <file src="patches/0004-Update-Makefile.gdoc-to-use-GDOC_BIN-instead-of-hard.patch"/>
+            </patchset>
+        </patches>
 
         <requires>
             <package name="autopoint" version=">= 0.19.3"/>
             <package name="gengetopt"/>
+            <package name="texinfo"/>
         </requires>
 
         <xi:include href="rules.xml"/>
