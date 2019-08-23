@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.3.3" revision="17bolt2" upstream-version="1.3.3-17"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2019-08-23 21:44:57+02:00">
+        <changeset>
+            <li>Re-package.</li>
+        </changeset>
+    </release>
     <release version="1.3.3" revision="17bolt1" upstream-version="1.3.3-17"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2017-05-17 23:10:41+03:00">
