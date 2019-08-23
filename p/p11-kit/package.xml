@@ -17,25 +17,26 @@
         </description>
 
         <sources>
-            <file src="p11-kit-0.23.3.tar.gz" subdir="sources"
-                sha256sum="d487f04dba3f9e8256f53034c59c944ca45fd7b8434c095da6a74079644dcd82"/>
-            <file src="debian.2.tar.gz" subdir="patches"
-                sha256sum="e226e07a8a1856fe38abfdc64bdcf6c77cc65b55eb7b567c86d42a07ea0f45b9"/>
+            <file src="p11-kit-0.23.15.tar.gz" subdir="sources"
+                sha256sum="f7c139a0c77a1f0012619003e542060ba8f94799a0ef463026db390680e4d798"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="20dc2a74b7d6b07a32dad32b184adc998f4dae8918ce2fdc4f1dcd04a97160af"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/30_nogetauxvalonbsd.diff"/>
                 <file src="patches/35_hurd_enable_secure.diff"/>
+                <file src="patches/41_kfreebsd_LOCAL_PEERCRED.diff"/>
+                <file src="patches/45_01-extract-jks-Prefer-_p11_extract_jks_timestamp-to-SOU.patch"/>
                 <file src="patches/enable_locale.diff"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="pkg-config"/>
-            <package name="libtasn1-6-dev"/>
             <package name="libffi-dev"/>
-            <package name="automake" version=">= 1.12"/>
+            <package name="libtasn1-6-dev"/>
+            <package name="pkg-config"/>
         </requires>
 
         <xi:include href="rules.xml"/>
