@@ -22,13 +22,20 @@
         </description>
 
         <sources>
-            <file src="libtasn1-6-4.10.tar.gz" subdir="sources"
-                sha256sum="681a4d9a0d259f2125713f2e5766c5809f151b3a1392fd91390f780b4b8f5a02"/>
+            <file src="libtasn1-6-4.13.tar.gz" subdir="sources"
+                sha256sum="7e528e8c317ddd156230c4e31d082cd13e7ddeb7a54824be82632209550c8cca"/>
+            <file src="debian-patches-3.tar.gz" subdir="patches"
+                sha256sum="7938efc78a24ce7af870a4dc2bdf9d1b2dd9dc995ec0c5d83d8880f16faa5b6b"/>
         </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/10_modernize_gtkdoc.diff"/>
+            </patchset>
+        </patches>
 
         <requires>
             <package name="bison"/>
-            <package name="help2man"/>
         </requires>
 
         <xi:include href="rules.xml"/>
