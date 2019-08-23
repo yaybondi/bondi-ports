@@ -19,17 +19,9 @@
         </description>
 
         <sources>
-            <file src="gawk-4.1.4+dfsg.tar.xz" subdir="sources"
-                sha256sum="62a789829601bdcd3617b068dca9e4bba484d26de263646254b6a63c0406b9ef"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="b8895e9ed43ceef4480842b44b40b44ad144c21dd53900700b5ac8f617e106e9"/>
+            <file src="gawk-4.2.1+dfsg.tar.xz" subdir="sources"
+                sha256sum="0f6bd564a8fe33340d9a0c82b8498d246ce178ea29f5f2db4e607cdc365d5b6f"/>
         </sources>
-        
-        <patches>
-            <patchset subdir="sources">
-                <file src="patches/01-fix-manpages.patch"/>
-            </patchset>
-        </patches>
 
         <requires>
             <package name="autotools-dev"/>
@@ -38,7 +30,6 @@
             <package name="libmpfr-dev"/>
             <package name="libreadline-dev"/>
             <package name="libsigsegv-dev"/>
-            <package name="locales" version=">= 0"/>
         </requires>
 
         <xi:include href="rules.xml"/>
