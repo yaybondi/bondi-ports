@@ -25,25 +25,23 @@
         </description>
 
         <sources>
-            <file src="libgc-7.4.2.tar.gz" subdir="sources"
-                sha256sum="09f21d38dd42bced14d6875f55804cb1b5e6bc486da7980187ecd2e768739c62"/>
-            <file src="debian.8.tar.gz" subdir="patches"
-                sha256sum="baa5940a1d6fdd89e900b76b4aca373dd9a73baea55c35107424e901267012c7"/>
+            <file src="libgc-7.6.4.tar.gz" subdir="sources"
+                sha256sum="b94c1f2535f98354811ee644dccab6e84a0cf73e477ca03fb5a3758fb1fecd1c"/>
+            <file src="debian-patches-0.4.tar.gz" subdir="patches"
+                sha256sum="ef83bc0e76a3d443d5bf7d68e8b160bc88bb7c4158b8759a77ac2df733828516"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/02-manpage.diff"/>
                 <file src="patches/enable-threads-on-hurd.diff"/>
                 <file src="patches/enable-parallel-mark-where-supported.diff"/>
-                <file src="patches/fix-location-of-assembly-files.diff"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="libatomic-ops-dev" version=">= 7.3~"/>
+            <package name="libatomic-ops-dev" version=">= 7.6~"/>
             <package name="pkg-config"/>
-            <package name="pkg-kde-tools"/>
         </requires>
 
         <xi:include href="rules.xml"/>
