@@ -24,23 +24,12 @@
         </description>
 
         <sources>
-            <file src="libatomic-ops-7.4.4.tar.gz" subdir="sources"
-                sha256sum="9b9c120f5e377e6934ab0da369ee740e1ae32b80af0489d47518920e9561c7bd"/>
-            <file src="debian.3.tar.gz" subdir="patches"
-                sha256sum="105164b11b672878fb55104f54e64e288bdbc682470d3f7578e017b7e06042ac"/>
+            <file src="libatomic-ops-7.6.6.tar.gz" subdir="sources"
+                sha256sum="d5f35cd521cee01902a9299fb32019f2c146dcf1efbc61560ea4e3ecaf2b76d0"/>
         </sources>
-        
-        <patches>
-            <patchset subdir="sources">
-                <file src="patches/0001-Basic-support-of-TILE-Gx-and-TILEPro-CPUs.patch"/>
-                <file src="patches/0002-Use-LLD-and-SCD-instructions-on-mips64.patch"/>
-                <file src="patches/0003-Support-n32-ABI-for-mips64.patch"/>
-            </patchset>
-        </patches>
 
         <requires>
             <package name="autotools-dev"/>
-            <package name="patchutils" version=">= 0.2.25"/>
         </requires>
 
         <xi:include href="rules.xml"/>
