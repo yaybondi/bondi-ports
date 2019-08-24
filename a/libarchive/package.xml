@@ -46,15 +46,21 @@
         </description>
 
         <sources>
-            <file src="libarchive-3.2.2.tar.gz" subdir="sources"
-                sha256sum="691c194ee132d1f0f7a42541f091db811bc2e56f7107e9121be2bc8c04f1060f"/>
-            <file src="patches.02.tar.gz" subdir="patches"
-                sha256sum="1f0a19ec50bfc64a2d468fa4b362d6aedda3904bc0fcdb577e54a5a4c0db422f"/>
+            <file src="libarchive-3.3.3.tar.gz" subdir="sources"
+                sha256sum="ba7eb1781c9fbbae178c4c6bad1c6eb08edab9a1496c64833d1715d022b30e2e"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="6a5570e526513677ed01478fe038b46f88ed167ef6ba10f490775c57ae532910"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
-                <file src="patches/Fail-with-negative-lha-compsize-in-lha_read_file_header_1.patch"/>
+                <file src="patches/CVE-2018-1000877.patch"/>
+                <file src="patches/CVE-2018-1000878.patch"/>
+                <file src="patches/CVE-2018-1000879.patch"/>
+                <file src="patches/CVE-2018-1000880.patch"/>
+                <file src="patches/CVE-2019-1000019.patch"/>
+                <file src="patches/CVE-2019-1000020.patch"/>
+                <file src="patches/zip-nullptr.patch"/>
             </patchset>
         </patches>
 
@@ -64,14 +70,14 @@
             <package name="liblz4-dev"/>
             <package name="liblzma-dev"/>
             <package name="libxml2-dev"/>
+            <package name="libzstd-dev"/>
             <package name="zlib1g-dev"/>
             <package name="libacl1-dev"/>
-            <package name="e2fslibs-dev"/>
+            <package name="libext2fs-dev"/>
             <package name="libattr1-dev"/>
             <package name="sharutils"/>
             <package name="nettle-dev"/>
             <package name="liblzo2-dev"/>
-            <package name="locales"/>
         </requires>
 
         <xi:include href="rules.xml"/>
