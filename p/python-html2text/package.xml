@@ -24,9 +24,9 @@
         </sources>
 
         <requires>
-            <package name="python-all" version=">= 2.6.5-13~"/>
+            <package name="python-all"/>
             <package name="python-setuptools"/>
-            <package name="python3-all" version=">= 3.1.2-12~"/>
+            <package name="python3-all"/>
             <package name="python3-setuptools"/>
         </requires>
 

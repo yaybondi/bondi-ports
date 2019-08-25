@@ -14,12 +14,11 @@
     </description>
 
     <requires>
-        <package name="python" version="&lt;&lt; 2.8"/>
-        <package name="python" version=">= 2.7.5-5~"/>
+        <package name="python"/>
     </requires>
 
     <contents subdir="python2" collect-py-cache-files="true">
-        <file src="/usr/bin/html2markdown.py2"/>
-        <file src="/usr/lib/python2.7/dist-packages"/>
+        <file src="${prefix}/bin/html2markdown.py2"/>
+        <file src="${prefix}/lib/python2.7/dist-packages"/>
     </contents>
 </package>
