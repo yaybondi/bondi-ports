@@ -3,10 +3,7 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
-
-# setup.py mixes distutils and setuptools in an incompatible way, disable.
-sed -i 's@from setuptools import.*@raise ImportError()@g' setup.py
+true
 
     ]]>
     </prepare>
