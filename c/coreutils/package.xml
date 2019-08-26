@@ -25,34 +25,31 @@
         </description>
 
         <sources>
-            <file src="coreutils-8.26.tar.xz" subdir="sources"
-                sha256sum="155e94d748f8e2bc327c66e0cbebdb8d6ab265d2f37c3c928f7bf6c3beba9a8e"/>
-            <file src="debian.3.tar.gz" subdir="patches"
-                sha256sum="c77240be8914fde3981f176a8233d49102236f8e21fa486d76f2a766a74494ff"/>
+            <file src="coreutils-8.30.tar.xz" subdir="sources"
+                sha256sum="e831b3a86091496cdba720411f9748de81507798f6130adeaef872d206e1b057"/>
+            <file src="debian-patches-3.tar.gz" subdir="patches"
+                sha256sum="a44c1ed2cc0fc43b97f2560c0a3f2471c9ed3c08891e0529fa332d939ff51a9e"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
-                <file src="patches/ppc_sha256_flags.patch"/>
-                <file src="patches/date_tz_handling"/>
-                <file src="patches/no_ls_quoting.patch"/>
+                <file src="patches/prefer-renameat2-from-glibc-over-syscall.patch"/>
+                <file src="patches/renameatu.patch"/>
                 <file src="patches/61_whoips.patch"/>
                 <file src="patches/63_dd-appenderrors.patch"/>
                 <file src="patches/72_id_checkngroups.patch"/>
                 <file src="patches/85_timer_settime.patch"/>
                 <file src="patches/99_kfbsd_fstat_patch.patch"/>
-                <file src="patches/99_hppa_longlong.patch"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="gettext" version=">= 0.10.37"/>
+            <package name="gettext"/>
             <package name="autotools-dev"/>
-            <package name="texinfo" version=">= 4.2"/>
-            <package name="groff"/>
+            <package name="texinfo"/>
             <package name="libattr1-dev"/>
             <package name="libacl1-dev"/>
-            <package name="libselinux1-dev" version=">= 1.32"/>
+            <package name="libselinux1-dev"/>
             <package name="gperf"/>
             <package name="bison"/>
         </requires>
@@ -61,7 +58,7 @@
     </source>
 
     <xi:include href="coreutils.xml"/>
-    <xi:include href="coreutils-join.xml"/>
+    <xi:include href="join.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>

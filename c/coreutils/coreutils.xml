@@ -20,12 +20,12 @@
     </description>
 
     <requires>
-        <package name="coreutils-join"/>
+        <package name="join"/>
     </requires>
 
-    <contents>
+    <contents subdir="coreutils">
         <file src="${prefix}/bin"/>
-        <file src="${prefix}/lib/coreutils"/>
         <file src="${prefix}/sbin"/>
+        <file src="${prefix}/lib/coreutils"/>
     </contents>
 </package>

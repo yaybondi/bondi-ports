@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="coreutils-join" section="utils">
+<package name="mount" section="utils">
     <description>
-        <summary>GNU core utilities (join command)</summary>
+        <summary>GNU core utilities (mount command)</summary>
         <p>
         The coreutils contain the basic file, shell and text manipulation
         utilities which are expected to exist on every operating system.
         </p>
         <p>
-        Specifically, this package includes: join
+        Specifically, this package includes: mount
         </p>
     </description>
 
-    <contents subdir="join">
-        <file src="${prefix}/bin"/>
+    <contents subdir="mount">
+        <file src="${prefix}"/>
     </contents>
 </package>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="join" section="utils">
+    <description>
+        <summary>GNU core utilities (join command)</summary>
+        <p>
+        The coreutils contain the basic file, shell and text manipulation
+        utilities which are expected to exist on every operating system.
+        </p>
+        <p>
+        Specifically, this package includes: join
+        </p>
+    </description>
+
+    <contents subdir="join">
+        <file src="${prefix}"/>
+    </contents>
+</package>

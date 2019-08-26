@@ -26,21 +26,26 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
+for pkg in coreutils join; do
+    install -d -m 0755 "$BOLT_INSTALL_DIR/$pkg"
+    install -d -m 0755 "$BOLT_INSTALL_DIR/$pkg/$BOLT_INSTALL_PREFIX"
+    install -d -m 0755 "$BOLT_INSTALL_DIR/$pkg/$BOLT_INSTALL_PREFIX/bin"
+done
+
 cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+make DESTDIR="$BOLT_INSTALL_DIR/coreutils" install
 
-rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/kill"
-rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/hostname"
-rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/uptime"
+for prog in kill hostname uptime; do
+    rm -f "$BOLT_INSTALL_DIR/coreutils/$BOLT_INSTALL_PREFIX/bin/$prog"
+done
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin"
-mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/chroot" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin/chroot"
+install -d -m 0755 "$BOLT_INSTALL_DIR/coreutils/$BOLT_INSTALL_PREFIX/sbin"
+mv "$BOLT_INSTALL_DIR/coreutils/$BOLT_INSTALL_PREFIX/bin/chroot" \
+   "$BOLT_INSTALL_DIR/coreutils/$BOLT_INSTALL_PREFIX/sbin/chroot"
 
 # we need join to make gnulib work, so put it in a separate package
-install -d -m 0755 "$BOLT_INSTALL_DIR/join/$BOLT_INSTALL_PREFIX/bin"
-mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/join" \
-"$BOLT_INSTALL_DIR/join/$BOLT_INSTALL_PREFIX/bin/join"
+mv "$BOLT_INSTALL_DIR/coreutils/$BOLT_INSTALL_PREFIX/bin/join" \
+   "$BOLT_INSTALL_DIR/join/$BOLT_INSTALL_PREFIX/bin/join"
 
     ]]>
     </install>
