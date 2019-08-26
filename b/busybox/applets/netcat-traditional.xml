@@ -15,6 +15,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="netcat-traditional"/>
+    </provides>
+
     <conflicts>
         <package name="netcat-traditional"/>
     </conflicts>

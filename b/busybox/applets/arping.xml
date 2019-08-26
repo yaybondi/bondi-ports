@@ -14,6 +14,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="arping"/>
+    </provides>
+
     <conflicts>
         <package name="arping"/>
     </conflicts>

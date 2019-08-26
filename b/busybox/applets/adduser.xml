@@ -17,6 +17,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="adduser"/>
+    </provides>
+
     <conflicts>
         <package name="adduser"/>
     </conflicts>

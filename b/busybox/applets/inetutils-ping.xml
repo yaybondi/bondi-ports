@@ -15,6 +15,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="inetutils-ping"/>
+    </provides>
+
     <conflicts>
         <package name="inetutils-ping"/>
     </conflicts>

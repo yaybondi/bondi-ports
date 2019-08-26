@@ -18,6 +18,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="policycoreutils"/>
+    </provides>
+
     <conflicts>
         <package name="policycoreutils"/>
     </conflicts>

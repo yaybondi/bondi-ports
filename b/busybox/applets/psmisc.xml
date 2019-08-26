@@ -16,6 +16,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="psmisc"/>
+    </provides>
+
     <conflicts>
         <package name="psmisc"/>
     </conflicts>

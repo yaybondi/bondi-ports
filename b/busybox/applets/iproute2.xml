@@ -20,6 +20,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="iproute2"/>
+    </provides>
+
     <conflicts>
         <package name="iproute2"/>
     </conflicts>

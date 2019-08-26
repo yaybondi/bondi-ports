@@ -19,6 +19,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="kmod"/>
+    </provides>
+
     <conflicts>
         <package name="kmod"/>
     </conflicts>

@@ -21,6 +21,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="kbd"/>
+    </provides>
+
     <conflicts>
         <package name="kbd"/>
     </conflicts>

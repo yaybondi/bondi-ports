@@ -14,6 +14,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="ed"/>
+    </provides>
+
     <conflicts>
         <package name="ed"/>
     </conflicts>

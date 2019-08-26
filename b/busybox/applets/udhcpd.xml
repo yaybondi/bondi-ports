@@ -15,6 +15,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="udhcpd"/>
+    </provides>
+
     <conflicts>
         <package name="udhcpd"/>
     </conflicts>

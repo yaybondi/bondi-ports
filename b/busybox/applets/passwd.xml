@@ -15,6 +15,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="passwd"/>
+    </provides>
+
     <conflicts>
         <package name="passwd"/>
     </conflicts>

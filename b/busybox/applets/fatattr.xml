@@ -14,6 +14,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="fatattr"/>
+    </provides>
+
     <conflicts>
         <package name="fatattr"/>
     </conflicts>

@@ -16,6 +16,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="syslogd"/>
+    </provides>
+
     <contents>
         <file src="${prefix}/sbin/klogd"/>
         <file src="${prefix}/sbin/logread"/>

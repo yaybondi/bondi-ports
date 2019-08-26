@@ -16,6 +16,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="grep"/>
+    </provides>
+
     <conflicts>
         <package name="grep"/>
     </conflicts>

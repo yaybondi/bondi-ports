@@ -14,6 +14,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="bash"/>
+    </provides>
+
     <conflicts>
         <package name="bash"/>
     </conflicts>

@@ -17,6 +17,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="i2c-tools"/>
+    </provides>
+
     <conflicts>
         <package name="i2c-tools"/>
     </conflicts>

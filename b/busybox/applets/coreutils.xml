@@ -103,6 +103,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="coreutils"/>
+    </provides>
+
     <conflicts>
         <package name="coreutils"/>
     </conflicts>

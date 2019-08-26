@@ -14,6 +14,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="sed"/>
+    </provides>
+
     <conflicts>
         <package name="sed"/>
     </conflicts>

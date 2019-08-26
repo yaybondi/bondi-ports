@@ -15,6 +15,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="sysvinit-utils"/>
+    </provides>
+
     <conflicts>
         <package name="sysvinit-utils"/>
     </conflicts>

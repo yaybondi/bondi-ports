@@ -18,6 +18,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="selinux-utils"/>
+    </provides>
+
     <conflicts>
         <package name="selinux-utils"/>
     </conflicts>

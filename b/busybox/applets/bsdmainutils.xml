@@ -16,6 +16,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="bsdmainutils"/>
+    </provides>
+
     <conflicts>
         <package name="bsdmainutils"/>
     </conflicts>

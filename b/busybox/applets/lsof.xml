@@ -14,6 +14,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="lsof"/>
+    </provides>
+
     <conflicts>
         <package name="lsof"/>
     </conflicts>

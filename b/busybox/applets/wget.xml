@@ -14,6 +14,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="wget"/>
+    </provides>
+
     <conflicts>
         <package name="wget"/>
     </conflicts>

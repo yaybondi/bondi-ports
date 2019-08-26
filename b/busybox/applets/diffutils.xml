@@ -15,6 +15,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="diffutils"/>
+    </provides>
+
     <conflicts>
         <package name="diffutils"/>
     </conflicts>

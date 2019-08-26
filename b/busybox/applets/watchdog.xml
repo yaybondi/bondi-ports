@@ -14,6 +14,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="watchdog"/>
+    </provides>
+
     <conflicts>
         <package name="watchdog"/>
     </conflicts>

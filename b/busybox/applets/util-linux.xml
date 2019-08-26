@@ -49,6 +49,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="util-linux"/>
+    </provides>
+
     <conflicts>
         <package name="util-linux"/>
     </conflicts>

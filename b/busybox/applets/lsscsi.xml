@@ -14,6 +14,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="lsscsi"/>
+    </provides>
+
     <conflicts>
         <package name="lsscsi"/>
     </conflicts>

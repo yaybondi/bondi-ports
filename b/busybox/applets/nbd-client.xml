@@ -14,6 +14,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="nbd-client"/>
+    </provides>
+
     <conflicts>
         <package name="nbd-client"/>
     </conflicts>

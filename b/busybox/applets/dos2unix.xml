@@ -15,6 +15,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="dos2unix"/>
+    </provides>
+
     <conflicts>
         <package name="dos2unix"/>
     </conflicts>

@@ -16,6 +16,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="gzip"/>
+    </provides>
+
     <conflicts>
         <package name="gzip"/>
     </conflicts>

@@ -18,6 +18,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="mount"/>
+    </provides>
+
     <conflicts>
         <package name="mount"/>
     </conflicts>

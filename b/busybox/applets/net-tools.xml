@@ -20,6 +20,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="net-tools"/>
+    </provides>
+
     <conflicts>
         <package name="net-tools"/>
     </conflicts>

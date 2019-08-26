@@ -15,6 +15,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="traceroute"/>
+    </provides>
+
     <conflicts>
         <package name="traceroute"/>
     </conflicts>

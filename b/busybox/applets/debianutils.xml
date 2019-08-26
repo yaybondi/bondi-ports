@@ -17,6 +17,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="debianutils"/>
+    </provides>
+
     <conflicts>
         <package name="debianutils"/>
     </conflicts>

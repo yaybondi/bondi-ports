@@ -14,6 +14,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="vlan"/>
+    </provides>
+
     <conflicts>
         <package name="vlan"/>
     </conflicts>

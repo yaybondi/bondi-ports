@@ -15,6 +15,10 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="ncurses-bin"/>
+    </provides>
+
     <conflicts>
         <package name="ncurses-bin"/>
     </conflicts>
