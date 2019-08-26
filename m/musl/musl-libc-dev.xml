@@ -23,6 +23,10 @@
         </p>
     </description>
 
+    <provides>
+        <package name="libc-dev"/>
+    </provides>
+
     <requires>
         <package name="musl-libc" version="=="/>
         <package name="linux-system-headers"/>
