@@ -15,14 +15,14 @@
 
     <requires>
         <package name="libblkid1" version="=="/>
-        <package name="libc6-dev"/>
+        <package name="libc-dev"/>
         <package name="uuid-dev"/>
     </requires>
 
     <contents>
-        <file src="/usr/include/blkid"/>
-        <file src="/usr/lib/libblkid.a"/>
-        <file src="/usr/lib/libblkid.so"/>
-        <file src="/usr/lib/pkgconfig/blkid.pc"/>
+        <file src="${prefix}/include/blkid"/>
+        <file src="${prefix}/lib/libblkid.a"/>
+        <file src="${prefix}/lib/libblkid.so"/>
+        <file src="${prefix}/lib/pkgconfig/blkid.pc"/>
     </contents>
 </package>

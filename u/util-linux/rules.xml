@@ -5,7 +5,10 @@
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
-    --prefix=/usr \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --libdir="$BOLT_INSTALL_PREFIX/lib" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
     --disable-nls \
     --disable-bash-completion \
     --disable-use-tty-group \
@@ -32,12 +35,14 @@ install -d -m 0755 $BOLT_INSTALL_DIR/usr/bin
 install -d -m 0755 $BOLT_INSTALL_DIR/usr/sbin
 install -d -m 0755 $BOLT_INSTALL_DIR/usr/lib
 
-ln -sf usr/bin $BOLT_INSTALL_DIR/bin
-ln -sf usr/sbin $BOLT_INSTALL_DIR/sbin
-ln -sf usr/lib $BOLT_INSTALL_DIR/lib
+ln -sf usr/bin  "$BOLT_INSTALL_DIR/bin"
+ln -sf usr/sbin "$BOLT_INSTALL_DIR/sbin"
 
 cd "$BOLT_BUILD_DIR"
 make DESTDIR="$BOLT_INSTALL_DIR" install
+
+rm -f "$BOLT_INSTALL_DIR/bin"
+rm -f "$BOLT_INSTALL_DIR/sbin"
 
     ]]>
     </install>

@@ -11,6 +11,6 @@
     </requires>
 
     <contents>
-        <file src="/usr/lib/libmount*.so.*"/>
+        <file src="${prefix}/lib/libmount*.so.*"/>
     </contents>
 </package>

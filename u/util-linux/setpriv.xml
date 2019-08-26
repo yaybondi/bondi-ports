@@ -8,10 +8,7 @@
         </p>
     </description>
 
-    <requires>
-    </requires>
-
     <contents>
-        <file src="/usr/bin/setpriv"/>
+        <file src="${prefix}/bin/setpriv"/>
     </contents>
 </package>

@@ -11,6 +11,6 @@
     </requires>
 
     <contents>
-        <file src="/usr/lib/libsmartcols*.so.*"/>
+        <file src="${prefix}/lib/libsmartcols*.so.*"/>
     </contents>
 </package>

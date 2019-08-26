@@ -19,6 +19,6 @@
     </requires>
 
     <contents>
-        <file src="/usr/lib/libuuid*.so.*"/>
+        <file src="${prefix}/lib/libuuid*.so.*"/>
     </contents>
 </package>

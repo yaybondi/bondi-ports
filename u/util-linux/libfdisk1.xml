@@ -12,6 +12,6 @@
     </requires>
 
     <contents>
-        <file src="/usr/lib/libfdisk*.so.*"/>
+        <file src="${prefix}/lib/libfdisk*.so.*"/>
     </contents>
 </package>

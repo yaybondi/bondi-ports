@@ -30,8 +30,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/bin/uuidgen"/>
-        <file src="/usr/lib/systemd/system/uuidd.*"/>
-        <file src="/usr/sbin/uuidd"/>
+        <file src="${prefix}/bin/uuidgen"/>
+        <file src="${prefix}/lib/systemd/system/uuidd.*"/>
+        <file src="${prefix}/sbin/uuidd"/>
     </contents>
 </package>

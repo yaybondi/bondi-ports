@@ -11,15 +11,15 @@
     </description>
 
     <requires>
-        <package name="libc6-dev"/>
+        <package name="libc-dev"/>
         <package name="libmount1" version="=="/>
         <package name="libblkid-dev"/>
     </requires>
 
     <contents>
-        <file src="/usr/include/libmount"/>
-        <file src="/usr/lib/libmount.a"/>
-        <file src="/usr/lib/libmount.so"/>
-        <file src="/usr/lib/pkgconfig/mount.pc"/>
+        <file src="${prefix}/include/libmount"/>
+        <file src="${prefix}/lib/libmount.a"/>
+        <file src="${prefix}/lib/libmount.so"/>
+        <file src="${prefix}/lib/pkgconfig/mount.pc"/>
     </contents>
 </package>

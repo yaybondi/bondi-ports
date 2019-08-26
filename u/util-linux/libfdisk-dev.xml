@@ -13,15 +13,15 @@
 
     <requires>
         <package name="libfdisk1" version="=="/>
-        <package name="libc6-dev"/>
+        <package name="libc-dev"/>
         <package name="libblkid-dev"/>
         <package name="uuid-dev"/>
     </requires>
 
     <contents>
-        <file src="/usr/include/libfdisk"/>
-        <file src="/usr/lib/libfdisk.a"/>
-        <file src="/usr/lib/libfdisk.so"/>
-        <file src="/usr/lib/pkgconfig/fdisk.pc"/>
+        <file src="${prefix}/include/libfdisk"/>
+        <file src="${prefix}/lib/libfdisk.a"/>
+        <file src="${prefix}/lib/libfdisk.so"/>
+        <file src="${prefix}/lib/pkgconfig/fdisk.pc"/>
     </contents>
 </package>
