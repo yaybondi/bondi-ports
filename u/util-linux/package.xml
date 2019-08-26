@@ -16,33 +16,23 @@
         </description>
 
         <sources>
-            <file src="util-linux-2.29.1.tar.xz" subdir="sources"
-                sha256sum="0ce40600b934ec2fecfa6bfc4efe6982d051ba96c2832b05201347aec582f54f"/>
-            <file src="patches.01.tar.gz" subdir="patches"
-                sha256sum="822685a6a1adbae0e7939210f1fb335a591947914cc16b0aafbf209a5aa4ee60"/>
+            <file src="util-linux-2.33.1.tar.xz" subdir="sources"
+                sha256sum="c14bd9f3b6e1792b90db87696e87ec643f9d63efa0a424f092a5a6b2f2dbef21"/>
         </sources>
-        
-        <patches>
-            <patchset subdir="sources">
-                <file src="patches/Multiarch-support-in-util-linux-build.patch"/>
-                <file src="patches/man-page-tweaks-cleanup-my_dev_t.h-ancient-stuff.patch"/>
-                <file src="patches/Disable-the-fallback-clause-in-hwclock-when-dev-rtc-.patch"/>
-                <file src="patches/verbose-tests.patch"/>
-            </patchset>
-        </patches>
 
         <requires>
+            <package name="bc"/>
             <package name="gettext"/>
+            <package name="libaudit-dev"/>
             <package name="libcap-ng-dev"/>
             <package name="libncurses5-dev"/>
             <package name="libncursesw5-dev"/>
             <package name="libpam0g-dev"/>
-            <package name="libselinux1-dev" version=">= 2.6-3~"/>
+            <package name="libselinux1-dev"/>
             <package name="libsystemd-dev"/>
             <package name="libtool"/>
-            <package name="libudev-dev"/>
             <package name="pkg-config"/>
-            <package name="systemd"/>
+            <package name="bison"/>
             <package name="zlib1g-dev"/>
         </requires>
 
