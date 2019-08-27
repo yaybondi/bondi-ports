@@ -12,10 +12,10 @@
         <package name="libprocps7" version="=="/>
     </requires>
 
-    <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/libprocps.a"/>
-        <file src="/usr/lib/libprocps.so"/>
-        <file src="/usr/lib/pkgconfig"/>
+    <contents subdir="procps">
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libprocps.a"/>
+        <file src="${prefix}/lib/libprocps.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
     </contents>
 </package>

@@ -25,8 +25,15 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
+mkdir -p "$BOLT_INSTALL_DIR/procps"
+mkdir -p "$BOLT_INSTALL_DIR/sysctl"
+
 cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+make DESTDIR="$BOLT_INSTALL_DIR/procps" install
+
+install -d -m 0755 "$BOLT_INSTALL_DIR/sysctl/$BOLT_INSTALL_PREFIX/sbin"
+mv "$BOLT_INSTALL_DIR/procps/$BOLT_INSTALL_PREFIX/sbin/sysctl" \
+   "$BOLT_INSTALL_DIR/sysctl/$BOLT_INSTALL_PREFIX/sbin"
 
     ]]>
     </install>

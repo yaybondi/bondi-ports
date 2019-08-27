@@ -12,7 +12,7 @@
         </p>
     </description>
 
-    <contents>
-        <file src="/usr/lib/libprocps.so.*"/>
+    <contents subdir="procps">
+        <file src="${prefix}/lib/libprocps.so.*"/>
     </contents>
 </package>

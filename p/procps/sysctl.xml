@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="sysctl" section="admin">
+    <description>
+        <summary>Tools for configuring kernel parameters at runtime</summary>
+	<p>
+          sysctl is used to modify kernel parameters at runtime. The parameters
+	  available are those listed under /proc/sys/. Procfs is required for
+	  sysctl support in Linux. You can use sysctl to both read
+          and write sysctl data.
+        </p>
+    </description>
+
+    <contents subdir="sysctl">
+	<dir src="/etc/sysctl.d"/>
+        <file src="${prefix}/sbin"/>
+    </contents>
+</package>

@@ -15,12 +15,12 @@
     </description>
 
     <requires>
-        <package name="libprocps7" version=">=="/>
+	<package name="libprocps7" version=">=="/>
+        <package name="sysctl" version="=="/>
     </requires>
 
-    <contents>
-        <file src="/etc"/>
-        <file src="/usr/bin"/>
-        <file src="/usr/sbin"/>
+    <contents subdir="procps">
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/sbin"/>
     </contents>
 </package>

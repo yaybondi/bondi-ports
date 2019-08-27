@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
-    </defines>
-
     <source name="procps" architecture-independent="false">
         <description>
             <summary>/proc file system utilities</summary>
@@ -47,6 +43,7 @@
     </source>
 
     <xi:include href="procps.xml"/>
+    <xi:include href="sysctl.xml"/>
     <xi:include href="libprocps7.xml"/>
     <xi:include href="libprocps-dev.xml"/>
 
