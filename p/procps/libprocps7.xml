@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libprocps7" section="libs">
+    <description>
+        <summary>library for accessing process information from /proc</summary>
+        <p>
+        The libprocps library is a way of accessing information out of the /proc
+        filesystem.
+        </p>
+        <p>
+        This package contains the shared libraries necessary to run programs
+        compiled with libprocps.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/libprocps.so.*"/>
+    </contents>
+</package>
