@@ -42,15 +42,6 @@
         </patches>
 
         <requires>
-            <package name="gperf"/>
-            <package name="guile-2.0-dev" version=">= 2.0.11+1-0"/>
-            <package name="libxml2-dev"/>
-            <package name="pkg-config"/>
-            <package name="tar" version=">= 1.28"/>
-            <package name="autogen<cross>"/>
-        </requires>
-
-        <requires>
             <package name="autotools-dev"/>
             <package name="gperf"/>
             <package name="guile-2.0-dev"/>
