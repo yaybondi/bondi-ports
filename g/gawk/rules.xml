@@ -3,8 +3,11 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
-autoreconf -vfi || true
+#cd "$BOLT_SOURCE_DIR"
+#autoreconf -vfi || true
+
+#cd "$BOLT_SOURCE_DIR/extension"
+#autoreconf -vfi || true
 
 cd "$BOLT_BUILD_DIR"
 AWK=awk \
@@ -18,7 +21,8 @@ AWK=awk \
 
 touch -d "2000-01-01" \
     doc/gawktexi.in doc/gawk.texi doc/gawkinet.texi \
-    doc/gawk.info doc/gawkinet.info doc/sidebar.awk
+    doc/gawk.info doc/gawkinet.info doc/sidebar.awk \
+    doc/gawkworkflow.texi doc/gawkworkflow.info
 
     ]]>
     </prepare>
