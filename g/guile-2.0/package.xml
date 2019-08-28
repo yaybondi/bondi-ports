@@ -19,15 +19,17 @@
         <sources>
             <file src="guile-2.0-2.0.13+1.tar.xz" subdir="sources"
                 sha256sum="ecf63aa152cf962752325c2dcd6af1bd575441b984fde847a280ea852ff9eddd"/>
-            <file src="debian.4.tar.gz" subdir="patches"
-                sha256sum="5c922987ba1b605c22bae4dad8ef8dce10bd7d1870e0edaeba9d58e2cbfd1f11"/>
+            <file src="debian-patches-5.1.tar.gz" subdir="patches"
+                sha256sum="739d6d1d39961bc7c821eb01205d338bd22411b1749955ac5a6e46694eafee35"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/0001-Mark-mutex-with-owner-not-retained-threads-test-as-u.patch"/>
                 <file src="patches/0002-Look-for-guile-procedures.txt-in-pkglibdir.patch"/>
                 <file src="patches/0003-tests-Avoid-race-condition-in-REPL-server-test.patch"/>
+                <file src="patches/0004-ia64-Fix-crash-in-thread-context-switch.patch"/>
+                <file src="patches/0005-fix-french-locale-test.patch"/>
             </patchset>
         </patches>
 
