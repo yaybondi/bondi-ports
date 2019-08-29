@@ -39,11 +39,11 @@
     </source>
 
     <xi:include href="libevent-dev.xml"/>
-    <xi:include href="libevent-2.1.6.xml"/>
-    <xi:include href="libevent-core-2.1.6.xml"/>
-    <xi:include href="libevent-extra-2.1.6.xml"/>
-    <xi:include href="libevent-pthreads-2.1.6.xml"/>
-    <xi:include href="libevent-openssl-2.1.6.xml"/>
+    <xi:include href="libevent-2.1-6.xml"/>
+    <xi:include href="libevent-core-2.1-6.xml"/>
+    <xi:include href="libevent-extra-2.1-6.xml"/>
+    <xi:include href="libevent-pthreads-2.1-6.xml"/>
+    <xi:include href="libevent-openssl-2.1-6.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>
