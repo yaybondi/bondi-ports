@@ -5,7 +5,6 @@
 
 cd "$BOLT_SOURCE_DIR"
 ./bootstrap
-autoreconf -vi
 
 cd "$BOLT_BUILD_DIR"
 "$BOLT_SOURCE_DIR/configure" \
@@ -21,7 +20,7 @@ cd "$BOLT_BUILD_DIR"
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-make MAKEINFO=true
+make GZIP_ENV="" MAKEINFO=true
 
     ]]>
     </build>
@@ -31,7 +30,7 @@ make MAKEINFO=true
 
 cd "$BOLT_BUILD_DIR"
 make CC="${BOLT_HOST_TYPE}-gcc" MAKEINFO=true \
-    DESTDIR="$BOLT_INSTALL_DIR" install
+    GZIP_ENV="" DESTDIR="$BOLT_INSTALL_DIR" install
 
 rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/automake"
 rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/aclocal"

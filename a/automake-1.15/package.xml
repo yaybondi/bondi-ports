@@ -42,7 +42,7 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="automake.xml"/>
+    <xi:include href="automake-1.15.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>
