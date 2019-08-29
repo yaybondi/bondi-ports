@@ -29,8 +29,8 @@
         </description>
 
         <sources>
-            <file src="fstrm-0.3.0.tar.gz" subdir="sources"
-                sha256sum="ad41e5a6e50ea59a5096bab27c2358ad9ba34bc1b848e307c7d592d930c8d844"/>
+            <file src="fstrm-0.4.0.tar.gz" subdir="sources"
+                sha256sum="2c84ff059d5850078d3d85927fd2e8f8a1cbe76bcf91cb125cfbbbd89ec5afc0"/>
         </sources>
 
         <requires>
