@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libprotobuf-lite10" section="libs">
+<package name="libprotobuf17" section="libs">
     <description>
-        <summary>protocol buffers C++ library (lite version)</summary>
+        <summary>protocol buffers C++ library</summary>
         <p>
         Protocol buffers are a flexible, efficient, automated mechanism for
         serializing structured data - similar to XML, but smaller, faster, and
@@ -16,12 +16,11 @@
         file formats.
         </p>
         <p>
-        This package contains the runtime library needed for C++ applications whose
-        message definitions have the "lite runtime" optimization setting.
+        This package contains the runtime library needed for C++ applications.
         </p>
     </description>
 
     <contents>
-        <file src="${prefix}/lib/libprotobuf-lite.so.*"/>
+        <file src="${prefix}/lib/libprotobuf.so.*"/>
     </contents>
 </package>

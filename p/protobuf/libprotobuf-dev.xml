@@ -23,8 +23,8 @@
 
     <requires>
         <package name="zlib1g-dev"/>
-        <package name="libprotobuf10" version="=="/>
-        <package name="libprotobuf-lite10" version="=="/>
+        <package name="libprotobuf17" version="=="/>
+        <package name="libprotobuf-lite17" version="=="/>
     </requires>
 
     <contents>

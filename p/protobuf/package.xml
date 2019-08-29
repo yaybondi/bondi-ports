@@ -63,10 +63,10 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="libprotobuf10.xml"/>
-    <xi:include href="libprotobuf-lite10.xml"/>
+    <xi:include href="libprotobuf17.xml"/>
+    <xi:include href="libprotobuf-lite17.xml"/>
     <xi:include href="libprotobuf-dev.xml"/>
-    <xi:include href="libprotoc10.xml"/>
+    <xi:include href="libprotoc17.xml"/>
     <xi:include href="libprotoc-dev.xml"/>
     <xi:include href="protobuf-compiler.xml"/>
     <xi:include href="python-protobuf.xml"/>
