@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libevent-2.0-5" section="libs">
+<package name="libevent-2.1-6" section="libs">
     <description>
         <summary>Asynchronous event notification library</summary>
         <p>
@@ -21,6 +21,6 @@
     </description>
 
     <contents>
-        <file src="${prefix}/lib/libevent-2.0.so.*"/>
+        <file src="${prefix}/lib/libevent-2.1.so.*"/>
     </contents>
 </package>

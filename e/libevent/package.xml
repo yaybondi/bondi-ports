@@ -18,26 +18,20 @@
         </description>
 
         <sources>
-            <file src="libevent-2.0.21-stable.tar.gz" subdir="sources"
-                sha256sum="22a530a8a5ba1cb9c080cba033206b17dacd21437762155c6d30ee6469f574f5"/>
-            <file src="debian.3.tar.gz" subdir="patches"
-                sha256sum="d8b86906b7d5c6087b12463aa232e99acfb5f3ce8416e856b9a509bbaa7d1d92"/>
+            <file src="libevent-2.1.8-stable.tar.gz" subdir="sources"
+                sha256sum="965cc5a8bb46ce4199a47e9b2c9e1cae3b137e8356ffdad6d94d3b9069b71dc2"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="a2534ba713973f9d7a244a2841187db1606081076efddca8baa52f258aec6029"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
-                <file src="patches/build_with_no_undefined.patch"/>
-                <file src="patches/dh-autoreconf"/>
-                <file src="patches/20d6d445.patch"/>
-                <file src="patches/openssl_1.1.patch"/>
-                <file src="patches/0001-evdns-fix-searching-empty-hostnames.patch"/>
-                <file src="patches/0002-test-dns-regression-for-empty-hostname.patch"/>
-                <file src="patches/0003-evdns-name_parse-fix-remote-stack-overread.patch"/>
-                <file src="patches/0004-evutil_parse_sockaddr_port-fix-buffer-overflow.patch"/>
+                <file src="patches/0001-Do-not-check-for-ERR_remove_thread_state-do-not-link.patch"/>
             </patchset>
         </patches>
 
         <requires>
+            <package name="autotools-dev"/>
             <package name="libssl-dev"/>
         </requires>
 
@@ -45,11 +39,11 @@
     </source>
 
     <xi:include href="libevent-dev.xml"/>
-    <xi:include href="libevent-2.0-5.xml"/>
-    <xi:include href="libevent-core-2.0-5.xml"/>
-    <xi:include href="libevent-extra-2.0-5.xml"/>
-    <xi:include href="libevent-pthreads-2.0-5.xml"/>
-    <xi:include href="libevent-openssl-2.0-5.xml"/>
+    <xi:include href="libevent-2.1.6.xml"/>
+    <xi:include href="libevent-core-2.1.6.xml"/>
+    <xi:include href="libevent-extra-2.1.6.xml"/>
+    <xi:include href="libevent-pthreads-2.1.6.xml"/>
+    <xi:include href="libevent-openssl-2.1.6.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>
