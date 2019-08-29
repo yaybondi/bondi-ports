@@ -33,6 +33,12 @@ cd "$BOLT_BUILD_DIR"
 make CC="${BOLT_HOST_TYPE}-gcc" MAKEINFO=true \
     DESTDIR="$BOLT_INSTALL_DIR" install
 
+rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/automake"
+rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/aclocal"
+
+ln -sf automake-1.16 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/automake"
+ln -sf aclocal-1.16 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/aclocal"
+
     ]]>
     </install>
 </rules>
