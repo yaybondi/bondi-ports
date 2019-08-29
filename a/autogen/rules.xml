@@ -8,8 +8,9 @@ bh_autotools_dev_update
 
 export SHELL="$BOLT_INSTALL_PREFIX/bin/sh"
 export PKG_CONFIG="${BOLT_HOST_TYPE}-pkg-config"
-export GUILE_CFLAGS="${BOLT_HOST_TYPE}-pkg-config --libs guile-2.0"
-export GUILE_LIBS="${BOLT_HOST_TYPE}-pkg-config --cflags guile-2.0"
+
+export GUILE_LIBS="`${BOLT_HOST_TYPE}-pkg-config --libs guile-2.0`"
+export GUILE_CFLAGS="`${BOLT_HOST_TYPE}-pkg-config --cflags guile-2.0`"
 
 # HACK: fix hard-coded pkg-config call in configure script.
 sed -i 's/`pkg-config/`$PKG_CONFIG/g' configure
