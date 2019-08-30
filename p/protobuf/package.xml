@@ -19,44 +19,32 @@
         </description>
 
         <sources>
-            <file src="protobuf-3.0.0.tar.gz" subdir="sources"
-                sha256sum="f5b3563f118f1d3d6e001705fa7082e8fc3bda50038ac3dff787650795734146"/>
-            <file src="debian.9.tar.gz" subdir="patches"
-                sha256sum="76dff42bdc1aebf4841f602d28ad2571930674c4ad9c9f1dcb733051c353d88c"/>
-            <file src="bolt.1.tar.gz" subdir="patches"
-                sha256sum="3243572b8a290be47c3f3a44b852564f773e7a4a67e8efcbb3a1ee811ff6b6e0"/>
+            <file src="protobuf-3.6.1.3.tar.gz" subdir="sources"
+                sha256sum="73fdad358857e120fd0fa19e071a96e15c0f23bb25f85d3f7009abfd4f264a2a"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="155dd25c7bb827c941a08f7007b1d12989f6e0eba986666e266a91eaf4504a6e"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <!-- Debian -->
-                <file src="patches/Restore-New-Callback-into-google-protobuf-namespace.patch"/>
-                <file src="patches/expect_death.patch"/>
                 <file src="patches/hurd.patch"/>
-                <file src="patches/java-test-scope.patch"/>
-                <file src="patches/misleading-indentation.patch"/>
+                <file src="patches/default_python_version"/>
                 <file src="patches/s390x.patch"/>
-                <file src="patches/sparc64.patch"/>
-                <file src="patches/python3_long_fix.patch"/>
-                <!-- Bolt -->
-                <file src="patches/genscript-no-bashism.patch"/>
+                <file src="patches/disable_local_gmock.patch"/>
+                <file src="patches/fix_google_test_link.patch"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="g++" version=">= 4:4.7"/>
             <package name="zlib1g-dev"/>
-            <package name="google-mock"/>
-            <package name="libgtest-dev"/>
-            <package name="python-all" version=">= 2.7"/>
-            <package name="libpython-all-dev" version=">= 2.7"/>
-            <package name="python3-all" version=">= 3.3"/>
-            <package name="libpython3-all-dev" version=">= 3.3"/>
+            <package name="python-all"/>
+            <package name="libpython-all-dev"/>
+            <package name="python3-all"/>
+            <package name="libpython3-all-dev"/>
             <package name="python-setuptools"/>
+            <package name="python-six"/>
             <package name="python3-setuptools"/>
-            <package name="python-google-apputils"/>
             <package name="python3-six"/>
-            <package name="xmlto"/>
             <package name="unzip"/>
         </requires>
 
