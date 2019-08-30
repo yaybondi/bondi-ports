@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgdbm-compat-dev" section="libdevel">
+    <description>
+        <summary>GNU dbm database routines (legacy support development files)</summary>
+        <p>
+        This package includes development files, required to build old
+        programs, that use legacy 'dbm' interface. For new programs, please
+        use modern interface, provided by libgdbm6 and libgdbm-dev.
+        </p>
+    </description>
+
+    <requires>
+        <package name="musl-libc-dev"/>
+        <package name="libgdbm-compat4" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/include/dbm.h"/>
+        <file src="${prefix}/include/gdbm-ndbm.h"/>
+        <file src="${prefix}/include/ndbm.h"/>
+        <file src="${prefix}/lib/libgdbm_compat.so"/>
+    </contents>
+</package>

@@ -40,8 +40,11 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="libgdbm3.xml"/>
+    <xi:include href="gdbmtool.xml"/>
+    <xi:include href="libgdbm6.xml"/>
     <xi:include href="libgdbm-dev.xml"/>
+    <xi:include href="libgdbm-compat4.xml"/>
+    <xi:include href="libgdbm-compat-dev.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>

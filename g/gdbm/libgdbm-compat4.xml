@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgdbm-compat4" section="libs">
+    <description>
+        <summary>GNU dbm database routines (legacy support runtime version)</summary>
+        <p>
+        This package includes library files, required to run old programs,
+        that use legacy 'dbm' interface. For new programs, please use modern
+        interface, provided by libgdbm6 and libgdbm-dev.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libgdbm6" version=">= 1.16"/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/lib/libgdbm_compat.so.*"/>
+    </contents>
+</package>

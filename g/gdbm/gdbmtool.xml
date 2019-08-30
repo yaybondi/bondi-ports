@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="gdbmtool" section="utils">
+    <description>
+        <summary>GNU dbm database (command line tools)</summary>
+        <p>
+        This package includes following command line tools:
+        </p>
+        <ul>
+            <li>gdbm_dump -- dump database content into system-independant format</li>
+            <li>gdbm_load -- recreate database from dump, created by gdbm_dump</li>
+            <li>gdbmtool -- view and modify an existing database or to create a new one</li>
+        </p>
+    </description>
+
+    <requires>
+        <package name="libgdbm6"/>
+        <package name="libncurses6"/>
+        <package name="libreadline7"/>
+        <package name="libtinfo6"/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+    </contents>
+</package>

@@ -6,10 +6,8 @@
 export CFLAGS="$CFLAGS -O2 -g -Wall -D_REENTRANT"
 
 cd "$BOLT_SOURCE_DIR"
-libtoolize --copy --force
-aclocal
-autoconf
 bh_autotools_dev_update
+autoreconf -v -fi
 
 sed -i 's@$(INSTALL) -T@$(INSTALL)@g' Makefile.in
 
@@ -18,6 +16,7 @@ cd "$BOLT_BUILD_DIR"
     --prefix="$BOLT_INSTALL_PREFIX" \
     --build="$BOLT_HOST_TYPE" \
     --host="$BOLT_HOST_TYPE" \
+    --enable-libgdbm-compat \
     finish_cmds=""
 
 echo "/* We use fcntl locking (POSIX) instead of flock (BSD) */" >> autoconf.h

@@ -11,14 +11,12 @@
 
     <requires>
         <package name="musl-libc-dev"/>
-        <package name="libgdbm3" version="=="/>
+        <package name="libgdbm6" version="=="/>
     </requires>
 
     <contents>
-        <file src="${prefix}/include"/>
+        <file src="${prefix}/include/gdbm.h"/>
         <file src="${prefix}/lib/libgdbm.a"/>
         <file src="${prefix}/lib/libgdbm.so"/>
-        <file src="${prefix}/lib/libgdbm_compat.a"/>
-        <file src="${prefix}/lib/libgdbm_compat.so"/>
     </contents>
 </package>
