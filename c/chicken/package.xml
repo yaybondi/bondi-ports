@@ -11,12 +11,12 @@
         </description>
 
         <sources>
-            <file src="chicken-4.11.0.tar.gz" subdir="sources"
-                sha256sum="e3dc2b8f95b6a3cd59c85b5bb6bdb2bd9cefc45b5d536a20cad74e3c63f4ad89"/>
-            <file src="debian.1.tar.gz" subdir="patches"
-                sha256sum="60c591a7d9b51c62071b9f3b3016fc55bd46f25cf1430c6ec06b9fdd79ad561e"/>
+            <file src="chicken-4.13.0.tar.gz" subdir="sources"
+                sha256sum="add549619a31363d6608b39e0cf0e68b9d5e6ff2a719b5691ddeba57229c6c43"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="cdc5f24cf3c8766baeadf8dc40bce2f7aa6c8c0cdb3c0782adb5a27c15c85bea"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/fix-manpages.patch"/>
@@ -24,8 +24,8 @@
         </patches>
 
         <requires>
-            <package name="texinfo"/>
             <package name="chrpath"/>
+            <package name="texinfo"/>
         </requires>
 
         <xi:include href="rules.xml"/>
