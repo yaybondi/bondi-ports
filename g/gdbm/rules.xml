@@ -31,9 +31,6 @@ echo "#undef HAVE_FLOCK" >> autoconf.h
 cd "$BOLT_BUILD_DIR"
 make
 
-# no clue why this comes out wrong
-chmod 644 gdbm.h
-
     ]]>
     </build>
 
@@ -45,10 +42,9 @@ make BINOWN="`whoami`" BINGRP="`whoami`" \
     prefix="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
     infodir="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/info" \
     man3dir="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/man/man3" \
-    install install-compat
+    install
 
-mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/ndbm.h" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/gdbm-ndbm.h"
+ln -sf ndbm.h "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/gdbm-ndbm.h"
 
     ]]>
     </install>

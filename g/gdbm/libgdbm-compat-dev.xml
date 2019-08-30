@@ -18,6 +18,7 @@
         <file src="${prefix}/include/dbm.h"/>
         <file src="${prefix}/include/gdbm-ndbm.h"/>
         <file src="${prefix}/include/ndbm.h"/>
+        <file src="${prefix}/lib/libgdbm_compat.a"/>
         <file src="${prefix}/lib/libgdbm_compat.so"/>
     </contents>
 </package>
