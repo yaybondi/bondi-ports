@@ -12,13 +12,6 @@
         </ul>
     </description>
 
-    <requires>
-        <package name="libgdbm6"/>
-        <package name="libncurses6"/>
-        <package name="libreadline7"/>
-        <package name="libtinfo6"/>
-    </requires>
-
     <contents>
         <file src="${prefix}/bin"/>
     </contents>
