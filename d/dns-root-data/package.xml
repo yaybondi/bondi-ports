@@ -19,10 +19,8 @@
         </description>
 
         <sources>
-            <file src="dns-root-data_2015052300+h+1.tar.xz" subdir="sources"
-                sha256sum="aebd10df78d6cc364ab4298f21b5c91e17ed3c7ad312eb9aa7eff21e3385c898"/>
-            <file src="dns-root-data-prebuilt_2015052300+h+1.tar.gz" subdir="build"
-                sha256sum="d9baa57684300f8e254c422b7ce87b8ec0bcf00ab5dda5a5a9a59771786e1c5a"/>
+            <file src="dns-root-data-2019031302.tar.xz" subdir="sources"
+                sha256sum="5606dec8c6641f5c44013efc6394274c98b577f8c0846ea30b808a11c4b3e876"/>
         </sources>
 
         <xi:include href="rules.xml"/>
