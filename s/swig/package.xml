@@ -19,30 +19,25 @@
         </description>
 
         <sources>
-            <file src="swig-3.0.10.tar.gz" subdir="sources"
-                sha256sum="2939aae39dec06095462f1b95ce1c958ac80d07b926e48871046d17c0094f44c"/>
-            <file src="debian.1.1.tar.gz" subdir="patches"
-                sha256sum="177efa7aa521fe704c0f251e632e529d3ddc5a1386189d48a93410f7eabca2bd"/>
+            <file src="swig-3.0.12.tar.gz" subdir="sources"
+                sha256sum="7cf9f447ae7ed1c51722efc45e7f14418d15d7a1e143ac9f09a668999f4fc94d"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="4ef4b31b3cedcfac242b61943c600b1b1e0f21ea45cbe53908d48c6ab59aff0f"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/ccache-rename.diff"/>
+                <file src="patches/octave4.4.patch"/>
+                <file src="patches/python-fix-function-cast-warnings.patch"/>
+                <file src="patches/python-fix-gcc8-strncpy-warning.patch"/>
+                <file src="patches/fix-gcc8-memset-warnings.patch"/>
             </patchset>
         </patches>
 
         <requires>
             <package name="bison"/>
-            <package name="default-jdk"/>
-            <package name="guile-2.0-dev"/>
-            <package name="libchicken-dev"/>
-            <package name="libperl-dev"/>
             <package name="libpcre3-dev"/>
-            <package name="python-dev"/>
-            <package name="ruby"/>
-            <package name="ruby-dev"/>
-            <package name="tcl-dev"/>
-            <package name="tk-dev"/>
         </requires>
 
         <xi:include href="rules.xml"/>
