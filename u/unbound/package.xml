@@ -44,7 +44,7 @@
     </source>
 
     <xi:include href="libunbound-dev.xml"/>
-    <xi:include href="libunbound2.xml"/>
+    <xi:include href="libunbound8.xml"/>
     <xi:include href="python-unbound.xml"/>
     <xi:include href="python3-unbound.xml"/>
     <xi:include href="unbound.xml"/>
