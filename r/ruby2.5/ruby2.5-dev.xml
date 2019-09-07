@@ -21,9 +21,9 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/ruby-2.5.0"/>
-        <file src="/usr/include/x86_64-linux-gnu/ruby-2.5.0/ruby"/>
-        <file src="/usr/lib/libruby-2.5.so"/>
-        <file src="/usr/lib/pkgconfig"/>
+        <file src="${prefix}/include/ruby-2.5.0"/>
+	<file src="${prefix}/include/*-linux-*/ruby-2.5.0/ruby/**/*"/>
+        <file src="${prefix}/lib/libruby-2.5.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
     </contents>
 </package>
