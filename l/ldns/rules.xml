@@ -31,7 +31,6 @@ CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
     --host="$BOLT_HOST_TYPE" \
     --disable-rpath \
     --with-pyldns \
-    --with-pyldnsx \
     --libdir="$BOLT_INSTALL_PREFIX/lib"
 
 cd "$BOLT_BUILD_DIR/python3"
@@ -45,7 +44,6 @@ CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
     --host="$BOLT_HOST_TYPE" \
     --disable-rpath \
     --with-pyldns \
-    --with-pyldnsx \
     --libdir="$BOLT_INSTALL_PREFIX/lib"
 
 cd "$BOLT_BUILD_DIR/libonly"
@@ -60,7 +58,7 @@ CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
     --with-libunbound-only \
     --disable-rpath \
     --without-pyldns \
-    --without-pyldnsx \
+    --with-examples --with-drill \
     --libdir="$BOLT_INSTALL_PREFIX/lib"
 
     ]]>
