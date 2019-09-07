@@ -14,7 +14,7 @@ cp -a "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/libonly"
 cd "$BOLT_BUILD_DIR"
 mkdir .mybin
 ln -sf "$BOLT_INSTALL_PREFIX/bin/python2.7" .mybin/python2.7
-ln -sf "$BOLT_INSTALL_PREFIX/bin/python3.5" .mybin/python3.5
+ln -sf "$BOLT_INSTALL_PREFIX/bin/python3.7" .mybin/python3.7
 ln -sf "$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-pkg-config" \
     .mybin/pkg-config
 
@@ -42,7 +42,7 @@ CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
 
 cd "$BOLT_BUILD_DIR/python3"
 
-PYTHON_VERSION="3.5" \
+PYTHON_VERSION="3.7" \
 CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
 ./configure \
     --prefix="$BOLT_INSTALL_PREFIX" \
@@ -62,7 +62,7 @@ CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
 
 cd "$BOLT_BUILD_DIR/libonly"
 
-PYTHON_VERSION="3.5" \
+PYTHON_VERSION="3.7" \
 CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
 ./configure \
     --prefix="$BOLT_INSTALL_PREFIX" \
