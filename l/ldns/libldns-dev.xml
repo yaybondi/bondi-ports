@@ -22,6 +22,5 @@
         <file src="${prefix}/include"/>
         <file src="${prefix}/lib/libldns.a"/>
         <file src="${prefix}/lib/libldns.so"/>
-        <file src="${prefix}/lib/pkgconfig"/>
     </contents>
 </package>
