@@ -23,7 +23,7 @@ gpgv --keyring ./registry-admin.key ./root.hints.sig ./root.hints
 ./parse-root-anchors.sh < root-anchors.xml | sort -k 4 -n > root-anchors.ds
 
 # Create key from downloaded root.key
-ldns-key2ds -n -2 root.key | cut --fields=1,3- --output-delimiter=' ' | sort -k 4 -n > root.ds
+ldns-key2ds -n -2 root.key | cut -f1,3- | sed 's/\t/ /g' | sort -k 4 -n > root.ds
 
 # Compare the DS from root.key and from root-anchors.xml
 diff -u root-anchors.ds root.ds
