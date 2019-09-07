@@ -15,17 +15,9 @@
         </description>
 
         <sources>
-            <file src="unbound-1.6.0.tar.gz" subdir="sources"
-                sha256sum="6b7db874e6debda742fee8869d722e5a17faf1086e93c911b8564532aeeffab7"/>
-            <file src="debian.3.tar.gz" subdir="patches"
-                sha256sum="ee0ba473141c5faf1ddfd8a518a62973bd6dab7a518d67a79eddfae93f5f5fab"/>
+            <file src="unbound-1.9.0.tar.gz" subdir="sources"
+                sha256sum="415af94b8392bc6b2c52e44ac8f17935cc6ddf2cc81edfb47c5be4ad205ab917"/>
         </sources>
-        
-        <patches>
-            <patchset subdir="sources">
-                <file src="patches/debian-changes"/>
-            </patchset>
-        </patches>
 
         <requires>
             <package name="autoconf"/>
@@ -41,8 +33,8 @@
             <package name="nettle-dev"/>
             <package name="pkg-config"/>
             <package name="protobuf-c-compiler"/>
-            <package name="python-all-dev" version=">= 2.6.6-3~"/>
-            <package name="libpython-all-dev" version=">= 2.6.6-3~"/>
+            <package name="python-all-dev"/>
+            <package name="libpython-all-dev"/>
             <package name="python3-all-dev"/>
             <package name="libpython3-all-dev"/>
             <package name="swig"/>
