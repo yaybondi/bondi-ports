@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="xml2" section="utils">
+    <description>
+        <summary>Convert between XML, HTML, CSV and a line-oriented format</summary>
+        <p>
+        xml2 tools are used to convert XML, HTML and CSV to and from a
+        line-oriented format more amenable to processing by classic Unix
+        pipeline processing tools, like grep, sed, awk, cut, shell scripts,
+        and so forth.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libxml2" version=">= 2.7.4"/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+    </contents>
+</package>

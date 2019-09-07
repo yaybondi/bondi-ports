@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="xml2" architecture-independent="false">
+        <description>
+            <summary>Convert between XML, HTML, CSV and a line-oriented format</summary>
+            <p>
+            xml2 tools are used to convert XML, HTML and CSV to and from a
+            line-oriented format more amenable to processing by classic Unix
+            pipeline processing tools, like grep, sed, awk, cut, shell scripts,
+            and so forth.
+            </p>
+        </description>
+
+        <sources>
+            <file src="xml2-0.5.tar.gz" subdir="sources"
+                sha256sum="e3203a5d3e5d4c634374e229acdbbe03fea41e8ccdef6a594a3ea50a50d29705"/>
+        </sources>
+
+        <requires>
+            <package name="libxml2-dev"/>
+            <package name="pkg-config"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="xml2.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
