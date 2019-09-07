@@ -23,7 +23,7 @@ gpgv --keyring ./registry-admin.key ./root.hints.sig ./root.hints
 ./parse-root-anchors.sh < root-anchors.xml | sort -k 4 -n > root-anchors.ds
 
 # Create key from downloaded root.key
-/usr/bin/ldns-key2ds -n -2 root.key | cut --fields=1,3- --output-delimiter=' ' | sort -k 4 -n > root.ds
+ldns-key2ds -n -2 root.key | cut --fields=1,3- --output-delimiter=' ' | sort -k 4 -n > root.ds
 
 # Compare the DS from root.key and from root-anchors.xml
 diff -u root-anchors.ds root.ds
@@ -36,8 +36,8 @@ diff -u root-anchors.ds root.ds
 
 cd "$BOLT_BUILD_DIR"
 
-install -d 0755 "$BOLT_INSTALL_DIR/usr/share/dns/"
-cp root.* "$BOLT_INSTALL_DIR/usr/share/dns/"
+install -d 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/dns/"
+cp root.* "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/dns/"
 
     ]]>
     </install>
