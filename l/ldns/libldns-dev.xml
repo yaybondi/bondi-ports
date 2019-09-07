@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libldns-dev" section="libdevel">
+    <description>
+        <summary>ldns library for DNS programming</summary>
+        <p>
+        The goal of ldns is to simplify DNS programming, it supports recent RFCs
+        like the DNSSEC documents, and allows developers to easily create software
+        conforming to current RFCs, and experimental software for current Internet
+        Drafts.
+        </p>
+        <p>
+        This package contains development libraries and headers.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libldns2" version="=="/>
+        <package name="libssl-dev"/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libldns.a"/>
+        <file src="${prefix}/lib/libldns.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
+    </contents>
+</package>

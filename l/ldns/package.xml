@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="ldns" architecture-independent="false">
+        <description>
+            <summary>ldns library for DNS programming</summary>
+            <p>
+            The goal of ldns is to simplify DNS programming, it supports recent RFCs
+            like the DNSSEC documents, and allows developers to easily create software
+            conforming to current RFCs, and experimental software for current Internet
+            Drafts.
+            </p>
+            <p>
+            This package contains shared libraries.
+            </p>
+        </description>
+
+        <sources>
+            <file src="ldns-1.7.0.tar.gz" subdir="sources"
+                sha256sum="c19f5b1b4fb374cfe34f4845ea11b1e0551ddc67803bd6ddd5d2a20f0997a6cc"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="35e599b431888ede1f399a48438320a2910b2d292022da6438ac5428c9d39ed5"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/0002-Check-parse-limit-before-t-increment.patch"/>
+                <file src="patches/0003-bugfix-1257-Free-after-reallocing-to-0-size.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="chrpath"/>
+            <package name="libssl-dev"/>
+            <package name="pkg-config"/>
+            <package name="python-dev"/>
+            <package name="python3-dev"/>
+            <package name="swig"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libldns2.xml"/>
+    <xi:include href="libldns-dev.xml"/>
+    <xi:include href="ldnsutils.xml"/>
+    <xi:include href="python-ldns.xml"/>
+    <xi:include href="python3-ldns.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

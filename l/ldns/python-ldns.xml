@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python-ldns" section="python">
+    <description>
+        <summary>Python bindings for the ldns library for DNS programming</summary>
+        <p>
+        The goal of ldns is to simplify DNS programming, it supports recent RFCs
+        like the DNSSEC documents, and allows developers to easily create software
+        conforming to current RFCs, and experimental software for current Internet
+        Drafts.
+        </p>
+        <p>
+        This archive contains modules that allow you to use LDNS Library in
+        Python programs.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python"/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/lib/python2.7/dist-packages"/>
+    </contents>
+</package>

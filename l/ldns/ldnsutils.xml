@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="ldnsutils" section="net">
+    <description>
+        <summary>ldns library for DNS programming</summary>
+        <p>
+        The goal of ldns is to simplify DNS programming, it supports recent RFCs
+        like the DNSSEC documents, and allows developers to easily create software
+        conforming to current RFCs, and experimental software for current Internet
+        Drafts.
+        </p>
+        <p>
+        This package contains various client programs related to DNS that are
+        based on top of libldns library and DRILL tool which is similar to dig.
+        These tools were designed with DNSSEC in mind and are useful for DNS
+        and DNSSEC testing and debugging.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+    </contents>
+</package>

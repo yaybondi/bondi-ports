@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+cd "$BOLT_SOURCE_DIR"
+bh_autotools_dev_update
+autoreconf -vfi
+
+cp -a "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/python2"
+cp -a "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/python3"
+cp -a "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/libonly"
+
+cd "$BOLT_BUILD_DIR"
+mkdir .mybin
+ln -sf "$BOLT_INSTALL_PREFIX/bin/python2.7" .mybin/python2.7
+ln -sf "$BOLT_INSTALL_PREFIX/bin/python3.7" .mybin/python3.7
+ln -sf "$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-pkg-config" \
+    .mybin/pkg-config
+
+export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
+
+cd "$BOLT_BUILD_DIR/python2"
+
+PYTHON_VERSION="2.7" \
+CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
+./configure \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --sysconfdir=/etc \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --disable-rpath \
+    --with-pyldns \
+    --with-pyldnsx \
+    --libdir="$BOLT_INSTALL_PREFIX/lib"
+
+cd "$BOLT_BUILD_DIR/python3"
+
+PYTHON_VERSION="3.7" \
+CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
+./configure \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --sysconfdir=/etc \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --disable-rpath \
+    --with-pyldns \
+    --with-pyldnsx \
+    --libdir="$BOLT_INSTALL_PREFIX/lib"
+
+cd "$BOLT_BUILD_DIR/libonly"
+
+PYTHON_VERSION="3.7" \
+CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
+./configure \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --sysconfdir=/etc \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --with-libunbound-only \
+    --disable-rpath \
+    --without-pyldns \
+    --without-pyldnsx \
+    --libdir="$BOLT_INSTALL_PREFIX/lib"
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
+
+cd "$BOLT_BUILD_DIR/python2"
+make -j"$BOLT_PARALLEL_JOBS"
+
+cd "$BOLT_BUILD_DIR/python3"
+make -j"$BOLT_PARALLEL_JOBS"
+
+cd "$BOLT_BUILD_DIR/libonly"
+make -j"$BOLT_PARALLEL_JOBS"
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
+
+cd "$BOLT_BUILD_DIR/python2"
+make DESTDIR="$BOLT_INSTALL_DIR" install
+
+cd "$BOLT_BUILD_DIR/python3"
+make DESTDIR="$BOLT_INSTALL_DIR" install
+
+cd "$BOLT_BUILD_DIR/libonly"
+make DESTDIR="$BOLT_INSTALL_DIR" install
+
+install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin"
+
+PYTHON2="$BOLT_INSTALL_PREFIX/bin/python2"
+PYTHON3="$BOLT_INSTALL_PREFIX/bin/python3"
+
+cd "$BOLT_INSTALL_DIR"
+find . -name "*.la" -exec rm -f '{}' ';'
+
+cd "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python2.7"
+find . -name "*.py" -exec "$PYTHON2" -c "import py_compile; py_compile.compile('{}')" \;
+cd "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python3"
+find . -name "*.py" -exec "$PYTHON3" -c "import py_compile; py_compile.compile('{}')" \;
+
+    ]]>
+    </install>
+</rules>
