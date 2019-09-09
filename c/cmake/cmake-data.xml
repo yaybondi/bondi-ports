@@ -11,10 +11,6 @@
 
     <contents>
         <file src="${prefix}/share/aclocal"/>
-        <file src="${prefix}/share/cmake-3.7/Help"/>
-        <file src="${prefix}/share/cmake-3.7/Modules"/>
-        <file src="${prefix}/share/cmake-3.7/Templates"/>
-        <file src="${prefix}/share/cmake-3.7/completions"/>
-        <file src="${prefix}/share/cmake-3.7/include"/>
+	<file src="${prefix}/share/cmake-*/**/*"/>
     </contents>
 </package>
