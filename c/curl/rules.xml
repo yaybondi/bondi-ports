@@ -43,18 +43,18 @@ CONFIGURE_ARGS="
 
 cd "$BOLT_BUILD_DIR/openssl"
 ./configure $CONFIGURE_ARGS \
-    --with-ca-path=/etc/ssl/certs
+    --with-ca-path=/etc/ssl/certs --without-nss --without-gnutls
 
 cd "$BOLT_BUILD_DIR/gnutls"
 ./configure $CONFIGURE_ARGS \
     --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt \
-    --without-ssl --with-gnutls --without-libssh2
+    --without-ssl --without-nss --with-gnutls --without-libssh2
 
 cd "$BOLT_BUILD_DIR/nss"
 LIBS="-lssl3 -lnspr4 -lplds4" CFLAGS="$CFLAGS -I$BOLT_INSTALL_PREFIX/include/nspr -I$BOLT_INSTALL_PREFIX/include/nss" \
 ./configure $CONFIGURE_ARGS \
     --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt \
-    --without-ssl --with-nss --without-libssh2
+    --without-ssl --without-gnutls --with-nss --without-libssh2
 
     ]]>
     </prepare>
