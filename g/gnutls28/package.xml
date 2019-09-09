@@ -9,64 +9,58 @@
             <summary>GNU TLS library - development files</summary>
             <p>
             GnuTLS is a portable library which implements the Transport Layer
-            Security (TLS 1.0, 1.1, 1.2) and Secure Sockets Layer (SSL) 3.0 and Datagram
+            Security (TLS 1.0, 1.1, 1.2, 1.3) and Datagram
             Transport Layer Security (DTLS 1.0, 1.2) protocols.
             </p>
             <p>
             GnuTLS features support for:
             </p>
             <ul>
-                <li>TLS extensions: server name indication, max record size, opaque PRF
-                    input, etc.</li>
-                <li>authentication using the SRP protocol.</li>
-                <li>authentication using both X.509 certificates and OpenPGP keys.</li>
-                <li>TLS Pre-Shared-Keys (PSK) extension.</li>
-                <li>Inner Application (TLS/IA) extension.</li>
-                <li>X.509 and OpenPGP certificate handling.</li>
-                <li>X.509 Proxy Certificates (RFC 3820).</li>
-                <li>all the strong encryption algorithms (including SHA-256/384/512 and
-                    Camellia (RFC 4132)).</li>
+                <li>certificate path validation, as well as DANE and trust on first use.</li>
+                <li>the Online Certificate Status Protocol (OCSP).</li>
+                <li>public key methods, including RSA and Elliptic curves, as well as password
+                    and key authentication methods such as SRP and PSK protocols.</li>
+                <li>all the strong encryption algorithms, including AES and Camellia.</li>
+                <li>CPU-assisted cryptography with VIA padlock and AES-NI instruction sets.</li>
+                <li>HSMs and cryptographic tokens, via PKCS #11.</li>
             </ul>
         </description>
 
         <sources>
-            <file src="gnutls28-3.5.8.tar.xz" subdir="sources"
-                sha256sum="0e97f243ae72b70307d684b84c7fe679385aa7a7a0e37e5be810193dcc17d4ff"/>
-            <file src="debian.5.tar.gz" subdir="patches"
-                sha256sum="3a7d223ca60b841ed18c24adcc77e15b9d31ac6bd90877db01542990abf1f65a"/>
+            <file src="gnutls28-3.6.7.tar.xz" subdir="sources"
+                sha256sum="5b3409ad5aaf239808730d1ee12fdcd148c0be00262c7edf157af655a8a188e2"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="5bc9ddd416eaec75ea3efd4d78a0e3a10c0970dab697c15cf86214df0103e924"/>
         </sources>
-        
+
         <patches>
             <patchset subdir="sources">
                 <file src="patches/14_version_gettextcat.diff"/>
                 <file src="patches/30_guile-snarf.diff"/>
-                <file src="patches/35_01_opencdk-improved-error-code-checking-in-the-stream-r.patch"/>
-                <file src="patches/35_01_z_opencdk-read-packet.c-corrected-typo-in-type-cast.patch"/>
-                <file src="patches/35_02_Disable-AVX-support-when-it-is-not-supported-by-the-.patch"/>
-                <file src="patches/35_03_Address-test-suite-failure-due-to-timezone-differenc.patch"/>
-                <file src="patches/35_04_gnutls_pkcs11_obj_list_import_url4-always-return-an-.patch"/>
-                <file src="patches/35_05_cdk_pkt_read-enforce-packet-limits.patch"/>
-                <file src="patches/35_05_opencdk-read_attribute-account-buffer-size.patch"/>
-                <file src="patches/35_06_opencdk-do-not-parse-any-secret-keys-in-packet-when-.patch"/>
-                <file src="patches/35_07_Enforce-the-max-packet-length-for-OpenPGP-subpackets.patch"/>
+                <file src="patches/40_rel3.6.8_01-gnutls_srp_entry_free-follow-consistent-behavior-in.patch"/>
+                <file src="patches/40_rel3.6.8_05-lib-nettle-fix-carry-flag-in-Streebog-code.patch"/>
+                <file src="patches/40_rel3.6.8_10-ext-record_size_limit-distinguish-sending-and-receiv.patch"/>
+                <file src="patches/40_rel3.6.8_15-Apply-STD3-ASCII-rules-in-gnutls_idna_map.patch"/>
+                <file src="patches/40_rel3.6.8_20-pubkey-remove-deprecated-TLS1_RSA-flag-check.patch"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="nettle-dev" version=">= 3.1"/>
-            <package name="zlib1g-dev"/>
-            <package name="libtasn1-6-dev" version=">= 4.9"/>
-            <package name="autotools-dev"/>
-            <package name="libp11-kit-dev" version=">= 0.23.1"/>
-            <package name="pkg-config"/>
-            <package name="chrpath"/>
-            <package name="libidn11-dev" version=">= 1.31"/>
-            <package name="autogen" version=">= 1:5.16-0"/>
+            <package name="autogen"/>
             <package name="bison"/>
-            <package name="libgmp-dev" version=">= 2:6"/>
+            <package name="ca-certificates"/>
+            <package name="chrpath"/>
+            <package name="libgmp-dev"/>
+            <package name="libidn2-dev"/>
             <package name="libopts25-dev"/>
-            <package name="automake" version=">= 1:1.12.2"/>
-            <package name="libunbound-dev" version=">= 1.5.10-1"/>
+            <package name="libp11-kit-dev"/>
+            <package name="libssl-dev"/>
+            <package name="libtasn1-6-dev"/>
+            <package name="libunbound-dev"/>
+            <package name="libunistring-dev"/>
+            <package name="nettle-dev"/>
+            <package name="openssl"/>
+            <package name="pkg-config"/>
         </requires>
 
         <xi:include href="rules.xml"/>
