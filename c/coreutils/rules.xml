@@ -6,6 +6,10 @@
 cd "$BOLT_SOURCE_DIR"
 autoreconf -v -fi
 
+if [ "`bh_os_bits $BOLT_HOST_TYPE`" = "32" ]; then
+    export TIME_T_32_BIT_OK=yes
+fi
+
 cd "$BOLT_BUILD_DIR"
 "$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
