@@ -4,6 +4,10 @@
     <![CDATA[
 
 cd "$BOLT_SOURCE_DIR"
+
+# HACK: avoid getting a multiarch/platform mismatch
+sed -i 's/^MULTIARCH=.*/MULTIARCH=""/g' configure.ac
+
 autoreconf -vfi
 
 # this is necesary for ffi lib loading to work
