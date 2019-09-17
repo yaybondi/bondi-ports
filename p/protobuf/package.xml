@@ -24,7 +24,7 @@
             <file src="debian-patches-2.tar.gz" subdir="patches"
                 sha256sum="155dd25c7bb827c941a08f7007b1d12989f6e0eba986666e266a91eaf4504a6e"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="beb1e454c9f995e6e730c4b604e38d36973783f75d8ad88df8dab3ecb956a0f6"/>
+                sha256sum="721d97a0a88c5d6904dcd9dae7acbf7766d716b2102f936745e61fb8cc14de88"/>
         </sources>
 
         <patches>
@@ -37,7 +37,8 @@
                 <file src="patches/fix_google_test_link.patch"/>
                 <!-- Bolt -->
                 <file src="patches/genscript-no-bashism.patch"/>
-                <file src="patches/p6337-link-libatomic.diff"/>
+                <file src="patches/p6337-link-libatomic-cmake.diff"/>
+                <file src="patches/p5227-link-libatomic-autotools.diff"/>
             </patchset>
         </patches>
 
