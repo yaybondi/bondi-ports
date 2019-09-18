@@ -6,6 +6,9 @@
 cd "$BOLT_SOURCE_DIR"
 bh_autotools_dev_update
 
+# NOTE: quick hack, put this into a patch.
+sed -i 's@<sgidefs.h>@<asm/sgidefs.h>@g' "$BOLT_SOURCE_DIR/nspr/pr/include/md/_linux.cfg"
+
 export CFLAGS="$CFLAGS -Wall -pipe"
 export LDFLAGS="$LDFLAGS -Wl,--as-needed"
 
