@@ -15,10 +15,12 @@
         <package name="python3-dateutil"/>
         <package name="python3-lxml"/>
         <package name="python3-magic"/>
+        <package name="python3-html2text"/>
         <package name="binutils" tools-prefix="tools-target-"/>
         <package name="binutils" tools-prefix="tools-"/>
         <package name="chrpath"/>
         <package name="libarchive-dev"/>
+        <package name="autotools-dev"/>
     </requires>
 
     <contents>
