@@ -24,7 +24,6 @@
     </requires>
 
     <contents>
-        <file src="${prefix}/bin"/>
-        <file src="${prefix}/lib"/>
+        <file src="${prefix}/"/>
     </contents>
 </package>
