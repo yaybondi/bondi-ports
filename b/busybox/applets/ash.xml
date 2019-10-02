@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="ash"/>
-    </provides>
-
     <conflicts>
         <package name="ash"/>
     </conflicts>
-
-    <replaces>
-        <package name="ash"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/ash"/>

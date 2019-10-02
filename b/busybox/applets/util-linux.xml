@@ -49,17 +49,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="util-linux"/>
-    </provides>
-
     <conflicts>
         <package name="util-linux"/>
     </conflicts>
-
-    <replaces>
-        <package name="util-linux"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/blkdiscard"/>

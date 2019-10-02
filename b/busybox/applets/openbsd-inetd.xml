@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="openbsd-inetd"/>
-    </provides>
-
     <conflicts>
         <package name="openbsd-inetd"/>
     </conflicts>
-
-    <replaces>
-        <package name="openbsd-inetd"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/inetd"/>

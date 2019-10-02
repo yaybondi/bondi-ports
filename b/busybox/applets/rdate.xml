@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="rdate"/>
-    </provides>
-
     <conflicts>
         <package name="rdate"/>
     </conflicts>
-
-    <replaces>
-        <package name="rdate"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/rdate"/>

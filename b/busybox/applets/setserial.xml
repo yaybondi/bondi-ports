@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="setserial"/>
-    </provides>
-
     <conflicts>
         <package name="setserial"/>
     </conflicts>
-
-    <replaces>
-        <package name="setserial"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/setserial"/>

@@ -16,17 +16,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="bsdmainutils"/>
-    </provides>
-
     <conflicts>
         <package name="bsdmainutils"/>
     </conflicts>
-
-    <replaces>
-        <package name="bsdmainutils"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/cal"/>

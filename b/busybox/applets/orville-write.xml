@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="orville-write"/>
-    </provides>
-
     <conflicts>
         <package name="orville-write"/>
     </conflicts>
-
-    <replaces>
-        <package name="orville-write"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/mesg"/>

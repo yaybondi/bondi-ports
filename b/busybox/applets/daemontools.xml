@@ -19,17 +19,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="daemontools"/>
-    </provides>
-
     <conflicts>
         <package name="daemontools"/>
     </conflicts>
-
-    <replaces>
-        <package name="daemontools"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/envdir"/>

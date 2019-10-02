@@ -18,17 +18,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="runit"/>
-    </provides>
-
     <conflicts>
         <package name="runit"/>
     </conflicts>
-
-    <replaces>
-        <package name="runit"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/chpst"/>

@@ -16,17 +16,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="grep"/>
-    </provides>
-
     <conflicts>
         <package name="grep"/>
     </conflicts>
-
-    <replaces>
-        <package name="grep"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/egrep"/>

@@ -22,17 +22,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="mtd-utils"/>
-    </provides>
-
     <conflicts>
         <package name="mtd-utils"/>
     </conflicts>
-
-    <replaces>
-        <package name="mtd-utils"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/nanddump"/>

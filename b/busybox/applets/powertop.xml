@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="powertop"/>
-    </provides>
-
     <conflicts>
         <package name="powertop"/>
     </conflicts>
-
-    <replaces>
-        <package name="powertop"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/powertop"/>

@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="less"/>
-    </provides>
-
     <conflicts>
         <package name="less"/>
     </conflicts>
-
-    <replaces>
-        <package name="less"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/less"/>

@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="inetutils-ftpd"/>
-    </provides>
-
     <conflicts>
         <package name="inetutils-ftpd"/>
     </conflicts>
-
-    <replaces>
-        <package name="inetutils-ftpd"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/ftpd"/>

@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="hostname"/>
-    </provides>
-
     <conflicts>
         <package name="hostname"/>
     </conflicts>
-
-    <replaces>
-        <package name="hostname"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/dnsdomainname"/>

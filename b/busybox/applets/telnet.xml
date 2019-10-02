@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="telnet"/>
-    </provides>
-
     <conflicts>
         <package name="telnet"/>
     </conflicts>
-
-    <replaces>
-        <package name="telnet"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/telnet"/>

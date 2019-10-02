@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="tftp"/>
-    </provides>
-
     <conflicts>
         <package name="tftp"/>
     </conflicts>
-
-    <replaces>
-        <package name="tftp"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/tftp"/>

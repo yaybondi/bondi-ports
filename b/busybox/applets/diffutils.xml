@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="diffutils"/>
-    </provides>
-
     <conflicts>
         <package name="diffutils"/>
     </conflicts>
-
-    <replaces>
-        <package name="diffutils"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/cmp"/>

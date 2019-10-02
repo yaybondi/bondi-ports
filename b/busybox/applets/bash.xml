@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="bash"/>
-    </provides>
-
     <conflicts>
         <package name="bash"/>
     </conflicts>
-
-    <replaces>
-        <package name="bash"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/bash"/>

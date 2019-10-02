@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="citadel-server"/>
-    </provides>
-
     <conflicts>
         <package name="citadel-server"/>
     </conflicts>
-
-    <replaces>
-        <package name="citadel-server"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/sendmail"/>

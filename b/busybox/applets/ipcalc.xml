@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="ipcalc"/>
-    </provides>
-
     <conflicts>
         <package name="ipcalc"/>
     </conflicts>
-
-    <replaces>
-        <package name="ipcalc"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/ipcalc"/>

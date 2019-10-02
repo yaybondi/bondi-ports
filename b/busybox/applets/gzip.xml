@@ -16,17 +16,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="gzip"/>
-    </provides>
-
     <conflicts>
         <package name="gzip"/>
     </conflicts>
-
-    <replaces>
-        <package name="gzip"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/gunzip"/>

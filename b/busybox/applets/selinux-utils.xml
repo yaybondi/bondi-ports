@@ -18,17 +18,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="selinux-utils"/>
-    </provides>
-
     <conflicts>
         <package name="selinux-utils"/>
     </conflicts>
-
-    <replaces>
-        <package name="selinux-utils"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/getenforce"/>

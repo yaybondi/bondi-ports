@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="findutils"/>
-    </provides>
-
     <conflicts>
         <package name="findutils"/>
     </conflicts>
-
-    <replaces>
-        <package name="findutils"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/find"/>

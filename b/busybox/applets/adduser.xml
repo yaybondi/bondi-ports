@@ -17,17 +17,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="adduser"/>
-    </provides>
-
     <conflicts>
         <package name="adduser"/>
     </conflicts>
-
-    <replaces>
-        <package name="adduser"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/addgroup"/>

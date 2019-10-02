@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="ncurses-bin"/>
-    </provides>
-
     <conflicts>
         <package name="ncurses-bin"/>
     </conflicts>
-
-    <replaces>
-        <package name="ncurses-bin"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/clear"/>

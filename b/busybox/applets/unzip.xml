@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="unzip"/>
-    </provides>
-
     <conflicts>
         <package name="unzip"/>
     </conflicts>
-
-    <replaces>
-        <package name="unzip"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/unzip"/>

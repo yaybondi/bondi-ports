@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="usbutils"/>
-    </provides>
-
     <conflicts>
         <package name="usbutils"/>
     </conflicts>
-
-    <replaces>
-        <package name="usbutils"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/lsusb"/>

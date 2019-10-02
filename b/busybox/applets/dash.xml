@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="dash"/>
-    </provides>
-
     <conflicts>
         <package name="dash"/>
     </conflicts>
-
-    <replaces>
-        <package name="dash"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/sh"/>

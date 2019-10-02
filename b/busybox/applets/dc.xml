@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="dc"/>
-    </provides>
-
     <conflicts>
         <package name="dc"/>
     </conflicts>
-
-    <replaces>
-        <package name="dc"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/dc"/>

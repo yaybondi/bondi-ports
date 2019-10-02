@@ -18,17 +18,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="bsdutils"/>
-    </provides>
-
     <conflicts>
         <package name="bsdutils"/>
     </conflicts>
-
-    <replaces>
-        <package name="bsdutils"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/logger"/>

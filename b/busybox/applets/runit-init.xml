@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="runit-init"/>
-    </provides>
-
     <conflicts>
         <package name="runit-init"/>
     </conflicts>
-
-    <replaces>
-        <package name="runit-init"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/init"/>

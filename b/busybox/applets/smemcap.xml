@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="smemcap"/>
-    </provides>
-
     <conflicts>
         <package name="smemcap"/>
     </conflicts>
-
-    <replaces>
-        <package name="smemcap"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/smemcap"/>

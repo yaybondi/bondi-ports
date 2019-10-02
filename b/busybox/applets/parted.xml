@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="parted"/>
-    </provides>
-
     <conflicts>
         <package name="parted"/>
     </conflicts>
-
-    <replaces>
-        <package name="parted"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/partprobe"/>

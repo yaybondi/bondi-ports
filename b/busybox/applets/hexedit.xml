@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="hexedit"/>
-    </provides>
-
     <conflicts>
         <package name="hexedit"/>
     </conflicts>
-
-    <replaces>
-        <package name="hexedit"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/hexedit"/>

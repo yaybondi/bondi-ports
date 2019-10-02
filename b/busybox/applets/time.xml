@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="time"/>
-    </provides>
-
     <conflicts>
         <package name="time"/>
     </conflicts>
-
-    <replaces>
-        <package name="time"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/time"/>

@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="loadlin"/>
-    </provides>
-
     <conflicts>
         <package name="loadlin"/>
     </conflicts>
-
-    <replaces>
-        <package name="loadlin"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/freeramdisk"/>

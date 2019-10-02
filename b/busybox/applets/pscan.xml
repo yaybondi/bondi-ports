@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="pscan"/>
-    </provides>
-
     <conflicts>
         <package name="pscan"/>
     </conflicts>
-
-    <replaces>
-        <package name="pscan"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/pscan"/>

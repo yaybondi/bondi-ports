@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="fbset"/>
-    </provides>
-
     <conflicts>
         <package name="fbset"/>
     </conflicts>
-
-    <replaces>
-        <package name="fbset"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/fbset"/>

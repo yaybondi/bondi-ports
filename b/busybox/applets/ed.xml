@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="ed"/>
-    </provides>
-
     <conflicts>
         <package name="ed"/>
     </conflicts>
-
-    <replaces>
-        <package name="ed"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/ed"/>

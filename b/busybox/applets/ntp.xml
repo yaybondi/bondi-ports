@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="ntp"/>
-    </provides>
-
     <conflicts>
         <package name="ntp"/>
     </conflicts>
-
-    <replaces>
-        <package name="ntp"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/ntpd"/>

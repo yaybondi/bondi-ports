@@ -16,17 +16,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="bzip2"/>
-    </provides>
-
     <conflicts>
         <package name="bzip2"/>
     </conflicts>
-
-    <replaces>
-        <package name="bzip2"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/bunzip2"/>

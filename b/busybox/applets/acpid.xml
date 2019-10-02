@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="acpid"/>
-    </provides>
-
     <conflicts>
         <package name="acpid"/>
     </conflicts>
-
-    <replaces>
-        <package name="acpid"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/acpid"/>

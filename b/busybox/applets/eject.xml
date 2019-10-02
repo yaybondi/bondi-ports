@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="eject"/>
-    </provides>
-
     <conflicts>
         <package name="eject"/>
     </conflicts>
-
-    <replaces>
-        <package name="eject"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/eject"/>

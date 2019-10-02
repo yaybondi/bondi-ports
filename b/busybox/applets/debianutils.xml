@@ -17,17 +17,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="debianutils"/>
-    </provides>
-
     <conflicts>
         <package name="debianutils"/>
     </conflicts>
-
-    <replaces>
-        <package name="debianutils"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/run-parts"/>

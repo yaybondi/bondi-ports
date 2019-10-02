@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="udhcpc"/>
-    </provides>
-
     <conflicts>
         <package name="udhcpc"/>
     </conflicts>
-
-    <replaces>
-        <package name="udhcpc"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/udhcpc"/>

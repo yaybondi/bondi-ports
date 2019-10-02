@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="lrzsz"/>
-    </provides>
-
     <conflicts>
         <package name="lrzsz"/>
     </conflicts>
-
-    <replaces>
-        <package name="lrzsz"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/rx"/>

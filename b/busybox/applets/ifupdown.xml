@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="ifupdown"/>
-    </provides>
-
     <conflicts>
         <package name="ifupdown"/>
     </conflicts>
-
-    <replaces>
-        <package name="ifupdown"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/ifdown"/>

@@ -19,17 +19,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="kmod"/>
-    </provides>
-
     <conflicts>
         <package name="kmod"/>
     </conflicts>
-
-    <replaces>
-        <package name="kmod"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/depmod"/>

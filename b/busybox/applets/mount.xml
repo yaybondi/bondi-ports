@@ -18,17 +18,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="mount"/>
-    </provides>
-
     <conflicts>
         <package name="mount"/>
     </conflicts>
-
-    <replaces>
-        <package name="mount"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/mount"/>

@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="inetutils-telnetd"/>
-    </provides>
-
     <conflicts>
         <package name="inetutils-telnetd"/>
     </conflicts>
-
-    <replaces>
-        <package name="inetutils-telnetd"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/telnetd"/>

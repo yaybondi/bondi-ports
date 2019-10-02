@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="nbd-client"/>
-    </provides>
-
     <conflicts>
         <package name="nbd-client"/>
     </conflicts>
-
-    <replaces>
-        <package name="nbd-client"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/nbd-client"/>

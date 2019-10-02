@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="inetutils-ping"/>
-    </provides>
-
     <conflicts>
         <package name="inetutils-ping"/>
     </conflicts>
-
-    <replaces>
-        <package name="inetutils-ping"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/ping"/>

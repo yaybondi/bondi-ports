@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="binutils"/>
-    </provides>
-
     <conflicts>
         <package name="binutils"/>
     </conflicts>
-
-    <replaces>
-        <package name="binutils"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/ar"/>

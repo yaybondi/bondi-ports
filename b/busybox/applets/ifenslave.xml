@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="ifenslave"/>
-    </provides>
-
     <conflicts>
         <package name="ifenslave"/>
     </conflicts>
-
-    <replaces>
-        <package name="ifenslave"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/ifenslave"/>

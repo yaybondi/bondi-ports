@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="ipsvd"/>
-    </provides>
-
     <conflicts>
         <package name="ipsvd"/>
     </conflicts>
-
-    <replaces>
-        <package name="ipsvd"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/tcpsvd"/>

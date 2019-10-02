@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="patch"/>
-    </provides>
-
     <conflicts>
         <package name="patch"/>
     </conflicts>
-
-    <replaces>
-        <package name="patch"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/patch"/>

@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="lsscsi"/>
-    </provides>
-
     <conflicts>
         <package name="lsscsi"/>
     </conflicts>
-
-    <replaces>
-        <package name="lsscsi"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/lsscsi"/>

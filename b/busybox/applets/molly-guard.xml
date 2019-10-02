@@ -16,17 +16,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="molly-guard"/>
-    </provides>
-
     <conflicts>
         <package name="molly-guard"/>
     </conflicts>
-
-    <replaces>
-        <package name="molly-guard"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/halt"/>

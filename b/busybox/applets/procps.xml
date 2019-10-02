@@ -24,17 +24,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="procps"/>
-    </provides>
-
     <conflicts>
         <package name="procps"/>
     </conflicts>
-
-    <replaces>
-        <package name="procps"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/free"/>

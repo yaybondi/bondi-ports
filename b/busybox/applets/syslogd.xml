@@ -16,9 +16,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
+    <conflicts>
         <package name="syslogd"/>
-    </provides>
+    </conflicts>
 
     <contents>
         <file src="${prefix}/sbin/klogd"/>

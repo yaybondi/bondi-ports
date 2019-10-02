@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="beep"/>
-    </provides>
-
     <conflicts>
         <package name="beep"/>
     </conflicts>
-
-    <replaces>
-        <package name="beep"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/beep"/>

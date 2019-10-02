@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="dnsutils"/>
-    </provides>
-
     <conflicts>
         <package name="dnsutils"/>
     </conflicts>
-
-    <replaces>
-        <package name="dnsutils"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/nslookup"/>

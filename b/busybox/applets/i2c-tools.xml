@@ -17,17 +17,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="i2c-tools"/>
-    </provides>
-
     <conflicts>
         <package name="i2c-tools"/>
     </conflicts>
-
-    <replaces>
-        <package name="i2c-tools"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/i2cdetect"/>

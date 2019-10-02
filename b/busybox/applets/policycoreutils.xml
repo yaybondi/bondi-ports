@@ -18,17 +18,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="policycoreutils"/>
-    </provides>
-
     <conflicts>
         <package name="policycoreutils"/>
     </conflicts>
-
-    <replaces>
-        <package name="policycoreutils"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/load_policy"/>

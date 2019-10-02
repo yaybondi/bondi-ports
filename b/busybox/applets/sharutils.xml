@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="sharutils"/>
-    </provides>
-
     <conflicts>
         <package name="sharutils"/>
     </conflicts>
-
-    <replaces>
-        <package name="sharutils"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/uudecode"/>

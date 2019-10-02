@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="traceroute"/>
-    </provides>
-
     <conflicts>
         <package name="traceroute"/>
     </conflicts>
-
-    <replaces>
-        <package name="traceroute"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/traceroute"/>

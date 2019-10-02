@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="login"/>
-    </provides>
-
     <conflicts>
         <package name="login"/>
     </conflicts>
-
-    <replaces>
-        <package name="login"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/login"/>

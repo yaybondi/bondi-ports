@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="attr"/>
-    </provides>
-
     <conflicts>
         <package name="attr"/>
     </conflicts>
-
-    <replaces>
-        <package name="attr"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/setfattr"/>

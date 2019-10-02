@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="uml-utilities"/>
-    </provides>
-
     <conflicts>
         <package name="uml-utilities"/>
     </conflicts>
-
-    <replaces>
-        <package name="uml-utilities"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/tunctl"/>

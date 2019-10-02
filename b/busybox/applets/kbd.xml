@@ -21,17 +21,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="kbd"/>
-    </provides>
-
     <conflicts>
         <package name="kbd"/>
     </conflicts>
-
-    <replaces>
-        <package name="kbd"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/chvt"/>

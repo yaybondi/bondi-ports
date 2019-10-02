@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="adjtimex"/>
-    </provides>
-
     <conflicts>
         <package name="adjtimex"/>
     </conflicts>
-
-    <replaces>
-        <package name="adjtimex"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/adjtimex"/>

@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="gawk"/>
-    </provides>
-
     <conflicts>
         <package name="gawk"/>
     </conflicts>
-
-    <replaces>
-        <package name="gawk"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/awk"/>

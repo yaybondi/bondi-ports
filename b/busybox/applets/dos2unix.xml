@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="dos2unix"/>
-    </provides>
-
     <conflicts>
         <package name="dos2unix"/>
     </conflicts>
-
-    <replaces>
-        <package name="dos2unix"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/dos2unix"/>

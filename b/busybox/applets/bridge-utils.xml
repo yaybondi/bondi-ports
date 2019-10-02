@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="bridge-utils"/>
-    </provides>
-
     <conflicts>
         <package name="bridge-utils"/>
     </conflicts>
-
-    <replaces>
-        <package name="bridge-utils"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/brctl"/>

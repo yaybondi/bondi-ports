@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="udhcpd"/>
-    </provides>
-
     <conflicts>
         <package name="udhcpd"/>
     </conflicts>
-
-    <replaces>
-        <package name="udhcpd"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/dumpleases"/>

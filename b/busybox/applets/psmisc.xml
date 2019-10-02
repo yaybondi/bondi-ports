@@ -16,17 +16,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="psmisc"/>
-    </provides>
-
     <conflicts>
         <package name="psmisc"/>
     </conflicts>
-
-    <replaces>
-        <package name="psmisc"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/fuser"/>

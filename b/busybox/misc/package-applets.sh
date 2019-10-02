@@ -36,12 +36,6 @@ export MY_TEMPLATE_B="\
 export MY_TEMPLATE_C="\
     </conflicts>
 
-    <replaces>\
-"
-
-export MY_TEMPLATE_D="\
-    </replaces>
-
     <contents>\
 "
 
@@ -119,13 +113,6 @@ do
         >> "$MY_XMLDIR/$PKG_NAME.xml"
 
     echo "$MY_TEMPLATE_C" \
-        >> "$MY_XMLDIR/$PKG_NAME.xml"
-
-    # replaces
-    cat "$MY_CONFLICTS/$PKG_NAME.conflicts" | sort -u | sed 's/^\(.*\)$/<package name="\1"\/>/g' | sed 's/^/        /g' \
-        >> "$MY_XMLDIR/$PKG_NAME.xml"
-
-    echo "$MY_TEMPLATE_D" \
         >> "$MY_XMLDIR/$PKG_NAME.xml"
 
     # contents

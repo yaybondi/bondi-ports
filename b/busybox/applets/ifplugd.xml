@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="ifplugd"/>
-    </provides>
-
     <conflicts>
         <package name="ifplugd"/>
     </conflicts>
-
-    <replaces>
-        <package name="ifplugd"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/ifplugd"/>

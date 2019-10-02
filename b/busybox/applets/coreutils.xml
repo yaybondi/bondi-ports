@@ -103,17 +103,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="coreutils"/>
-    </provides>
-
     <conflicts>
         <package name="coreutils"/>
     </conflicts>
-
-    <replaces>
-        <package name="coreutils"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/["/>

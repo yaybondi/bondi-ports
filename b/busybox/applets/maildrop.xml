@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="maildrop"/>
-    </provides>
-
     <conflicts>
         <package name="maildrop"/>
     </conflicts>
-
-    <replaces>
-        <package name="maildrop"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/makemime"/>
