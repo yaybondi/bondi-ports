@@ -18,7 +18,7 @@
             <file src="opkg-0.4.1.tar.gz" subdir="sources"
                 sha256sum="0e0292825f0f23405a63241876fc1a60493fd39a5c28408390f656007e1d44ab"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="88b58eadf2bedc41b0e0b8d91d7e94e772ca1f4517de94865ecece9399ba6df3"/>
+                sha256sum="f608abd631ac51b3da50055febc24e377a7de321136aa591bfe93d40109de26d"/>
         </sources>
 
         <patches>
