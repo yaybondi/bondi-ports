@@ -24,6 +24,7 @@
 
     <requires>
         <package name="tzdata"/>
+        <package name="python3-six"/>
     </requires>
 
     <contents subdir="python3" collect-py-cache-files="true">
