@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <source name="usign" architecture-independent="false">
+        <description>
+            <summary>Tiny signature verification tool</summary>
+            <p>
+                A tool for cryptographic signing and verification of binary
+                payloads.
+            </p>
+        </description>
+
+        <sources>
+            <file src="usign-20190902.1-1.tar.gz" subdir="sources"
+                sha256sum="580a4a9a026748174cbcc7f745cc3dc2c6f716cd2a6644c600b8d80c5e9255ee"/>
+        </sources>
+
+        <requires>
+            <package name="cmake"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="usign.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

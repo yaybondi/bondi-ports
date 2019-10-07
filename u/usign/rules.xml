@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+cmake \
+    -DCMAKE_SYSTEM_NAME=Linux \
+    -DCMAKE_C_COMPILER="${BOLT_HOST_TYPE}-gcc" \
+    -DCMAKE_FIND_ROOT_PATH_MODE_PROGRAM=NEVER \
+    -DCMAKE_FIND_ROOT_PATH_MODE_INCLUDE=ONLY \
+    -DCMAKE_INSTALL_PREFIX="$BOLT_INSTALL_PREFIX" \
+    -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+    -DCMAKE_VERBOSE_MAKEFILE=ON \
+    -DCMAKE_SKIP_RPATH=FALSE \
+    -DCMAKE_SKIP_INSTALL_RPATH=TRUE \
+    "$BOLT_SOURCE_DIR"
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make DESTDIR="$BOLT_INSTALL_DIR" install
+
+    ]]>
+    </install>
+</rules>

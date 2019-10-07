@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="usign" section="admin">
+    <description>
+        <summary>Tiny signature verification tool</summary>
+        <p>
+            A tool for cryptographic signing and verification of binary
+            payloads.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/bin/*"/>
+    </contents>
+</package>
