@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="0.4.2~0" revision="1" maintainer="Tobias Koch"
+     email="tobias.koch@gmail.com" date="2019-10-07 22:08:00+03:00">
+        <changeset>
+            <li>Call usign for signature verification.</li>
+            <li>Adapt key import script for usign keys.</li>
+            <li>Run maintainer scripts in chroot.</li>
+        </changeset>
+    </release>
     <release version="0.4.1" revision="1" maintainer="Tobias Koch"
      email="tobias.koch@gmail.com" date="2019-08-11 17:47:00+02:00">
         <changeset>

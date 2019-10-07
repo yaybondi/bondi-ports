@@ -16,11 +16,17 @@
         </p>
     </description>
 
+    <requires>
+        <package name="usign"/>
+    </requires>
+
     <contents>
         <file src="${prefix}/lib/*.so.*"/>
+        <dir src="/var/cache/opkg"/>
+        <dir src="/var/lib/opkg"/>
+        <dir src="/var/lib/opkg/info"/>
+        <dir src="/etc/opkg"/>
+        <dir src="/etc/opkg/usign"/>
+        <dir src="/etc/opkg/usign/trustdb"/>
     </contents>
-
-    <requires>
-        <package name="opkg" version="=="/>
-    </requires>
 </package>

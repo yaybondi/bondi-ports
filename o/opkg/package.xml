@@ -15,23 +15,22 @@
         </description>
 
         <sources>
-            <file src="opkg-0.4.1.tar.gz" subdir="sources"
-                sha256sum="0e0292825f0f23405a63241876fc1a60493fd39a5c28408390f656007e1d44ab"/>
+            <file src="opkg-0.4.2~0.tar.gz" subdir="sources"
+                sha256sum="16bcb830d6b69fa1357ae402ecd40fa33c37adfcdb4a4705279290b3e0234f15"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="f608abd631ac51b3da50055febc24e377a7de321136aa591bfe93d40109de26d"/>
+                sha256sum="67833ad1752e149ce0dedcbd4bc85c6505b8e484a8edc33f8f6b1a185969f8d5"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/ssl-curl-without-openssl.patch"/>
+                <file src="patches/sha256sum-debian-compatible.patch"/>
+                <file src="patches/force-deps-removal.patch"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="libc-dev"/>
             <package name="libcurl4-nss-dev"/>
-            <package name="libgpgme11-dev"/>
-            <package name="libgpg-error-dev"/>
             <package name="libsolv0-dev"/>
             <package name="libsolvext0-dev"/>
         </requires>
