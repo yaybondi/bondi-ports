@@ -18,4 +18,12 @@
     <contents>
         <file src="${prefix}/sbin/"/>
     </contents>
+
+    <maintainer-scripts>
+        <postinst><![CDATA[
+
+"$BOLT_INSTALL_PREFIX/sbin/pam-config" --initialize
+
+        ]]></postinst>
+    </maintainer-scripts>
 </package>
