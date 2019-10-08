@@ -51,7 +51,7 @@
         <file src="${prefix}/include/solv/transaction.h"/>
         <file src="${prefix}/include/solv/util.h"/>
         <file src="${prefix}/lib/cmake/LibSolv"/>
-        <file src="${prefix}/lib/libsolv.so"/>
+	<file src="${prefix}/lib/libsolv.{so,a}"/>
         <file src="${prefix}/lib/pkgconfig"/>
     </contents>
 </package>

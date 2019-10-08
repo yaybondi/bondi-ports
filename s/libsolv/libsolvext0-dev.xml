@@ -27,6 +27,6 @@
         <file src="${prefix}/include/solv/repo_write.h"/>
         <file src="${prefix}/include/solv/solv_xfopen.h"/>
         <file src="${prefix}/include/solv/tools_util.h"/>
-        <file src="${prefix}/lib/libsolvext.so"/>
+	<file src="${prefix}/lib/libsolvext.{so,a}"/>
     </contents>
 </package>
