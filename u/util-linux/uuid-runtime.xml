@@ -24,8 +24,6 @@
     </description>
 
     <requires>
-        <package name="adduser"/>
-        <package name="passwd"/>
         <package name="libuuid1" version=">= 2.25-5~"/>
     </requires>
 

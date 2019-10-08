@@ -15,7 +15,14 @@
     </description>
 
     <requires>
-        <package name="passwd"/>
+        <choice>
+            <package name="adduser"/>
+            <package name="busybox-adduser-symlinks"/>
+        </choice>
+        <choice>
+            <package name="passwd"/>
+            <package name="busybox-passwd-symlinks"/>
+        </choice>
     </requires>
 
     <contents>
