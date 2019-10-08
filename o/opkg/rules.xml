@@ -10,8 +10,13 @@ cd "$BOLT_SOURCE_DIR"
 bh_autotools_dev_update
 autoreconf -vfi
 
-cd "$BOLT_BUILD_DIR"
-GPGERR_CONFIG="$BOLT_INSTALL_PREFIX/bin/gpg-error-config" \
+set +x
+echo "########################################################################"
+echo "# Configure full                                                        "
+echo "########################################################################"
+set -x
+
+mkdir -p "$BOLT_BUILD_DIR/full" && cd "$BOLT_BUILD_DIR/full"
 "$BOLT_SOURCE_DIR"/configure \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --sysconfdir=/etc \
@@ -27,14 +32,58 @@ GPGERR_CONFIG="$BOLT_INSTALL_PREFIX/bin/gpg-error-config" \
     --enable-ssl-curl \
     --with-libsolv
 
+set +x
+echo "########################################################################"
+echo "# Configure minimal                                                     "
+echo "########################################################################"
+set -x
+
+mkdir -p "$BOLT_BUILD_DIR/minimal" && cd "$BOLT_BUILD_DIR/minimal"
+"$BOLT_SOURCE_DIR"/configure \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --build="$BOLT_BUILD_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --disable-silent-rules \
+    --disable-gpg \
+    --disable-openssl \
+    --disable-curl \
+    --enable-usign \
+    --enable-sha256 \
+    --with-static-libopkg
+
     ]]>
     </prepare>
 
     <build>
     <![CDATA[
 
-cd $BOLT_BUILD_DIR
+set +x
+echo "########################################################################"
+echo "# Build full                                                            "
+echo "########################################################################"
+set -x
+
+cd "$BOLT_BUILD_DIR/full"
 make -j"$BOLT_PARALLEL_JOBS"
+
+set +x
+echo "########################################################################"
+echo "# Build minimal                                                         "
+echo "########################################################################"
+set -x
+
+cd "$BOLT_BUILD_DIR/minimal"
+make -j"$BOLT_PARALLEL_JOBS"
+
+cd "$BOLT_BUILD_DIR/minimal/src"
+"$BOLT_HOST_TYPE-gcc" $CFLAGS $LDFLAGS \
+    -o opkg opkg.o ../libopkg/.libs/libopkg.a \
+    -l:libarchive.a \
+    -l:libz.a \
+    -l:liblzma.a \
+    -l:libacl.a
 
     ]]>
     </build>
@@ -42,18 +91,39 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+set +x
+echo "########################################################################"
+echo "# Install full                                                          "
+echo "########################################################################"
+set -x
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/opkg"
+install -d -m 0755 "$BOLT_INSTALL_DIR/full"
+install -d -m 0755 "$BOLT_INSTALL_DIR/minimal"
+
+cd "$BOLT_BUILD_DIR/full"
+make DESTDIR="$BOLT_INSTALL_DIR/full" install
+
+install -d -m 0755 "$BOLT_INSTALL_DIR/full/$BOLT_INSTALL_PREFIX/include/opkg"
 find "$BOLT_SOURCE_DIR/libopkg/" -name "*.h" -exec install -m 644 '{}' \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/opkg" ';'
+    "$BOLT_INSTALL_DIR/full/$BOLT_INSTALL_PREFIX/include/opkg" ';'
 
-rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/opkg-key"
-rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/opkg-check-config"
+rm -f "$BOLT_INSTALL_DIR/full/$BOLT_INSTALL_PREFIX/bin/opkg-key"
+rm -f "$BOLT_INSTALL_DIR/full/$BOLT_INSTALL_PREFIX/bin/opkg-check-config"
 
 install -m 0755 "$BOLT_SOURCE_DIR/utils/opkg-usign-key" \
-	"$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/opkg-key"
+    "$BOLT_INSTALL_DIR/full/$BOLT_INSTALL_PREFIX/bin/opkg-key"
+
+set +x
+echo "########################################################################"
+echo "# Install minimal                                                       "
+echo "########################################################################"
+set -x
+
+install -d -m 0755 "$BOLT_INSTALL_DIR/minimal/$BOLT_INSTALL_PREFIX/bin"
+install -m 0755 "$BOLT_BUILD_DIR/minimal/src/opkg" \
+    "$BOLT_INSTALL_DIR/minimal/$BOLT_INSTALL_PREFIX/bin"
+install -m 0755 "$BOLT_SOURCE_DIR/utils/opkg-usign-key" \
+    "$BOLT_INSTALL_DIR/minimal/$BOLT_INSTALL_PREFIX/bin/opkg-key"
 
     ]]>
     </install>

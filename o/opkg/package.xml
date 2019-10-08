@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
     <source name="opkg" architecture-independent="false">
         <description>
             <summary>OPKG - tiny yet powerful package manager</summary>
@@ -41,6 +45,7 @@
 
     <!-- package rules -->
     <xi:include href="opkg.xml"/>
+    <xi:include href="opkg-minimal.xml"/>
     <xi:include href="libopkg1.xml"/>
     <xi:include href="libopkg-dev.xml"/>
 

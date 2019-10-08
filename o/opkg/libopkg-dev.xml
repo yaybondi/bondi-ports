@@ -20,7 +20,7 @@
         <package name="libopkg1" version="=="/>
     </requires>
 
-    <contents>
+    <contents subdir="full">
         <file src="${prefix}/include/"/>
         <file src="${prefix}/lib/*.{so,a}"/>
         <file src="${prefix}/lib/pkgconfig/"/>

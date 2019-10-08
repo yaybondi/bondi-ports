@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libopkg1" section="libs">
+<package name="opkg-minimal" section="libs">
     <description>
-        <summary>OPKG - tiny yet powerful package manager (runtime libs)</summary>
+        <summary>OPKG - tiny yet powerful package manager (minimal)</summary>
         <p>
             Opkg is a lightweight package management system. It is written in C and resembles
         apt/dpkg in operation. It is intended for use on embedded Linux devices.
         </p>
-        <p>
-            Opkg is maintained, stable, robust and conservative in its memory usage. As best it
-        can, opkg maintains backwards compatibility with ipkg and conforms to a subset of
-        Debian's Policy Manual regarding control files.
-        </p>
-        <p>
-            This package contains the runtime library.
+	<p>
+            The version of opkg contained in this package supports a smaller set of features
+        and has less external dependencies. It can be used to reduce firmware size when
+        storage is limited.
         </p>
     </description>
 
@@ -20,8 +17,16 @@
         <package name="usign"/>
     </requires>
 
-    <contents subdir="full">
-        <file src="${prefix}/lib/*.so.*"/>
+    <conflicts>
+        <package name="opkg"/>
+    </conflicts>
+
+    <replaces>
+        <package name="opkg"/>
+    </replaces>
+
+    <contents subdir="minimal">
+	<file src="${prefix}/bin"/>
         <dir src="/var/cache/opkg"/>
         <dir src="/var/lib/opkg"/>
         <dir src="/var/lib/opkg/info"/>
