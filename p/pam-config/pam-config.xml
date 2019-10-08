@@ -22,7 +22,7 @@
     <maintainer-scripts>
         <postinst><![CDATA[
 
-"$BOLT_INSTALL_PREFIX/sbin/pam-config" --initialize
+"$BOLT_INSTALL_PREFIX/sbin/pam-config" --update
 
         ]]></postinst>
     </maintainer-scripts>
