@@ -9,6 +9,7 @@
     </description>
 
     <requires>
+        <package name="python3"/>
         <package name="libmagic1" version="=="/>
     </requires>
 

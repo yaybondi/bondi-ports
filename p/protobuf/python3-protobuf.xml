@@ -23,6 +23,10 @@
         </p>
     </description>
 
+    <requires>
+        <package name="python3"/>
+    </requires>
+
     <contents subdir="python3" collect-py-cache-files="true">
         <file src="${prefix}/lib/python3/dist-packages/"/>
     </contents>

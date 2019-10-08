@@ -16,6 +16,10 @@
         </p>
     </description>
 
+    <requires>
+        <package name="python"/>
+    </requires>
+
     <contents collect-py-cache-files="true">
         <file src="${prefix}/lib/python2*/*-packages/*.py*"/>
         <file src="${prefix}/lib/python2*/*-packages/*.so"/>

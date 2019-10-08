@@ -14,7 +14,7 @@
     </description>
 
     <requires>
-        <package name="python2.7"/>
+        <package name="python"/>
     </requires>
 
     <contents subdir="python2" collect-py-cache-files="true">

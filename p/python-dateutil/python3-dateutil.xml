@@ -24,6 +24,7 @@
 
     <requires>
         <package name="tzdata"/>
+        <package name="python3"/>
         <package name="python3-six"/>
     </requires>
 
