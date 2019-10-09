@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="bolt-repo-keys" section="admin">
+    <description>
+        <summary>The public portion of the repo signing keys</summary>
+        <p>
+            This package contains the keys to verify public key
+        signature on packages lists in the archive.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/share/opkg/usign/bolt-repo-keys/*"/>
+    </contents>
+
+    <maintainer-scripts>
+        <postinst><![CDATA[
+
+"$BOLT_INSTALL_PREFIX/bin/opkg-key" reset
+"$BOLT_INSTALL_PREFIX/bin/opkg-key" populate
+
+        ]]></postinst>
+    </maintainer-scripts>
+</package>

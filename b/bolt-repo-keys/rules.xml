@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/opkg/usign/bolt-repo-keys"
+cp "$BOLT_SOURCE_DIR/"*.pub \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/opkg/usign/bolt-repo-keys/"
+
+    ]]>
+    </install>
+</rules>
