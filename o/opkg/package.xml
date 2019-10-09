@@ -22,7 +22,7 @@
             <file src="opkg-0.4.2~0.tar.gz" subdir="sources"
                 sha256sum="9b217b708778d10cebbc293407428903039e253b4ef5c544b72a538215f854a3"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="67833ad1752e149ce0dedcbd4bc85c6505b8e484a8edc33f8f6b1a185969f8d5"/>
+                sha256sum="0b1d57183cb93e03a8e2a4953e9360fa57cc548f94132778e33de7617fdca645"/>
         </sources>
 
         <patches>
@@ -30,6 +30,7 @@
                 <file src="patches/ssl-curl-without-openssl.patch"/>
                 <file src="patches/sha256sum-debian-compatible.patch"/>
                 <file src="patches/force-deps-removal.patch"/>
+                <file src="patches/archive-warn-debug.patch"/>
             </patchset>
         </patches>
 
