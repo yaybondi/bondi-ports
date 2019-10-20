@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="vlan"/>
-    </provides>
-
     <conflicts>
         <package name="vlan"/>
     </conflicts>
-
-    <replaces>
-        <package name="vlan"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/sbin/vconfig"/>

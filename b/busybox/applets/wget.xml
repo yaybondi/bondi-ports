@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="wget"/>
-    </provides>
-
     <conflicts>
         <package name="wget"/>
     </conflicts>
-
-    <replaces>
-        <package name="wget"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/wget"/>

@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="vlock"/>
-    </provides>
-
     <conflicts>
         <package name="vlock"/>
     </conflicts>
-
-    <replaces>
-        <package name="vlock"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/vlock"/>

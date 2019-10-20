@@ -19,17 +19,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="xz-utils"/>
-    </provides>
-
     <conflicts>
         <package name="xz-utils"/>
     </conflicts>
-
-    <replaces>
-        <package name="xz-utils"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/lzcat"/>

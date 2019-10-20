@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="xxd"/>
-    </provides>
-
     <conflicts>
         <package name="xxd"/>
     </conflicts>
-
-    <replaces>
-        <package name="xxd"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/xxd"/>

@@ -15,17 +15,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="whois"/>
-    </provides>
-
     <conflicts>
         <package name="whois"/>
     </conflicts>
-
-    <replaces>
-        <package name="whois"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/mkpasswd"/>

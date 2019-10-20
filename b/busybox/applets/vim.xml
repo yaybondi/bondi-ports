@@ -14,17 +14,9 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="vim"/>
-    </provides>
-
     <conflicts>
         <package name="vim"/>
     </conflicts>
-
-    <replaces>
-        <package name="vim"/>
-    </replaces>
 
     <contents>
         <file src="${prefix}/bin/vi"/>
