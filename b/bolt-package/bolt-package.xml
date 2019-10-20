@@ -21,6 +21,7 @@
         <package name="chrpath"/>
         <package name="libarchive-dev"/>
         <package name="autotools-dev"/>
+        <package name="patch"/>
     </requires>
 
     <contents>
