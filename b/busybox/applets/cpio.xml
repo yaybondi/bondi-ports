@@ -15,9 +15,17 @@
         <package name="busybox"/>
     </requires>
 
+    <provides>
+        <package name="cpio"/>
+    </provides>
+
     <conflicts>
         <package name="cpio"/>
     </conflicts>
+
+    <replaces>
+        <package name="cpio"/>
+    </replaces>
 
     <contents>
         <file src="${prefix}/bin/cpio"/>
