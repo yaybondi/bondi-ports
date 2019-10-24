@@ -24,7 +24,7 @@
             <file src="debian-patches-4.tar.gz" subdir="patches"
                 sha256sum="8cc7ddda0b5e034e70fbd4e4da13ee031807be7b64ab638f93ac779ae5db051e"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="41acf79146ae16803f68bad5184f5ed1198b1763d8a932a2b061b8f8c83295b0"/>
+                sha256sum="d969d8fa9aa05c5012a3b347cfc544ae281d5f63100864e5d41baea15dde8d5e"/>
         </sources>
 
         <patches>
