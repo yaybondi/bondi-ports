@@ -14,6 +14,8 @@
             cross-tools-prefix="tools-target-"/>
         <package name="libgcc-dev" version="=="
             cross-tools-prefix="tools-target-"/>
+        <package name="libgcc-dev" version="=="
+            cross-tools-prefix=""/>
         <package name="binutils" version=">=="
             cross-tools-prefix="tools-target-"/>
     </requires>
