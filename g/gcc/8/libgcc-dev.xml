@@ -11,7 +11,7 @@
     <requires>
         <package name="gcc-8-base" version="=="
             cross-tools-prefix="tools-target-"/>
-        <package name="musl-libc-dev"
+        <package name="libc-dev"
             cross-tools-prefix=""/>
     </requires>
 
