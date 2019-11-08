@@ -19,7 +19,7 @@
     </requires>
 
     <provides>
-        <package name="g++" cross-tools-prefix=""/>
+        <package name="g++" cross-tools-prefix="tools-target-"/>
     </provides>
 
     <contents subdir="g++-8">

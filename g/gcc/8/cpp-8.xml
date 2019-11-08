@@ -18,7 +18,7 @@
     </requires>
 
     <provides>
-        <package name="cpp" cross-tools-prefix=""/>
+        <package name="cpp" cross-tools-prefix="tools-target-"/>
     </provides>
 
     <contents subdir="cpp-8">

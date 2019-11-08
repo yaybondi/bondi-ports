@@ -21,7 +21,7 @@
     </requires>
 
     <provides>
-        <package name="gcc" cross-tools-prefix=""/>
+        <package name="gcc" cross-tools-prefix="tools-target-"/>
     </provides>
 
     <contents subdir="gcc-8">
