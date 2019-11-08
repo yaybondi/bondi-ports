@@ -24,7 +24,7 @@
 
     <requires>
         <package name="libgc1c2" version="=="/>
-        <package name="musl-libc-dev"/>
+        <package name="libc-dev"/>
     </requires>
 
     <contents>

@@ -16,9 +16,7 @@
     </description>
 
     <requires>
-        <package name="gcc" tools-prefix=""/>
-        <package name="cpp" tools-prefix=""/>
-        <package name="musl-libc-dev"/>
+        <package name="libc-dev"/>
         <package name="file"/>
         <package name="autotools-dev"/>
     </requires>

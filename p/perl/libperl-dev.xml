@@ -10,7 +10,7 @@
     <requires>
         <package name="perl" version="=="/>
         <package name="libperl5.24" version="=="/>
-        <package name="musl-libc-dev"/>
+        <package name="libc-dev"/>
     </requires>
 
     <contents>

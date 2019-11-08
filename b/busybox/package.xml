@@ -46,7 +46,7 @@
         </patches>
 
         <requires>
-            <package name="musl-libc-dev"/>
+            <package name="libc-dev"/>
         </requires>
 
         <xi:include href="rules.xml"/>

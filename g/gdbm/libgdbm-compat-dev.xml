@@ -10,7 +10,7 @@
     </description>
 
     <requires>
-        <package name="musl-libc-dev"/>
+        <package name="libc-dev"/>
         <package name="libgdbm-compat4" version="=="/>
     </requires>
 

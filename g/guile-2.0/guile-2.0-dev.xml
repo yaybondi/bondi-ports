@@ -17,7 +17,7 @@
     <requires>
         <package name="guile-2.0" version="=="/>
         <package name="guile-2.0-libs" version="=="/>
-        <package name="musl-libc-dev"/>
+        <package name="libc-dev"/>
         <package name="libncurses5-dev"/>
         <package name="libreadline-dev"/>
         <package name="libltdl-dev"/>
