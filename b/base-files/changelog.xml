@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
-    <release epoch="1" version="2019.9.1" revision="1" maintainer="Tobias Koch"
-     email="tobias.koch@gmail.com" date="2019-08-12 21:53:13+02:00">
+    <release epoch="1" version="20.4.1" revision="1" maintainer="Tobias Koch"
+     email="tobias.koch@gmail.com" date="2019-12-13 09:17:00+03:00">
         <changeset>
-            <li>New version for Mistral</li>
+            <li>New version for 'Ollie' release</li>
         </changeset>
     </release>
     <release version="1.0.5" revision="1" maintainer="Tobias Koch"
