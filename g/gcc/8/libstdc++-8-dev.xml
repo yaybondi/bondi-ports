@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libstdc++-6-dev" section="libdevel">
+<package name="libstdc++-6-dev" section="libdevel" build-for="target,tools">
     <description>
         <summary>GNU Standard C++ Library v3 (development files)</summary>
         <p>
@@ -14,10 +14,8 @@
     </description>
 
     <requires>
-        <package name="gcc-8-base" version="=="
-            cross-tools-prefix="tools-target-"/>
-        <package name="libgcc-dev" version="=="
-            cross-tools-prefix="tools-target-"/>
+        <package name="gcc-8-base" version="=="/>
+        <package name="libgcc-dev" version="=="/>
     </requires>
 
     <contents subdir="libstdc++-6-dev">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libgcc-dev" section="libdevel">
+<package name="libgcc-dev" section="libdevel" build-for="target,tools">
     <description>
         <summary>GCC support library (development files)</summary>
         <p>
@@ -9,10 +9,7 @@
     </description>
 
     <requires>
-        <package name="gcc-8-base" version="=="
-            cross-tools-prefix="tools-target-"/>
-        <package name="libc-dev"
-            cross-tools-prefix=""/>
+        <package name="gcc-8-base" version="=="/>
     </requires>
 
     <contents subdir="libgcc-dev">

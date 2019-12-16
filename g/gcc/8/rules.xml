@@ -5,15 +5,18 @@
 
 if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
     EXTRA_OPTS="--build=$BOLT_BUILD_TYPE --with-sysroot=/
-        --with-ld=/tools/bin/ld"
+        --with-ld=/tools/bin/${BOLT_TARGET_TYPE}-ld
+        --with-as=/tools/bin/${BOLT_TARGET_TYPE}-as"
 elif [ "$BOLT_BUILD_FOR" = "tools" ]; then
     EXTRA_OPTS="--build=$BOLT_BUILD_TYPE --with-sysroot=/tools
         --with-ld=/tools/bin/${BOLT_TARGET_TYPE}-ld
+        --with-as=/tools/bin/${BOLT_TARGET_TYPE}-as
         --program-prefix=${BOLT_TARGET_TYPE}-"
 else
     # spoof the build type to trigger a cross build
     EXTRA_OPTS="--build=`bh_spoof_target_triplet $BOLT_BUILD_TYPE` --with-sysroot=/
-        --with-ld=/usr/bin/${BOLT_TARGET_TYPE}-ld"
+        --with-ld=/usr/bin/${BOLT_TARGET_TYPE}-ld
+        --with-as=/usr/bin/${BOLT_TARGET_TYPE}-as"
 fi
 
 cd "$BOLT_SOURCE_DIR"
