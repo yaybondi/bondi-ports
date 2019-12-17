@@ -97,8 +97,8 @@ make -j"$BOLT_PARALLEL_JOBS"
 GCC_VERSION="`cat $BOLT_SOURCE_DIR/gcc/BASE-VER`"
 
 for ENTRY in all cpp-8 fixincludes g++-8 gcc-8 gcc-8-base libatomic1 libcc1-0 \
-        libgcc libgcc-dev libgomp1 libitm1 libmpx2 libquadmath0 libstdc++6 \
-        libstdc++-6-dev gcc-8-plugin-dev; do
+        libgcc libgcc-dev libgomp1 libitm1 libstdc++6 libstdc++-6-dev \
+        gcc-8-plugin-dev; do
     install -d -m 0755 "$BOLT_INSTALL_DIR/$ENTRY"
 done
 
@@ -279,22 +279,6 @@ PKG_PATH="$BOLT_INSTALL_DIR/libitm1"
 
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib"
 mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib/"libitm*.so.* \
-    "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib" || true
-
-# -------------------------------------------------------------------------
-PKG_PATH="$BOLT_INSTALL_DIR/libmpx2"
-# -------------------------------------------------------------------------
-
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib"
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib/"libmpx*.so.* \
-    "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib" || true
-
-# -------------------------------------------------------------------------
-PKG_PATH="$BOLT_INSTALL_DIR/libquadmath0"
-# -------------------------------------------------------------------------
-
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib"
-mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib/"libquadmath*.so.* \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib" || true
 
 # -------------------------------------------------------------------------
