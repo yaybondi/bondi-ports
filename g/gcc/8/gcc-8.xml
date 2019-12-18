@@ -13,7 +13,7 @@
         <package name="gcc-8-base" version="=="
             cross-tools-prefix="tools-target-"/>
         <package name="libgcc-dev" version="=="
-            cross-tools-prefix="tools-target"/>
+            cross-tools-prefix="tools-target-"/>
         <package name="binutils" version=">=="
             cross-tools-prefix="tools-target-"/>
     </requires>
