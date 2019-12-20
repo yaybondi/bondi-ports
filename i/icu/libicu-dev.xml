@@ -12,8 +12,6 @@
     <requires>
         <package name="libicu63" version="=="/>
         <package name="icu-devtools" version=">=="/>
-        <package name="libc-dev"/>
-        <package name="libstdc++-6-dev"/>
     </requires>
 
     <contents>
