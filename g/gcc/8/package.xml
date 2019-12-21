@@ -141,7 +141,6 @@
             <package name="libtool"/>
             <package name="autoconf2.64"/>
             <package name="gawk"/>
-            <package name="lzma"/>
             <package name="xz-utils"/>
             <package name="patchutils"/>
             <package name="zlib1g-dev"/>
