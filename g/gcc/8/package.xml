@@ -142,7 +142,6 @@
             <package name="autoconf2.64"/>
             <package name="gawk"/>
             <package name="xz-utils"/>
-            <package name="patchutils"/>
             <package name="zlib1g-dev"/>
             <package name="bison"/>
             <package name="flex"/>
