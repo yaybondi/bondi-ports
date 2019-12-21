@@ -140,13 +140,11 @@
             <package name="m4"/>
             <package name="libtool"/>
             <package name="autoconf2.64"/>
-            <package name="dwz"/>
             <package name="gawk"/>
             <package name="lzma"/>
             <package name="xz-utils"/>
             <package name="patchutils"/>
             <package name="zlib1g-dev"/>
-            <package name="binutils"/>
             <package name="bison"/>
             <package name="flex"/>
             <package name="gettext"/>
@@ -155,8 +153,6 @@
             <package name="libmpc-dev" version=">= 1.0"/>
             <package name="libmpfr-dev" version=">= 3.0.0-9~"/>
             <package name="libgmp-dev" version=">= 2:5.0.1~"/>
-            <package name="lib32z1-dev"/>
-            <package name="lib64z1-dev"/>
             <package name="chrpath"/>
             <package name="pkg-config"/>
         </requires>
