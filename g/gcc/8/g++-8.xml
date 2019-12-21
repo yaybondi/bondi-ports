@@ -13,7 +13,7 @@
         <package name="gcc-8" version="=="
             cross-tools-prefix="tools-target-"/>
         <package name="libstdc++-8-dev" version="=="
-            cross-tools-prefix=""/>
+            cross-tools-prefix="tools-target-"/>
     </requires>
 
     <provides>
