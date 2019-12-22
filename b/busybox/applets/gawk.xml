@@ -3,22 +3,36 @@
     <description>
         <summary>Substitutes for (some) programs from the gawk package</summary>
         <p>
-            This package contains the symbolic links for the following applets:
+            This package installs the symbolic links for the following applets:
         </p>
         <ul>
             <li>awk</li>
         </ul>
+        <p>
+            But only if the symlinks haven't been claimed by another packages
+            before.
+        </p>
     </description>
 
     <requires>
         <package name="busybox"/>
     </requires>
 
-    <conflicts>
-        <package name="gawk"/>
-    </conflicts>
+    <maintainer-scripts>
+        <postinst><![CDATA[
 
-    <contents>
-        <file src="${prefix}/bin/awk"/>
-    </contents>
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/awk" ]; then
+    ln -sf "busybox" "$BOLT_INSTALL_PREFIX/bin/awk"
+fi
+
+        ]]></postinst>
+
+        <postrm><![CDATA[
+
+if [ $(readlink "$BOLT_INSTALL_PREFIX/bin/awk") = "busybox" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/awk"
+fi
+
+        ]]></postrm>
+    </maintainer-scripts>
 </package>

@@ -24,4 +24,23 @@
         <file src="${prefix}/lib/gawk"/>
         <file src="${prefix}/share/awk"/>
     </contents>
+
+    <maintainer-scripts>
+        <postinst><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/awk" ]; then
+    ln -sf "gawk" "$BOLT_INSTALL_PREFIX/bin/awk"
+fi
+
+        ]]></postinst>
+
+        <postrm><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/awk" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/awk"
+fi
+
+        ]]></postrm>
+    </maintainer-scripts>
+
 </package>
