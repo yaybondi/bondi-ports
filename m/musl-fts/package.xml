@@ -23,7 +23,7 @@
         </sources>
 
         <requires>
-            <package name="libc6-dev"/>
+            <package name="musl-libc-dev"/>
         </requires>
 
         <xi:include href="rules.xml"/>
