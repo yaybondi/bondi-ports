@@ -52,7 +52,6 @@
             <package name="python-six"/>
             <package name="python3-setuptools"/>
             <package name="python3-six"/>
-            <package name="unzip"/>
         </requires>
 
         <xi:include href="rules.xml"/>
