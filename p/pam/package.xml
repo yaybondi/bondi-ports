@@ -64,9 +64,10 @@
         </patches>
 
         <requires>
+            <package name="autopoint"/>
             <package name="bzip2"/>
             <package name="flex"/>
-            <package name="libdb-dev"/>
+            <package name="libdb5.3-dev"/>
             <package name="libselinux1-dev"/>
             <package name="libaudit-dev"/>
             <package name="libfl-dev"/>
