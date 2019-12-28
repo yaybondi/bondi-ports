@@ -30,7 +30,6 @@
 
         <requires>
             <package name="m4"/>
-            <package name="bc"/>
         </requires>
 
         <xi:include href="rules.xml"/>
