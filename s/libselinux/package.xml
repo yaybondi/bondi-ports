@@ -47,6 +47,7 @@
             <package name="libsepol1-dev" version=">= 2.8"/>
             <package name="libpcre3-dev"/>
             <package name="pkg-config"/>
+            <package name="libfts1-dev"/>
         </requires>
 
         <xi:include href="rules.xml"/>
