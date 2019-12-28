@@ -10,6 +10,14 @@
         </p>
     </description>
 
+    <conflicts>
+        <package name="busybox-patch-symlinks"/>
+    </conflicts>
+
+    <replaces>
+        <package name="busybox-patch-symlinks"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin"/>
     </contents>

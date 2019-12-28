@@ -12,6 +12,14 @@
         </p>
     </description>
 
+    <conflicts>
+        <package name="busybox-selinux-utils-symlinks"/>
+    </conflicts>
+
+    <replaces>
+        <package name="busybox-selinux-utils-symlinks"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/sbin/*"/>
     </contents>

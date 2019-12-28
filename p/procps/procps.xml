@@ -15,9 +15,16 @@
     </description>
 
     <requires>
-	<package name="libprocps7" version=">=="/>
         <package name="sysctl" version="=="/>
     </requires>
+
+    <conflicts>
+        <package name="busybox-procps-symlinks"/>
+    </conflicts>
+
+    <replaces>
+        <package name="busybox-procps-symlinks"/>
+    </replaces>
 
     <contents subdir="procps">
         <file src="${prefix}/bin"/>

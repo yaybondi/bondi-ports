@@ -25,6 +25,14 @@
         <package name="libbz2-1.0" version="=="/>
     </requires>
 
+    <conflicts>
+        <package name="busybox-bzip2-symlinks"/>
+    </conflicts>
+
+    <replaces>
+        <package name="busybox-bzip2-symlinks"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin"/>
     </contents>

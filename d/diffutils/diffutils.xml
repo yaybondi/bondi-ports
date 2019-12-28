@@ -21,6 +21,14 @@
         </p>
     </description>
 
+    <conflicts>
+        <package name="busybox-diffutils-symlinks"/>
+    </conflicts>
+
+    <replaces>
+        <package name="busybox-diffutils-symlinks"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin"/>
     </contents>

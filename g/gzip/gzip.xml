@@ -10,6 +10,14 @@
         </p>
     </description>
 
+    <conflicts>
+        <package name="busybox-gzip-symlinks"/>
+    </conflicts>
+
+    <replaces>
+        <package name="busybox-gzip-symlinks"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin"/>
     </contents>

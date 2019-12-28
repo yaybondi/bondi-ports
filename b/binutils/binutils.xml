@@ -9,6 +9,14 @@
         </p>
     </description>
 
+    <conflicts>
+        <package name="busybox-binutils-symlinks"/>
+    </conflicts>
+
+    <replaces>
+        <package name="busybox-binutils-symlinks"/>
+    </replaces>
+
     <contents subdir="binutils">
         <file src="${prefix}/"/>
     </contents>

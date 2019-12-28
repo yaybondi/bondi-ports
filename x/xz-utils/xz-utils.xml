@@ -27,6 +27,14 @@
         </ul>
     </description>
 
+    <conflicts>
+        <package name="busybox-xz-utils-symlinks"/>
+    </conflicts>
+
+    <replaces>
+        <package name="busybox-xz-utils-symlinks"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin/lzmainfo"/>
         <file src="${prefix}/bin/unxz"/>

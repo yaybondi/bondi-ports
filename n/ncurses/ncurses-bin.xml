@@ -13,6 +13,14 @@
         </p>
     </description>
 
+    <conflicts>
+        <package name="busybox-ncurses-bin-symlinks"/>
+    </conflicts>
+
+    <replaces>
+        <package name="busybox-ncurses-bin-symlinks"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin/captoinfo"/>
         <file src="${prefix}/bin/clear"/>

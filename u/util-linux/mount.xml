@@ -3,13 +3,18 @@
     <description>
         <summary>tools for mounting and manipulating filesystems</summary>
         <p>
-        This package provides the mount(8), umount(8), swapon(8),
-        swapoff(8), and losetup(8) commands.
+            This package provides the mount, umount, swapon, swapoff, and losetup
+            commands.
         </p>
     </description>
 
-    <requires>
-    </requires>
+    <conflicts>
+        <package name="busybox-mount-symlinks"/>
+    </conflicts>
+
+    <replaces>
+        <package name="busybox-mount-symlinks"/>
+    </replaces>
 
     <contents>
         <file src="${prefix}/bin/findmnt"/>
