@@ -28,11 +28,6 @@
             </patchset>
         </patches>
 
-        <requires>
-            <package name="pkg-config"/>
-            <package name="autotools"/>
-        </requires>
-
         <xi:include href="rules.xml"/>
     </source>
 
