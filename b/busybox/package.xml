@@ -46,7 +46,9 @@
         </patches>
 
         <requires>
-            <package name="libc-dev"/>
+            <package name="libselinux1-dev"/>
+            <package name="libsepol1-dev"/>
+            <package name="libpam0g-dev"/>
         </requires>
 
         <xi:include href="rules.xml"/>
