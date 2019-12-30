@@ -15,11 +15,11 @@
     </requires>
 
     <conflicts>
-        <package name="busybox-ncurses-bin-symlinks"/>
+        <package name="busybox-attr-symlinks"/>
     </conflicts>
 
     <replaces>
-        <package name="busybox-ncurses-bin-symlinks"/>
+        <package name="busybox-attr-symlinks"/>
     </replaces>
 
     <contents>
