@@ -41,12 +41,14 @@
         </patches>
 
         <requires>
-            <package name="autoconf" version=">= 2.59"/>
-            <package name="libtool" version=">= 1.5.2"/>
+            <package name="autoconf"/>
+            <package name="libtool"/>
             <package name="automake"/>
             <package name="autotools-dev"/>
             <package name="chrpath"/>
             <package name="libreadline-dev"/>
+            <package name="tcl8.6-dev"/>
+            <package name="zlib1g-dev"/>
         </requires>
 
         <xi:include href="rules.xml"/>
