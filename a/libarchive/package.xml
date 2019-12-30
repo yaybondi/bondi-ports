@@ -67,17 +67,12 @@
         <requires>
             <package name="pkg-config"/>
             <package name="libbz2-dev"/>
-            <package name="liblz4-dev"/>
             <package name="liblzma-dev"/>
             <package name="libxml2-dev"/>
-            <package name="libzstd-dev"/>
             <package name="zlib1g-dev"/>
             <package name="libacl1-dev"/>
-            <package name="libext2fs-dev"/>
             <package name="libattr1-dev"/>
-            <package name="sharutils"/>
             <package name="nettle-dev"/>
-            <package name="liblzo2-dev"/>
         </requires>
 
         <xi:include href="rules.xml"/>
