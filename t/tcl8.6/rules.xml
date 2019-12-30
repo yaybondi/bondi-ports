@@ -48,6 +48,13 @@ LC_ALL=C \
 cd "$BOLT_BUILD_DIR/unix"
 make DESTDIR="$BOLT_INSTALL_DIR" install
 
+sed -i -e"s:variable paths {}:variable paths {/$BOLT_INSTALL_PREFIX/share/tcltk/tcl8.6/tcl8}:" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX"/share/tcltk/tcl8.6/tm.tcl
+install -d -m 755 \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX"/share/tcltk/tcl8.6/tcl8
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX"/share/tcltk/tcl8/*/* \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX"/share/tcltk/tcl8.6/tcl8
+
 install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/tcl8.6/tcl-private/generic"
 install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/tcl8.6/tcl-private/unix"
 install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/tcl8.6/tcl-private/compat"
