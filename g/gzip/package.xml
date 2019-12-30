@@ -40,7 +40,6 @@
             <package name="autoconf"/>
             <package name="automake"/>
             <package name="autotools-dev"/>
-            <package name="less"/>
         </requires>
 
         <xi:include href="rules.xml"/>
