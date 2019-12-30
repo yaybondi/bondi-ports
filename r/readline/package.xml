@@ -46,7 +46,6 @@
         <requires>
             <package name="libtinfo-dev"/>
             <package name="libncursesw5-dev"/>
-            <package name="awk"/>
             <package name="texinfo"/>
             <package name="autotools-dev"/>
         </requires>

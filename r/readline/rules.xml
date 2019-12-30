@@ -22,6 +22,9 @@ rm -rf examples/rlfe
 cp -a "$BOLT_SOURCE_DIR/examples/rlfe" "$BOLT_BUILD_DIR/examples/"
 ln -sf "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/examples/rlfe/readline"
 
+ln -sf $(cd $BOLT_BUILD_DIR/shlib && ls libreadline.so.*.*) \
+    "$BOLT_BUILD_DIR/shlib/libreadline.so"
+
 cd "$BOLT_BUILD_DIR/examples/rlfe" && ./configure \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --build="$BOLT_HOST_TYPE" \
@@ -41,7 +44,7 @@ make -C "$BOLT_BUILD_DIR/examples/rlfe" \
 cd "$BOLT_BUILD_DIR"
 make DESTDIR="$BOLT_INSTALL_DIR" install
 
-cp -p "$BOLT_BUILD_DIR/examples/rlfe/rlfe" \
+install -m 0755 "$BOLT_BUILD_DIR/examples/rlfe/rlfe" \
     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/"
 
     ]]>
