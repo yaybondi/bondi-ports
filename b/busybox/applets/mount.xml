@@ -22,6 +22,10 @@
         <package name="mount"/>
     </conflicts>
 
+    <replaces>
+        <package name="mount"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin/mount"/>
         <file src="${prefix}/bin/umount"/>

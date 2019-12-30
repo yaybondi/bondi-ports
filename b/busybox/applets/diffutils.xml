@@ -19,6 +19,10 @@
         <package name="diffutils"/>
     </conflicts>
 
+    <replaces>
+        <package name="diffutils"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin/cmp"/>
         <file src="${prefix}/bin/diff"/>

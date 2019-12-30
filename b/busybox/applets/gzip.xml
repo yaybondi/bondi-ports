@@ -20,6 +20,10 @@
         <package name="gzip"/>
     </conflicts>
 
+    <replaces>
+        <package name="gzip"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin/gunzip"/>
         <file src="${prefix}/bin/gzip"/>

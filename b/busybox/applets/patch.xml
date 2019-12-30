@@ -18,6 +18,10 @@
         <package name="patch"/>
     </conflicts>
 
+    <replaces>
+        <package name="patch"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin/patch"/>
     </contents>

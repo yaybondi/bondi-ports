@@ -22,6 +22,10 @@
         <package name="selinux-utils"/>
     </conflicts>
 
+    <replaces>
+        <package name="selinux-utils"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/sbin/getenforce"/>
         <file src="${prefix}/sbin/getsebool"/>

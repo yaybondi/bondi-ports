@@ -107,6 +107,10 @@
         <package name="coreutils"/>
     </conflicts>
 
+    <replaces>
+        <package name="coreutils"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin/["/>
         <file src="${prefix}/bin/[["/>

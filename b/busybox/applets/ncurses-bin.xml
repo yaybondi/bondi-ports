@@ -19,6 +19,10 @@
         <package name="ncurses-bin"/>
     </conflicts>
 
+    <replaces>
+        <package name="ncurses-bin"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin/clear"/>
         <file src="${prefix}/bin/reset"/>

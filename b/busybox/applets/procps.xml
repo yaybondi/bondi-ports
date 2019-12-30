@@ -28,6 +28,10 @@
         <package name="procps"/>
     </conflicts>
 
+    <replaces>
+        <package name="procps"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin/free"/>
         <file src="${prefix}/bin/kill"/>

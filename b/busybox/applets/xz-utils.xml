@@ -23,6 +23,10 @@
         <package name="xz-utils"/>
     </conflicts>
 
+    <replaces>
+        <package name="xz-utils"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin/lzcat"/>
         <file src="${prefix}/bin/lzma"/>

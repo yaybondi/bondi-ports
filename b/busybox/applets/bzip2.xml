@@ -20,6 +20,10 @@
         <package name="bzip2"/>
     </conflicts>
 
+    <replaces>
+        <package name="bzip2"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin/bunzip2"/>
         <file src="${prefix}/bin/bzcat"/>
