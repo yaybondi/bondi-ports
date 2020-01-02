@@ -45,9 +45,10 @@
         </patches>
 
         <requires>
-            <package name="libxml2-dev" version=">= 2.4.23"/>
-            <package name="libglib2.0-dev" version=">= 2.0"/>
+            <package name="libxml2-dev"/>
+            <package name="libglib2.0-dev"/>
             <package name="zlib1g-dev"/>
+            <package name="pkg-config"/>
         </requires>
 
         <xi:include href="rules.xml"/>
