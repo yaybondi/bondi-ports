@@ -31,7 +31,10 @@
 
     <maintainer-scripts>
         <postinst><![CDATA[
-update-ca-certificates --fresh
+if [ ! -f /etc/ca-certificates.conf ]; then
+    touch /etc/ca-certificates.conf
+fi
+update-ca-certificates
         ]]></postinst>
 
         <postrm><![CDATA[
