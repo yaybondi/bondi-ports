@@ -37,10 +37,10 @@
         <requires>
             <package name="libncurses5-dev"/>
             <package name="gettext"/>
-            <package name="libtext-unidecode-perl"/>
             <package name="help2man"/>
             <package name="autotools-dev"/>
             <package name="libperl-dev"/>
+            <package name="gawk"/>
         </requires>
 
         <xi:include href="rules.xml"/>
