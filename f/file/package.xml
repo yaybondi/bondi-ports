@@ -55,6 +55,10 @@
 
         <requires>
             <package name="zlib1g-dev"/>
+            <package name="python2-dev"/>
+            <package name="python-setuptools"/>
+            <package name="python3-dev"/>
+            <package name="python3-setuptools"/>
         </requires>
 
         <xi:include href="rules.xml"/>
