@@ -91,20 +91,19 @@
         </patches>
 
         <requires>
-            <package name="gcc" version=">= 4:6.3"/>
             <package name="autoconf"/>
             <package name="autotools-dev"/>
             <package name="libreadline-dev"/>
             <package name="libtinfo-dev"/>
-            <package name="libncursesw5-dev" version=">= 5.3"/>
+            <package name="libncursesw5-dev"/>
             <package name="libssl-dev"/>
             <package name="zlib1g-dev"/>
             <package name="libbz2-dev"/>
             <package name="libexpat1-dev"/>
             <package name="libsqlite3-dev"/>
-            <package name="libffi-dev" version=">= 3.0.5"/>
+            <package name="libffi-dev"/>
             <package name="bzip2"/>
-            <package name="libdb-dev" version="&lt;&lt; 1:6.0"/>
+            <package name="libdb5.3-dev"/>
             <package name="libgdbm-dev"/>
             <package name="python"/>
         </requires>
