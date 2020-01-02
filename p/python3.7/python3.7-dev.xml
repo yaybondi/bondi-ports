@@ -14,4 +14,8 @@
         <package name="libpython3.7-dev" version="=="/>
         <package name="libexpat1-dev"/>
     </requires>
+
+    <provides>
+        <package name="python3-dev"/>
+    </provides>
 </package>
