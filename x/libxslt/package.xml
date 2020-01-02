@@ -35,7 +35,7 @@
         <requires>
             <package name="binutils"/>
             <package name="libgcrypt20-dev"/>
-            <package name="python-all-dev"/>
+            <package name="python2-dev"/>
             <package name="libxml2-dev"/>
             <package name="perl"/>
         </requires>
