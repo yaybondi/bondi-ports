@@ -31,7 +31,6 @@
         </patches>
 
         <requires>
-            <package name="g++" version=">= 4:7"/>
             <package name="file"/>
             <package name="libncurses5-dev"/>
             <package name="libxml2-dev"/>
