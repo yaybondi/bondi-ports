@@ -13,6 +13,10 @@
         <file src="${prefix}/bin"/>
     </contents>
 
+    <provides>
+        <package name="tcl"/>
+    </provides>
+
     <maintainer-scripts>
         <postinst><![CDATA[
 
