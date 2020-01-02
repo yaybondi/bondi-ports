@@ -97,13 +97,10 @@
         <requires>
             <package name="file"/>
             <package name="cpio"/>
-            <package name="libdb-dev"/>
+            <package name="libdb5.3-dev"/>
             <package name="libgdbm-dev"/>
-            <package name="netbase"/>
-            <package name="procps"/>
             <package name="zlib1g-dev"/>
             <package name="libbz2-dev"/>
-            <package name="libc-dev"/>
         </requires>
 
         <xi:include href="rules.xml"/>
