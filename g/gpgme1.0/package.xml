@@ -42,10 +42,6 @@
             <package name="libassuan-dev" version=">> 2.0.2"/>
             <package name="libgpg-error-dev" version=">> 1.17"/>
             <package name="pkg-config"/>
-            <package name="python-all-dev"/>
-            <package name="python3-all-dev"/>
-            <package name="qtbase5-dev"/>
-            <package name="scdaemon"/>
             <package name="swig"/>
             <package name="texinfo"/>
         </requires>
