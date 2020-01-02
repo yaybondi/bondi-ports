@@ -22,6 +22,10 @@
         <package name="libexpat1-dev"/>
     </requires>
 
+    <provides>
+        <package name="libpython3-dev"/>
+    </provides>
+
     <contents subdir="libpython3.7-dev">
         <file src="/"/>
     </contents>
