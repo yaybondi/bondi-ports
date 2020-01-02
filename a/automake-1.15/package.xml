@@ -39,6 +39,10 @@
             </patchset>
         </patches>
 
+        <requires>
+            <package name="help2man"/>
+        </requires>
+
         <xi:include href="rules.xml"/>
     </source>
 
