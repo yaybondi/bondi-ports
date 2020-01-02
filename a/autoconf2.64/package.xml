@@ -23,6 +23,12 @@
             </patchset>
         </patches>
 
+        <requires>
+            <package name="perl"/>
+            <package name="m4"/>
+            <package name="texinfo"/>
+        </requires>
+
         <xi:include href="rules.xml"/>
     </source>
 
