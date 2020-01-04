@@ -24,6 +24,7 @@
         <dir src="/etc/ca-certificates/update.d"/>
         <dir src="/etc/ssl"/>
         <dir src="/etc/ssl/certs"/>
+        <file src="/etc/ca-certificates.conf"/>
         <file src="${prefix}/sbin"/>
         <dir src="${prefix}/share/ca-certificates"/>
         <file src="${prefix}/share/ca-certificates/mozilla"/>
