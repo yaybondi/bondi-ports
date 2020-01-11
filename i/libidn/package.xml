@@ -36,9 +36,10 @@
         </patches>
 
         <requires>
-            <package name="autopoint" version=">= 0.19.3"/>
+            <package name="autopoint"/>
             <package name="gengetopt"/>
             <package name="texinfo"/>
+            <package name="help2man"/>
         </requires>
 
         <xi:include href="rules.xml"/>
