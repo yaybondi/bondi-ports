@@ -3,7 +3,8 @@
     <prepare>
     <![CDATA[
 
-true
+cd "$BOLT_SOURCE_DIR"
+sed -i "s/'setuptools_scm'//g" setup.py
 
     ]]>
     </prepare>
