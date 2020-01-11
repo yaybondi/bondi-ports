@@ -42,9 +42,9 @@
         </patches>
 
         <requires>
-            <package name="python-all-dev" version=">= 2.6.6-3~"/>
-            <package name="help2man" version=">= 1.37.1~"/>
-            <package name="python3-all-dev"/>
+            <package name="help2man"/>
+            <package name="python2-dev"/>
+            <package name="python3-dev"/>
         </requires>
 
         <xi:include href="rules.xml"/>
