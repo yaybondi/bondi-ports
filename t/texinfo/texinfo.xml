@@ -14,6 +14,10 @@
         </p>
     </description>
 
+    <requires>
+        <package name="perl"/>
+    </requires>
+
     <contents>
         <file src="${prefix}/bin/makeinfo"/>
         <file src="${prefix}/bin/pdftexi2dvi"/>
