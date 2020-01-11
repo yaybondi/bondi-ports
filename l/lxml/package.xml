@@ -31,14 +31,13 @@
         </sources>
 
         <requires>
-            <package name="python-all-dev" version=">= 2.6.6-1~"/>
-            <package name="python3-all-dev" version=">= 3.3.3"/>
-            <package name="python-pyrex" version=">= 0.9.4.1"/>
+            <package name="python2-dev"/>
+            <package name="python3-dev"/>
             <package name="libxml2-dev"/>
             <package name="libxslt1-dev"/>
             <package name="zlib1g-dev"/>
             <package name="python-setuptools"/>
-            <package name="python3-setuptools" version=">= 0.6.29"/>
+            <package name="python3-setuptools"/>
             <package name="cython"/>
             <package name="cython3"/>
         </requires>
