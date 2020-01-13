@@ -27,6 +27,14 @@
             </patchset>
         </patches>
 
+        <requires>
+            <package name="gpgv"/>
+            <package name="ldnsutils"/>
+            <package name="openssl"/>
+            <package name="unbound-anchor"/>
+            <package name="xml2"/>
+        </requires>
+
         <xi:include href="rules.xml"/>
     </source>
 
