@@ -36,7 +36,7 @@
             <package name="chrpath"/>
             <package name="libssl-dev"/>
             <package name="pkg-config"/>
-            <package name="python-dev"/>
+            <package name="python2-dev"/>
             <package name="python3-dev"/>
             <package name="swig"/>
         </requires>
