@@ -35,7 +35,6 @@
             <package name="libbz2-dev"/>
             <package name="libcurl4-openssl-dev"/>
             <package name="libexpat1-dev"/>
-            <package name="libjsoncpp-dev"/>
             <package name="liblzma-dev"/>
             <package name="libncurses5-dev"/>
             <package name="procps"/>
