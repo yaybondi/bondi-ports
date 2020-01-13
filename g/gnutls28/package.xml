@@ -48,10 +48,10 @@
         <requires>
             <package name="autogen"/>
             <package name="bison"/>
-            <package name="ca-certificates"/>
+            <package name="ca-certificates" tools-prefix=""/>
             <package name="chrpath"/>
             <package name="libgmp-dev"/>
-            <package name="libidn2-dev"/>
+            <package name="libidn11-dev"/>
             <package name="libopts25-dev"/>
             <package name="libp11-kit-dev"/>
             <package name="libssl-dev"/>
