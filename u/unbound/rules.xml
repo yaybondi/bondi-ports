@@ -33,9 +33,11 @@ CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
     --disable-flto \
     --with-pidfile=/run/unbound.pid \
     --with-rootkey-file=/var/lib/unbound/root.key \
-    --with-libevent \
+    --with-libevent="$BOLT_INSTALL_PREFIX" \
+    --with-libexpat="$BOLT_INSTALL_PREFIX" \
     --with-pythonmodule \
     --with-pyunbound \
+    --with-ssl="$BOLT_INSTALL_PREFIX" \
     --enable-dnstap \
     --with-dnstap-socket-path=/run/dnstap.sock \
     --libdir="$BOLT_INSTALL_PREFIX/lib"
@@ -53,9 +55,11 @@ CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
     --disable-flto \
     --with-pidfile=/run/unbound.pid \
     --with-rootkey-file=/var/lib/unbound/root.key \
-    --with-libevent \
+    --with-libevent="$BOLT_INSTALL_PREFIX" \
+    --with-libexpat="$BOLT_INSTALL_PREFIX" \
     --with-pythonmodule \
     --with-pyunbound \
+    --with-ssl="$BOLT_INSTALL_PREFIX" \
     --enable-dnstap \
     --with-dnstap-socket-path=/run/dnstap.sock \
     --libdir="$BOLT_INSTALL_PREFIX/lib"
@@ -74,9 +78,11 @@ CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
     --disable-flto \
     --with-pidfile=/run/unbound.pid \
     --with-rootkey-file=/var/lib/unbound/root.key \
-    --with-libevent \
+    --with-libevent="$BOLT_INSTALL_PREFIX" \
+    --with-libexpat="$BOLT_INSTALL_PREFIX" \
     --without-pythonmodule \
     --without-pyunbound \
+    --with-ssl="$BOLT_INSTALL_PREFIX" \
     --enable-dnstap \
     --with-dnstap-socket-path=/run/dnstap.sock \
     --libdir="$BOLT_INSTALL_PREFIX/lib"
