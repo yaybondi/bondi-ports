@@ -31,6 +31,7 @@
         </patches>
 
         <requires>
+            <package name="automake-1.15"/>
             <package name="autotools-dev"/>
             <package name="libssl-dev"/>
         </requires>
