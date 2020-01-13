@@ -38,7 +38,7 @@
             <package name="autoconf"/>
             <package name="automake"/>
             <package name="libncurses5-dev"/>
-            <package name="libreadline6-dev"/>
+            <package name="libreadline-dev"/>
             <package name="libltdl-dev"/>
             <package name="libgmp-dev"/>
             <package name="texinfo"/>
