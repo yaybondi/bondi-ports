@@ -21,7 +21,6 @@
         </sources>
 
         <requires>
-            <package name="bc"/>
             <package name="gettext"/>
             <package name="libaudit-dev"/>
             <package name="libcap-ng-dev"/>
@@ -29,7 +28,6 @@
             <package name="libncursesw5-dev"/>
             <package name="libpam0g-dev"/>
             <package name="libselinux1-dev"/>
-            <package name="libsystemd-dev"/>
             <package name="libtool"/>
             <package name="pkg-config"/>
             <package name="bison"/>
