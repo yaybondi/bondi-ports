@@ -42,7 +42,9 @@
         </patches>
 
         <requires>
+            <package name="automake-1.15"/>
             <package name="autotools-dev"/>
+            <package name="gettext"/>
             <package name="gperf"/>
             <package name="guile-2.0-dev"/>
             <package name="libxml2-dev"/>
