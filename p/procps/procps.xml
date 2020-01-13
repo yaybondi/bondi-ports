@@ -20,10 +20,12 @@
 
     <conflicts>
         <package name="busybox-procps-symlinks"/>
+        <package name="busybox-sysvinit-utils-symlinks"/>
     </conflicts>
 
     <replaces>
         <package name="busybox-procps-symlinks"/>
+        <package name="busybox-sysvinit-utils-symlinks"/>
     </replaces>
 
     <contents subdir="procps">
