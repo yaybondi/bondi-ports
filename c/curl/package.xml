@@ -55,20 +55,13 @@
         <requires>
             <package name="autoconf"/>
             <package name="automake"/>
-            <package name="ca-certificates"/>
-            <package name="groff-base"/>
+            <package name="ca-certificates" tools-prefix=""/>
             <package name="libgnutls28-dev"/>
-            <package name="libidn2-0-dev"/>
-            <package name="libkrb5-dev"/>
-            <package name="libldap2-dev"/>
-            <package name="libnghttp2-dev"/>
+            <package name="libidn11-dev"/>
             <package name="libnss3-dev"/>
-            <package name="libpsl-dev"/>
-            <package name="librtmp-dev" version=">= 2.4+20131018.git79459a2-3~"/>
-            <package name="libssh2-1-dev"/>
-            <package name="libssl1.0-dev" version="&lt;&lt; 1.1"/>
+            <package name="libssl-dev"/>
             <package name="libtool"/>
-            <package name="python"/>
+            <package name="python2"/>
             <package name="zlib1g-dev"/>
         </requires>
 
