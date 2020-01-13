@@ -52,12 +52,11 @@
             <package name="libgmp-dev"/>
             <package name="libncurses5-dev"/>
             <package name="libncursesw5-dev"/>
-            <package name="libreadline6-dev"/>
+            <package name="libreadline-dev"/>
             <package name="libssl-dev"/>
             <package name="libyaml-dev"/>
-            <package name="netbase"/>
             <package name="openssl"/>
-            <package name="procps"/>
+            <package name="ruby2.5"/>
             <package name="tzdata"/>
             <package name="zlib1g-dev"/>
         </requires>
