@@ -44,10 +44,8 @@
 
         <requires>
             <package name="zlib1g-dev"/>
-            <package name="python-all"/>
-            <package name="libpython-all-dev"/>
-            <package name="python3-all"/>
-            <package name="libpython3-all-dev"/>
+            <package name="python2-dev"/>
+            <package name="python3-dev"/>
             <package name="python-setuptools"/>
             <package name="python-six"/>
             <package name="python3-setuptools"/>
