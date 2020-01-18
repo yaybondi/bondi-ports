@@ -36,9 +36,16 @@
         </patches>
 
         <requires>
+            <package name="libacl1-dev"/>
+            <package name="libarchive-dev"/>
+            <package name="libbz2-dev"/>
             <package name="libcurl4-nss-dev"/>
+            <package name="libexpat1-dev"/>
             <package name="libsolv0-dev"/>
             <package name="libsolvext0-dev"/>
+            <package name="liblzma-dev"/>
+            <package name="pkg-config"/>
+            <package name="zlib1g-dev"/>
         </requires>
 
         <!-- build rules -->
