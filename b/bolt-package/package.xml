@@ -20,6 +20,11 @@
                 sha256sum="02e4dfaaedb2de0b08a8492e5f0af51adcde1af4929d2c81a4d739f2f67a6b97"/>
         </sources>
 
+        <requires>
+            <package name="python3-all"/>
+            <package name="python3-setuptools"/>
+        </requires>
+
         <xi:include href="rules.xml"/>
     </source>
 
