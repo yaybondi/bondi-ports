@@ -44,6 +44,7 @@
             <package name="libsolv0-dev"/>
             <package name="libsolvext0-dev"/>
             <package name="liblzma-dev"/>
+            <package name="nettle-dev"/>
             <package name="pkg-config"/>
             <package name="zlib1g-dev"/>
         </requires>
