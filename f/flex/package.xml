@@ -36,6 +36,7 @@
         <requires>
             <package name="autopoint"/>
             <package name="bison"/>
+            <package name="flex"/>
             <package name="gettext"/>
             <package name="texinfo"/>
             <package name="help2man"/>
