@@ -10,15 +10,15 @@ touch config.guess config.sub tool/config.guess tool/config.sub
 bh_autotools_dev_update
 autoreconf -vfi
 
+EXTRA_OPTS=""
+MY_BUILD_TYPE="$BOLT_BUILD_TYPE"
+
 if [ -e "/tools/bin/ruby${RUBY_VERSION}" ]; then
     EXTRA_OPTS="--with-baseruby=/tools/bin/ruby${RUBY_VERSION}"
     MY_BUILD_TYPE="$BOLT_TOOLS_TYPE"
 elif [ -e "/tools/bin/ruby" ]; then
     EXTRA_OPTS="--with-baseruby=/tools/bin/ruby"
     MY_BUILD_TYPE="$BOLT_TOOLS_TYPE"
-else
-    EXTRA_OPTS=""
-    MY_BUILD_TYPE="$BOLT_BUILD_TYPE"
 fi
 
 cd "$BOLT_BUILD_DIR"
