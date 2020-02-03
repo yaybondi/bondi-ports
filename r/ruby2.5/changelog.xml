@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="2.5.5" revision="3bolt2" upstream-version="2.5.5-3"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2019-08-05 23:45:24+02:00">
+        <changeset>
+            <li>
+                Add
+                020-make-relocation-time-symbol-lookup-and-dlsym-consistent.patch
+                from OpenWRT project.
+            </li>
+        </changeset>
+    </release>
     <release version="2.5.5" revision="3bolt1" upstream-version="2.5.5-3"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2019-08-05 23:45:24+02:00">

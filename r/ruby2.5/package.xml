@@ -24,10 +24,13 @@
                 sha256sum="a49a222bbeeeb0191ae043a509cd05137869f971a33fef74d3c0aaae95170877"/>
             <file src="debian-patches-3.tar.gz" subdir="patches"
                 sha256sum="5b378044541a0d80acdede72c88e17d9c46991c991d55fc2aeacaa7cbaf8e3a5"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
+                sha256sum="b639421e18eb0bd06bf397cd3153462641236fff4729a6d409b4f6421d1c24f9"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/0001-rdoc-build-reproducible-documentation.patch"/>
                 <file src="patches/0002-lib-mkmf.rb-sort-list-of-object-files-in-generated-M.patch"/>
                 <file src="patches/0003-Mark-Gemspec-reproducible-change-fixing-784225-too.patch"/>
@@ -39,6 +42,8 @@
                 <file src="patches/0009-test-test_pair-fix-deadlock-in-test_connect_accept_n.patch"/>
                 <file src="patches/0010-test-use-larger-keys-for-SSL-tests.patch"/>
                 <file src="patches/0011-ia64-Don-t-clear-register_stack_start.patch"/>
+                <!-- OpenWRT -->
+                <file src="patches/020-make-relocation-time-symbol-lookup-and-dlsym-consistent.patch"/>
             </patchset>
         </patches>
 
