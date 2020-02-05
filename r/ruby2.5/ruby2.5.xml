@@ -19,4 +19,30 @@
         <dir src="/var/lib/gems"/>
         <dir src="/var/lib/gems/2.5.0"/>
     </contents>
+
+    <maintainer-scripts>
+        <postinst><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/irb" ]; then
+    ln -sf "irb2.5" "$BOLT_INSTALL_PREFIX/bin/irb"
+fi
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ruby" ]; then
+    ln -sf "ruby2.5" "$BOLT_INSTALL_PREFIX/bin/ruby"
+fi
+
+        ]]></postinst>
+
+        <postrm><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/irb" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/irb"
+fi
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ruby" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/ruby"
+fi
+
+        ]]></postrm>
+    </maintainer-scripts>
 </package>
