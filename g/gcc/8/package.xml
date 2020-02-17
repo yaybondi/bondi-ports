@@ -32,8 +32,8 @@
                 sha256sum="f0cae581373cd7da7771a503e22b55d2833490cdb29e064a302cf3212f7f2ac4"/>
             <file src="debian-patches-6.tar.gz" subdir="patches"
                 sha256sum="d252e89bde13036f2286ab6660df73bc6e58eb61e91f699492c4999a1f6ea012"/>
-            <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="8cfa09c05f63a9db542cec1a9f0c182e80ae8c6ae7c81e9f8b588bcc4788303f"/>
+            <file src="musl-patches-1.tar.gz" subdir="patches"
+                sha256sum="daa7957316e64e0a02f7f4108a30b8cb2d28810fee334b0e2afaecda27d4e360"/>
         </sources>
 
         <patches>
@@ -130,8 +130,25 @@
                 <!--
                 <file src="patches/ada-changes-in-autogen-output.diff"/>
                 -->
-                <!-- Bolt OS -->
-                <file src="patches/230-musl_libssp.patch"/>
+
+                <!-- musl developers -->
+                <file src="patches/0001-ssp_nonshared.diff"/>
+                <file src="patches/0002-posix_memalign.diff"/>
+                <file src="patches/0003-libatomic-test-fix.diff"/>
+                <file src="patches/0004-libgomp-test-fix.diff"/>
+                <file src="patches/0005-libitm-test-fix.diff"/>
+                <file src="patches/0006-libvtv-test-fix.diff"/>
+                <file src="patches/0007-j2.diff"/>
+                <file src="patches/0008-s390x-muslldso.diff"/>
+                <file src="patches/0009-microblaze-pr65649.diff"/>
+                <file src="patches/0010-ldbl128-config.diff"/>
+                <file src="patches/0011-m68k.diff"/>
+                <file src="patches/0012-static-pie.diff"/>
+                <file src="patches/0013-invalid_tls_model.diff"/>
+                <file src="patches/0014-fix-gthr-weak-refs-for-libgcc.patch"/>
+                <file src="patches/0015-riscv-tls-copy-relocs.diff"/>
+                <file src="patches/0016-libstdc++-futex-time64.diff"/>
+                <file src="patches/0017-pr93402.diff"/>
             </patchset>
         </patches>
 
