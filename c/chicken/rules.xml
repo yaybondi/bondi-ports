@@ -4,7 +4,7 @@
     <![CDATA[
 
 cd "$BOLT_SOURCE_DIR"
-find . -name "*.c" -exec touch '{}' ';'
+find . -type f -exec touch -t 200001010000.01 '{}' ';'
 
 cd "$BOLT_BUILD_DIR"
 mkdir .mybin
