@@ -25,7 +25,7 @@
             <file src="debian-patches-3.tar.gz" subdir="patches"
                 sha256sum="5b378044541a0d80acdede72c88e17d9c46991c991d55fc2aeacaa7cbaf8e3a5"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="b639421e18eb0bd06bf397cd3153462641236fff4729a6d409b4f6421d1c24f9"/>
+                sha256sum="7f4f5feebb5c366b6d1247055a9d1c96e560f2f07e9cba9801c9043b0f7c9c5e"/>
         </sources>
 
         <patches>
@@ -44,6 +44,8 @@
                 <file src="patches/0011-ia64-Don-t-clear-register_stack_start.patch"/>
                 <!-- OpenWRT -->
                 <file src="patches/020-make-relocation-time-symbol-lookup-and-dlsym-consistent.patch"/>
+                <!-- Alpine -->
+                <file src="patches/021-ruby-get-main-stack.diff"/>
             </patchset>
         </patches>
 
