@@ -46,6 +46,8 @@
                 <file src="patches/020-make-relocation-time-symbol-lookup-and-dlsym-consistent.patch"/>
                 <!-- Alpine -->
                 <file src="patches/021-ruby-get-main-stack.diff"/>
+                <!-- Bolt -->
+                <file src="patches/libpath-env-always-empty.diff"/>
             </patchset>
         </patches>
 
