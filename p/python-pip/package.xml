@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="python-pip" architecture-independent="true">
+        <description>
+            <summary>Python package installer</summary>
+            <p>
+            pip is the Python package installer. It integrates with virtualenv, doesn't
+            do partial installs, can save package state for replaying, can install from
+            non-egg sources, and can install from version control repositories.
+            </p>
+        </description>
+
+        <sources>
+            <file src="python-pip-18.1.tar.gz" subdir="sources"
+                sha256sum="c0a292bd977ef590379a3f05d7b7f65135487b67470f6281289a94e015650ea1"/>
+            <file src="debian-patches-5.tar.gz" subdir="patches"
+                sha256sum="2c363f166577b3337cd697a6a1b7dbbf2e8a4f66640f0f37eca00197cbfa3d00"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/hands-off-system-packages.patch"/>
+                <file src="patches/debundle.patch"/>
+                <file src="patches/handle-unbundled-requests.patch"/>
+                <file src="patches/set_user_default.patch"/>
+                <file src="patches/disable-pip-version-check.patch"/>
+                <file src="patches/Properly_catch_requests_HTTPError_in_index.py.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="python-all"/>
+            <package name="python-setuptools"/>
+            <package name="python3-all"/>
+            <package name="python3-setuptools"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="python-pip.xml"/>
+    <xi:include href="python3-pip.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

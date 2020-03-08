@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+cd "$BOLT_SOURCE_DIR"
+sed -i "s/'setuptools_scm'//g" setup.py
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+true
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd "$BOLT_SOURCE_DIR"
+
+mkdir -p "$BOLT_INSTALL_DIR/python2"
+mkdir -p "$BOLT_INSTALL_DIR/python3"
+
+bh_python_install --py2 --root "$BOLT_INSTALL_DIR/python2"
+bh_python_install --py3 --root "$BOLT_INSTALL_DIR/python3"
+
+    ]]>
+    </install>
+</rules>

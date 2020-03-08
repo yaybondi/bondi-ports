@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python3-pip" section="python">
+    <description>
+        <summary>Python package installer</summary>
+        <p>
+        pip is the Python package installer. It integrates with virtualenv, doesn't
+        do partial installs, can save package state for replaying, can install from
+        non-egg sources, and can install from version control repositories.
+        </p>
+        <p>
+        This is the Python 3 version of the package.
+        </p>
+    </description>
+
+    <requires>
+        <package name="ca-certificates"/>
+        <package name="python3"/>
+    </requires>
+
+    <contents subdir="python3" collect-py-cache-files="true">
+        <file src="/usr/bin/pip3"/>
+        <file src="/usr/lib/python3*/**/*"/>
+    </contents>
+</package>
