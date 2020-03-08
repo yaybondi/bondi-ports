@@ -60,6 +60,10 @@ export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
 cd "$BOLT_BUILD_DIR"
 make V=1 SHELL="/usr/bin/sh" -j"$BOLT_PARALLEL_JOBS"
 
+if [ "$BOLT_BUILD_FOR" = "target" ]; then
+    sed -i 's@/tools/bin@/usr/bin@g' rbconfig.rb
+fi
+
     ]]>
     </build>
 
