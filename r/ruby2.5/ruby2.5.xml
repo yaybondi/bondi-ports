@@ -31,6 +31,10 @@ if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ruby" ]; then
     ln -sf "ruby2.5" "$BOLT_INSTALL_PREFIX/bin/ruby"
 fi
 
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/gem" ]; then
+    ln -sf "gem2.5" "$BOLT_INSTALL_PREFIX/bin/gem"
+fi
+
         ]]></postinst>
 
         <postrm><![CDATA[
@@ -41,6 +45,10 @@ fi
 
 if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ruby" ]; then
     rm -f "$BOLT_INSTALL_PREFIX/bin/ruby"
+fi
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/gem" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/gem"
 fi
 
         ]]></postrm>
