@@ -21,4 +21,22 @@
         <file src="/usr/bin/pip3"/>
         <file src="/usr/lib/python3*/**/*"/>
     </contents>
+
+    <maintainer-scripts>
+        <postinst><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/pip" ]; then
+    ln -sf "pip3" "$BOLT_INSTALL_PREFIX/bin/pip"
+fi
+
+        ]]></postinst>
+
+        <postrm><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/pip" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/pip"
+fi
+
+        ]]></postrm>
+    </maintainer-scripts>
 </package>
