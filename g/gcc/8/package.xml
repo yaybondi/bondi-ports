@@ -34,6 +34,8 @@
                 sha256sum="d252e89bde13036f2286ab6660df73bc6e58eb61e91f699492c4999a1f6ea012"/>
             <file src="musl-patches-1.tar.gz" subdir="patches"
                 sha256sum="daa7957316e64e0a02f7f4108a30b8cb2d28810fee334b0e2afaecda27d4e360"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
+                sha256sum="8cfa09c05f63a9db542cec1a9f0c182e80ae8c6ae7c81e9f8b588bcc4788303f"/>
         </sources>
 
         <patches>
@@ -132,7 +134,6 @@
                 -->
 
                 <!-- musl developers -->
-                <file src="patches/0001-ssp_nonshared.diff"/>
                 <file src="patches/0002-posix_memalign.diff"/>
                 <file src="patches/0003-libatomic-test-fix.diff"/>
                 <file src="patches/0004-libgomp-test-fix.diff"/>
@@ -149,6 +150,9 @@
                 <file src="patches/0015-riscv-tls-copy-relocs.diff"/>
                 <file src="patches/0016-libstdc++-futex-time64.diff"/>
                 <file src="patches/0017-pr93402.diff"/>
+
+                <!-- Bolt -->
+                <file src="patches/230-musl_libssp.patch"/>
             </patchset>
         </patches>
 
