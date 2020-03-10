@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="gdb" architecture-independent="false">
+        <description>
+            <summary>GNU Debugger</summary>
+            <p>
+            GDB is a source-level debugger, capable of breaking programs at
+            any specific line, displaying variable values, and determining
+            where errors occurred. Currently, gdb supports C, C++, D,
+            Objective-C, Fortran, Java, OpenCL C, Pascal, assembly, Modula-2,
+            Go, and Ada. A must-have for any serious programmer.
+            </p>
+        </description>
+
+        <sources>
+            <file src="gdb-8.2.1.tar.xz" subdir="sources"
+                sha256sum="d9a1cc7c8fecb147d4779d6169a6624e2e4c1c74034c6143744c3b0ce8ec5fdc"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="0247385ddd22c9008a3a14055131ddaa8a507ef26ea18b5a780e5a40d4ae2f0f"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/gdb-fortran-main.patch"/>
+                <file src="patches/solve_PATH_MAX_issue.patch"/>
+                <file src="patches/gdb-6.5-bz185337-resolve-tls-without-debuginfo-v2.patch"/>
+                <file src="patches/python-config.patch"/>
+                <file src="patches/gdb-glibc-vdso-workaround.patch"/>
+                <file src="patches/load-versioned-libcc1.patch"/>
+                <file src="patches/gdb_configure.nat.patch"/>
+                <file src="patches/gdb-PATH_MAX.patch"/>
+                <file src="patches/gnu-nat.c.patch"/>
+                <file src="patches/struct-thread_info.patch"/>
+                <file src="patches/0001-Import-patch-to-fix-PR23919-from-the-mainline.patch"/>
+                <file src="patches/gdb-rhbz1560010-fix-assertion-symbol-language-dict-language-1of5.patch"/>
+                <file src="patches/gdb-rhbz1560010-fix-assertion-symbol-language-dict-language-2of5.patch"/>
+                <file src="patches/gdb-rhbz1560010-fix-assertion-symbol-language-dict-language-3of5.patch"/>
+                <file src="patches/gdb-rhbz1560010-fix-assertion-symbol-language-dict-language-4of5.patch"/>
+                <file src="patches/gdb-rhbz1560010-fix-assertion-symbol-language-dict-language-5of5.patch"/>
+                <file src="patches/gdb_bsd-kvm.c.diff"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="bzip2"/>
+            <package name="autoconf"/>
+            <package name="libtool"/>
+            <package name="gettext"/>
+            <package name="bison"/>
+            <package name="flex"/>
+            <package name="procps"/>
+            <package name="texinfo" version=">= 4.7-2.2"/>
+            <package name="libexpat1-dev"/>
+            <package name="libncurses5-dev"/>
+            <package name="libreadline-dev"/>
+            <package name="zlib1g-dev"/>
+            <package name="liblzma-dev"/>
+            <package name="python2-dev"/>
+            <package name="python3-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="gdb.xml"/>
+    <xi:include href="gdbserver.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
