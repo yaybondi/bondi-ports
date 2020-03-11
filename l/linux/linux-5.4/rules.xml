@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+
+    <prepare>
+    <![CDATA[
+
+cd $BOLT_SOURCE_DIR
+make SHELL=/bin/sh mrproper
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+cd $BOLT_SOURCE_DIR
+make SHELL=/bin/sh headers_check
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+KERNEL_ARCH="`bh_kernel_arch_for_target $BOLT_HOST_TYPE`"
+
+cd $BOLT_SOURCE_DIR
+make SHELL=/bin/sh INSTALL_HDR_PATH="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
+    ARCH="$KERNEL_ARCH" headers_install
+
+    ]]>
+    </install>
+
+</rules>

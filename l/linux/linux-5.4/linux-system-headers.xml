@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="linux-system-headers" section="utils">
+    <description>
+        <summary>Linux headers that libc was compiled against</summary>
+        <p>
+        This package contains the headers that were used to compile the
+        libc in your system. These headers are independent of the headers
+        belonging to your running kernel. If you want the headers corresponding
+        to your kernel image, install linux-`uname -r`-headers instead.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/include/**/*.h"/>
+    </contents>
+</package>
