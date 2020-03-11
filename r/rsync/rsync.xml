@@ -19,6 +19,6 @@
     </description>
 
     <contents>
-        <file src="/usr/bin"/>
+        <file src="${prefix}/bin"/>
     </contents>
 </package>
