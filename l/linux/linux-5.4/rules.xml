@@ -13,8 +13,11 @@ make SHELL=/bin/sh mrproper
     <build>
     <![CDATA[
 
+KERNEL_ARCH="`bh_kernel_arch_for_target $BOLT_HOST_TYPE`"
+
 cd $BOLT_SOURCE_DIR
 make SHELL=/bin/sh headers_check
+make SHELL=/bin/sh ARCH="$KERNEL_ARCH" headers
 
     ]]>
     </build>
@@ -22,11 +25,12 @@ make SHELL=/bin/sh headers_check
     <install>
     <![CDATA[
 
-KERNEL_ARCH="`bh_kernel_arch_for_target $BOLT_HOST_TYPE`"
-
 cd $BOLT_SOURCE_DIR
-make SHELL=/bin/sh INSTALL_HDR_PATH="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
-    ARCH="$KERNEL_ARCH" headers_install
+find usr/include -name '.*' -delete
+rm usr/include/Makefile
+
+mkdir -p "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include"
+cp -va usr/include/* "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include"
 
     ]]>
     </install>
