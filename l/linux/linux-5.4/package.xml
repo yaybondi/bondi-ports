@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <defines>
-        <def name="BOLT_BUILD_DIR" value="build"/>
-    </defines>
 
-    <source name="linux" architecture-independent="false">
+    <source name="linux-5.4" architecture-independent="false">
         <description>
-            <summary>Support files for Linux 5.4</summary>
+            <summary>Linux kernel version 4.19</summary>
             <p>
-            This package provides support files for the Linux kernel build, e.g.
-            scripts to handle ABI information and for generation of build system meta
-            data.
+            The Linux kernel is a modern, monolithic computer operating
+            system kernel running on PCs, servers, embedded systems and
+            mobile devices.
             </p>
         </description>
 
