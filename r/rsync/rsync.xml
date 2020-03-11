@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="rsync" section="net">
+    <description>
+        <summary>fast, versatile, remote (and local) file-copying tool</summary>
+        <p>
+        rsync is a fast and versatile file-copying tool which can copy locally
+        and to/from a remote host. It offers many options to control its behavior,
+        and its remote-update protocol can minimize network traffic to make
+        transferring updates between machines fast and efficient.
+        </p>
+        <p>
+        It is widely used for backups and mirroring and as an improved copy
+        command for everyday use.
+        </p>
+        <p>
+        This package provides both the rsync command line tool and optional
+        daemon functionality.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/bin"/>
+    </contents>
+</package>

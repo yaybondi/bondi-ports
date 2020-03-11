@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="rsync" architecture-independent="false">
+        <description>
+            <summary>fast, versatile, remote (and local) file-copying tool</summary>
+            <p>
+            rsync is a fast and versatile file-copying tool which can copy locally
+            and to/from a remote host. It offers many options to control its behavior,
+            and its remote-update protocol can minimize network traffic to make
+            transferring updates between machines fast and efficient.
+            </p>
+            <p>
+            It is widely used for backups and mirroring and as an improved copy
+            command for everyday use.
+            </p>
+            <p>
+            This package provides both the rsync command line tool and optional
+            daemon functionality.
+            </p>
+        </description>
+
+        <sources>
+            <file src="rsync-3.1.3.tar.gz" subdir="sources"
+                sha256sum="55cc554efec5fdaad70de921cd5a5eeb6c29a95524c715f3bbf849235b0800c0"/>
+        </sources>
+
+        <requires>
+            <package name="libacl1-dev"/>
+            <package name="libattr1-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="rsync.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
