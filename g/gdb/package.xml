@@ -21,10 +21,13 @@
                 sha256sum="d9a1cc7c8fecb147d4779d6169a6624e2e4c1c74034c6143744c3b0ce8ec5fdc"/>
             <file src="debian-patches-2.tar.gz" subdir="patches"
                 sha256sum="0247385ddd22c9008a3a14055131ddaa8a507ef26ea18b5a780e5a40d4ae2f0f"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
+                sha256sum="80b4f6f26482099921cc46a1f6588a63853dfe26291cd6d0d56810e6845500d3"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/gdb-fortran-main.patch"/>
                 <file src="patches/solve_PATH_MAX_issue.patch"/>
                 <file src="patches/gdb-6.5-bz185337-resolve-tls-without-debuginfo-v2.patch"/>
@@ -42,6 +45,8 @@
                 <file src="patches/gdb-rhbz1560010-fix-assertion-symbol-language-dict-language-4of5.patch"/>
                 <file src="patches/gdb-rhbz1560010-fix-assertion-symbol-language-dict-language-5of5.patch"/>
                 <file src="patches/gdb_bsd-kvm.c.diff"/>
+                <!-- Bolt -->
+                <file src="patches/aarch64-musl-sigcontext-from-signal-h.diff"/>
             </patchset>
         </patches>
 
