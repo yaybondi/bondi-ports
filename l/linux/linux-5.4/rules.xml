@@ -16,7 +16,6 @@ make SHELL=/bin/sh mrproper
 KERNEL_ARCH="`bh_kernel_arch_for_target $BOLT_HOST_TYPE`"
 
 cd $BOLT_SOURCE_DIR
-make SHELL=/bin/sh headers_check
 make SHELL=/bin/sh ARCH="$KERNEL_ARCH" headers
 
     ]]>
