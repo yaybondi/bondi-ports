@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="gdbserver" section="devel" build-for="target">
+<package name="gdb-common" section="devel" build-for="tools,target">
     <description>
-        <summary>GNU Debugger (remote server)</summary>
+        <summary>GNU Debugger (common files)</summary>
         <p>
         GDB is a source-level debugger, capable of breaking programs at
         any specific line, displaying variable values, and determining
         where errors occurred.
         </p>
         <p>
-        This package contains gdbserver. Install this to debug remotely
-        from another system where GDB is installed.
+        This package contains the files, that are shared between gdb
+        packages.
         </p>
     </description>
 
-    <contents subdir="gdbserver">
+    <contents subdir="gdb-common">
         <file src="/"/>
     </contents>
 </package>

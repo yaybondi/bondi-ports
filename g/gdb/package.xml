@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="gdb" architecture-independent="false">
+    <source name="gdb" architecture-independent="false" build-for="cross-tools,target">
         <description>
             <summary>GNU Debugger</summary>
             <p>
@@ -62,9 +62,9 @@
             <package name="libexpat1-dev"/>
             <package name="libncurses5-dev"/>
             <package name="libreadline-dev"/>
+            <package name="libtinfo-dev"/>
             <package name="zlib1g-dev"/>
             <package name="liblzma-dev"/>
-            <package name="python2-dev"/>
             <package name="python3-dev"/>
         </requires>
 
@@ -72,6 +72,7 @@
     </source>
 
     <xi:include href="gdb.xml"/>
+    <xi:include href="gdb-common.xml"/>
     <xi:include href="gdbserver.xml"/>
 
     <xi:include href="changelog.xml"/>
