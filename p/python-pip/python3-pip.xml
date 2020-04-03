@@ -13,13 +13,13 @@
     </description>
 
     <requires>
-        <package name="ca-certificates"/>
+        <package name="ca-certificates" tools-prefix=""/>
         <package name="python3"/>
     </requires>
 
     <contents subdir="python3" collect-py-cache-files="true">
-        <file src="/usr/bin/pip3"/>
-        <file src="/usr/lib/python3*/**/*"/>
+        <file src="${prefix}/bin/pip3"/>
+        <file src="${prefix}/lib/python3*/**/*"/>
     </contents>
 
     <maintainer-scripts>
