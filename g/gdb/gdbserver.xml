@@ -14,6 +14,7 @@
     </description>
 
     <contents subdir="gdbserver">
-        <file src="/"/>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/lib/*.so"/>
     </contents>
 </package>
