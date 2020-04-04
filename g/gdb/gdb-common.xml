@@ -14,6 +14,7 @@
     </description>
 
     <contents subdir="gdb-common">
-        <file src="/"/>
+        <file src="${prefix}/include/gdb"/>
+        <file src="${prefix}/share/gdb"/>
     </contents>
 </package>
