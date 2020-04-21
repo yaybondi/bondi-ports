@@ -22,7 +22,7 @@
             <file src="debian-patches-2.tar.gz" subdir="patches"
                 sha256sum="0247385ddd22c9008a3a14055131ddaa8a507ef26ea18b5a780e5a40d4ae2f0f"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="80b4f6f26482099921cc46a1f6588a63853dfe26291cd6d0d56810e6845500d3"/>
+                sha256sum="b3893548456dcdcfe65bd9c08607e82ef5a7d4c1e5c0d0654aa8d47c86335fed"/>
         </sources>
 
         <patches>
@@ -47,6 +47,7 @@
                 <file src="patches/gdb_bsd-kvm.c.diff"/>
                 <!-- Bolt -->
                 <file src="patches/aarch64-musl-sigcontext-from-signal-h.diff"/>
+                <file src="patches/mips-sgidefs.patch"/>
             </patchset>
         </patches>
 
