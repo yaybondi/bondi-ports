@@ -22,7 +22,7 @@
             <file src="debian-patches-2.tar.gz" subdir="patches"
                 sha256sum="0247385ddd22c9008a3a14055131ddaa8a507ef26ea18b5a780e5a40d4ae2f0f"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="b3893548456dcdcfe65bd9c08607e82ef5a7d4c1e5c0d0654aa8d47c86335fed"/>
+                sha256sum="06ada9bd3f129589a1d87a474bfe342fe70aad857f825dc0e4e3398bd4eeb6d2"/>
         </sources>
 
         <patches>
@@ -48,6 +48,7 @@
                 <!-- Bolt -->
                 <file src="patches/aarch64-musl-sigcontext-from-signal-h.diff"/>
                 <file src="patches/mips-sgidefs.patch"/>
+                <file src="patches/mips64-abio32.diff"/>
             </patchset>
         </patches>
 
