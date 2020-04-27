@@ -22,7 +22,7 @@
             <file src="debian-patches-2.tar.gz" subdir="patches"
                 sha256sum="0247385ddd22c9008a3a14055131ddaa8a507ef26ea18b5a780e5a40d4ae2f0f"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="06ada9bd3f129589a1d87a474bfe342fe70aad857f825dc0e4e3398bd4eeb6d2"/>
+                sha256sum="48a8442580bf859d6108d62ac1595dbc62e9bae98e03f50bee1701025812b163"/>
         </sources>
 
         <patches>
@@ -49,6 +49,8 @@
                 <file src="patches/aarch64-musl-sigcontext-from-signal-h.diff"/>
                 <file src="patches/mips-sgidefs.patch"/>
                 <file src="patches/mips64-abio32.diff"/>
+                <!-- Alpine -->
+                <file src="patches/s390x-use-elf-gdb_fpregset_t.patch"/>
             </patchset>
         </patches>
 
