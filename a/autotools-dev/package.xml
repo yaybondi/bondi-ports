@@ -14,6 +14,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="autotools-dev-20180224.1.tar.xz" subdir="sources"
                 sha256sum="c9d8bacff4caa38c4d32a61b32acf5184124c1ca356a9483007bcb9bb9a913fa"/>

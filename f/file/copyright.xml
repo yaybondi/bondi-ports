@@ -1,0 +1,164 @@
+<copyright>
+    <files license="BSD-2-Clause-alike">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+1985-1995 Ian F. Darwin
+1994-2016 Christos Zoulas <christos@zoulas.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-Clause-alike">
+        <file src="src/apprentice.c"/>
+        <file src="src/ascmagic.c"/>
+        <file src="src/asprintf.c"/>
+        <file src="src/compress.c"/>
+        <file src="src/dprintf.c"/>
+        <file src="src/encoding.c"/>
+        <file src="src/file.c"/>
+        <file src="src/fsmagic.c"/>
+        <file src="src/is_tar.c"/>
+        <file src="src/print.c"/>
+        <file src="src/softmagic.c"/>
+        <file src="src/vasprintf.c"/>
+        <copyright-notice><![CDATA[
+Ian F. Darwin 1986-1995.
+maintained 1995-present by Christos Zoulas and others.
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-Clause-alike">
+        <file src="src/funcs.c"/>
+        <file src="src/magic.c"/>
+        <file src="src/readelf.c"/>
+        <file src="tests/test.c"/>
+        <copyright-notice><![CDATA[
+2003 Christos Zoulas
+        ]]></copyright-notice>
+    </files>
+    <files license="public-domain">
+        <file src="src/apptype.c"/>
+        <copyright-notice><![CDATA[
+Eberhard Mattes
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-Clause-netbsd">
+        <file src="src/cdf.c"/>
+        <file src="src/cdf_time.c"/>
+        <file src="src/der.c"/>
+        <file src="src/der.h"/>
+        <file src="src/readcdf.c"/>
+        <copyright-notice><![CDATA[
+2008 Christos Zoulas
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-Clause-netbsd">
+        <file src="src/getline.c"/>
+        <copyright-notice><![CDATA[
+2011 The NetBSD Foundation, Inc.
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-Clause-netbsd">
+        <file src="src/fmtcheck.c"/>
+        <file src="src/getopt_long.c"/>
+        <copyright-notice><![CDATA[
+2000 The NetBSD Foundation, Inc.
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-Clause-regents">
+        <file src="src/strcasestr.c"/>
+        <copyright-notice><![CDATA[
+1990, 1993 The Regents of the University of California
+        ]]></copyright-notice>
+    </files>
+    <files license="MIT-Old-Style-with-legal-disclaimer-2">
+        <file src="src/strlcat.c"/>
+        <file src="src/strlcpy.c"/>
+        <copyright-notice><![CDATA[
+1998 Todd C. Miller <Todd.Miller@courtesan.com>
+        ]]></copyright-notice>
+    </files>
+    <license handle="BSD-2-Clause-alike"><![CDATA[
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+   notice immediately at the beginning of the file, without modification,
+   this list of conditions, and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGE.
+    ]]></license>
+    <license handle="public-domain"><![CDATA[
+Written by Eberhard Mattes and put into the public domain
+    ]]></license>
+    <license handle="BSD-2-Clause-netbsd"><![CDATA[
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+    ]]></license>
+    <license handle="BSD-2-Clause-regents"><![CDATA[
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+3. Neither the name of the University nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGE.
+    ]]></license>
+    <license handle="MIT-Old-Style-with-legal-disclaimer-2"><![CDATA[
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+    ]]></license>
+</copyright>

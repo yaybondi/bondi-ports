@@ -1,0 +1,247 @@
+<copyright>
+    <files license="LGPL-2.1+">
+        <file src="*"/>
+        <file src="Makefile.am"/>
+        <file src="src/Makefile.am"/>
+        <file src="src/assuan-buffer.c"/>
+        <file src="src/assuan-error.c"/>
+        <file src="src/assuan-inquire.c"/>
+        <file src="src/assuan-io.c"/>
+        <file src="src/assuan-listen.c"/>
+        <file src="src/assuan-pipe-server.c"/>
+        <file src="src/assuan-socket-connect.c"/>
+        <file src="src/assuan-socket-server.c"/>
+        <file src="src/assuan-socket.c"/>
+        <file src="src/assuan-uds.c"/>
+        <file src="src/client.c"/>
+        <file src="src/context.c"/>
+        <file src="src/funopen.c"/>
+        <file src="src/memrchr.c"/>
+        <file src="src/posix-fd-t.inc.h"/>
+        <file src="src/posix-includes.inc.h"/>
+        <file src="src/posix-sock-nonce.inc.h"/>
+        <file src="src/posix-sys-pth-impl.h"/>
+        <file src="src/posix-types.inc.h"/>
+        <file src="src/putc_unlocked.c"/>
+        <file src="src/server.c"/>
+        <file src="src/setenv.c"/>
+        <file src="src/stpcpy.c"/>
+        <file src="src/system-posix.c"/>
+        <file src="src/system-w32.c"/>
+        <file src="src/system-w32ce.c"/>
+        <file src="src/system.c"/>
+        <file src="src/w32-fd-t.inc.h"/>
+        <file src="src/w32-includes.inc.h"/>
+        <file src="src/w32-sock-nonce.inc.h"/>
+        <file src="src/w32-sys-pth-impl.h"/>
+        <file src="src/w32-types.inc.h"/>
+        <file src="src/w32ce-add.h"/>
+        <file src="src/w32ce-fd-t.inc.h"/>
+        <copyright-notice><![CDATA[
+1992, 1995-2010, Free Software Foundation, Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="GAP~FSF">
+        <file src="AUTHORS"/>
+        <file src="aclocal.m4"/>
+        <file src="build-aux/git-log-footer"/>
+        <file src="configure"/>
+        <file src="INSTALL"/>
+        <file src="m4/gnupg-pth.m4"/>
+        <file src="m4/ltoptions.m4"/>
+        <file src="m4/ltsugar.m4"/>
+        <file src="m4/ltversion.m4"/>
+        <file src="m4/lt~obsolete.m4"/>
+        <file src="m4/onceonly.m4"/>
+        <file src="m4/socklen.m4"/>
+        <file src="m4/sys_socket_h.m4"/>
+        <file src="m4/Makefile.in"/>
+        <file src="src/libassuan-config.in"/>
+        <file src="src/libassuan.m4"/>
+        <file src="src/mkheader.c"/>
+        <copyright-notice><![CDATA[
+1992-1996, 1998-2013, Free Software Foundation, Inc
+        ]]></copyright-notice>
+        <license><![CDATA[
+This file is free software; the Free Software Foundation
+gives unlimited permission to copy and/or distribute it,
+with or without modifications, as long as this notice is preserved.
+        ]]></license>
+    </files>
+    <files license="LGPL-3+">
+        <file src="doc/Makefile.am"/>
+        <file src="doc/Makefile.in"/>
+        <file src="src/gpgcedev.c"/>
+        <file src="src/gpgcedev.def"/>
+        <file src="src/gpgcemgr.c"/>
+        <file src="tests/Makefile.am"/>
+        <file src="tests/Makefile.in"/>
+        <file src="tests/ce-createpipe.c"/>
+        <file src="tests/ce-server.c"/>
+        <file src="tests/common.h"/>
+        <file src="tests/fdpassing.c"/>
+        <file src="tests/pipeconnect.c"/>
+        <copyright-notice><![CDATA[
+2003, 2006, 2009-2010 Free Software Foundation, Inc
+        ]]></copyright-notice>
+        <license><![CDATA[
+Assuan is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as
+published by the Free Software Foundation; either version 3 of
+the License, or (at your option) any later version.
+
+Assuan is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this program; if not, see <http://www.gnu.org/licenses/>.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/lgpl-3.0.txt
+
+to view the full license text.
+        ]]></license>
+    </files>
+    <files license="LGPL-2.1+">
+        <file src="src/debug.h"/>
+        <file src="src/libassuan.def"/>
+        <file src="src/libassuan.vers"/>
+        <file src="tests/version.c"/>
+        <copyright-notice><![CDATA[
+2002, 2004-2005, 2007, 2009, 2013 g10 Code GmbH
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+ with libtool exception">
+        <file src="build-aux/compile"/>
+        <file src="build-aux/ltmain.sh"/>
+        <file src="m4/libtool.m4"/>
+        <file src="build-aux/missing"/>
+        <copyright-notice><![CDATA[
+1999-2013, Free Software Foundation, Inc
+        ]]></copyright-notice>
+        <license><![CDATA[
+GNU Libtool is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+As a special exception to the GNU General Public License,
+if you distribute this file as part of a program or library that
+is built using GNU Libtool, you may include this file under the
+same distribution terms that you use for the rest of that program.
+
+GNU Libtool is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with GNU Libtool; see the file COPYING.  If not, a copy
+can be downloaded from http://www.gnu.org/licenses/gpl.html,
+or obtained by writing to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-2.0.txt
+
+to view the full license text.
+        ]]></license>
+    </files>
+    <files license="GPL-3+">
+        <file src="build-aux/config.guess"/>
+        <file src="build-aux/config.sub"/>
+        <file src="doc/assuan.info"/>
+        <file src="doc/assuan.texi"/>
+        <copyright-notice><![CDATA[
+1985-1986, 1988, 1990-2013, Free Software Foundation, Inc
+        ]]></copyright-notice>
+        <license><![CDATA[
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 3 of the License, or (at your
+option) any later version. The text of the license can be found in the
+section entitled ``Copying''.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-3.0.txt
+
+to view the full license text.
+        ]]></license>
+    </files>
+    <files license="LGPL-2.1+">
+        <file src="src/conversion.c"/>
+        <file src="src/debug.c"/>
+        <copyright-notice><![CDATA[
+2000, Werner Koch (dd9jn)
+2001-2005, 2007, 2009, g10 Code GmbH
+        ]]></copyright-notice>
+    </files>
+    <files license="GAP">
+        <file src="autogen.sh"/>
+        <file src="m4/gpg-error.m4"/>
+        <file src="src/versioninfo.rc.in"/>
+        <copyright-notice><![CDATA[
+2003-2013 g10 Code GmbH
+        ]]></copyright-notice>
+        <license><![CDATA[
+This file is free software; as a special exception the author gives
+unlimited permission to copy and/or distribute it, with or without
+modifications, as long as this notice is preserved.
+        ]]></license>
+    </files>
+    <files license="LGPL-2.1+">
+        <file src="src/assuan.c"/>
+        <copyright-notice><![CDATA[
+2001-2002, 2012-2013, g10 Code GmbH
+2009, Free Software Foundation, Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="m4/autobuild.m4"/>
+        <copyright-notice><![CDATA[
+2004, Simon Josefsson
+        ]]></copyright-notice>
+        <license><![CDATA[
+This file is free software, distributed under the terms of the GNU
+General Public License.  As a special exception to the GNU General
+Public License, this file may be distributed as part of a program
+that contains a configuration script generated by Autoconf, under
+the same distribution terms as the rest of that program.
+
+This file can be used in projects which are not available under
+the GNU General Public License or the GNU Library General Public
+License but which still want to provide support for Autobuild.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-2.0.txt
+
+to view the full license text.
+        ]]></license>
+    </files>
+    <license handle="LGPL-2.1+"><![CDATA[
+Assuan is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as
+published by the Free Software Foundation; either version 2.1 of
+the License, or (at your option) any later version.
+
+Assuan is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this program; if not, see <http://www.gnu.org/licenses/>.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/lgpl-2.1.txt
+
+to view the full license text.
+    ]]></license>
+</copyright>

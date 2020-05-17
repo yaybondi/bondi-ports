@@ -9,6 +9,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="bolt-repo-keys-20191009.tar.gz" subdir="sources"
                 sha256sum="d11bc5507e7ce30e648728f5dbe0588da0f854c5f9862c330a9208e5a5961556"/>

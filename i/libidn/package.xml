@@ -19,6 +19,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="libidn-1.33.tar.gz" subdir="sources"
                 sha256sum="44a7aab635bb721ceef6beecc4d49dfd19478325e1b47f3196f7d2acc4930e19"/>

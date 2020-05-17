@@ -10,6 +10,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="sqlite3-3.27.2.tar.xz" subdir="sources"
                 sha256sum="6cb1606bbc38270739d256b5ab1cf94dccf5b2a3b4cbceb0545aac76f6ef40f2"/>

@@ -1,0 +1,26 @@
+<copyright>
+    <files license="custom">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+mawk 1.3.3 Nov 1996, Copyright (C) Michael D. Brennan
+Modifications for Debian GNU/Linux Copyright (C) 1995-96 Chris Fearnley.
+Modifications for Debian GNU/Linux Copyright (C) 1998-2003 James Troup.
+        ]]></copyright-notice>
+        <license><![CDATA[
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License version 2 as published
+by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-2.0.txt
+
+to view the full license text.
+        ]]></license>
+    </files>
+</copyright>

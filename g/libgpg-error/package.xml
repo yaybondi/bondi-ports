@@ -14,6 +14,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="libgpg-error-1.35.tar.bz2" subdir="sources"
                 sha256sum="cbd5ee62a8a8c88d48c158fff4fc9ead4132aacd1b4a56eb791f9f997d07e067"/>

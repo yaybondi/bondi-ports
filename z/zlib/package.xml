@@ -9,6 +9,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="zlib-1.2.11.dfsg.tar.gz" subdir="sources"
                 sha256sum="80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899"/>

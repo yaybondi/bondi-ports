@@ -12,6 +12,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="tzdb-2019b.tar.lz" subdir="sources"
                 sha256sum="180adb8a6d9653a4892b9b1bf59ed0290a9fbfd3755f2f116cd46f2084ab02ef"/>

@@ -1,0 +1,44 @@
+<copyright>
+    <files license="custom">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+The "chrpath" program was written by
+
+Geoffrey Keating <geoffk@ozemail.com.au>
+  Implemented first version of chrpath.c based on first version of
+  killrpath.
+Peeter Joot <peeterj@ca.ibm.com>
+  Implemented first version of killrpath.c.
+Petter Reinholdtsen <pere@hungry.com>
+  Collected both implementations and made userfriendly wrapper.
+Javier Serrano Polo <jasp00@terra.es>
+  Made it arch-independent so it can be used for cross-development.
+
+With patches from:
+
+Darren Salt <linux@youmustbejoking.demon.co.uk>
+David Hull <hull@paracel.com> 
+Bradford W. Johnson <bradford@math.umn.edu>
+Thomas Anders <anders@hmi.de>
+Tollef Fog Heen <tfheen@debian.org>
+Eric S. Raymond <esr@thyrsus.com>
+        ]]></copyright-notice>
+        <license><![CDATA[
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-2.0.txt
+
+to view the full license text.
+        ]]></license>
+    </files>
+</copyright>

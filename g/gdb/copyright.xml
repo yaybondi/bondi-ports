@@ -1,0 +1,494 @@
+<copyright>
+    <files license="GPL-3+">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+1984-2014, Free Software Foundation, Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="LGPL-2+">
+        <file src="include/leb128.h"/>
+        <file src="include/safe-ctype.h"/>
+        <file src="include/timeval-utils.h"/>
+        <file src="include/demangle.h"/>
+        <file src="intl/bindtextdom.c"/>
+        <file src="intl/dcgettext.c"/>
+        <file src="intl/dcigettext.c"/>
+        <file src="intl/dcngettext.c"/>
+        <file src="intl/dgettext.c"/>
+        <file src="intl/dngettext.c"/>
+        <file src="intl/eval-plural.h"/>
+        <file src="intl/explodename.c"/>
+        <file src="intl/finddomain.c"/>
+        <file src="intl/gettext.c"/>
+        <file src="intl/gettextP.h"/>
+        <file src="intl/gmo.h"/>
+        <file src="intl/hash-string.h"/>
+        <file src="intl/l10nflist.c"/>
+        <file src="intl/libgnuintl.h"/>
+        <file src="intl/loadinfo.h"/>
+        <file src="intl/loadmsgcat.c"/>
+        <file src="intl/localcharset.c"/>
+        <file src="intl/localcharset.h"/>
+        <file src="intl/localealias.c"/>
+        <file src="intl/localename.c"/>
+        <file src="intl/log.c"/>
+        <file src="intl/ngettext.c"/>
+        <file src="intl/osdep.c"/>
+        <file src="intl/plural-exp.c"/>
+        <file src="intl/plural-exp.h"/>
+        <file src="intl/plural.c"/>
+        <file src="intl/relocatable.c"/>
+        <file src="intl/relocatable.h"/>
+        <file src="intl/textdomain.c"/>
+        <file src="libiberty/argv.c"/>
+        <file src="libiberty/asprintf.c"/>
+        <file src="libiberty/choose-temp.c"/>
+        <file src="libiberty/concat.c"/>
+        <file src="libiberty/fdmatch.c"/>
+        <file src="libiberty/fopen_unlocked.c"/>
+        <file src="libiberty/getruntime.c"/>
+        <file src="libiberty/hex.c"/>
+        <file src="libiberty/lbasename.c"/>
+        <file src="libiberty/mempcpy.c"/>
+        <file src="libiberty/mkstemps.c"/>
+        <file src="libiberty/pex-common.c"/>
+        <file src="libiberty/pex-one.c"/>
+        <file src="libiberty/pexecute.c"/>
+        <file src="libiberty/putenv.c"/>
+        <file src="libiberty/setproctitle.c"/>
+        <file src="libiberty/simple-object-common.h"/>
+        <file src="libiberty/spaces.c"/>
+        <file src="libiberty/stpcpy.c"/>
+        <file src="libiberty/stpncpy.c"/>
+        <file src="libiberty/strndup.c"/>
+        <file src="libiberty/timeval-utils.c"/>
+        <file src="libiberty/vasprintf.c"/>
+        <file src="libiberty/xexit.c"/>
+        <file src="libiberty/xmalloc.c"/>
+        <file src="libiberty/xstrndup.c"/>
+        <file src="libiberty/cplus-dem.c"/>
+        <file src="libiberty/hashtab.c"/>
+        <file src="libiberty/make-temp-file.c"/>
+        <file src="libiberty/pex-common.h"/>
+        <file src="libiberty/pex-djgpp.c"/>
+        <file src="libiberty/pex-msdos.c"/>
+        <file src="libiberty/pex-unix.c"/>
+        <file src="libiberty/pex-win32.c"/>
+        <file src="libiberty/safe-ctype.c"/>
+        <copyright-notice><![CDATA[
+1989-2011 Free Software Foundation, Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="bfd/xtensa-modules.c"/>
+        <file src="etc/texi2pod.pl"/>
+        <file src="include/elf/xgate.h"/>
+        <file src="include/fnmatch.h"/>
+        <file src="include/fopen-bin.h"/>
+        <file src="include/fopen-same.h"/>
+        <file src="include/fopen-vms.h"/>
+        <file src="include/gdbm.h"/>
+        <file src="include/ieee.h"/>
+        <file src="include/md5.h"/>
+        <file src="include/objalloc.h"/>
+        <file src="include/os9k.h"/>
+        <file src="include/partition.h"/>
+        <file src="include/simple-object.h"/>
+        <file src="include/sort.h"/>
+        <file src="include/symcat.h"/>
+        <file src="include/libiberty.h"/>
+        <file src="include/filenames.h"/>
+        <file src="include/ansidecl.h"/>
+        <file src="include/dyn-string.h"/>
+        <file src="include/fibheap.h"/>
+        <file src="include/floatformat.h"/>
+        <file src="include/getopt.h"/>
+        <file src="include/hashtab.h"/>
+        <file src="include/obstack.h"/>
+        <file src="include/splay-tree.h"/>
+        <file src="include/xtensa-config.h"/>
+        <file src="intl/intl-compat.c"/>
+        <file src="libiberty/_doprnt.c"/>
+        <file src="libiberty/clock.c"/>
+        <file src="libiberty/cp-demint.c"/>
+        <file src="libiberty/crc32.c"/>
+        <file src="libiberty/dwarfnames.c"/>
+        <file src="libiberty/dyn-string.c"/>
+        <file src="libiberty/fibheap.c"/>
+        <file src="libiberty/filename_cmp.c"/>
+        <file src="libiberty/fnmatch.c"/>
+        <file src="libiberty/lrealpath.c"/>
+        <file src="libiberty/md5.c"/>
+        <file src="libiberty/memmem.c"/>
+        <file src="libiberty/objalloc.c"/>
+        <file src="libiberty/obstack.c"/>
+        <file src="libiberty/partition.c"/>
+        <file src="libiberty/physmem.c"/>
+        <file src="libiberty/simple-object-coff.c"/>
+        <file src="libiberty/simple-object-elf.c"/>
+        <file src="libiberty/simple-object-mach-o.c"/>
+        <file src="libiberty/simple-object-xcoff.c"/>
+        <file src="libiberty/simple-object.c"/>
+        <file src="libiberty/snprintf.c"/>
+        <file src="libiberty/sort.c"/>
+        <file src="libiberty/stack-limit.c"/>
+        <file src="libiberty/strtod.c"/>
+        <file src="libiberty/testsuite/test-demangle.c"/>
+        <file src="libiberty/testsuite/test-expandargv.c"/>
+        <file src="libiberty/testsuite/test-pexecute.c"/>
+        <file src="libiberty/unlink-if-ordinary.c"/>
+        <file src="libiberty/vsnprintf.c"/>
+        <file src="libiberty/vsprintf.c"/>
+        <file src="libiberty/cp-demangle.c"/>
+        <file src="libiberty/cp-demangle.h"/>
+        <file src="libiberty/floatformat.c"/>
+        <file src="libiberty/getopt.c"/>
+        <file src="libiberty/getopt1.c"/>
+        <file src="libiberty/make-relative-prefix.c"/>
+        <file src="libiberty/splay-tree.c"/>
+        <file src="libiberty/sha1.c"/>
+        <file src="libiberty/setenv.c"/>
+        <file src="ltmain.sh"/>
+        <copyright-notice><![CDATA[
+1997-2011 Free Software Foundation, Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-3+ with GCC-Runtime-3.1 exception">
+        <file src="gdb/common/i386-gcc-cpuid.h"/>
+        <file src="libdecnumber/bid/bid-dpd.h"/>
+        <file src="libdecnumber/bid/bid2dpd_dpd2bid.c"/>
+        <file src="libdecnumber/bid/bid2dpd_dpd2bid.h"/>
+        <file src="libdecnumber/bid/decimal128.c"/>
+        <file src="libdecnumber/bid/decimal32.c"/>
+        <file src="libdecnumber/bid/decimal64.c"/>
+        <file src="libdecnumber/bid/host-ieee128.c"/>
+        <file src="libdecnumber/bid/host-ieee32.c"/>
+        <file src="libdecnumber/bid/host-ieee64.c"/>
+        <file src="libdecnumber/dconfig.h"/>
+        <file src="libdecnumber/decBasic.c"/>
+        <file src="libdecnumber/decCommon.c"/>
+        <file src="libdecnumber/decContext.c"/>
+        <file src="libdecnumber/decContext.h"/>
+        <file src="libdecnumber/decDPD.h"/>
+        <file src="libdecnumber/decDouble.c"/>
+        <file src="libdecnumber/decDouble.h"/>
+        <file src="libdecnumber/decExcept.c"/>
+        <file src="libdecnumber/decExcept.h"/>
+        <file src="libdecnumber/decLibrary.c"/>
+        <file src="libdecnumber/decNumber.c"/>
+        <file src="libdecnumber/decNumber.h"/>
+        <file src="libdecnumber/decNumberLocal.h"/>
+        <file src="libdecnumber/decPacked.c"/>
+        <file src="libdecnumber/decPacked.h"/>
+        <file src="libdecnumber/decQuad.c"/>
+        <file src="libdecnumber/decQuad.h"/>
+        <file src="libdecnumber/decRound.c"/>
+        <file src="libdecnumber/decRound.h"/>
+        <file src="libdecnumber/decSingle.c"/>
+        <file src="libdecnumber/decSingle.h"/>
+        <file src="libdecnumber/dpd/decimal128.c"/>
+        <file src="libdecnumber/dpd/decimal128.h"/>
+        <file src="libdecnumber/dpd/decimal128Local.h"/>
+        <file src="libdecnumber/dpd/decimal32.c"/>
+        <file src="libdecnumber/dpd/decimal32.h"/>
+        <file src="libdecnumber/dpd/decimal64.c"/>
+        <file src="libdecnumber/dpd/decimal64.h"/>
+        <file src="include/dwarf2.h"/>
+        <copyright-notice><![CDATA[
+2005-2014, Free Software Foundation, Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-3+">
+        <file src="sim/arm/armcopro.c"/>
+        <file src="sim/arm/armdefs.h"/>
+        <file src="sim/arm/armemu.c"/>
+        <file src="sim/arm/armemu.h"/>
+        <file src="sim/arm/armfpe.h"/>
+        <file src="sim/arm/arminit.c"/>
+        <file src="sim/arm/armopts.h"/>
+        <file src="sim/arm/armos.c"/>
+        <file src="sim/arm/armos.h"/>
+        <file src="sim/arm/armrdi.c"/>
+        <file src="sim/arm/armsupp.c"/>
+        <file src="sim/arm/armvirt.c"/>
+        <file src="sim/arm/bag.c"/>
+        <file src="sim/arm/bag.h"/>
+        <file src="sim/arm/communicate.c"/>
+        <file src="sim/arm/communicate.h"/>
+        <file src="sim/arm/dbg_conf.h"/>
+        <file src="sim/arm/dbg_cp.h"/>
+        <file src="sim/arm/dbg_hif.h"/>
+        <file src="sim/arm/dbg_rdi.h"/>
+        <file src="sim/arm/gdbhost.c"/>
+        <file src="sim/arm/gdbhost.h"/>
+        <file src="sim/arm/kid.c"/>
+        <file src="sim/arm/main.c"/>
+        <file src="sim/arm/parent.c"/>
+        <copyright-notice><![CDATA[
+1994, 2000 Advanced RISC Machines Ltd
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-3+">
+        <file src="sim/erc32/erc32.c"/>
+        <file src="sim/erc32/exec.c"/>
+        <file src="sim/erc32/func.c"/>
+        <file src="sim/erc32/interf.c"/>
+        <file src="sim/erc32/sis.h"/>
+        <copyright-notice><![CDATA[
+1995, Jiri Gaisler
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-3-clause">
+        <file src="libiberty/bsearch.c"/>
+        <file src="libiberty/random.c"/>
+        <file src="libiberty/strtoul.c"/>
+        <copyright-notice><![CDATA[
+1983, 1990, Regents of the University of California
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="readline/examples/rlfe/extern.h"/>
+        <file src="readline/examples/rlfe/os.h"/>
+        <file src="readline/examples/rlfe/pty.c"/>
+        <copyright-notice><![CDATA[
+1987, 1993-2002 Oliver Laumann
+        ]]></copyright-notice>
+    </files>
+    <files license="LGPL-2.1+">
+        <file src="bfd/hosts/x86-64linux.h"/>
+        <file src="include/xregex2.h"/>
+        <file src="libiberty/regex.c"/>
+        <file src="gdb/common/glibc_thread_db.h"/>
+        <file src="include/longlong.h"/>
+        <file src="libiberty/strverscmp.c"/>
+        <copyright-notice><![CDATA[
+1985-2013, Free Software Foundation, Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-3-clause">
+        <file src="libiberty/strtol.c"/>
+        <copyright-notice><![CDATA[
+1990, The Regents of the University of California
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="readline/examples/readlinebuf.h"/>
+        <copyright-notice><![CDATA[
+2001, Dimitris Vyzovitis [vyzo@media.mit.edu]
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="readline/examples/rlfe/rlfe.c"/>
+        <copyright-notice><![CDATA[
+2004, 1999 Per Bothner
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-3+ and LGPL-2.1+">
+        <file src="gdb/gdb_proc_service.h"/>
+        <copyright-notice><![CDATA[
+1999-2014, Free Software Foundation, Inc
+        ]]></copyright-notice>
+    </files>
+    <license handle="BSD-3-clause"><![CDATA[
+Copyright (c) The Regents of the University of California.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+3. Neither the name of the University nor the names of its contributors
+may be used to endorse or promote products derived from this software
+without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGE.
+    ]]></license>
+    <license handle="LGPL-2+"><![CDATA[
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Library General Public
+License as published by the Free Software Foundation; either
+version 2 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Library General Public License for more details.
+
+You should have received a copy of the GNU Library General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+
+On Debian systems, the full text of the GNU Library General Public
+License version 2 can be found in the file
+`/usr/share/common-licenses/LGPL-2'.
+    ]]></license>
+    <license handle="LGPL-2.1+"><![CDATA[
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+
+On Debian systems, the full text of the GNU Lesser General Public
+License version 2.1 can be found in the file
+`/usr/share/common-licenses/LGPL-2.1'.
+    ]]></license>
+    <license handle="GPL-2+"><![CDATA[
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+On Debian systems, the full text of the GNU General Public
+License version 2 can be found in the file
+`/usr/share/common-licenses/GPL-2'.
+    ]]></license>
+    <license handle="GPL-3+"><![CDATA[
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+On Debian systems, the full text of the GNU General Public
+License version 3 can be found in the file
+`/usr/share/common-licenses/GPL-3'.
+    ]]></license>
+    <license handle="GPL-3+ with GCC-Runtime-3.1 exception"><![CDATA[
+This file is part of GCC.
+
+GCC is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free
+Software Foundation; either version 3, or (at your option) any later
+version.
+
+GCC is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+License for more details.
+
+Under Section 7 of GPL version 3, you are granted additional
+permissions described in the GCC Runtime Library Exception, version
+3.1, as published by the Free Software Foundation.
+
+You should have received a copy of the GNU General Public License and
+a copy of the GCC Runtime Library Exception along with this program;
+see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+<https://www.gnu.org/licenses/>.
+
+On Debian systems, the full text of the GNU General Public
+License version 3 can be found in the file
+`/usr/share/common-licenses/GPL-3'.
+
+GCC RUNTIME LIBRARY EXCEPTION
+
+Version 3.1, 31 March 2009
+
+Copyright (C) 2009 Free Software Foundation, Inc. <https://fsf.org/>
+
+Everyone is permitted to copy and distribute verbatim copies of this
+license document, but changing it is not allowed.
+
+This GCC Runtime Library Exception ("Exception") is an additional
+permission under section 7 of the GNU General Public License, version
+3 ("GPLv3"). It applies to a given file (the "Runtime Library") that
+bears a notice placed by the copyright holder of the file stating that
+the file is governed by GPLv3 along with this Exception.
+
+When you use GCC to compile a program, GCC may combine portions of
+certain GCC header files and runtime libraries with the compiled
+program. The purpose of this Exception is to allow compilation of
+non-GPL (including proprietary) programs to use, in this way, the
+header files and runtime libraries covered by this Exception.
+
+0. Definitions.
+
+A file is an "Independent Module" if it either requires the Runtime
+Library for execution after a Compilation Process, or makes use of an
+interface provided by the Runtime Library, but is not otherwise based
+on the Runtime Library.
+
+"GCC" means a version of the GNU Compiler Collection, with or without
+modifications, governed by version 3 (or a specified later version) of
+the GNU General Public License (GPL) with the option of using any
+subsequent versions published by the FSF.
+
+"GPL-compatible Software" is software whose conditions of propagation,
+modification and use would permit combination with GCC in accord with
+the license of GCC.
+
+"Target Code" refers to output from any compiler for a real or virtual
+target processor architecture, in executable form or suitable for
+input to an assembler, loader, linker and/or execution
+phase. Notwithstanding that, Target Code does not include data in any
+format that is used as a compiler intermediate representation, or used
+for producing a compiler intermediate representation.
+
+The "Compilation Process" transforms code entirely represented in
+non-intermediate languages designed for human-written code, and/or in
+Java Virtual Machine byte code, into Target Code. Thus, for example,
+use of source code generators and preprocessors need not be considered
+part of the Compilation Process, since the Compilation Process can be
+understood as starting with the output of the generators or
+preprocessors.
+
+A Compilation Process is "Eligible" if it is done using GCC, alone or
+with other GPL-compatible software, or if it is done without using any
+work based on GCC. For example, using non-GPL-compatible Software to
+optimize any GCC intermediate representations would not qualify as an
+Eligible Compilation Process.
+
+1. Grant of Additional Permission.
+
+You have permission to propagate a work of Target Code formed by
+combining the Runtime Library with Independent Modules, even if such
+propagation would otherwise violate the terms of GPLv3, provided that
+all Target Code was generated by Eligible Compilation Processes. You
+may then convey such a combination under terms of your choice,
+consistent with the licensing of the Independent Modules.
+
+2. No Weakening of GCC Copyleft.
+
+The availability of this Exception does not imply any general
+presumption that third-party software is unaffected by the copyleft
+requirements of the license of GCC.
+    ]]></license>
+</copyright>

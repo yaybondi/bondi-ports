@@ -13,6 +13,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <!-- MAINTAINER NOTES:
           -
           - Debian keep several tarballs inside the orig tarball. Extract the

@@ -11,6 +11,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="linux-4.19.37.tar.xz" subdir="sources"
                 sha256sum="04be08391496ff96f52459f9992e36eeb8c5edc2980e43a08c20b68d945a3af1"/>

@@ -18,6 +18,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="gmp-6.1.2+dfsg.tar.xz" subdir="sources"
                 sha256sum="18016f718f621e7641ddd4e57f8e140391c5183252e5998263ffff59198a65b7"/>

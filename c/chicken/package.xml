@@ -10,6 +10,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="chicken-4.13.0.tar.gz" subdir="sources"
                 sha256sum="add549619a31363d6608b39e0cf0e68b9d5e6ff2a719b5691ddeba57229c6c43"/>

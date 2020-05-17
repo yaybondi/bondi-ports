@@ -1,0 +1,59 @@
+<copyright>
+    <files license="GPL-2+">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+Copyright © 2000-2008 Silicon Graphics, Inc.
+Copyright © 1999-2001,2007-2009 Andreas Gruenbacher
+        ]]></copyright-notice>
+        <license><![CDATA[
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-2.0.txt
+
+to view the full license text.
+        ]]></license>
+    </files>
+    <files license="LGPL-2+">
+        <file src="exports"/>
+        <file src="include/*.h"/>
+        <file src="libacl/*.c"/>
+        <file src="libacl/*.h"/>
+        <file src="libmisc/*.c"/>
+        <file src="tools/do_set.*"/>
+        <file src="tools/parse.*"/>
+        <file src="tools/sequence.c"/>
+        <file src="tools/setfacl.c"/>
+        <file src="tools/user_group.h"/>
+        <copyright-notice><![CDATA[
+Copyright © 2001-2002 Silicon Graphics, Inc.
+Copyright © 1999-2003,2007,2009,2011 Andreas Gruenbacher
+        ]]></copyright-notice>
+        <license><![CDATA[
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/lgpl-2.0.txt
+
+to view the full license text.
+        ]]></license>
+    </files>
+</copyright>

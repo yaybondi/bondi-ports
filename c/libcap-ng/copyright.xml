@@ -1,0 +1,34 @@
+<copyright>
+    <files license="LGPL-2.1+, GPL-2+">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+Copyright 2009 Red Hat Inc.
+        ]]></copyright-notice>
+        <license><![CDATA[
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/lgpl-2.1.txt
+
+to view the full license text.
+
+Files in the 'utils/' directory, Makefile.am and doc/Makefile.am are
+licensed under the GNU General Public License version 2 or above
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-2.0.txt
+
+to view the full license text.
+        ]]></license>
+    </files>
+</copyright>

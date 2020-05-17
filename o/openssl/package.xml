@@ -10,6 +10,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="openssl-1.1.1c.tar.gz" subdir="sources"
                 sha256sum="f6fb3079ad15076154eda9413fed42877d668e7069d9b87396d0804fdb3f4c90"/>

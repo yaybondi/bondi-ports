@@ -18,6 +18,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="ldns-1.7.0.tar.gz" subdir="sources"
                 sha256sum="c19f5b1b4fb374cfe34f4845ea11b1e0551ddc67803bd6ddd5d2a20f0997a6cc"/>

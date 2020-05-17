@@ -16,6 +16,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="gdb-8.2.1.tar.xz" subdir="sources"
                 sha256sum="d9a1cc7c8fecb147d4779d6169a6624e2e4c1c74034c6143744c3b0ce8ec5fdc"/>

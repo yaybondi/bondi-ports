@@ -11,6 +11,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="nss-3.42.1.tar.gz" subdir="sources"
                 sha256sum="087db37d38fd49dfd584dd2a8b5baa7fc88de7c9bd97c0c2d5be4abcafc61fc6"/>

@@ -13,6 +13,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="ncurses-6.1+20181013.tar.gz" subdir="sources"
                 sha256sum="aeb1d098ee90b39a763b57b00da19ff5bbb573dea077f98fbd85d59444bb3b59"/>

@@ -26,6 +26,8 @@
             </ul>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="gnutls28-3.6.7.tar.xz" subdir="sources"
                 sha256sum="5b3409ad5aaf239808730d1ee12fdcd148c0be00262c7edf157af655a8a188e2"/>

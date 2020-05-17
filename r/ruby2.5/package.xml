@@ -19,6 +19,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="ruby2.5-2.5.5.tar.xz" subdir="sources"
                 sha256sum="a49a222bbeeeb0191ae043a509cd05137869f971a33fef74d3c0aaae95170877"/>

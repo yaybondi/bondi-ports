@@ -25,6 +25,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="curl-7.64.0.tar.gz" subdir="sources"
                 sha256sum="cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5"/>

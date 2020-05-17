@@ -12,6 +12,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="nss-pem-1.0.5.tar.gz" subdir="sources"
                 sha256sum="383ed14b0c8b41fb51ebb0d34e7db16f7d2cb4eb00d158f6f6b3f3696e9e0c2e"/>

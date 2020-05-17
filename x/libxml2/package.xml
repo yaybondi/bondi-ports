@@ -17,6 +17,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="libxml2-2.9.4+dfsg1.tar.xz" subdir="sources"
                 sha256sum="a74ad55e346aa0b2b41903e66d21f8f3d2a736b3f41e32496376861ab484184e"/>

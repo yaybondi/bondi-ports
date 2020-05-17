@@ -9,6 +9,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="usign-20190902.1-1.tar.gz" subdir="sources"
                 sha256sum="580a4a9a026748174cbcc7f745cc3dc2c6f716cd2a6644c600b8d80c5e9255ee"/>

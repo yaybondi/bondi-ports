@@ -1,0 +1,217 @@
+<copyright>
+    <files license="GPL-2+">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+2002-2015, g10 Code GmbH
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="fltk/*"/>
+        <copyright-notice><![CDATA[
+2016 Anatoly madRat L. Berenblit
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="tqt/Makefile.am"/>
+        <file src="tqt/main.cpp"/>
+        <file src="tqt/pinentrydialog.h"/>
+        <file src="tqt/pinentrydialog.cpp"/>
+        <copyright-notice><![CDATA[
+2002-2015 g10 Code GmbH
+2002 Klarälvdalens Datakonsult AB
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2">
+        <file src="tqt/secqinternal.cpp"/>
+        <file src="tqt/secqinternal_p.h"/>
+        <copyright-notice><![CDATA[
+1992-2000 Trolltech AS
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2">
+        <file src="tqt/secqlineedit.cpp"/>
+        <file src="tqt/secqlineedit.h"/>
+        <file src="tqt/secqstring.cpp"/>
+        <file src="tqt/secqstring.h"/>
+        <copyright-notice><![CDATA[
+1992-2002 Trolltech AS
+2003 g10 Code GmbH
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="build-aux/*"/>
+        <file src="depcomp"/>
+        <file src="doc/mdate-sh"/>
+        <file src="doc/texinfo.tex"/>
+        <file src="m4/curses.m4"/>
+        <file src="m4/iconv.m4"/>
+        <file src="missing"/>
+        <file src="secmem/secmem.c"/>
+        <copyright-notice><![CDATA[
+1996-2007, Free Software Foundation
+        ]]></copyright-notice>
+    </files>
+    <files license="X11">
+        <file src="install-sh"/>
+        <copyright-notice><![CDATA[
+1994 X Consortium
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="gtk+-2/pinentry-gtk-2.c"/>
+        <copyright-notice><![CDATA[
+1999 Robert Bihlmeyer <robbe@orcus.priv.at>
+2001, 2002, 2007 g10 Code GmbH
+2004 Albrecht Dreß
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="m4/pkg.m4"/>
+        <copyright-notice><![CDATA[
+2004 Scott James Remnant <scott@netsplit.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="m4/qt.m4"/>
+        <copyright-notice><![CDATA[
+1997 Janos Farkas (chexum@shadow.banki.hu)o
+1997,98,99 Stephan Kulow (coolo@kde.org)
+2002 g10 Code GmbH
+        ]]></copyright-notice>
+    </files>
+    <files license="LGPL-3+ or GPL-2+">
+        <file src="pinentry/argparse.c"/>
+        <copyright-notice><![CDATA[
+1998-2001, 2006-2008, 2012 Free Software Foundation, Inc.
+1997-2001, 2006-2008, 2013-2015 Werner Koch
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="configure.ac"/>
+        <file src="secmem/util.*"/>
+        <copyright-notice><![CDATA[
+1999, Robert Bihlmeyer <robbe@orcus.priv.at>
+2001, 2002, 2003, 2004, 2007 g10 Code GmbH
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="secmem/memory.h"/>
+        <copyright-notice><![CDATA[
+1998,1999 Free Software Foundation, Inc.
+1999,2000 Robert Bihlmeyer <robbe@orcus.priv.at>
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="secmem/secmem++.h"/>
+        <copyright-notice><![CDATA[
+2008 Marc Mutz <marc@kdab.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="tty/pinentry-tty.c"/>
+        <copyright-notice><![CDATA[
+2014 Serge Voilokov
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="qt/pinentrydialog.*"/>
+        <copyright-notice><![CDATA[
+2002, 2008 Klarälvdalens Datakonsult AB <steffen@klaralvdalens-datakonsult.se>
+2007 Ingo Klöcker
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="qt/pinentryconfirm.*"/>
+        <copyright-notice><![CDATA[
+2011 Ben Kibbey <bjk@luxsci.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="qt/main.cpp"/>
+        <copyright-notice><![CDATA[
+2002, 2008 Klarälvdalens Datakonsult AB (KDAB)
+2003 g10 Code GmbH
+2007 Ingo Klöcker
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="qt/Makefile.am"/>
+        <copyright-notice><![CDATA[
+2002 Klarälvdalens Datakonsult AB (KDAB)
+2008 g10 Code GmbH
+        ]]></copyright-notice>
+    </files>
+    <license handle="X11"><![CDATA[
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+X CONSORTIUM BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNEC-
+TION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of the X Consortium shall not
+be used in advertising or otherwise to promote the sale, use or other deal-
+ings in this Software without prior written authorization from the X Consor-
+tium.
+    ]]></license>
+    <license handle="GPL-2+"><![CDATA[
+This is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+It is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-2.0.txt
+
+to view the full license text.
+    ]]></license>
+    <license handle="GPL-2"><![CDATA[
+This is free software; you can redistribute it and/or modify
+it under the terms of version 2 of the GNU General Public License
+as published by  the Free Software Foundation.
+
+It is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-2.0.txt
+
+to view the full license text.
+    ]]></license>
+    <license handle="LGPL-3+"><![CDATA[
+This is free software; you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+It is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/lgpl-3.0.txt
+
+to view the full license text.
+    ]]></license>
+</copyright>

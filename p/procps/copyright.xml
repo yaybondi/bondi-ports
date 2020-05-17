@@ -1,0 +1,118 @@
+<copyright>
+    <files license="LGPL-2.1+">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+1998-2004 Albert Cahalan
+1991 Tony Rems <rembo@unisoft.com>
+1993 Larry Greenfield
+1996 Charles Blake
+1999 Mike Coleman <mkc@acm.org>
+2004 Nicholas Miell
+2003 Chris Rivera
+2003 Robert Love <rml@tech9.net>
+2008 Morty Abzug
+2009 Jarrod Lowe <procps@rrod.net>
+1992 Branko Lankester
+???? David Engel <david@ods.com>
+1992-1998 Michael K. Johnson <johnsonm@sunsite.unc.edu>
+2012 Craig Small <csmall@enc.com.au>
+1995      Martin Schulze <joey@infodrom.north.de>
+        ]]></copyright-notice>
+    </files>
+    <files license="LGPL-2.0+">
+        <file src="top/*"/>
+        <copyright-notice><![CDATA[
+2002-2014 James C. Warner
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2.0+">
+        <file src="pgrep.*"/>
+        <copyright-notice><![CDATA[
+2000 Kjetil Torgrim Homme <kjetilho@ifi.uio.no>
+2002,2006 Albert Cahalan
+2012 Roberto Polli <rpolli@babel.it>
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2.0+">
+        <file src="pidof.*"/>
+        <copyright-notice><![CDATA[
+2013  Jaromir Capik <jcapik@redhat.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2.0+">
+        <file src="free.*"/>
+        <copyright-notice><![CDATA[
+2011 Sami Kerola <kerolasa@iki.fi>
+2002-2003 Robert Love <rml@tech9.net>
+1992 Brian Edmonds
+1992 Rafal Maszkowski
+2004 Albert Cahalan
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2.0+">
+        <file src="sysctl.*"/>
+        <copyright-notice><![CDATA[
+1999 George Staikos
+        ]]></copyright-notice>
+    </files>
+    <license handle="GPL-2.0+"><![CDATA[
+This package is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This package is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-2.0.txt
+
+to view the full license text.
+    ]]></license>
+    <license handle="LGPL-2.0+"><![CDATA[
+This package is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2 of the License, or (at your option) any later version.
+
+This package is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/lgpl-2.0.txt
+
+to view the full license text.
+    ]]></license>
+    <license handle="LGPL-2.1+"><![CDATA[
+This package is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This package is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/lgpl-2.1.txt
+
+to view the full license text.
+    ]]></license>
+</copyright>

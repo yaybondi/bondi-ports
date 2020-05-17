@@ -1,0 +1,1290 @@
+<copyright>
+    <files license="BSD">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+Copyright 1998-2007 Ajuba Solutions and other parties
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="apps/*,"/>
+        <file src="modules/bee/*,"/>
+        <file src="modules/cache/*,"/>
+        <file src="modules/devtools/*,"/>
+        <file src="modules/doctools*/*,"/>
+        <file src="modules/dtplite/*,"/>
+        <file src="modules/exif/*,"/>
+        <file src="modules/grammar_fa/*,"/>
+        <file src="modules/grammar_me/*,"/>
+        <file src="modules/grammar_peg/*,"/>
+        <file src="modules/interp/*,"/>
+        <file src="modules/lambda/*,"/>
+        <file src="modules/log/log.man,"/>
+        <file src="modules/map/map_slippy.tcl,"/>
+        <file src="modules/nns/*,"/>
+        <file src="modules/oometa/oometa.test,"/>
+        <file src="modules/ooutil/*,"/>
+        <file src="modules/page/*,"/>
+        <file src="modules/pluginmgr/*,"/>
+        <file src="modules/pt/*,"/>
+        <file src="modules/report/*,"/>
+        <file src="modules/string/*,"/>
+        <file src="modules/struct/*,"/>
+        <file src="modules/term/*,"/>
+        <file src="modules/tie/*,"/>
+        <file src="modules/transfer/*,"/>
+        <file src="modules/uev/*,"/>
+        <file src="modules/v*,"/>
+        <file src="modules/w*"/>
+        <copyright-notice><![CDATA[
+2001-2014 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="examples/bibtex/*"/>
+        <copyright-notice><![CDATA[
+2005 Neil Madden
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="examples/ftp/*"/>
+        <copyright-notice><![CDATA[
+1997,1998 Steffen Traeger
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="examples/ftp/hpupdate.tcl"/>
+        <copyright-notice><![CDATA[
+1998 Steffen Traeger
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="examples/math/*"/>
+        <copyright-notice><![CDATA[
+2003-2005 Stephane Arnold
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="examples/dns/*,"/>
+        <file src="examples/htmlparse/*,"/>
+        <file src="examples/mime/*.tcl,"/>
+        <file src="examples/ntp/*,"/>
+        <file src="examples/sasl/*,"/>
+        <file src="examples/smtpd/*,"/>
+        <file src="modules/md4/*,"/>
+        <file src="modules/md5/*,"/>
+        <file src="modules/md5crypt/*,"/>
+        <file src="modules/ntp/*,"/>
+        <file src="modules/otp/*,"/>
+        <file src="modules/rc4/*,"/>
+        <file src="modules/ripemd/*,"/>
+        <file src="modules/sasl/*,"/>
+        <file src="modules/smtpd/*,"/>
+        <file src="modules/uuid/*"/>
+        <copyright-notice><![CDATA[
+2001-2006 Pat Thoyts <patthoyts@users.sf.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="MTR">
+        <file src="examples/mime/mbot/*"/>
+        <copyright-notice><![CDATA[
+1999-2002 Marshall T. Rose
+        ]]></copyright-notice>
+        <license><![CDATA[
+Hold harmless the author, and any lawful use is allowed.
+        ]]></license>
+    </files>
+    <files license="BSD">
+        <file src="examples/tepam/*"/>
+        <copyright-notice><![CDATA[
+2009-2013 Andreas Drollinger
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="Makefile.in"/>
+        <copyright-notice><![CDATA[
+1999-2000 Ajuba Solutions
+2001      ActiveState Tool Corp.
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/aes/*"/>
+        <copyright-notice><![CDATA[
+2005 Thorsten Schloermann
+2005 Pat Thoyts <patthoyts@users.sourceforge.net>
+2012-2014 Andreas Kupries
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/amazon-s3/*"/>
+        <copyright-notice><![CDATA[
+2006,2008 Darren New
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/amazon-s3/*.test"/>
+        <copyright-notice><![CDATA[
+2006,2008 Darren New
+2008 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/asn/*"/>
+        <copyright-notice><![CDATA[
+1999-2004 Jochen C. Loewer (loewerj@web.de)
+2004 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+2004-2011 Michael Schlenker (mic42@users.sourceforge.net)
+        ]]></copyright-notice>
+    </files>
+    <files license="RSA">
+        <file src="modules/asn/laymans_guide.txt"/>
+        <copyright-notice><![CDATA[
+1991-1993 RSA Laboratories, a division of RSA Data Security, Inc.
+        ]]></copyright-notice>
+    </files>
+    <files license="PD">
+        <file src="modules/base32/*"/>
+        <copyright-notice><![CDATA[
+Public domain
+        ]]></copyright-notice>
+        <license><![CDATA[
+These files are in the public domain.
+        ]]></license>
+    </files>
+    <files license="BSD">
+        <file src="modules/base64/*"/>
+        <copyright-notice><![CDATA[
+1998-2000 Ajuba Solutions
+2000 Eric Melski
+2001 Miguel Sofer
+2002 2003 Pat Thoyts <patthoyts@users.sourceforge.net>
+2010 Emiliano Gavilan
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/bench/*"/>
+        <copyright-notice><![CDATA[
+2000, 2001 Jeffrey Hobbs
+2005-2008 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/bibtex/*"/>
+        <copyright-notice><![CDATA[
+2005 Neil Madden
+2005 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/blowfish/*"/>
+        <copyright-notice><![CDATA[
+2004 Frank Pilhofer
+2003-2004 Pat Thoyts <patthoyts@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/calendar/*,"/>
+        <file src="modules/clock/*"/>
+        <copyright-notice><![CDATA[
+2002-2004 Kevin Kenny
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/cmdline/*"/>
+        <copyright-notice><![CDATA[
+1998-2000 Ajuba Solutions
+2000 Ross Palmer Mohn
+2001-2015 Andreas Kupries <andreas_kupries@users.sf.net>
+2003 David N. Welton  <davidw@dedasys.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="OSF">
+        <file src="modules/comm/*"/>
+        <copyright-notice><![CDATA[
+1995-1998 The Open Group
+2003-2007 ActiveState Corporation
+2006-2009 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+modules/comm/
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/control/*"/>
+        <copyright-notice><![CDATA[
+2001 Reinhard Max <Reinhard.Max@gmx.de>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/coroutine/*"/>
+        <copyright-notice><![CDATA[
+2009,2014-2015 Andreas Kupries
+2009 Colin Macleod
+2009 Colin McCormack
+2009 Donal Fellows
+2009 Kevin Kenny
+2009 Neil Madden
+2009 Peter Spjuth
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/counter/*"/>
+        <copyright-notice><![CDATA[
+1998-2000 Ajuba Solutions
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/crc/*"/>
+        <copyright-notice><![CDATA[
+2002 Pat Thoyts <patthoyts@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/cron/*,"/>
+        <file src="modules/dicttool/*"/>
+        <copyright-notice><![CDATA[
+2015 Sean Woods <yoda@etoyoc.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/csv/*"/>
+        <copyright-notice><![CDATA[
+2001 Jeffrey Hobbs
+2001-2015 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/debug/*"/>
+        <copyright-notice><![CDATA[
+2012 Colin McCormack, Wub Server Utilities
+2012-2015, Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/des/*"/>
+        <copyright-notice><![CDATA[
+2003, 2004 by Mac A. Cody
+1996 Andreas Kupries (a.kupries@westend.com)
+2003-2005 Pat Thoyts <patthoyts@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/dns/*"/>
+        <copyright-notice><![CDATA[
+2002,2004 Pat Thoyts <patthoyts@users.sourceforge.net>
+2002 Emmanuel Frecon <emmanuel@sics.se>
+2004 Cisco Systems, Inc.
+2005 Aamer Akhter <aakhter@cisco.com>
+2015 Martin Heinrich <martin.heinrich@frequentis.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/docstrip/*"/>
+        <copyright-notice><![CDATA[
+2003-2010 Lars Hellstrom
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/fileutil/decode.tcl"/>
+        <copyright-notice><![CDATA[
+2008-2009 ActiveState Software Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/fileutil/*.test"/>
+        <copyright-notice><![CDATA[
+1998-2000 Ajuba Solutions
+2001 ActiveState Tool Corp
+2005-2013 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/fileutil/traverse.*"/>
+        <copyright-notice><![CDATA[
+2006-2015 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/fileutil/fileutil.tcl"/>
+        <copyright-notice><![CDATA[
+1998-2000 Ajuba Solutions
+2002 Phil Ehrens <phil@slug.org>
+2005-2013 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/ftp/*"/>
+        <copyright-notice><![CDATA[
+1996-1999 Steffen Traeger <Steffen.Traeger@t-online.de>
+2000 Ajuba Solutions
+2000 Zveno Pty Ltd
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/ftp/ftp_geturl.*"/>
+        <copyright-notice><![CDATA[
+2001 by Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/fumagic/*"/>
+        <copyright-notice><![CDATA[
+2004-2005 Colin McCormack <coldstore@users.sourceforge.net>
+2005-2006 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/generator/*"/>
+        <copyright-notice><![CDATA[
+2009 Neil Madden <nem@cs.nott.ac.uk>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/gpx/*"/>
+        <copyright-notice><![CDATA[
+2010 Keith Vetter <kvetter@gmail.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/gpx/gpx.test"/>
+        <copyright-notice><![CDATA[
+2010 Keith Vetter <kvetter@gmail.com>
+2010-2015 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/grammar_aycock/*"/>
+        <copyright-notice><![CDATA[
+2006 Kevin B. Kenny
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/hook/*"/>
+        <copyright-notice><![CDATA[
+2010 Will Duquette
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/html/*"/>
+        <copyright-notice><![CDATA[
+1998-2000 Ajuba Solutions
+2006 Michael Schlenker <mic42@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/htmlparse/*"/>
+        <copyright-notice><![CDATA[
+1995 Sun Microsystems
+2001-2005 ActiveState Tool Corp
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/http/autoproxy.tcl"/>
+        <copyright-notice><![CDATA[
+2002-2008 Pat Thoyts <patthoyts@users.sf.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/httpd/*"/>
+        <copyright-notice><![CDATA[
+2015 Sean Woods
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/ident/*"/>
+        <copyright-notice><![CDATA[
+2004 Reinhard Max <max@tclers.tk>
+        ]]></copyright-notice>
+    </files>
+    <files license="MIT">
+        <file src="modules/imap4/*"/>
+        <copyright-notice><![CDATA[
+2004 Salvatore Sanfilippo <antirez@invece.org>
+2013 Magnatune <magnatune@users.sourceforge.net>
+2013 Nicola Hall <nicci.hall@gmail.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/inifile/*"/>
+        <copyright-notice><![CDATA[
+2003-2007 Aaron Faupell <afaupell@users.sourceforge.net>
+2008-2012 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/irc/*"/>
+        <copyright-notice><![CDATA[
+2001-2003 David N. Welton <davidw@dedasys.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/irc/picoirc.*"/>
+        <copyright-notice><![CDATA[
+2004 Richard Suchenwirth
+2004 Salvatore Sanfillipo
+2007 Patrick Thoyts
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/javascript/*"/>
+        <copyright-notice><![CDATA[
+1998-2000 Ajuba Solutions
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/jpeg/*"/>
+        <copyright-notice><![CDATA[
+2004-2005 Aaron Faupell <afaupell@users.sourceforge.net>
+2004-2009 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+2011 Pat Thoyts <patthoyts@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/json/*"/>
+        <copyright-notice><![CDATA[
+2009-2013 Andreas Kupries <andreas_kupries@sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/json/c/*"/>
+        <copyright-notice><![CDATA[
+2013 Mikhail Teterin <mi@aldan.algebra.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/json/jsonc.tcl"/>
+        <copyright-notice><![CDATA[
+2013 Mikhail Teterin <mi@aldan.algebra.com>
+2013,2015 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/json/json.test"/>
+        <copyright-notice><![CDATA[
+2006 ActiveState Software Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/json/json.man"/>
+        <copyright-notice><![CDATA[
+2006 ActiveState Software Inc
+2009 Thomas Maeder, Glue Software Engineering AG
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/ldap/*"/>
+        <copyright-notice><![CDATA[
+1999-2004 Jochen C. Loewer (loewerj@web.de)
+2006 Michael Schlenker (mic42@users.sourceforge.net)
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/ldap/ldapx.*"/>
+        <copyright-notice><![CDATA[
+2006 Pierre David <pdav@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/log/loggerAppender.tcl,"/>
+        <file src="modules/log/loggerUtils.*"/>
+        <copyright-notice><![CDATA[
+2005 Cisco Systems, Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/log/loggerAppender.man"/>
+        <copyright-notice><![CDATA[
+2005 Aamer Akhter <aakhter@cisco.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/log/log.*"/>
+        <copyright-notice><![CDATA[
+2001 ActiveState Tool Corp
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/log/logger.*,"/>
+        <file src="modules/log/logger_trace.*"/>
+        <copyright-notice><![CDATA[
+2002 David N. Welton <davidw@dedasys.com>
+2004,2005 Michael Schlenker <mic42@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/log/logger.tcl"/>
+        <copyright-notice><![CDATA[
+2003 David N. Welton <davidw@dedasys.com>
+2004-2011 Michael Schlenker <mic42@users.sourceforge.net>
+2006,2015 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/mapproj/*"/>
+        <copyright-notice><![CDATA[
+2007 Kevin B. Kenny <kennykb@acm.org>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/markdown/*"/>
+        <copyright-notice><![CDATA[
+2014 Caius Project
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/math/bessel.test,"/>
+        <file src="modules/math/calculus.man,"/>
+        <file src="modules/math/constants.*,"/>
+        <file src="modules/math/elliptic.test,"/>
+        <file src="modules/math/polynomials.man,"/>
+        <file src="modules/math/qcomplex.man,"/>
+        <file src="modules/math/qcomplex.test,"/>
+        <file src="modules/math/rational_funcs.man,"/>
+        <file src="modules/math/special.*"/>
+        <copyright-notice><![CDATA[
+2002-2005 Arjen Markus
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/math/bigfloat*"/>
+        <copyright-notice><![CDATA[
+2004-2008 Stephane Arnold <stephanearnold@yahoo.fr>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/math/bignum.*"/>
+        <copyright-notice><![CDATA[
+2004 Arjen Markus <arjenmarkus@users.sourceforge.net>
+2004 Salvatore Sanfilippo <antirez@invece.org>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/math/calculus.*,"/>
+        <file src="modules/math/interpolate.*,"/>
+        <file src="modules/math/optimize.*"/>
+        <copyright-notice><![CDATA[
+2002-2006 Kevin B. Kenny
+2004 Arjen Markus
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/math/combinatorics.*,"/>
+        <file src="modules/math/exact.*,"/>
+        <file src="modules/math/symdiff.*,"/>
+        <file src="modules/math/romberg.man"/>
+        <copyright-notice><![CDATA[
+2001-2015 Kevin B. Kenny <kennykb@acm.org>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/math/decimal.*"/>
+        <copyright-notice><![CDATA[
+2011-2013 Mark Alston <mark@beernut.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/math/*geometry.*"/>
+        <copyright-notice><![CDATA[
+2001 Ideogramic ApS and other parties
+2004 Arjen Markus
+2010 Andreas Kupries
+2010 Kevin Kenny
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/math/linalg.man"/>
+        <copyright-notice><![CDATA[
+2004-2008 Arjen Markus <arjenmarkus@users.sourceforge.net>
+2004 Ed Hume
+2008 Michael Buadin <relaxkmike@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/math/machineparameters.*"/>
+        <copyright-notice><![CDATA[
+2008 Michael Baudin <michael.baudin@sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/math/math.tcl"/>
+        <copyright-notice><![CDATA[
+1998-2000 Ajuba Solutions
+2002 Kevin B. Kenny
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/math/mvlinreg.tcl"/>
+        <copyright-notice><![CDATA[
+2007 Eric Kemp-Benedict
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/math/numtheory.*"/>
+        <copyright-notice><![CDATA[
+2010 Lars Hellstrom
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/math/roman.man"/>
+        <copyright-notice><![CDATA[
+2005 Kenneth Green <kenneth.green@gmail.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="RSA2">
+        <file src="modules/md4/md4.c,"/>
+        <file src="modules/md4/md4.h"/>
+        <copyright-notice><![CDATA[
+1991-1992 RSA Data Security, Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="RSA3">
+        <file src="modules/md5/md5.c,"/>
+        <file src="modules/md5/md5.h"/>
+        <copyright-notice><![CDATA[
+1990 RSA Data Security, Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/md5/*.test"/>
+        <copyright-notice><![CDATA[
+2001 ActiveState Tool Corp
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/mime/smtp.tcl"/>
+        <copyright-notice><![CDATA[
+1999-2000 Marshall T. Rose
+2003-2006 Pat Thoyts
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/mime/mime.man"/>
+        <copyright-notice><![CDATA[
+1999-2000 Marshall T. Rose
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/multiplexer/*"/>
+        <copyright-notice><![CDATA[
+2001-2003 David N. Welton <davidw@dedasys.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/namespacex/*"/>
+        <copyright-notice><![CDATA[
+200? Neil Madden (http://wiki.tcl.tk/12790)
+200? Various (http://wiki.tcl.tk/1489)
+2010 Documentation, Andreas Kupries
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/ncgi/*"/>
+        <copyright-notice><![CDATA[
+2000 Ajuba Solutions
+2012 Richard Hipp
+2012-2014 Andreas Kupries
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/nettool/*"/>
+        <copyright-notice><![CDATA[
+2015 Sean Woods <yoda@etoyoc.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/nmea/*"/>
+        <copyright-notice><![CDATA[
+2006-2009, Aaron Faupell <afaupell@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/oauth/*"/>
+        <copyright-notice><![CDATA[
+2014 Javier Perez <hxm@eggdrop.es>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/oodialect/*"/>
+        <copyright-notice><![CDATA[
+2015 Sean Woods, Donald K Fellows
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/pki/*"/>
+        <copyright-notice><![CDATA[
+2010-2013, Roy Keene, Andreas Kupries
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/png/*,"/>
+        <file src="modules/rest/*"/>
+        <copyright-notice><![CDATA[
+2004-2012 Aaron Faupell <afaupell@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/png/*.man,"/>
+        <file src="modules/png/*.test"/>
+        <copyright-notice><![CDATA[
+2004 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/pop3d/*"/>
+        <copyright-notice><![CDATA[
+2002-2009 Andreas Kupries
+2005 Reinhard Max
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/pop3/*"/>
+        <copyright-notice><![CDATA[
+2000 by Ajuba Solutions
+2000 Scott Beasley
+2010-2012 Andreas Kupries
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/pop3/pop3.test"/>
+        <copyright-notice><![CDATA[
+2002-2006 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/processman/*"/>
+        <copyright-notice><![CDATA[
+2015 Sean Woods <yoda@etoyoc.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/rcs/*"/>
+        <copyright-notice><![CDATA[
+2005 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+2005 Colin McCormack <coldstore@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/sasl/scram.*"/>
+        <copyright-notice><![CDATA[
+2013 Sergei Golovan <sgolovan@nes.ru>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/sha1/sha1c.tcl,"/>
+        <file src="modules/sha1/sha1.man,"/>
+        <file src="modules/sha1/sha256.tcl"/>
+        <copyright-notice><![CDATA[
+2005 Pat Thoyts <patthoyts@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/sha1/sha1.tcl,"/>
+        <file src="modules/sha1/sha1v1.tcl"/>
+        <copyright-notice><![CDATA[
+2001 Don Libes <libes@nist.gov>
+2003 Pat Thoyts <patthoyts@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/sha1/sha1v1.test,"/>
+        <file src="modules/sha1/sha1.test"/>
+        <copyright-notice><![CDATA[
+2001 ActiveState Tool Corp
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/sha1/sha256.?"/>
+        <copyright-notice><![CDATA[
+2001,2002 Allan Saddi <allan@saddi.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/sha1/sha256.man"/>
+        <copyright-notice><![CDATA[
+2008 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/sha1/sha256c.tcl"/>
+        <copyright-notice><![CDATA[
+2005 Pat Thoyts <patthoyts@users.sourceforge.net>
+2006 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/simulation/*"/>
+        <copyright-notice><![CDATA[
+2004-2011 Arjen Markus <arjenmarkus@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/snit/*"/>
+        <copyright-notice><![CDATA[
+2003-2006 by William H. Duquette
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/snit/snit_tcl83_utils.tcl"/>
+        <copyright-notice><![CDATA[
+2005 Kenneth Green
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/soundex/*"/>
+        <copyright-notice><![CDATA[
+1998 Evan Rempel <erempel@uvic.ca>
+2003 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/stooop/*"/>
+        <copyright-notice><![CDATA[
+2001-2002 Jean-Luc Fontaine <jfontain@free.fr>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/stringprep/stringprep.*,"/>
+        <file src="modules/stringprep/unicode.*"/>
+        <copyright-notice><![CDATA[
+2007-2009 Sergei Golovan
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/stringprep/stringprep.test"/>
+        <copyright-notice><![CDATA[
+2007 Pat Thoyts
+2007 Sergei Golovan
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/stringprep/*_data.*"/>
+        <copyright-notice><![CDATA[
+1998-1999 Scriptics Corporation
+2007 Alexey Shchepin
+2007-2008 Sergei Golovan
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/struct/disjointset.*,"/>
+        <file src="modules/struct/graphops.*,"/>
+        <file src="modules/struct/graph_tcl.tcl"/>
+        <copyright-notice><![CDATA[
+2008 Alejandro Paz <vidriloco@gmail.com>
+2008-2009 Andreas Kupries
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/struct/graph/test/Xcontrol,"/>
+        <file src="modules/struct/graph/tests/Xsupport,"/>
+        <file src="modules/struct/queue_oo.tcl,"/>
+        <file src="modules/struct/queue.*,"/>
+        <file src="modules/struct/stack.tcl,"/>
+        <file src="modules/struct/tree.testsuite"/>
+        <copyright-notice><![CDATA[
+1998-2000 Ajuba Solutions
+2006-2010 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/struct/list.*"/>
+        <copyright-notice><![CDATA[
+2003 Kevin B. Kenny
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/struct/matrix*.tcl"/>
+        <copyright-notice><![CDATA[
+2001-2013 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+2003 Edwin A. Suominen <ed@eepatents.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/struct/pool.man"/>
+        <copyright-notice><![CDATA[
+2002 Erik Leunissen <e.leunissen@hccnet.nl>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/struct/prioqueue.*"/>
+        <copyright-notice><![CDATA[
+2002,2003 Michael Schlenker
+2008 Alejandro Paz <vidriloco@gmail.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/struct/prioqueue.test"/>
+        <copyright-notice><![CDATA[
+1998-2000 Ajuba Solutions
+2002 Michael Schlenker
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/struct/record.*"/>
+        <copyright-notice><![CDATA[
+2002 Brett Schwarz
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/struct/skiplist.*"/>
+        <copyright-notice><![CDATA[
+2000 Keith Vetter
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/struct/struct_list.man"/>
+        <copyright-notice><![CDATA[
+2003-2005 Kevin B. Kenny
+2003-2012 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/tar/*"/>
+        <copyright-notice><![CDATA[
+2004 Aaron Faupell <afaupell@users.sourceforge.net>
+2013 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/tepam/*"/>
+        <copyright-notice><![CDATA[
+2009-2013 Andreas Drollinger
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/textutil/adjust.tcl"/>
+        <copyright-notice><![CDATA[
+2000 Ajuba Solutions
+2000 Eric Melski <ericm@ajubasolutions.com>
+2001-2003 Dr.Johannes-Heinrich Vogeler (jhv)
+2001-2006 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+2002-2004 Johannes-Heinrich Vogeler <vogeler@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/textutil/dehypht.tex"/>
+        <copyright-notice><![CDATA[
+1988,1991 Rechenzentrum der Ruhr-Universitaet Bochum
+1993,1994,1999 Bernd Raichle/DANTE e.V.
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/textutil/expander*"/>
+        <copyright-notice><![CDATA[
+2001 William H. Duquette
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/textutil/ithyph.tex"/>
+        <copyright-notice><![CDATA[
+1998,2001 Claudio Beccari
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/textutil/repeat.tcl"/>
+        <copyright-notice><![CDATA[
+2000 Ajuba Solutions
+2001-2006 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/textutil/split.tcl"/>
+        <copyright-notice><![CDATA[
+2000 Ajuba Solutions
+2000 Eric Melski <ericm@ajubasolutions.com>
+2001-2006 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+2001 Reinhard Max <max@suse.de>
+2003 Pat Thoyts <patthoyts@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/textutil/string.tcl,"/>
+        <file src="modules/textutil/textutil.tcl"/>
+        <copyright-notice><![CDATA[
+2000 Ajuba Solutions
+2000 Eric Melski <ericm@ajubasolutions.com>
+2001-2014 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+2002 Joe English <jenglish@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/textutil/trim.tcl"/>
+        <copyright-notice><![CDATA[
+2000 Ajuba Solutions
+2000 Eric Melski <ericm@ajubasolutions.com>
+2001-2006 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/tiff/*"/>
+        <copyright-notice><![CDATA[
+2004-2006 Aaron Faupell <afaupell@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/tiff/tiff.test"/>
+        <copyright-notice><![CDATA[
+2008 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/tool/*"/>
+        <copyright-notice><![CDATA[
+2015 Sean Woods <yoda@etoyoc.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/tool/meta.man"/>
+        <copyright-notice><![CDATA[
+2011-2015 Andreas Kupries
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/treeql/*"/>
+        <copyright-notice><![CDATA[
+2004 Colin McCormack <coldstore@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/treeql/treeql.man"/>
+        <copyright-notice><![CDATA[
+2004 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+2004 Colin McCormack <coldstore@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/try/*try.*"/>
+        <copyright-notice><![CDATA[
+2008-2011 Donal K. Fellows
+2008-2011 Andreas Kupries
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/try/*throw.*"/>
+        <copyright-notice><![CDATA[
+2015 Miguel Martinez Lopez
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/units/*"/>
+        <copyright-notice><![CDATA[
+2000-2005 Mayo Foundation
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/uri/uri*"/>
+        <copyright-notice><![CDATA[
+2000 Zveno Pty Ltd
+2006 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+2006 Pierre DAVID <Pierre.David@crc.u-strasbg.fr>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/uri/urn*"/>
+        <copyright-notice><![CDATA[
+2001 Pat Thoyts <patthoyts@users.sf.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/yaml/*"/>
+        <copyright-notice><![CDATA[
+2008 by KATO Kanryu <kanryu6@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/yaml/huddle.*"/>
+        <copyright-notice><![CDATA[
+2008-2011 KATO Kanryu <kanryu6@users.sourceforge.net>
+2015 Miguel Martinez Lopez <aplicacionamedida@gmail.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/zip/*code.tcl"/>
+        <copyright-notice><![CDATA[
+2008-2012 ActiveState Software Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/zip/*code.man"/>
+        <copyright-notice><![CDATA[
+2008-2014 Andreas Kupries
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="modules/zip/mkzip.*"/>
+        <copyright-notice><![CDATA[
+2009 Pat Thoyts <patthoyts@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD">
+        <file src="support/devel/sack/registry/*"/>
+        <copyright-notice><![CDATA[
+2006 Andreas Kupries <andreas_kupries@users.sourceforge.net>
+        ]]></copyright-notice>
+    </files>
+    <license handle="BSD"><![CDATA[
+The following terms apply to all files associated with the software unless
+explicitly disclaimed in individual files.
+
+The authors hereby grant permission to use, copy, modify, distribute,
+and license this software and its documentation for any purpose, provided
+that existing copyright notices are retained in all copies and that this
+notice is included verbatim in any distributions. No written agreement,
+license, or royalty fee is required for any of the authorized uses.
+Modifications to this software may be copyrighted by their authors
+and need not follow the licensing terms described here, provided that
+the new terms are clearly indicated on the first page of each file where
+they apply.
+
+IN NO EVENT SHALL THE AUTHORS OR DISTRIBUTORS BE LIABLE TO ANY PARTY
+FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES
+ARISING OUT OF THE USE OF THIS SOFTWARE, ITS DOCUMENTATION, OR ANY
+DERIVATIVES THEREOF, EVEN IF THE AUTHORS HAVE BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+THE AUTHORS AND DISTRIBUTORS SPECIFICALLY DISCLAIM ANY WARRANTIES,
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.  THIS SOFTWARE
+IS PROVIDED ON AN "AS IS" BASIS, AND THE AUTHORS AND DISTRIBUTORS HAVE
+NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR
+MODIFICATIONS.
+
+GOVERNMENT USE: If you are acquiring this software on behalf of the
+U.S. government, the Government shall have only "Restricted Rights"
+in the software and related documentation as defined in the Federal
+Acquisition Regulations (FARs) in Clause 52.227.19 (c) (2).  If you
+are acquiring the software on behalf of the Department of Defense, the
+software shall be classified as "Commercial Computer Software" and the
+Government shall have only "Restricted Rights" as defined in Clause
+252.227-7013 (c) (1) of DFARs.  Notwithstanding the foregoing, the
+authors grant the U.S. Government and others acting in its behalf
+permission to use and distribute the software in accordance with the
+terms specified in this license.
+    ]]></license>
+    <license handle="GPL-2+"><![CDATA[
+This program is free software; you can redistribute it
+and/or modify it under the terms of the GNU General Public
+License as published by the Free Software Foundation; either
+version 2 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be
+useful, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+PURPOSE.  See the GNU General Public License for more
+details.
+
+You should have received a copy of the GNU General Public
+License along with this package; if not, write to the Free
+Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+Boston, MA  02110-1301 USA
+
+On Debian systems, the full text of the GNU General Public
+License version 2 can be found in the file
+`/usr/share/common-licenses/GPL-2'.
+    ]]></license>
+    <license handle="RSA"><![CDATA[
+License to copy this document is granted
+provided that it is identified as "RSA Data Security, Inc.
+Public-Key Cryptography Standards (PKCS)" in all material
+mentioning or referencing this document.
+    ]]></license>
+    <license handle="OSF"><![CDATA[
+This software was developed by the Open Group Research Institute
+("RI").  This software, both binary and source (hereafter, Software)
+is copyrighted by The Open Group Research Institute and ownership
+remains with the RI.
+
+The RI hereby grants you (hereafter, Licensee) permission to use,
+copy, modify, distribute, and license this Software and its
+documentation for any purpose, provided that existing copyright
+notices are retained in all copies and that this notice is included
+verbatim in any distributions. No written agreement, license, or
+royalty fee is required for any of the authorized uses provided
+that the RI is publicly and prominently acknowledged as the source
+of this software.
+
+Licensee may make derivative works.  However, if Licensee distributes
+any derivative work based on or derived from the Software, then
+Licensee will (1) notify the RI regarding its distribution of the
+derivative work, (2) clearly notify users that such derivative work
+is a modified version and not the original software distributed by
+the RI, and (3) the RI is publicly and prominently acknowledged as
+the source of this software.
+
+THE RI MAKES NO REPRESENTATIONS ABOUT THE SERVICEABILITY OF THIS
+SOFTWARE FOR ANY PURPOSE.  IT IS PROVIDED "AS IS" WITHOUT EXPRESS
+OR IMPLIED WARRANTY.  THE RI SHALL NOT BE LIABLE FOR ANY DAMAGES
+SUFFERED BY THE USERS OF THIS SOFTWARE.
+
+By using or copying this Software, Licensee agrees to abide by the
+copyright law and all other applicable laws of the U.S. including,
+but not limited to, export control laws, and the terms of this
+license.  The RI shall have the right to terminate this license
+immediately by written notice upon Licensee's breach of, or
+non-compliance with, any of its terms.  Licensee may be held legally
+responsible for any copyright infringement that is caused or
+encouraged by Licensee's failure to abide by the terms of this
+license.
+    ]]></license>
+    <license handle="MIT"><![CDATA[
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, and/or sell copies of the Software, and to permit persons
+to whom the Software is furnished to do so, provided that the above
+copyright notice(s) and this permission notice appear in all copies of
+the Software and that both the above copyright notice(s) and this
+permission notice appear in supporting documentation.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL
+INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING
+FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
+NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION
+WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder
+shall not be used in advertising or otherwise to promote the sale, use
+or other dealings in this Software without prior written authorization
+of the copyright holder.
+    ]]></license>
+    <license handle="RSA2"><![CDATA[
+License to copy and use this software is granted provided that it
+is identified as the "RSA Data Security, Inc. MD4 Message-Digest
+Algorithm" in all material mentioning or referencing this software
+or this function.
+
+License is also granted to make and use derivative works provided
+that such works are identified as "derived from the RSA Data
+Security, Inc. MD4 Message-Digest Algorithm" in all material
+mentioning or referencing the derived work.
+
+RSA Data Security, Inc. makes no representations concerning either
+the merchantability of this software or the suitability of this
+software for any particular purpose. It is provided "as is"
+without express or implied warranty of any kind.
+
+These notices must be retained in any copies of any part of this
+documentation and/or software.
+    ]]></license>
+    <license handle="RSA3"><![CDATA[
+License to copy and use this software is granted provided that
+it is identified as the "RSA Data Security, Inc. MD5 Message-
+Digest Algorithm" in all material mentioning or referencing this
+software or this function.
+
+License is also granted to make and use derivative works
+provided that such works are identified as "derived from the RSA
+Data Security, Inc. MD5 Message-Digest Algorithm" in all
+material mentioning or referencing the derived work.
+
+RSA Data Security, Inc. makes no representations concerning
+either the merchantability of this software or the suitability
+of this software for any particular purpose.  It is provided "as
+is" without express or implied warranty of any kind.
+
+These notices must be retained in any copies of any part of this
+documentation and/or software.
+    ]]></license>
+</copyright>

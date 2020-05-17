@@ -20,6 +20,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="make-dfsg-4.2.1.tar.gz" subdir="sources"
                 sha256sum="480405e8995796ea47cc54b281b7855280f0d815d296a1af1993eeeb72074e39"/>

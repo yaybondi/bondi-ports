@@ -18,6 +18,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="opkg-0.4.2~0.tar.gz" subdir="sources"
                 sha256sum="34c6633948439547faa88075997b3d95cc39108a355ef4ba061f646aef1ad14e"/>

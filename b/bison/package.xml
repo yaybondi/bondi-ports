@@ -18,6 +18,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="bison-3.3.2.dfsg.tar.xz" subdir="sources"
                 sha256sum="2648db8ef3eaf40d0d9747a9dc40b9190cc7eebebd9200f68e88bca0186fedb0"/>

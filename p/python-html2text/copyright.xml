@@ -1,0 +1,40 @@
+<copyright>
+    <files license="GPL-3">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+2004-2012, Aaron Swartz
+2014-2018, Alireza Savand <alireza.savand@gmail.com>
+2011,      Yariv Barkan
+2012,      Alex Musayev
+2013-2014, Matěj Cepl
+2010-2016, Stefano Rivera <stefanor@debian.org>
+2014,      Ivan Gromov <summer.is.gone@gmail.com>
+2014,      Jocelyn Delalande <jdelalande@oasiswork.fr>
+2014,      Matt Dorn <matt.dorn@gmail.com>
+2015,      Miguel Tavares <mgontav@gmail.com>
+2015,      Scott Blackburn <scott@skipflag.com>
+2015,      Peter Wu <peter@lekensteyn.nl>
+2015-2016, Arjoonn Sharma <arjoonn.94@gmail.com>
+2015,      Ali Mohammad <gh: alawibaba>
+2015,      Albert Berger <gh: nbdsp>
+2015,      Etienne Millon <me@emillon.org>
+2015,      John C F <gh: critiqjo>
+2016-2015, Mikhail Melnik <by.zumzoom@gmail.com>
+2017,      Andres Rey <andres@providentcrm.com>
+2017,      Ciprian Miclaus <ciprianm@gmail.com>
+2017,      Toshihiro Kamiya <kamiya@mbj.nifty.com>
+2017,      Jonathan Sundqvist <sundqvist.jonathan@gmail.com>
+2017,      Simon Meers <simon@simonmeers.com>
+2017-2018, Kurt McKee <contactme@kurtmckee.org>
+        ]]></copyright-notice>
+        <license><![CDATA[
+html2text is available under the GNU GPL 3.0.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-3.0.txt
+
+to view the full license text.
+        ]]></license>
+    </files>
+</copyright>

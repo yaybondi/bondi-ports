@@ -16,6 +16,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="pam-config-1.1.tar.gz" subdir="sources"
                 sha256sum="2b252064f89f3f867f0818cf6212002927146a48322d4a05eabc3a5eb0de5dd5"/>

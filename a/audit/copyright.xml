@@ -1,0 +1,42 @@
+<copyright>
+    <files license="GPL-2">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+2012-2016 Steve Grubb <sgrubb@redhat.com>
+2006-2012 Rik Faith
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2">
+        <file src="src/libev/*"/>
+        <copyright-notice><![CDATA[
+2007-2009 Marc Alexamder Lehmann
+        ]]></copyright-notice>
+    </files>
+    <files license="LGPL-2.1">
+        <file src="lib/*"/>
+        <copyright-notice><![CDATA[
+2005-2008 Steve Grubb <sgrubb@redhat.com>
+        ]]></copyright-notice>
+        <license><![CDATA[
+The audit daemon's library libaudit.* is released under LGPL so that
+it may be dynamically linked with 3rd party software.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/lgpl-2.1.txt
+
+to view the full license text.
+        ]]></license>
+    </files>
+    <license handle="GPL-2"><![CDATA[
+This package is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License version 2, as
+published by the Free Software Foundation.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-2.0.txt
+
+to view the full license text.
+    ]]></license>
+</copyright>

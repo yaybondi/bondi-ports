@@ -14,6 +14,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="libassuan-2.5.2.tar.bz2" subdir="sources"
                 sha256sum="986b1bf277e375f7a960450fbb8ffbd45294d06598916ad4ebf79aee0cb788e7"/>

@@ -14,6 +14,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="pkg-config-0.29.tar.gz" subdir="sources"
                 sha256sum="c8507705d2a10c67f385d66ca2aae31e81770cc0734b4191eb8c489e864a006b"/>

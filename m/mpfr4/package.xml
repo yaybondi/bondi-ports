@@ -16,6 +16,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="mpfr4-4.0.2.tar.xz" subdir="sources"
                 sha256sum="1d3be708604eae0e42d578ba93b390c2a145f17743a744d8f3f8c2ad5855a38a"/>

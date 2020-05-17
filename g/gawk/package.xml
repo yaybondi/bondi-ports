@@ -18,6 +18,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="gawk-4.2.1+dfsg.tar.xz" subdir="sources"
                 sha256sum="0f6bd564a8fe33340d9a0c82b8498d246ce178ea29f5f2db4e607cdc365d5b6f"/>

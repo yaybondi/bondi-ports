@@ -17,6 +17,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="libevent-2.1.8-stable.tar.gz" subdir="sources"
                 sha256sum="965cc5a8bb46ce4199a47e9b2c9e1cae3b137e8356ffdad6d94d3b9069b71dc2"/>

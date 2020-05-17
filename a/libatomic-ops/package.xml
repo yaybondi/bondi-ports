@@ -23,6 +23,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="libatomic-ops-7.6.6.tar.gz" subdir="sources"
                 sha256sum="d5f35cd521cee01902a9299fb32019f2c146dcf1efbc61560ea4e3ecaf2b76d0"/>

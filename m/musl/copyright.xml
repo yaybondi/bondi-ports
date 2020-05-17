@@ -1,0 +1,272 @@
+<copyright>
+    <files license="MIT">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+2005-2019 Rich Felker <dalias@aerifal.cx>
+2005-2019 Many other contributors
+        ]]></copyright-notice>
+    </files>
+    <files license="public-domain">
+        <file src="include/*"/>
+        <file src="arch/*/bits/*"/>
+        <file src="crt/*"/>
+        <copyright-notice><![CDATA[
+2005-2014 Rich Felker <dalias@aerifal.cx>
+        ]]></copyright-notice>
+        <license><![CDATA[
+The following files are trivial, in my opinion not copyrightable in
+the first place, and hereby explicitly released to the Public Domain:
+
+All public headers: include/*, arch/*/bits/*
+Startup files: crt/*
+        ]]></license>
+    </files>
+    <files license="BSD-2-clause">
+        <file src="src/regex/reg*"/>
+        <file src="src/regex/tre*"/>
+        <copyright-notice><![CDATA[
+2001-2008 Ville Laurikari <vl@iki.fi>
+2012 Rich Felker <dalias@aerifal.cx>
+        ]]></copyright-notice>
+    </files>
+    <files license="ISC">
+        <file src="src/math/tgammal.c"/>
+        <file src="src/math/lgammal.c"/>
+        <file src="src/math/powl.c"/>
+        <file src="src/math/logl.c"/>
+        <file src="src/math/log2l.c"/>
+        <file src="src/math/log1pl.c"/>
+        <file src="src/math/log10l.c"/>
+        <file src="src/math/erfl.c"/>
+        <file src="src/math/expm1l.c"/>
+        <file src="src/math/expl.c"/>
+        <file src="src/math/__polevll.c"/>
+        <copyright-notice><![CDATA[
+2008 Stephen L. Moshier <steve@moshier.net>
+1993 Sun Microsystems, Inc.
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-clause">
+        <file src="src/math/fmal.c"/>
+        <file src="src/math/fmaf.c"/>
+        <file src="src/math/fma.c"/>
+        <file src="src/math/exp2l.c"/>
+        <file src="src/math/exp2f.c"/>
+        <file src="src/math/exp2.c"/>
+        <copyright-notice><![CDATA[
+2005-2011 David Schultz <das@freebsd.org>
+1993 Sun Microsystems, Inc.
+        ]]></copyright-notice>
+    </files>
+    <files license="permissive">
+        <file src="src/math/tanf.c"/>
+        <file src="src/math/tan.c"/>
+        <file src="src/math/sqrtf.c"/>
+        <file src="src/math/sqrt.c"/>
+        <file src="src/math/sinf.c"/>
+        <file src="src/math/sincosf.c"/>
+        <file src="src/math/sincos.c"/>
+        <file src="src/math/sin.c"/>
+        <file src="src/math/scalbf.c"/>
+        <file src="src/math/scalb.c"/>
+        <file src="src/math/powf.c"/>
+        <file src="src/math/pow.c"/>
+        <file src="src/math/logf.c"/>
+        <file src="src/math/log2f.c"/>
+        <file src="src/math/log2.c"/>
+        <file src="src/math/log1pf.c"/>
+        <file src="src/math/log1p.c"/>
+        <file src="src/math/log10f.c"/>
+        <file src="src/math/log10.c"/>
+        <file src="src/math/log.c"/>
+        <file src="src/math/lgammaf_r.c"/>
+        <file src="src/math/lgamma_r.c"/>
+        <file src="src/math/j*.c"/>
+        <file src="src/math/expm1f.c"/>
+        <file src="src/math/expm1.c"/>
+        <file src="src/math/expf.c"/>
+        <file src="src/math/exp.c"/>
+        <file src="src/math/erf.c"/>
+        <file src="src/math/erff.c"/>
+        <file src="src/math/cosf.c"/>
+        <file src="src/math/cos.c"/>
+        <file src="src/math/cbrt*.c"/>
+        <file src="src/math/atanl.c"/>
+        <file src="src/math/atanf.c"/>
+        <file src="src/math/atan2*.c"/>
+        <file src="src/math/atan.c"/>
+        <file src="src/math/asinl.c"/>
+        <file src="src/math/asinf.c"/>
+        <file src="src/math/asin.c"/>
+        <file src="src/math/acosl.c"/>
+        <file src="src/math/acosf.c"/>
+        <file src="src/math/acos.c"/>
+        <file src="src/math/__tan*.c"/>
+        <file src="src/math/__sin*.c"/>
+        <file src="src/math/__rem*.c"/>
+        <file src="src/math/__cos*.c"/>
+        <copyright-notice><![CDATA[
+1993, 2004 Sun Microsystems, Inc.
+2008, 2009-2011 Bruce D. Evans
+2008, 2009-2011 Steven G. Kargl
+2008, 2009-2011 David Schultz
+        ]]></copyright-notice>
+        <license><![CDATA[
+Developed at SunPro, a Sun Microsystems, Inc. business.
+Permission to use, copy, modify, and distribute this
+software is freely granted, provided that this notice
+is preserved.
+        ]]></license>
+    </files>
+    <files license="public-domain">
+        <file src="src/crypt/crypt_blowfish.c"/>
+        <copyright-notice><![CDATA[
+1998-2012 Solar Designer <solar@openwall.com>
+2012 Rich Felker <dalias@aerifal.cx>
+        ]]></copyright-notice>
+        <license><![CDATA[
+Written by Solar Designer <solar at openwall.com> in 1998-2012.
+No copyright is claimed, and the software is hereby placed in the public
+domain.  In case this attempt to disclaim copyright and place the software
+in the public domain is deemed null and void, then the software is
+Copyright (c) 1998-2012 Solar Designer and it is hereby released to the
+general public under the following terms:
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted.
+
+There's ABSOLUTELY NO WARRANTY, express or implied.
+
+It is my intent that you should be able to use this on your system,
+as part of a software package, or anywhere else to improve security,
+ensure compatibility, or for any other purpose.  I would appreciate
+it if you give credit where it is due and keep your modifications in
+the public domain as well, but I don't require that in order to let
+you place this code and any modifications you make under a license
+of your choice.
+        ]]></license>
+    </files>
+    <files license="BSD-3-clause">
+        <file src="src/crypt/crypt_des.c"/>
+        <copyright-notice><![CDATA[
+1994 David Burren
+2000,2002,2010,2012 Solar Designer <solar@openwall.com>
+2012 Rich Felker <dalias@aerifal.cx>
+        ]]></copyright-notice>
+    </files>
+    <files license="MIT">
+        <file src="src/stdlib/qsort.c"/>
+        <copyright-notice><![CDATA[
+2011 Valentin Ochs
+        ]]></copyright-notice>
+    </files>
+    <files license="MIT">
+        <file src="src/setjmp/x32/longjmp.s"/>
+        <file src="src/setjmp/x32/setjmp.s"/>
+        <file src="src/setjmp/x86_64/longjmp.s"/>
+        <file src="src/setjmp/x86_64/setjmp.s"/>
+        <file src="src/thread/x32/__set_thread_area.s"/>
+        <file src="src/thread/x32/__unmapself.s"/>
+        <file src="src/thread/x86_64/__set_thread_area.s"/>
+        <file src="src/thread/x86_64/__unmapself.s"/>
+        <copyright-notice><![CDATA[
+2011-2012 Nicholas J. Kain
+        ]]></copyright-notice>
+    </files>
+    <files license="MIT">
+        <file src="arch/mips64/*"/>
+        <file src="src/*/mips64/*"/>
+        <copyright-notice><![CDATA[
+2016 Mahesh Bodapati
+2016 Jaydeep Patil
+2016 Imagination Technologies
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-clause">
+        <file src="src/string/arm/memcpy_le.S"/>
+        <copyright-notice><![CDATA[
+2008 The Android Open Source Project
+        ]]></copyright-notice>
+    </files>
+    <license handle="MIT"><![CDATA[
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    ]]></license>
+    <license handle="ISC"><![CDATA[
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+    ]]></license>
+    <license handle="BSD-2-clause"><![CDATA[
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    ]]></license>
+    <license handle="BSD-3-clause"><![CDATA[
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+3. Neither the name of the author nor the names of other contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGE.
+    ]]></license>
+</copyright>

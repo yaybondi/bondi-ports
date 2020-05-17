@@ -17,6 +17,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="pcre3-8.39.tar.bz2" subdir="sources"
                 sha256sum="b858099f82483031ee02092711689e7245586ada49e534a06e678b8ea9549e8b"/>

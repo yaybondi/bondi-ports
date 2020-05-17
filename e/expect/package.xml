@@ -18,6 +18,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="expect-5.45.4.tar.gz" subdir="sources"
                 sha256sum="d082bf340fdb7a85b1e4e5df4d967d0140835db34a8a035c3102abb5eb62d450"/>

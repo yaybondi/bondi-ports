@@ -1,0 +1,543 @@
+<copyright>
+    <files license="BSD-3-clause">
+        <file src="examples/pysolv"/>
+        <file src="ext/pool_fileconflicts.c"/>
+        <file src="ext/pool_fileconflicts.h"/>
+        <file src="ext/repo_appdata.c"/>
+        <file src="ext/repo_appdata.h"/>
+        <file src="ext/repo_arch.c"/>
+        <file src="ext/repo_arch.h"/>
+        <file src="ext/repo_comps.c"/>
+        <file src="ext/repo_comps.h"/>
+        <file src="ext/repo_content.c"/>
+        <file src="ext/repo_content.h"/>
+        <file src="ext/repo_cudf.c"/>
+        <file src="ext/repo_cudf.h"/>
+        <file src="ext/repo_deb.c"/>
+        <file src="ext/repo_deb.h"/>
+        <file src="ext/repo_deltainfoxml.c"/>
+        <file src="ext/repo_deltainfoxml.h"/>
+        <file src="ext/repo_helix.c"/>
+        <file src="ext/repo_helix.h"/>
+        <file src="ext/repo_mdk.c"/>
+        <file src="ext/repo_mdk.h"/>
+        <file src="ext/repo_products.c"/>
+        <file src="ext/repo_products.h"/>
+        <file src="ext/repo_pubkey.c"/>
+        <file src="ext/repo_pubkey.h"/>
+        <file src="ext/repo_releasefile_products.c"/>
+        <file src="ext/repo_releasefile_products.h"/>
+        <file src="ext/repo_repomdxml.c"/>
+        <file src="ext/repo_repomdxml.h"/>
+        <file src="ext/repo_rpmdb.c"/>
+        <file src="ext/repo_rpmdb.h"/>
+        <file src="ext/repo_rpmmd.c"/>
+        <file src="ext/repo_rpmmd.h"/>
+        <file src="ext/repo_susetags.c"/>
+        <file src="ext/repo_susetags.h"/>
+        <file src="ext/repo_updateinfoxml.h"/>
+        <file src="ext/repo_zyppdb.c"/>
+        <file src="ext/repo_zyppdb.h"/>
+        <file src="ext/repodata_diskusage.c"/>
+        <file src="ext/solv_xfopen.c"/>
+        <file src="ext/solv_xfopen.h"/>
+        <file src="ext/solv_xmlparser.c"/>
+        <file src="ext/testcase.c"/>
+        <file src="ext/testcase.h"/>
+        <file src="ext/tools_util.h"/>
+        <file src="src/bitmap.c"/>
+        <file src="src/bitmap.h"/>
+        <file src="src/chksum.c"/>
+        <file src="src/chksum.h"/>
+        <file src="src/cleandeps.c"/>
+        <file src="src/cplxdeps.c"/>
+        <file src="src/cplxdeps.h"/>
+        <file src="src/dataiterator.h"/>
+        <file src="src/dirpool.c"/>
+        <file src="src/dirpool.h"/>
+        <file src="src/evr.c"/>
+        <file src="src/evr.h"/>
+        <file src="src/hash.h"/>
+        <file src="src/knownid.h"/>
+        <file src="src/linkedpkg.h"/>
+        <file src="src/policy.c"/>
+        <file src="src/policy.h"/>
+        <file src="src/pool.c"/>
+        <file src="src/pool.h"/>
+        <file src="src/poolarch.c"/>
+        <file src="src/poolarch.h"/>
+        <file src="src/poolid.c"/>
+        <file src="src/poolid.h"/>
+        <file src="src/poolid_private.h"/>
+        <file src="src/pooltypes.h"/>
+        <file src="src/poolvendor.c"/>
+        <file src="src/poolvendor.h"/>
+        <file src="src/problems.c"/>
+        <file src="src/problems.h"/>
+        <file src="src/queue.c"/>
+        <file src="src/queue.h"/>
+        <file src="src/repo.c"/>
+        <file src="src/repo.h"/>
+        <file src="src/repo_solv.c"/>
+        <file src="src/repo_solv.h"/>
+        <file src="src/repo_write.c"/>
+        <file src="src/repo_write.h"/>
+        <file src="src/repodata.c"/>
+        <file src="src/repodata.h"/>
+        <file src="src/repopack.h"/>
+        <file src="src/repopage.c"/>
+        <file src="src/repopage.h"/>
+        <file src="src/rules.c"/>
+        <file src="src/rules.h"/>
+        <file src="src/selection.c"/>
+        <file src="src/selection.h"/>
+        <file src="src/solvable.c"/>
+        <file src="src/solvable.h"/>
+        <file src="src/solver.c"/>
+        <file src="src/solver.h"/>
+        <file src="src/solver_private.h"/>
+        <file src="src/solver_util.c"/>
+        <file src="src/solverdebug.c"/>
+        <file src="src/solverdebug.h"/>
+        <file src="src/solvversion.c"/>
+        <file src="src/solvversion.h.in"/>
+        <file src="src/strpool.c"/>
+        <file src="src/strpool.h"/>
+        <file src="src/transaction.h"/>
+        <file src="src/util.c"/>
+        <file src="src/util.h"/>
+        <file src="tools/appdata2solv.c"/>
+        <file src="tools/archpkgs2solv.c"/>
+        <file src="tools/archrepo2solv.c"/>
+        <file src="tools/common_write.c"/>
+        <file src="tools/common_write.h"/>
+        <file src="tools/comps2solv.c"/>
+        <file src="tools/deb2solv.c"/>
+        <file src="tools/deltainfoxml2solv.c"/>
+        <file src="tools/diskusagexml2solv.c"/>
+        <file src="tools/dumpsolv.c"/>
+        <file src="tools/helix2solv.c"/>
+        <file src="tools/mdk2solv.c"/>
+        <file src="tools/mergesolv.c"/>
+        <file src="tools/repomdxml2solv.c"/>
+        <file src="tools/rpmdb2solv.c"/>
+        <file src="tools/rpmmd2solv.c"/>
+        <file src="tools/rpms2solv.c"/>
+        <file src="tools/susetags2solv.c"/>
+        <file src="tools/updateinfoxml2solv.c"/>
+        <copyright-notice><![CDATA[
+2007, Novell Inc
+2007-2008, Novell Inc
+2007-2009, Novell Inc
+2007-2011, Novell Inc
+2007-2012, Novell Inc
+2007-2013, Novell Inc
+2007-2014, Novell Inc
+2008, Novell Inc
+2008-2012, Novell Inc
+2009, Novell Inc
+2009-2012, Novell Inc
+2009-2013, Novell Inc
+2011, Novell Inc
+2012, Novell Inc
+2013, Novell Inc
+2014, Novell Inc
+2017, Novell Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="public-domain~md5">
+        <file src="src/md5.c"/>
+        <file src="src/md5.h"/>
+        <copyright-notice><![CDATA[
+2001, Solar Designer <solar@openwall.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="public-domain~sha1">
+        <file src="src/sha1.c"/>
+        <file src="src/sha1.h"/>
+        <copyright-notice><![CDATA[
+1998, Steve Reid <sreid@sea-to-sky.net>
+1998, James H. Brown <jbrown@burgoyne.com>
+2001, Saul Kravitz <Saul.Kravitz@celera.com>
+2002, Ralph Giles <giles@ghostscript.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-3-clause">
+        <file src="ext/pool_parserpmrichdep.c"/>
+        <file src="ext/pool_parserpmrichdep.h"/>
+        <file src="ext/repo_autopattern.c"/>
+        <file src="ext/repo_autopattern.c"/>
+        <file src="ext/repo_autopattern.h"/>
+        <file src="ext/repo_rpmdb_bdb.h"/>
+        <file src="ext/repo_rpmdb_librpm.h"/>
+        <file src="ext/repodata_diskusage.h"/>
+        <file src="ext/solv_pgpvrfy.c"/>
+        <file src="ext/solv_pgpvrfy.h"/>
+        <file src="src/linkedpkg.c"/>
+        <copyright-notice><![CDATA[
+2007-2017, SUSE Inc.
+2007-2018, SUSE Inc.
+2013, SUSE Inc.
+2014, SUSE Inc
+2015, SUSE Inc
+2017, SUSE Inc
+2018, SUSE Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-3-clause">
+        <file src="examples/solv/solv.c"/>
+        <file src="ext/solv_zchunk.c"/>
+        <file src="ext/solv_zchunk.h"/>
+        <file src="src/diskusage.c"/>
+        <file src="src/fileprovides.c"/>
+        <file src="src/order.c"/>
+        <file src="src/suse.c"/>
+        <file src="src/transaction.c"/>
+        <file src="src/userinstalled.c"/>
+        <file src="tools/installcheck.c"/>
+        <file src="tools/repo2solv.c"/>
+        <copyright-notice><![CDATA[
+2007-2015, SUSE LLC
+2007-2016, SUSE LLC
+2009-2015, SUSE LLC
+2016, SUSE LLC
+2017, SUSE LLC
+2018, SUSE LLC
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-3-clause">
+        <file src="src/sha2.c"/>
+        <file src="src/sha2.h"/>
+        <copyright-notice><![CDATA[
+2000-2001, Aaron D. Gifford
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-3-clause">
+        <file src="ext/repo_haiku.cpp"/>
+        <file src="ext/repo_haiku.h"/>
+        <copyright-notice><![CDATA[
+2011-2013, Ingo Weinhold <ingo_weinhold@gmx.de>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-3-clause">
+        <file src="src/qsort_r.c"/>
+        <copyright-notice><![CDATA[
+1992-1993, The Regents of the University of California.
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-3-clause">
+        <file src="ext/repo_updateinfoxml.c"/>
+        <copyright-notice><![CDATA[
+2007, Novell Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-3-clause">
+        <file src="cmake/modules/FindPackageHandleStandardArgs.cmake"/>
+        <file src="cmake/modules/FindRuby.cmake"/>
+        <file src="cmake/modules/_CMakeParseArguments.cmake"/>
+        <copyright-notice><![CDATA[
+2000-2009, Kitware, Inc., Insight Software Consortium
+2004-2009, Kitware, Inc., Insight Software Consortium
+2000-2009, Kitware, Inc., Insight Software Consortium
+2008-2009, Alexander Neundorf <neundorf@kde.org>
+2010, Alexander Neundorf <neundorf@kde.org>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-3-clause">
+        <file src="package/libsolv.changes"/>
+        <file src="package/libsolv.spec.in"/>
+        <copyright-notice><![CDATA[
+2018, SUSE LINUX Products GmbH, Nuernberg, Germany.
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-3-clause">
+        <file src=".emacs-dirvars"/>
+        <file src=".gitignore"/>
+        <file src=".travis.yml"/>
+        <file src="BUGS"/>
+        <file src="CMakeLists.txt"/>
+        <file src="CREDITS"/>
+        <file src="INSTALL"/>
+        <file src="LICENSE.BSD"/>
+        <file src="NEWS"/>
+        <file src="README"/>
+        <file src="TODO_1.0"/>
+        <file src="VERSION.cmake"/>
+        <file src="bindings/CMakeLists.txt"/>
+        <file src="bindings/perl/CMakeLists.txt"/>
+        <file src="bindings/python/CMakeLists.txt"/>
+        <file src="bindings/python3/CMakeLists.txt"/>
+        <file src="bindings/ruby/CMakeLists.txt"/>
+        <file src="bindings/tcl/CMakeLists.txt"/>
+        <file src="bindings/tcl/solv.tm.in"/>
+        <file src="bindings/solv.i"/>
+        <file src="cmake/modules/FindCheck.cmake"/>
+        <file src="cmake/modules/FindEXPAT.cmake"/>
+        <file src="cmake/modules/FindLZMA.cmake"/>
+        <file src="cmake/modules/FindLibSolv.cmake"/>
+        <file src="cmake/modules/FindRuby.cmake"/>
+        <file src="doc/CMakeLists.txt"/>
+        <file src="doc/Makefile.gen"/>
+        <file src="doc/filters/xcode.conf"/>
+        <file src="doc/filters/xcode.pl"/>
+        <file src="doc/gen/appdata2solv.1"/>
+        <file src="doc/appdata2solv.txt"/>
+        <file src="doc/gen/archpkgs2solv.1"/>
+        <file src="doc/archpkgs2solv.txt"/>
+        <file src="doc/gen/archrepo2solv.1"/>
+        <file src="doc/archrepo2solv.txt"/>
+        <file src="doc/gen/comps2solv.1"/>
+        <file src="doc/comps2solv.txt"/>
+        <file src="doc/gen/deb2solv.1"/>
+        <file src="doc/deb2solv.txt"/>
+        <file src="doc/gen/deltainfoxml2solv.1"/>
+        <file src="doc/deltainfoxml2solv.txt"/>
+        <file src="doc/gen/dumpsolv.1"/>
+        <file src="doc/dumpsolv.txt"/>
+        <file src="doc/gen/helix2solv.1"/>
+        <file src="doc/helix2solv.txt"/>
+        <file src="doc/gen/installcheck.1"/>
+        <file src="doc/installcheck.txt"/>
+        <file src="doc/gen/libsolv-bindings.3"/>
+        <file src="doc/libsolv-bindings.txt"/>
+        <file src="doc/gen/libsolv-constantids.3"/>
+        <file src="doc/libsolv-constantids.txt"/>
+        <file src="doc/gen/libsolv-history.3"/>
+        <file src="doc/libsolv-history.txt"/>
+        <file src="doc/gen/libsolv-pool.3"/>
+        <file src="doc/libsolv-pool.txt"/>
+        <file src="doc/gen/libsolv.3"/>
+        <file src="doc/libsolv.txt"/>
+        <file src="doc/gen/mdk2solv.1"/>
+        <file src="doc/mdk2solv.txt"/>
+        <file src="doc/gen/mergesolv.1"/>
+        <file src="doc/mergesolv.txt"/>
+        <file src="doc/gen/repo2solv.1"/>
+        <file src="doc/repo2solv.txt"/>
+        <file src="doc/gen/repomdxml2solv.1"/>
+        <file src="doc/repomdxml2solv.txt"/>
+        <file src="doc/gen/rpmdb2solv.1"/>
+        <file src="doc/rpmdb2solv.txt"/>
+        <file src="doc/gen/rpmmd2solv.1"/>
+        <file src="doc/rpmmd2solv.txt"/>
+        <file src="doc/gen/rpms2solv.1"/>
+        <file src="doc/rpms2solv.txt"/>
+        <file src="doc/gen/solv.1"/>
+        <file src="doc/solv.txt"/>
+        <file src="doc/gen/susetags2solv.1"/>
+        <file src="doc/susetags2solv.txt"/>
+        <file src="doc/gen/testsolv.1"/>
+        <file src="doc/testsolv.txt"/>
+        <file src="doc/gen/updateinfoxml2solv.1"/>
+        <file src="doc/updateinfoxml2solv.txt"/>
+        <file src="examples/solv/checksig.c"/>
+        <file src="examples/solv/checksig.h"/>
+        <file src="examples/solv/deltarpm.c"/>
+        <file src="examples/solv/deltarpm.h"/>
+        <file src="examples/solv/fastestmirror.c"/>
+        <file src="examples/solv/fastestmirror.h"/>
+        <file src="examples/CMakeLists.txt"/>
+        <file src="examples/p5solv"/>
+        <file src="examples/rbsolv"/>
+        <file src="examples/repo2solv.sh"/>
+        <file src="examples/solv/fileconflicts.c"/>
+        <file src="examples/solv/fileconflicts.h"/>
+        <file src="examples/solv/fileprovides.c"/>
+        <file src="examples/solv/fileprovides.h"/>
+        <file src="examples/solv/mirror.c"/>
+        <file src="examples/solv/mirror.h"/>
+        <file src="examples/solv/patchjobs.c"/>
+        <file src="examples/solv/patchjobs.h"/>
+        <file src="examples/solv/repoinfo.c"/>
+        <file src="examples/solv/repoinfo.h"/>
+        <file src="examples/solv/repoinfo_cache.c"/>
+        <file src="examples/solv/repoinfo_cache.h"/>
+        <file src="examples/solv/repoinfo_config_debian.c"/>
+        <file src="examples/solv/repoinfo_config_debian.h"/>
+        <file src="examples/solv/repoinfo_config_urpmi.c"/>
+        <file src="examples/solv/repoinfo_config_urpmi.h"/>
+        <file src="examples/solv/repoinfo_config_yum.c"/>
+        <file src="examples/solv/repoinfo_config_yum.h"/>
+        <file src="examples/solv/repoinfo_download.c"/>
+        <file src="examples/solv/repoinfo_download.h"/>
+        <file src="examples/solv/repoinfo_system_debian.c"/>
+        <file src="examples/solv/repoinfo_system_debian.h"/>
+        <file src="examples/solv/repoinfo_system_rpm.c"/>
+        <file src="examples/solv/repoinfo_system_rpm.h"/>
+        <file src="examples/solv/repoinfo_type_debian.c"/>
+        <file src="examples/solv/repoinfo_type_debian.h"/>
+        <file src="examples/solv/repoinfo_type_mdk.c"/>
+        <file src="examples/solv/repoinfo_type_mdk.h"/>
+        <file src="examples/solv/repoinfo_type_rpmmd.c"/>
+        <file src="examples/solv/repoinfo_type_rpmmd.h"/>
+        <file src="examples/solv/repoinfo_type_susetags.c"/>
+        <file src="examples/solv/repoinfo_type_susetags.h"/>
+        <file src="examples/solv/CMakeLists.txt"/>
+        <file src="examples/CMakeLists.txt"/>
+        <file src="examples/p5solv"/>
+        <file src="examples/rbsolv"/>
+        <file src="examples/tclsolv"/>
+        <file src="ext/CMakeLists.txt"/>
+        <file src="ext/libsolvext.ver"/>
+        <file src="ext/solv_xmlparser.h"/>
+        <file src="libsolv.pc.in"/>
+        <file src="libsolvext.pc.in"/>
+        <file src="src/CMakeLists.txt"/>
+        <file src="src/libsolv.ver"/>
+        <file src="test/CMakeLists.txt"/>
+        <file src="test/runtestcases"/>
+        <file src="test/testcases/choose/default.t"/>
+        <file src="test/testcases/choose/enhanced.t"/>
+        <file src="test/testcases/choose/oldversion.t"/>
+        <file src="test/testcases/choose/suggested.t"/>
+        <file src="test/testcases/choose/versioned.t"/>
+        <file src="test/testcases/choose/versioned2.t"/>
+        <file src="test/testcases/cleandeps/cleandeps_dup.t"/>
+        <file src="test/testcases/cleandeps/cleandeps_in.t"/>
+        <file src="test/testcases/cleandeps/cleandeps_up.t"/>
+        <file src="test/testcases/cleandeps/mistake.t"/>
+        <file src="test/testcases/cplxdeps/and.t"/>
+        <file src="test/testcases/cplxdeps/andor.t"/>
+        <file src="test/testcases/cplxdeps/if.t"/>
+        <file src="test/testcases/cplxdeps/ifelse.t"/>
+        <file src="test/testcases/cplxdeps/or.t"/>
+        <file src="test/testcases/cplxdeps/orand.t"/>
+        <file src="test/testcases/distupgrade/dup_allowuninstall.t"/>
+        <file src="test/testcases/distupgrade/dup_multiversion1.t"/>
+        <file src="test/testcases/distupgrade/dup_multiversion2.t"/>
+        <file src="test/testcases/distupgrade/dup_multiversion3.t"/>
+        <file src="test/testcases/distupgrade/dup_noarchchange.t"/>
+        <file src="test/testcases/distupgrade/dup_orphan1.t"/>
+        <file src="test/testcases/distupgrade/dup_orphan2.t"/>
+        <file src="test/testcases/distupgrade/dup_orphan3.t"/>
+        <file src="test/testcases/evrcmp/conflicts.repo"/>
+        <file src="test/testcases/evrcmp/system.repo"/>
+        <file src="test/testcases/evrcmp/testevr.t"/>
+        <file src="test/testcases/favor/recommends.t"/>
+        <file src="test/testcases/favor/requires.t"/>
+        <file src="test/testcases/favor/supplements.t"/>
+        <file src="test/testcases/focus/best.t"/>
+        <file src="test/testcases/focus/installed.t"/>
+        <file src="test/testcases/focus/normal.t"/>
+        <file src="test/testcases/forcebest/forcebest_dup.t"/>
+        <file src="test/testcases/forcebest/forcebest_in.t"/>
+        <file src="test/testcases/forcebest/forcebest_up.t"/>
+        <file src="test/testcases/lockstep/lockstep_install.t"/>
+        <file src="test/testcases/lockstep/lockstep_update.t"/>
+        <file src="test/testcases/multiversion/multiversion.t"/>
+        <file src="test/testcases/multiversion/update.t"/>
+        <file src="test/testcases/namespace/namespaceprovides.t"/>
+        <file src="test/testcases/sat/assert.t"/>
+        <file src="test/testcases/sat/mm-test.t"/>
+        <file src="test/testcases/sat/reuse.t"/>
+        <file src="test/testcases/recommendations/recommended_conflicts.t"/>
+        <file src="test/testcases/recommendations/recommended_multirepo.t"/>
+        <file src="test/testcases/recommendations/recommended_oldversion.t"/>
+        <file src="test/testcases/recommendations/recommended_targeted.t"/>
+        <file src="test/testcases/recommendations/recommended_version.t"/>
+        <file src="test/testcases/recommendations/suggested_conflicts.t"/>
+        <file src="test/testcases/recommendations/suggested_multirepo.t"/>
+        <file src="test/testcases/recommendations/suggested_oldversion.t"/>
+        <file src="test/testcases/recommendations/suggested_targeted.t"/>
+        <file src="test/testcases/recommendations/suggested_version.t"/>
+        <file src="test/testcases/selection/selection_canon_rpm.t"/>
+        <file src="test/testcases/selection/selection_filelist.t"/>
+        <file src="test/testcases/selection/selection_matchdeps.t"/>
+        <file src="test/testcases/selection/selection_name.t"/>
+        <file src="test/testcases/selection/selection_provides.t"/>
+        <file src="test/testcases/strongrecommends/break.t"/>
+        <file src="test/testcases/strongrecommends/strongr.t"/>
+        <file src="test/testcases/targeted/targeted_dup.t"/>
+        <file src="test/testcases/targeted/targeted_up.t"/>
+        <file src="test/testcases/testcase/nested.t"/>
+        <file src="test/testcases/testcase/str2dep.t"/>
+        <file src="test/testcases/weakdeps/supplements_implicitobsoleteusescolors.t"/>
+        <file src="test/testcases/yumobs/split.t"/>
+        <file src="tools/CMakeLists.txt"/>
+        <file src="tools/cudftest.c"/>
+        <file src="tools/findfileconflicts.c"/>
+        <file src="tools/testsolv.c"/>
+        <copyright-notice><![CDATA[
+*No copyright*
+        ]]></copyright-notice>
+    </files>
+    <license handle="BSD-3-clause"><![CDATA[
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+3. Neither the name of Novell nor the names of its contributors may
+   be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+    ]]></license>
+    <license handle="public-domain~md5"><![CDATA[
+This is an OpenSSL-compatible implementation of the RSA Data Security,
+Inc. MD5 Message-Digest Algorithm.
+
+Written by Solar Designer <solar@openwall.com> in 2001, and placed in
+the public domain.
+
+This differs from Colin Plumb's older public domain implementation in
+that no 32-bit integer data type is required, there's no compile-time
+endianness configuration, and the function prototypes match OpenSSL's.
+The primary goals are portability and ease of use.
+
+This implementation is meant to be fast, but not as fast as possible.
+Some known optimizations are not included to reduce source code size
+and avoid compile-time configuration.
+    ]]></license>
+    <license handle="public-domain~sha1"><![CDATA[
+Extracted from src/sha1.c's changelog in the file header:
+
+SHA-1 in C
+By Steve Reid <sreid@sea-to-sky.net>
+100% Public Domain
+
+-----------------
+Modified 7/98
+By James H. Brown <jbrown@burgoyne.com>
+Still 100% Public Domain
+
+[...]
+
+-----------------
+Modified 8/98
+By Steve Reid <sreid@sea-to-sky.net>
+Still 100% public domain
+
+[...]
+
+-----------------
+Modified 4/01
+By Saul Kravitz <Saul.Kravitz@celera.com>
+Still 100% PD
+
+[...]
+
+-----------------
+Modified 07/2002
+By Ralph Giles <giles@ghostscript.com>
+Still 100% public domain
+
+[...]
+    ]]></license>
+</copyright>

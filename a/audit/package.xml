@@ -14,6 +14,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="audit-2.8.4.tar.gz" subdir="sources"
                 sha256sum="a410694d09fc5708d980a61a5abcb9633a591364f1ecc7e97ad5daef9c898c38"/>

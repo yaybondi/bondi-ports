@@ -9,6 +9,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="icu-63.1.tar.xz" subdir="sources"
                 sha256sum="347d0e6c39c3538b812c10c6c83815d4a089d578380387ae7d94c5b820948e82"/>

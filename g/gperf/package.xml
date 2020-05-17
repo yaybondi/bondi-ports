@@ -18,6 +18,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="gperf-3.1.tar.gz" subdir="sources"
                 sha256sum="1f88819b78187350e7e6ca24b5e15cbf4083659773508d3f018b9b525e9d1cb8"/>

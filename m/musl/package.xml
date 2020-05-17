@@ -21,6 +21,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="musl-1.1.24.tar.gz" subdir="sources"
                 sha256sum="1370c9a812b2cf2a7d92802510cca0058cc37e66a7bedd70051f0a34015022a3"/>

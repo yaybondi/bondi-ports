@@ -14,6 +14,8 @@
             </ul>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="dns-root-data-2019031302.tar.xz" subdir="sources"
                 sha256sum="5606dec8c6641f5c44013efc6394274c98b577f8c0846ea30b808a11c4b3e876"/>

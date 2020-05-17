@@ -1,0 +1,152 @@
+<copyright>
+    <files license="LGPL-2.1+">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+2001-2004, 2010, 2012-2018, g10 Code GmbH
+        ]]></copyright-notice>
+    </files>
+    <files license="LGPL-2.1+">
+        <file src="src/b64dec.c"/>
+        <copyright-notice><![CDATA[
+2008, 2011 Free Software Foundation, Inc.
+2008, 2011, 2016 g10 Code GmbH
+        ]]></copyright-notice>
+    </files>
+    <files license="LGPL-2.1+ or BSD-3-clause">
+        <file src="src/estream-printf.h"/>
+        <file src="src/estream-printf.c"/>
+        <file src="src/estream.c"/>
+        <copyright-notice><![CDATA[
+2004-2012, 2014-2017 g10 Code GmbH
+        ]]></copyright-notice>
+    </files>
+    <files license="LGPL-2.1+">
+        <file src="src/w32-estream.c"/>
+        <copyright-notice><![CDATA[
+2000 Werner Koch (dd9jn)
+2001, 2002, 2003, 2004, 2007, 2010, 2016 g10 Code GmbH
+        ]]></copyright-notice>
+    </files>
+    <files license="LGPL-2.1+">
+        <file src="src/gettext.h"/>
+        <copyright-notice><![CDATA[
+1995-1998, 2000-2002 Free Software Foundation, Inc.
+        ]]></copyright-notice>
+    </files>
+    <files license="g10-permissive">
+        <file src="src/gpg-error-config.in"/>
+        <copyright-notice><![CDATA[
+1999, 2002, 2003 Free Software Foundation, Inc.
+        ]]></copyright-notice>
+    </files>
+    <files license="g10-permissive">
+        <file src="src/mkheader.c"/>
+        <copyright-notice><![CDATA[
+2010 Free Software Foundation, Inc.
+2014 g10 Code GmbH
+        ]]></copyright-notice>
+    </files>
+    <files license="LGPL-2.1+">
+        <file src="src/posix-lock.c"/>
+        <copyright-notice><![CDATA[
+2005-2009 Free Software Foundation, Inc.
+2014 g10 Code GmbH
+        ]]></copyright-notice>
+    </files>
+    <files license="LGPL-2.1+">
+        <file src="src/w32-gettext.c"/>
+        <copyright-notice><![CDATA[
+1995, 1996, 1997, 1999, 2005, 2007, 2008, 2010 Free Software Foundation, Inc.
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-3+">
+        <file src="doc/yat2m.c"/>
+        <copyright-notice><![CDATA[
+2005, 2013, 2015, 2016 g10 Code GmbH
+2006, 2008, 2011 Free Software Foundation, Inc.
+        ]]></copyright-notice>
+    </files>
+    <files license="g10-permissive">
+        <file src="potomo"/>
+        <copyright-notice><![CDATA[
+2008 g10 Code GmbH
+2010 Free Software Foundation, Inc.
+        ]]></copyright-notice>
+    </files>
+    <license handle="g10-permissive"><![CDATA[
+This file is free software; as a special exception the author gives
+unlimited permission to copy and/or distribute it, with or without
+modifications, as long as this notice is preserved.
+
+This file is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    ]]></license>
+    <license handle="LGPL-2.1+"><![CDATA[
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as
+published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/lgpl-2.1.txt
+
+to view the full license text.
+    ]]></license>
+    <license handle="GPL-3+"><![CDATA[
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, see <https://www.gnu.org/licenses/>.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-3.0.txt
+
+to view the full license text.
+    ]]></license>
+    <license handle="BSD-3-clause"><![CDATA[
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+   notice, and the entire permission notice in its entirety,
+   including the disclaimer of warranties.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+3. The name of the author may not be used to endorse or promote
+   products derived from this software without specific prior
+   written permission.
+
+THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+OF THE POSSIBILITY OF SUCH DAMAGE.
+    ]]></license>
+</copyright>

@@ -16,6 +16,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="python-py-1.7.0.tar.gz" subdir="sources"
                 sha256sum="bf92637198836372b520efcba9e020c330123be8ce527e535d185ed4b6f45694"/>

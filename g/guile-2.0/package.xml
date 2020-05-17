@@ -16,6 +16,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="guile-2.0-2.0.13+1.tar.xz" subdir="sources"
                 sha256sum="ecf63aa152cf962752325c2dcd6af1bd575441b984fde847a280ea852ff9eddd"/>

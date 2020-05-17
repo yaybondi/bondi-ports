@@ -13,6 +13,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="libyaml-0.2.1.tar.gz" subdir="sources"
                 sha256sum="3ad5c55ec2cf72770e173d973d4120099ba0dec4d074097a488fa79de08304de"/>

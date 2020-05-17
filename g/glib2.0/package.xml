@@ -17,6 +17,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="glib2.0-2.58.3.tar.xz" subdir="sources"
                 sha256sum="8f43c31767e88a25da72b52a40f3301fefc49a665b56dc10ee7cc9565cbe7481"/>

@@ -1,0 +1,12 @@
+<copyright>
+    <files license="public-domain">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+D. Richard Hipp <drh@hwaci.com>
+        ]]></copyright-notice>
+        <license><![CDATA[
+The files listed have been put on the public domain by the sqlite3
+contributors.
+        ]]></license>
+    </files>
+</copyright>

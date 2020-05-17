@@ -17,6 +17,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="isl-0.20.tar.xz" subdir="sources"
                 sha256sum="a5596a9fb8a5b365cb612e4b9628735d6e67e9178fae134a816ae195017e77aa"/>

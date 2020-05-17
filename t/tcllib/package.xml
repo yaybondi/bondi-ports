@@ -13,6 +13,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="tcllib-1.19-dfsg.tar.xz" subdir="sources"
                 sha256sum="bea20af4336144d6d1d65853eb05ad2333396e254fa36cf154424562a280ff3a"/>

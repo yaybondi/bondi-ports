@@ -1,0 +1,14 @@
+<copyright>
+    <files license="PD">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+Copyright: (C) 1987-2002 National Institute of Standards and Technology
+    <http://www.nist.gov/>
+        ]]></copyright-notice>
+        <license><![CDATA[
+Design and implementation of this program was paid for by U.S. tax
+dollars. Therefore it is public domain. However, the author and NIST
+would appreciate credit if this program or parts of it are used.
+        ]]></license>
+    </files>
+</copyright>

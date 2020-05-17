@@ -16,6 +16,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="p11-kit-0.23.15.tar.gz" subdir="sources"
                 sha256sum="f7c139a0c77a1f0012619003e542060ba8f94799a0ef463026db390680e4d798"/>

@@ -9,6 +9,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="autoconf2.64-2.64+dfsg.tar.gz" subdir="sources"
                 sha256sum="9fce101dfe4705bd807d319818312a5c7755109d0bd47e233e03265e3fd70eba"/>

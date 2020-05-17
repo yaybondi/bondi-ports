@@ -9,6 +9,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="tcl8.6-8.6.9+dfsg.tar.gz" subdir="sources"
                 sha256sum="e0a220012a61fd4bd07e0e6b3391a8884c16608b37a00f22726614d721c50659"/>

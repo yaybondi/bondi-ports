@@ -1,0 +1,26 @@
+<copyright>
+    <files license="GPL-3+">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+1999, 2001-2002, 2006-2007, 2009-2010 Free Software Foundation, Inc.
+1992-1993 Jean-loup Gailly
+        ]]></copyright-notice>
+        <license><![CDATA[
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3, or (at your option)
+any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-3.0.txt
+
+to view the full license text.
+        ]]></license>
+    </files>
+</copyright>

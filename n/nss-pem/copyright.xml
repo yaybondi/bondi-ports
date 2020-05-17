@@ -1,0 +1,28 @@
+<copyright>
+    <files license="LGPL-2.1 or GPL-2 or MPL-1.1">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+1994-2000 Netscape Communications Corporation
+2005 Rob Crittenden
+        ]]></copyright-notice>
+    </files>
+    <license handle="GPL-2"><![CDATA[
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-2.0.txt
+
+to view the full license text.
+    ]]></license>
+    <license handle="LGPL-2.1"><![CDATA[
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/lgpl-2.1.txt
+
+to view the full license text.
+    ]]></license>
+    <license handle="MPL-1.1"><![CDATA[
+The full text of the Mozilla Public License version 1.1 can be found at
+
+    https://www.mozilla.org/en-US/MPL/1.1/
+    ]]></license>
+</copyright>

@@ -1,0 +1,28 @@
+<copyright>
+    <files license="GPL-3+">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+1988-2014 Free Software Foundation, Inc.
+        ]]></copyright-notice>
+    </files>
+    <license handle="GPL-3+"><![CDATA[
+This package is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This package is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-3.0.txt
+
+to view the full license text.
+    ]]></license>
+</copyright>

@@ -24,6 +24,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="protobuf-c-1.3.1.tar.gz" subdir="sources"
                 sha256sum="51472d3a191d6d7b425e32b612e477c06f73fe23e07f6a6a839b11808e9d2267"/>

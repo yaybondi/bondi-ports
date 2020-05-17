@@ -20,6 +20,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="mawk-1.3.3.tar.gz" subdir="sources"
                 sha256sum="32649c46063d4ef0777a12ae6e9a26bcc920833d54e1abca7edb8d37481e7485"/>

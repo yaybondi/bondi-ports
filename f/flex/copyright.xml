@@ -1,0 +1,218 @@
+<copyright>
+    <files license="FLEX">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 2001-2008 The Flex Project.
+Copyright (C) 1990, 1993, 1997 The Regents of the University of California.
+All rights reserved.
+        ]]></copyright-notice>
+    </files>
+    <files license="FSF-permissive">
+        <file src="m4/*"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 1994-2015, Free Software Foundation, Inc.
+        ]]></copyright-notice>
+    </files>
+    <files license="bonzini-custom">
+        <file src="m4/ax_prog_cc_for_build.m4"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 2008, Paolo Bonzini <bonzini@gnu.org>
+        ]]></copyright-notice>
+        <license><![CDATA[
+Copying and distribution of this file, with or without modification, are
+permitted in any medium without royalty provided the copyright notice
+and this notice are preserved. This file is offered as-is, without any
+warranty.
+        ]]></license>
+    </files>
+    <files license="FSF-permissive">
+        <file src="m4/libtool.m4"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 1996-2001, 2003-2015, Free Software Foundation, Inc.
+        ]]></copyright-notice>
+    </files>
+    <files license="FSF-permissive">
+        <file src="m4/ltoptions.m4"/>
+        <file src="m4/ltsugar.m4"/>
+        <file src="m4/lt~obsolete.m4"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 2004, 2005, 2007-2009, 2011-2015, Free Software
+        ]]></copyright-notice>
+    </files>
+    <files license="FSF-permissive">
+        <file src="m4/nls.m4"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 1995-2003, 2005, 2006, 2008-2010, Free Software Foundation
+        ]]></copyright-notice>
+    </files>
+    <files license="drepper-custom">
+        <file src="po/Makefile.in.in"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 1995-1997, 2000-2007, 2009, 2010
+  Ulrich Drepper <drepper@gnu.ai.mit.edu>
+        ]]></copyright-notice>
+        <license><![CDATA[
+This file can be copied and used freely without restrictions.  It can
+be used in projects which are not available under the GNU General Public
+License but which still want to provide support for the GNU gettext
+functionality.
+
+Please note that the actual code of GNU gettext is covered by the GNU
+General Public License and is *not* in the public domain.
+        ]]></license>
+    </files>
+    <files license="FLEX">
+        <file src="src/*"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 1990, 1993, The Regents of the University of California.
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-clause, None">
+        <file src="src/Makefile.am"/>
+        <file src="src/filter.c"/>
+        <file src="src/flexint.h"/>
+        <file src="src/libfl.pc.in"/>
+        <file src="src/libmain.c"/>
+        <file src="src/libyywrap.c"/>
+        <file src="src/mkskel.sh"/>
+        <file src="src/regex.c"/>
+        <file src="src/scan.c"/>
+        <file src="src/skel.c"/>
+        <file src="src/version.h"/>
+    </files>
+    <files license="LGPL-2+">
+        <file src="src/gettext.h"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 1995-1998, 2000-2002 Free Software Foundation, Inc
+        ]]></copyright-notice>
+        <license><![CDATA[
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Library General Public License as published
+by the Free Software Foundation; either version 2, or (at your option)
+any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Library General Public License for more details.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/lgpl-2.0.txt
+
+to view the full license text.
+        ]]></license>
+    </files>
+    <files license="GPL-3+">
+        <file src="src/parse.c"/>
+        <file src="src/parse.h"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 1984, 1989, 1990, 2000-2015, Free Software Foundation, Inc.
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="tools/git2cl"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 2007, Luis Mondesi <lemsx1@gmail.com>
+Copyright (C) 2007, 2008, Simon Josefsson <simon@josefsson.org>
+        ]]></copyright-notice>
+        <license><![CDATA[
+git2cl is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2, or (at your option)
+any later version.
+
+git2cl is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-2.0.txt
+
+to view the full license text.
+        ]]></license>
+    </files>
+    <license handle="FSF-permissive"><![CDATA[
+This file is free software; the Free Software Foundation
+gives unlimited permission to copy and/or distribute it,
+with or without modifications, as long as this notice is preserved.
+    ]]></license>
+    <license handle="GPL-3+"><![CDATA[
+This package is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This package is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-2.0.txt
+
+to view the full license text.
+    ]]></license>
+    <license handle="BSD-2-clause"><![CDATA[
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+Neither the name of the University nor the names of its contributors
+may be used to endorse or promote products derived from this software
+without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED ``AS IS'' AND WITHOUT ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE.
+    ]]></license>
+    <license handle="FLEX"><![CDATA[
+Flex carries the copyright used for BSD software, slightly modified
+because it originated at the Lawrence Berkeley (not Livermore!) Laboratory,
+which operates under a contract with the Department of Energy:
+
+This code is derived from software contributed to Berkeley by
+Vern Paxson.
+
+The United States Government has rights in this work pursuant
+to contract no. DE-AC03-76SF00098 between the United States
+Department of Energy and the University of California.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+Neither the name of the University nor the names of its contributors
+may be used to endorse or promote products derived from this software
+without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED ``AS IS'' AND WITHOUT ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE.
+
+This basically says "do whatever you please with this software except
+remove this notice or take advantage of the University's (or the flex
+authors') name".
+
+Note that the "flex.skl" scanner skeleton carries no copyright notice.
+You are free to do whatever you please with scanners generated using flex;
+for them, you are not even bound by the above copyright.
+    ]]></license>
+</copyright>

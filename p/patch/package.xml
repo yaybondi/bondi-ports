@@ -15,6 +15,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="patch-2.7.6.tar.xz" subdir="sources"
                 sha256sum="ac610bda97abe0d9f6b7c963255a11dcb196c25e337c61f94e4778d632f1d8fd"/>

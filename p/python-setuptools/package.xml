@@ -14,6 +14,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="python-setuptools-40.8.0.tar.xz" subdir="sources"
                 sha256sum="b0525dea743dd9a34c3523b5bd75ed6ef0763d389f96e7df448904169d8ce772"/>

@@ -23,6 +23,8 @@
             </ul>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="python-dateutil-2.7.3.tar.gz" subdir="sources"
                 sha256sum="e27001de32f627c22380a688bcc43ce83504a7bc5da472209b4c70f02829f0b8"/>

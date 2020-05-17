@@ -8,6 +8,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="db5.3-5.3.28+dfsg1.tar.xz" subdir="sources"
                 sha256sum="b19bf3dd8ce74b95a7b215be9a7c8489e8e8f18da60d64d6340a06e75f497749"/>

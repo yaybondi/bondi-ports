@@ -18,6 +18,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="protobuf-3.6.1.3.tar.gz" subdir="sources"
                 sha256sum="73fdad358857e120fd0fa19e071a96e15c0f23bb25f85d3f7009abfd4f264a2a"/>

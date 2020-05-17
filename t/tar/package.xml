@@ -16,6 +16,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="tar-1.30+dfsg.tar.xz" subdir="sources"
                 sha256sum="c02f3747ffe02017878303dde8b78e79cd220364c5e8048cf92320232e38912d"/>

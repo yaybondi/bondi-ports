@@ -16,6 +16,8 @@
             </p>
         </description>
 
+        <xi:include href="copyright.xml"/>
+
         <sources>
             <file src="expat-2.2.6.tar.gz" subdir="sources"
                 sha256sum="574499cba22a599393e28d99ecfa1e7fc85be7d6651d543045244d5b561cb7ff"/>
