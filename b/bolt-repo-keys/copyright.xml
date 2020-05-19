@@ -1,0 +1,12 @@
+<copyright>
+    <files license="PD">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+This package contains machine-generated, non-copyrightable material.
+        ]]></copyright-notice>
+        <license><![CDATA[
+The cryptographic keys contained in this package were created for the purpose
+of validating the signatures of packages listings in the Bolt package repositories.
+        ]]></license>
+    </files>
+</copyright>
