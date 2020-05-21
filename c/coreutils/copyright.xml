@@ -6,7 +6,7 @@ Copyright (C) 1984-2008 Free Software Foundation, Inc.
         ]]></copyright-notice>
     </files>
     <files license="GPL-3+ and BSD-3-clause">
-        <file src="lib/fts.c">
+        <file src="lib/fts.c"/>
         <copyright-notice><![CDATA[
 Copyright (C) 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
 Copyright (c) 1990, 1993, 1994
