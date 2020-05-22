@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <source name="attr" architecture-independent="false">
+    <source name="attr" repo="core" architecture-independent="false">
         <description>
             <summary>Utilities for manipulating filesystem extended attributes</summary>
             <p>

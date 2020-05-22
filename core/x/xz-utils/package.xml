@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="xz-utils" architecture-independent="false">
+    <source name="xz-utils" repo="core" architecture-independent="false">
         <description>
             <summary>XZ-format compression library and utilities</summary>
             <p>

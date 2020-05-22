@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <source name="automake-1.15" architecture-independent="true">
+    <source name="automake-1.15" repo="core" architecture-independent="true">
         <description>
             <summary>Tool for generating GNU Standards-compliant Makefiles</summary>
             <p>

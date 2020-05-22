@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="patch" architecture-independent="false">
+    <source name="patch" repo="core" architecture-independent="false">
         <description>
             <summary>Apply a diff file to an original</summary>
             <p>

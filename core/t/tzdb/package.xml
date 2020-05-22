@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <source name="tzdb" architecture-independent="true">
+    <source name="tzdb" repo="core" architecture-independent="true">
         <description>
             <summary>time zone and daylight-saving time data</summary>
             <p>

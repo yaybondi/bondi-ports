@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="coreutils" architecture-independent="false">
+    <source name="coreutils" repo="core" architecture-independent="false">
         <description>
             <summary>GNU core utilities</summary>
             <p>

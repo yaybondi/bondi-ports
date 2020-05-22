@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <source name="bison" architecture-independent="false">
+    <source name="bison" repo="core" architecture-independent="false">
         <description>
             <summary>YACC-compatible parser generator</summary>
             <p>

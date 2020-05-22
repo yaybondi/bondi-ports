@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <source name="pkg-config" architecture-independent="false">
+    <source name="pkg-config" repo="core" architecture-independent="false">
         <description>
             <summary>manage compile and link flags for libraries</summary>
             <p>

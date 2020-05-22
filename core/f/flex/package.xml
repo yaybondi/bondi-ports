@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="flex" architecture-independent="false">
+    <source name="flex" repo="core" architecture-independent="false">
         <description>
             <summary>fast lexical analyzer generator</summary>
             <p>

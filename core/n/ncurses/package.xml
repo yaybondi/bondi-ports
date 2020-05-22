@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="ncurses" architecture-independent="false">
+    <source name="ncurses" repo="core" architecture-independent="false">
         <description>
             <summary>system libraries for terminal handling</summary>
             <p>

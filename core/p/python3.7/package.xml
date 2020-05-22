@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="python3.7" architecture-independent="false">
+    <source name="python3.7" repo="core" architecture-independent="false">
         <description>
             <summary>Interactive high-level object-oriented language (version 3.7)</summary>
             <p>

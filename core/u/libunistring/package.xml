@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <source name="libunistring" architecture-independent="false">
+    <source name="libunistring" repo="core" architecture-independent="false">
         <description>
             <summary>Unicode string library for C</summary>
             <p>

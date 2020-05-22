@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="pam-config" architecture-independent="false">
+    <source name="pam-config" repo="core" architecture-independent="false">
         <description>
             <summary>Utility for generating the common PAM configuration</summary>
             <p>

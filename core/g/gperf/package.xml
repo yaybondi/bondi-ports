@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="gperf" architecture-independent="false">
+    <source name="gperf" repo="core" architecture-independent="false">
         <description>
             <summary>Perfect hash function generator</summary>
             <p>

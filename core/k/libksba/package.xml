@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="libksba" architecture-independent="false">
+    <source name="libksba" repo="core" architecture-independent="false">
         <description>
             <summary>X.509 and CMS support library</summary>
             <p>

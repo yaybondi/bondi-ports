@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="libidn" architecture-independent="false">
+    <source name="libidn" repo="core" architecture-independent="false">
         <description>
             <summary>Command line and Emacs interface to GNU Libidn</summary>
             <p>
