@@ -19,7 +19,7 @@
 
         <sources>
             <file src="bolt-package-1.1.0.tar.gz" subdir="sources"
-                sha256sum="8d950fb9e4ca578537e47124340f68a071f98aff0919000474e4089fe64078a6"/>
+                sha256sum="230e8db404c279597f68fd17aaa82791f9873005a594cfac5cc7a822c3b0330f"/>
         </sources>
 
         <requires>
