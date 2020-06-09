@@ -6,7 +6,7 @@
             Opkg is a lightweight package management system. It is written in C and resembles
         apt/dpkg in operation. It is intended for use on embedded Linux devices.
         </p>
-	<p>
+        <p>
             The version of opkg contained in this package supports a smaller set of features
         and has less external dependencies. It can be used to reduce firmware size when
         storage is limited.
