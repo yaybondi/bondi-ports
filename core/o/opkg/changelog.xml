@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="0.4.4~0" revision="1" maintainer="Tobias Koch"
+     email="tobias.koch@gmail.com" date="2020-07-04 23:42:00+03:00">
+        <changeset>
+            <li>Upgrade to upstream 0.4.4-SNAPSHOT.</li>
+        </changeset>
+    </release>
     <release version="0.4.2~0" revision="2" maintainer="Tobias Koch"
      email="tobias.koch@gmail.com" date="2019-10-07 22:08:00+03:00">
         <changeset>
-            <li>Add opkg-minimal package with stripped down functionalty.</li>
+            <li>Add opkg-minimal package with stripped down functionality.</li>
         </changeset>
     </release>
     <release version="0.4.2~0" revision="1" maintainer="Tobias Koch"
