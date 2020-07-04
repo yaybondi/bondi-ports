@@ -22,7 +22,7 @@
 
         <sources>
             <file src="opkg-0.4.4~0.tar.gz" subdir="sources"
-                sha256sum="ed883c3f8498a07fc3ff53ef38e19854cbcec5e138b4afd8d593842fc28c2b24"/>
+                sha256sum="4d87376bb62580e085ae293178187765c4431b8a32171d9e35ebf045fc8b3c8e"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="34cce47ad1548c010ded7a090cbf264b85cd9bd052229267231bfb197cccf54d"/>
         </sources>
