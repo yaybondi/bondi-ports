@@ -23,6 +23,8 @@ bh_python_install --py3 --build
 cd "$BOLT_SOURCE_DIR"
 bh_python_install --py3 --install --root "$BOLT_INSTALL_DIR"
 
+rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bolt-pkg-dbd"
+
 PYTHON="$BOLT_INSTALL_PREFIX/bin/python3"
 sed -i "s|^#!/usr/bin/env python.*|#!$PYTHON|g" \
     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/"*
