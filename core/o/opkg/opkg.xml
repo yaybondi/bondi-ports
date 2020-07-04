@@ -15,7 +15,7 @@
 
     <requires>
         <package name="usign"/>
-        <package name="bolt-repo-keys"/>
+        <package name="bolt-repo-keys" tools-prefix=""/>
         <package name="libopkg1" version="=="/>
     </requires>
 
