@@ -27,7 +27,7 @@
     </replaces>
 
     <contents subdir="minimal">
-	<file src="${prefix}/bin"/>
+        <file src="${prefix}/bin"/>
         <dir src="/var/cache/opkg"/>
         <dir src="/var/lib/opkg"/>
         <dir src="/var/lib/opkg/info"/>

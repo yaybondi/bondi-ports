@@ -110,9 +110,6 @@ find "$BOLT_SOURCE_DIR/libopkg/" -name "*.h" -exec install -m 644 '{}' \
 rm -f "$BOLT_INSTALL_DIR/full/$BOLT_INSTALL_PREFIX/bin/opkg-key"
 rm -f "$BOLT_INSTALL_DIR/full/$BOLT_INSTALL_PREFIX/bin/opkg-check-config"
 
-install -m 0755 "$BOLT_SOURCE_DIR/utils/opkg-usign-key" \
-    "$BOLT_INSTALL_DIR/full/$BOLT_INSTALL_PREFIX/bin/opkg-key"
-
 set +x
 echo "########################################################################"
 echo "# Install minimal                                                       "
@@ -122,8 +119,6 @@ set -x
 install -d -m 0755 "$BOLT_INSTALL_DIR/minimal/$BOLT_INSTALL_PREFIX/bin"
 install -m 0755 "$BOLT_BUILD_DIR/minimal/src/opkg" \
     "$BOLT_INSTALL_DIR/minimal/$BOLT_INSTALL_PREFIX/bin"
-install -m 0755 "$BOLT_SOURCE_DIR/utils/opkg-usign-key" \
-    "$BOLT_INSTALL_DIR/minimal/$BOLT_INSTALL_PREFIX/bin/opkg-key"
 
     ]]>
     </install>
