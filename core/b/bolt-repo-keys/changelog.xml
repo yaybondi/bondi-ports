@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="20200705.01" revision="1" maintainer="Tobias Koch"
+        email="tobias.koch@gmail.com" date="2020-07-05 22:55:00+03:00">
+        <changeset>
+            <li>Include opkg-key command</li>
+        </changeset>
+    </release>
     <release version="20191009" revision="1" maintainer="Tobias Koch"
         email="tobias.koch@gmail.com" date="2019-10-09 23:34:00+03:00">
         <changeset>

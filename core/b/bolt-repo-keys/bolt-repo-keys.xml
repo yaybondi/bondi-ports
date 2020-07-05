@@ -15,7 +15,6 @@
     <maintainer-scripts>
         <postinst><![CDATA[
 
-"$BOLT_INSTALL_PREFIX/bin/opkg-key" reset
 "$BOLT_INSTALL_PREFIX/bin/opkg-key" populate
 
         ]]></postinst>

@@ -12,8 +12,8 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="bolt-repo-keys-20191009.tar.gz" subdir="sources"
-                sha256sum="3a3eb917bc58e38f8ca7c0bd0d958663d706406d4052a9395446a6201f5bdc63"/>
+            <file src="bolt-repo-keys-20200705.01.tar.gz" subdir="sources"
+                sha256sum="74fcb36c66ec3c5569e049efe0260ae261ac9a93775501d5c3732ef177360b78"/>
         </sources>
 
         <xi:include href="rules.xml"/>
