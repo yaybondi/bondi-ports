@@ -9,6 +9,7 @@
     </description>
 
     <contents>
+        <dir src="/etc/opkg/usign/trustdb"/>
         <file src="${prefix}/share/opkg/usign/bolt-repo-keys/*"/>
     </contents>
 
