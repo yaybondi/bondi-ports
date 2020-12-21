@@ -24,16 +24,17 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="musl-1.1.24.tar.gz" subdir="sources"
-                sha256sum="1370c9a812b2cf2a7d92802510cca0058cc37e66a7bedd70051f0a34015022a3"/>
-            <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="5c2a4e9d750abea0f66e515a9fb5442be6a438c099fa9994d202af10c9c7815e"/>
+            <file src="musl-1.2.1.tar.gz" subdir="sources"
+                sha256sum="68af6e18539f646f9c41a3a2bb25be4a5cfa5a8f65f0bb647fd2bbfdf877e84b"/>
+            <file src="bolt-patches-2.tar.gz" subdir="patches"
+                sha256sum="7b7b1b4b03abd7fb180ad3a12bb7cf972c64b3ea7027139b13bc431aa823d9aa"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/musl-cdefs.patch"/>
                 <file src="patches/add-libssp-nonshared.patch"/>
+                <file src="patches/cve-2020-28928.patch"/>
             </patchset>
         </patches>
 
