@@ -31,6 +31,8 @@
                 sha256sum="b94c1f2535f98354811ee644dccab6e84a0cf73e477ca03fb5a3758fb1fecd1c"/>
             <file src="debian-patches-0.4.tar.gz" subdir="patches"
                 sha256sum="ef83bc0e76a3d443d5bf7d68e8b160bc88bb7c4158b8759a77ac2df733828516"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
+                sha256sum="c06f267f9f669cd57eaedf933bb8b43a2115357a68e76f33c0f53c999b1e2895"/>
         </sources>
 
         <patches>
@@ -38,6 +40,8 @@
                 <file src="patches/02-manpage.diff"/>
                 <file src="patches/enable-threads-on-hurd.diff"/>
                 <file src="patches/enable-parallel-mark-where-supported.diff"/>
+                <file src="patches/riscv-support.diff"/>
+                <file src="patches/data-start-weakref.diff"/>
             </patchset>
         </patches>
 
