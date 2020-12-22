@@ -21,6 +21,8 @@
                 sha256sum="3ae1af359eebaa4ffc5896a1aee3568c052c99879316a1ab57f8fe1789c390b6"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="2f2452cdfc2dfe11738ed80519f6131b28faf6546685f7cce1ed2c9705651147"/>
+            <file src="buildroot-patches-1.tar.gz" subdir="patches"
+                sha256sum="13c41c2511051e8cc67b74a4ca573697526a135b50793cbae97511c1dfd23fbe"/>
         </sources>
 
         <patches>
@@ -28,6 +30,9 @@
                 <!-- Bolt -->
                 <file src="patches/musl-uses-posix-fault.patch"/>
                 <file src="patches/fault-stack-pointer-powerpc.patch"/>
+                <!-- Buildroot RISC-V patches -->
+                <file src="patches/0001-Improve-support-for-Linux-RISC-V.patch"/>
+                <file src="patches/0002-m4-stack-direction-RISC-V-stack-grows-downward.patch"/>
             </patchset>
         </patches>
 
