@@ -17,24 +17,22 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="libffi-3.2.1.tar.gz" subdir="sources"
-                sha256sum="d06ebb8e1d9a22d19e38d63fdb83954253f39bedc5d46232a05645685722ca37"/>
-            <file src="debian-patches-9.tar.gz" subdir="patches"
-                sha256sum="45dea415360d5350db271099083b25a85f89206dbb861378c49249ee2507dac9"/>
+            <file src="libffi-3.3.tar.gz" subdir="sources"
+                sha256sum="72fba7922703ddfa7a028d513ac15a85c8d54c8d67f55fa5a4802885dc652056"/>
+            <file src="debian-patches-5.tar.gz" subdir="patches"
+                sha256sum="8ad409c486766760c58ad61db07f5fea034d7fbcdadae4a543b0983e55382ba3"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/fix-alpha.diff"/>
-                <file src="patches/includedir.diff"/>
-                <file src="patches/aarch64-fix.diff"/>
-                <file src="patches/libffi-pax.patch"/>
-                <file src="patches/libffi-race-condition.patch"/>
-                <file src="patches/mipsen-r6.diff"/>
-                <file src="patches/401.diff"/>
-                <file src="patches/libffi-3.2-riscv.patch"/>
+                <file src="patches/no-toolexeclibdir.diff"/>
+                <file src="patches/powerpc-fix.diff"/>
+                <file src="patches/powerpc64-fix.diff"/>
+                <file src="patches/powerpc64-fix-2.diff"/>
+                <file src="patches/powerpc-fix-2.diff"/>
             </patchset>
         </patches>
+
 
         <requires>
             <package name="libltdl-dev"/>
@@ -45,7 +43,7 @@
     </source>
 
     <xi:include href="libffi-dev.xml"/>
-    <xi:include href="libffi6.xml"/>
+    <xi:include href="libffi7.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>

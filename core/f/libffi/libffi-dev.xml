@@ -14,7 +14,7 @@
     </description>
 
     <requires>
-        <package name="libffi6" version="=="/>
+        <package name="libffi7" version="=="/>
     </requires>
 
     <contents>
