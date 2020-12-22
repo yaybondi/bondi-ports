@@ -23,15 +23,20 @@
                 sha256sum="ecf63aa152cf962752325c2dcd6af1bd575441b984fde847a280ea852ff9eddd"/>
             <file src="debian-patches-5.1.tar.gz" subdir="patches"
                 sha256sum="739d6d1d39961bc7c821eb01205d338bd22411b1749955ac5a6e46694eafee35"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
+                sha256sum="e6801eea50791ed349d437744be5be53f4691ddefbe2be9c50ed1f576d77307f"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/0001-Mark-mutex-with-owner-not-retained-threads-test-as-u.patch"/>
                 <file src="patches/0002-Look-for-guile-procedures.txt-in-pkglibdir.patch"/>
                 <file src="patches/0003-tests-Avoid-race-condition-in-REPL-server-test.patch"/>
                 <file src="patches/0004-ia64-Fix-crash-in-thread-context-switch.patch"/>
                 <file src="patches/0005-fix-french-locale-test.patch"/>
+                <!-- Upstream -->
+                <file src="patches/riscv-little-endian.diff"/>
             </patchset>
         </patches>
 
