@@ -18,8 +18,8 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="bolt-package-1.1.0.tar.gz" subdir="sources"
-                sha256sum="566e7a9dcadc80d0ec581d28af966902e7aa75567e0a3e3dfbcd95c2d316dfd2"/>
+            <file src="bolt-package-1.1.2.tar.gz" subdir="sources"
+                sha256sum="aaee4adcb34d68f856e9a3c3d11c26306df273b91c45400f87869c64695ccf54"/>
         </sources>
 
         <requires>
