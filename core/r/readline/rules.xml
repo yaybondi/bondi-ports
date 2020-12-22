@@ -4,6 +4,7 @@
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
+bh_autotools_dev_update
 $BOLT_SOURCE_DIR/configure \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --build="$BOLT_BUILD_TYPE" \
