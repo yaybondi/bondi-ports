@@ -13,6 +13,12 @@ $BOLT_SOURCE_DIR/configure \
     --build="$BOLT_BUILD_TYPE" \
     --host="$BOLT_HOST_TYPE"
 
+# HACK: Make sure rpl_{m,re}alloc are explictly declared.
+sed -i \
+    -e '/#define malloc rpl_malloc/i #include "rpl_malloc.h"' \
+    -e '/#define realloc rpl_realloc/i #include "rpl_realloc.h"' \
+        src/config.h
+
     ]]>
     </prepare>
 
