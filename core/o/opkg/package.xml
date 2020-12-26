@@ -21,19 +21,15 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="opkg-0.4.4~0.tar.gz" subdir="sources"
-                sha256sum="4d87376bb62580e085ae293178187765c4431b8a32171d9e35ebf045fc8b3c8e"/>
-            <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="34cce47ad1548c010ded7a090cbf264b85cd9bd052229267231bfb197cccf54d"/>
+            <file src="opkg-0.4.4.tar.gz" subdir="sources"
+                sha256sum="80db8cb6fd6b1df55d4243ae7bcd2c288d97a9bdbfe501a28df38105fb9a2a17"/>
+            <file src="bolt-patches-2020.12.26.1.tar.gz" subdir="patches"
+                sha256sum="924e181f532eb81a6feaa9b9d0bbec6edb1109756b381ce1d5b00b2cb645e5f5"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/ssl-curl-without-openssl.patch"/>
-                <file src="patches/sha256sum-debian-compatible.patch"/>
-                <file src="patches/force-deps-removal.patch"/>
-                <file src="patches/archive-warn-debug.patch"/>
-                <file src="patches/prevent-multi-remove.patch"/>
+                <file src="patches/bolt-2020.12.26.1.diff"/>
             </patchset>
         </patches>
 

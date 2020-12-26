@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="0.4.4" revision="2020.12.26.1" maintainer="Tobias Koch"
+     email="tobias.koch@gmail.com" date="2020-12-26 11:40:00+03:00">
+        <changeset>
+            <li>Upgrade to upstream 0.4.4 release.</li>
+            <li>Enable parallel use of package cache between buildbox targets</li>
+            <li>Make opkg clean a noop while operating on buildbox targets</li>
+            <li>First look for /tools/bin/usign then /usr/bin/usign</li>
+        </changeset>
+    </release>
     <release version="0.4.4~0" revision="1" maintainer="Tobias Koch"
      email="tobias.koch@gmail.com" date="2020-07-04 23:42:00+03:00">
         <changeset>
