@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
     <release version="0.4.4" revision="2021.1.5.1" maintainer="Tobias Koch"
-     email="tobias.koch@gmail.com" date="2021-1-5 00:31:00+03:00">
+     email="tobias.koch@gmail.com" date="2021-01-05 00:31:00+03:00">
         <changeset>
             <li>Fix parallel cache use patch broke local package installation</li>
         </changeset>
