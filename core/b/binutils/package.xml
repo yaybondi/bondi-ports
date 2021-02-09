@@ -17,10 +17,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="binutils-2.31.1.tar.xz" subdir="sources"
-                sha256sum="e398a2d579faa0f2b5a988add5f7481af8e21a21f63b6ea5702e6f517960c5eb"/>
-            <file src="debian-patches-16.tar.gz" subdir="patches"
-                sha256sum="79f3c7dbf9d03a07d31bcf196048ab620991abfdfae113dd18954c4cf5b86f97"/>
+            <file src="binutils-2.35.1.tar.xz" subdir="sources"
+                sha256sum="c43b679387b418b86683c7abded151cbf5b9f9da0b29720e3cc30b495abefc3d"/>
+            <file src="debian-patches-7.tar.gz" subdir="patches"
+                sha256sum="18dd60ed92d8ba9ed333bbbd53ebd6fb2a81418ded177f952cfa8c183d5cd69a"/>
         </sources>
 
         <patches>
@@ -31,13 +31,12 @@
                 <file src="patches/002_gprof_profile_arcs.patch"/>
                 <file src="patches/003_gprof_see_also_monitor.patch"/>
                 <file src="patches/006_better_file_error.patch"/>
-                <file src="patches/012_check_ldrunpath_length.patch"/>
                 <file src="patches/013_bash_in_ld_testsuite.patch"/>
                 <file src="patches/128_ppc64_powerpc_biarch.patch"/>
                 <file src="patches/129_multiarch_libpath.patch"/>
                 <file src="patches/130_gold_disable_testsuite_build.patch"/>
                 <file src="patches/131_ld_bootstrap_testsuite.patch"/>
-                <file src="patches/135_bfd_version.patch"/>
+                <file src="patches/135_bfd_soversion.patch"/>
                 <file src="patches/136_bfd_pic.patch"/>
                 <file src="patches/157_ar_scripts_with_tilde.patch"/>
                 <file src="patches/161_gold_dummy_zoption.diff"/>
@@ -46,10 +45,12 @@
                 <file src="patches/aarch64-libpath.diff"/>
                 <file src="patches/mips64-default-n64.diff"/>
                 <file src="patches/gold-mips.diff"/>
-                <file src="patches/i18n-fr.diff"/>
                 <file src="patches/gold-no-keep-files-mapped.diff"/>
-                <file src="patches/pr24276.diff"/>
-                <file src="patches/infinity-notes.diff"/>
+                <file src="patches/pgo+lto-1.diff"/>
+                <file src="patches/pgo+lto-2.diff"/>
+                <file src="patches/pgo+lto-3.diff"/>
+                <file src="patches/libctf-soname.diff"/>
+                <file src="patches/pgo+lto-check-ignore.diff"/>
             </patchset>
         </patches>
 
