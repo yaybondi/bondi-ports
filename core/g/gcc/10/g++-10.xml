@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="g++-8" section="devel">
+    <description>
+        <summary>GNU C++ compiler</summary>
+        <p>
+        This is the GNU C++ compiler, a fairly portable optimizing compiler for C++.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc-8-base" version="=="
+            cross-tools-prefix="tools-target-"/>
+        <package name="gcc-8" version="=="
+            cross-tools-prefix="tools-target-"/>
+        <package name="libstdc++-8-dev" version="=="
+            cross-tools-prefix="tools-target-"/>
+    </requires>
+
+    <provides>
+        <package name="g++" cross-tools-prefix="tools-target-"/>
+    </provides>
+
+    <contents subdir="g++-8">
+        <file src="/"/>
+    </contents>
+</package>

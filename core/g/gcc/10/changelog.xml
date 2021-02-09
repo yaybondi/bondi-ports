@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release version="10.2.1" revision="6bolt1" upstream-version="10.2.1-6"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2021-02-09 22:46:52+03:00">
+        <changeset>
+            <li>Upgrade to new version from Debian Bullseye</li>
+        </changeset>
+    </release>
+    <release version="8.3.0" revision="6bolt1" upstream-version="8.3.0-6"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2019-07-21 00:33:16+02:00">
+        <changeset>
+            <li>Upgrade to new version from Debian Buster</li>
+        </changeset>
+    </release>
+    <release version="6.3.0" revision="6bolt2" upstream-version="6.3.0-6"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2017-03-13 15:11:48+03:00">
+        <changeset>
+            <li>Adaptation of Debian sources for Bolt OS</li>
+        </changeset>
+    </release>
+</changelog>

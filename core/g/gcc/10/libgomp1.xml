@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libgomp1" section="libs" build-for="target,tools">
+    <description>
+        <summary>GCC OpenMP (GOMP) support library</summary>
+        <p>
+        GOMP is an implementation of OpenMP for the C, C++, and Fortran compilers
+        in the GNU Compiler Collection.
+        </p>
+        <p>
+        This package may be empty on plaforms where the library is not needed or not
+        supported.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc-8-base" version="=="/>
+    </requires>
+
+    <contents subdir="libgomp1">
+        <file src="/"/>
+    </contents>
+</package>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libcc1-0" section="libs" build-for="target,tools">
+    <description>
+        <summary>GCC cc1 plugin for GDB</summary>
+        <p>
+        libcc1 is a plugin for GDB.
+        </p>
+        <p>
+        This package may be empty on plaforms where the library is not needed or not
+        supported.
+        </p>
+    </description>
+
+    <requires>
+        <package name="gcc-8-base" version="=="/>
+    </requires>
+
+    <contents subdir="libcc1-0">
+        <file src="/"/>
+    </contents>
+</package>
