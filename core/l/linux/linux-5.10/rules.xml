@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+
+    <prepare>
+    <![CDATA[
+
+cd $BOLT_SOURCE_DIR
+make SHELL=/bin/sh mrproper
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+KERNEL_ARCH="`bh_kernel_arch_for_target $BOLT_HOST_TYPE`"
+
+cd $BOLT_SOURCE_DIR
+make SHELL=/bin/sh ARCH="$KERNEL_ARCH" headers
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd $BOLT_SOURCE_DIR
+find usr/include -name '.*' -delete
+rm usr/include/Makefile
+
+mkdir -p "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include"
+cp -va usr/include/* "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include"
+
+    ]]>
+    </install>
+
+</rules>

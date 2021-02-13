@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release version="5.10.13" revision="1bolt1" upstream-version="5.10.13-1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2021-02-13 13:26:03+03:00">
+        <changeset>
+            <li>Upgrade kernel to version from Debian Bullseye</li>
+        </changeset>
+    </release>
+    <release version="5.4.19" revision="1bolt1" upstream-version="5.4.19-1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2020-03-11 23:01:15+03:00">
+        <changeset>
+            <li>Adaptation of Debian sources for Bolt OS</li>
+        </changeset>
+    </release>
+</changelog>
