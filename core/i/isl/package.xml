@@ -20,16 +20,15 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="isl-0.20.tar.xz" subdir="sources"
-                sha256sum="a5596a9fb8a5b365cb612e4b9628735d6e67e9178fae134a816ae195017e77aa"/>
-            <file src="debian-patches-2.tar.gz" subdir="patches"
-                sha256sum="a783620bda785315d219b1792c129da66bb95da21c091b87b8a2a290a11d26c0"/>
+            <file src="isl-0.23.tar.xz" subdir="sources"
+                sha256sum="5efc53efaef151301f4e7dde3856b66812d8153dede24fab17673f801c8698f2"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="41553368f5772d8cb2031fc362f1fc0519fde235f4d6a54a3cb4c20d574de5e0"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/python3-compat.diff"/>
-                <file src="patches/open-runtime-lib.diff"/>
             </patchset>
         </patches>
 
@@ -41,7 +40,7 @@
     </source>
 
     <xi:include href="libisl-dev.xml"/>
-    <xi:include href="libisl19.xml"/>
+    <xi:include href="libisl23.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control> 
