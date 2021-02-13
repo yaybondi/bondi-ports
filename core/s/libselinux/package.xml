@@ -30,8 +30,8 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="libselinux-2.8.tar.gz" subdir="sources"
-                sha256sum="31db96ec7643ce10912b3c3f98506a08a9116dcfe151855fd349c3fda96187e1"/>
+            <file src="libselinux-3.1.tar.gz" subdir="sources"
+                sha256sum="ea5dcbb4d859e3f999c26a13c630da2f16dff9462e3cc8cb7b458ac157d112e7"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="bce868fade5bc32aaaa4ab2ce8232b8cec04934a5b4a9d39d27f66b6fffa7cdf"/>
         </sources>
@@ -46,7 +46,7 @@
 
         <requires>
             <package name="file"/>
-            <package name="libsepol1-dev" version=">= 2.8"/>
+            <package name="libsepol1-dev" version=">= 3.1"/>
             <package name="libpcre3-dev"/>
             <package name="pkg-config"/>
             <package name="libfts1-dev"/>
