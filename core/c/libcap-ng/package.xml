@@ -24,8 +24,8 @@
         <sources>
             <file src="libcap-ng-0.7.9.tar.gz" subdir="sources"
                 sha256sum="4a1532bcf3731aade40936f6d6a586ed5a66ca4c7455e1338d1f6c3e09221328"/>
-            <file src="debian-patches-2.tar.gz" subdir="patches"
-                sha256sum="95601610422e58d34cfc6c173940d3635427d513cbb4db1cca8492e814d1f7d5"/>
+            <file src="debian-patches-2.2.tar.gz" subdir="patches"
+                sha256sum="ce123d36a0cb8dc654a70126002754c35d88e0a74c27f7471fd776db15bca573"/>
         </sources>
 
         <patches>
