@@ -2,10 +2,12 @@
     <files license="GPL-2+">
         <file src="*"/>
         <copyright-notice><![CDATA[
-1993-1999, 2002-2018, Bruno Haible <bruno@clisp.org>
+1993-1999, 2002-2021, Bruno Haible <bruno@clisp.org>
 2002-2005, 2009  Paolo Bonzini <bonzini@gnu.org>
 2008-2010  Eric Blake <ebb9@byu.net>
 2010 Eric Blake <eblake@redhat.com>
+2002-2021 Free Software Foundation, Inc.
+2018 Nylon Chen <nylon7@andestech.com>
         ]]></copyright-notice>
     </files>
     <files license="GPL-2+ with Autoconf exception">
@@ -34,7 +36,7 @@ to view the full license text.
         <file src="m4/ltversion.m4"/>
         <file src="m4/relocatable-lib.m4"/>
         <copyright-notice><![CDATA[
-2003-2009, 2011-2015, Free Software Foundation, Inc
+2003-2021, Free Software Foundation, Inc
         ]]></copyright-notice>
         <license><![CDATA[
 This file is free software; the Free Software Foundation gives
