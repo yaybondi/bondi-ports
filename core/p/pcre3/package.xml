@@ -22,8 +22,8 @@
         <sources>
             <file src="pcre3-8.39.tar.bz2" subdir="sources"
                 sha256sum="b858099f82483031ee02092711689e7245586ada49e534a06e678b8ea9549e8b"/>
-            <file src="debian-patches-12.tar.gz" subdir="patches"
-                sha256sum="2d8b9a8e1c0b88104a54f0d6d1919305c8c33366adddbb3b7c2a8350343fa58c"/>
+            <file src="debian-patches-13.tar.gz" subdir="patches"
+                sha256sum="9aee12976aac03ed5b696ba2f470046d1540b934001a4ece0c87c7cd52fed215"/>
         </sources>
 
         <patches>
@@ -38,6 +38,7 @@
                 <file src="patches/CVE-2017-6004.patch"/>
                 <file src="patches/upstream-fix-for-cve-2017-7186-upstream-"/>
                 <file src="patches/patch-from-mariadb-to-fix-stack-frame-si"/>
+                <file src="patches/upstream-patch-fixing-cve-2020-14155.patch"/>
             </patchset>
         </patches>
 
