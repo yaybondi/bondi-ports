@@ -21,8 +21,6 @@
                 sha256sum="bd31826823b912b6fe271d2d979ed879e9fc393cab1e2f7c4e1af258231765b8"/>
             <file src="debian-patches-2.tar.gz" subdir="patches"
                 sha256sum="17289ddddb7a5b23759f9b7e705192c42919c8189de60268b30b5814b19081dc"/>
-            <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="0d6547118c3bdcd896dbbbfc21371db1d2dfeacde6b39fd2bd85944186bd7632"/>
         </sources>
 
         <patches>
@@ -32,8 +30,6 @@
                 <file src="patches/02-restorecon-path.patch"/>
                 <file src="patches/03-Set-log_group-adm.patch"/>
                 <file src="patches/0004-Turn-libaucommon-into-a-libtool-convenience-library-.patch"/>
-                <!-- Bolt -->
-                <file src="patches/musl-libc-compat.patch"/>
             </patchset>
         </patches>
 
