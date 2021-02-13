@@ -21,17 +21,9 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="gmp-6.1.2+dfsg.tar.xz" subdir="sources"
-                sha256sum="18016f718f621e7641ddd4e57f8e140391c5183252e5998263ffff59198a65b7"/>
-            <file src="debian-patches-4.tar.gz" subdir="patches"
-                sha256sum="bd06c3b8724b10fb914ac027ece7d7def59c382dd5f18adfd482ba200b605f54"/>
+            <file src="gmp-6.2.1+dfsg.tar.xz" subdir="sources"
+                sha256sum="c6ba08e3f079260ab90ff44ab8801eae134cd62cd78f4aa56317c0e70daa40cb"/>
         </sources>
-
-        <patches>
-            <patchset subdir="sources">
-                <file src="patches/gmp-exception-sigfpe.patch"/>
-            </patchset>
-        </patches>
 
         <requires>
             <package name="m4"/>
