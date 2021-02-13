@@ -25,17 +25,9 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="libsepol-2.8.tar.gz" subdir="sources"
-                sha256sum="3ad6916a8352bef0bad49acc8037a5f5b48c56f94e4cb4e1959ca475fa9d24d6"/>
-            <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="c7f24b69fcce0a81b3ac6a69faf9f0445384054e27e58788568a1a6effa7da2f"/>
+            <file src="libsepol-3.1.tar.gz" subdir="sources"
+                sha256sum="ae6778d01443fdd38cd30eeee846494e19f4d407b09872580372f4aa4bf8a3cc"/>
         </sources>
-
-        <patches>
-            <patchset subdir="sources">
-                <file src="patches/makefile-no-ln-sf-relative.patch"/>
-            </patchset>
-        </patches>
 
         <requires>
             <package name="file"/>
