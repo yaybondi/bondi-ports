@@ -17,10 +17,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="audit-2.8.4.tar.gz" subdir="sources"
-                sha256sum="a410694d09fc5708d980a61a5abcb9633a591364f1ecc7e97ad5daef9c898c38"/>
-            <file src="debian-patches-3.tar.gz" subdir="patches"
-                sha256sum="a62eee6011b0a8f5d92b7e78a0a9a1ed7d7e3d9e3db2529b2eaa16c4c8016adf"/>
+            <file src="audit-3.0.tar.gz" subdir="sources"
+                sha256sum="bd31826823b912b6fe271d2d979ed879e9fc393cab1e2f7c4e1af258231765b8"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="17289ddddb7a5b23759f9b7e705192c42919c8189de60268b30b5814b19081dc"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="0d6547118c3bdcd896dbbbfc21371db1d2dfeacde6b39fd2bd85944186bd7632"/>
         </sources>
@@ -31,9 +31,7 @@
                 <file src="patches/01-no-refusemanualstop.patch"/>
                 <file src="patches/02-restorecon-path.patch"/>
                 <file src="patches/03-Set-log_group-adm.patch"/>
-                <file src="patches/04-fix_ftbfs_tests.patch"/>
-                <file src="patches/05-use_bin_sh.patch"/>
-                <file src="patches/06-do_not_hardcode_stdint_path.patch"/>
+                <file src="patches/0004-Turn-libaucommon-into-a-libtool-convenience-library-.patch"/>
                 <!-- Bolt -->
                 <file src="patches/musl-libc-compat.patch"/>
             </patchset>
