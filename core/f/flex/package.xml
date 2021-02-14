@@ -24,8 +24,8 @@
         <sources>
             <file src="flex-2.6.4.tar.gz" subdir="sources"
                 sha256sum="e87aae032bf07c26f85ac0ed3250998c37621d95f8bd748b31f15b33c45ee995"/>
-            <file src="flex-2.6.4-6.2.debdiff.gz" subdir="patches"
-                sha256sum="7853e12f05d41b401b73077411f01b21c9d15f8b6a2ea69c94e40c9b63401460"/>
+            <file src="flex-2.6.4-8.debdiff.gz" subdir="patches"
+                sha256sum="fce60da0d3ff9e9d452316089447467a0bb5be4c2d383e5e39697b5b1b4a6149"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="feda52f423a783a67e39ad6f3875c2f72f990d0140b7e4bfe11c7f15bd405f73"/>
         </sources>
@@ -33,7 +33,7 @@
         <patches>
             <patchset subdir="sources">
                 <!-- Debian -->
-                <file src="patches/flex-2.6.4-6.2.debdiff"/>
+                <file src="patches/flex-2.6.4-8.debdiff"/>
                 <!-- Upstream -->
                 <file src="patches/rpl-malloc-realloc-decl.diff"/>
             </patchset>
