@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libncurses6" section="libs">
+    <description>
+        <summary>shared libraries for terminal handling</summary>
+        <p>
+        The ncurses library routines are a terminal-independent method of
+        updating character screens with reasonable optimization.
+        </p>
+        <p>
+        This package contains the shared libraries necessary to run programs
+        compiled with ncurses.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libtinfo6" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/lib/libform.so.6*"/>
+        <file src="${prefix}/lib/libmenu.so.6*"/>
+        <file src="${prefix}/lib/libncurses.so.6*"/>
+        <file src="${prefix}/lib/libpanel.so.6*"/>
+    </contents>
+</package>

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libncursesw5" section="libs">
+<package name="libncursesw5" section="oldlibs">
     <description>
-        <summary>shared libraries for terminal handling (wide character support)</summary>
+        <summary>shared libraries for terminal handling (wide character legacy version)</summary>
         <p>
         The ncurses library routines are a terminal-independent method of
         updating character screens with reasonable optimization.
         </p>
         <p>
-        This package contains the shared libraries necessary to run programs
-        compiled with ncursesw, which includes support for wide characters.
+        This package contains the legacy shared libraries necessary to run
+        programs compiled with ncursesw, which includes support for wide
+        characters.
         </p>
     </description>
 
@@ -17,9 +18,9 @@
     </requires>
 
     <contents>
-        <file src="${prefix}/lib/libformw.so.*"/>
-        <file src="${prefix}/lib/libmenuw.so.*"/>
-        <file src="${prefix}/lib/libncursesw.so.*"/>
-        <file src="${prefix}/lib/libpanelw.so.*"/>
+        <file src="${prefix}/lib/libformw.so.5*"/>
+        <file src="${prefix}/lib/libmenuw.so.5*"/>
+        <file src="${prefix}/lib/libncursesw.so.5*"/>
+        <file src="${prefix}/lib/libpanelw.so.5*"/>
     </contents>
 </package>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libncurses5" section="libs">
+<package name="libncurses5" section="oldlibs">
     <description>
-        <summary>shared libraries for terminal handling</summary>
+        <summary>shared libraries for terminal handling (legacy version)</summary>
         <p>
         The ncurses library routines are a terminal-independent method of
         updating character screens with reasonable optimization.
         </p>
         <p>
-        This package contains the shared libraries necessary to run programs
-        compiled with ncurses.
+        This package contains the legacy shared libraries necessary to run
+        programs compiled with ncurses.
         </p>
     </description>
 
@@ -17,9 +17,9 @@
     </requires>
 
     <contents>
-        <file src="${prefix}/lib/libform.so.*"/>
-        <file src="${prefix}/lib/libmenu.so.*"/>
-        <file src="${prefix}/lib/libncurses.so.*"/>
-        <file src="${prefix}/lib/libpanel.so.*"/>
+        <file src="${prefix}/lib/libform.so.5*"/>
+        <file src="${prefix}/lib/libmenu.so.5*"/>
+        <file src="${prefix}/lib/libncurses.so.5*"/>
+        <file src="${prefix}/lib/libpanel.so.5*"/>
     </contents>
 </package>

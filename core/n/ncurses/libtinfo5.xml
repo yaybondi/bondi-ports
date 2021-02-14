@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libtinfo5" section="libs">
+<package name="libtinfo5" section="oldlibs">
     <description>
-        <summary>shared low-level terminfo library for terminal handling</summary>
+        <summary>shared low-level terminfo library (legacy version)</summary>
         <p>
         The ncurses library routines are a terminal-independent method of
         updating character screens with reasonable optimization.
         </p>
         <p>
-        This package contains the shared low-level terminfo library.
+        This package contains the legacy version of the shared low-level
+        terminfo library.
         </p>
     </description>
 
     <contents>
-        <file src="${prefix}/lib/libtic.so.*"/>
-        <file src="${prefix}/lib/libtinfo.so.*"/>
+        <file src="${prefix}/lib/libtic.so.5*"/>
+        <file src="${prefix}/lib/libtinfo.so.5*"/>
     </contents>
 </package>

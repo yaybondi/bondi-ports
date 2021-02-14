@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libncurses-dev" section="libdevel">
+    <description>
+        <summary>developer's libraries for ncurses</summary>
+        <p>
+        The ncurses library routines are a terminal-independent method of
+        updating character screens with reasonable optimization.
+        </p>
+        <p>
+        This package contains the header files, static libraries
+        and symbolic links that developers using ncurses will need.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libc-dev"/>
+        <package name="libncurses6" version="=="/>
+        <package name="libncursesw6" version="=="/>
+        <package name="libtinfo6" version="=="/>
+        <package name="ncurses-bin"/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/bin/ncurses5-config"/>
+        <file src="${prefix}/bin/ncurses6-config"/>
+        <file src="${prefix}/bin/ncursesw5-config"/>
+        <file src="${prefix}/bin/ncursesw6-config"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libcurses.a"/>
+        <file src="${prefix}/lib/libcurses.so"/>
+        <file src="${prefix}/lib/libform.a"/>
+        <file src="${prefix}/lib/libform.so"/>
+        <file src="${prefix}/lib/libformw.a"/>
+        <file src="${prefix}/lib/libformw.so"/>
+        <file src="${prefix}/lib/libmenu.a"/>
+        <file src="${prefix}/lib/libmenu.so"/>
+        <file src="${prefix}/lib/libmenuw.a"/>
+        <file src="${prefix}/lib/libmenuw.so"/>
+        <file src="${prefix}/lib/libncurses++.a"/>
+        <file src="${prefix}/lib/libncurses++w.a"/>
+        <file src="${prefix}/lib/libncurses.a"/>
+        <file src="${prefix}/lib/libncurses.so"/>
+        <file src="${prefix}/lib/libncursesw.a"/>
+        <file src="${prefix}/lib/libncursesw.so"/>
+        <file src="${prefix}/lib/libpanel.a"/>
+        <file src="${prefix}/lib/libpanel.so"/>
+        <file src="${prefix}/lib/libpanelw.a"/>
+        <file src="${prefix}/lib/libpanelw.so"/>
+        <file src="${prefix}/lib/libtermcap.a"/>
+        <file src="${prefix}/lib/libtermcap.so"/>
+        <file src="${prefix}/lib/libtic.a"/>
+        <file src="${prefix}/lib/libtic.so"/>
+        <file src="${prefix}/lib/libtinfo.a"/>
+        <file src="${prefix}/lib/libtinfo.so"/>
+        <file src="${prefix}/lib/pkgconfig"/>
+    </contents>
+</package>
