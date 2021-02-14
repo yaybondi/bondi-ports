@@ -25,7 +25,7 @@
             <file src="debian-patches-4.tar.gz" subdir="patches"
                 sha256sum="1fd1ce081ab5cbb5dfd9a9681b0c0b0485e9cfa554e41661a0b4ca82848e6e9c"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="51d021bb30cf0855f2a802546ea30822669104beb56daba1c0b0bee7ad5b2371"/>
+                sha256sum="57e7c77cf5e9e748b3bd7a88bafb71fc5a5c27f7048d0e361e2da59faf0e29ca"/>
             <file src="pam-etc.tar.gz" subdir="extra"
                 sha256sum="9962c128162a72ea4432f2ec7927bfbe34414041283927ebb62204f2b7e66293"/>
         </sources>
@@ -61,7 +61,7 @@
                 <file src="patches/pam_mkhomedir_stat_before_opendir"/>
                 <!-- Bolt -->
                 <file src="patches/gentoo-fix-compat.patch"/>
-                <file src="patches/upstream-no-getpwent_r.diff"/>
+                <file src="patches/upstream-fixes-1.diff"/>
             </patchset>
         </patches>
 
