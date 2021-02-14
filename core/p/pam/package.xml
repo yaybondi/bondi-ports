@@ -20,10 +20,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="pam-1.3.1.tar.xz" subdir="sources"
-                sha256sum="eff47a4ecd833fbf18de9686632a70ee8d0794b79aecb217ebd0ce11db4cd0db"/>
-            <file src="debian-patches-5.tar.gz" subdir="patches"
-                sha256sum="b282c02574aff974c2107bbca9ea3caceb1080c04617bcda3ea42829fa6b58e5"/>
+            <file src="pam-1.4.0.tar.xz" subdir="sources"
+                sha256sum="cd6d928c51e64139be3bdb38692c68183a509b83d4f2c221024ccd4bcddfd034"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="1fd1ce081ab5cbb5dfd9a9681b0c0b0485e9cfa554e41661a0b4ca82848e6e9c"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="713f8a15e7119760f16c849f7f67f83a8b9f387aa423fb1af3bc00e375ab6dd4"/>
             <file src="pam-etc.tar.gz" subdir="extra"
@@ -49,19 +49,18 @@
                 <file src="patches/hurd_no_setfsuid"/>
                 <file src="patches/040_pam_limits_log_failure"/>
                 <file src="patches/045_pam_dispatch_jump_is_ignore"/>
-                <file src="patches/054_pam_security_abstract_securetty_handling"/>
-                <file src="patches/055_pam_unix_nullok_secure"/>
-                <file src="patches/cve-2010-4708.patch"/>
                 <file src="patches/PAM-manpage-section"/>
                 <file src="patches/update-motd"/>
                 <file src="patches/no_PATH_MAX_on_hurd"/>
                 <file src="patches/lib_security_multiarch_compat"/>
                 <file src="patches/pam-limits-nofile-fd-setsize-cap"/>
                 <file src="patches/fix-autoreconf.patch"/>
+                <file src="patches/nullok_secure-compat.patch"/>
+                <file src="patches/pam_unix_initialize_daysleft"/>
+                <file src="patches/pam_faillock_create_directory"/>
+                <file src="patches/pam_mkhomedir_stat_before_opendir"/>
                 <!-- Bolt -->
                 <file src="patches/gentoo-fix-compat.patch"/>
-                <file src="patches/gentoo-no-strndupa.patch"/>
-                <file src="patches/disable-mod-rhosts.patch"/>
             </patchset>
         </patches>
 
