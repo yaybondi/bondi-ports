@@ -13,8 +13,8 @@
         <sources>
             <file src="db5.3-5.3.28+dfsg1.tar.xz" subdir="sources"
                 sha256sum="b19bf3dd8ce74b95a7b215be9a7c8489e8e8f18da60d64d6340a06e75f497749"/>
-            <file src="debian-patches-0.5.tar.gz" subdir="patches"
-                sha256sum="621d4ea41f64d80c147d482e07cfd3db67f7366e5e8b299052797981745e190b"/>
+            <file src="debian-patches-0.8.tar.gz" subdir="patches"
+                sha256sum="4a9013247909f39518d9448ed03e83001bdd0adbd30feae06c00a556aecbbafd"/>
         </sources>
 
         <patches>
@@ -30,6 +30,8 @@
                 <file src="patches/CVE-2017-10140-cwd-db_config.patch"/>
                 <file src="patches/009-java-10.patch"/>
                 <file src="patches/010-__atomic_compare_exchange.patch"/>
+                <file src="patches/0012-Don-t-expo-progname-symbol.patch"/>
+                <file src="patches/0014-Use-one-object-for-shqueue.h-test.patch"/>
             </patchset>
         </patches>
 
