@@ -23,15 +23,15 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="make-dfsg-4.2.1.tar.gz" subdir="sources"
-                sha256sum="480405e8995796ea47cc54b281b7855280f0d815d296a1af1993eeeb72074e39"/>
-            <file src="make-dfsg-4.2.1-1.2.debdiff.gz" subdir="patches"
-                sha256sum="80e0b96cee381391a5d3322317075e23d8474c92c5fa4fecd334bc2e0920887b"/>
+            <file src="make-dfsg-4.3.tar.gz" subdir="sources"
+                sha256sum="be4c17542578824e745f83bcd2a9ba264206187247cb6a5f5df99b0a9d1f9047"/>
+            <file src="make-dfsg-4.3-4.debdiff.gz" subdir="patches"
+                sha256sum="6f4196d2d8fe593e61a58cc885b6ea8ecf9b19d6a4e64bc9a32bb966f7d9a699"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/make-dfsg-4.2.1-1.2.debdiff"/>
+                <file src="patches/make-dfsg-4.3-4.debdiff"/>
             </patchset>
         </patches>
 
