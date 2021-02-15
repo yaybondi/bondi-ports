@@ -20,7 +20,7 @@
             <file src="libffi-3.3.tar.gz" subdir="sources"
                 sha256sum="72fba7922703ddfa7a028d513ac15a85c8d54c8d67f55fa5a4802885dc652056"/>
             <file src="debian-patches-5.tar.gz" subdir="patches"
-                sha256sum="8ad409c486766760c58ad61db07f5fea034d7fbcdadae4a543b0983e55382ba3"/>
+                sha256sum="6cba849cd77af495b6ae71b22a7600840384c07440c7ab32e2cf91800258548d"/>
         </sources>
 
         <patches>
