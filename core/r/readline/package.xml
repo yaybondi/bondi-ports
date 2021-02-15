@@ -21,17 +21,14 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="readline-7.0.tar.gz" subdir="sources"
-                sha256sum="750d437185286f40a369e1e4f4764eda932b9459b5ec9a731628393dd3d32334"/>
-            <file src="debian-patches-5.tar.gz" subdir="patches"
-                sha256sum="1d75c6f63de78eabeac5c96067414aadc7fa10c8a490d1a7a96e4b8f8e1b6917"/>
+            <file src="readline-8.1.tar.gz" subdir="sources"
+                sha256sum="f8ceb4ee131e3232226a17f51b164afc46cd0b9e6cef344be87c65962cb82b02"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="f891ec73bb5775ff5d607425090f34cbce30b995d1d5d4a429ed4d283e12cd9a"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/readline70-001.diff"/>
-                <file src="patches/readline70-002.diff"/>
-                <file src="patches/readline70-003.diff"/>
                 <file src="patches/rl-attribute.diff"/>
                 <file src="patches/rl-header.diff"/>
                 <file src="patches/rl-no-cross-check.diff"/>
@@ -55,7 +52,7 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="libreadline7.xml"/>
+    <xi:include href="libreadline8.xml"/>
     <xi:include href="readline-common.xml"/>
     <xi:include href="libreadline-dev.xml"/>
     <xi:include href="rlfe.xml"/>

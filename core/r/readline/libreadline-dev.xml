@@ -17,7 +17,7 @@
     </description>
 
     <requires>
-        <package name="libreadline7" version="=="/>
+        <package name="libreadline8" version="=="/>
         <package name="libtinfo-dev"/>
     </requires>
 
