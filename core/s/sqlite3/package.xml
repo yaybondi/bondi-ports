@@ -13,12 +13,12 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="sqlite3-3.27.2.tar.xz" subdir="sources"
-                sha256sum="6cb1606bbc38270739d256b5ab1cf94dccf5b2a3b4cbceb0545aac76f6ef40f2"/>
-            <file src="sqlite3-www-3.27.2.tar.xz" subdir="sources/www"
-                sha256sum="b50bea0e1974b33bcb2cec4c29fcdeecd8f960020ce0310b15fb123938844bee"/>
-            <file src="debian-patches-3.tar.gz" subdir="patches"
-                sha256sum="13d71794f6f63c9b9c3b119217cacfb1d42e6cf4877916e43a692c6e1f9614fd"/>
+            <file src="sqlite3-3.34.1.tar.xz" subdir="sources"
+                sha256sum="082f583440c662cb484ae1c124ffe285b587bbb7837e095e693026e6df50334d"/>
+            <file src="sqlite3-www-3.34.1.tar.xz" subdir="sources/www"
+                sha256sum="c63647f3fb6c4b0620d6587e2a744021401df92c307b55e236a7eb28c5000fa7"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="c0d58960e773a78e26eafacf490a1d8016b0066de57ffa015491d4fa6d56c9bc"/>
         </sources>
 
         <patches>
@@ -30,15 +30,6 @@
                 <file src="patches/10-665363-disable-malloc-usable-size.patch"/>
                 <file src="patches/31-increase_SQLITE_MAX_DEFAULT_PAGE_SIZE_to_32k.patch"/>
                 <file src="patches/02-use-packaged-lempar.c.patch"/>
-                <file src="patches/40-use_unsigned_integers_to_count_the_number_of_pages.patch"/>
-                <file src="patches/41-fix_a_crash_that_could_occur.patch"/>
-                <file src="patches/42-ensure_that_ALTER_TABLE_commands_open_statement_transactions.patch"/>
-                <file src="patches/43-fix_an_fts5_problem_with_interleaving.patch"/>
-                <file src="patches/44-fix_a_buffer_overread_when_running_fts5_prefix_queries.patch"/>
-                <file src="patches/45-CVE-2019-8457.patch"/>
-                <file src="patches/46-probably_CVE-2019-5018.patch"/>
-                <file src="patches/47-probably_CVE-2019-5827_part1.patch"/>
-                <file src="patches/48-probably_CVE-2019-5827_part2.patch"/>
             </patchset>
         </patches>
 
