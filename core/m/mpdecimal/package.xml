@@ -12,8 +12,8 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="mpdecimal-2.4.2.tar.gz" subdir="sources"
-                sha256sum="83c628b90f009470981cf084c5418329c88b19835d8af3691b930afccb7d79c7"/>
+            <file src="mpdecimal-2.5.1.tar.gz" subdir="sources"
+                sha256sum="9f9cd4c041f99b5c49ffb7b59d9f12d95b683d88585608aa56a6307667b2b21f"/>
         </sources>
 
         <requires>
@@ -25,7 +25,7 @@
     </source>
 
     <xi:include href="libmpdec-dev.xml"/>
-    <xi:include href="libmpdec2.xml"/>
+    <xi:include href="libmpdec3.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>
