@@ -13,10 +13,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="openssl-1.1.1c.tar.gz" subdir="sources"
-                sha256sum="f6fb3079ad15076154eda9413fed42877d668e7069d9b87396d0804fdb3f4c90"/>
-            <file src="debian-patches-1.tar.gz" subdir="patches"
-                sha256sum="2b8d59480d9f7d18f32b27114b5500d20a098a1aa34fc4cf24fc26ca22b7c1f6"/>
+            <file src="openssl-1.1.1i.tar.gz" subdir="sources"
+                sha256sum="e8be6a35fe41d10603c3cc635e93289ed00bf34b79671a3a4de64fcee00d5242"/>
+            <file src="debian-patches-3.tar.gz" subdir="patches"
+                sha256sum="a716f9bdb47dc22ff416f5bbe9fde21b0589b4e8882fba25b875a304869fd348"/>
         </sources>
 
         <patches>
@@ -27,6 +27,9 @@
                 <file src="patches/pic.patch"/>
                 <file src="patches/c_rehash-compat.patch"/>
                 <file src="patches/Set-systemwide-default-settings-for-libssl-users.patch"/>
+                <file src="patches/x509_vfy.c-Fix-a-regression-in-find_isser.patch"/>
+                <file src="patches/X509_cmp-Fix-comparison-in-case-x509v3_cache_extensions-f.patch"/>
+                <file src="patches/check_sig_alg_match-weaken-sig-nid-comparison-to-base-alg.patch"/>
             </patchset>
         </patches>
 
