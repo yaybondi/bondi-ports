@@ -25,10 +25,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="bzip2-1.0.6.tar.bz2" subdir="sources"
-                sha256sum="d70a9ccd8bdf47e302d96c69fecd54925f45d9c7b966bb4ef5f56b770960afa7"/>
-            <file src="debian-patches-9.1.tar.gz" subdir="patches"
-                sha256sum="cb179859bf08615359fb9b92f88db83edea6e610bf1c9a7127f697c0169e55c4"/>
+            <file src="bzip2-1.0.8.tar.gz" subdir="sources"
+                sha256sum="ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="cc0b3407f7bbd228ebb76995719171d6cf993500e2e71eaeb042fc0797e149b8"/>
         </sources>
 
         <patches>
@@ -39,10 +39,7 @@
                 <file src="patches/help-option.diff"/>
                 <file src="patches/makefile.diff"/>
                 <file src="patches/bzip2recover-race-open-output.diff"/>
-                <file src="patches/bzip2recover-CVE-2016-3189.patch"/>
-                <file src="patches/bzdiff-tmpdir-spaces.diff"/>
                 <file src="patches/40-bzdiff-l.patch"/>
-                <file src="patches/Make-sure-nSelectors-is-not-out-of-range.patch"/>
             </patchset>
         </patches>
 
