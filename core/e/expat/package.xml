@@ -19,22 +19,9 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="expat-2.2.6.tar.gz" subdir="sources"
-                sha256sum="574499cba22a599393e28d99ecfa1e7fc85be7d6651d543045244d5b561cb7ff"/>
-            <file src="debian-patches-2.tar.gz" subdir="patches"
-                sha256sum="90964daba4bb95f1ddc61f4baa0e6ff596840c3acdbee509169252f7ddb150cd"/>
-            <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="31063811acc78efd25074a73961968c4a50bc95c25ed23266bab792c84ebff64"/>
+            <file src="expat-2.2.10.tar.gz" subdir="sources"
+                sha256sum="62e280f5fd29a5b70973f623e20a7412c3e3912c2684cb0e462e2c881be129e1"/>
         </sources>
-
-        <patches>
-            <patchset subdir="sources">
-                <!-- Debian -->
-                <file src="patches/Fix_extraction_of_namespace_prefix_from_XML_name.patch"/>
-                <!-- Bolt -->
-                <file src="patches/expat-no-docbook.diff"/>
-            </patchset>
-        </patches>
 
         <xi:include href="rules.xml"/>
     </source>
