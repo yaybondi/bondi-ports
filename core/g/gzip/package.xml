@@ -18,10 +18,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="gzip-1.9.tar.gz" subdir="sources"
-                sha256sum="5d2d3a3432ef32f24cdb060d278834507b481a75adeca18850c73592f778f6ad"/>
-            <file src="debian-patches-3.tar.gz" subdir="patches"
-                sha256sum="91791187d8cf320ba7369fae9a370673afc9e05545588527942175bf38174b4f"/>
+            <file src="gzip-1.10.tar.gz" subdir="sources"
+                sha256sum="c91f74430bf7bc20402e1f657d0b252cb80aa66ba333a25704512af346633c68"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="b4548340ee3deb7b35692e89e613080f2d11a440eb92d77a38486621659b4933"/>
         </sources>
 
         <patches>
@@ -29,10 +29,6 @@
                 <file src="patches/sigpipe.diff"/>
                 <file src="patches/gzip_reproducible_build.diff"/>
                 <file src="patches/zgrep-syntax-error.diff"/>
-                <file src="patches/0001-gzip-port-better-to-mingw.patch"/>
-                <file src="patches/0001-gzip-port-better-to-mingw-again.patch"/>
-                <file src="patches/gnulib-4af4a4a71827c0bc5.patch"/>
-                <file src="patches/disable-broken-Wabi.patch"/>
                 <file src="patches/disable-Werror.patch"/>
             </patchset>
         </patches>
