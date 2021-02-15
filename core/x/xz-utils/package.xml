@@ -22,9 +22,24 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="xz-utils-5.2.4.tar.xz" subdir="sources"
-                sha256sum="9717ae363760dedf573dad241420c5fea86256b65bc21d2cf71b2b12f0544f4b"/>
+            <file src="xz-utils-5.2.5.tar.xz" subdir="sources"
+                sha256sum="3e1e518ffc912f86608a8cb35e4bd41ad1aec210df2a47aaa1f95e7f5576ef56"/>
+            <file src="debian-patches-1.0.tar.gz" subdir="patches"
+                sha256sum="92de3465a4e9e829058afa6c253fdec58a4c398b398fd6f36ed20e8804044723"/>
         </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/0001-xzdiff-Trap-SIGPIPE.patch"/>
+                <file src="patches/0002-Scripts-Add-zstd-support-to-xzgrep.patch"/>
+                <file src="patches/0003-src-xz-xz.1-Correct-misused-two-fonts-macros.patch"/>
+                <file src="patches/0004-xz-Avoid-the-abbreviation-e.g.-on-the-man-page.patch"/>
+                <file src="patches/0005-xz-Protect-the-ellipsis-.-on-the-man-page-with.patch"/>
+                <file src="patches/0006-xz-Use-non-breaking-spaces-when-intentionally-using-.patch"/>
+                <file src="patches/0007-xz-Avoid-unneeded-f-escapes-on-the-man-page.patch"/>
+                <file src="patches/0008-xz-Ignore-hard-link-count-if-not-deleting.patch"/>
+            </patchset>
+        </patches>
 
         <requires>
             <package name="autoconf" version=">= 2.64~"/>
