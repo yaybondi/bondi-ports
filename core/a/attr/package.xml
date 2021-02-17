@@ -27,8 +27,8 @@
         <sources>
             <file src="attr-2.4.48.tar.gz" subdir="sources"
                 sha256sum="5ead72b358ec709ed00bbf7a9eaef1654baad937c001c044fe8b74c57f5324e7"/>
-            <file src="debian-patches-4.tar.gz" subdir="patches"
-                sha256sum="8f5c1ce51e941684241b19191df7ba2dd0d4af5126cf5101e1158f6b87c6fcf2"/>
+            <file src="debian-patches-6.tar.gz" subdir="patches"
+                sha256sum="ec9ed2ea07555ba6b05a3c67cfb681a49723e12c455781c524dd0c255e51a690"/>
         </sources>
 
         <patches>
@@ -45,7 +45,12 @@
                 <file src="patches/build-require-autoconf-version.patch"/>
                 <file src="patches/syscalls-linux.patch"/>
                 <file src="patches/compat-xattr-header.patch"/>
+                <file src="patches/l10n-update-nl.patch"/>
+                <file src="patches/l10n-update-fr.patch"/>
                 <file src="patches/man-pages-typo-fixes.patch"/>
+                <file src="patches/man-attr-no-xfs-specific.patch"/>
+                <file src="patches/man-fix-macros.patch"/>
+                <file src="patches/gettext-musl.patch"/>
             </patchset>
         </patches>
 
