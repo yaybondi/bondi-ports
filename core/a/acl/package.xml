@@ -14,8 +14,8 @@
         <sources>
             <file src="acl-2.2.53.tar.gz" subdir="sources"
                 sha256sum="06be9865c6f418d851ff4494e12406568353b891ffe1f596b34693c387af26c7"/>
-            <file src="debian-patches-4.tar.gz" subdir="patches"
-                sha256sum="c802c523f51303b3fd8a885a7b3c8d4ceb55fe394ce9c72266f8a743b7940d43"/>
+            <file src="debian-patches-10.tar.gz" subdir="patches"
+                sha256sum="9150f703d4b03b493dcad3f3381668edab425d294ad43659c4395bb4efbe25c5"/>
         </sources>
 
         <patches>
@@ -23,9 +23,13 @@
                 <file src="patches/build-no-PATH_MAX.patch"/>
                 <file src="patches/build-require-autoconf-version.patch"/>
                 <file src="patches/build-define-ENODATA.patch"/>
+                <file src="patches/build-cross-gettext-musl.patch"/>
                 <file src="patches/man-fix-typos.patch"/>
                 <file src="patches/man-ref-mount.patch"/>
                 <file src="patches/man-setfacl-restore-stdin.patch"/>
+                <file src="patches/update-upstream-email-address.patch"/>
+                <file src="patches/getfacl-fix-uninitialized-variable.patch"/>
+                <file src="patches/l10n-update-fr.patch"/>
             </patchset>
         </patches>
 
@@ -35,7 +39,7 @@
             <package name="automake"/>
             <package name="gettext"/>
             <package name="libtool"/>
-            <package name="libattr1-dev" version=">= 1:2.4.46-8"/>
+            <package name="libattr1-dev"/>
         </requires>
 
         <xi:include href="rules.xml"/>
