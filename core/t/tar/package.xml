@@ -19,24 +19,19 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="tar-1.30+dfsg.tar.xz" subdir="sources"
-                sha256sum="c02f3747ffe02017878303dde8b78e79cd220364c5e8048cf92320232e38912d"/>
-            <file src="debian-patches-6.tar.gz" subdir="patches"
-                sha256sum="8106cda82c78c2df8df22ef40759472fec4be55b6a7b369c6f39355601a58a10"/>
+            <file src="tar-1.32+dfsg.tar.xz" subdir="sources"
+                sha256sum="9cb89ab8997d5469b24c7a676f0f0ae5b84d730c3d44d9afeabad63431ec8d27"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="af1eb9f5416c29dd817c19dc65f0b2f9a8295b348bf7a687f24c1f8e56c427ff"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
+                <file src="patches/gcc-10-warnings.diff"/>
                 <file src="patches/pristine-tar.diff"/>
                 <file src="patches/listed03-linux-only"/>
-                <file src="patches/rmt.8-header-wrong"/>
-                <file src="patches/fix-for-difflink.at-failure.diff"/>
-                <file src="patches/fix-race-in-dirrem01-and-dirrem02.diff"/>
-                <file src="patches/elide-reference-to-section-5-manpage.diff"/>
                 <file src="patches/oldgnu-unknown-mode-bits.patch"/>
-                <file src="patches/zstd.patch"/>
                 <file src="patches/proper_it_translation.patch"/>
-                <file src="patches/Fix-CVE-2018-20482.patch"/>
             </patchset>
         </patches>
 
