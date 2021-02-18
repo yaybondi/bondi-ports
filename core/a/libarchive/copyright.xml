@@ -2,7 +2,7 @@
     <files license="BSD-2-clause">
         <file src="*"/>
         <copyright-notice><![CDATA[
-(c) 2003-2016 Tim Kientzle
+(c) 2003-2018 Tim Kientzle
         ]]></copyright-notice>
     </files>
     <files license="BSD-2-clause">
@@ -18,6 +18,20 @@
         <file src="contrib/android/*"/>
         <copyright-notice><![CDATA[
 (c) 2014 Trevor Drake
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-clause">
+        <file src="contrib/archivetest.c"/>
+        <file src="libarchive/archive_entry_misc.3"/>
+        <file src="libarchive/archive_write_set_format_private.h"/>
+        <file src="libarchive/test/test_pax_xattr_header.c"/>
+        <file src="libarchive/test/test_read_format_7zip_packinfo_digests.c"/>
+        <file src="libarchive/test/test_read_format_lha_filename_utf16.c"/>
+        <file src="libarchive/test/test_read_format_tar_empty_with_gnulabel.c"/>
+        <file src="tar/test/test_option_exclude_vcs.c"/>
+        <file src="tar/test/test_option_safe_writes.c"/>
+        <copyright-notice><![CDATA[
+(c) 2019-2020 Martin Matuska
         ]]></copyright-notice>
     </files>
     <files license="BSD-4-clause-UCB">
@@ -97,6 +111,15 @@ by Matt Thomas <matt@3am-software.com>.
 (c) 2012-2014  Yann Collet
         ]]></copyright-notice>
     </files>
+    <files license="Apache-2.0">
+        <file src="libarchive/archive_blake2.h"/>
+        <file src="libarchive/archive_blake2_impl.h"/>
+        <file src="libarchive/archive_blake2s_ref.c"/>
+        <file src="libarchive/archive_blake2sp_ref.c"/>
+        <copyright-notice><![CDATA[
+2012, Samuel Neves <sneves@dei.uc.pt>
+        ]]></copyright-notice>
+    </files>
     <files license="BSD-2-clause and BSD-124-clause-UCB">
         <file src="libarchive/archive_entry.c"/>
         <file src="libarchive/archive_read_support_filter_compress.c"/>
@@ -125,6 +148,13 @@ This code is based on PPMd var.H (2001): Dmitry Shkarin : Public domain
 (c) 2014 Michihiro NAKAJIMA
 (c) 1996 David Mazieres <dm@uun.org>
 (c) 2008 Damien Miller <djm@openbsd.org>
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-clause">
+        <file src="libarchive/archive_read_support_format_rar5.c"/>
+        <file src="libarchive/test/test_read_format_rar5.c"/>
+        <copyright-notice><![CDATA[
+(c) 2018 Grzegorz Antoniak (http://antoniak.org)
         ]]></copyright-notice>
     </files>
     <files license="BSD-2-clause and BSD-1-clause-UCB">
@@ -161,6 +191,21 @@ work by Spencer Thomas and Joseph Orost.
         ]]></copyright-notice>
     </files>
     <files license="BSD-2-clause">
+        <file src="libarchive/test/test_read_format_zip_7075_utf8_paths.c"/>
+        <copyright-notice><![CDATA[
+(c) 2003-2007 Tim Kientzle
+(c) 2011 Michihiro NAKAJIMA
+(c) 2019 Mike Frysinger
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-clause">
+        <file src="libarchive/test/test_read_pax_xattr_rht_security_selinux.c"/>
+        <copyright-notice><![CDATA[
+(c) 2016 IBM Corporation
+(c) 2003-2007 Tim Kientzle
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-clause">
         <file src="libarchive_fe/line_reader.c"/>
         <copyright-notice><![CDATA[
 (c) 2008 Tim Kientzle
@@ -171,7 +216,7 @@ work by Spencer Thomas and Joseph Orost.
         <file src="libarchive_fe/passphrase.c"/>
         <copyright-notice><![CDATA[
 (c) 2014 Michihiro NAKAJIMA
-(c) 2000-2002, 2007 Todd C. Miller <Todd.Miller@courtesan.com>
+(c) 2000-2002, 2007, 2010 Todd C. Miller <Todd.Miller@courtesan.com>
         ]]></copyright-notice>
     </files>
     <files license="BSD-2-clause">
@@ -217,9 +262,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-On Debian systems, the full text of Version 2.0 of the Apache License
-can be found in "/usr/share/common-licenses/Apache-2.0".
     ]]></license>
     <license handle="BSD-1-clause-UCB"><![CDATA[
 Permission to use, copy, modify, and distribute this software and its
