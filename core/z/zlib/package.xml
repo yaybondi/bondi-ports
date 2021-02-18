@@ -14,8 +14,8 @@
         <sources>
             <file src="zlib-1.2.11.dfsg.tar.gz" subdir="sources"
                 sha256sum="80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899"/>
-            <file src="debian-patches-1.tar.gz" subdir="patches"
-                sha256sum="480c0796cebc6997ec73508c51ee82a3ea151e57121aa9f7a59ff87a07bf4a77"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="71ab98e6c1fcbc164b0141a994f7fdd456c03a4f359d5aecd27fec179ded172d"/>
         </sources>
 
         <patches>
