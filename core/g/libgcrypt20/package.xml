@@ -24,18 +24,18 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="libgcrypt20-1.8.4.tar.bz2" subdir="sources"
-                sha256sum="f638143a0672628fde0cad745e9b14deb85dffb175709cacc1f4fe24b93f2227"/>
-            <file src="debian-patches-5.tar.gz" subdir="patches"
-                sha256sum="299f5a0441c3e8877cdb0225f332e64f723aec2f95af8bb411bfcc0ac335aa3e"/>
+            <file src="libgcrypt20-1.8.7.tar.bz2" subdir="sources"
+                sha256sum="03b70f028299561b7034b8966d7dd77ef16ed139c43440925fe8782561974748"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="47744db464d9035deeb3a61e64357f962d718bb747984af53057df5bd271b904"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/12_lessdeps_libgcrypt-config.diff"/>
+                <file src="patches/13_lessdeps_libgcrypt-pkgconfig.diff"/>
                 <file src="patches/15_multiarchpath_in_-L.diff"/>
                 <file src="patches/25_norevisionfromgit.diff"/>
-                <file src="patches/30_doc-Fix-library-initialization-examples.patch"/>
             </patchset>
         </patches>
 
