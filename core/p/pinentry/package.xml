@@ -23,24 +23,25 @@
         <sources>
             <file src="pinentry-1.1.0.tar.bz2" subdir="sources"
                 sha256sum="68076686fa724a290ea49cdf0d1c0c1500907d1b759a3bcbfbec0293e8f56570"/>
-            <file src="debian-patches-2.tar.gz" subdir="patches"
-                sha256sum="33eaeb65f4a974668f62d6d848c02cf87825c6b00eb29437666b0eaf1d2d6855"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="81038e86699dd0d0b24e7ad4fff4b95573ff03bd730cc77e14f1e9bf936283ff"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/0001-avoid-self-describing-as-a-beta.patch"/>
-                <file src="patches/0007-gtk2-When-X11-input-grabbing-fails-try-again-over-0..patch"/>
-                <file src="patches/0003-Fix-format-string-errors-in-fltk-pinentry.patch"/>
+                <file src="patches/0002-gtk2-When-X11-input-grabbing-fails-try-again-over-0..patch"/>
+                <file src="patches/0003-fltk-Fix-formatting-escapes.patch"/>
                 <file src="patches/0004-gnome3-Use-the-default-dbus-timeout-when-checking-fo.patch"/>
                 <file src="patches/0005-gnome3-correctly-detect-when-no-GNOME-screenlock-exi.patch"/>
+                <file src="patches/0006-qt-Fix-use-of-dangling-pointer-in-QApplication.patch"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="libassuan-dev" version=">= 2.1.0"/>
-            <package name="libglib2.0-dev" version=">= 2.15.5"/>
-            <package name="libgpg-error-dev" version=">= 1.16"/>
+            <package name="libassuan-dev"/>
+            <package name="libglib2.0-dev"/>
+            <package name="libgpg-error-dev"/>
             <package name="libncurses5-dev"/>
             <package name="libncursesw5-dev"/>
             <package name="m4"/>
