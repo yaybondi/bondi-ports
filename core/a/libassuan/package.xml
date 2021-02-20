@@ -17,16 +17,17 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="libassuan-2.5.2.tar.bz2" subdir="sources"
-                sha256sum="986b1bf277e375f7a960450fbb8ffbd45294d06598916ad4ebf79aee0cb788e7"/>
-            <file src="debian-patches-1.tar.gz" subdir="patches"
-                sha256sum="4ef7223e801a3d8d04a109304d72406b3b0a9b25fd14b1ad257051c018e91a87"/>
+            <file src="libassuan-2.5.3.tar.bz2" subdir="sources"
+                sha256sum="91bcb0403866b4e7c4bc1cc52ed4c364a9b5414b3994f718c70303f7f765e702"/>
+            <file src="debian-patches-7.1.tar.gz" subdir="patches"
+                sha256sum="6f292e5a5061cf417b903013ed70638d8fc6d4447d6f9456e9615b37c486699f"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/0001-avoid-linker-errors-when-cross-building-for-win32.patch"/>
                 <file src="patches/0002-avoid-self-describing-as-a-beta.patch"/>
+                <file src="patches/0003-pass-through-CFLAGS-CPPFLAGS-LDFLAGS-_FOR_BUILD-when.patch"/>
             </patchset>
         </patches>
 
