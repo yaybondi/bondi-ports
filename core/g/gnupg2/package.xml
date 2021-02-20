@@ -18,10 +18,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="gnupg2-2.2.12.tar.bz2" subdir="sources"
-                sha256sum="db030f8b4c98640e91300d36d516f1f4f8fe09514a94ea9fc7411ee1a34082cb"/>
+            <file src="gnupg2-2.2.20.tar.bz2" subdir="sources"
+                sha256sum="04a7c9d48b74c399168ee8270e548588ddbe52218c337703d7f06373d326ca30"/>
             <file src="debian-patches-1.tar.gz" subdir="patches"
-                sha256sum="ca459a5acf3ebc56a261d650b555e48fa049e1a2beb4b4e8ec3bf2dae02c47b7"/>
+                sha256sum="f74eaadd3f0166d0df03724a34c781674c981588fd81de2650c8454461450b24"/>
         </sources>
 
         <patches>
@@ -36,18 +36,17 @@
                 <file src="patches/gpg-agent-idling/agent-Allow-threads-to-interrupt-main-select-loop-wi.patch"/>
                 <file src="patches/gpg-agent-idling/agent-Avoid-tight-timer-tick-when-possible.patch"/>
                 <file src="patches/gpg-agent-idling/agent-Avoid-scheduled-checks-on-socket-when-inotify-.patch"/>
-                <file src="patches/from-master/gpgsm-default-to-3072-bit-keys.patch"/>
                 <file src="patches/from-master/gpg-default-to-3072-bit-RSA-keys.patch"/>
                 <file src="patches/from-master/gpg-default-to-AES-256.patch"/>
-                <file src="patches/from-master/common-Fix-gnupg_wait_processes.patch"/>
-                <file src="patches/from-master/scd-Distinguish-cancel-by-user-and-protocol-error.patch"/>
-                <file src="patches/from-master/agent-Fix-cancellation-handling-for-scdaemon.patch"/>
                 <file src="patches/update-defaults/gpg-Default-to-SHA-512-for-all-signature-types-on-RS.patch"/>
                 <file src="patches/update-defaults/gpg-Prefer-SHA-512-and-SHA-384-in-personal-digest.patch"/>
-                <file src="patches/from-master/gpg-Fix-comparison.patch"/>
-                <file src="patches/show-revocation-cert/gpg-Print-revocation-certificate-details-when-showing-wit.patch"/>
+                <file src="patches/import-merge-without-userid/tests-add-test-cases-for-import-without-uid.patch"/>
+                <file src="patches/import-merge-without-userid/gpg-allow-import-of-previously-known-keys-even-without-UI.patch"/>
+                <file src="patches/import-merge-without-userid/gpg-accept-subkeys-with-a-good-revocation-but-no-self-sig.patch"/>
+                <file src="patches/dirmngr-Only-use-SKS-pool-CA-for-SKS-pool.patch"/>
+                <file src="patches/Use-hkps-keys.openpgp.org-as-the-default-keyserver.patch"/>
                 <file src="patches/Make-gpg-zip-use-tar-from-PATH.patch"/>
-                <file src="patches/fix-spelling.patch"/>
+                <file src="patches/gpg-drop-import-clean-from-default-keyserver-import-optio.patch"/>
             </patchset>
         </patches>
 
