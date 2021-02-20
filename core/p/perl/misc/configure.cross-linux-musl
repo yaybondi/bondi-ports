@@ -4,6 +4,7 @@
 # 3. Edit the resulting config.sh and 
 #    - fix email addresses and other cruft
 #    - set 'hostperl' and 'hostgenerate'
+#    - set 'usecrosscompile' to 'define'
 # 4. Move the config.sh script into the 'Cross' folder and create patch
 #
 
