@@ -21,15 +21,16 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="libksba-1.3.5.tar.bz2" subdir="sources"
-                sha256sum="41444fd7a6ff73a79ad9728f985e71c9ba8cd3e5e53358e70d5f066d35c1a340"/>
-            <file src="debian-patches-2.tar.gz" subdir="patches"
-                sha256sum="ff8df6efd16e3ac3cd16ff377d2e14502fcd149d59ffb993362207091a7a86b4"/>
+            <file src="libksba-1.5.0.tar.bz2" subdir="sources"
+                sha256sum="ae4af129216b2d7fdea0b5bf2a788cd458a79c983bb09a43f4d525cc87aba0ba"/>
+            <file src="debian-patches-3.tar.gz" subdir="patches"
+                sha256sum="c5550e428048ea3dd6ac086920152d0f07c32e0848ca6f2859a19d67373d4da9"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/0001-fix-win32-linker.patch"/>
+                <file src="patches/10_Fix-a-possible-segv-in-case-of-an-unknown-CMS-object.patch"/>
             </patchset>
         </patches>
 
