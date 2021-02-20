@@ -10,7 +10,7 @@
 BASEDIR=/home/build/spool/aarch64
 SYSROOT="$BASEDIR/sys-root"
 TOOLDIR="$BASEDIR/tools"
-VERSION="5.28"
+VERSION="5.32"
 
 ./Configure \
     -Dtargetarch=x86_64-cross-linux-musl \
@@ -63,4 +63,4 @@ REPLACE=$(echo $TOOLDIR | sed -e 's/[\/&]/\\&/g')
 sed -i "s@$REPLACE@##BOLT_HOST_TOOLS_DIR##@g" config.sh
 
 sed -i "s@hostperl=''@hostperl='../host/miniperl'@g" config.sh
-sed -i "s@hostgenerate=''@hostgenerate='../host/geneate_uudmap'@g" config.sh
+sed -i "s@hostgenerate=''@hostgenerate='../host/generate_uudmap'@g" config.sh
