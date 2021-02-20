@@ -2,7 +2,7 @@
     <files license="GPL-1+ or Artistic">
         <file src="*"/>
         <copyright-notice><![CDATA[
-Perl is Copyright (C) 1987-2018 by Larry Wall and others. All rights reserved.
+Perl is Copyright (C) 1987-2021 by Larry Wall and others. All rights reserved.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -19,16 +19,7 @@ Modifications Copyright Ilya Zakharevich 1996-99.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
-        <file src="pp_sort.c"/>
-        <copyright-notice><![CDATA[
-Copyright (C) 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000,
-2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008 by Larry Wall and others
-.
-Copyright (C) Tom Horsley, 1997. All rights reserved.
-        ]]></copyright-notice>
-    </files>
-    <files license="GPL-1+ or Artistic">
-        <file src="mro.c"/>
+        <file src="mro_core.c"/>
         <copyright-notice><![CDATA[
 Copyright (c) 2007 Brandon L Black
 Copyright (c) 2007, 2008 Larry Wall and others
@@ -70,13 +61,27 @@ confused with the original package (see point 3 below).  Thanks, Henry!
     <files license="GPL-3+-WITH-BISON-EXCEPTION">
         <file src="perly.h"/>
         <copyright-notice><![CDATA[
-Copyright (C) 1984, 1989-1990, 2000-2013 Free Software Foundation, Inc.
+Copyright (C) 1984, 1989-1990, 2000-2015, 2018-2019 Free Software Foundation, Inc.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
         <file src="mkppport"/>
         <copyright-notice><![CDATA[
 Copyright 2006 by Marcus Holland-Moritz <mhx@cpan.org>.
+        ]]></copyright-notice>
+    </files>
+    <files license="Expat">
+        <file src="ebcdic_tables.h"/>
+        <copyright-notice><![CDATA[
+Copyright (c) 2008-2009 Bjoern Hoehrmann <bjoern@hoehrmann.de>
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-1+ or Artistic">
+        <file src="inline.h"/>
+        <file src="perl.h"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 1993-2012 by Larry Wall and others
+Copyright (c) 2008-2009 Bjoern Hoehrmann <bjoern@hoehrmann.de>
         ]]></copyright-notice>
     </files>
     <files license="Unicode">
@@ -92,13 +97,14 @@ Copyright (C) 2009, 2011
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
-        <file src="lib/Exporter.pm"/>
+        <file src="lib/B/Deparse.pm"/>
         <copyright-notice><![CDATA[
-unknown
+Copyright (c) 1998-2000, 2002, 2003, 2004, 2005, 2006 Stephen McCamant.
+All rights reserved.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
-        <file src="lib/FindBin.pm"/>
+        <file src="dist/FindBin/lib/FindBin.pm"/>
         <copyright-notice><![CDATA[
 Copyright (c) 1995 Graham Barr & Nick Ing-Simmons. All rights reserved.
         ]]></copyright-notice>
@@ -126,6 +132,12 @@ Copyright (c) 2006-2007 Jarkko Hietaniemi.
         <file src="t/op/split_unicode.t"/>
         <copyright-notice><![CDATA[
 Copyright (c) 1991-2006 Unicode, Inc.
+        ]]></copyright-notice>
+    </files>
+    <files license="Expat">
+        <file src="regen/ebcdic.pl"/>
+        <copyright-notice><![CDATA[
+Copyright (c) 2008-2009 Bjoern Hoehrmann <bjoern@hoehrmann.de>
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -166,16 +178,42 @@ Copyright (C) 2000-01, 2002 Novell, Inc. All Rights Reserved.
 Copyright (C) 1993-2015 by Charles Bailey and others.
         ]]></copyright-notice>
     </files>
-    <files license="S2P">
-        <file src="x2p/s2p.PL"/>
-        <copyright-notice><![CDATA[
-unknown
-        ]]></copyright-notice>
-    </files>
     <files license="GPL-1+ or Artistic">
         <file src="win32/fcrypt.c"/>
         <copyright-notice><![CDATA[
 Copyright (C) 1993 Eric Young - see README for more details
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-1+ or Artistic">
+        <file src="dist/autouse/*"/>
+        <file src="dist/base/*"/>
+        <file src="dist/constant/*"/>
+        <file src="dist/Devel-SelfStubber/*"/>
+        <file src="dist/Dumpvalue/*"/>
+        <file src="dist/Env/*"/>
+        <file src="cpan/ExtUtils-Manifest/*"/>
+        <file src="dist/I18N-Collate/*"/>
+        <file src="dist/Safe/*"/>
+        <file src="ext/Fcntl/*"/>
+        <file src="ext/FileCache/*"/>
+        <file src="ext/GDBM_File/*"/>
+        <file src="ext/IPC-Open3/*"/>
+        <file src="ext/NDBM_File/*"/>
+        <file src="ext/ODBM_File/*"/>
+        <file src="ext/Opcode/*"/>
+        <file src="ext/PerlIO-encoding/*"/>
+        <file src="ext/PerlIO-scalar/*"/>
+        <file src="ext/PerlIO-via/*"/>
+        <file src="ext/POSIX/*"/>
+        <file src="ext/re/*"/>
+        <file src="cpan/Socket/*"/>
+        <file src="ext/Sys-Hostname/*"/>
+        <file src="ext/Tie-Hash-NamedCapture/*"/>
+        <file src="ext/Tie-Memoize/*"/>
+        <file src="ext/VMS-DCLsym/*"/>
+        <file src="ext/VMS-Stdio/*"/>
+        <copyright-notice><![CDATA[
+unknown
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -217,28 +255,21 @@ Copyright 2013-2014, Niels Thykier <niels@thykier.net>
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
-        <file src="cpan/B-"/>
-        <copyright-notice><![CDATA[
-Copyright (c) 1996, 1997 Malcolm Beattie
-Copyright (c) 2008, 2010, 2013, 2014 Reini Urban
-        ]]></copyright-notice>
-    </files>
-    <files license="GPL-1+ or Artistic">
         <file src="cpan/Compress-Raw-Bzip2/*"/>
         <copyright-notice><![CDATA[
-Copyright (c) 2005-2017 Paul Marquess. All rights reserved.
+Copyright (c) 2005-2019 Paul Marquess. All rights reserved.
         ]]></copyright-notice>
     </files>
     <files license="BZIP">
         <file src="cpan/Compress-Raw-Bzip2/bzip2-src/*"/>
         <copyright-notice><![CDATA[
-Copyright(C) 1996-2010 Julian Seward. All rights reserved
+Copyright(C) 1996-2019 Julian Seward. All rights reserved
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
         <file src="cpan/Compress-Raw-Zlib/*"/>
         <copyright-notice><![CDATA[
-Copyright (c) 2005-2017 Paul Marquess. All rights reserved.
+Copyright (c) 2005-2019 Paul Marquess. All rights reserved.
         ]]></copyright-notice>
     </files>
     <files license="ZLIB">
@@ -250,7 +281,7 @@ Copyright (C) 1995-2017 Jean-loup Gailly and Mark Adler
     <files license="GPL-1+ or Artistic">
         <file src="cpan/Config-Perl-V/*"/>
         <copyright-notice><![CDATA[
-Copyright (C) 2009-2017 H.Merijn Brand
+Copyright (C) 2009-2019 H.Merijn Brand
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -263,7 +294,7 @@ unknown
         <file src="cpan/CPAN/lib/App/Cpan.pm"/>
         <file src="cpan/CPAN/scripts/cpan"/>
         <copyright-notice><![CDATA[
-(c) 2001-2015, brian d foy, All Rights Reserved.
+(c) 2001-2018, brian d foy, All Rights Reserved.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -298,21 +329,23 @@ This software is copyright (c) 2010 by Adam Kennedy.
     <files license="GPL-1+ or Artistic">
         <file src="cpan/DB_File/*"/>
         <copyright-notice><![CDATA[
-Copyright (c) 1995-2016 Paul Marquess. All rights reserved.
+Copyright (c) 1995-2020 Paul Marquess. All rights reserved.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
-        <file src="cpan/Devel-PPPort/*"/>
+        <file src="dist/Devel-PPPort/*"/>
         <copyright-notice><![CDATA[
-Version 3.x, Copyright (C) 2004-2010, Marcus Holland-Moritz.
+Version 3.x, Copyright (C) 2004-2013, Marcus Holland-Moritz.
+Copyright (C) 2018, The perl5 porters
 Version 2.x, Copyright (C) 2001, Paul Marquess.
 Version 1.x, Copyright (C) 1999, Kenneth Albanowski.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
-        <file src="cpan/Devel-PPPort/parts/inc/mess"/>
+        <file src="dist/Devel-PPPort/parts/inc/mess"/>
+        <file src="dist/Devel-PPPort/parts/inc/01_test"/>
         <copyright-notice><![CDATA[
-Copyright (C) 2017, Pali <pali@cpan.org>
+Copyright (C) 2017, 2019 Pali <pali@cpan.org>
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -333,7 +366,7 @@ Copyright 1990-1992 RSA Data Security, Inc.
     <files license="GPL-1+ or Artistic">
         <file src="cpan/Digest-SHA/*"/>
         <copyright-notice><![CDATA[
-Copyright (C) 2003-2017 Mark Shelor, All Rights Reserved
+Copyright (C) 2003-2018 Mark Shelor, All Rights Reserved
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -349,9 +382,21 @@ Copyright 2002-2014 Dan Kogai <dankogai@cpan.org>
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
-        <file src="cpan/encoding-warnings/*"/>
+        <file src="dist/encoding-warnings/*"/>
         <copyright-notice><![CDATA[
 Copyright 2004, 2005, 2006, 2007 by Audrey Tang <cpan@audreyt.org>.
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-1+ or Artistic">
+        <file src="dist/Exporter/lib/Exporter.pm"/>
+        <copyright-notice><![CDATA[
+unknown
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+ or Artistic">
+        <file src="dist/Tie-File/*"/>
+        <copyright-notice><![CDATA[
+Tie::File version 0.97 is copyright (C) 2003 Mark Jason Dominus.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -384,7 +429,6 @@ unknown
         <file src="cpan/Module-Load/*"/>
         <file src="cpan/Module-Load-Conditional/*"/>
         <file src="cpan/Module-Loaded/*"/>
-        <file src="cpan/Package-Constants/*"/>
         <file src="cpan/Params-Check/*"/>
         <copyright-notice><![CDATA[
 There are no copyright notices in these distributions.
@@ -395,7 +439,7 @@ Their author is Jos Boumans <kane@cpan.org>.
         <file src="cpan/File-Path/*"/>
         <copyright-notice><![CDATA[
 This module is copyright (C) Charles Bailey, Tim Bunce, David Landgren,
-James Keenan, and Richard Elberger 1995-2015. All rights reserved.
+James Keenan, and Richard Elberger 1995-2018. All rights reserved.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -422,13 +466,13 @@ Module Getopt::Long is Copyright 1990,2015 by Johan Vromans.
     <files license="GPL-1+ or Artistic">
         <file src="cpan/HTTP-Tiny/*"/>
         <copyright-notice><![CDATA[
-This software is copyright (c) 2016 by Christian Hansen.
+This software is copyright (c) 2018 by Christian Hansen.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
         <file src="cpan/IO-Compress/*"/>
         <copyright-notice><![CDATA[
-Copyright (c) 1995-2017 Paul Marquess. All rights reserved.
+Copyright (c) 1995-2019 Paul Marquess. All rights reserved.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -465,7 +509,7 @@ Copyright (C) 2014 Steve Hay.  All rights reserved.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
-        <file src="cpan/List-Util/*"/>
+        <file src="cpan/Scalar-List-Utils/*"/>
         <copyright-notice><![CDATA[
 Copyright (c) 1997-2009 Graham Barr <gbarr@pobox.com>. All rights reserved.
         ]]></copyright-notice>
@@ -483,15 +527,6 @@ Copyright (C) 2014 cPanel Inc.  All rights reserved.
         <file src="cpan/Scalar-List-Utils/lib/Sub/Util.pm"/>
         <copyright-notice><![CDATA[
 (c) 2014 Paul Evans <leonerd@leonerd.org.uk>. All rights reserved
-        ]]></copyright-notice>
-    </files>
-    <files license="GPL-1+ or Artistic">
-        <file src="cpan/Locale-Codes/*"/>
-        <copyright-notice><![CDATA[
-Copyright (C) 1997-2001 Canon Research Centre Europe (CRE).
-Copyright (C) 2001-2010 Neil Bowers
-Copyright (c) 1996-2018 Sullivan Beck
-Copyright (c) 2001      Michael Hennecke
         ]]></copyright-notice>
     </files>
     <files license="Expat or GPL-1+ or Artistic">
@@ -552,13 +587,7 @@ Copyright (c) 2000-2001, Damian Conway. All Rights Reserved.
     <files license="GPL-1+ or Artistic">
         <file src="cpan/parent/*"/>
         <copyright-notice><![CDATA[
-Copyright (c) 2007-10 Max Maischein <corion@cpan.org>
-        ]]></copyright-notice>
-    </files>
-    <files license="GPL-1+ or Artistic">
-        <file src="cpan/Parse-CPAN-Meta/*"/>
-        <copyright-notice><![CDATA[
-This software is copyright (c) 2015 by Adam Kennedy and Contributors.
+Copyright (c) 2007-2017 Max Maischein <corion@cpan.org>
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -588,22 +617,27 @@ Copyright (c) 2001-2004 Sean M. Burke.  All rights reserved.
     <files license="GPL-1+ or Artistic">
         <file src="cpan/podlators/*"/>
         <copyright-notice><![CDATA[
-Copyright 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
-2010, 2012, 2013, 2014, 2015, 2016, 2017 Russ Allbery <rra@cpan.org>
+Copyright 1999-2001, 2008, 2010, 2012, 2014-2016, 2018-2019 Russ Allbery <rra@cpan.org>
 Substantial contributions by Sean Burke <sburke@cpan.org>
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
         <file src="cpan/podlators/lib/Pod/Text/Overstrike.pm"/>
         <copyright-notice><![CDATA[
-Copyright 2000 Joe Smith <Joe.Smith@inwap.com>.
-Copyright 2001, 2004, 2008 Russ Allbery <rra@stanford.edu>.
+Copyright 2000 by Joe Smith <Joe.Smith@inwap.com>.
+Copyright 1999, 2001, 2004, 2006, 2008, 2009, 2018-2019 Russ Allbery <rra@cpan.org>.
         ]]></copyright-notice>
     </files>
     <files license="RRA-KEEP-THIS-NOTICE">
         <file src="cpan/podlators/t/data/snippets/README"/>
+        <file src="cpan/podlators/t/data/basic.cap"/>
+        <file src="cpan/podlators/t/data/basic.clr"/>
+        <file src="cpan/podlators/t/data/basic.man"/>
+        <file src="cpan/podlators/t/data/basic.ovr"/>
+        <file src="cpan/podlators/t/data/basic.pod"/>
+        <file src="cpan/podlators/t/data/basic.txt"/>
         <copyright-notice><![CDATA[
-Copyright 2015 Russ Allbery <rra@cpan.org>
+Copyright 2001-2018 Russ Allbery <rra@cpan.org>
         ]]></copyright-notice>
     </files>
     <files license="Expat">
@@ -613,54 +647,26 @@ Copyright 2015 Russ Allbery <rra@cpan.org>
         <file src="cpan/podlators/t/lib/Test/RRA.pm"/>
         <file src="cpan/podlators/t/lib/Test/RRA/Config.pm"/>
         <file src="cpan/podlators/t/style/minimum-version.t"/>
+        <file src="cpan/podlators/t/style/module-version.t"/>
         <file src="cpan/podlators/t/style/strict.t"/>
         <copyright-notice><![CDATA[
-Copyright 2012, 2013, 2014
-The Board of Trustees of the Leland Stanford Junior University
+Copyright 2012-2014 The Board of Trustees of the Leland Stanford Junior University
+Copyright 2014-2016, 2019 Russ Allbery <eagle@eyrie.org>
         ]]></copyright-notice>
     </files>
     <files license="Expat">
         <file src="cpan/podlators/t/lib/Test/RRA/ModuleVersion.pm"/>
+        <file src="cpan/podlators/t/docs/spdx-license.t"/>
+        <file src="cpan/podlators/t/style/obsolete-strings.t"/>
         <copyright-notice><![CDATA[
-Copyright 2016 Russ Allbery <eagle@eyrie.org>
+Copyright 2016, 2018-2019 Russ Allbery <eagle@eyrie.org>
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
         <file src="cpan/podlators/t/man/no-encode.t"/>
         <copyright-notice><![CDATA[
 Copyright 2016 Niko Tyni <ntyni@iki.fi>
-Copyright 2016 Russ Allbery <rra@cpan.org>
-        ]]></copyright-notice>
-    </files>
-    <files license="Expat">
-        <file src="cpan/podlators/t/style/module-version.t"/>
-        <copyright-notice><![CDATA[
-Copyright 2014, 2015, 2016 Russ Allbery <eagle@eyrie.org>
-Copyright 2012, 2013, 2014 The Board of Trustees of the Leland Stanford Junior University
-        ]]></copyright-notice>
-    </files>
-    <files license="GPL-1+ or Artistic">
-        <file src="cpan/Pod-Parser/*"/>
-        <copyright-notice><![CDATA[
-Copyright (C) 1996-2000 by Bradford Appleton. All rights reserved.
-        ]]></copyright-notice>
-    </files>
-    <files license="GPL-1+ or Artistic">
-        <file src="cpan/Pod-Parser/lib/Pod/PlainText.pm"/>
-        <copyright-notice><![CDATA[
-Copyright 1999-2000 by Russ Allbery <rra@stanford.edu>
-        ]]></copyright-notice>
-    </files>
-    <files license="GPL-1+ or Artistic">
-        <file src="cpan/Pod-Parser/lib/Pod/ParseUtils.pm"/>
-        <copyright-notice><![CDATA[
-Copyright (C) 1999-2000 by Marek Rouchal. All rights reserved.
-        ]]></copyright-notice>
-    </files>
-    <files license="GPL-1+ or Artistic">
-        <file src="cpan/Pod-Parser/t/pod/contains_pod.t"/>
-        <copyright-notice><![CDATA[
-Copyright (C) 2005  Joshua Hoblitt
+Copyright 2016, 2018-2019 Russ Allbery <rra@cpan.org>
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -713,22 +719,22 @@ The Regents of the University of California.  All rights reserved.
         <file src="cpan/Term-ANSIColor/*"/>
         <copyright-notice><![CDATA[
 Copyright 1996 Zenin
-Copyright 1996, 1997, 1998, 2000, 2001, 2002, 2005, 2006, 2008, 2009,
-2010, 2011, 2012, 2013, 2014, 2015, 2016 Russ Allbery <rra@cpan.org>
+Copyright 1996-1998, 2000-2002, 2005-2006, 2008-2018, 2020 Russ Allbery <rra@cpan.org>
 Copyright 2012 Kurt Starsinic <kstarsinic@gmail.com>
         ]]></copyright-notice>
     </files>
     <files license="Expat">
         <file src="cpan/Term-ANSIColor/t/lib/Test/RRA.pm"/>
         <copyright-notice><![CDATA[
-2013, 2014 The Board of Trustees of the Leland Stanford Junior University
+Copyright 2016, 2018-2019 Russ Allbery <eagle@eyrie.org>
+Copyright 2013, 2014 The Board of Trustees of the Leland Stanford Junior University
         ]]></copyright-notice>
     </files>
     <files license="Expat">
         <file src="cpan/Term-ANSIColor/t/lib/Test/RRA/Config.pm"/>
         <copyright-notice><![CDATA[
-Copyright 2015, 2016 Russ Allbery <eagle@eyrie.org>
-Copyright 2013, 2014 The Board of Trustees of the Leland Stanford Junior University
+Copyright 2015, 2016, 2019 Russ Allbery <eagle@eyrie.org>
+Copyright 2013-2014 The Board of Trustees of the Leland Stanford Junior University
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -760,7 +766,7 @@ Portions copyright 2006-2008 Adam Kennedy.
         <file src="cpan/Test-Simple/*"/>
         <copyright-notice><![CDATA[
 Copyright 2001-2008 by Michael G Schwern <schwern@pobox.com>.
-Copyright 2018 Chad Granum <exodist@cpan.org>.
+Copyright 2019 Chad Granum <exodist@cpan.org>.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -839,20 +845,14 @@ Copyright (C) 2005 Aristotle Pagaltzis
 Copyright (C) 2012-2013 Google, Inc.
         ]]></copyright-notice>
     </files>
-    <files license="GPL-2+ or Artistic">
-        <file src="cpan/Tie-File/*"/>
-        <copyright-notice><![CDATA[
-Tie::File version 0.97 is copyright (C) 2003 Mark Jason Dominus.
-        ]]></copyright-notice>
-    </files>
     <files license="GPL-1+ or Artistic">
         <file src="cpan/bignum/*"/>
         <file src="cpan/Tie-RefHash/*"/>
         <file src="cpan/Win32API-File/*"/>
-        <file src="dist/ExtUtils-Install/*"/>
-        <file src="dist/Math-BigInt/*"/>
-        <file src="dist/Math-BigInt-FastCalc/*"/>
-        <file src="dist/Math-BigRat/*"/>
+        <file src="cpan/ExtUtils-Install/*"/>
+        <file src="cpan/Math-BigInt/*"/>
+        <file src="cpan/Math-BigInt-FastCalc/*"/>
+        <file src="cpan/Math-BigRat/*"/>
         <file src="dist/Thread-Queue/*"/>
         <copyright-notice><![CDATA[
 unknown
@@ -861,7 +861,7 @@ unknown
     <files license="GPL-1+ or Artistic">
         <file src="cpan/Time-Local/*"/>
         <copyright-notice><![CDATA[
-Copyright (c) 1997 - 2016 by Graham Barr & Dave Rolsky.
+Copyright (c) 1997 - 2018 by Graham Barr & Dave Rolsky.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -880,18 +880,18 @@ Copyright (c) 1994 Powerdog Industries.  All rights reserved.
     <files license="GPL-1+ or Artistic">
         <file src="cpan/Unicode-Collate/*"/>
         <copyright-notice><![CDATA[
-This module is Copyright(C) 2001-2017, SADAHIRO Tomoyuki. Japan. All
+This module is Copyright(C) 2001-2018, SADAHIRO Tomoyuki. Japan. All
 rights reserved.
         ]]></copyright-notice>
     </files>
     <files license="Unicode">
         <file src="cpan/Unicode-Collate/Collate/allkeys.txt"/>
         <copyright-notice><![CDATA[
-Copyright (c) 2016 Unicode, Inc.
+Copyright (c) 2017 Unicode, Inc.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
-        <file src="cpan/Unicode-Normalize/*"/>
+        <file src="dist/Unicode-Normalize/*"/>
         <copyright-notice><![CDATA[
 Copyright(C) 2001-2012, SADAHIRO Tomoyuki. Japan. All rights reserved.
         ]]></copyright-notice>
@@ -909,47 +909,6 @@ Copyright (c) 2001-2009, Damian Conway. All Rights Reserved.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
-        <file src="dist/autouse/*"/>
-        <file src="dist/base/*"/>
-        <file src="dist/constant/*"/>
-        <file src="dist/Devel-SelfStubber/*"/>
-        <file src="dist/Dumpvalue/*"/>
-        <file src="dist/Env/*"/>
-        <file src="dist/ExtUtils-Command/*"/>
-        <file src="dist/ExtUtils-Manifest/*"/>
-        <file src="dist/I18N-Collate/*"/>
-        <file src="dist/Safe/*"/>
-        <file src="ext/Fcntl/*"/>
-        <file src="ext/FileCache/*"/>
-        <file src="ext/GDBM_File/*"/>
-        <file src="ext/IPC-Open2/*"/>
-        <file src="ext/IPC-Open3/*"/>
-        <file src="ext/NDBM_File/*"/>
-        <file src="ext/ODBM_File/*"/>
-        <file src="ext/Opcode/*"/>
-        <file src="ext/PerlIO-encoding/*"/>
-        <file src="ext/PerlIO-scalar/*"/>
-        <file src="ext/PerlIO-via/*"/>
-        <file src="ext/POSIX/*"/>
-        <file src="ext/re/*"/>
-        <file src="ext/Socket/*"/>
-        <file src="ext/Sys-Hostname/*"/>
-        <file src="ext/Tie-Hash-NamedCapture/*"/>
-        <file src="ext/Tie-Memoize/*"/>
-        <file src="ext/VMS-DCLsym/*"/>
-        <file src="ext/VMS-Stdio/*"/>
-        <copyright-notice><![CDATA[
-unknown
-        ]]></copyright-notice>
-    </files>
-    <files license="GPL-1+ or Artistic">
-        <file src="dist/B-Deparse/*"/>
-        <copyright-notice><![CDATA[
-Copyright (c) 1998-2000, 2002, 2003, 2004, 2005, 2006 Stephen McCamant.
-All rights reserved.
-        ]]></copyright-notice>
-    </files>
-    <files license="GPL-1+ or Artistic">
         <file src="dist/Carp/*"/>
         <copyright-notice><![CDATA[
 Copyright (c) 1994-2013 Larry Wall
@@ -959,14 +918,14 @@ Copyright (c) 2011, 2012, 2013 Andrew Main (Zefram) <zefram@fysh.org>
     <files license="GPL-1+ or Artistic">
         <file src="dist/Data-Dumper/*"/>
         <copyright-notice><![CDATA[
-Copyright (c) 1996-2017 Gurusamy Sarathy. All rights reserved.
+Copyright (c) 1996-2019 Gurusamy Sarathy. All rights reserved.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
         <file src="dist/ExtUtils-CBuilder/*"/>
         <copyright-notice><![CDATA[
 Copyright (c) 2003-2005 Ken Williams.  All rights reserved.
-Copyright (c) 2012-2017 Ken Williams.  All rights reserved.
+Copyright (c) 2012-2020 Ken Williams.  All rights reserved.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
@@ -1053,6 +1012,7 @@ Copyright (C) 2013 Chris Williams.  All Rights Reserved.
     <files license="GPL-1+ or Artistic">
         <file src="dist/Net-Ping/*"/>
         <copyright-notice><![CDATA[
+Copyright (c) 2017-2018, Reini Urban.  All rights reserved.
 Copyright (c) 2016, cPanel Inc.  All rights reserved.
 Copyright (c) 2012, Steve Peters.  All rights reserved.
 Copyright (c) 2002-2003, Rob Brown.  All rights reserved.
@@ -1073,7 +1033,7 @@ Copyright (c) 2003 Constantin S. Svintsoff <kostik@iclub.nsu.ru>
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
-        <file src="dist/Pod-Perldoc/*"/>
+        <file src="cpan/Pod-Perldoc/*"/>
         <copyright-notice><![CDATA[
 Copyright (c) 2002-2007 Sean M. Burke.
 Copyright (c) 2011 Mark Allen.  All rights reserved.
@@ -1199,7 +1159,7 @@ This is an unpublished work copyright (c) 1992 Helios Software GmbH
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
-        <file src="ext/DynaLoader/dl_dld.xs"/>
+        <file src="ext/DynaLoader/dl_freemint.xs"/>
         <copyright-notice><![CDATA[
 based upon the file "dl.c", which is Copyright (c) 1994, Larry Wall
         ]]></copyright-notice>
@@ -1270,14 +1230,8 @@ Copyright (c) 2008,2009 Larry Wall and others
 unknown
         ]]></copyright-notice>
     </files>
-    <files license="GPL-1+ or Artistic">
-        <file src="ext/SDBM_File/*"/>
-        <copyright-notice><![CDATA[
-unknown
-        ]]></copyright-notice>
-    </files>
     <files license="SDBM-PUBLIC-DOMAIN">
-        <file src="ext/SDBM_File/sdbm/*"/>
+        <file src="ext/SDBM_File/*"/>
         <copyright-notice><![CDATA[
 none
         ]]></copyright-notice>
@@ -1324,16 +1278,14 @@ Copyright 2010, brian d foy <brian.d.foy@gmail.com>
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
-        <file src="pod/perlfaq*.pod"/>
-        <file src="pod/perlopentut.pod"/>
-        <file src="pod/perltooc.pod"/>
+        <file src="cpan/perlfaq/lib/perlfaq*.pod"/>
         <copyright-notice><![CDATA[
 Copyright (c) 1997-2010 Tom Christiansen, Nathan Torkington, and
 other authors as noted. All rights reserved.
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
-        <file src="pod/perlfaq.pod"/>
+        <file src="cpan/perlfaq/lib/perlfaq.pod"/>
         <copyright-notice><![CDATA[
 Tom Christiansen wrote the original version of this document.
 brian d foy <bdfoy@cpan.org> wrote this version. See the
@@ -1348,7 +1300,7 @@ copyright 1998 The Perl Journal
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic">
-        <file src="pod/perlglossary.pod"/>
+        <file src="cpan/perlfaq/lib/perlglossary.pod"/>
         <copyright-notice><![CDATA[
 Based on the Glossary of I<Programming Perl>, Fourth Edition,
 by Tom Christiansen, brian d foy, Larry Wall, & Jon Orwant.
@@ -1361,18 +1313,10 @@ Copyright (c) 2000, 1996, 1991, 2012 O'Reilly Media, Inc.
 Copyright (C) 1998, 2002, 2003 Jon Orwant.  All Rights Reserved.
         ]]></copyright-notice>
     </files>
-    <files license="GPL-1+ or Artistic">
-        <file src="pod/perlopentut.pod"/>
-        <file src="pod/perltooc.pod"/>
-        <file src="pod/perltoot.pod"/>
-        <copyright-notice><![CDATA[
-Copyright 1997-1999 Tom Christiansen.
-        ]]></copyright-notice>
-    </files>
     <files license="RRA-KEEP-THIS-NOTICE">
         <file src="pod/perlpodstyle.pod"/>
         <copyright-notice><![CDATA[
-Copyright 1999, 2000, 2001, 2004, 2006, 2008, 2010, 2015 Russ Allbery
+Copyright 1999, 2000, 2001, 2004, 2006, 2008, 2010, 2015, 2018 Russ Allbery
 <rra@cpan.org>
         ]]></copyright-notice>
     </files>
@@ -1458,7 +1402,7 @@ Copyright (c) 2016 H.Merijn Brand & Todd Rinaldo
 Copyright (c) 2016 Tony Cook
 Copyright (c) 2017, Lukas Mai
 Copyright (c) 2017 Dagfinn Ilmari Mannsåker
-Copyright (c) 2017, Karl Williamson
+Copyright (c) 2017-2019, Karl Williamson
         ]]></copyright-notice>
     </files>
     <files license="GPL-1+ or Artistic, and Expat">
@@ -2055,11 +1999,6 @@ This module may be modified, used, copied, and redistributed at your own risk.
 Although allowed by the preceding license, please do not publicly
 redistribute modified versions of this code with the name "Text::Tabs"
 unless it passes the unmodified Text::Tabs test suite.
-    ]]></license>
-    <license handle="S2P"><![CDATA[
-This program is free and open software. You may use, modify,
-distribute, and sell this program (and any modified variants) in any
-way you wish, provided you do not restrict others from doing the same.
     ]]></license>
     <license handle="DONT-CHANGE-THE-GPL"><![CDATA[
 Everyone is permitted to copy and distribute verbatim copies

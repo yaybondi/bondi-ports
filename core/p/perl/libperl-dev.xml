@@ -9,7 +9,7 @@
 
     <requires>
         <package name="perl" version="=="/>
-        <package name="libperl5.24" version="=="/>
+        <package name="libperl5.32" version="=="/>
         <package name="libc-dev"/>
     </requires>
 

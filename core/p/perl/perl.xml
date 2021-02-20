@@ -19,7 +19,7 @@
     </description>
 
     <requires>
-        <package name="libperl5.24" version="=="/>
+        <package name="libperl5.32" version="=="/>
     </requires>
 
     <contents>

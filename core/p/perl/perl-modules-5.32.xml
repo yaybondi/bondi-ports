@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="perl-modules-5.24" section="perl">
+<package name="perl-modules-5.32" section="perl">
     <description>
         <summary>Core Perl modules</summary>
         <p>
@@ -9,8 +9,8 @@
         <p>
         Note that this package only exists to save archive space and should be
         considered an internal implementation detail of the `perl' package.
-        Other packages should not depend on `perl-modules-5.24' directly, they
-        should use `perl' (which depends on `perl-modules-5.24') instead.
+        Other packages should not depend on `perl-modules-5.32' directly, they
+        should use `perl' (which depends on `perl-modules-5.32') instead.
         </p>
     </description>
 

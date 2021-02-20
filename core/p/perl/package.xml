@@ -15,12 +15,12 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="perl-5.28.1.tar.xz" subdir="sources"
-                sha256sum="fea7162d4cca940a387f0587b93f6737d884bf74d8a9d7cfd978bc12cd0b202d"/>
-            <file src="perl-regen-configure-5.28.1.tar.xz" subdir="sources/regen-configure"
-                sha256sum="5873b81af4514d3910ab1a8267b15ff8c0e2100dbae4edfd10b65ef72cd31ef8"/>
-            <file src="debian-patches-6.tar.gz" subdir="patches"
-                sha256sum="46fdbd22527ae9f2bda224858dab61f0cbad3eedb6a7cf9dad176804d6f25c75"/>
+            <file src="perl-5.32.1.tar.xz" subdir="sources"
+                sha256sum="57cc47c735c8300a8ce2fa0643507b44c4ae59012bfdad0121313db639e02309"/>
+            <file src="perl-regen-configure-5.32.1.tar.gz" subdir="sources/regen-configure"
+                sha256sum="1d179b41283f12ad83f9758430f6ddc49bdf20db5c396aeae7e51ebb4e4afd29"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="83caf0940887ad108c9af9181d8a783da66814be87a749dea5f6ce3f63ab47f9"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="b327c9ed370766199a6b6328a1a0e0f9e65736a287913b6c1ea191cc5162a6c2"/>
         </sources>
@@ -55,7 +55,6 @@
                 <file src="patches/debian/makemaker-pasthru.diff"/>
                 <file src="patches/debian/makemaker-manext.diff"/>
                 <file src="patches/debian/kfreebsd-softupdates.diff"/>
-                <file src="patches/fixes/autodie-scope.diff"/>
                 <file src="patches/fixes/memoize-pod.diff"/>
                 <file src="patches/debian/hurd-softupdates.diff"/>
                 <file src="patches/fixes/math_complex_doc_great_circle.diff"/>
@@ -64,7 +63,6 @@
                 <file src="patches/fixes/cpan_web_link.diff"/>
                 <file src="patches/debian/hppa_op_optimize_workaround.diff"/>
                 <file src="patches/debian/installman-utf8.diff"/>
-                <file src="patches/fixes/getopt-long-4.diff"/>
                 <file src="patches/debian/hppa_opmini_optimize_workaround.diff"/>
                 <file src="patches/debian/sh4_op_optimize_workaround.diff"/>
                 <file src="patches/debian/perldoc-pager.diff"/>
@@ -73,24 +71,10 @@
                 <file src="patches/debian/configure-regen.diff"/>
                 <file src="patches/debian/deprecate-with-apt.diff"/>
                 <file src="patches/debian/disable-stack-check.diff"/>
-                <file src="patches/debian/gdbm-fatal.diff"/>
-                <file src="patches/fixes/storable-recursion.diff"/>
-                <file src="patches/fixes/caretx-fallback.diff"/>
-                <file src="patches/fixes/eumm-usrmerge.diff"/>
-                <file src="patches/fixes/errno-include-path.diff"/>
-                <file src="patches/fixes/kfreebsd-renameat.diff"/>
-                <file src="patches/fixes/time-local-2020.diff"/>
-                <file src="patches/fixes/inplace-editing-bugfix/part1.diff"/>
-                <file src="patches/fixes/inplace-editing-bugfix/part2.diff"/>
-                <file src="patches/fixes/inplace-editing-bugfix/part3.diff"/>
-                <file src="patches/fixes/fix-manifest-failures.diff"/>
-                <file src="patches/fixes/pipe-open-bugfix/part1.diff"/>
-                <file src="patches/fixes/pipe-open-bugfix/part2.diff"/>
-                <file src="patches/fixes/storable-probing/prereq1.diff"/>
-                <file src="patches/fixes/storable-probing/prereq2.diff"/>
-                <file src="patches/fixes/storable-probing/disable-probing.diff"/>
                 <file src="patches/debian/perlbug-editor.diff"/>
-                <file src="patches/fixes/posix-mbrlen.diff"/>
+                <file src="patches/debian/eu-mm-perl-base.diff"/>
+                <file src="patches/fixes/hurd-cachepropagate-test-fix.diff"/>
+                <file src="patches/fixes/io_socket_ip_ipv6.diff"/>
                 <!-- Bolt -->
                 <file src="patches/cross-musl-config-sh.patch"/>
             </patchset>
@@ -108,9 +92,9 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="libperl5.24.xml"/>
+    <xi:include href="libperl5.32.xml"/>
     <xi:include href="libperl-dev.xml"/>
-    <xi:include href="perl-modules-5.24.xml"/>
+    <xi:include href="perl-modules-5.32.xml"/>
     <xi:include href="perl.xml"/>
 
     <xi:include href="changelog.xml"/>
