@@ -23,10 +23,10 @@
         <sources>
             <file src="busybox-1.30.1.tar.bz2" subdir="sources"
                 sha256sum="3d1d04a4dbd34048f4794815a5c48ebb9eb53c5277e09ffffc060323b95dfbdc"/>
-            <file src="debian-patches-4.tar.gz" subdir="patches"
-                sha256sum="8cc7ddda0b5e034e70fbd4e4da13ee031807be7b64ab638f93ac779ae5db051e"/>
+            <file src="debian-patches-6.tar.gz" subdir="patches"
+                sha256sum="1a5ee758d84a2b1d3f6bc72c3b39e0f9ff7c420a1f36ce47bf6f78aea92d8610"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="d969d8fa9aa05c5012a3b347cfc544ae281d5f63100864e5d41baea15dde8d5e"/>
+                sha256sum="e69c18d5bd18a8efcca9add191eb4be322c527541599fff7f5ecb0e2715c33de"/>
         </sources>
 
         <patches>
@@ -34,6 +34,8 @@
                 <!-- Debian -->
                 <file src="patches/cherry-pick.1_30_0-35-g74d9f1ba3.udhcpc-when-decoding-dhcp-subnet-ensure-it-is-4-bytes-long.patch"/>
                 <file src="patches/cherry-pick.1_30_0-110-gbb3a9531b.ip-fix-ip-o-link.patch"/>
+                <file src="patches/cherry-pick.1_31_0-92-gd3539be8f0.remove-stime-function-calls.patch"/>
+                <file src="patches/cherry-pick.1_32_0-26-g1a5d6fcbb.hwclock-fix-settimeofday-for-glibc-v2.31.patch"/>
                 <file src="patches/u-mount-FreeBSD-support.patch"/>
                 <file src="patches/swaponoff-FreeBSD-support.patch"/>
                 <file src="patches/shell-ash-export-HOME.patch"/>
