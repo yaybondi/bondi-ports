@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="ruby2.7" section="ruby">
+    <description>
+        <summary>Interpreter of object-oriented scripting language Ruby</summary>
+        <p>
+        Ruby is the interpreted scripting language for quick and easy
+        object-oriented programming. It has many features to process text
+        files and to do system management tasks (as in perl). It is simple,
+        straight-forward, and extensible.
+        </p>
+        <p>
+        In the name of this package, `2.7' indicates the Ruby library compatibility
+        version. This package currently provides the `2.7.x' branch of Ruby.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+        <dir src="/var/lib/gems"/>
+        <dir src="/var/lib/gems/2.7.0"/>
+    </contents>
+
+    <maintainer-scripts>
+        <postinst><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/irb" ]; then
+    ln -sf "irb2.7" "$BOLT_INSTALL_PREFIX/bin/irb"
+fi
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ruby" ]; then
+    ln -sf "ruby2.7" "$BOLT_INSTALL_PREFIX/bin/ruby"
+fi
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/gem" ]; then
+    ln -sf "gem2.7" "$BOLT_INSTALL_PREFIX/bin/gem"
+fi
+
+        ]]></postinst>
+
+        <postrm><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/irb" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/irb"
+fi
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ruby" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/ruby"
+fi
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/gem" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/gem"
+fi
+
+        ]]></postrm>
+    </maintainer-scripts>
+</package>

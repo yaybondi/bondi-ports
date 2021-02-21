@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libruby2.7" section="libs">
+    <description>
+        <summary>Libraries necessary to run Ruby 2.7</summary>
+        <p>
+        Ruby is the interpreted scripting language for quick and easy
+        object-oriented programming. It has many features to process text
+        files and to do system management tasks (as in perl). It is simple,
+        straight-forward, and extensible.
+        </p>
+        <p>
+        This package includes the 'libruby-2.7' library, necessary to run Ruby 2.7.
+        (API version 2.7.0)
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/lib/libruby-2.7.so.*"/>
+        <file src="${prefix}/lib/ruby/2.7.0"/>
+        <dir src="${prefix}/lib/ruby/gems"/>
+        <dir src="${prefix}/lib/ruby/gems/2.7.0"/>
+        <dir src="${prefix}/lib/ruby/gems/2.7.0/build_info"/>
+        <dir src="${prefix}/lib/ruby/gems/2.7.0/cache"/>
+        <dir src="${prefix}/lib/ruby/gems/2.7.0/doc"/>
+        <dir src="${prefix}/lib/ruby/gems/2.7.0/extensions"/>
+        <dir src="${prefix}/lib/ruby/gems/2.7.0/gems"/>
+        <dir src="${prefix}/lib/ruby/gems/2.7.0/gems/rdoc-6.0.1"/>
+        <file src="${prefix}/lib/ruby/gems/2.7.0/gems/rdoc-6.0.1/exe"/>
+        <file src="${prefix}/lib/ruby/gems/2.7.0/specifications/default"/>
+        <dir src="${prefix}/lib/ruby/vendor_ruby"/>
+        <dir src="${prefix}/lib/ruby/vendor_ruby/2.7.0"/>
+    </contents>
+</package>
