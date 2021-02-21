@@ -15,8 +15,8 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="tzdata-2021a.tar.gz" subdir="sources"
-                sha256sum="603e7853e9d3b1e5817842af8f4dc57d3ec080d4ff73f0c4b548dd8f79c3ddea"/>
+            <file src="tzdb-2021a.tar.lz" subdir="sources"
+                sha256sum="21bf125de7b0c486cb57f1ba61b39584c949b2e6cac0a03a6425435d9bff37d0"/>
         </sources>
 
         <xi:include href="rules.xml"/>
