@@ -19,8 +19,8 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="ca-certificates-20190110.tar.xz" subdir="sources"
-                sha256sum="ee4bf0f4c6398005f5b5ca4e0b87b82837ac5c3b0280a1cb3a63c47555c3a675"/>
+            <file src="ca-certificates-20210119.tar.gz" subdir="sources"
+                sha256sum="db1b35e0c5085a7f863a2f08d3e84809dc32fc333056d4c98468dd150a32273c"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="6d5a9948f9a2fe21543836be1d3acfc1e191032800c9b630fecae41841785601"/>
         </sources>
