@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release epoch="1" version="3.7" revision="5bolt1" upstream-version="1:3.7-5"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2021-02-21 22:29:34+03:00">
+        <changeset>
+            <li>Upgrade to versoin from Debian Bullseye</li>
+        </changeset>
+    </release>
     <release epoch="1" version="3.7" revision="3bolt1" upstream-version="1:3.7-3"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2019-08-08 08:29:23+02:00">

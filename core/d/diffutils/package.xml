@@ -31,14 +31,15 @@
         <sources>
             <file src="diffutils-3.7.tar.xz" subdir="sources"
                 sha256sum="b3a7a6221c3dc916085f0d205abf6b8e1ba443d4dd965118da364a1dc1cb3a26"/>
-            <file src="debian-patches-3.tar.gz" subdir="patches"
-                sha256sum="8d8cb9404ef0bc59478074241f4d9d0eeabf6ae0666a42804a1766818c2b98c8"/>
+            <file src="debian-patches-5.tar.gz" subdir="patches"
+                sha256sum="79c584d6bf8ca6562ffd2c14d73bff27b26de6ac6dcdebd9c500e0e159e3803f"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/01-fix-race-condition-in-colors-test.patch"/>
                 <file src="patches/02-disable-colors-test.patch"/>
+                <file src="patches/03-translations.patch"/>
             </patchset>
         </patches>
 
