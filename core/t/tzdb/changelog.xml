@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="2021a" revision="1bolt1" upstream-version="2021a-1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2021-02-21 17:24:13+03:00">
+        <changeset>
+            <li>Upgrade to versoin 2021a.</li>
+        </changeset>
+    </release>
     <release version="2019b" revision="1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2019-08-07 00:00:03+02:00">
