@@ -16,7 +16,7 @@
 
         <sources>
             <file src="tzdata-2021a.tar.gz" subdir="sources"
-                sha256sum="39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08"/>
+                sha256sum="603e7853e9d3b1e5817842af8f4dc57d3ec080d4ff73f0c4b548dd8f79c3ddea"/>
         </sources>
 
         <xi:include href="rules.xml"/>
