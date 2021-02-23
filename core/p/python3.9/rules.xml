@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+cd "$BOLT_SOURCE_DIR"
+
+# HACK: avoid getting a multiarch/platform mismatch
+sed -i 's/^MULTIARCH=.*/MULTIARCH=""/g' configure.ac
+
+autoreconf -vfi
+
+# this is necesary for ffi lib loading to work
+if [ "$BOLT_BUILD_FOR" = "tools" ]; then
+    sed -i 's@paths = \["/usr/local/lib", "/usr/lib"\]@paths = ["/tools/local/lib", "/tools/lib"]@' \
+        Lib/ctypes/util.py
+fi
+
+cd "$BOLT_BUILD_DIR"
+$BOLT_SOURCE_DIR/configure \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --build="$BOLT_HOST_TYPE" \
+    --host="$BOLT_HOST_TYPE" \
+    --enable-shared \
+    --enable-ipv6 \
+    --enable-loadable-sqlite-extensions \
+    --with-computed-gotos \
+    --without-ensurepip \
+    --with-system-expat \
+    --with-system-ffi \
+    --with-system-libmpdec \
+    --with-dbmliborder=bdb:gdbm
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make -j"$BOLT_PARALLEL_JOBS"
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+for ENTRY in all libpython3.9-dev python3.9-venv; do
+    mkdir -p "$BOLT_INSTALL_DIR/$ENTRY"
+done
+
+FULL_INSTALL="$BOLT_INSTALL_DIR/all"
+
+cd "$BOLT_BUILD_DIR"
+make DESTDIR="$FULL_INSTALL" install
+
+rm -f  "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/"*idle*
+rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.9/idlelib"
+rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.9/turtledemo"
+
+PYTHON3_CONFIG_DIR=$(
+    echo "$FULL_INSTALL/$BOLT_INSTALL_PREFIX"/lib/python3.9/config-3.9m-*
+)
+
+cp "$BOLT_SOURCE_DIR/Tools/i18n/pygettext.py" \
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/pygettext3.9"
+mv "$PYTHON3_CONFIG_DIR/libpython3.9m.a" \
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib"
+ln -sf ../../libpython3.9m.a \
+    "$PYTHON3_CONFIG_DIR/libpython3.9m.a"
+ln -sf ../../libpython3.9m.so \
+    "$PYTHON3_CONFIG_DIR/libpython3.9m.so"
+ln -sf libpython3.9m.so.1.0 \
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/libpython3.9m.so.1"
+ln -sf ../lib/python3.9/pdb.py \
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/pdb3.9"
+
+cd "$FULL_INSTALL"
+find . -type d -a \( -name "test" -o -name "tests" \) -prune -exec rm -fr '{}' ';'
+
+# -------------------------------------------------------------------------
+PKG_PATH="$BOLT_INSTALL_DIR/libpython3.9-dev"
+# -------------------------------------------------------------------------
+
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.9"
+
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX"/bin/python3.9*-config \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/include" \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/pkgconfig" \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.9"/config-3.9* \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.9/"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/"libpython3.9*.a \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/"libpython3.9*.so \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/"
+
+# -------------------------------------------------------------------------
+PKG_PATH="$BOLT_INSTALL_DIR/python3.9-venv"
+# -------------------------------------------------------------------------
+
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.9"
+
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/"bin/pyvenv-* \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
+mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.9/ensurepip" \
+    "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/python3.9"
+
+    ]]>
+    </install>
+</rules>

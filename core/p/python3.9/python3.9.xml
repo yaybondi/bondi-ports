@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python3.9" section="python">
+    <description>
+        <summary>Interactive high-level object-oriented language (version 3.9)</summary>
+        <p>
+        Python is a high-level, interactive, object-oriented language. Its 3.9 version
+        includes an extensive class library with lots of goodies for
+        network programming, system administration, sounds and graphics.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libpython3.9" version="=="/>
+        <package name="libpython3.9-stdlib" version="=="/>
+    </requires>
+
+    <provides>
+        <package name="python3-all"/>
+        <package name="python3"/>
+    </provides>
+
+    <conflicts>
+        <package name="python3-all"/>
+        <package name="python3"/>
+    </conflicts>
+
+    <contents subdir="all">
+        <dir src="${prefix}/lib/python3"/>
+        <dir src="${prefix}/lib/python3.9"/>
+        <dir src="${prefix}/lib/python3.9/lib-dynload"/>
+        <dir src="${prefix}/lib/python3/dist-packages"/>
+        <file src="${prefix}/bin/2to3-3.9"/>
+        <file src="${prefix}/bin/pdb3.9"/>
+        <file src="${prefix}/bin/pydoc3.9"/>
+        <file src="${prefix}/bin/pygettext3.9"/>
+        <file src="${prefix}/bin/python3.9*"/>
+    </contents>
+
+    <maintainer-scripts>
+        <postinst><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/python3" ]; then
+    ln -sf "python3.9" "$BOLT_INSTALL_PREFIX/bin/python3"
+fi
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/python" ]; then
+    ln -sf "python3.9" "$BOLT_INSTALL_PREFIX/bin/python"
+fi
+
+        ]]></postinst>
+
+        <postrm><![CDATA[
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/python3" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/python3"
+fi
+
+if [ ! -e "$BOLT_INSTALL_PREFIX/bin/python" ]; then
+    rm -f "$BOLT_INSTALL_PREFIX/bin/python"
+fi
+
+        ]]></postrm>
+    </maintainer-scripts>
+</package>

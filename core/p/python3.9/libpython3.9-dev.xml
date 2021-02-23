@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libpython3.9-dev" section="libdevel">
+    <description>
+        <summary>Header files and a static library for Python (v3.9)</summary>
+        <p>
+        Header files, a static library and development tools for building
+        Python (v3.9) modules, extending the Python interpreter or embedding
+        Python (v3.9) in applications.
+        </p>
+        <p>
+        Maintainers of Python packages should read README.maintainers.
+        </p>
+        <p>
+        This package contains development files. It is normally not
+        used on it's own, but as a dependency of python3.9-dev.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libpython3.9-stdlib" version="=="/>
+        <package name="libpython3.9" version="=="/>
+        <package name="libexpat1-dev"/>
+    </requires>
+
+    <provides>
+        <package name="libpython3-dev"/>
+    </provides>
+
+    <contents subdir="libpython3.9-dev">
+        <file src="/"/>
+    </contents>
+</package>

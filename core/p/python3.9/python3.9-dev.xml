@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python3.9-dev" section="python">
+    <description>
+        <summary>Header files and a static library for Python (v3.9)</summary>
+        <p>
+        Header files, a static library and development tools for building
+        Python (v3.9) modules, extending the Python interpreter or embedding
+        Python (v3.9) in applications.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python3.9" version="=="/>
+        <package name="libpython3.9-dev" version="=="/>
+        <package name="libexpat1-dev"/>
+    </requires>
+
+    <provides>
+        <package name="python3-dev"/>
+    </provides>
+</package>
