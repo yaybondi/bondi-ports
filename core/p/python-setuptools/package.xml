@@ -17,10 +17,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="python-setuptools-40.8.0.tar.xz" subdir="sources"
-                sha256sum="b0525dea743dd9a34c3523b5bd75ed6ef0763d389f96e7df448904169d8ce772"/>
+            <file src="python-setuptools-44.1.1.tar.xz" subdir="sources"
+                sha256sum="8a7020e5a5009a267d201c0a7a39be7c0226775f0b81524d2c427b07babfa6ae"/>
             <file src="debian-patches-1.tar.gz" subdir="patches"
-                sha256sum="4e6a3137e74b802d81dae00e3a7facc39967f37c4d62124c3bce9b42b6bb024f"/>
+                sha256sum="c62ff3fce5050986f20def4108971d1dd875459e1457f799b15a0f6bd348de0b"/>
         </sources>
 
         <patches>
@@ -37,15 +37,12 @@
         </patches>
 
         <requires>
-            <package name="python2.7"/>
             <package name="python3.7"/>
         </requires>
 
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="python-pkg-resources.xml"/>
-    <xi:include href="python-setuptools.xml"/>
     <xi:include href="python3-pkg-resources.xml"/>
     <xi:include href="python3-setuptools.xml"/>
 
