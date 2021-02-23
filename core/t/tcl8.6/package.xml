@@ -12,20 +12,15 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="tcl8.6-8.6.9+dfsg.tar.gz" subdir="sources"
-                sha256sum="e0a220012a61fd4bd07e0e6b3391a8884c16608b37a00f22726614d721c50659"/>
-            <file src="debian-patches-2.tar.gz" subdir="patches"
-                sha256sum="a4c52478a8de5bce283f1abf13f0cc335522c54accf1a4a7bb179054ef97a5d4"/>
+            <file src="tcl8.6-8.6.11+dfsg.tar.gz" subdir="sources"
+                sha256sum="10bb25d492f19acb5d00bb24069b0fadd78abad1d5294e5dde141af9fc0693ce"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="ca716318f7e31816c094e611f4bdacf5642cdbfed2dcb8765a0cdc810ddc2897"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/tcllibrary.diff"/>
-                <file src="patches/tclpackagepath.diff"/>
                 <file src="patches/tclprivate.diff"/>
-                <file src="patches/confsearch.diff"/>
-                <file src="patches/non-linux.diff"/>
-                <file src="patches/manpages.diff"/>
             </patchset>
         </patches>
 
