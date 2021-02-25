@@ -23,8 +23,8 @@
         <sources>
             <file src="autoconf-2.69.tar.xz" subdir="sources"
                 sha256sum="64ebcec9f8ac5b2487125a86a7760d2591ac9e1d3dbd59489633f9de62a57684"/>
-            <file src="debian-patches-11.tar.gz" subdir="patches"
-                sha256sum="3dbf8fcd55ce4d52cd9ecca07afb08e561bce5728fb8376ed45ea937d58433b2"/>
+            <file src="debian-patches-14.tar.gz" subdir="patches"
+                sha256sum="546f7bd3b2e3cdc8b40a47ec6235da309bd56d559440afde04a720037b8a3b81"/>
         </sources>
 
         <patches>
@@ -37,6 +37,7 @@
                 <file src="patches/add-runstatedir.patch"/>
                 <file src="patches/unescaped-left-brace-warning-fix.patch"/>
                 <file src="patches/mmap-leak-fix.patch"/>
+                <file src="patches/remove-build-date-from-autoconf.texi-clo.patch"/>
             </patchset>
         </patches>
 
