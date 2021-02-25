@@ -18,26 +18,25 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="libxslt-1.1.32.tar.gz" subdir="sources"
-                sha256sum="526ecd0abaf4a7789041622c3950c0e7f2c4c8835471515fd77eec684a355460"/>
-            <file src="debian-patches-2.tar.gz" subdir="patches"
-                sha256sum="9770cabdf01fdf452aa5417330766a3fe82e6a669ca4206bf2a24cb37f6bcac7"/>
+            <file src="libxslt-1.1.34.tar.gz" subdir="sources"
+                sha256sum="98b1bd46d6792925ad2dfe9a87452ea2adebf69dcb9919ffd55bf926a7f93f7f"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="df0efb0971c059da450785ab7d5c28da32efe191d769c3ef6056bf22bdfebf2f"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/0001-patch-xslt-config-to-add-private-libraries.patch"/>
-                <file src="patches/0002-fix-autoconf-automake.patch"/>
-                <file src="patches/0003-fix-typo.patch"/>
-                <file src="patches/0004-Make-generate-id-deterministic.patch"/>
-                <file src="patches/0005-remove-plugin-in-xslt-config.patch"/>
+                <file src="patches/0001-fix-autoconf-automake.patch"/>
+                <file src="patches/0002-Make-generate-id-deterministic.patch"/>
+                <file src="patches/0003-remove-plugin-in-xslt-config.patch"/>
+                <file src="patches/0004-do-not-clean-manpage.patch"/>
+                <file src="patches/0005-Drop-libdir-and-static-linking-information-from-xslt.patch"/>
             </patchset>
         </patches>
 
         <requires>
             <package name="binutils"/>
             <package name="libgcrypt20-dev"/>
-            <package name="python2-dev"/>
             <package name="libxml2-dev"/>
             <package name="perl"/>
         </requires>
@@ -48,7 +47,6 @@
     <xi:include href="libxslt1.1.xml"/>
     <xi:include href="libxslt1-dev.xml"/>
     <xi:include href="xsltproc.xml"/>
-    <xi:include href="python-libxslt1.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>
