@@ -15,38 +15,19 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="file-5.35.tar.xz" subdir="sources"
-                sha256sum="60b5b8bc762d35452c7995f3db7e8a5e2004d736b8763f086585a5b1af57a632"/>
-            <file src="debian-patches-4.tar.gz" subdir="patches"
-                sha256sum="59dae661f97b2e7acc854d290fcfc0105bd6dc60a6ab50e05f5ecc95365a2a2a"/>
+            <file src="file-5.39.tar.gz" subdir="sources"
+                sha256sum="f05d286a76d9556243d0cb05814929c2ecf3a5ba07963f8f70bfaaa70517fad1"/>
+            <file src="debian-patches-3.tar.gz" subdir="patches"
+                sha256sum="13b71ccaced584abd3f43b5092bca90fca035e9ece037027d42369f8816e5cd5"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/cherry-pick.FILE5_35-1-g338cc788.-c-cast.patch"/>
-                <file src="patches/cherry-pick.FILE5_35-2-g8d68fb4f.lint-fixes.patch"/>
-                <file src="patches/cherry-pick.FILE5_35-3-gc7d910ee.more-lint-fixes.patch"/>
-                <file src="patches/cherry-pick.FILE5_35-6-g2b6f3fbc.if-we-are-asked-to-print-annotations-and-there-are-no-annotations-in.patch"/>
-                <file src="patches/cherry-pick.FILE5_35-8-g42d9a8a3.need-to-pass-found-match-from-match-mget-match-so-that-the-use-case.patch"/>
-                <file src="patches/cherry-pick.FILE5_35-16-g6d90cbff.avoid-over-trimming-ucs16-text-and-ending-up-losing-the-last-character.patch"/>
-                <file src="patches/cherry-pick.FILE5_35-25-g48052fcf.fix-cut-n-pasto-for-regex-max-vsevolod-stakhov.patch"/>
-                <file src="patches/cherry-pick.FILE5_35-26-g98f29456.fix-name.patch"/>
-                <file src="patches/cherry-pick.FILE5_35-31-g2858eaf9.avoid-oob-read-found-by-asan-reported-by-f.patch"/>
-                <file src="patches/cherry-pick.FILE5_35-42-ge6bf546d.fix-documentation-to-match-the-source.patch"/>
-                <file src="patches/cherry-pick.FILE5_35-49-g3a6f62e2.fix-indirect-offset-overflow-calculation-b.patch"/>
-                <file src="patches/cherry-pick.FILE5_35-52-g94b7501f.pr-62-spinpx-avoid-non-nul-terminated-string-read.patch"/>
-                <file src="patches/cherry-pick.FILE5_35-53-gd6578152.pr-62-spinpx-limit-size-of-file-printable.patch"/>
-                <file src="patches/cherry-pick.FILE5_35-55-g642f269e.mention-that-the-apple-filetype-creator-is-only-available-for-entries-that.patch"/>
-                <file src="patches/cherry-pick.FILE5_35-56-gf0a26da7.pr-61-tmc-add-ucs-32-built-in-detection.patch"/>
-                <file src="patches/cherry-pick.FILE5_35-59-g8305d1cc.use-c-casts-everywhere.patch"/>
-                <file src="patches/cherry-pick.FILE5_36-1-gecca6e54.fix-casts-and-bounds-check-found-by-oss-fuzz.patch"/>
-                <file src="patches/cherry-pick.FILE5_36-24-g9b2f9d6a.cast-to-unsigned-first-to-appease-ubsan-oss-fuzz.patch"/>
-                <file src="patches/cherry-pick.FILE5_36-32-g479e0995.pr-69-only-consider-arrays-1-element-when-quickly-figuring-out-if-a.patch"/>
+                <file src="patches/cherry-pick.FILE5_39-9-g85b7ab83.include-alternate-format-to-the-list-of-uninteresting-formats.patch"/>
+                <file src="patches/upstream.disable.att3b.patch"/>
                 <file src="patches/local.support-local-definitions-in-etc-magic.patch"/>
                 <file src="patches/local.don-t-include-libs-in-build.patch"/>
                 <file src="patches/local.mention-posixly-correct-dependent-behaviour-in-usage-message.patch"/>
-                <file src="patches/local.report-gz-as-application-gzip.patch"/>
-                <file src="patches/local.disable-detection-of-vax-coff-executables.patch"/>
                 <file src="patches/local.disable-algol68-detection.patch"/>
                 <!--
                 <file src="patches/local.extra-magic.patch"/>
@@ -57,8 +38,6 @@
 
         <requires>
             <package name="zlib1g-dev"/>
-            <package name="python2-dev"/>
-            <package name="python-setuptools"/>
             <package name="python3-dev"/>
             <package name="python3-setuptools"/>
         </requires>
