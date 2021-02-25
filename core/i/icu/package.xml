@@ -12,10 +12,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="icu-63.1.tar.xz" subdir="sources"
-                sha256sum="347d0e6c39c3538b812c10c6c83815d4a089d578380387ae7d94c5b820948e82"/>
+            <file src="icu-67.1.tar.gz" subdir="sources"
+                sha256sum="94a80cd6f251a53bd2a997f6f1b5ac6653fe791dfab66e1eb0227740fb86d5dc"/>
             <file src="debian-patches-6.tar.gz" subdir="patches"
-                sha256sum="d0995cb030374333e77d2abd30c77a9623f34a507ec16c588e0c983b6b14a972"/>
+                sha256sum="df3e7731cb83c07b13e38d984bf85e7148087c05e332a711630f05778cdc7bd4"/>
         </sources>
 
         <patches>
@@ -25,8 +25,7 @@
                 <file src="patches/icuinfo-man.patch"/>
                 <file src="patches/hurd-fix.diff"/>
                 <file src="patches/layout-test-fix.patch"/>
-                <file src="patches/ICU-20246_Fixing_another_integer_overflow_in_number_parsing.patch"/>
-                <file src="patches/ICU-20208_uspoof.cpp_function_checkImpl_should_be_static.patch"/>
+                <file src="patches/ICU-13786_Fix_addLikelySubtags_minimizeSubtags.patch"/>
             </patchset>
         </patches>
 
@@ -37,7 +36,7 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="libicu63.xml"/>
+    <xi:include href="libicu67.xml"/>
     <xi:include href="libicu-dev.xml"/>
     <xi:include href="icu-devtools.xml"/>
 

@@ -10,7 +10,7 @@
     </description>
 
     <requires>
-        <package name="libicu63" version="=="/>
+        <package name="libicu67" version="=="/>
         <package name="icu-devtools" version=">=="/>
     </requires>
 
