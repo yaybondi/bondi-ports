@@ -2,7 +2,7 @@
     <files license="BSD">
         <file src="*"/>
         <copyright-notice><![CDATA[
-Copyright 1998-2007 Ajuba Solutions and other parties
+1998-2007 Ajuba Solutions and other parties
         ]]></copyright-notice>
     </files>
     <files license="BSD">
@@ -141,14 +141,11 @@ Hold harmless the author, and any lawful use is allowed.
 1991-1993 RSA Laboratories, a division of RSA Data Security, Inc.
         ]]></copyright-notice>
     </files>
-    <files license="PD">
+    <files license="unknown">
         <file src="modules/base32/*"/>
         <copyright-notice><![CDATA[
 Public domain
         ]]></copyright-notice>
-        <license><![CDATA[
-These files are in the public domain.
-        ]]></license>
     </files>
     <files license="BSD">
         <file src="modules/base64/*"/>

@@ -16,10 +16,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="tcllib-1.19-dfsg.tar.xz" subdir="sources"
-                sha256sum="bea20af4336144d6d1d65853eb05ad2333396e254fa36cf154424562a280ff3a"/>
-            <file src="debian-patches-2.tar.gz" subdir="patches"
-                sha256sum="686aa3831943f0e1fad6cfbe664424014629507fcb4643af8507ab80eea0cbb9"/>
+            <file src="tcllib-1.20+dfsg.tar.xz" subdir="sources"
+                sha256sum="a46878b419c162e80476bb57a171c847522e2528267f35e4370ac48ba683072d"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="0bfbad0a2a8b51492e95bc70670d561437eff984c2e2e4620b74ef979a4467eb"/>
         </sources>
 
         <patches>
