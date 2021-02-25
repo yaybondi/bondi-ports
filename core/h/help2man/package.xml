@@ -21,12 +21,12 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="help2man-1.47.8.tar.xz" subdir="sources"
-                sha256sum="528f6a81ad34cbc76aa7dce5a82f8b3d2078ef065271ab81fda033842018a8dc"/>
+            <file src="help2man-1.48.1.tar.xz" subdir="sources"
+                sha256sum="de8a74740bd058646567b92ab4ecdeb9da9f1a07cc7c4f607a3c14dd38d10799"/>
         </sources>
 
         <requires>
-            <package name="perl" version=">= 5.8.0-7"/>
+            <package name="perl"/>
         </requires>
 
         <xi:include href="rules.xml"/>
