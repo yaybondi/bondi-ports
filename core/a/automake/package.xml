@@ -22,16 +22,16 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="automake-1.16-1.16.1.tar.xz" subdir="sources"
-                sha256sum="5d05bb38a23fd3312b10aea93840feec685bdf4a41146e78882848165d3ae921"/>
-            <file src="debian-patches-4.tar.gz" subdir="patches"
-                sha256sum="54c1181120add24a8a949b85441c2f23422da30a71a02be9c735746249580d89"/>
+            <file src="automake-1.16-1.16.3.tar.xz" subdir="sources"
+                sha256sum="ff2bf7656c4d1c6fdda3b8bebb21f09153a736bcba169aaf65eab25fa113bf3a"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="ebd7fb028cdef05d0b91ee42cbde45ec86b39d0b5ba781228798845fd1fc6ea3"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/0001-texi-rename.patch"/>
-                <file src="patches/0006-Drop-SHELL.patch"/>
+                <file src="patches/0002-Drop-SHELL.patch"/>
             </patchset>
         </patches>
 
