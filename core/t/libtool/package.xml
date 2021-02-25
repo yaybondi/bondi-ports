@@ -25,8 +25,8 @@
         <sources>
             <file src="libtool-2.4.6.tar.xz" subdir="sources"
                 sha256sum="7c87a8c2c8c0fc9cd5019e402bed4292462d00a718a7cd5f11218153bf28b26f"/>
-            <file src="debian-patches-9.tar.gz" subdir="patches"
-                sha256sum="9ff465754a8084e52b5af11fb0ac36d93ec75c82f1dc9a51c684e374ee724ca4"/>
+            <file src="debian-patches-15.tar.gz" subdir="patches"
+                sha256sum="ab927db5830d29ecad559f2f9fe9684a8f2bc5bbeb5d0c607195f2936ae1259f"/>
         </sources>
 
         <patches>
@@ -50,7 +50,18 @@
                 <file src="patches/version_string.patch"/>
                 <file src="patches/grep-spaces.patch"/>
                 <file src="patches/libtool-eval-nm.patch"/>
+                <file src="patches/libtool-2.4.6-am-1.16-test.patch"/>
                 <file src="patches/0025-libtool-pass-use-ld.patch"/>
+                <file src="patches/0030-flang-support.patch"/>
+                <file src="patches/0035-ac-prereq.patch"/>
+                <file src="patches/0040-unsafe-eval.patch"/>
+                <file src="patches/0050-documentation.patch"/>
+                <file src="patches/0055-pass-flags-unchanged.patch"/>
+                <file src="patches/0060-ar.patch"/>
+                <file src="patches/0065-autoconf-version.patch"/>
+                <file src="patches/0070-libtool-bigsur.patch"/>
+                <file src="patches/0075-remove-dates-from-docs.patch"/>
+                <file src="patches/0080-struct-names.patch"/>
             </patchset>
         </patches>
 
