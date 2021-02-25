@@ -18,8 +18,8 @@
         <sources>
             <file src="libunistring-0.9.10.tar.xz" subdir="sources"
                 sha256sum="eb8fb2c3e4b6e2d336608377050892b54c3c983b646c561836550863003c05d7"/>
-            <file src="debian-patches-1.tar.gz" subdir="patches"
-                sha256sum="28114ab297d6fbcb7fe99da53c2c548be993425ab83ed5221052627365dbe484"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="d7df7ac8b7d62ecdad57cfb022fc445723bde0d3501848f8b208c3e95c0539bf"/>
         </sources>
 
         <patches>
@@ -28,6 +28,7 @@
                 <!--
                 <file src="patches/0700-multiarch-libc.patch"/>
                 -->
+                <file src="patches/0705-gcc-9.patch"/>
             </patchset>
         </patches>
 
