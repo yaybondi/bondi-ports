@@ -15,32 +15,6 @@ autoreconf -vfi
 
 export ICU_CONFIG="$BOLT_INSTALL_PREFIX/bin/icu-config"
 
-if [ -e "/tools/bin/python2" ]; then
-    export PYTHON="/tools/bin/python2"
-else
-    export PYTHON="/usr/bin/python2"
-fi
-
-cp -a "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/python2"
-cd "$BOLT_BUILD_DIR/python2"
-
-./configure \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
-    --disable-silent-rules \
-    --with-history \
-    --with-icu \
-    --with-python="$BOLT_INSTALL_PREFIX/bin/python2"
-
-# HACK: this fixes a problem with lib path detection
-if [ "$BOLT_INSTALL_PREFIX" != "/tools" ]; then
-    find . -name "Makefile" -exec sed -i 's@-L/tools/lib@-L/usr/lib@g' '{}' ';'
-fi
-
-make PYTHON_INCLUDES="-I=$BOLT_INSTALL_PREFIX/include/python2.7" \
-    -j"$BOLT_PARALLEL_JOBS"
-
 if [ -e "/tools/bin/python3" ]; then
     export PYTHON="/tools/bin/python3"
 else
@@ -64,7 +38,7 @@ if [ "$BOLT_INSTALL_PREFIX" != "/tools" ]; then
     find . -name "Makefile" -exec sed -i 's@-L/tools/lib@-L/usr/lib@g' '{}' ';'
 fi
 
-make PYTHON_INCLUDES="-I=$BOLT_INSTALL_PREFIX/include/python3.7m" \
+make PYTHON_INCLUDES="-I=$BOLT_INSTALL_PREFIX/include/python3.9m" \
     -j"$BOLT_PARALLEL_JOBS"
 
     ]]>
@@ -72,12 +46,6 @@ make PYTHON_INCLUDES="-I=$BOLT_INSTALL_PREFIX/include/python3.7m" \
 
     <install>
     <![CDATA[
-
-cd "$BOLT_BUILD_DIR/python2"
-make DESTDIR="$BOLT_INSTALL_DIR" install
-cd "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python2"*
-find . -name "*.py" -exec \
-    python2 -c "import py_compile; py_compile.compile('{}')" \;
 
 cd "$BOLT_BUILD_DIR/python3"
 make DESTDIR="$BOLT_INSTALL_DIR" install

@@ -2,7 +2,7 @@
     <files license="MIT-1">
         <file src="*"/>
         <copyright-notice><![CDATA[
-1998-2012 Daniel Veillard <daniel@veillard.com>
+1998-2017 Daniel Veillard <daniel@veillard.com>
         ]]></copyright-notice>
     </files>
     <files license="ISC">
@@ -31,6 +31,14 @@
         <copyright-notice><![CDATA[
 2000 Gary Pennington <Gary.Pennington@uk.sun.com>
 2000 Daniel Veillard <daniel@veillard.com>
+        ]]></copyright-notice>
+    </files>
+    <files license="MIT-1">
+        <file src="timsort.h"/>
+        <copyright-notice><![CDATA[
+2010-2017 Christopher Swenson
+2012 Vojtech Fried
+2012 Google Inc.
         ]]></copyright-notice>
     </files>
     <license handle="MIT-1"><![CDATA[
