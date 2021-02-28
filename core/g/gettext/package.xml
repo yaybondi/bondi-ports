@@ -12,23 +12,18 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="gettext-0.19.8.1.tar.xz" subdir="sources"
-                sha256sum="105556dbc5c3fbbc2aa0edb46d22d055748b6f5c7cd7a8d99f8e7eb84e938be4"/>
-            <file src="debian-patches-9.tar.gz" subdir="patches"
-                sha256sum="1a0bdc665f2581a8f0fd55f8436c5d0e005af98419384803efa47500b092aabd"/>
+            <file src="gettext-0.21.tar.xz" subdir="sources"
+                sha256sum="d20fcbb537e02dcf1383197ba05bd0734ef7bf5db06bdb241eb69b7d16b73192"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="8fb49aaf14fdb206a1f21b630f9648e26210011f5dc299501bceee0764d60b2e"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/01-do-not-use-java-in-urlget.patch"/>
-                <file src="patches/02-msgfmt-remove-pot-creation-date.patch"/>
-                <file src="patches/03-avoid-extraneous-nul-bytes.patch"/>
-                <file src="patches/04-fix-msgunfmt-heap-corruption.patch"/>
-                <file src="patches/05-fix-crash-xgettext-with-its.patch"/>
-                <file src="patches/06-java9-support.patch"/>
-                <file src="patches/07-java11-support.patch"/>
-                <file src="patches/08-java-future-support.patch"/>
-                <file src="patches/09-fix-crash-with-po-file-input.patch"/>
+                <file src="patches/01-use-system-help2man.patch"/>
+                <file src="patches/02-library-dependencies.patch"/>
+                <file src="patches/03-disable-libtextstyle.patch"/>
+                <file src="patches/04-fix-powerpc-ftbfs.patch"/>
             </patchset>
         </patches>
 
