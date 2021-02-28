@@ -20,33 +20,31 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="glib2.0-2.58.3.tar.xz" subdir="sources"
-                sha256sum="8f43c31767e88a25da72b52a40f3301fefc49a665b56dc10ee7cc9565cbe7481"/>
-            <file src="debian-patches-2.tar.gz" subdir="patches"
-                sha256sum="f741bb3802ad8351695e8970c982f01554f941ee86149f27a32da4303ec6b82a"/>
+            <file src="glib2.0-2.66.7.tar.xz" subdir="sources"
+                sha256sum="09f158769f6f26b31074e15b1ac80ec39b13b53102dfae66cfe826fb2cc65502"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="e025733792beae3d0a9963dea6551e2c25967a2844cdf9c40edda168f1979524"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/gdbusmessage-Fix-check-on-upper-limit-of-message-size.patch"/>
-                <file src="patches/mainloop-test-Fix-race-conditions.patch"/>
-                <file src="patches/closures-test-Avoid-timeout-on-ARM64-CPUs.patch"/>
-                <file src="patches/gfile-Limit-access-to-files-when-copying.patch"/>
+                <file src="patches/glib-tests-fileutils-Make-more-use-of-g_assert_no_errno.patch"/>
+                <file src="patches/glib-tests-fileutils-Fix-expectations-when-running-as-roo.patch"/>
                 <file src="patches/01_gettext-desktopfiles.patch"/>
-                <file src="patches/81-skip-monitor-test-on-non-linux.patch"/>
                 <file src="patches/0001-timer-test-use-volatile-for-locals.patch"/>
                 <file src="patches/gwakeuptest-Be-less-parallel-unless-invoked-with-m-slow.patch"/>
                 <file src="patches/debian/02_gettext-desktopfiles-ubuntu.patch"/>
                 <file src="patches/debian/03_disble_glib_compile_schemas_warning.patch"/>
-                <file src="patches/debian/04_homedir_env.patch"/>
                 <file src="patches/debian/06_thread_test_ignore_prctl_fail.patch"/>
-                <file src="patches/debian/61_glib-compile-binaries-path.patch"/>
-                <file src="patches/debian/90_gio-modules-multiarch-compat.patch"/>
-                <file src="patches/debian/Look-for-gio-launch-desktop-in-libdir-glib-2.0.patch"/>
                 <file src="patches/debian/closures-test-Skip-on-arm-unless-flaky-tests-are-allowed.patch"/>
                 <file src="patches/debian/Disable-some-tests-on-slow-architectures-which-keep-faili.patch"/>
                 <file src="patches/debian/Skip-test-which-performs-some-unreliable-floating-point-c.patch"/>
-                <file src="patches/debian/Skip-unreliable-test_threaded_singleton-by-default.patch"/>
+                <file src="patches/debian/Skip-unreliable-gdbus-threading-tests--by-default.patch"/>
+                <file src="patches/debian/gmenumodel-test-Mark-as-flaky.patch"/>
+                <file src="patches/debian/gvariant-test-Don-t-run-at-build-time-on-mips.patch"/>
+                <file src="patches/debian/taptestrunner-Stop-looking-like-an-executable-script.patch"/>
+                <file src="patches/debian/testfilemonitor-Skip-if-we-are-avoiding-flaky-tests.patch"/>
+                <file src="patches/debian/gdbus-server-auth-Normally-skip-flaky-DBUS_COOKIE_SHA1-te.patch"/>
             </patchset>
         </patches>
 
