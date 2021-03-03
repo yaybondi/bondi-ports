@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="meson" repo="core" architecture-independent="true">
+        <description>
+            <summary>high-productivity build system</summary>
+            <p>
+            Meson is a build system designed to increase programmer
+            productivity. It does this by providing a fast, simple and easy to
+            use interface for modern software development tools and practices.
+            </p>
+        </description>
+
+        <xi:include href="copyright.xml"/>
+
+        <sources>
+            <file src="meson-0.56.2.tar.gz" subdir="sources"
+                sha256sum="3cb8bdb91383f7f8da642f916e4c44066a29262caa499341e2880f010edb87f4"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="556728c997052b1735325d68921badec2b46cc023191b4e3ac0a2fd2d6afd5cb"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/1-disable-openmpi.patch"/>
+                <file src="patches/2-disable-rootdir-test.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="python3"/>
+            <package name="python3-setuptools"/>
+            <package name="python3-dev"/>
+            <package name="ninja-build"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="meson.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
