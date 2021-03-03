@@ -10,8 +10,8 @@
     </description>
 
     <requires>
-        <package name="python3:any" version=">= 3.7~"/>
-        <package name="ninja-build" version=">= 1.6"/>
+        <package name="python3"/>
+        <package name="ninja-build"/>
         <package name="python3-pkg-resources"/>
     </requires>
 
