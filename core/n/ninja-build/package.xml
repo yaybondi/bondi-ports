@@ -4,8 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="ninja-build" repo="contrib"
-            architecture-independent="false">
+    <source name="ninja-build" repo="core" architecture-independent="false">
         <description>
             <summary>small build system closest in spirit to Make</summary>
             <p>
