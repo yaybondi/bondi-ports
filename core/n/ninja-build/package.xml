@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="ninja-build" repo="contrib"
+            architecture-independent="false">
+        <description>
+            <summary>small build system closest in spirit to Make</summary>
+            <p>
+            Ninja is yet another build system. It takes as input the interdependencies of
+            files (typically source code and output executables) and orchestrates
+            building them, quickly.
+            </p>
+            <p>
+            Ninja joins a sea of other build systems. Its distinguishing goal is to be
+            fast. It is born from the Chromium browser project, which has over 30,000
+            source files and whose other build systems can take ten seconds to start
+            building after changing one file. Ninja is under a second.
+            </p>
+        </description>
+
+        <xi:include href="copyright.xml"/>
+
+        <sources>
+            <file src="ninja-build-1.10.1.tar.gz" subdir="sources"
+                sha256sum="a6b6f7ac360d4aabd54e299cc1d8fa7b234cd81b9401693da21221c62569a23e"/>
+        </sources>
+
+        <requires>
+            <package name="python3"/>
+            <package name="re2c"/>
+            <package name="xsltproc"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="ninja-build.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
