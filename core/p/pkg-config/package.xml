@@ -17,15 +17,15 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="pkg-config-0.29.tar.gz" subdir="sources"
-                sha256sum="c8507705d2a10c67f385d66ca2aae31e81770cc0734b4191eb8c489e864a006b"/>
-            <file src="pkg-config-0.29-6.debdiff.gz" subdir="patches"
-                sha256sum="c06146d878fb7faa4ac3edb5e45188b184cc650a752384d5c1053f41edf590bc"/>
+            <file src="pkg-config-0.29.2.tar.gz" subdir="sources"
+                sha256sum="6fc69c01688c9458a57eb9a1664c9aba372ccda420a02bf4429fe610e7e7d591"/>
+            <file src="pkg-config-0.29.2-1.debdiff.gz" subdir="patches"
+                sha256sum="6ecdd3463718e8922b53fca8d2fd37db4ba178f078b5e3ccd38c1a6efffb94ad"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/pkg-config-0.29-6.debdiff"/>
+                <file src="patches/pkg-config-0.29.2-1.debdiff"/>
             </patchset>
         </patches>
 
