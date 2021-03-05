@@ -22,7 +22,6 @@
         <file src="${prefix}/bin/gdbus"/>
         <file src="${prefix}/bin/gio"/>
         <file src="${prefix}/bin/gio-querymodules"/>
-        <file src="${prefix}/bin/glib-compile-resources"/>
         <file src="${prefix}/bin/glib-compile-schemas"/>
         <file src="${prefix}/bin/gresource"/>
         <file src="${prefix}/bin/gsettings"/>

@@ -23,6 +23,7 @@
 
     <contents>
         <file src="${prefix}/bin/gdbus-codegen"/>
+        <file src="${prefix}/bin/glib-compile-resources"/>
         <file src="${prefix}/bin/glib-genmarshal"/>
         <file src="${prefix}/bin/glib-gettextize"/>
         <file src="${prefix}/bin/glib-mkenums"/>
@@ -45,7 +46,6 @@
         <file src="${prefix}/lib/pkgconfig"/>
         <file src="${prefix}/share/aclocal"/>
         <file src="${prefix}/share/glib-2.0/codegen"/>
-        <file src="${prefix}/share/glib-2.0/gettext/po"/>
         <file src="${prefix}/share/glib-2.0/schemas"/>
     </contents>
 </package>
