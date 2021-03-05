@@ -19,14 +19,20 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="python-py-1.7.0.tar.gz" subdir="sources"
-                sha256sum="bf92637198836372b520efcba9e020c330123be8ce527e535d185ed4b6f45694"/>
+            <file src="python-py-1.10.0.tar.gz" subdir="sources"
+                sha256sum="21b81bda15b66ef5e1a777a21c4dcd9c20ad3efd0b3f817e7a809035269e1bd3"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="4f130d2c7d7fe9f11b359fc8de57232a271c301fc5e182436c6aaecfdbf59520"/>
         </sources>
 
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/fix-pytest4.patch"/>
+            </patchset>
+        </patches>
+
         <requires>
-            <package name="python-all"/>
             <package name="python3-all"/>
-            <package name="python-setuptools"/>
             <package name="python3-setuptools"/>
         </requires>
 
@@ -34,7 +40,6 @@
     </source>
 
     <xi:include href="python3-py.xml"/>
-    <xi:include href="python-py.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>
