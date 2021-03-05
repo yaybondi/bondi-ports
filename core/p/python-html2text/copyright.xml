@@ -3,7 +3,7 @@
         <file src="*"/>
         <copyright-notice><![CDATA[
 2004-2012, Aaron Swartz
-2014-2018, Alireza Savand <alireza.savand@gmail.com>
+2014-2020, Alireza Savand <alireza.savand@gmail.com>
 2011,      Yariv Barkan
 2012,      Alex Musayev
 2013-2014, Matěj Cepl
@@ -26,6 +26,10 @@
 2017,      Jonathan Sundqvist <sundqvist.jonathan@gmail.com>
 2017,      Simon Meers <simon@simonmeers.com>
 2017-2018, Kurt McKee <contactme@kurtmckee.org>
+2019,      Germain Z. <gh: GermainZ>
+2019,      Jacek Kołodziej <kolodziejj@gmail.com>
+2019,      Jonathan Vanasco <jonathan@findmeon.com>
+2019,      Jon Dufresne <jon.dufresne@gmail.com>
         ]]></copyright-notice>
         <license><![CDATA[
 html2text is available under the GNU GPL 3.0.

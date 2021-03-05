@@ -21,13 +21,11 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="python-html2text-2018.1.9.tar.gz" subdir="sources"
-                sha256sum="627514fb30e7566b37be6900df26c2c78a030cc9e6211bda604d8181233bcdd4"/>
+            <file src="python-html2text-2020.1.16.tar.gz" subdir="sources"
+                sha256sum="e296318e16b059ddb97f7a8a1d6a5c1d7af4544049a01e261731d2d5cc277bbb"/>
         </sources>
 
         <requires>
-            <package name="python-all"/>
-            <package name="python-setuptools"/>
             <package name="python3-all"/>
             <package name="python3-setuptools"/>
         </requires>
@@ -35,7 +33,6 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="python-html2text.xml"/>
     <xi:include href="python3-html2text.xml"/>
 
     <xi:include href="changelog.xml"/>

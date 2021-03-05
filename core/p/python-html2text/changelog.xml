@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="2020.1.16" revision="1bolt1" upstream-version="2020.1.16-1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2021-03-05 23:03:46+03:00">
+        <changeset>
+            <li>Upgrade to version from Debian Bullseye</li>
+        </changeset>
+    </release>
     <release version="2018.1.9" revision="1bolt1" upstream-version="2018.1.9-1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2019-08-12 21:59:53+02:00">

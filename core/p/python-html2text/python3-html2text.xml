@@ -18,6 +18,7 @@
     </requires>
 
     <contents subdir="python3" collect-py-cache-files="true">
+        <file src="${prefix}/bin/html2markdown"/>
         <file src="${prefix}/bin/html2markdown.py3"/>
         <file src="${prefix}/lib/python3/dist-packages"/>
     </contents>
