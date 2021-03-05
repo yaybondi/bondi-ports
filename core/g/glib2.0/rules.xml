@@ -3,29 +3,29 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
-bh_autotools_dev_update
-
-NOCONFIGURE="1" ./autogen.sh
-
 export LDFLAGS="$LDFLAGS -Wl,-z,defs -Wl,--no-as-needed -Wl,-O1"
-export LIBFFI_CFLAGS="-I$BOLT_INSTALL_PREFIX/include"
-export LIBFFI_LIBS="-lffi"
-export PCRE_CFLAGS="-I$BOLT_INSTALL_PREFIX/include"
-export PCRE_LIBS="-lpcre"
 
 cd "$BOLT_BUILD_DIR"
-"$BOLT_SOURCE_DIR/configure" \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
-    --with-pcre=system \
-    --with-python="$BOLT_INSTALL_PREFIX/bin/python3" \
-    --disable-gtk-doc \
-    --enable-static \
-    --enable-debug=minimum \
-    --disable-libmount \
-    --disable-silent-rules \
+
+cat << EOF > build.ini
+[constants]
+arch = '$BOLT_HOST_TYPE'
+
+[binaries]
+c = arch + '-gcc'
+cpp = arch + '-g++'
+strip = arch + '-strip'
+ld = arch + '-ld'
+ar = arch + '-ar'
+objcopy = arch + '-objcopy'
+pkgconfig = arch + '-pkg-config'
+EOF
+
+meson setup \
+    --prefix=/tools \
+    --buildtype=debugoptimized \
+    --native-file=tools.ini \
+    _build
 
     ]]>
     </prepare>
@@ -34,7 +34,7 @@ cd "$BOLT_BUILD_DIR"
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+ninja -C _build
 
     ]]>
     </build>
@@ -43,7 +43,7 @@ make -j"$BOLT_PARALLEL_JOBS"
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+DESTDIR="$BOLT_INSTALL_DIR" ninja -C _build install
 
     ]]>
     </install>

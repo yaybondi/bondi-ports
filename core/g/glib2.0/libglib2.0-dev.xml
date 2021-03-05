@@ -17,7 +17,7 @@
     <requires>
         <package name="libglib2.0-0" version="=="/>
         <package name="libglib2.0-bin" version="=="/>
-        <package name="libpcre3-dev" version=">= 1:8.31"/>
+        <package name="libpcre3-dev"/>
         <package name="zlib1g-dev"/>
     </requires>
 
