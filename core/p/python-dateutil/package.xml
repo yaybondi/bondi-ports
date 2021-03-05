@@ -26,10 +26,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="python-dateutil-2.7.3.tar.gz" subdir="sources"
-                sha256sum="e27001de32f627c22380a688bcc43ce83504a7bc5da472209b4c70f02829f0b8"/>
-            <file src="debian-patches-3.tar.gz" subdir="patches"
-                sha256sum="ab6de5a3d222284715adc2fbef0d2367510e368b043100a60b272d30f5a19f7e"/>
+            <file src="python-dateutil-2.8.1.tar.gz" subdir="sources"
+                sha256sum="73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"/>
+            <file src="debian-patches-5.tar.gz" subdir="patches"
+                sha256sum="abcb48fce4e7b7eb499569a63a675e9a761a94513639237f1311b716bee06f35"/>
         </sources>
 
         <patches>
@@ -42,15 +42,11 @@
             <package name="python3"/>
             <package name="python3-setuptools"/>
             <package name="python3-six"/>
-            <package name="python-all" version=">= 2.6.6-3~"/>
-            <package name="python-setuptools"/>
-            <package name="python-six"/>
         </requires>
 
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="python-dateutil.xml"/>
     <xi:include href="python3-dateutil.xml"/>
 
     <xi:include href="changelog.xml"/>
