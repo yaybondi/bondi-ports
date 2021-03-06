@@ -27,10 +27,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="cython-0.29.2.tar.gz" subdir="sources"
-                sha256sum="2ac187ff998a95abb7fae452b5178f91e1a713698c9ced89836c94e6b1d3f41e"/>
-            <file src="debian-patches-2.tar.gz" subdir="patches"
-                sha256sum="30f45f57c3a0cb31f179328c78efb2396778cfcd41db9c53def276d332495dab"/>
+            <file src="cython-0.29.21.tar.xz" subdir="sources"
+                sha256sum="7720c76e5398afe6c653461e00507207c048693d916fc2552523ddb7f2aa36b3"/>
+            <file src="debian-patches-3.tar.gz" subdir="patches"
+                sha256sum="90866b5393a280949fbe4f4622fb7a28685c607b9da6e8dbab285bb333088d7e"/>
         </sources>
 
         <patches>
@@ -45,7 +45,6 @@
 
         <requires>
             <package name="help2man"/>
-            <package name="python2-dev"/>
             <package name="python3-dev"/>
         </requires>
 

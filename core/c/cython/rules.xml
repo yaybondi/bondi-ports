@@ -12,8 +12,6 @@ true
     <![CDATA[
 
 cd "$BOLT_SOURCE_DIR"
-
-bh_python_install --py2 --build
 bh_python_install --py3 --build
 
     ]]>
@@ -23,11 +21,7 @@ bh_python_install --py3 --build
     <![CDATA[
 
 cd "$BOLT_SOURCE_DIR"
-
-install -d -m 0755 "$BOLT_INSTALL_DIR/python2"
 install -d -m 0755 "$BOLT_INSTALL_DIR/python3"
-
-bh_python_install --py2 --install --root "$BOLT_INSTALL_DIR/python2"
 bh_python_install --py3 --install --root "$BOLT_INSTALL_DIR/python3"
 
 cd "$BOLT_INSTALL_DIR"
@@ -35,6 +29,8 @@ cd "$BOLT_INSTALL_DIR"
 for prog in cygdb cython cythonize; do
     mv "$BOLT_INSTALL_DIR/python3/$BOLT_INSTALL_PREFIX/bin/$prog" \
         "$BOLT_INSTALL_DIR/python3/$BOLT_INSTALL_PREFIX/bin/${prog}3"
+    ln -sf "${prog}3" \
+        "$BOLT_INSTALL_DIR/python3/$BOLT_INSTALL_PREFIX/bin/$prog"
 done
 
     ]]>
