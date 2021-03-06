@@ -51,7 +51,6 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="cython.xml"/>
     <xi:include href="cython3.xml"/>
 
     <xi:include href="changelog.xml"/>
