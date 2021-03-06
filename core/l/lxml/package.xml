@@ -28,26 +28,22 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="lxml-4.3.2.tar.gz" subdir="sources"
-                sha256sum="3a9d8521c89bf6f2a929c3d12ad3ad7392c774c327ea809fd08a13be6b3bc05f"/>
+            <file src="lxml-4.6.2.tar.gz" subdir="sources"
+                sha256sum="cd11c7e8d21af997ee8079037fff88f16fda188a9776eb4b81c7e4c9c0a7d7fc"/>
         </sources>
 
         <requires>
-            <package name="python2-dev"/>
             <package name="python3-dev"/>
             <package name="libxml2-dev"/>
             <package name="libxslt1-dev"/>
             <package name="zlib1g-dev"/>
-            <package name="python-setuptools"/>
             <package name="python3-setuptools"/>
-            <package name="cython"/>
             <package name="cython3"/>
         </requires>
 
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="python-lxml.xml"/>
     <xi:include href="python3-lxml.xml"/>
 
     <xi:include href="changelog.xml"/>
