@@ -28,10 +28,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="curl-7.64.0.tar.gz" subdir="sources"
-                sha256sum="cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5"/>
-            <file src="debian-patches-4.tar.gz" subdir="patches"
-                sha256sum="958ae891e3a103ea0ac0ac06f7b6973db40df8a20f278764afe0e71ecc0194ab"/>
+            <file src="curl-7.74.0.tar.gz" subdir="sources"
+                sha256sum="e56b3921eeb7a2951959c02db0912b5fcd5fdba5aca071da819e1accf338bbd7"/>
+            <file src="debian-patches-1.1.tar.gz" subdir="patches"
+                sha256sum="77dd001ac66ebdbbb9eac1c27351e56f16d44933300f06a1613ff223b5c52cd6"/>
         </sources>
 
         <patches>
@@ -41,12 +41,8 @@
                 <file src="patches/07_do-not-disable-debug-symbols.patch"/>
                 <file src="patches/08_enable-zsh.patch"/>
                 <file src="patches/11_omit-directories-from-config.patch"/>
-                <file src="patches/12_zsh.patch"/>
-                <file src="patches/13_singlesocket-fix-the-sincebefore-placement.patch"/>
-                <file src="patches/14_connection_check-set-data-to-the-transfer-doing-the-.patch"/>
-                <file src="patches/15_connection_check-restore-original-conn-data-after-th.patch"/>
-                <file src="patches/16_tftp-use-the-current-blksize-for-recvfrom.patch"/>
-                <file src="patches/17_CURL_MAX_INPUT_LENGTH-largest-acceptable-string-inpu.patch"/>
+                <file src="patches/12_use-python3-in-tests.patch"/>
+                <file src="patches/13_fix-man-formatting.patch"/>
                 <!--
                 <file src="patches/90_gnutls.patch"/>
                 <file src="patches/99_nss.patch"/>

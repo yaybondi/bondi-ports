@@ -6,10 +6,10 @@
         ]]></copyright-notice>
     </files>
     <files license="curl">
-        <file src="lib/vtls/darwinssl.*"/>
+        <file src="lib/vtls/sectransp.*"/>
         <copyright-notice><![CDATA[
 2012-2014, Nick Zitzmann <nickzman@gmail.com>
-2012-2015, Daniel Stenberg <daniel@haxx.se>
+2012-2019, Daniel Stenberg <daniel@haxx.se>
         ]]></copyright-notice>
     </files>
     <files license="curl">
@@ -35,7 +35,6 @@
     </files>
     <files license="BSD-3-Clause">
         <file src="lib/krb5.c"/>
-        <file src="lib/security.c"/>
         <copyright-notice><![CDATA[
 2004-2015 Daniel Stenberg
 1995-1999 Kungliga Tekniska Högskolan
@@ -55,10 +54,10 @@
         ]]></copyright-notice>
     </files>
     <files license="curl">
-        <file src="lib/vtls/polarssl.*"/>
+        <file src="lib/vtls/mbedtls.*"/>
         <copyright-notice><![CDATA[
 2010-2011, Hoi-Ho Chan <hoiho.chan@gmail.com>
-2012-2015, Daniel Stenberg <daniel@haxx.se>
+2012-2020, Daniel Stenberg <daniel@haxx.se>
         ]]></copyright-notice>
     </files>
     <files license="curl">
@@ -179,7 +178,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 Permission is granted to anyone to use this software for any purpose on any
 computer system, and to redistribute it freely, subject to the following
 restrictions:
-            
+
 - The author is not responsible for the consequences of use of this software,
   no matter how awful, even if they arise from defects in it.
 - The origin of this software must not be misrepresented, either by explicit
