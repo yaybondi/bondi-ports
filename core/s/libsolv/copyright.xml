@@ -82,7 +82,6 @@
         <file src="src/repo_solv.h"/>
         <file src="src/repo_write.c"/>
         <file src="src/repo_write.h"/>
-        <file src="src/repodata.c"/>
         <file src="src/repodata.h"/>
         <file src="src/repopack.h"/>
         <file src="src/repopage.c"/>
@@ -114,10 +113,8 @@
         <file src="tools/comps2solv.c"/>
         <file src="tools/deb2solv.c"/>
         <file src="tools/deltainfoxml2solv.c"/>
-        <file src="tools/diskusagexml2solv.c"/>
         <file src="tools/dumpsolv.c"/>
         <file src="tools/helix2solv.c"/>
-        <file src="tools/mdk2solv.c"/>
         <file src="tools/mergesolv.c"/>
         <file src="tools/repomdxml2solv.c"/>
         <file src="tools/rpmdb2solv.c"/>
@@ -163,6 +160,27 @@
         ]]></copyright-notice>
     </files>
     <files license="BSD-3-clause">
+        <file src="ext/repo_conda.h"/>
+        <file src="ext/repo_testcase.c"/>
+        <file src="ext/solv_jsonparser.c"/>
+        <file src="ext/solv_jsonparser.h"/>
+        <file src="src/conda.c"/>
+        <file src="src/conda.h"/>
+        <file src="src/diskusage.c"/>
+        <file src="src/filelistfilter.c"/>
+        <file src="src/fileprovides.c"/>
+        <file src="src/order.c"/>
+        <file src="tools/conda2solv.c"/>
+        <copyright-notice><![CDATA[
+2007-2015, SUSE LLC
+2007-2016, SUSE LLC
+2009-2015, SUSE LLC
+2016, SUSE LLC
+2018, SUSE LLC
+2019, SUSE LLC
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-3-clause">
         <file src="ext/pool_parserpmrichdep.c"/>
         <file src="ext/pool_parserpmrichdep.h"/>
         <file src="ext/repo_autopattern.c"/>
@@ -171,7 +189,6 @@
         <file src="ext/repo_rpmdb_bdb.h"/>
         <file src="ext/repo_rpmdb_librpm.h"/>
         <file src="ext/repodata_diskusage.h"/>
-        <file src="ext/solv_pgpvrfy.c"/>
         <file src="ext/solv_pgpvrfy.h"/>
         <file src="src/linkedpkg.c"/>
         <copyright-notice><![CDATA[
@@ -186,11 +203,12 @@
     </files>
     <files license="BSD-3-clause">
         <file src="examples/solv/solv.c"/>
+        <file src="ext/repo_conda.c"/>
+        <file src="ext/solv_ed25519.h"/>
+        <file src="ext/solv_pgpvrfy.c"/>
         <file src="ext/solv_zchunk.c"/>
         <file src="ext/solv_zchunk.h"/>
-        <file src="src/diskusage.c"/>
-        <file src="src/fileprovides.c"/>
-        <file src="src/order.c"/>
+        <file src="src/repodata.c"/>
         <file src="src/suse.c"/>
         <file src="src/transaction.c"/>
         <file src="src/userinstalled.c"/>
@@ -200,9 +218,21 @@
 2007-2015, SUSE LLC
 2007-2016, SUSE LLC
 2009-2015, SUSE LLC
+2013-2020, SUSE LLC.
 2016, SUSE LLC
 2017, SUSE LLC
 2018, SUSE LLC
+2019, SUSE LLC
+2020, SUSE LLC
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-clause">
+        <file src="win32/regcomp.c"/>
+        <file src="win32/regexec.c"/>
+        <file src="win32/tre-mem.c"/>
+        <file src="win32/tre.h"/>
+        <copyright-notice><![CDATA[
+2001-2009, Ville Laurikari <vl@iki.fi>
         ]]></copyright-notice>
     </files>
     <files license="BSD-3-clause">
@@ -232,6 +262,12 @@
         ]]></copyright-notice>
     </files>
     <files license="BSD-3-clause">
+        <file src="tools/mdk2solv.c"/>
+        <copyright-notice><![CDATA[
+2012, Novell Inc.
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-3-clause">
         <file src="cmake/modules/FindPackageHandleStandardArgs.cmake"/>
         <file src="cmake/modules/FindRuby.cmake"/>
         <file src="cmake/modules/_CMakeParseArguments.cmake"/>
@@ -251,10 +287,10 @@
         ]]></copyright-notice>
     </files>
     <files license="BSD-3-clause">
+        <file src=".appveyor.yml"/>
         <file src=".emacs-dirvars"/>
         <file src=".gitignore"/>
         <file src=".travis.yml"/>
-        <file src="BUGS"/>
         <file src="CMakeLists.txt"/>
         <file src="CREDITS"/>
         <file src="INSTALL"/>
@@ -385,7 +421,17 @@
         <file src="src/CMakeLists.txt"/>
         <file src="src/libsolv.ver"/>
         <file src="test/CMakeLists.txt"/>
-        <file src="test/runtestcases"/>
+        <file src="test/runtestcases.bat"/>
+        <file src="test/runtestcases.sh"/>
+        <file src="test/testcases/allowuninstall/conflict.t"/>
+        <file src="test/testcases/allowuninstall/forcebest.t"/>
+        <file src="test/testcases/blacklist/ptf.t"/>
+        <file src="test/testcases/blacklist/retracted.t"/>
+        <file src="test/testcases/allowuninstall/conflict.t"/>
+        <file src="test/testcases/allowuninstall/forcebest.t"/>
+        <file src="test/testcases/choicerules/choice2.t"/>
+        <file src="test/testcases/choicerules/choice3.t"/>
+        <file src="test/testcases/choicerules/choice4.t"/>
         <file src="test/testcases/choose/default.t"/>
         <file src="test/testcases/choose/enhanced.t"/>
         <file src="test/testcases/choose/oldversion.t"/>
@@ -395,6 +441,7 @@
         <file src="test/testcases/cleandeps/cleandeps_dup.t"/>
         <file src="test/testcases/cleandeps/cleandeps_in.t"/>
         <file src="test/testcases/cleandeps/cleandeps_up.t"/>
+        <file src="test/testcases/cleandeps/cleandeps_up3.t"/>
         <file src="test/testcases/cleandeps/mistake.t"/>
         <file src="test/testcases/cplxdeps/and.t"/>
         <file src="test/testcases/cplxdeps/andor.t"/>
@@ -410,11 +457,14 @@
         <file src="test/testcases/distupgrade/dup_orphan1.t"/>
         <file src="test/testcases/distupgrade/dup_orphan2.t"/>
         <file src="test/testcases/distupgrade/dup_orphan3.t"/>
+        <file src="test/testcases/evrcmp/caret.t"/>
         <file src="test/testcases/evrcmp/conflicts.repo"/>
         <file src="test/testcases/evrcmp/system.repo"/>
         <file src="test/testcases/evrcmp/testevr.t"/>
         <file src="test/testcases/favor/recommends.t"/>
+        <file src="test/testcases/favor/recommends2.t"/>
         <file src="test/testcases/favor/requires.t"/>
+        <file src="test/testcases/favor/single.t"/>
         <file src="test/testcases/favor/supplements.t"/>
         <file src="test/testcases/focus/best.t"/>
         <file src="test/testcases/focus/installed.t"/>
@@ -422,6 +472,9 @@
         <file src="test/testcases/forcebest/forcebest_dup.t"/>
         <file src="test/testcases/forcebest/forcebest_in.t"/>
         <file src="test/testcases/forcebest/forcebest_up.t"/>
+        <file src="test/testcases/lock/best.t"/>
+        <file src="test/testcases/lock/dup.t"/>
+        <file src="test/testcases/lockstep/infarch_install_best.t"/>
         <file src="test/testcases/lockstep/lockstep_install.t"/>
         <file src="test/testcases/lockstep/lockstep_update.t"/>
         <file src="test/testcases/multiversion/multiversion.t"/>
@@ -443,20 +496,38 @@
         <file src="test/testcases/selection/selection_canon_rpm.t"/>
         <file src="test/testcases/selection/selection_filelist.t"/>
         <file src="test/testcases/selection/selection_matchdeps.t"/>
+        <file src="test/testcases/selection/selection_matchsolvable.t"/>
         <file src="test/testcases/selection/selection_name.t"/>
         <file src="test/testcases/selection/selection_provides.t"/>
         <file src="test/testcases/strongrecommends/break.t"/>
+        <file src="test/testcases/strongrecommends/disfavored.t"/>
         <file src="test/testcases/strongrecommends/strongr.t"/>
         <file src="test/testcases/targeted/targeted_dup.t"/>
         <file src="test/testcases/targeted/targeted_up.t"/>
         <file src="test/testcases/testcase/nested.t"/>
         <file src="test/testcases/testcase/str2dep.t"/>
         <file src="test/testcases/weakdeps/supplements_implicitobsoleteusescolors.t"/>
+        <file src="test/testcases/whatprovideswithdisabled/dup.t"/>
+        <file src="test/testcases/whatprovideswithdisabled/dup2.t"/>
+        <file src="test/testcases/whatprovideswithdisabled/forcebest_in.t"/>
+        <file src="test/testcases/whatprovideswithdisabled/forcebest_up.t"/>
         <file src="test/testcases/yumobs/split.t"/>
         <file src="tools/CMakeLists.txt"/>
         <file src="tools/cudftest.c"/>
         <file src="tools/findfileconflicts.c"/>
         <file src="tools/testsolv.c"/>
+        <file src="win32/CMakeLists.txt"/>
+        <file src="win32/config.h"/>
+        <file src="win32/fmemopen.c"/>
+        <file src="win32/fnmatch.c"/>
+        <file src="win32/fnmatch.h"/>
+        <file src="win32/getopt.c"/>
+        <file src="win32/getopt.h"/>
+        <file src="win32/regerror.c"/>
+        <file src="win32/regex.h"/>
+        <file src="win32/strfncs.c"/>
+        <file src="win32/strfncs.h"/>
+        <file src="win32/unistd.h"/>
         <copyright-notice><![CDATA[
 *No copyright*
         ]]></copyright-notice>
@@ -504,6 +575,30 @@ The primary goals are portability and ease of use.
 This implementation is meant to be fast, but not as fast as possible.
 Some known optimizations are not included to reduce source code size
 and avoid compile-time configuration.
+    ]]></license>
+    <license handle="BSD-2-clause"><![CDATA[
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+  1. Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+
+  2. Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     ]]></license>
     <license handle="public-domain~sha1"><![CDATA[
 Extracted from src/sha1.c's changelog in the file header:
