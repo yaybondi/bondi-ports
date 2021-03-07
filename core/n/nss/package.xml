@@ -14,15 +14,14 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="nss-3.42.1.tar.gz" subdir="sources"
-                sha256sum="087db37d38fd49dfd584dd2a8b5baa7fc88de7c9bd97c0c2d5be4abcafc61fc6"/>
+            <file src="nss-3.61.tar.gz" subdir="sources"
+                sha256sum="312e2d804b34ccf0fec70b57cf8cd6ac853f8ced60df53e30ebb0a7bcd0e1370"/>
             <file src="debian-patches-1.tar.gz" subdir="patches"
-                sha256sum="40d0d43e1df94b6d27095f823a0f36eb0ad76cafe4630ff460bca2927e43e7e0"/>
+                sha256sum="088f6a9defefccc5406e0af9010a0d8f8a27aec8ca460d327fcdf66c319fd05d"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <!-- Debian -->
                 <file src="patches/38_hurd.patch"/>
                 <file src="patches/80_security_tools.patch"/>
                 <file src="patches/85_security_load.patch"/>
