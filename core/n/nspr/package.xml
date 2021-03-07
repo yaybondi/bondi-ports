@@ -24,8 +24,8 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="nspr-4.20.tar.gz" subdir="sources"
-                sha256sum="2c8964913da89ffbaf464d49ce44d79e8804e1794ef9a8c52a7bff7224d1556e"/>
+            <file src="nspr-4.29.tar.gz" subdir="sources"
+                sha256sum="22286bdb8059d74632cc7c2865c139e63953ecfb33bf4362ab58827e86e92582"/>
         </sources>
 
         <requires>
