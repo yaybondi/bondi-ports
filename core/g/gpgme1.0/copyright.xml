@@ -29,9 +29,6 @@ Werner Koch
     </files>
     <files license="LGPL-2.1+">
         <file src="lang/python/*"/>
-        <file src="lang/python/*/*"/>
-        <file src="lang/python/src/constants/*"/>
-        <file src="lang/python/src/constants/*/*"/>
         <copyright-notice><![CDATA[
 2002 John Goerzen,
 2004-2008 Igor Belyi,
@@ -42,8 +39,6 @@ Werner Koch
     </files>
     <files license="LGPL-2+">
         <file src="lang/cpp/*"/>
-        <file src="lang/cpp/src/*"/>
-        <file src="lang/cpp/src/interfaces/*"/>
         <copyright-notice><![CDATA[
 2003-2005, 2007-2010, 2016 Klarälvdalens Datakonsult AB,
 2016 Intevation GmbH,
@@ -51,7 +46,6 @@ Werner Koch
     </files>
     <files license="GPL-2+">
         <file src="lang/qt/*"/>
-        <file src="lang/qt/*/*"/>
         <copyright-notice><![CDATA[
 2004, 2005, 2007-2010, 2016 Klarälvdalens Datakonsult AB,
 2016 Intevation GmbH

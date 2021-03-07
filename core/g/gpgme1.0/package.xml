@@ -20,19 +20,18 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="gpgme1.0-1.12.0.tar.bz2" subdir="sources"
-                sha256sum="b4dc951c3743a60e2e120a77892e9e864fb936b2e58e7c77e8581f4d050e8cd8"/>
-            <file src="debian-patches-6.tar.gz" subdir="patches"
-                sha256sum="d623d6ee43223cae7c0637764cb401960bae74bea98693608a12ccd7d0ac72b3"/>
+            <file src="gpgme1.0-1.14.0.tar.bz2" subdir="sources"
+                sha256sum="cef1f710a6b0d28f5b44242713ad373702d1466dcbe512eb4e754d7f35cd4307"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="9840d049ac7e7206c1930d604bdd8e22cf5ef151263a2cf090625c9f879b8a31"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/0001-avoid-identifying-as-beta.patch"/>
-                <file src="patches/0002-python-do-not-export-HAVE_CXX11-definition.patch"/>
-                <file src="patches/0003-python-Auto-check-for-all-installed-python-versions.patch"/>
-                <file src="patches/0004-Avoid-Y2038-problem-on-32-bit-architectures.patch"/>
-                <file src="patches/0005-qt-Use-tofu-conflict-test-keys-without-expiry.patch"/>
+                <file src="patches/0004-drop-python2-support.patch"/>
+                <file src="patches/0006-gpg-Send-with-keygrip-when-listing-keys.patch"/>
+                <file src="patches/0007-use-FULL_PATH_NAMES-NO-for-reproducible-doxygen-docu.patch"/>
             </patchset>
         </patches>
 
