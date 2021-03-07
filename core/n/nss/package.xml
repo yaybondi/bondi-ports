@@ -17,7 +17,7 @@
             <file src="nss-3.61.tar.gz" subdir="sources"
                 sha256sum="312e2d804b34ccf0fec70b57cf8cd6ac853f8ced60df53e30ebb0a7bcd0e1370"/>
             <file src="debian-patches-1.tar.gz" subdir="patches"
-                sha256sum="088f6a9defefccc5406e0af9010a0d8f8a27aec8ca460d327fcdf66c319fd05d"/>
+                sha256sum="179b274f7d1d0a99dac5de1bb08c4ea3a86c8791e088fd3380eca08907397c73"/>
         </sources>
 
         <patches>
