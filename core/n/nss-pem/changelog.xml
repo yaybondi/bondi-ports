@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.0.7" revision="0"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2021-03-07 18:41:00+02:00">
+        <changeset>
+            <li>Upgrade to latest upstream release.</li>
+        </changeset>
+    </release>
     <release version="1.0.5" revision="0"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2019-09-11 12:14:00+02:00">
