@@ -20,7 +20,7 @@ patch -f -p1 -d "$BOLT_BUILD_DIR/nss"    -i "$BOLT_WORK_DIR/patches/"??_nss.patc
 # rebuild configuration
 for t in openssl gnutls nss
 do
-    cd "$BOLT_BUILD_DIR/$t" && ./buildconf
+    cd "$BOLT_BUILD_DIR/$t" && autoreconf -fi
     # HACK: We cannot safely use LD_LIBRARY_PATH inside bbox.
     sed -i 's@export LD_LIBRARY_PATH@@g' configure
 done
