@@ -17,7 +17,7 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="bolt-distro-tools-1.1.5.4.tar.gz" subdir="sources"
+            <file src="distro-tools-1.1.5.4.tar.gz" subdir="sources"
                 sha256sum="2267dc2c1abb002c050d2d8de52874cbb900f3dcbc9c5757e131c9e5040f7742"/>
         </sources>
 
