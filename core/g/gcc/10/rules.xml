@@ -95,9 +95,9 @@ make -j"$BOLT_PARALLEL_JOBS"
 
 GCC_VERSION="`cat $BOLT_SOURCE_DIR/gcc/BASE-VER`"
 
-for ENTRY in all cpp-8 fixincludes g++-8 gcc-8 gcc-8-base libatomic1 libcc1-0 \
-        libgcc libgcc-dev libgomp1 libitm1 libstdc++6 libstdc++-8-dev \
-        gcc-8-plugin-dev; do
+for ENTRY in all cpp-10 fixincludes g++-10 gcc-10 gcc-10-base libatomic1 libcc1-0 \
+        libgcc libgcc-dev libgomp1 libitm1 libstdc++6 libstdc++-10-dev \
+        gcc-10-plugin-dev; do
     install -d -m 0755 "$BOLT_INSTALL_DIR/$ENTRY"
 done
 
@@ -164,7 +164,7 @@ if [ "$BOLT_BUILD_FOR" = "cross-tools" -a -d "$FULL_INSTALL/$BOLT_INSTALL_PREFIX
 fi
 
 # -------------------------------------------------------------------------
-PKG_PATH="$BOLT_INSTALL_DIR/cpp-8"
+PKG_PATH="$BOLT_INSTALL_DIR/cpp-10"
 # -------------------------------------------------------------------------
 
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
@@ -198,7 +198,7 @@ exec fixinc.sh \"\$@\"
 " > "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin/fixincludes"
 
 # -------------------------------------------------------------------------
-PKG_PATH="$BOLT_INSTALL_DIR/g++-8"
+PKG_PATH="$BOLT_INSTALL_DIR/g++-10"
 # -------------------------------------------------------------------------
 
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
@@ -212,7 +212,7 @@ mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION/cc
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION"
 
 # -------------------------------------------------------------------------
-PKG_PATH="$BOLT_INSTALL_DIR/gcc-8"
+PKG_PATH="$BOLT_INSTALL_DIR/gcc-10"
 # -------------------------------------------------------------------------
 
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
@@ -235,7 +235,7 @@ if [ "$BOLT_BUILD_FOR" != "cross-tools" ]; then
 fi
 
 # -------------------------------------------------------------------------
-PKG_PATH="$BOLT_INSTALL_DIR/gcc-8-base"
+PKG_PATH="$BOLT_INSTALL_DIR/gcc-10-base"
 # -------------------------------------------------------------------------
 
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION"
@@ -281,7 +281,7 @@ mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib/"libitm*.so.* \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib" || true
 
 # -------------------------------------------------------------------------
-PKG_PATH="$BOLT_INSTALL_DIR/libstdc++-8-dev"
+PKG_PATH="$BOLT_INSTALL_DIR/libstdc++-10-dev"
 # -------------------------------------------------------------------------
 
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/include"
@@ -305,7 +305,7 @@ if [ "$BOLT_BUILD_FOR" != "cross-tools" ]; then
 fi
 
 # -------------------------------------------------------------------------
-PKG_PATH="$BOLT_INSTALL_DIR/gcc-8-plugin-dev"
+PKG_PATH="$BOLT_INSTALL_DIR/gcc-10-plugin-dev"
 # -------------------------------------------------------------------------
 
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/lib/gcc/$BOLT_TARGET_TYPE/$GCC_VERSION"
