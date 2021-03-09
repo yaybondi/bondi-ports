@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="bolt-package" section="devel">
+    <description>
+        <summary>Bolt Linux packaging tools (meta package)</summary>
+        <p>
+        This pulls in the python3-bolt-package package, which contains the
+        bolt-pack and deb2bolt tools.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python3-bolt-package"/>
+    </requires>
+</package>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python3-bolt-repository" section="admin">
+    <description>
+        <summary>Bolt Linux repo management tools</summary>
+        <p>
+        This package contains the bolt-repo-index tool.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python3"/>
+        <package name="usign"/>
+        <package name="python3-bolt-package"/>
+    </requires>
+
+    <contents subdir="repository">
+        <file src="/"/>
+    </contents>
+</package>

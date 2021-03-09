@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="python3-bolt-package" section="devel">
+    <description>
+        <summary>Bolt Linux packaging tools</summary>
+        <p>
+        This package contains the bolt-pack and deb2bolt tools.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python3"/>
+        <package name="python3-dateutil"/>
+        <package name="python3-lxml"/>
+        <package name="python3-magic"/>
+        <package name="python3-html2text"/>
+        <package name="binutils" tools-prefix="tools-target-"/>
+        <package name="binutils" tools-prefix="tools-"/>
+        <package name="chrpath"/>
+        <package name="libarchive-dev"/>
+        <package name="autotools-dev"/>
+        <package name="patch"/>
+    </requires>
+
+    <contents subdir="package">
+        <file src="/"/>
+    </contents>
+</package>

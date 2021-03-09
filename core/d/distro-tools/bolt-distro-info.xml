@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="bolt-distro-info" section="admin">
+    <description>
+        <summary>Bolt distro info tool (meta package)</summary>
+        <p>
+        This pulls in python3-bolt-distro-info package which contains the
+        bolt-distro-info tool.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python3-bolt-distro-info"/>
+    </requires>
+</package>

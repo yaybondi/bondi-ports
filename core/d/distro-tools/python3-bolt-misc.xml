@@ -1,0 +1,16 @@
+<package name="python3-bolt-misc" section="python">
+    <description>
+        <summary>Utilities shared among other Bolt Linux Python packages</summary>
+        <p>
+        Collection of scripts shared among other Bolt Linux Python packages.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python3"/>
+    </requires>
+
+    <contents subdir="misc">
+        <file src="/"/>
+    </contents>
+</package>

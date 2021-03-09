@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="bolt-repo-index" section="admin">
+    <description>
+        <summary>Bolt Linux packaging tools (meta package)</summary>
+        <p>
+        This pulls in the python3-bolt-repository package, which contains the
+        bolt-repo-index tool.
+        </p>
+    </description>
+
+    <requires>
+        <package name="python3-bolt-repository"/>
+    </requires>
+</package>
