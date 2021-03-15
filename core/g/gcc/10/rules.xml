@@ -300,7 +300,7 @@ mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib/libsupc++"*.a \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib"
 
 if [ "$BOLT_BUILD_FOR" != "cross-tools" ]; then
-    mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/share/gcc-$GCC_VERSION/python/libstdcxx" \
+    mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/share/gcc/python/libstdcxx" \
         "$PKG_PATH/$BOLT_INSTALL_PREFIX/share/gcc/python"
 fi
 
