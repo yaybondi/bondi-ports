@@ -286,7 +286,7 @@ PKG_PATH="$BOLT_INSTALL_DIR/libstdc++-10-dev"
 
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/include"
 install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib"
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/share/gcc-$GCC_VERSION/python"
+install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/share/gcc/python"
 
 mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/include/c++" \
     "$PKG_PATH/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/include"
@@ -301,7 +301,7 @@ mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$PATH_OFFSET/lib/libsupc++"*.a \
 
 if [ "$BOLT_BUILD_FOR" != "cross-tools" ]; then
     mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/share/gcc-$GCC_VERSION/python/libstdcxx" \
-        "$PKG_PATH/$BOLT_INSTALL_PREFIX/share/gcc-$GCC_VERSION/python"
+        "$PKG_PATH/$BOLT_INSTALL_PREFIX/share/gcc/python"
 fi
 
 # -------------------------------------------------------------------------
