@@ -16,8 +16,8 @@
     </description>
 
     <requires>
-        <package name="gcc-8-base" version="=="/>
-        <package name="gcc-8" version="=="/>
+        <package name="gcc-10-base" version="=="/>
+        <package name="gcc-10" version="=="/>
     </requires>
 
     <contents subdir="fixincludes">

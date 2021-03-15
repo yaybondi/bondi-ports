@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="cpp-8" section="interpreters">
+<package name="cpp-10" section="interpreters">
     <description>
         <summary>GNU C preprocessor</summary>
         <p>
@@ -13,7 +13,7 @@
     </description>
 
     <requires>
-        <package name="gcc-8-base" version="=="
+        <package name="gcc-10-base" version="=="
             cross-tools-prefix="tools-target-"/>
     </requires>
 
@@ -21,7 +21,7 @@
         <package name="cpp" cross-tools-prefix="tools-target-"/>
     </provides>
 
-    <contents subdir="cpp-8">
+    <contents subdir="cpp-10">
         <file src="/"/>
     </contents>
 </package>

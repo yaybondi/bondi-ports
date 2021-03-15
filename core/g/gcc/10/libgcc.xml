@@ -10,7 +10,7 @@
     </description>
 
     <requires>
-        <package name="gcc-8-base" version="=="/>
+        <package name="gcc-10-base" version="=="/>
     </requires>
 
     <contents subdir="libgcc">
