@@ -18,7 +18,7 @@
 
     <requires>
         <package name="libreadline8" version="=="/>
-        <package name="libtinfo-dev"/>
+        <package name="libncurses-dev"/>
     </requires>
 
     <contents>
