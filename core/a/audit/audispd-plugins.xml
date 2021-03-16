@@ -21,10 +21,8 @@
 
         <file src="/etc/audit/audisp-remote.conf" mode="0640"/>
         <file src="/etc/audit/plugins.d/au-remote.conf" mode="0640"/>
-        <file src="/etc/audit/plugins.d/audispd-zos-remote.conf" mode="0640"/>
         <file src="/etc/audit/zos-remote.conf" mode="0640"/>
 
         <file src="${prefix}/sbin/audisp-remote"/>
-        <file src="${prefix}/sbin/audispd-zos-remote"/>
     </contents>
 </package>
