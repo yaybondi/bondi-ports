@@ -3,8 +3,10 @@
     <prepare>
     <![CDATA[
 
-# This package has no configure script.
-true
+cd "$BOLT_SOURCE_DIR"
+
+# Hack: prevent override of gettid        
+sed -i 's/#if OVERRIDE_GETTID/#if 0/g' src/procattr.c
 
     ]]>
     </prepare>
