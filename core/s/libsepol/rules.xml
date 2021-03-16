@@ -3,8 +3,11 @@
     <prepare>
     <![CDATA[
 
-# This package has no configure script.
-true
+cd "$BOLT_SOURCE_DIR"
+
+# Hack: busybox ln does not understand --relative
+sed -i 's@$(LN) -sf --relative $(DESTDIR)$(SHLIBDIR)/@$(LN) -sf @g' \
+    src/Makefile
 
     ]]>
     </prepare>
