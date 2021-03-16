@@ -13,16 +13,17 @@
     </description>
 
     <contents>
-        <file src="/etc/audisp/audispd.conf"/>
-        <file src="/etc/audisp/plugins.d/af_unix.conf"/>
-        <file src="/etc/audisp/plugins.d/syslog.conf"/>
-        <file src="/etc/audit"/>
-        <file src="${prefix}/lib/systemd/system/auditd.service"/>
-        <file src="${prefix}/bin/aulast"/>
-        <file src="${prefix}/bin/aulastlog"/>
-        <file src="${prefix}/bin/ausyscall"/>
-        <file src="${prefix}/bin/auvirt"/>
-        <file src="${prefix}/sbin/audispd"/>
+        <file src="/etc/audit/audit-stop.rules" mode="0640"/>
+        <file src="/etc/audit/auditd.conf" mode="0640"/>
+        <file src="/etc/audit/plugins.d/af_unix.conf" mode="0640"/>
+        <file src="/etc/audit/plugins.d/syslog.conf" mode="0640"/>
+        <file src="/etc/audit/rules.d"/>
+
+        <file src="/etc/default"/>
+        <file src="/etc/init.d"/>
+
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/sbin/audisp-syslog"/>
         <file src="${prefix}/sbin/auditctl"/>
         <file src="${prefix}/sbin/auditd"/>
         <file src="${prefix}/sbin/augenrules"/>
@@ -30,11 +31,9 @@
         <file src="${prefix}/sbin/ausearch"/>
         <file src="${prefix}/sbin/autrace"/>
 
-        <!-- explicit mode overrides -->
         <dir src="/etc/audit" mode="0750"/>
-        <dir src="/etc/audit/rules.d"/>
-        <dir src="/etc/audisp" mode="0750"/>
-        <dir src="/etc/audisp/plugins.d" mode="0750"/>
-        <dir src="/var/log/audit" mode="0750"/>
+        <dir src="/etc/audit/plugins.d" mode="0750"/>
+        <dir src="/etc/audit/rules.d" mode="0750"/>
+        <dir src="/var/log/audit" mode="0750" group="adm"/>
     </contents>
 </package>

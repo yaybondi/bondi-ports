@@ -15,12 +15,16 @@
     </requires>
 
     <contents>
-        <file src="/etc/audisp/audisp-remote.conf"/>
-        <file src="/etc/audisp/plugins.d/au-remote.conf"/>
-        <file src="${prefix}/sbin/audisp-remote"/>
-
         <!-- explicit mode overrides -->
-        <dir src="/etc/audisp" mode="0750"/>
-        <dir src="/etc/audisp/plugins.d" mode="0750"/>
+        <dir src="/etc/audit" mode="0750"/>
+        <dir src="/etc/audit/plugins.d" mode="0750"/>
+
+        <file src="/etc/audit/audisp-remote.conf" mode="0640"/>
+        <file src="/etc/audit/plugins.d/au-remote.conf" mode="0640"/>
+        <file src="/etc/audit/plugins.d/audispd-zos-remote.conf" mode="0640"/>
+        <file src="/etc/audit/zos-remote.conf" mode="0640"/>
+
+        <file src="${prefix}/sbin/audisp-remote"/>
+        <file src="${prefix}/sbin/audispd-zos-remote"/>
     </contents>
 </package>
