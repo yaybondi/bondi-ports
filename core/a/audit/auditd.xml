@@ -19,9 +19,6 @@
         <file src="/etc/audit/plugins.d/syslog.conf" mode="0640"/>
         <file src="/etc/audit/rules.d"/>
 
-        <file src="/etc/default"/>
-        <file src="/etc/init.d"/>
-
         <file src="${prefix}/bin"/>
         <file src="${prefix}/sbin/audisp-syslog"/>
         <file src="${prefix}/sbin/auditctl"/>
