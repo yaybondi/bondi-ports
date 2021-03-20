@@ -15,11 +15,7 @@
         </p>
     </description>
 
-    <requires>
-        <package name="libstdc++6" version=">= 5.2"/>
-    </requires>
-
     <contents>
-        <file src="/usr/bin"/>
+        <file src="${prefix}/bin"/>
     </contents>
 </package>
