@@ -6,6 +6,11 @@
 cd "$BOLT_SOURCE_DIR"
 autoreconf -vfi
 
+sed -i 's/MAWK_RAND_MAX/RAND_MAX/g' bi_funct.c
+sed -i '/#include <time.h>/a #include <sys\/time.h>/g' bi_funct.c
+
+export CFLAGS="$CFLAGS -D_GNU_SOURCE"
+
 cd "$BOLT_BUILD_DIR"
 "$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
