@@ -60,19 +60,19 @@ rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.9/idlelib"
 rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/python3.9/turtledemo"
 
 PYTHON3_CONFIG_DIR=$(
-    echo "$FULL_INSTALL/$BOLT_INSTALL_PREFIX"/lib/python3.9/config-3.9m-*
+    echo "$FULL_INSTALL/$BOLT_INSTALL_PREFIX"/lib/python3.9/config-3.9-*
 )
 
 cp "$BOLT_SOURCE_DIR/Tools/i18n/pygettext.py" \
     "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/pygettext3.9"
-mv "$PYTHON3_CONFIG_DIR/libpython3.9m.a" \
+mv "$PYTHON3_CONFIG_DIR/libpython3.9.a" \
     "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib"
-ln -sf ../../libpython3.9m.a \
-    "$PYTHON3_CONFIG_DIR/libpython3.9m.a"
-ln -sf ../../libpython3.9m.so \
-    "$PYTHON3_CONFIG_DIR/libpython3.9m.so"
-ln -sf libpython3.9m.so.1.0 \
-    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/libpython3.9m.so.1"
+ln -sf ../../libpython3.9.a \
+    "$PYTHON3_CONFIG_DIR/libpython3.9.a"
+ln -sf ../../libpython3.9.so \
+    "$PYTHON3_CONFIG_DIR/libpython3.9.so"
+ln -sf libpython3.9.so.1.0 \
+    "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/libpython3.9.so.1"
 ln -sf ../lib/python3.9/pdb.py \
     "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/pdb3.9"
 
