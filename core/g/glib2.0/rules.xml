@@ -24,7 +24,7 @@ EOF
 meson setup \
     --prefix=/tools \
     --buildtype=debugoptimized \
-    --native-file=tools.ini \
+    --native-file=build.ini \
     _build
 
     ]]>
