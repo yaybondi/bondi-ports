@@ -15,9 +15,9 @@
         <package name="python3-pkg-resources"/>
     </requires>
 
-    <contents>
-        <file src="/usr/bin"/>
-        <file src="/usr/lib/python3"/>
-        <file src="/usr/share/meson"/>
+    <contents collect-py-cache-files="true">
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/lib/python3"/>
+        <file src="${prefix}/share/meson"/>
     </contents>
 </package>
