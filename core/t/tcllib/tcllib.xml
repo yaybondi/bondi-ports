@@ -10,6 +10,6 @@
 
     <contents>
         <file src="${prefix}/bin"/>
-        <file src="${prefix}/share/tcltk/tcllib1.19"/>
+        <file src="${prefix}/share/tcltk/tcllib1.20"/>
     </contents>
 </package>
