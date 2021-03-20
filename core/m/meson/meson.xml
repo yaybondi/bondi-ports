@@ -18,6 +18,5 @@
     <contents collect-py-cache-files="true">
         <file src="${prefix}/bin"/>
         <file src="${prefix}/lib/python3"/>
-        <file src="${prefix}/share/meson"/>
     </contents>
 </package>
