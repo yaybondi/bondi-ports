@@ -49,7 +49,6 @@
     <xi:include href="libmagic1.xml"/>
     <xi:include href="libmagic-mgc.xml"/>
     <xi:include href="libmagic-dev.xml"/>
-    <xi:include href="python-magic.xml"/>
     <xi:include href="python3-magic.xml"/>
 
     <xi:include href="changelog.xml"/>
