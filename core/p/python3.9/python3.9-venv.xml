@@ -17,7 +17,6 @@
     </requires>
 
     <contents subdir="python3.9-venv">
-        <file src="${prefix}/bin/pyvenv-3.9"/>
         <file src="${prefix}/lib/python3.9/ensurepip"/>
     </contents>
 </package>
