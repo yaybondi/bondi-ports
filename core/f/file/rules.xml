@@ -30,7 +30,7 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-for ENTRY in magic python2 python3; do
+for ENTRY in magic python3; do
     install -d -m 0755 "$BOLT_INSTALL_DIR/$ENTRY"
 done
 
@@ -46,7 +46,6 @@ ln -sf ../../share/misc/magic.mgc "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/lib/file/m
 ln -sf ../../share/misc/magic.mgc "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/share/file/magic.mgc"
 
 cd python
-bh_python_install --py2 --root "$BOLT_INSTALL_DIR/python2"
 bh_python_install --py3 --root "$BOLT_INSTALL_DIR/python3"
 
     ]]>
