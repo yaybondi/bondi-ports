@@ -21,7 +21,7 @@
     </description>
 
     <contents>
-        <file src="/usr/bin"/>
-        <file src="/usr/share/re2c"/>
+        <file src="${prefix}/bin"/>
+        <file src="${prefix}/share/re2c"/>
     </contents>
 </package>
