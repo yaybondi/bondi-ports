@@ -5,6 +5,10 @@
 mawk 1.3.3 Nov 1996, Copyright (C) Michael D. Brennan
 Modifications for Debian GNU/Linux Copyright (C) 1995-96 Chris Fearnley.
 Modifications for Debian GNU/Linux Copyright (C) 1998-2003 James Troup.
+
+Further modifications up to mawk 1.3.4.20200120 is of:
+Copyright © 2009-2018,2019,2020 by Thomas E. Dickey. The source code is
+taken from https://invisible-island.net/mawk/ .
         ]]></copyright-notice>
         <license><![CDATA[
 This program is free software; you can redistribute it and/or modify
