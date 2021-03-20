@@ -19,6 +19,6 @@
 
     <contents>
         <file src="${prefix}/bin"/>
-        <file src="${prefix}/lib/help2man"/>
+        <dir src="${prefix}/lib/help2man"/>
     </contents>
 </package>
