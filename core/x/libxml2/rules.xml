@@ -38,7 +38,7 @@ if [ "$BOLT_INSTALL_PREFIX" != "/tools" ]; then
     find . -name "Makefile" -exec sed -i 's@-L/tools/lib@-L/usr/lib@g' '{}' ';'
 fi
 
-make PYTHON_INCLUDES="-I=$BOLT_INSTALL_PREFIX/include/python3.9m" \
+make PYTHON_INCLUDES="-I=$BOLT_INSTALL_PREFIX/include/python3.9" \
     -j"$BOLT_PARALLEL_JOBS"
 
     ]]>
