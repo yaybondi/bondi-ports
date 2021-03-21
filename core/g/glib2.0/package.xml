@@ -20,10 +20,13 @@
                 sha256sum="09f158769f6f26b31074e15b1ac80ec39b13b53102dfae66cfe826fb2cc65502"/>
             <file src="debian-patches-1.tar.gz" subdir="patches"
                 sha256sum="e025733792beae3d0a9963dea6551e2c25967a2844cdf9c40edda168f1979524"/>
+            <file src="bolt-patches-1.tar.gz" subdir="patches"
+                sha256sum="a510ccc79d219321043702d08af63eef2b2a008efe7c3fe819bc09dcad23cf0d"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/glib-tests-fileutils-Make-more-use-of-g_assert_no_errno.patch"/>
                 <file src="patches/glib-tests-fileutils-Fix-expectations-when-running-as-roo.patch"/>
                 <file src="patches/01_gettext-desktopfiles.patch"/>
@@ -41,6 +44,8 @@
                 <file src="patches/debian/taptestrunner-Stop-looking-like-an-executable-script.patch"/>
                 <file src="patches/debian/testfilemonitor-Skip-if-we-are-avoiding-flaky-tests.patch"/>
                 <file src="patches/debian/gdbus-server-auth-Normally-skip-flaky-DBUS_COOKIE_SHA1-te.patch"/>
+                <!-- Bolt -->
+                <file src="patches/avoid-pkg-config-checks.diff"/>
             </patchset>
         </patches>
 
