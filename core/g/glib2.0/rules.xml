@@ -22,7 +22,7 @@ pkgconfig = arch + '-pkg-config'
 EOF
 
 meson setup \
-    --prefix=/tools \
+    --prefix="$BOLT_INSTALL_PREFIX" \
     --buildtype=debugoptimized \
     --native-file=build.ini \
     _build
