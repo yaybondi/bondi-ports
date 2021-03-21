@@ -38,7 +38,6 @@
         <file src="${prefix}/share/gettext/ABOUT-NLS"/>
         <file src="${prefix}/share/gettext/config.rpath" mode="0755"/>
         <file src="${prefix}/share/gettext/gettext.h"/>
-        <file src="${prefix}/share/gettext/intl"/>
         <file src="${prefix}/share/gettext/javaversion.class"/>
         <file src="${prefix}/share/gettext/msgunfmt.tcl"/>
         <file src="${prefix}/share/gettext/po"/>
