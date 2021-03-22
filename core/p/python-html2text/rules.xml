@@ -25,7 +25,7 @@ bh_python_install --py3 --root "$BOLT_INSTALL_DIR/python3"
 
 cd "$BOLT_INSTALL_DIR"
 mv python3/$BOLT_INSTALL_PREFIX/bin/html2text python3/$BOLT_INSTALL_PREFIX/bin/html2markdown.py3
-ln -sf html2markdown.py3 python3/$BOLT_INSTALL_PREFIX/bin/html2text
+ln -sf html2markdown.py3 python3/$BOLT_INSTALL_PREFIX/bin/html2markdown
 
     ]]>
     </install>
