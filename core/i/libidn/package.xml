@@ -24,8 +24,8 @@
         <sources>
             <file src="libidn-1.33.tar.gz" subdir="sources"
                 sha256sum="44a7aab635bb721ceef6beecc4d49dfd19478325e1b47f3196f7d2acc4930e19"/>
-            <file src="debian-patches-2.2.tar.gz" subdir="patches"
-                sha256sum="7b7443c15c4458b6b38d990b6e951da6e5c3424b2a95b2d3de3397b9cd4a41b1"/>
+            <file src="debian-patches-3.tar.gz" subdir="patches"
+                sha256sum="bf95c69663e45cc4177f5e6b027802f66e4465d80cc32de7f866cd0c76f0b5a2"/>
         </sources>
 
         <patches>
@@ -34,6 +34,7 @@
                 <file src="patches/0002-Update-intprops.h-for-gcc-7-compatibility.patch"/>
                 <file src="patches/0003-Increase-value-for-Wframe-larger-than-gcc-7.patch"/>
                 <file src="patches/0004-Update-Makefile.gdoc-to-use-GDOC_BIN-instead-of-hard.patch"/>
+                <file src="patches/0005-Fix-link-failure.patch"/>
             </patchset>
         </patches>
 
