@@ -26,16 +26,17 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="nettle-3.4.1.tar.gz" subdir="sources"
-                sha256sum="f941cf1535cd5d1819be5ccae5babef01f6db611f9b5a777bae9c7604b8a92ad"/>
-            <file src="debian-patches-1.tar.gz" subdir="patches"
-                sha256sum="fd3e126f287a2c563c3d848f594bb5d89b230397361b1d4df151a9ee28afeba2"/>
+            <file src="nettle-3.7.tar.gz" subdir="sources"
+                sha256sum="f001f64eb444bf13dd91bceccbc20acbc60c4311d6e2b20878452eb9a9cec75a"/>
+            <file src="debian-patches-2.1.tar.gz" subdir="patches"
+                sha256sum="147bc69f5c3c2d008b0a40d8b318396d959ea9fe8af0926832c7be238eb8315b"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/fPIC.patch"/>
-                <file src="patches/multiarch_dev.patch"/>
+                <file src="patches/0001-Improve-chacha-test-coverage.patch"/>
+                <file src="patches/0002-Fix-chacha-counter-update-for-_4core-variants.patch"/>
             </patchset>
         </patches>
 
@@ -49,8 +50,8 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="libnettle6.xml"/>
-    <xi:include href="libhogweed4.xml"/>
+    <xi:include href="libnettle8.xml"/>
+    <xi:include href="libhogweed6.xml"/>
     <xi:include href="nettle-dev.xml"/>
     <xi:include href="nettle-bin.xml"/>
 

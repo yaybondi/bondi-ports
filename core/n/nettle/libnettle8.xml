@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libnettle6" section="libs">
+<package name="libnettle8" section="libs">
     <description>
         <summary>low level cryptographic library (symmetric and one-way cryptos)</summary>
         <p>

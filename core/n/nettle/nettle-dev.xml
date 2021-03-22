@@ -22,8 +22,8 @@
     </description>
 
     <requires>
-        <package name="libnettle6" version="=="/>
-        <package name="libhogweed4" version="=="/>
+        <package name="libnettle8" version="=="/>
+        <package name="libhogweed6" version="=="/>
         <package name="libgmp-dev"/>
     </requires>
 
