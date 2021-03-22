@@ -25,7 +25,7 @@
             <file src="libidn-1.33.tar.gz" subdir="sources"
                 sha256sum="44a7aab635bb721ceef6beecc4d49dfd19478325e1b47f3196f7d2acc4930e19"/>
             <file src="debian-patches-3.tar.gz" subdir="patches"
-                sha256sum="bf95c69663e45cc4177f5e6b027802f66e4465d80cc32de7f866cd0c76f0b5a2"/>
+                sha256sum="f1691e0a6b397b9925753498312f05ef1813759d1d2e05165a5beb56c6aeeac2"/>
         </sources>
 
         <patches>
