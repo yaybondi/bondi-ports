@@ -26,8 +26,8 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="libatomic-ops-7.6.6.tar.gz" subdir="sources"
-                sha256sum="d5f35cd521cee01902a9299fb32019f2c146dcf1efbc61560ea4e3ecaf2b76d0"/>
+            <file src="libatomic-ops-7.6.10.tar.gz" subdir="sources"
+                sha256sum="e6b0909cf4e63cec693fe6c48191ce864c32c5113e16c3f517aa2a244b46992f"/>
         </sources>
 
         <requires>
