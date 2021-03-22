@@ -12,7 +12,7 @@ command-line tools (package libtasn1-bin) are GPLv3+.
 
 Copyright (library):
 
- Copyright (C) 2000-2016 Free Software Foundation, Inc.
+ Copyright (C) 2000-2020 Free Software Foundation, Inc.
 
  This file is part of LIBTASN1.
 
@@ -41,7 +41,7 @@ to view the full license text.
 
 Copyright (build system, test-suite and command-line tools):
 
- Copyright (C) 2000-2016 Free Software Foundation, Inc.
+ Copyright (C) 2000-2020 Free Software Foundation, Inc.
 
  This file is part of LIBTASN1.
 

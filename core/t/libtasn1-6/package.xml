@@ -24,17 +24,9 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="libtasn1-6-4.13.tar.gz" subdir="sources"
-                sha256sum="7e528e8c317ddd156230c4e31d082cd13e7ddeb7a54824be82632209550c8cca"/>
-            <file src="debian-patches-3.tar.gz" subdir="patches"
-                sha256sum="7938efc78a24ce7af870a4dc2bdf9d1b2dd9dc995ec0c5d83d8880f16faa5b6b"/>
+            <file src="libtasn1-6-4.16.0.tar.gz" subdir="sources"
+                sha256sum="0e0fb0903839117cb6e3b56e68222771bebf22ad7fc2295a0ed7d576e8d4329d"/>
         </sources>
-
-        <patches>
-            <patchset subdir="sources">
-                <file src="patches/10_modernize_gtkdoc.diff"/>
-            </patchset>
-        </patches>
 
         <requires>
             <package name="bison"/>
@@ -46,7 +38,6 @@
     <xi:include href="libtasn1-6-dev.xml"/>
     <xi:include href="libtasn1-6.xml"/>
     <xi:include href="libtasn1-bin.xml"/>
-    <xi:include href="libtasn1-3-bin.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>
