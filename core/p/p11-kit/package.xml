@@ -19,10 +19,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="p11-kit-0.23.15.tar.gz" subdir="sources"
-                sha256sum="f7c139a0c77a1f0012619003e542060ba8f94799a0ef463026db390680e4d798"/>
-            <file src="debian-patches-2.tar.gz" subdir="patches"
-                sha256sum="20dc2a74b7d6b07a32dad32b184adc998f4dae8918ce2fdc4f1dcd04a97160af"/>
+            <file src="p11-kit-0.23.22.tar.xz" subdir="sources"
+                sha256sum="8a8f40153dd5a3f8e7c03e641f8db400133fb2a6a9ab2aee1b6d0cb0495ec6b6"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="f46b81797dba9f9424d9422dc82a5b704053d52bd17ffb31c64f5e8767628d4a"/>
         </sources>
 
         <patches>
@@ -30,7 +30,6 @@
                 <file src="patches/30_nogetauxvalonbsd.diff"/>
                 <file src="patches/35_hurd_enable_secure.diff"/>
                 <file src="patches/41_kfreebsd_LOCAL_PEERCRED.diff"/>
-                <file src="patches/45_01-extract-jks-Prefer-_p11_extract_jks_timestamp-to-SOU.patch"/>
                 <file src="patches/enable_locale.diff"/>
             </patchset>
         </patches>

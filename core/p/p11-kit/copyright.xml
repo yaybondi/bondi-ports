@@ -3,61 +3,9 @@
         <file src="*"/>
         <copyright-notice><![CDATA[
 2011 Collabora Ltd.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/conf.*"/>
-        <file src="p11-kit/proxy.c"/>
-        <file src="common/dict.c"/>
-        <file src="common/dict.h"/>
-        <copyright-notice><![CDATA[
-2011 Collabora Ltd.
-2004 Stefan Walter
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/modules.c"/>
-        <file src="common/dict.c"/>
-        <file src="common/dict.h"/>
-        <copyright-notice><![CDATA[
-2008 Stefan Walter
-2011 Collabora Ltd.
-2017 Red Hat, Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="common/buffer.c"/>
-        <file src="common/buffer.h"/>
-        <copyright-notice><![CDATA[
-2007, 2012 Stefan Walter
-2013 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="common/library.c"/>
-        <file src="common/library.h"/>
-        <file src="common/message.c"/>
-        <file src="p11-kit/client-init.c"/>
-        <file src="p11-kit/proxy-init.c"/>
-        <file src="common/init.h"/>
-        <copyright-notice><![CDATA[
-2011 Collabora Ltd.
-2012 Stef Walter
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="common/url.c"/>
-        <file src="common/url.h"/>
-        <copyright-notice><![CDATA[
-2011 Collabora Ltd.
-2013 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/log.c"/>
-        <copyright-notice><![CDATA[
-2007, Stefan Walter
-2013, Red Hat Inc.
+2004, 2005, 2007, 2008, 2012, 2013 Stefan Walter
+2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019 Red Hat, Inc.
+2012, 2013 Redhat Inc.
         ]]></copyright-notice>
     </files>
     <files license="permissive-like-automake-output">
@@ -69,142 +17,20 @@ Copyright 2017 Red Hat, Inc.
         ]]></copyright-notice>
         <license><![CDATA[
 This file is free software; as a special exception the author gives
-unlimited permission to copy and/or distribute it, with or without
-modifications, as long as this notice is preserved.
+  unlimited permission to copy and/or distribute it, with or without
+  modifications, as long as this notice is preserved.
 
-This file is distributed in the hope that it will be useful, but
-WITHOUT ANY WARRANTY, to the extent permitted by law; without even
-the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
-PURPOSE.
+  This file is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY, to the extent permitted by law; without even
+  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+  PURPOSE.  */
         ]]></license>
     </files>
     <files license="BSD-3-Clause">
-        <file src="common/argv.c"/>
-        <file src="common/argv.h"/>
-        <file src="common/hash.h"/>
-        <file src="trust/oid.c"/>
-        <file src="trust/oid.h"/>
-        <file src="trust/pem.c"/>
-        <file src="trust/pem.h"/>
-        <file src="common/argv.c"/>
-        <file src="common/argv.h"/>
-        <file src="common/pkcs11x.h"/>
-        <file src="common/pkcs11i.h"/>
-        <file src="common/test-constants.c"/>
-        <file src="common/test-hash.c"/>
-        <file src="p11-kit/pkcs11.h"/>
-        <file src="p11-kit/test-managed.c"/>
-        <file src="trust/builder.c"/>
-        <file src="trust/builder.h"/>
-        <file src="trust/digest.h"/>
-        <file src="trust/module.c"/>
-        <file src="trust/module.h"/>
-        <file src="trust/module-init.c"/>
-        <file src="trust/pem.c"/>
-        <file src="trust/pem.h"/>
-        <file src="trust/oid.c"/>
-        <file src="trust/oid.h"/>
-        <file src="trust/parser.h"/>
-        <file src="trust/session.c"/>
-        <file src="trust/session.h"/>
-        <file src="trust/frob-cert.c"/>
-        <file src="trust/frob-eku.c"/>
-        <file src="trust/frob-token.c"/>
-        <file src="trust/test-digest.c"/>
-        <file src="trust/test-enumerate.c"/>
-        <file src="trust/test-index.c"/>
-        <file src="trust/test-module.c"/>
-        <file src="trust/test-oid.c"/>
-        <file src="trust/test-parser.c"/>
-        <file src="trust/test-pem.c"/>
-        <file src="trust/test-token.c"/>
-        <file src="trust/token.c"/>
-        <file src="trust/token.h"/>
-        <file src="trust/test-trust.c"/>
-        <file src="trust/test-trust.h"/>
-        <file src="trust/x509.c"/>
-        <file src="trust/x509.h"/>
-        <file src="p11-kit/frob-setuid.c"/>
+        <file src="common/vsock.c"/>
+        <file src="common/vsock.h"/>
         <copyright-notice><![CDATA[
-2012 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="common/attrs.c"/>
-        <file src="common/attrs.h"/>
-        <copyright-notice><![CDATA[
-2012, Redhat Inc.
-2011, Collabora Ltd.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="common/test-attrs.c"/>
-        <file src="common/test-buffer.c"/>
-        <file src="trust/frob-ku.c"/>
-        <file src="trust/frob-oid.c"/>
-        <file src="trust/test-asn1.c"/>
-        <copyright-notice><![CDATA[
-2012, Redhat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/test-modules.c"/>
-        <copyright-notice><![CDATA[
-2012, 2015, 2016 Red Hat Inc
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="common/constants.c"/>
-        <file src="common/constants.h"/>
-        <file src="common/test.c"/>
-        <file src="common/test.h"/>
-        <file src="common/test-compat.c"/>
-        <file src="common/test-tests.c"/>
-        <file src="common/tool.h"/>
-        <file src="p11-kit/deprecated.h"/>
-        <file src="p11-kit/docs.h"/>
-        <file src="p11-kit/log.h"/>
-        <file src="p11-kit/modules.h"/>
-        <file src="p11-kit/proxy.h"/>
-        <file src="p11-kit/test-log.c"/>
-        <file src="trust/anchor.c"/>
-        <file src="trust/anchor.h"/>
-        <file src="trust/enumerate.c"/>
-        <file src="trust/enumerate.h"/>
-        <file src="trust/extract.c"/>
-        <file src="trust/extract-cer.c"/>
-        <file src="trust/extract.h"/>
-        <file src="trust/extract-openssl.c"/>
-        <file src="trust/extract-pem.c"/>
-        <file src="trust/index.c"/>
-        <file src="trust/index.h"/>
-        <file src="trust/list.c"/>
-        <file src="trust/list.h"/>
-        <file src="trust/persist.c"/>
-        <file src="trust/persist.h"/>
-        <file src="trust/save.c"/>
-        <file src="trust/save.h"/>
-        <file src="trust/frob-bc.c"/>
-        <file src="trust/frob-ext.c"/>
-        <file src="trust/frob-pow.c"/>
-        <file src="trust/test-base64.c"/>
-        <file src="trust/test-builder.c"/>
-        <file src="trust/test-save.c"/>
-        <file src="trust/test-utf8.c"/>
-        <file src="trust/test-x509.c"/>
-        <file src="trust/types.h"/>
-        <file src="trust/utf8.c"/>
-        <file src="trust/utf8.h"/>
-        <copyright-notice><![CDATA[
-2013, Redhat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/remote.h"/>
-        <file src="common/frob-getenv.c"/>
-        <file src="common/unix-peer.h"/>
-        <copyright-notice><![CDATA[
-2014 Red Hat Inc.
+2020 Amazon.com, Inc. or its affiliates.
         ]]></copyright-notice>
     </files>
     <files license="BSD-3-Clause">
@@ -214,105 +40,7 @@ PURPOSE.
 2014 Red Hat Inc.
         ]]></copyright-notice>
     </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/remote.c"/>
-        <copyright-notice><![CDATA[
-2014,2016 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/test-mock.c"/>
-        <copyright-notice><![CDATA[
-2012 Stefan Walter
-2012-2013 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/test-virtual.c"/>
-        <copyright-notice><![CDATA[
-2012 Stefan Walter
-2012 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/test-transport.c"/>
-        <copyright-notice><![CDATA[
-2012 Stefan Walter
-2012-2017 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/test-rpc.c"/>
-        <copyright-notice><![CDATA[
-2012 Stefan Walter
-Copyright (C) 2012-2017 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="common/runtime.*"/>
-        <file src="common/test-runtime.c"/>
-        <file src="p11-kit/test-server.*"/>
-        <file src="trust/extract-edk2.c"/>
-        <copyright-notice><![CDATA[
-(C) 2018 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/mock-module-ep5.c"/>
-        <copyright-notice><![CDATA[
-2012 Stefan Walter
-2018 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="trust/test-edk2.c"/>
-        <copyright-notice><![CDATA[
-2011, Collabora Ltd.
-2018 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="trust/extract-jks.c"/>
-        <file src="trust/test-jks.c"/>
-        <copyright-notice><![CDATA[
-2019, Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/rpc-transport.c"/>
-        <copyright-notice><![CDATA[
-2012 Stefan Walter
-2013 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/test-deprecated.c"/>
-        <copyright-notice><![CDATA[
-2011, Collabora Ltd.
-2012 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/virtual.c"/>
-        <file src="trust/asn1.c"/>
-        <file src="trust/asn1.h"/>
-        <file src="p11-kit/rpc-client.c"/>
-        <file src="p11-kit/rpc-message.c"/>
-        <file src="p11-kit/rpc-message.h"/>
-        <file src="p11-kit/rpc-server.c"/>
-        <copyright-notice><![CDATA[
-2008 Stefan Walter
-2012 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/rpc.h"/>
-        <copyright-notice><![CDATA[
-2012-2013 Stefan Walter
-        ]]></copyright-notice>
-    </files>
     <files license="ISC">
-        <file src="trust/digest.c"/>
         <file src="trust/digest.c"/>
         <file src="common/hash.c"/>
         <copyright-notice><![CDATA[
@@ -382,16 +110,6 @@ IF IBM IS APPRISED OF THE POSSIBILITY OF SUCH DAMAGES.
         ]]></license>
     </files>
     <files license="BSD-3-Clause">
-        <file src="common/lexer.c"/>
-        <file src="common/lexer.h"/>
-        <file src="common/path.c"/>
-        <copyright-notice><![CDATA[
-2005 Stefan Walter
-2011 Collabora Ltd.
-2013 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
         <file src="common/compat.c"/>
         <copyright-notice><![CDATA[
 Copyright (c) 2011 Collabora Ltd.
@@ -403,62 +121,22 @@ The Regents of the University of California.
         ]]></copyright-notice>
     </files>
     <files license="BSD-3-Clause">
-        <file src="common/mock.h"/>
-        <file src="common/path.h"/>
-        <file src="common/frob-getauxval.c"/>
-        <file src="common/test-lexer.c"/>
-        <file src="common/test-message.c"/>
-        <file src="common/test-path.c"/>
-        <file src="common/test-url.c"/>
-        <file src="p11-kit/test-proxy.c"/>
-        <file src="p11-kit/virtual.h"/>
-        <file src="p11-kit/test-util.c"/>
-        <file src="trust/frob-nss-trust.c"/>
-        <file src="trust/test-parser.c"/>
-        <file src="trust/test-persist.c"/>
-        <file src="p11-kit/client.h"/>
-        <copyright-notice><![CDATA[
-2013 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/iter.c"/>
-        <file src="p11-kit/iter.h"/>
-        <file src="p11-kit/test-iter.c"/>
-        <file src="p11-kit/iter.gnu.c"/>
-        <copyright-notice><![CDATA[
-2013,2016 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/client.c"/>
-        <file src="p11-kit/filter.c"/>
-        <file src="p11-kit/filter.h"/>
-        <file src="p11-kit/test-filter.c"/>
-        <file src="p11-kit/virtual-fixed.h"/>
-        <copyright-notice><![CDATA[
-2016 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="common/test-argv.c"/>
-        <copyright-notice><![CDATA[
-2017 Red Hat Inc.
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
-        <file src="p11-kit/mock-module-ep.c"/>
-        <file src="p11-kit/test-progname.c"/>
-        <file src="p11-kit/mock-module-ep3.c"/>
-        <file src="p11-kit/mock-module-ep4.c"/>
-        <copyright-notice><![CDATA[
-2012 Stefan Walter
-        ]]></copyright-notice>
-    </files>
-    <files license="BSD-3-Clause">
         <file src="common/unix-peer.c"/>
         <copyright-notice><![CDATA[
 2013 Nikos Mavrogiannopoulos
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-3-Clause">
+        <file src="common/frob-getprogname.c"/>
+        <copyright-notice><![CDATA[
+2020 Red Hat Inc.
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-3-Clause">
+        <file src="p11-kit/mock-module-ep8.c"/>
+        <copyright-notice><![CDATA[
+2012 Stefan Walter
+2020 Red Hat, Inc.
         ]]></copyright-notice>
     </files>
     <files license="BSD-3-Clause">
