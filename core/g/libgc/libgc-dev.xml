@@ -23,7 +23,7 @@
     </description>
 
     <requires>
-        <package name="libgc1c2" version="=="/>
+        <package name="libgc1" version="=="/>
         <package name="libc-dev"/>
     </requires>
 
