@@ -19,7 +19,8 @@ $BOLT_SOURCE_DIR/configure \
     --host="$BOLT_HOST_TYPE" \
     --sysconfdir=/etc \
     --localstatedir=/var/lib \
-    --enable-cplusplus
+    --enable-cplusplus \
+    --enable-static
 
     ]]>
     </prepare>
