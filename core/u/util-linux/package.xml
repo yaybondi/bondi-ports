@@ -18,9 +18,24 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="util-linux-2.33.1.tar.xz" subdir="sources"
-                sha256sum="c14bd9f3b6e1792b90db87696e87ec643f9d63efa0a424f092a5a6b2f2dbef21"/>
+            <file src="util-linux-2.36.1.tar.xz" subdir="sources"
+                sha256sum="09fac242172cd8ec27f0739d8d192402c69417617091d8c6e974841568f37eed"/>
+            <file src="debian-patches-7.tar.gz" subdir="patches"
+                sha256sum="46683350e0f2b55b391df64478535a6c7b0f1d360d2980e784e52f167f83ecf7"/>
         </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/upstream/upstream_build-sys-do-not-build-plymouth-ctrl.c-w-disabled-pl.patch"/>
+                <file src="patches/upstream/upstream_hwclock-do-not-assume-__NR_settimeofday_time32.patch"/>
+                <file src="patches/upstream/0001-libmount-don-t-use-symfollow-for-helpers-on-user-mou.patch"/>
+                <file src="patches/upstream/Manual-pages-document-the-resize-command.patch"/>
+                <file src="patches/debian/man-getopt-examples.patch"/>
+                <file src="patches/debian/verbose-tests.patch"/>
+                <file src="patches/upstream/libmount-do-not-canonicalize-ZFS-source-dataset.patch"/>
+                <file src="patches/upstream/libmount-allow-read-only-for-not-root-users.patch"/>
+            </patchset>
+        </patches>
 
         <requires>
             <package name="gettext"/>
