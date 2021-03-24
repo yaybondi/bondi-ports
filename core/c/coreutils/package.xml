@@ -27,21 +27,20 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="coreutils-8.30.tar.xz" subdir="sources"
-                sha256sum="e831b3a86091496cdba720411f9748de81507798f6130adeaef872d206e1b057"/>
-            <file src="debian-patches-3.tar.gz" subdir="patches"
-                sha256sum="a44c1ed2cc0fc43b97f2560c0a3f2471c9ed3c08891e0529fa332d939ff51a9e"/>
+            <file src="coreutils-8.32.tar.xz" subdir="sources"
+                sha256sum="4458d8de7849df44ccab15e16b1548b285224dbba5f08fac070c1c0e0bcc4cfa"/>
+            <file src="debian-patches-4.tar.gz" subdir="patches"
+                sha256sum="eef08f55b6358fbb51821f852ace57d00ec308c8e2af540bffb6601606653e35"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/prefer-renameat2-from-glibc-over-syscall.patch"/>
-                <file src="patches/renameatu.patch"/>
                 <file src="patches/61_whoips.patch"/>
                 <file src="patches/63_dd-appenderrors.patch"/>
                 <file src="patches/72_id_checkngroups.patch"/>
                 <file src="patches/85_timer_settime.patch"/>
                 <file src="patches/99_kfbsd_fstat_patch.patch"/>
+                <file src="patches/restore-ls-behavior-8.31.patch"/>
             </patchset>
         </patches>
 
