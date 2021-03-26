@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<control xmlns:xi="http://www.w3.org/2001/XInclude">
+<control xmlns:xi="http://www.w3.org/2.21/XInclude">
     <defines>
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="guile-2.0" repo="core" architecture-independent="false">
+    <source name="guile-2.2" repo="core" architecture-independent="false">
         <description>
             <summary>GNU extension language and Scheme interpreter</summary>
             <p>
@@ -19,10 +19,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="guile-2.0-2.0.13+1.tar.xz" subdir="sources"
-                sha256sum="ecf63aa152cf962752325c2dcd6af1bd575441b984fde847a280ea852ff9eddd"/>
-            <file src="debian-patches-5.1.tar.gz" subdir="patches"
-                sha256sum="739d6d1d39961bc7c821eb01205d338bd22411b1749955ac5a6e46694eafee35"/>
+            <file src="guile-2.2-2.2.7+1.tar.bz2" subdir="sources"
+                sha256sum="e49ee30d7f3a1b87c6b8694b0e8e58ea02815eef88e8db078f54f8be859447b2"/>
+            <file src="debian-patches-5.4.tar.gz" subdir="patches"
+                sha256sum="bb58ab473e62f244032c031204ff4fd5c32367dd497bb7ee6db82e27b77b9377"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="e6801eea50791ed349d437744be5be53f4691ddefbe2be9c50ed1f576d77307f"/>
         </sources>
@@ -32,9 +32,10 @@
                 <!-- Debian -->
                 <file src="patches/0001-Mark-mutex-with-owner-not-retained-threads-test-as-u.patch"/>
                 <file src="patches/0002-Look-for-guile-procedures.txt-in-pkglibdir.patch"/>
-                <file src="patches/0003-tests-Avoid-race-condition-in-REPL-server-test.patch"/>
-                <file src="patches/0004-ia64-Fix-crash-in-thread-context-switch.patch"/>
-                <file src="patches/0005-fix-french-locale-test.patch"/>
+                <file src="patches/0003-Disable-sandbox.test-1e6-alloc-loop-allocation-limit.patch"/>
+                <file src="patches/0004-Disable-intermittently-failing-test-out-of-memory-te.patch"/>
+                <file src="patches/0005-Disable-more-of-test-out-of-memory-test.patch"/>
+                <file src="patches/0006-gc.test-after-gc-hook-mark-unresolved-on-failure-eve.patch"/>
                 <!-- Upstream -->
                 <file src="patches/riscv-little-endian.diff"/>
             </patchset>
@@ -59,9 +60,9 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="guile-2.0.xml"/>
-    <xi:include href="guile-2.0-dev.xml"/>
-    <xi:include href="guile-2.0-libs.xml"/>
+    <xi:include href="guile-2.2.xml"/>
+    <xi:include href="guile-2.2-dev.xml"/>
+    <xi:include href="guile-2.2-libs.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>

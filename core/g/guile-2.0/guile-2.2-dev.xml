@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="guile-2.0-dev" section="lisp">
+<package name="guile-2.2-dev" section="lisp">
     <description>
-        <summary>Development files for Guile 2.0</summary>
+        <summary>Development files for Guile 2.2</summary>
         <p>
-        This package contains files needed for development using Guile 2.0.
+        This package contains files needed for development using Guile 2.2.
         </p>
         <p>
         Guile is a Scheme implementation designed for real world programming,
@@ -15,8 +15,8 @@
     </description>
 
     <requires>
-        <package name="guile-2.0" version="=="/>
-        <package name="guile-2.0-libs" version="=="/>
+        <package name="guile-2.2" version="=="/>
+        <package name="guile-2.2-libs" version="=="/>
         <package name="libc-dev"/>
         <package name="libncurses5-dev"/>
         <package name="libreadline-dev"/>
@@ -31,12 +31,12 @@
         <file src="${prefix}/bin/guile-config"/>
         <file src="${prefix}/bin/guile-snarf"/>
         <file src="${prefix}/bin/guile-tools"/>
-        <file src="${prefix}/include/guile/2.0"/>
+        <file src="${prefix}/include/guile/2.2"/>
         <file src="${prefix}/lib/libguile-*.a"/>
         <file src="${prefix}/lib/libguile-*.so"/>
         <file src="${prefix}/lib/libguilereadline-*.a"/>
         <file src="${prefix}/lib/pkgconfig"/>
         <file src="${prefix}/share/aclocal"/>
-        <file src="${prefix}/share/guile/2.0/scripts"/>
+        <file src="${prefix}/share/guile/2.2/scripts"/>
     </contents>
 </package>

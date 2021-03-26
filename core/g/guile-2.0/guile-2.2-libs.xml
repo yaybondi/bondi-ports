@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="guile-2.2-libs" section="lisp">
+    <description>
+        <summary>Core Guile libraries</summary>
+        <p>
+        Guile is a Scheme implementation designed for real world programming,
+        providing a rich Unix interface, a module system, an interpreter, and
+        many extension languages. Guile can be used as a standard #! style
+        interpreter, via #!${prefix}/bin/guile, or as an extension language for
+        other applications via libguile.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/lib/guile/2.2"/>
+        <file src="${prefix}/lib/libguile-*.so.*"/>
+        <file src="${prefix}/lib/libguilereadline-*.so"/>
+        <file src="${prefix}/lib/libguilereadline-*.so.*"/>
+        <file src="${prefix}/share/guile/2.2/ice-9"/>
+        <file src="${prefix}/share/guile/2.2/language"/>
+        <file src="${prefix}/share/guile/2.2/oop"/>
+        <file src="${prefix}/share/guile/2.2/rnrs"/>
+        <file src="${prefix}/share/guile/2.2/rnrs.scm"/>
+        <file src="${prefix}/share/guile/2.2/srfi"/>
+        <file src="${prefix}/share/guile/2.2/statprof.scm"/>
+        <file src="${prefix}/share/guile/2.2/sxml"/>
+        <file src="${prefix}/share/guile/2.2/system"/>
+        <file src="${prefix}/share/guile/2.2/texinfo"/>
+        <file src="${prefix}/share/guile/2.2/texinfo.scm"/>
+        <file src="${prefix}/share/guile/2.2/web"/>
+    </contents>
+</package>
