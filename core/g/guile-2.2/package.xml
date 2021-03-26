@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<control xmlns:xi="http://www.w3.org/2.21/XInclude">
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
     <defines>
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
