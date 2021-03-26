@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libprocps7" section="libs">
+<package name="libprocps8" section="libs">
     <description>
         <summary>library for accessing process information from /proc</summary>
         <p>

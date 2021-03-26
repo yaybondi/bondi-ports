@@ -47,7 +47,7 @@
 
     <xi:include href="procps.xml"/>
     <xi:include href="sysctl.xml"/>
-    <xi:include href="libprocps7.xml"/>
+    <xi:include href="libprocps8.xml"/>
     <xi:include href="libprocps-dev.xml"/>
 
     <xi:include href="changelog.xml"/>

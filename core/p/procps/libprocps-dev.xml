@@ -9,7 +9,7 @@
     </description>
 
     <requires>
-        <package name="libprocps7" version="=="/>
+        <package name="libprocps8" version="=="/>
     </requires>
 
     <contents subdir="procps">
