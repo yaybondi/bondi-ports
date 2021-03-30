@@ -2,130 +2,44 @@
     <files license="GPL-3+">
         <file src="*"/>
         <copyright-notice><![CDATA[
-(C) 1992-2016 by Bruce Korb
+(C) 1992-2018 by Bruce Korb
         ]]></copyright-notice>
-        <license><![CDATA[
-AutoGen is free software: you can redistribute it and/or modify it under
-the terms of the GNU General Public License as published by the Free
-Software Foundation, either version 3 of the License, or (at your option)
-any later version.
-
-AutoGen is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
-details.
-        ]]></license>
     </files>
-    <files license="LGPL-3+ or Modified_BSD">
+    <files license="LGPL-3+ or BSD-3-clause">
         <file src="autoopts/*"/>
         <copyright-notice><![CDATA[
-(C) 1992-2016 by Bruce Korb
+(C) 1992-2018 by Bruce Korb
         ]]></copyright-notice>
-        <license><![CDATA[
-AutoOpts is available under any one of two licenses.  The license in use
-must be one of these two and the choice is under the control of the user of
-the license.
-
-  - The GNU Lesser General Public License, version 3 or later.
-  - The Modified Berkeley Software Distribution License.
-        ]]></license>
     </files>
     <files license="LGPL-2.1+">
         <file src="autoopts/stdnoreturn.in.h"/>
         <copyright-notice><![CDATA[
-Copyright 2012-2016 Free Software Foundation, Inc.
+Copyright 2012-2018 Free Software Foundation, Inc.
         ]]></copyright-notice>
-        <license><![CDATA[
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU Lesser General Public License as published by
-the Free Software Foundation; either version 2.1, or (at your option)
-any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Lesser General Public License for more details.
-        ]]></license>
     </files>
     <files license="LGPL-2.1+">
         <file src="autoopts/gettext.h"/>
         <copyright-notice><![CDATA[
-1995-1998, 2000-2002, 2004-2006, 2009-2016 Free Software
+1995-1998, 2000-2002, 2004-2006, 2009-2018 Free Software
 Foundation, Inc.
         ]]></copyright-notice>
-        <license><![CDATA[
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU Lesser General Public License as published by
-the Free Software Foundation; either version 2.1, or (at your option)
-any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Lesser General Public License for more details.
-        ]]></license>
     </files>
     <files license="LGPL-2.1+">
         <file src="autoopts/parse-duration.*"/>
         <copyright-notice><![CDATA[
 2008-2016 Free Software Foundation, Inc.
         ]]></copyright-notice>
-        <license><![CDATA[
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Lesser General Public License as published by
-the Free Software Foundation; either version 2.1 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Lesser General Public License for more details.
-        ]]></license>
     </files>
     <files license="LGPL-2.1+">
         <file src="autoopts/intprops.h"/>
         <copyright-notice><![CDATA[
-2001-2005, 2009-2016 Free Software Foundation, Inc.
+2001-2018 Free Software Foundation, Inc.
         ]]></copyright-notice>
-        <license><![CDATA[
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Lesser General Public License as published by
-the Free Software Foundation; either version 2.1 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Lesser General Public License for more details.
-        ]]></license>
     </files>
-    <files license="GPL-2+ or LGPL-3+ or Modified_BSD">
+    <files license="GPL-2+ or LGPL-3+ with libopts exception or BSD-3-clause with libopts exception">
         <file src="snprintfv/compat.h"/>
         <file src="snprintfv/filament.c"/>
-        <copyright-notice><![CDATA[
-1999 Gary V. Vaughan snprintfv/mem.h
-        ]]></copyright-notice>
-        <license><![CDATA[
-* Snprintfv is free software; you can redistribute it and/or
-* modify it under the terms of the GNU General Public License as
-* published by the Free Software Foundation; either version 2 of the
-* License, or (at your option) any later version.
-*
-* Snprintfv program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-* General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses>.
-*
-* As a special exception to the GNU General Public License, if you
-* distribute this file as part of a program that also links with and
-* uses the libopts library from AutoGen, you may include it under
-* the same distribution terms used by the libopts library.
-        ]]></license>
-    </files>
-    <files license="GPL-2+ or LGPL-3+ or Modified_BSD">
+        <file src="snprintfv/mem.h"/>
         <file src="snprintfv/filament.h"/>
         <file src="snprintfv/filament.in"/>
         <file src="snprintfv/format.c"/>
@@ -136,62 +50,11 @@ GNU Lesser General Public License for more details.
         <file src="snprintfv/stream.c"/>
         <file src="snprintfv/stream.h"/>
         <file src="snprintfv/stream.in"/>
-        <copyright-notice><![CDATA[
-1998, 1999, 2000, 2002 Gary V. Vaughan
-        ]]></copyright-notice>
-        <license><![CDATA[
-* Snprintfv is free software; you can redistribute it and/or
-* modify it under the terms of the GNU General Public License as
-* published by the Free Software Foundation; either version 2 of the
-* License, or (at your option) any later version.
-*
-* Snprintfv program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-* General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses>.
-*
-* As a special exception to the GNU General Public License, if you
-* distribute this file as part of a program that also links with and
-* uses the libopts library from AutoGen, you may include it under
-* the same distribution terms used by the libopts library.
-        ]]></license>
-    </files>
-    <files license="GPL-2+ or LGPL-3+ or Modified_BSD">
         <file src="snprintfv/custom.c"/>
-        <copyright-notice><![CDATA[
-2003 Gary V. Vaughan
-Originally by Paolo Bonzini, 2002
-        ]]></copyright-notice>
-        <license><![CDATA[
-* Snprintfv is free software; you can redistribute it and/or
-* modify it under the terms of the GNU General Public License as
-* published by the Free Software Foundation; either version 2 of the
-* License, or (at your option) any later version.
-*
-* Snprintfv program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-* General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses>.
-*
-* As a special exception to the GNU General Public License, if you
-* distribute this file as part of a program that also links with and
-* uses the libopts library from AutoGen, you may include it under
-* the same distribution terms used by the libopts library.
-        ]]></license>
-    </files>
-    <files license="GPL-2+ or LGPL-3+ or Modified_BSD">
         <file src="snprintfv/mem.c"/>
         <copyright-notice><![CDATA[
-2002 Gary V. Vaughan
-Originally by Paolo Bonzini, 2002
-        ]]></copyright-notice>
-        <license><![CDATA[
+1998, 1999, 2000, 2002, 2003 Gary V. Vaughan
+some files originally by Paolo Bonzini, 2002
 * Snprintfv is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License as
 * published by the Free Software Foundation; either version 2 of the
@@ -209,66 +72,33 @@ Originally by Paolo Bonzini, 2002
 * distribute this file as part of a program that also links with and
 * uses the libopts library from AutoGen, you may include it under
 * the same distribution terms used by the libopts library.
-        ]]></license>
+        ]]></copyright-notice>
     </files>
-    <files license="LGPL-3+ or Modified_BSD">
+    <files license="LGPL-3+ or BSD-3-clause">
         <file src="autoopts/tpl/man2mdoc.pl"/>
         <file src="autoopts/tpl/mdoc2man.pl"/>
         <file src="autoopts/tpl/mdoc2texi.pl"/>
         <copyright-notice><![CDATA[
 Harlan Stenn
         ]]></copyright-notice>
-        <license><![CDATA[
-## Author:	Harlan Stenn <stenn@ntp.org>
-##
-##
-##  This file is part of AutoOpts, a companion to AutoGen.
-##  AutoOpts is free software.
-##  AutoOpts is Copyright (C) 1992-2015 by Bruce Korb - all rights reserved
-##
-##  AutoOpts is available under any one of two licenses.  The license
-##  in use must be one of these two and the choice is under the control
-##  of the user of the license.
-##
-##   The GNU Lesser General Public License, version 3 or later
-##      See the files "COPYING.lgplv3" and "COPYING.gplv3"
-##
-##   The Modified Berkeley Software Distribution License
-##      See the file "COPYING.mbsd"
-        ]]></license>
     </files>
-    <files license="LGPL-3+ or Modified_BSD">
+    <files license="LGPL-3+ or BSD-3-clause">
         <file src="autoopts/tpl/Mdoc.pm"/>
         <copyright-notice><![CDATA[
 Oliver Kindernay (GSoC project for NTP.org)
         ]]></copyright-notice>
-        <license><![CDATA[
-## Author:	Oliver Kindernay (GSoC project for NTP.org)
-##		
-##
-##  This file is part of AutoOpts, a companion to AutoGen.
-##  AutoOpts is free software.
-##  AutoOpts is Copyright (C) 1992-2015 by Bruce Korb - all rights reserved
-##
-##  AutoOpts is available under any one of two licenses.  The license
-##  in use must be one of these two and the choice is under the control
-##  of the user of the license.
-##
-##   The GNU Lesser General Public License, version 3 or later
-##      See the files "COPYING.lgplv3" and "COPYING.gplv3"
-##
-##   The Modified Berkeley Software Distribution License
-##      See the file "COPYING.mbsd"
-        ]]></license>
     </files>
-    <license handle="GPL-2+"><![CDATA[
-If you cannot locate the license in the source package, please visit
-
-    https://www.gnu.org/licenses/gpl-2.0.txt
-
-to view the full license text.
-    ]]></license>
     <license handle="GPL-3+"><![CDATA[
+AutoGen is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option)
+any later version.
+
+AutoGen is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+details.
+
 If you cannot locate the license in the source package, please visit
 
     https://www.gnu.org/licenses/gpl-3.0.txt
@@ -276,6 +106,16 @@ If you cannot locate the license in the source package, please visit
 to view the full license text.
     ]]></license>
     <license handle="LGPL-2.1+"><![CDATA[
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU Lesser General Public License as published by
+  the Free Software Foundation; either version 2.1, or (at your option)
+  any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU Lesser General Public License for more details.
+
 If you cannot locate the license in the source package, please visit
 
     https://www.gnu.org/licenses/lgpl-2.1.txt
@@ -289,7 +129,7 @@ If you cannot locate the license in the source package, please visit
 
 to view the full license text.
     ]]></license>
-    <license handle="Modified_BSD"><![CDATA[
+    <license handle="BSD-3-clause"><![CDATA[
 Here is the Modified Berkeley Software Distribution License:
 
 Redistribution and use in source and binary forms, with or without
@@ -313,5 +153,26 @@ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
 LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    ]]></license>
+    <license handle="GPL-2+"><![CDATA[
+If you cannot locate the license in the source package, please visit
+
+    https://www.gnu.org/licenses/gpl-2.0.txt
+
+to view the full license text.
+    ]]></license>
+    <license handle="LGPL-3+ with libopts exception"><![CDATA[
+For LGPL-3+ see paragraph "License: LGPL-3+" above.
+
+If you distribute this file as part of a program that also links with and
+uses the libopts library from AutoGen, you may include it under
+the same distribution terms used by the libopts library.
+    ]]></license>
+    <license handle="BSD-3-clause with libopts exception"><![CDATA[
+For BSD-3-clause see paragraph "License: BSD-3-clause" above.
+
+If you distribute this file as part of a program that also links with and
+uses the libopts library from AutoGen, you may include it under
+the same distribution terms used by the libopts library.
     ]]></license>
 </copyright>
