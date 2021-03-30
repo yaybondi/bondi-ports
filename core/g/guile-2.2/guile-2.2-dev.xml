@@ -18,7 +18,7 @@
         <package name="guile-2.2" version="=="/>
         <package name="guile-2.2-libs" version="=="/>
         <package name="libc-dev"/>
-        <package name="libncurses5-dev"/>
+        <package name="libncurses-dev"/>
         <package name="libreadline-dev"/>
         <package name="libltdl-dev"/>
         <package name="libgmp-dev"/>
