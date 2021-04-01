@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="bash" repo="contrib"
+            architecture-independent="false">
+        <description>
+            <summary>GNU Bourne Again SHell</summary>
+            <p>
+            Bash is an sh-compatible command language interpreter that executes
+            commands read from the standard input or from a file. Bash also
+            incorporates useful features from the Korn and C shells (ksh and csh).
+            </p>
+            <p>
+            Bash is ultimately intended to be a conformant implementation of the
+            IEEE POSIX Shell and Tools specification (IEEE Working Group 1003.2).
+            </p>
+            <p>
+            The Programmable Completion Code, by Ian Macdonald, is now found in
+            the bash-completion package.
+            </p>
+        </description>
+
+        <xi:include href="copyright.xml"/>
+
+        <sources>
+            <file src="bash-5.1.tar.xz" subdir="sources"
+                sha256sum="d5eeee4f953c09826409d572e2e8996a2140d67eb8f382ce1f3a9d23883ad696"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="aa388b373e398e17fa50aa6f5d4509ed45bd4ab371578fb0546d5642569cb075"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/bash51-001.diff"/>
+                <file src="patches/bash51-002.diff"/>
+                <file src="patches/bash51-003.diff"/>
+                <file src="patches/bash51-004.diff"/>
+                <file src="patches/bashbug-editor.diff"/>
+                <file src="patches/deb-bash-config.diff"/>
+                <file src="patches/deb-examples.diff"/>
+                <file src="patches/man-arithmetic.diff"/>
+                <file src="patches/man-fignore.diff"/>
+                <file src="patches/man-bashrc.diff"/>
+                <file src="patches/man-bashlogout.diff"/>
+                <file src="patches/man-nocaseglob.diff"/>
+                <file src="patches/man-test.diff"/>
+                <file src="patches/man-test2.diff"/>
+                <file src="patches/rbash-manpage.diff"/>
+                <file src="patches/bash-default-editor.diff"/>
+                <file src="patches/input-err.diff"/>
+                <file src="patches/exec-redirections-doc.diff"/>
+                <file src="patches/bash-aliases-repeat.diff"/>
+                <file src="patches/use-system-texi2html.diff"/>
+                <file src="patches/bzero.diff"/>
+                <file src="patches/man-macro-warnings.diff"/>
+                <file src="patches/man-vx-opts.diff"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autoconf"/>
+            <package name="autotools-dev"/>
+            <package name="bison"/>
+            <package name="libncurses-dev"/>
+            <package name="texinfo"/>
+            <package name="gettext"/>
+            <package name="xz-utils"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="bash.xml"/>
+    <xi:include href="bash-builtins.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="bash-builtins" section="utils">
+    <description>
+        <summary>Bash loadable builtins - headers &amp; examples</summary>
+        <p>
+        Bash can dynamically load new builtin commands. Included are the
+        necessary headers to compile your own builtins and lots of examples.
+        </p>
+    </description>
+
+    <requires>
+        <package name="bash" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/include/bash"/>
+        <file src="${prefix}/lib/bash"/>
+        <file src="${prefix}/lib/pkgconfig"/>
+    </contents>
+</package>
