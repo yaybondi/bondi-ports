@@ -18,9 +18,6 @@
     </description>
 
     <contents>
-        <file src="/etc"/>
         <file src="${prefix}/bin/bash"/>
-        <file src="${prefix}/bin/clear_console"/>
-        <file src="${prefix}/bin/rbash"/>
     </contents>
 </package>
