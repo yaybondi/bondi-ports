@@ -17,6 +17,14 @@
         </p>
     </description>
 
+    <conflicts>
+        <package name="busybox-bash-symlinks"/>
+    </conflicts>
+
+    <replaces>
+        <package name="busybox-bash-symlinks"/>
+    </replaces>
+
     <contents>
         <file src="${prefix}/bin/bash"/>
     </contents>
