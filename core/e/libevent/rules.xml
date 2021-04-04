@@ -5,6 +5,7 @@
 
 cd "$BOLT_SOURCE_DIR"
 bh_autotools_dev_update
+autoreconf -vfi
 
 cd "$BOLT_BUILD_DIR"
 $BOLT_SOURCE_DIR/configure \
