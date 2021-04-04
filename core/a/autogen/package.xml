@@ -29,8 +29,6 @@
                 sha256sum="f8a13466b48faa3ba99fe17a069e71c9ab006d9b1cfabe699f8c60a47d5bb49a"/>
             <file src="debian-patches-4.tar.gz" subdir="patches"
                 sha256sum="c0395748061e7c0f0d22b71e7b2e0267280627c3a9ea9d9d3fda99de459cc53a"/>
-            <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="51b81f0729a5bf5b117231640f6695b06de030a52a56b829a966412bd1eb3986"/>
         </sources>
 
         <patches>
@@ -40,14 +38,13 @@
                 <file src="patches/20_no_Werror.diff"/>
                 <file src="patches/30_ag_macros.m4_syntax_error.diff"/>
                 <file src="patches/31_allow_overriding_AGexe_for_crossbuild.diff"/>
-                <!-- Bolt -->
-                <file src="patches/boostrap-shlib-no-bashism.patch"/>
             </patchset>
         </patches>
 
         <requires>
             <package name="automake-1.15"/>
             <package name="autotools-dev"/>
+            <package name="bash"/>
             <package name="gettext"/>
             <package name="gperf"/>
             <package name="guile-2.0-dev"/>
