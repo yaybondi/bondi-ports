@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="python-protobuf" section="python">
+<package name="libprotobuf23" section="libs">
     <description>
-        <summary>Python bindings for protocol buffers</summary>
+        <summary>protocol buffers C++ library</summary>
         <p>
         Protocol buffers are a flexible, efficient, automated mechanism for
         serializing structured data - similar to XML, but smaller, faster, and
@@ -16,18 +16,11 @@
         file formats.
         </p>
         <p>
-        This package contains the Python bindings for the protocol buffers. You will
-        need the protoc tool (in the protobuf-compiler package) to compile your
-        definition to Python classes, and then the modules in this package will allow
-        you to use those classes in your programs.
+        This package contains the runtime library needed for C++ applications.
         </p>
     </description>
 
-    <requires>
-        <package name="python"/>
-    </requires>
-
-    <contents subdir="python2" collect-py-cache-files="true">
-        <file src="${prefix}/lib/python2.7/dist-packages/"/>
+    <contents>
+        <file src="${prefix}/lib/libprotobuf.so.*"/>
     </contents>
 </package>

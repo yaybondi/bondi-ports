@@ -22,7 +22,7 @@
     </description>
 
     <requires>
-        <package name="libprotoc17" version="=="/>
+        <package name="libprotoc23" version="=="/>
         <package name="libprotobuf-dev" version="=="/>
     </requires>
 

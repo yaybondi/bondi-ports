@@ -21,10 +21,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="protobuf-3.6.1.3.tar.gz" subdir="sources"
-                sha256sum="73fdad358857e120fd0fa19e071a96e15c0f23bb25f85d3f7009abfd4f264a2a"/>
-            <file src="debian-patches-2.tar.gz" subdir="patches"
-                sha256sum="155dd25c7bb827c941a08f7007b1d12989f6e0eba986666e266a91eaf4504a6e"/>
+            <file src="protobuf-3.12.4.tar.gz" subdir="sources"
+                sha256sum="512e5a674bf31f8b7928a64d8adf73ee67b8fe88339ad29adaa3b84dbaa570d8"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="43c81c8c8077380471b194ec4c3d92de59de1e5638b6df270256bf90711aafee"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="721d97a0a88c5d6904dcd9dae7acbf7766d716b2102f936745e61fb8cc14de88"/>
         </sources>
@@ -37,6 +37,12 @@
                 <file src="patches/s390x.patch"/>
                 <file src="patches/disable_local_gmock.patch"/>
                 <file src="patches/fix_google_test_link.patch"/>
+                <file src="patches/fix_googletest.patch"/>
+                <file src="patches/no_thirdparty.patch"/>
+                <file src="patches/x32.patch"/>
+                <file src="patches/32bit.patch"/>
+                <file src="patches/python3ify_examples.patch"/>
+                <file src="patches/no_errorprone.patch"/>
                 <!-- Bolt -->
                 <file src="patches/genscript-no-bashism.patch"/>
                 <file src="patches/p6337-link-libatomic-cmake.diff"/>
@@ -46,10 +52,7 @@
 
         <requires>
             <package name="zlib1g-dev"/>
-            <package name="python2-dev"/>
             <package name="python3-dev"/>
-            <package name="python-setuptools"/>
-            <package name="python-six"/>
             <package name="python3-setuptools"/>
             <package name="python3-six"/>
         </requires>
@@ -57,13 +60,12 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="libprotobuf17.xml"/>
-    <xi:include href="libprotobuf-lite17.xml"/>
+    <xi:include href="libprotobuf23.xml"/>
+    <xi:include href="libprotobuf-lite23.xml"/>
     <xi:include href="libprotobuf-dev.xml"/>
-    <xi:include href="libprotoc17.xml"/>
+    <xi:include href="libprotoc23.xml"/>
     <xi:include href="libprotoc-dev.xml"/>
     <xi:include href="protobuf-compiler.xml"/>
-    <xi:include href="python-protobuf.xml"/>
     <xi:include href="python3-protobuf.xml"/>
 
     <xi:include href="changelog.xml"/>

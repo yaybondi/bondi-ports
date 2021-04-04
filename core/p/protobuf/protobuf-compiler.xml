@@ -23,7 +23,7 @@
     </description>
 
     <requires>
-        <package name="libprotoc17" version="=="/>
+        <package name="libprotoc23" version="=="/>
     </requires>
 
     <contents>
