@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
-    <release version="0.5" revision="2bolt1" upstream-version="0.5-2"
+    <release version="0.5" revision="4bolt1" upstream-version="0.5-4"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2019-09-07 23:22:14+03:00">
         <changeset>
