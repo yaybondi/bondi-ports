@@ -21,16 +21,15 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="ldns-1.7.0.tar.gz" subdir="sources"
-                sha256sum="c19f5b1b4fb374cfe34f4845ea11b1e0551ddc67803bd6ddd5d2a20f0997a6cc"/>
-            <file src="debian-patches-4.tar.gz" subdir="patches"
-                sha256sum="35e599b431888ede1f399a48438320a2910b2d292022da6438ac5428c9d39ed5"/>
+            <file src="ldns-1.7.1.tar.gz" subdir="sources"
+                sha256sum="8ac84c16bdca60e710eea75782356f3ac3b55680d40e1530d7cea474ac208229"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="7a5a733bf515c91b572f480341e803c81be63427cc1510140ffba662d7e4af1e"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/0002-Check-parse-limit-before-t-increment.patch"/>
-                <file src="patches/0003-bugfix-1257-Free-after-reallocing-to-0-size.patch"/>
+                <file src="patches/Makefile-remove-install-libldns-pc.patch"/>
             </patchset>
         </patches>
 
@@ -38,7 +37,6 @@
             <package name="chrpath"/>
             <package name="libssl-dev"/>
             <package name="pkg-config"/>
-            <package name="python2-dev"/>
             <package name="python3-dev"/>
             <package name="swig"/>
         </requires>
