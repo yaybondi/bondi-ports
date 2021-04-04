@@ -14,7 +14,7 @@
     </description>
 
     <requires>
-        <package name="libldns2" version="=="/>
+        <package name="libldns3" version="=="/>
         <package name="libssl-dev"/>
     </requires>
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libldns2" section="libs">
+<package name="libldns3" section="libs">
     <description>
         <summary>ldns library for DNS programming</summary>
         <p>

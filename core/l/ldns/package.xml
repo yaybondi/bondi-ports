@@ -46,10 +46,9 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="libldns2.xml"/>
+    <xi:include href="libldns3.xml"/>
     <xi:include href="libldns-dev.xml"/>
     <xi:include href="ldnsutils.xml"/>
-    <xi:include href="python-ldns.xml"/>
     <xi:include href="python3-ldns.xml"/>
 
     <xi:include href="changelog.xml"/>
