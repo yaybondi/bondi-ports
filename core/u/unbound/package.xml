@@ -17,9 +17,17 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="unbound-1.9.0.tar.gz" subdir="sources"
-                sha256sum="415af94b8392bc6b2c52e44ac8f17935cc6ddf2cc81edfb47c5be4ad205ab917"/>
+            <file src="unbound-1.13.1.tar.gz" subdir="sources"
+                sha256sum="8504d97b8fc5bd897345c95d116e0ee0ddf8c8ff99590ab2b4bd13278c9f50b8"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="d527b9b57430ff74a3d7b812dbc9a2ffd82746231e5b5aa381af501e5eae9929"/>
         </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/0001-Enable-remote-control-by-default.patch"/>
+            </patchset>
+        </patches>
 
         <requires>
             <package name="autoconf"/>

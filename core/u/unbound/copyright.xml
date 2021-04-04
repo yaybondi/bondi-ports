@@ -2,7 +2,7 @@
     <files license="BSD-3-NLnetLabs">
         <file src="*"/>
         <copyright-notice><![CDATA[
-2001-2017 NLnet Labs
+2001-2021 NLnet Labs
 2008-2009 W.C.A. Wijngaards
 2008-2009 Wouter Wijngaards
         ]]></copyright-notice>
