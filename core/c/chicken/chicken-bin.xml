@@ -18,6 +18,6 @@
 
     <contents>
         <file src="${prefix}/bin"/>
-        <file src="/var/lib/chicken/8"/>
+        <file src="/var/lib/chicken/11"/>
     </contents>
 </package>

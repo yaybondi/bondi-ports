@@ -14,7 +14,7 @@
     </description>
 
     <requires>
-        <package name="libchicken8" version="=="/>
+        <package name="libchicken11" version="=="/>
         <package name="libpcre3-dev"/>
     </requires>
 

@@ -13,10 +13,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="chicken-4.13.0.tar.gz" subdir="sources"
-                sha256sum="add549619a31363d6608b39e0cf0e68b9d5e6ff2a719b5691ddeba57229c6c43"/>
-            <file src="debian-patches-1.tar.gz" subdir="patches"
-                sha256sum="cdc5f24cf3c8766baeadf8dc40bce2f7aa6c8c0cdb3c0782adb5a27c15c85bea"/>
+            <file src="chicken-5.2.0.tar.gz" subdir="sources"
+                sha256sum="819149c8ce7303a9b381d3fdc1d5765c5f9ac4dee6f627d1652f47966a8780fa"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="028c71181945fa1af831da7b7b03e798213766e1bffe82a4c19a35b73f989a0b"/>
         </sources>
 
         <patches>
@@ -34,7 +34,7 @@
     </source>
 
     <xi:include href="chicken-bin.xml"/>
-    <xi:include href="libchicken8.xml"/>
+    <xi:include href="libchicken11.xml"/>
     <xi:include href="libchicken-dev.xml"/>
 
     <xi:include href="changelog.xml"/>
