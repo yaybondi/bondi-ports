@@ -30,6 +30,7 @@
     <contents>
         <file src="${prefix}/include/google/protobuf/*.h"/>
         <file src="${prefix}/include/google/protobuf/*.proto"/>
+        <file src="${prefix}/include/google/protobuf/*.inc"/>
         <file src="${prefix}/include/google/protobuf/io"/>
         <file src="${prefix}/include/google/protobuf/stubs"/>
         <file src="${prefix}/include/google/protobuf/util"/>
