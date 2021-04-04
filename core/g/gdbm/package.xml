@@ -21,17 +21,9 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="gdbm-1.18.1.tar.gz" subdir="sources"
-                sha256sum="86e613527e5dba544e73208f42b78b7c022d4fa5a6d5498bf18c8d6f745b91dc"/>
-            <file src="debian-patches-4.tar.gz" subdir="patches"
-                sha256sum="16a859e9a25dca804bff2ea6df961fa76abdeb32e816d12b0fe17417f0ee6a41"/>
+            <file src="gdbm-1.19.tar.gz" subdir="sources"
+                sha256sum="37ed12214122b972e18a0d94995039e57748191939ef74115b1d41d8811364bc"/>
         </sources>
-
-        <patches>
-            <patchset subdir="sources">
-                <file src="patches/patch-fix-spelling-error-in-gdbm.3.patch"/>
-            </patchset>
-        </patches>
 
         <requires>
             <package name="texinfo"/>
