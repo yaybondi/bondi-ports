@@ -21,19 +21,17 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="swig-3.0.12.tar.gz" subdir="sources"
-                sha256sum="7cf9f447ae7ed1c51722efc45e7f14418d15d7a1e143ac9f09a668999f4fc94d"/>
-            <file src="debian-patches-2.tar.gz" subdir="patches"
-                sha256sum="4ef4b31b3cedcfac242b61943c600b1b1e0f21ea45cbe53908d48c6ab59aff0f"/>
+            <file src="swig-4.0.2.tar.gz" subdir="sources"
+                sha256sum="d53be9730d8d58a16bf0cbd1f8ac0c0c3e1090573168bfa151b01eb47fa906fc"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="5a56f01eda2b805a7280c0970c7b22fe752ed390f2811b7569ba449bd45dd571"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
+                <file src="patches/ccache_program_transform.patch"/>
                 <file src="patches/ccache-rename.diff"/>
-                <file src="patches/octave4.4.patch"/>
-                <file src="patches/python-fix-function-cast-warnings.patch"/>
-                <file src="patches/python-fix-gcc8-strncpy-warning.patch"/>
-                <file src="patches/fix-gcc8-memset-warnings.patch"/>
+                <file src="patches/ccache-use-cppflags"/>
             </patchset>
         </patches>
 
@@ -45,7 +43,7 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="swig3.0.xml"/>
+    <xi:include href="swig4.0.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>

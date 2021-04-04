@@ -11,8 +11,8 @@ cd "$BOLT_BUILD_DIR"
     --build="$BOLT_HOST_TYPE" \
     --host="$BOLT_HOST_TYPE" \
     --without-alllang \
-    --with-swiglibdir="$BOLT_INSTALL_PREFIX/share/swig3.0" \
-    --program-suffix=3.0
+    --with-swiglibdir="$BOLT_INSTALL_PREFIX/share/swig4.0" \
+    --program-suffix=4.0
 
     ]]>
     </prepare>
