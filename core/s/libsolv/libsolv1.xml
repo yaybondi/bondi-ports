@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libsolv0" section="admin">
+<package name="libsolv1" section="admin">
     <description>
         <summary>dependency solver using a satisfiability algorithm (shared library)</summary>
         <p>

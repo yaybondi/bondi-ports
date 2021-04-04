@@ -18,7 +18,7 @@
     </description>
 
     <requires>
-        <package name="libsolvext0" version="=="/>
+        <package name="libsolvext1" version="=="/>
     </requires>
 
     <contents>
@@ -27,6 +27,6 @@
         <file src="${prefix}/include/solv/repo_write.h"/>
         <file src="${prefix}/include/solv/solv_xfopen.h"/>
         <file src="${prefix}/include/solv/tools_util.h"/>
-	<file src="${prefix}/lib/libsolvext.{so,a}"/>
+        <file src="${prefix}/lib/libsolvext.{so,a}"/>
     </contents>
 </package>

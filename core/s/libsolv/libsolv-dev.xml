@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libsolv0-dev" section="libdevel">
+<package name="libsolv-dev" section="libdevel">
     <description>
         <summary>dependency solver using a satisfiability algorithm (development files)</summary>
         <p>
@@ -18,11 +18,12 @@
     </description>
 
     <requires>
-        <package name="libsolv0" version="=="/>
-        <package name="libsolvext0-dev" version="=="/>
+        <package name="libsolv1" version="=="/>
+        <package name="libsolvext-dev" version="=="/>
     </requires>
 
     <contents>
+        <dir src="${prefix}/include/solv"/>
         <file src="${prefix}/include/solv/bitmap.h"/>
         <file src="${prefix}/include/solv/chksum.h"/>
         <file src="${prefix}/include/solv/dataiterator.h"/>
@@ -50,8 +51,8 @@
         <file src="${prefix}/include/solv/testcase.h"/>
         <file src="${prefix}/include/solv/transaction.h"/>
         <file src="${prefix}/include/solv/util.h"/>
-        <file src="${prefix}/lib/cmake/LibSolv"/>
-	<file src="${prefix}/lib/libsolv.{so,a}"/>
-        <file src="${prefix}/lib/pkgconfig"/>
+        <file src="${prefix}/lib/libsolv.{so,a}"/>
+        <file src="${prefix}/lib/pkgconfig/libsolv.pc"/>
+        <file src="${prefix}/share/cmake/libsolv"/>
     </contents>
 </package>

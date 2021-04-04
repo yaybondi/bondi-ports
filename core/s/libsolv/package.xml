@@ -54,10 +54,10 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="libsolv0.xml"/>
-    <xi:include href="libsolv0-dev.xml"/>
-    <xi:include href="libsolvext0.xml"/>
-    <xi:include href="libsolvext0-dev.xml"/>
+    <xi:include href="libsolv1.xml"/>
+    <xi:include href="libsolv-dev.xml"/>
+    <xi:include href="libsolvext1.xml"/>
+    <xi:include href="libsolvext-dev.xml"/>
     <xi:include href="libsolv-tools.xml"/>
 
     <xi:include href="changelog.xml"/>
