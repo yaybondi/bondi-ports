@@ -23,7 +23,9 @@ $BOLT_SOURCE_DIR/configure \
 
 cd "$BOLT_BUILD_DIR"
 make -j"$BOLT_PARALLEL_JOBS"
-sh -x ./generate_descriptor_proto.sh
+
+chmod +x generate_descriptor_proto.sh
+./generate_descriptor_proto.sh
 
 cp -a python python3
 

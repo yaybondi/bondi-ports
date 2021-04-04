@@ -25,8 +25,6 @@
                 sha256sum="512e5a674bf31f8b7928a64d8adf73ee67b8fe88339ad29adaa3b84dbaa570d8"/>
             <file src="debian-patches-1.tar.gz" subdir="patches"
                 sha256sum="43c81c8c8077380471b194ec4c3d92de59de1e5638b6df270256bf90711aafee"/>
-            <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="721d97a0a88c5d6904dcd9dae7acbf7766d716b2102f936745e61fb8cc14de88"/>
         </sources>
 
         <patches>
@@ -43,14 +41,11 @@
                 <file src="patches/32bit.patch"/>
                 <file src="patches/python3ify_examples.patch"/>
                 <file src="patches/no_errorprone.patch"/>
-                <!-- Bolt -->
-                <file src="patches/genscript-no-bashism.patch"/>
-                <file src="patches/p6337-link-libatomic-cmake.diff"/>
-                <file src="patches/p5227-link-libatomic-autotools.diff"/>
             </patchset>
         </patches>
 
         <requires>
+            <package name="bash"/>
             <package name="zlib1g-dev"/>
             <package name="python3-dev"/>
             <package name="python3-setuptools"/>
