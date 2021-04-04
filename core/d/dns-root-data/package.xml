@@ -17,8 +17,8 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="dns-root-data-2019031302.tar.xz" subdir="sources"
-                sha256sum="5606dec8c6641f5c44013efc6394274c98b577f8c0846ea30b808a11c4b3e876"/>
+            <file src="dns-root-data-2021011101.tar.xz" subdir="sources"
+                sha256sum="4efe774175f329a81e798c4f718af8d9ffff6badf3ef2e8c17636445f95ff1d4"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="937a316c0cb7deeea5bb3620b8233a281d758653ca53a3b79b5a25597f6ab461"/>
         </sources>
