@@ -20,20 +20,20 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="libevent-2.1.8-stable.tar.gz" subdir="sources"
-                sha256sum="965cc5a8bb46ce4199a47e9b2c9e1cae3b137e8356ffdad6d94d3b9069b71dc2"/>
-            <file src="debian-patches-4.tar.gz" subdir="patches"
-                sha256sum="a2534ba713973f9d7a244a2841187db1606081076efddca8baa52f258aec6029"/>
+            <file src="libevent-2.1.12-stable.tar.gz" subdir="sources"
+                sha256sum="92e6de1be9ec176428fd2367677e61ceffc2ee1cb119035037a27d346b0403bb"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="5c4735b60f1c1dc98c68ddb07fee4c18997d00b316d52728ed3dc822fb94a608"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <file src="patches/0001-Do-not-check-for-ERR_remove_thread_state-do-not-link.patch"/>
+                <file src="patches/0001-Always-build-with-no-undefined.patch"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="automake-1.15"/>
+            <package name="automake"/>
             <package name="autotools-dev"/>
             <package name="libssl-dev"/>
         </requires>

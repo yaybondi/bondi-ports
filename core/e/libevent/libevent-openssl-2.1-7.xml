@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libevent-pthreads-2.1-6" section="libs">
+<package name="libevent-openssl-2.1-7" section="libs">
     <description>
-        <summary>Asynchronous event notification library (pthreads)</summary>
+        <summary>Asynchronous event notification library (openssl)</summary>
         <p>
         Libevent is an asynchronous event notification library that provides a
         mechanism to execute a callback function when a specific event occurs
@@ -13,17 +13,19 @@
         kqueue(2), event ports, select(2), poll(2) and epoll(4).
         </p>
         <p>
-        If you want threading support and you're using pthreads, you'll need
-        to link against the libevent_pthreads library in addition to
-        libevent_core.
+        There is now a bufferevent type that supports SSL/TLS using the
+        OpenSSL library. The code for this is build in a separate
+        library, libevent_openssl, so that your programs don't need to
+        link against OpenSSL unless they actually want SSL support.
         </p>
     </description>
 
     <requires>
-        <package name="libevent-core-2.1-6" version="=="/>
+        <package name="libssl1.1" version=">= 1.1.0"/>
+        <package name="libevent-core-2.1-7" version="=="/>
     </requires>
 
     <contents>
-        <file src="${prefix}/lib/libevent_pthreads-2.1.so.*"/>
+        <file src="${prefix}/lib/libevent_openssl-2.1.so.*"/>
     </contents>
 </package>

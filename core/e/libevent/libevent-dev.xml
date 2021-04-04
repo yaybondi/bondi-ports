@@ -13,11 +13,11 @@
     </description>
 
     <requires>
-        <package name="libevent-2.1-6" version="=="/>
-        <package name="libevent-core-2.1-6" version="=="/>
-        <package name="libevent-extra-2.1-6" version="=="/>
-        <package name="libevent-pthreads-2.1-6" version="=="/>
-        <package name="libevent-openssl-2.1-6" version="=="/>
+        <package name="libevent-2.1-7" version="=="/>
+        <package name="libevent-core-2.1-7" version="=="/>
+        <package name="libevent-extra-2.1-7" version="=="/>
+        <package name="libevent-pthreads-2.1-7" version="=="/>
+        <package name="libevent-openssl-2.1-7" version="=="/>
     </requires>
 
     <contents>
