@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libsolvext0-dev" section="libdevel">
+<package name="libsolvext-dev" section="libdevel">
     <description>
         <summary>dependency solver using a satisfiability algorithm (ext development files)</summary>
         <p>
