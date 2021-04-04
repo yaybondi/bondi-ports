@@ -29,21 +29,17 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="gnutls28-3.6.7.tar.xz" subdir="sources"
-                sha256sum="5b3409ad5aaf239808730d1ee12fdcd148c0be00262c7edf157af655a8a188e2"/>
-            <file src="debian-patches-4.tar.gz" subdir="patches"
-                sha256sum="5bc9ddd416eaec75ea3efd4d78a0e3a10c0970dab697c15cf86214df0103e924"/>
+            <file src="gnutls28-3.7.1.tar.xz" subdir="sources"
+                sha256sum="3777d7963eca5e06eb315686163b7b3f5045e2baac5e54e038ace9835e5cac6f"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="b1a3d54ab8c1bba917357a938423b0b4bfe7c0ff2f3eac8405496012b221ad46"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/14_version_gettextcat.diff"/>
                 <file src="patches/30_guile-snarf.diff"/>
-                <file src="patches/40_rel3.6.8_01-gnutls_srp_entry_free-follow-consistent-behavior-in.patch"/>
-                <file src="patches/40_rel3.6.8_05-lib-nettle-fix-carry-flag-in-Streebog-code.patch"/>
-                <file src="patches/40_rel3.6.8_10-ext-record_size_limit-distinguish-sending-and-receiv.patch"/>
-                <file src="patches/40_rel3.6.8_15-Apply-STD3-ASCII-rules-in-gnutls_idna_map.patch"/>
-                <file src="patches/40_rel3.6.8_20-pubkey-remove-deprecated-TLS1_RSA-flag-check.patch"/>
+                <file src="patches/40_fix_ipv6only_testsuite_AI_ADDRCONFIG.diff"/>
             </patchset>
         </patches>
 
