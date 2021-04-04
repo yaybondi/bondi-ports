@@ -2,7 +2,7 @@
     <files license="BSD-2-Clause">
         <file src="*"/>
         <copyright-notice><![CDATA[
-2008-2018 Dave Benson and the protobuf-c authors
+2008-2019 Dave Benson and the protobuf-c authors
         ]]></copyright-notice>
         <license><![CDATA[
 Redistribution and use in source and binary forms, with or without
