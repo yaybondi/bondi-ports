@@ -18,8 +18,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/libxxhash.{a,so}"/>
-        <file src="/usr/lib/pkgconfig"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libxxhash.{a,so}"/>
+        <file src="${prefix}/lib/pkgconfig"/>
     </contents>
 </package>
