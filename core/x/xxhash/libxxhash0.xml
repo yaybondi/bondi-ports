@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libxxhash0" section="libs">
+    <description>
+        <summary>shared library for xxhash</summary>
+        <p>
+        xxHash is an Extremely fast Hash algorithm, running at RAM speed limits.
+        It successfully completes the SMHasher test suite which evaluates collision,
+        dispersion and randomness qualities of hash functions. Code is highly portable,
+        and hashes are identical on all platforms (little / big endian).
+        </p>
+        <p>
+        This package contains the shared library.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/libxxhash.so.*"/>
+    </contents>
+</package>

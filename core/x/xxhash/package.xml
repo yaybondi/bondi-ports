@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="xxhash" repo="contrib"
+            architecture-independent="false">
+        <description>
+            <summary>Extremely fast hash algorithm</summary>
+            <p>
+            xxHash is an Extremely fast Hash algorithm, running at RAM speed limits.
+            It successfully completes the SMHasher test suite which evaluates collision,
+            dispersion and randomness qualities of hash functions. Code is highly portable,
+            and hashes are identical on all platforms (little / big endian).
+            </p>
+        </description>
+
+        <xi:include href="copyright.xml"/>
+
+        <sources>
+            <file src="xxhash-0.8.0.tar.gz" subdir="sources"
+                sha256sum="7054c3ebd169c97b64a92d7b994ab63c70dd53a06974f1f630ab782c28db0f4f"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="b5b641d245ca3bca8c083af15b657342c452a1fa121385e74a1eca6ffe792e7a"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/reproducible-build.patch"/>
+                <file src="patches/upstream-b4dbf5fefc37b8a-fix-empty-version-in-pc-file"/>
+            </patchset>
+        </patches>
+
+        <requires>
+
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="xxhash.xml"/>
+    <xi:include href="libxxhash0.xml"/>
+    <xi:include href="libxxhash-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
