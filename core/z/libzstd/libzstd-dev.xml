@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libzstd-dev" section="libdevel">
+    <description>
+        <summary>fast lossless compression algorithm -- development files</summary>
+        <p>
+        Zstd, short for Zstandard, is a fast lossless compression algorithm, targeting
+        real-time compression scenarios at zlib-level compression ratio.
+        </p>
+        <p>
+        This package contains the headers and static library.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libzstd1" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include"/>
+        <file src="/usr/lib/libzstd.{a,so}"/>
+        <file src="/usr/lib/pkgconfig"/>
+    </contents>
+</package>

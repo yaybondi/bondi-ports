@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libzstd" repo="contrib"
+            architecture-independent="false">
+        <description>
+            <summary>fast lossless compression algorithm -- development files</summary>
+            <p>
+            Zstd, short for Zstandard, is a fast lossless compression algorithm, targeting
+            real-time compression scenarios at zlib-level compression ratio.
+            </p>
+            <p>
+            This package contains the headers and static library.
+            </p>
+        </description>
+
+        <xi:include href="copyright.xml"/>
+
+        <sources>
+            <file src="libzstd-1.4.8+dfsg.tar.xz" subdir="sources"
+                sha256sum="1e8ce5c4880a6d5bd8d3186e4186607dd19b64fc98a3877fc13aeefd566d67c5"/>
+            <file src="debian-patches-2.1.tar.gz" subdir="patches"
+                sha256sum="81ce2a5ec63f0a6774d451a5ef7da782305c085e10466d67fab35f940dc9d067"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/0006-Use-bash-for-test-script-portablitity.patch"/>
+                <file src="patches/0008-Address-embedded-zlib.patch"/>
+                <file src="patches/0013-skip-memory-greedy-tests.patch"/>
+                <file src="patches/0014-Reproducible-build.patch"/>
+                <file src="patches/0015-Skip-dev-random-tests-on-hurd.patch"/>
+                <file src="patches/0017-alpha-fbfs-st_mtime.patch"/>
+                <file src="patches/0018-fix-file-permissions-on-compression.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="liblz4-dev"/>
+            <package name="liblzma-dev"/>
+            <package name="zlib1g-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libzstd-dev.xml"/>
+    <xi:include href="libzstd1.xml"/>
+    <xi:include href="zstd.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

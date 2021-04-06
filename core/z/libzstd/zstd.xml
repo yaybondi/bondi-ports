@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="zstd" section="utils">
+    <description>
+        <summary>fast lossless compression algorithm -- CLI tool</summary>
+        <p>
+        Zstd, short for Zstandard, is a fast lossless compression algorithm, targeting
+        real-time compression scenarios at zlib-level compression ratio.
+        </p>
+        <p>
+        This package contains the CLI program implementing zstd.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/bin"/>
+    </contents>
+</package>
