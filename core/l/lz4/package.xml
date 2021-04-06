@@ -35,7 +35,7 @@
         </patches>
 
         <requires>
-            <package name="python3:any<!nocheck>"/>
+            <package name="python3"/>
         </requires>
 
         <xi:include href="rules.xml"/>
