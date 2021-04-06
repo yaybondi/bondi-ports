@@ -47,7 +47,6 @@
         <xi:include href="rules.xml"/>
     </source>
 
-    <xi:include href="python-pip.xml"/>
     <xi:include href="python3-pip.xml"/>
 
     <xi:include href="changelog.xml"/>
