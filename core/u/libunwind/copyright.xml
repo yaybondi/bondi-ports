@@ -1,0 +1,113 @@
+<copyright>
+    <files license="Expat">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+2001-2005 Hewlett-Packard Co.
+2007 David Mosberger-Tang
+        ]]></copyright-notice>
+    </files>
+    <files license="Expat">
+        <file src="src/arm/*"/>
+        <copyright-notice><![CDATA[
+2008 CodeSourcery
+        ]]></copyright-notice>
+    </files>
+    <files license="Expat">
+        <file src="src/mi/strerror.c"/>
+        <copyright-notice><![CDATA[
+2004 BEA Systems
+        ]]></copyright-notice>
+    </files>
+    <files license="Expat">
+        <file src="src/mips/*"/>
+        <copyright-notice><![CDATA[
+2008 CodeSourcery
+        ]]></copyright-notice>
+    </files>
+    <files license="Expat">
+        <file src="src/os-freebsd.c"/>
+        <file src="src/x86/*-freebsd.*"/>
+        <copyright-notice><![CDATA[
+2010 Konstantin Belousov <kib@freebsd.org>
+        ]]></copyright-notice>
+    </files>
+    <files license="Expat">
+        <file src="src/ppc*/*"/>
+        <copyright-notice><![CDATA[
+2006-2007 IBM
+        ]]></copyright-notice>
+    </files>
+    <files license="Expat">
+        <file src="src/ptrace/_UPT_access_*"/>
+        <copyright-notice><![CDATA[
+2003-2005 Hewlett-Packard Co
+2010 Konstantin Belousov <kib@freebsd.org>
+        ]]></copyright-notice>
+    </files>
+    <files license="Expat">
+        <file src="src/unwind/GetIPInfo.c"/>
+        <copyright-notice><![CDATA[
+2009 Red Hat
+        ]]></copyright-notice>
+    </files>
+    <files license="Expat">
+        <file src="src/x86/getcontext-linux.S"/>
+        <copyright-notice><![CDATA[
+2009 Google, Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="Expat">
+        <file src="src/x86_64/Gstash_frame.c"/>
+        <file src="src/x86_64/Gtrace.c"/>
+        <copyright-notice><![CDATA[
+2010, 2011 by FERMI NATIONAL ACCELERATOR LABORATORY
+        ]]></copyright-notice>
+    </files>
+    <files license="Expat">
+        <file src="src/x86_64/*context.S"/>
+        <copyright-notice><![CDATA[
+2008 Google, Inc
+2010 Konstantin Belousov <kib@freebsd.org>
+        ]]></copyright-notice>
+    </files>
+    <files license="Expat">
+        <file src="tests/Gtest-nocalloc.c"/>
+        <file src="tests/Gtest-nomalloc.c"/>
+        <copyright-notice><![CDATA[
+2009, 2011 Google, Inc
+        ]]></copyright-notice>
+    </files>
+    <files license="Expat">
+        <file src="tests/Gtest-trace.c"/>
+        <copyright-notice><![CDATA[
+2010, 2011 by FERMI NATIONAL ACCELERATOR LABORATORY
+        ]]></copyright-notice>
+    </files>
+    <files license="Expat">
+        <file src="tests/Ltest-cxx-exceptions.cxx"/>
+        <copyright-notice><![CDATA[
+2010 stefan.demharter@gmx.net
+2010 arun.sharma@google.com
+        ]]></copyright-notice>
+    </files>
+    <license handle="Expat"><![CDATA[
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    ]]></license>
+</copyright>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libunwind" repo="contrib"
+            architecture-independent="false">
+        <description>
+            <summary>library to determine the call-chain of a program - development</summary>
+            <p>
+            The primary goal of this project is to define a portable and efficient C
+            programming interface (API) to determine the call-chain of a program.
+            The API additionally provides the means to manipulate the preserved
+            (callee-saved) state of each call-frame and to resume execution at any
+            point in the call-chain (non-local goto). The API supports both local
+            (same-process) and remote (across-process) operation. As such, the API
+            is useful in a number of applications.
+            </p>
+            <p>
+            This package includes the development support files.
+            </p>
+        </description>
+
+        <xi:include href="copyright.xml"/>
+
+        <sources>
+            <file src="libunwind-1.3.2.tar.gz" subdir="sources"
+                sha256sum="0a4b5a78d8c0418dfa610245f75fa03ad45d8e5e4cc091915d2dbed34c01178e"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="56b74acefb025a8c0c2c9eec144b42e40b6683f032e5d30af268f62b4d594771"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/20140507-ppc_lib64.patch"/>
+                <file src="patches/0001-aarch64-Use-__asm__-instead-of-asm-89.patch"/>
+                <file src="patches/0001-Fix-compilation-with-fno-common.patch"/>
+                <file src="patches/0001-Link-Ltest-cxx-exceptions-with-libunwind.patch"/>
+                <file src="patches/0001-tests-Include-wait-related-headers-for-Ltest-mem-val.patch"/>
+                <file src="patches/0001-fix-compile-issue-on-SH-platform-137.patch"/>
+                <file src="patches/libunwind-1.2-coredump-regs.patch"/>
+                <file src="patches/libunwind-1.2-ia64-missing.patch"/>
+                <file src="patches/libunwind-1.2-ia64-ptrace-coredump.patch"/>
+                <file src="patches/0001-ia64-Fix-dyn_info_list.S-with-newer-binutils.patch"/>
+                <file src="patches/0001-Gia64-test-nat.c-include-signal.h-for-sigaction.patch"/>
+                <file src="patches/0001-Disable-Ltest-init-local-signal-on-ia64.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="liblzma-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libunwind-dev.xml"/>
+    <xi:include href="libunwind8.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
