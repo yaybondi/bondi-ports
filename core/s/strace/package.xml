@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="strace" repo="core" architecture-independent="false">
+        <description>
+            <summary>System call tracer</summary>
+            <p>
+            strace is a system call tracer: i.e. a debugging tool which prints out
+            a trace of all the system calls made by another process/program.
+            The program to be traced need not be recompiled for this, so you can
+            use it on binaries for which you don't have source.
+            </p>
+            <p>
+            System calls and signals are events that happen at the user/kernel
+            interface. A close examination of this boundary is very useful for bug
+            isolation, sanity checking and attempting to capture race conditions.
+            </p>
+        </description>
+
+        <xi:include href="copyright.xml"/>
+
+        <sources>
+            <file src="strace-5.10.tar.xz" subdir="sources"
+                sha256sum="fe3982ea4cd9aeb3b4ba35f6279f0b577a37175d3282be24b9a5537b56b8f01c"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="dfcd9d974bce9fc28ccf82c31c9f62eb342d63ffae1ce7859f0ec90614ccee34"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/02-disable_delay_test"/>
+                <file src="patches/0006-s390-Check-infmname-with-IS_ARRAY_ZERO-too.patch"/>
+                <file src="patches/0007-XFAIL-netlink_crypto.patch"/>
+                <file src="patches/0008-XFAIL-nlattr_crypto_user_alg.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="libc-dev"/>
+            <package name="gawk"/>
+            <package name="libunwind-dev"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="strace.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

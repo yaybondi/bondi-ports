@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="strace" section="utils">
+    <description>
+        <summary>System call tracer</summary>
+        <p>
+        strace is a system call tracer: i.e. a debugging tool which prints out
+        a trace of all the system calls made by another process/program.
+        The program to be traced need not be recompiled for this, so you can
+        use it on binaries for which you don't have source.
+        </p>
+        <p>
+        System calls and signals are events that happen at the user/kernel
+        interface. A close examination of this boundary is very useful for bug
+        isolation, sanity checking and attempting to capture race conditions.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+    </contents>
+</package>
