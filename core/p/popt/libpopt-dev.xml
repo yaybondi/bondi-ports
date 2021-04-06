@@ -16,7 +16,7 @@
     </description>
 
     <requires>
-        <package name="libc6-dev"/>
+        <package name="libc-dev"/>
         <package name="libpopt0" version="=="/>
     </requires>
 
