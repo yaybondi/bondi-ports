@@ -44,7 +44,10 @@
 
         <requires>
             <package name="libacl1-dev"/>
-            <package name="libattr1-dev"/>
+            <package name="libpopt-dev"/>
+            <package name="liblz4-dev"/>
+            <package name="libxxhash-dev"/>
+            <package name="libzstd-dev"/>
             <package name="zlib1g-dev"/>
             <package name="libssl-dev"/>
         </requires>
