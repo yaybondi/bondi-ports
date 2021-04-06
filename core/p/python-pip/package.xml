@@ -17,10 +17,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="python-pip-18.1.tar.gz" subdir="sources"
-                sha256sum="c0a292bd977ef590379a3f05d7b7f65135487b67470f6281289a94e015650ea1"/>
-            <file src="debian-patches-5.tar.gz" subdir="patches"
-                sha256sum="2c363f166577b3337cd697a6a1b7dbbf2e8a4f66640f0f37eca00197cbfa3d00"/>
+            <file src="python-pip-20.3.4.tar.gz" subdir="sources"
+                sha256sum="6773934e5f5fc3eaa8c5a44949b5b924fc122daa0a8aa9f80c835b4ca2a543fc"/>
+            <file src="debian-patches-1.tar.gz" subdir="patches"
+                sha256sum="c8c79eabcb42b4978628bcb8957753c452fcb21be8f940f746a4d908a5cc68ab"/>
         </sources>
 
         <patches>
@@ -30,13 +30,16 @@
                 <file src="patches/handle-unbundled-requests.patch"/>
                 <file src="patches/set_user_default.patch"/>
                 <file src="patches/disable-pip-version-check.patch"/>
-                <file src="patches/Properly_catch_requests_HTTPError_in_index.py.patch"/>
+                <file src="patches/commands_list_version_workaround.patch"/>
+                <file src="patches/add_pkg-resources_to_freeze.patch"/>
+                <file src="patches/wheel-and-pip-not-pip-wheels.patch"/>
+                <file src="patches/debian-python2.7-sysconfig-workaround.patch"/>
+                <file src="patches/debug-command-for-unbundled.patch"/>
+                <file src="patches/str-version.patch"/>
             </patchset>
         </patches>
 
         <requires>
-            <package name="python-all"/>
-            <package name="python-setuptools"/>
             <package name="python3-all"/>
             <package name="python3-setuptools"/>
         </requires>
