@@ -27,7 +27,7 @@ export CC="$BOLT_HOST_TYPE-gcc"
 cd "$BOLT_BUILD_DIR"
 make PREFIX="$BOLT_INSTALL_PREFIX" \
      DESTDIR="$BOLT_INSTALL_DIR" \
-     LIBDIR="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib" \
+     LIBDIR="$BOLT_INSTALL_PREFIX/lib" \
      install
 
     ]]>
