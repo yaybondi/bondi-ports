@@ -4,8 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="lz4" repo="contrib"
-            architecture-independent="false">
+    <source name="lz4" repo="core" architecture-independent="false">
         <description>
             <summary>Fast LZ compression algorithm library</summary>
             <p>
