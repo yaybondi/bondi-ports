@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="popt" repo="contrib"
+            architecture-independent="false">
+        <description>
+            <summary>lib for parsing cmdline parameters</summary>
+            <p>
+            Popt was heavily influenced by the getopt() and getopt_long() functions,
+            but it allows more powerful argument expansion. It can parse arbitrary
+            argv[] style arrays and automatically set variables based on command
+            line arguments. It also allows command line arguments to be aliased via
+            configuration files and includes utility functions for parsing arbitrary
+            strings into argv[] arrays using shell-like rules.
+            </p>
+            <p>
+            This package contains the runtime library and locale data.
+            </p>
+        </description>
+
+        <xi:include href="copyright.xml"/>
+
+        <sources>
+            <file src="popt-1.18.tar.gz" subdir="sources"
+                sha256sum="5159bc03a20b28ce363aa96765f37df99ea4d8850b1ece17d1e6ad5c24fdc5d1"/>
+            <file src="debian-patches-2.tar.gz" subdir="patches"
+                sha256sum="0c2934709feebab1acb2a009233f25a461326669bdc1e08b3b6e7cae9c4946f1"/>
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/318833-incorrect-handling-of-leftovers-with-poptStuffArgs.patch"/>
+                <file src="patches/278402-manpage-typos.patch"/>
+                <file src="patches/356669-add-catalan-translation.patch"/>
+                <file src="patches/autoreconf-libtool.patch"/>
+                <file src="patches/autoreconf-gettext.patch"/>
+                <file src="patches/fix-test1-lt.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="gettext" version=">= 0.19.8"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libpopt0.xml"/>
+    <xi:include href="libpopt-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

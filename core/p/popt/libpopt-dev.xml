@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libpopt-dev" section="libdevel">
+    <description>
+        <summary>lib for parsing cmdline parameters - development files</summary>
+        <p>
+        Popt was heavily influenced by the getopt() and getopt_long() functions,
+        but it allows more powerful argument expansion. It can parse arbitrary
+        argv[] style arrays and automatically set variables based on command
+        line arguments. It also allows command line arguments to be aliased via
+        configuration files and includes utility functions for parsing arbitrary
+        strings into argv[] arrays using shell-like rules.
+        </p>
+        <p>
+        This package contains the popt static library and header file.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libc6-dev"/>
+        <package name="libpopt0" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="/usr/include"/>
+        <file src="/usr/lib/libpopt.{a,so}"/>
+        <file src="/usr/lib/pkgconfig"/>
+    </contents>
+</package>
