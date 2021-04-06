@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release version="1.9.3" revision="1bolt1" upstream-version="1.9.3-1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2021-04-06 21:29:09+03:00">
+        <changeset>
+            <li>Adaptation of Debian sources for Bolt OS</li>
+        </changeset>
+    </release>
+</changelog>

@@ -1,0 +1,125 @@
+<copyright>
+    <files license="BSD-2-clause">
+        <file src="*"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 2011-2017, Yann Collet.
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-clause">
+        <file src="lib/*"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 2011-2017, Yann Collet.
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-clause">
+        <file src="lib/liblz4.pc.in"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 2011-2014, Yann Collet.
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-clause">
+        <file src="lib/lz4frame.c"/>
+        <file src="lib/lz4frame_static.h"/>
+        <file src="lib/xxhash.c"/>
+        <file src="lib/xxhash.h"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 2011-2016, Yann Collet.
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="programs/*"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 2011-2016, Yann Collet.
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="programs/lz4io.c"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 2011-2017, Yann Collet.
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="programs/platform.h"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 2016 -present, Przemyslaw Skibinski, Yann Collet
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2+">
+        <file src="programs/util.h"/>
+        <copyright-notice><![CDATA[
+Copyright (C) 2016 -present, Przemyslaw Skibinski, Yann Collet
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2">
+        <file src="./examples/printVersion.c"/>
+        <copyright-notice><![CDATA[
+Takayuki Matsuoka & Yann Collet
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2">
+        <file src="./examples/blockStreaming_lineByLine.c"/>
+        <file src="./examples/blockStreaming_doubleBuffer.c"/>
+        <copyright-notice><![CDATA[
+Takayuki Matsuoka
+        ]]></copyright-notice>
+    </files>
+    <files license="GPL-2">
+        <file src="./examples/HCStreaming_ringBuffer.c"/>
+        <file src="./examples/blockStreaming_ringBuffer.c"/>
+        <copyright-notice><![CDATA[
+Yann Collet
+        ]]></copyright-notice>
+    </files>
+    <files license="BSD-2-clause">
+        <file src="./examples/compress_functions.c"/>
+        <file src="./examples/simple_buffer.c"/>
+        <copyright-notice><![CDATA[
+Kyle Harper
+        ]]></copyright-notice>
+    </files>
+    <license handle="GPL-2"><![CDATA[
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; version 2 dated June, 1991.
+
+If you cannot locate the license in the source tree, please visit
+
+    https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
+
+for access to the full license text.
+    ]]></license>
+    <license handle="GPL-2+"><![CDATA[
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; version 2 dated June, 1991, or (at
+your option) any later version.
+
+If you cannot locate the license in the source tree, please visit
+
+    https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
+
+for access to the full license text.
+    ]]></license>
+    <license handle="BSD-2-clause"><![CDATA[
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are 
+met:
+
+* Redistributions of source code must retain the above copyright notice,
+  this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, 
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT 
+OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    ]]></license>
+</copyright>

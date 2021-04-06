@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="liblz4-1" section="libs">
+    <description>
+        <summary>Fast LZ compression algorithm library - runtime</summary>
+        <p>
+        LZ4 is a very fast lossless compression algorithm, providing compression speed
+        at 400 MB/s per core, scalable with multi-cores CPU. It also features an
+        extremely fast decoder, with speed in multiple GB/s per core, typically
+        reaching RAM speed limits on multi-core systems.
+        </p>
+        <p>
+        This package includes the shared library.
+        </p>
+    </description>
+
+    <contents>
+        <file src="/usr/lib/liblz4.so.*"/>
+    </contents>
+</package>
