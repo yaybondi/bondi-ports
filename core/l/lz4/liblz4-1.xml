@@ -14,6 +14,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/liblz4.so.*"/>
+        <file src="${prefix}/lib/liblz4.so.*"/>
     </contents>
 </package>
