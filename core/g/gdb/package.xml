@@ -41,7 +41,6 @@
                 <file src="patches/gdb_bsd-kvm.c.diff"/>
                 <file src="patches/2bf3b79d05bf85e41cbdcb020bd1cc424f59dd9a.diff"/>
                 <!-- Bolt -->
-                <file src="patches/aarch64-musl-sigcontext-from-signal-h.diff"/>
                 <file src="patches/mips-sgidefs.patch"/>
                 <file src="patches/mips64-abio32.diff"/>
                 <!-- Alpine -->
