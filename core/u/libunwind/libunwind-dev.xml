@@ -22,8 +22,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/include/"/>
-        <file src="/usr/lib/libunwind*.{a,so}"/>
-        <file src="/usr/lib/pkgconfig/*.pc"/>
+        <file src="${prefix}/include/"/>
+        <file src="${prefix}/lib/libunwind*.{a,so}"/>
+        <file src="${prefix}/lib/pkgconfig/*.pc"/>
     </contents>
 </package>
