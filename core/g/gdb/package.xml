@@ -19,10 +19,10 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="gdb-8.2.1.tar.xz" subdir="sources"
-                sha256sum="d9a1cc7c8fecb147d4779d6169a6624e2e4c1c74034c6143744c3b0ce8ec5fdc"/>
-            <file src="debian-patches-2.tar.gz" subdir="patches"
-                sha256sum="0247385ddd22c9008a3a14055131ddaa8a507ef26ea18b5a780e5a40d4ae2f0f"/>
+            <file src="gdb-10.1.tar.xz" subdir="sources"
+                sha256sum="d9108690ec1b818d3d4b21243a550083b8b82e36db07063bd89c4f1f73f5e1e7"/>
+            <file src="debian-patches-1.7.tar.gz" subdir="patches"
+                sha256sum="97cb846438f20c111d5fbd130f6c5a090248590745b03386723ca8ad1eef1ae6"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="48a8442580bf859d6108d62ac1595dbc62e9bae98e03f50bee1701025812b163"/>
         </sources>
@@ -30,23 +30,16 @@
         <patches>
             <patchset subdir="sources">
                 <!-- Debian -->
+                <file src="patches/branch-updates.diff"/>
                 <file src="patches/gdb-fortran-main.patch"/>
                 <file src="patches/solve_PATH_MAX_issue.patch"/>
                 <file src="patches/gdb-6.5-bz185337-resolve-tls-without-debuginfo-v2.patch"/>
-                <file src="patches/python-config.patch"/>
                 <file src="patches/gdb-glibc-vdso-workaround.patch"/>
                 <file src="patches/load-versioned-libcc1.patch"/>
                 <file src="patches/gdb_configure.nat.patch"/>
-                <file src="patches/gdb-PATH_MAX.patch"/>
-                <file src="patches/gnu-nat.c.patch"/>
                 <file src="patches/struct-thread_info.patch"/>
-                <file src="patches/0001-Import-patch-to-fix-PR23919-from-the-mainline.patch"/>
-                <file src="patches/gdb-rhbz1560010-fix-assertion-symbol-language-dict-language-1of5.patch"/>
-                <file src="patches/gdb-rhbz1560010-fix-assertion-symbol-language-dict-language-2of5.patch"/>
-                <file src="patches/gdb-rhbz1560010-fix-assertion-symbol-language-dict-language-3of5.patch"/>
-                <file src="patches/gdb-rhbz1560010-fix-assertion-symbol-language-dict-language-4of5.patch"/>
-                <file src="patches/gdb-rhbz1560010-fix-assertion-symbol-language-dict-language-5of5.patch"/>
                 <file src="patches/gdb_bsd-kvm.c.diff"/>
+                <file src="patches/2bf3b79d05bf85e41cbdcb020bd1cc424f59dd9a.diff"/>
                 <!-- Bolt -->
                 <file src="patches/aarch64-musl-sigcontext-from-signal-h.diff"/>
                 <file src="patches/mips-sgidefs.patch"/>
