@@ -21,8 +21,8 @@
     </requires>
 
     <contents>
-        <file src="/usr/include"/>
-        <file src="/usr/lib/libpopt.{a,so}"/>
-        <file src="/usr/lib/pkgconfig"/>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libpopt.{a,so}"/>
+        <file src="${prefix}/lib/pkgconfig"/>
     </contents>
 </package>

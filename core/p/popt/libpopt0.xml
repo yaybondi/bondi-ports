@@ -16,6 +16,6 @@
     </description>
 
     <contents>
-        <file src="/usr/lib/libpopt.so.*"/>
+        <file src="${prefix}/lib/libpopt.so.*"/>
     </contents>
 </package>
