@@ -8,6 +8,7 @@ cd "$BOLT_BUILD_DIR"
     --prefix="$BOLT_INSTALL_PREFIX" \
     --build="$BOLT_HOST_TYPE" \
     --host="$BOLT_HOST_TYPE" \
+    --enable-mpers=no \
     --disable-nls
 
     ]]>

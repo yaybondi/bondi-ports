@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="strace" repo="core" architecture-independent="false">
+    <source name="strace" repo="core" architecture-independent="false" build-for="target">
         <description>
             <summary>System call tracer</summary>
             <p>
