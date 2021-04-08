@@ -8,17 +8,20 @@
     </description>
 
     <requires>
-        <package name="python3"/>
-        <package name="python3-dateutil"/>
-        <package name="python3-lxml"/>
-        <package name="python3-magic"/>
-        <package name="python3-html2text"/>
+        <package name="autotools-dev"/>
         <package name="binutils" tools-prefix="tools-target-"/>
         <package name="binutils" tools-prefix="tools-"/>
         <package name="chrpath"/>
-        <package name="libarchive-dev"/>
-        <package name="autotools-dev"/>
         <package name="patch"/>
+        <package name="python3"/>
+        <package name="python3-bolt-ffi-libarchive"/>
+        <package name="python3-bolt-misc"/>
+        <package nane="python3-bolt-distro-info"/>
+        <package name="python3-dateutil"/>
+        <package name="python3-html2text"/>
+        <package name="python3-lxml"/>
+        <package name="python3-magic"/>
+        <package name="usign"/>
     </requires>
 
     <contents subdir="package">
