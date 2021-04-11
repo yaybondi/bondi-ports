@@ -41,8 +41,7 @@
             <package name="gettext"/>
             <package name="libaudit-dev"/>
             <package name="libcap-ng-dev"/>
-            <package name="libncurses5-dev"/>
-            <package name="libncursesw5-dev"/>
+            <package name="libncurses-dev"/>
             <package name="libpam0g-dev"/>
             <package name="libselinux1-dev"/>
             <package name="libtool"/>

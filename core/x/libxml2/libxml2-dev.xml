@@ -18,6 +18,8 @@
 
     <requires>
         <package name="libxml2" version="=="/>
+        <package name="zlib1g-dev"/>
+        <package name="liblzma-dev"/>
         <package name="libicu-dev"/>
     </requires>
 

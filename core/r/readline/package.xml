@@ -43,8 +43,7 @@
         </patches>
 
         <requires>
-            <package name="libtinfo-dev"/>
-            <package name="libncursesw5-dev"/>
+            <package name="libncurses-dev"/>
             <package name="texinfo"/>
             <package name="autotools-dev"/>
         </requires>

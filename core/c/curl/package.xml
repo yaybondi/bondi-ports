@@ -59,7 +59,7 @@
             <package name="libnss3-dev"/>
             <package name="libssl-dev"/>
             <package name="libtool"/>
-            <package name="python2"/>
+            <package name="python3"/>
             <package name="zlib1g-dev"/>
         </requires>
 

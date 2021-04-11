@@ -43,7 +43,6 @@
             <package name="nettle-dev"/>
             <package name="pkg-config"/>
             <package name="protobuf-c-compiler"/>
-            <package name="python2-dev"/>
             <package name="python3-dev"/>
             <package name="swig"/>
         </requires>

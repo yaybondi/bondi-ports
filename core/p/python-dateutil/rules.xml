@@ -4,7 +4,7 @@
     <![CDATA[
 
 cd "$BOLT_SOURCE_DIR"
-sed -i "s/'setuptools_scm'//g" setup.py
+sed -i "s/setuptools_scm//g" setup.cfg pyproject.toml
 
     ]]>
     </prepare>

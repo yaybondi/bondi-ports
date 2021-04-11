@@ -56,11 +56,10 @@
             <package name="bison"/>
             <package name="flex"/>
             <package name="procps"/>
-            <package name="texinfo" version=">= 4.7-2.2"/>
+            <package name="texinfo"/>
             <package name="libexpat1-dev"/>
-            <package name="libncurses5-dev"/>
+            <package name="libncurses-dev"/>
             <package name="libreadline-dev"/>
-            <package name="libtinfo-dev"/>
             <package name="zlib1g-dev"/>
             <package name="liblzma-dev"/>
             <package name="python3-dev"/>

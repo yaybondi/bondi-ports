@@ -42,8 +42,7 @@
             <package name="libassuan-dev"/>
             <package name="libglib2.0-dev"/>
             <package name="libgpg-error-dev"/>
-            <package name="libncurses5-dev"/>
-            <package name="libncursesw5-dev"/>
+            <package name="libncurses-dev"/>
             <package name="m4"/>
             <package name="texinfo"/>
         </requires>

@@ -61,8 +61,7 @@
             <package name="libgdbm-compat-dev"/>
             <package name="libgdbm-dev"/>
             <package name="libgmp-dev"/>
-            <package name="libncurses5-dev"/>
-            <package name="libncursesw5-dev"/>
+            <package name="libncurses-dev"/>
             <package name="libreadline-dev"/>
             <package name="libssl-dev"/>
             <package name="libyaml-dev"/>

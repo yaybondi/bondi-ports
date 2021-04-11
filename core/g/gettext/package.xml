@@ -29,10 +29,9 @@
 
         <requires>
             <package name="file"/>
-            <package name="libncurses5-dev"/>
+            <package name="libncurses-dev"/>
             <package name="libxml2-dev"/>
             <package name="libglib2.0-dev"/>
-            <package name="libcroco3-dev"/>
             <package name="xz-utils"/>
             <package name="libunistring-dev"/>
             <package name="bison"/>

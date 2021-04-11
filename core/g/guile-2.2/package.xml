@@ -45,7 +45,7 @@
             <package name="libtool"/>
             <package name="autoconf"/>
             <package name="automake"/>
-            <package name="libncurses5-dev"/>
+            <package name="libncurses-dev"/>
             <package name="libreadline-dev"/>
             <package name="libltdl-dev"/>
             <package name="libgmp-dev"/>

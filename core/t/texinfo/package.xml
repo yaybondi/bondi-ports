@@ -33,7 +33,7 @@
         </patches>
 
         <requires>
-            <package name="libncurses5-dev"/>
+            <package name="libncurses-dev"/>
             <package name="gettext"/>
             <package name="help2man"/>
             <package name="autotools-dev"/>

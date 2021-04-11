@@ -47,7 +47,8 @@
             <package name="libcurl4-openssl-dev"/>
             <package name="libexpat1-dev"/>
             <package name="liblzma-dev"/>
-            <package name="libncurses5-dev"/>
+            <package name="libncurses-dev"/>
+            <package name="libssl-dev"/>
             <package name="procps"/>
             <package name="zlib1g-dev"/>
         </requires>

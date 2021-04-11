@@ -37,7 +37,7 @@
         </patches>
 
         <requires>
-            <package name="python3.7"/>
+            <package name="python3"/>
         </requires>
 
         <xi:include href="rules.xml"/>

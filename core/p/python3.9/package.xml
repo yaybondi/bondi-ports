@@ -78,7 +78,7 @@
         <requires>
             <package name="autoconf"/>
             <package name="libreadline-dev"/>
-            <package name="libncursesw5-dev"/>
+            <package name="libncurses-dev"/>
             <package name="zlib1g-dev"/>
             <package name="libbz2-dev"/>
             <package name="liblzma-dev"/>

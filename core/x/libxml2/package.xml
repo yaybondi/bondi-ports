@@ -41,7 +41,6 @@
         <requires>
             <package name="autotools-dev"/>
             <package name="pkg-config"/>
-            <package name="python2-dev"/>
             <package name="python3-dev"/>
             <package name="zlib1g-dev"/>
             <package name="liblzma-dev"/>
