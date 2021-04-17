@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libucontext-dev" section="devel">
+<package name="libucontext" section="libs">
     <description>
         <summary>library which provides the ucontext.h C API</summary>
         <p>
@@ -7,19 +7,9 @@
             other implementations, it faithfully follows the kernel process ABI
             when doing context swaps.
         </p>
-        <p>
-            This package provides the development files.
-        </p>
     </description>
 
-    <requires>
-        <package name="musl-libc-dev"/>
-        <package name="libucontext1" version="=="/>
-        <package name="libucontext-posix1" version="=="/>
-    </requires>
-
     <contents>
-        <file src="${prefix}/lib/*.{so,a}"/>
-        <file src="${prefix}/include/*.{so,a}"/>
+        <file src="${prefix}/lib/libucontext_posix.so.*"/>
     </contents>
 </package>

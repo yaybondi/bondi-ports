@@ -27,6 +27,7 @@
     </source>
 
     <xi:include href="libucontext1.xml"/>
+    <xi:include href="libucontext-posix1.xml"/>
     <xi:include href="libucontext-dev.xml"/>
 
     <xi:include href="changelog.xml"/>
