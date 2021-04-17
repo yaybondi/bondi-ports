@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libucontext" repo="core" architecture-independent="true">
+        <description>
+            <summary>library which provides the ucontext.h C API</summary>
+            <p>
+                libucontext is a library which provides the ucontext.h C API. Unlike
+                other implementations, it faithfully follows the kernel process ABI
+                when doing context swaps.
+            </p>
+        </description>
+
+        <xi:include href="copyright.xml"/>
+
+        <sources>
+            <file src="libucontext-1.1.tar.gz" subdir="sources"
+                sha256sum="0c9d2d87180416ee21d802c0747e1e310e2b14097a4330299a81ad7cf6405165"/>
+        </sources>
+
+        <requires>
+            <package name="musl-libc-dev"/>
+            <package name="meson"/>
+            <package name="ninja-build"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libucontext1.xml"/>
+    <xi:include href="libucontext-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

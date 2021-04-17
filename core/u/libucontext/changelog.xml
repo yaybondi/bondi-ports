@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release version="1.1" revision="1bolt1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2021-04-17 13:37:00+03:00">
+        <changeset>
+            <li>Initial packaging</li>
+        </changeset>
+    </release>
+</changelog>

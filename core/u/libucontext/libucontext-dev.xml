@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libucontext-dev" section="devel">
+    <description>
+        <summary>library which provides the ucontext.h C API</summary>
+        <p>
+            libucontext is a library which provides the ucontext.h C API. Unlike
+            other implementations, it faithfully follows the kernel process ABI
+            when doing context swaps.
+        </p>
+        <p>
+            This package provides the development files.
+        </p>
+    </description>
+
+    <requires>
+        <package name="musl-libc-dev"/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/lib/*.so.*"/>
+    </contents>
+</package>

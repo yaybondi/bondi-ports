@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+export LDFLAGS="$LDFLAGS -Wl,-z,defs -Wl,--no-as-needed -Wl,-O1"
+
+cd "$BOLT_BUILD_DIR"
+
+cat << EOF > build.ini
+[constants]
+arch = '$BOLT_HOST_TYPE'
+
+[binaries]
+c = arch + '-gcc'
+cpp = arch + '-g++'
+strip = arch + '-strip'
+ld = arch + '-ld'
+ar = arch + '-ar'
+objcopy = arch + '-objcopy'
+pkgconfig = arch + '-pkg-config'
+EOF
+
+meson setup \
+    --prefix="$BOLT_INSTALL_PREFIX" \
+    --buildtype=debugoptimized \
+    --native-file=build.ini \
+    --default-library=both \
+    _build
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+ninja -C _build
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+DESTDIR="$BOLT_INSTALL_DIR" ninja -C _build install
+
+    ]]>
+    </install>
+</rules>
