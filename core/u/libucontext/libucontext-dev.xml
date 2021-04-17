@@ -17,6 +17,7 @@
     </requires>
 
     <contents>
-        <file src="${prefix}/lib/*.so.*"/>
+        <file src="${prefix}/lib/*.{so,a}"/>
+        <file src="${prefix}/include/*.{so,a}"/>
     </contents>
 </package>
