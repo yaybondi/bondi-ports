@@ -21,7 +21,7 @@ objcopy = arch + '-objcopy'
 pkgconfig = arch + '-pkg-config'
 EOF
 
-meson setup \
+$BOLT_INSTALL_PREFIX/bin/meson setup \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --buildtype=debugoptimized \
     --native-file=build.ini \
