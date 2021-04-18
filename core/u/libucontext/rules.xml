@@ -5,6 +5,42 @@
 
 export LDFLAGS="$LDFLAGS -Wl,-z,defs -Wl,--no-as-needed -Wl,-O1"
 
+case $(uname -m) in
+    arm*)
+        MESON_CPU_FAMILY="arm"
+        ;;
+    mips64*)
+        MESON_CPU_FAMILY="mips64"
+        ;;
+    mips*)
+        MESON_CPU_FAMILY="mips"
+        ;;
+    powerpc64*|ppc64*)
+        MESON_CPU_FAMILY="ppc64"
+        ;;
+    powerpc*|ppc*)
+        MESON_CPU_FAMILY="ppc"
+        ;;
+    riscv64*)
+        MESON_CPU_FAMILY="riscv64"
+        ;;
+    i*86*)
+        MESON_CPU_FAMILY="x86"
+        ;;
+    *)
+        MESON_CPU_FAMILY="$(uname -m)"
+        ;;
+esac
+
+case $(uname -m) in
+    s390x*)
+        MESON_ENDIAN="big"
+        ;;
+    *)
+        MESON_ENDIAN="little"
+        ;;
+esac
+
 cd "$BOLT_BUILD_DIR"
 
 cat << EOF > build.ini
@@ -21,11 +57,36 @@ objcopy = arch + '-objcopy'
 pkgconfig = arch + '-pkg-config'
 EOF
 
-$BOLT_INSTALL_PREFIX/bin/meson setup \
+cat << EOF > cross.ini
+[constants]
+arch = '$BOLT_HOST_TYPE'
+
+[host_machine]
+system = 'linux'
+cpu_family = '$MESON_CPU_FAMILY'
+endian = '$MESON_ENDIAN'
+cpu = '$(uname -m)'
+
+[binaries]
+c = arch + '-gcc'
+cpp = arch + '-g++'
+strip = arch + '-strip'
+ld = arch + '-ld'
+ar = arch + '-ar'
+objcopy = arch + '-objcopy'
+pkgconfig = arch + '-pkg-config'
+EOF
+
+if [ "$BOLT_BUILD_FOR" != "tools" ]; then
+    EXTRA_OPTS="--cross-file=cross.ini"
+fi
+
+meson setup \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --buildtype=debugoptimized \
     --native-file=build.ini \
     --default-library=both \
+    $EXTRA_OPTS \
     _build
 
     ]]>
