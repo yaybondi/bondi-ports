@@ -107,8 +107,10 @@ for PROG in gdbserver; do
 done
 
 for SUBDIR in lib; do
-    mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$SUBDIR" \
-        "$PKG_PATH/$BOLT_INSTALL_PREFIX/"
+    if [ -d "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$SUBDIR" ]; then
+        mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$SUBDIR" \
+            "$PKG_PATH/$BOLT_INSTALL_PREFIX/"
+    fi
 done
 
     ]]>
