@@ -54,6 +54,7 @@
         </patches>
 
         <requires>
+            <package name="bash"/>
             <package name="bison"/>
             <package name="chrpath"/>
             <package name="file"/>

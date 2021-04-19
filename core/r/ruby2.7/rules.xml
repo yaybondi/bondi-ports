@@ -30,7 +30,8 @@ export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
 export ac_cv_func_isnan=yes
 export ac_cv_func_isinf=yes
 
-SHELL="/usr/bin/sh" \
+SHELL="$(which bash)" \
+LIBS="-lucontext" \
 "$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --build="$MY_BUILD_TYPE" \
@@ -58,7 +59,8 @@ SHELL="/usr/bin/sh" \
 
 export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
 cd "$BOLT_BUILD_DIR"
-make V=1 SHELL="/usr/bin/sh" -j"$BOLT_PARALLEL_JOBS"
+
+make V=1 SHELL="$(which bash)" -j"$BOLT_PARALLEL_JOBS"
 
 if [ "$BOLT_BUILD_FOR" = "target" ]; then
     sed -i 's@/tools/bin@/usr/bin@g' rbconfig.rb
@@ -72,7 +74,7 @@ fi
 
 export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
 cd "$BOLT_BUILD_DIR"
-make V=1 SHELL="/usr/bin/sh" DESTDIR="$BOLT_INSTALL_DIR" install
+make V=1 SHELL="$(which bash)" DESTDIR="$BOLT_INSTALL_DIR" install
 
     ]]>
     </install>
