@@ -26,14 +26,15 @@
         <sources>
             <file src="musl-1.2.2.tar.gz" subdir="sources"
                 sha256sum="9b969322012d796dc23dda27a35866034fa67d8fb67e0e2c45c913c3d43219dd"/>
-            <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="662fed7b9a15f12a8a17dd876f2fa6d205792031228399361b95a89d0e54ab78"/>
+            <file src="bolt-patches-2.tar.gz" subdir="patches"
+                sha256sum="0736a042b6a7a6bea0a297d71a91cd42b44ac56428dd47d56e67bbb8ed63f181"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
                 <file src="patches/musl-cdefs.patch"/>
                 <file src="patches/add-libssp-nonshared.patch"/>
+                <file src="patches/define-elf-nfpreg.patch"/>
             </patchset>
         </patches>
 
