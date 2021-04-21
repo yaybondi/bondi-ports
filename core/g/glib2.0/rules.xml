@@ -21,7 +21,10 @@ objcopy = arch + '-objcopy'
 pkgconfig = arch + '-pkg-config'
 EOF
 
-meson setup \
+# HACK: the tests won't build on some plaforms such as mips64.
+sed -i 's/build_tests =.*/build_tests = false/' meson.build
+
+"$BOLT_INSTALL_PREFIX"/bin/meson setup \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --buildtype=debugoptimized \
     --native-file=build.ini \
@@ -35,7 +38,7 @@ meson setup \
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-ninja -C _build
+ninja -v -C _build
 
     ]]>
     </build>
