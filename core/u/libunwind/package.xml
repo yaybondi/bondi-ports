@@ -28,10 +28,13 @@
                 sha256sum="0a4b5a78d8c0418dfa610245f75fa03ad45d8e5e4cc091915d2dbed34c01178e"/>
             <file src="debian-patches-2.tar.gz" subdir="patches"
                 sha256sum="56b74acefb025a8c0c2c9eec144b42e40b6683f032e5d30af268f62b4d594771"/>
+            <file src="alpine-patches-1.tar.gz" subdir="patches"
+                sha256sum="fcfcceed96aa687bf65724a2803e0feabe10d6a48f1620a6c635e3cb91c3bfbb"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/20140507-ppc_lib64.patch"/>
                 <file src="patches/0001-aarch64-Use-__asm__-instead-of-asm-89.patch"/>
                 <file src="patches/0001-Fix-compilation-with-fno-common.patch"/>
@@ -44,6 +47,9 @@
                 <file src="patches/0001-ia64-Fix-dyn_info_list.S-with-newer-binutils.patch"/>
                 <file src="patches/0001-Gia64-test-nat.c-include-signal.h-for-sigaction.patch"/>
                 <file src="patches/0001-Disable-Ltest-init-local-signal-on-ia64.patch"/>
+                <!-- Alpine Linux-->
+                <file src="patches/musl-mips-fix.patch"/>
+                <file src="patches/ppc64-musl.patch"/>
             </patchset>
         </patches>
 
