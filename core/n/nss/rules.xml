@@ -18,7 +18,12 @@ cd "$BOLT_BUILD_DIR"
 
 DISTDIR="`pwd`/dist"
 CFLAGS="$CFLAGS -Wall -pipe"
-MACHINE="`echo $BOLT_HOST_TYPE | cut -d'-' -f1`"
+
+if [ "$BOLT_BUILD_FOR" = "tools" ]; then
+    MACHINE="`echo $BOLT_HOST_TYPE | cut -d'-' -f1`"
+else
+    MACHINE="`uname -m`"
+fi
 
 if [ "`bh_os_bits $BOLT_HOST_TYPE`" = "64" ]; then
     EXTRA_FLAGS="USE_64=1"
