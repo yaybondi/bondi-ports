@@ -41,6 +41,8 @@
                 sha256sum="daa7957316e64e0a02f7f4108a30b8cb2d28810fee334b0e2afaecda27d4e360"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
                 sha256sum="8cfa09c05f63a9db542cec1a9f0c182e80ae8c6ae7c81e9f8b588bcc4788303f"/>
+            <file src="misc-patches-1.tar.gz" subdir="patches"
+                sha256sum="46c593efb6d319610d5b498b8faef8b5717ada523c8a2f2cb747d5a2acb60b6d"/>
         </sources>
 
         <patches>
@@ -160,6 +162,9 @@
 
                 <!-- Bolt -->
                 <file src="patches/230-musl_libssp.patch"/>
+
+                <!-- Misc. -->
+                <file src="patches/0042-powerpc-fix-long-double-issues.patch"/>
             </patchset>
         </patches>
 
