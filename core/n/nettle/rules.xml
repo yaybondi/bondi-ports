@@ -6,13 +6,19 @@
 cd "$BOLT_SOURCE_DIR"
 bh_autotools_dev_update
 
+# HACK: fix incorrect preprocessor usage
+sed -i 's/&& __GLIBC_PREREQ\(.*\)//g' fat-ppc.c
+
 cd "$BOLT_BUILD_DIR"
 "$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --build="$BOLT_HOST_TYPE" \
     --host="$BOLT_HOST_TYPE" \
     --disable-documentation \
-    --enable-shared
+    --disable-openssl \
+    --enable-fat \
+    --enable-shared \
+    --enable-static
 
     ]]>
     </prepare>
