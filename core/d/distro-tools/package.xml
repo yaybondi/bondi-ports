@@ -17,8 +17,8 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="distro-tools-1.1.9.tar.gz" subdir="sources"
-                sha256sum="a738fd1c968f1dc8faff3204f849cf66dc9ba7dc6aef8693ab0c65a93aa51457"/>
+            <file src="distro-tools-1.2.0.tar.gz" subdir="sources"
+                sha256sum="0c2660ba4bbea2d726ae4b35471b90a51bd59bc09ed9a700b811fe65c60b97a4"/>
         </sources>
 
         <requires>
