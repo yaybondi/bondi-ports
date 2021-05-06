@@ -41,7 +41,7 @@
         <requires>
             <package name="libc-dev"/>
             <package name="gawk"/>
-            <package name="libunwind-dev"/>
+            <package name="libunwind-dev" supported-on="!s390x,!riscv64"/>
         </requires>
 
         <xi:include href="rules.xml"/>
