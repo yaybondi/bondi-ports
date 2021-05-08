@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.2.1" revision="0bolt1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2021-05-09 00:17:00+03:00">
+        <changeset>
+            <li>Allow overriding target arch to get correct build deps when
+                running bolt-pack list-deps on a foreign distro.</li>
+        </changeset>
+    </release>
     <release version="1.2.0" revision="0bolt1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2021-05-07 01:02:00+03:00">
