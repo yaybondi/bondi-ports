@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="2.7.2" revision="4bolt2" upstream-version="2.7.2-4"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2021-05-11 20:29:00+03:00">
+        <changeset>
+            <li>Add Ruby upstream 001-do-not-require-subword-atomics.patch</li>
+        </changeset>
+    </release>
     <release version="2.7.2" revision="4bolt1" upstream-version="2.7.2-4"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2021-02-21 10:02:29+03:00">

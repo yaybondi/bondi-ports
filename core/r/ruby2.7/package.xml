@@ -26,8 +26,8 @@
                 sha256sum="917d6fd1780ab426f029ed9b128430ad36210a1e3edf65c3d4858a7520bfe452"/>
             <file src="debian-patches-4.tar.gz" subdir="patches"
                 sha256sum="d87a0ae9aee692c9c4198dc99cf19519ed2bd81594403f57fa83e63770e7331b"/>
-            <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="1fae8d224f96cad739583cb10d5333610a2014ec2a73cb6dcbb62a02c2c2f315"/>
+            <file src="bolt-patches-2.tar.gz" subdir="patches"
+                sha256sum="4dbcea2b175d47f49ebc99c399985b1330fc9a97e8e1c6647880e5f99ae035e6"/>
         </sources>
 
         <patches>
@@ -50,6 +50,8 @@
                 <file src="patches/020-make-relocation-time-symbol-lookup-and-dlsym-consistent.patch"/>
                 <!-- Bolt -->
                 <file src="patches/libpath-env-always-empty.diff"/>
+                <!-- Upstream -->
+                <file src="patches/001-do-not-require-subword-atomics.patch"/>
             </patchset>
         </patches>
 
