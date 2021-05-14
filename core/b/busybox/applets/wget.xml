@@ -18,7 +18,11 @@
         <package name="wget"/>
     </conflicts>
 
+    <replaces>
+        <package name="wget"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/wget"/>
+        <file src="/usr/bin/wget"/>
     </contents>
 </package>

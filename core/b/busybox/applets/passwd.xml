@@ -19,8 +19,12 @@
         <package name="passwd"/>
     </conflicts>
 
+    <replaces>
+        <package name="passwd"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/passwd"/>
-        <file src="${prefix}/sbin/chpasswd"/>
+        <file src="/usr/bin/passwd"/>
+        <file src="/usr/sbin/chpasswd"/>
     </contents>
 </package>

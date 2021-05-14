@@ -18,7 +18,11 @@
         <package name="fbset"/>
     </conflicts>
 
+    <replaces>
+        <package name="fbset"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/fbset"/>
+        <file src="/usr/sbin/fbset"/>
     </contents>
 </package>

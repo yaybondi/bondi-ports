@@ -6,18 +6,21 @@
             This package contains the symbolic links for the following applets:
         </p>
         <ul>
+            <li>bin/[[</li>
             <li>cryptpw</li>
             <li>cttyhack</li>
             <li>dumpkmap</li>
-            <li>fdflush</li>
             <li>fsync</li>
             <li>ftpget</li>
             <li>ftpput</li>
             <li>nmeter</li>
+            <li>nuke</li>
             <li>resume</li>
             <li>ssl_client</li>
             <li>ttysize</li>
             <li>udhcpc6</li>
+            <li>usleep</li>
+            <li>volname</li>
             <li>crond</li>
             <li>devmem</li>
             <li>dhcprelay</li>
@@ -26,10 +29,17 @@
             <li>fakeidentd</li>
             <li>fbsplash</li>
             <li>httpd</li>
+            <li>ifenslave</li>
+            <li>ipaddr</li>
+            <li>iplink</li>
+            <li>ipneigh</li>
+            <li>iproute</li>
+            <li>iprule</li>
             <li>loadfont</li>
             <li>loadkmap</li>
             <li>makedevs</li>
             <li>mdev</li>
+            <li>mim</li>
             <li>popmaildir</li>
             <li>raidautorun</li>
             <li>rdev</li>
@@ -46,39 +56,55 @@
         <package name="busybox"/>
     </requires>
 
+    <conflicts>
+    </conflicts>
+
+    <replaces>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/cryptpw"/>
-        <file src="${prefix}/bin/cttyhack"/>
-        <file src="${prefix}/bin/dumpkmap"/>
-        <file src="${prefix}/bin/fdflush"/>
-        <file src="${prefix}/bin/fsync"/>
-        <file src="${prefix}/bin/ftpget"/>
-        <file src="${prefix}/bin/ftpput"/>
-        <file src="${prefix}/bin/nmeter"/>
-        <file src="${prefix}/bin/resume"/>
-        <file src="${prefix}/bin/ssl_client"/>
-        <file src="${prefix}/bin/ttysize"/>
-        <file src="${prefix}/bin/udhcpc6"/>
-        <file src="${prefix}/sbin/crond"/>
-        <file src="${prefix}/sbin/devmem"/>
-        <file src="${prefix}/sbin/dhcprelay"/>
-        <file src="${prefix}/sbin/dnsd"/>
-        <file src="${prefix}/sbin/ether-wake"/>
-        <file src="${prefix}/sbin/fakeidentd"/>
-        <file src="${prefix}/sbin/fbsplash"/>
-        <file src="${prefix}/sbin/httpd"/>
-        <file src="${prefix}/sbin/loadfont"/>
-        <file src="${prefix}/sbin/loadkmap"/>
-        <file src="${prefix}/sbin/makedevs"/>
-        <file src="${prefix}/sbin/mdev"/>
-        <file src="${prefix}/sbin/popmaildir"/>
-        <file src="${prefix}/sbin/raidautorun"/>
-        <file src="${prefix}/sbin/rdev"/>
-        <file src="${prefix}/sbin/readahead"/>
-        <file src="${prefix}/sbin/run-init"/>
-        <file src="${prefix}/sbin/setconsole"/>
-        <file src="${prefix}/sbin/tftpd"/>
-        <file src="${prefix}/sbin/uevent"/>
-        <file src="${prefix}/sbin/zcip"/>
+        <file src="/usr/bin/[["/>
+        <file src="/usr/bin/cryptpw"/>
+        <file src="/usr/bin/cttyhack"/>
+        <file src="/usr/bin/dumpkmap"/>
+        <file src="/usr/bin/fsync"/>
+        <file src="/usr/bin/ftpget"/>
+        <file src="/usr/bin/ftpput"/>
+        <file src="/usr/bin/nmeter"/>
+        <file src="/usr/bin/nuke"/>
+        <file src="/usr/bin/resume"/>
+        <file src="/usr/bin/ssl_client"/>
+        <file src="/usr/bin/ttysize"/>
+        <file src="/usr/bin/udhcpc6"/>
+        <file src="/usr/bin/usleep"/>
+        <file src="/usr/bin/volname"/>
+        <file src="/usr/sbin/crond"/>
+        <file src="/usr/sbin/devmem"/>
+        <file src="/usr/sbin/dhcprelay"/>
+        <file src="/usr/sbin/dnsd"/>
+        <file src="/usr/sbin/ether-wake"/>
+        <file src="/usr/sbin/fakeidentd"/>
+        <file src="/usr/sbin/fbsplash"/>
+        <file src="/usr/sbin/httpd"/>
+        <file src="/usr/sbin/ifenslave"/>
+        <file src="/usr/sbin/ipaddr"/>
+        <file src="/usr/sbin/iplink"/>
+        <file src="/usr/sbin/ipneigh"/>
+        <file src="/usr/sbin/iproute"/>
+        <file src="/usr/sbin/iprule"/>
+        <file src="/usr/sbin/loadfont"/>
+        <file src="/usr/sbin/loadkmap"/>
+        <file src="/usr/sbin/makedevs"/>
+        <file src="/usr/sbin/mdev"/>
+        <file src="/usr/sbin/mim"/>
+        <file src="/usr/sbin/popmaildir"/>
+        <file src="/usr/sbin/raidautorun"/>
+        <file src="/usr/sbin/rdev"/>
+        <file src="/usr/sbin/readahead"/>
+        <file src="/usr/sbin/run-init"/>
+        <file src="/usr/sbin/setconsole"/>
+        <file src="/usr/sbin/tftpd"/>
+        <file src="/usr/sbin/uevent"/>
+        <file src="/usr/sbin/zcip"/>
     </contents>
 </package>

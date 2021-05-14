@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="${prefix}/bin/patch"/>
+        <file src="/usr/bin/patch"/>
     </contents>
 </package>

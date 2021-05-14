@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="${prefix}/bin/resize"/>
+        <file src="/usr/bin/resize"/>
     </contents>
 </package>

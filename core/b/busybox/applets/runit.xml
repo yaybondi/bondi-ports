@@ -22,11 +22,15 @@
         <package name="runit"/>
     </conflicts>
 
+    <replaces>
+        <package name="runit"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/chpst"/>
-        <file src="${prefix}/bin/runsv"/>
-        <file src="${prefix}/bin/runsvdir"/>
-        <file src="${prefix}/bin/sv"/>
-        <file src="${prefix}/sbin/svlogd"/>
+        <file src="/usr/bin/chpst"/>
+        <file src="/usr/bin/runsv"/>
+        <file src="/usr/bin/runsvdir"/>
+        <file src="/usr/bin/sv"/>
+        <file src="/usr/sbin/svlogd"/>
     </contents>
 </package>

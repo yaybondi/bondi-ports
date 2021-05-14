@@ -18,7 +18,11 @@
         <package name="watchdog"/>
     </conflicts>
 
+    <replaces>
+        <package name="watchdog"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/watchdog"/>
+        <file src="/usr/sbin/watchdog"/>
     </contents>
 </package>

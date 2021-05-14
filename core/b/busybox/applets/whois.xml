@@ -19,8 +19,12 @@
         <package name="whois"/>
     </conflicts>
 
+    <replaces>
+        <package name="whois"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/mkpasswd"/>
-        <file src="${prefix}/bin/whois"/>
+        <file src="/usr/bin/mkpasswd"/>
+        <file src="/usr/bin/whois"/>
     </contents>
 </package>

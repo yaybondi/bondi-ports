@@ -19,8 +19,12 @@
         <package name="ipsvd"/>
     </conflicts>
 
+    <replaces>
+        <package name="ipsvd"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/tcpsvd"/>
-        <file src="${prefix}/bin/udpsvd"/>
+        <file src="/usr/bin/tcpsvd"/>
+        <file src="/usr/bin/udpsvd"/>
     </contents>
 </package>

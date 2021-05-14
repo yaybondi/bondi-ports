@@ -18,7 +18,11 @@
         <package name="telnet"/>
     </conflicts>
 
+    <replaces>
+        <package name="telnet"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/telnet"/>
+        <file src="/usr/bin/telnet"/>
     </contents>
 </package>

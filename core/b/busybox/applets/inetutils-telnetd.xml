@@ -18,7 +18,11 @@
         <package name="inetutils-telnetd"/>
     </conflicts>
 
+    <replaces>
+        <package name="inetutils-telnetd"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/telnetd"/>
+        <file src="/usr/sbin/telnetd"/>
     </contents>
 </package>

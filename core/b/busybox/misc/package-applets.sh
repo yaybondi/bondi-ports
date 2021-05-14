@@ -36,6 +36,12 @@ export MY_TEMPLATE_B="\
 export MY_TEMPLATE_C="\
     </conflicts>
 
+    <replaces>\
+"
+
+export MY_TEMPLATE_D="\
+    </replaces>
+
     <contents>\
 "
 
@@ -77,10 +83,15 @@ do
             real_prog="$prog"
         fi
 
+        escaped_real_prog=$(echo $real_prog | sed 's/\(\[\|\]\)/\\\1/g')
         pkg=""
 
-        apt-file find "bin/$real_prog" | grep "/$real_prog\$" 2>/dev/null | \
+        apt-file find "bin/$real_prog" | grep -E -e " /s?bin/$escaped_real_prog\$" -e " /usr/s?bin/$escaped_real_prog\$" 2>/dev/null | \
             grep -v '/lib' | grep -v '/share' | head -n1 | cut -d':' -f1 > "$MY_CONFLICTS/conflicts.tmp"
+
+        echo "PROG: $real_prog"
+        cat "$MY_CONFLICTS/conflicts.tmp"
+        echo "-"
 
         pkg="`cat $MY_CONFLICTS/conflicts.tmp 2>/dev/null | head -n1 `"
 
@@ -113,6 +124,13 @@ do
         >> "$MY_XMLDIR/$PKG_NAME.xml"
 
     echo "$MY_TEMPLATE_C" \
+        >> "$MY_XMLDIR/$PKG_NAME.xml"
+
+    # replaces
+    cat "$MY_CONFLICTS/$PKG_NAME.conflicts" | sort -u | sed 's/^\(.*\)$/<package name="\1"\/>/g' | sed 's/^/        /g' \
+        >> "$MY_XMLDIR/$PKG_NAME.xml"
+
+    echo "$MY_TEMPLATE_D" \
         >> "$MY_XMLDIR/$PKG_NAME.xml"
 
     # contents

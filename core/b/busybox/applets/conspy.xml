@@ -18,7 +18,11 @@
         <package name="conspy"/>
     </conflicts>
 
+    <replaces>
+        <package name="conspy"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/conspy"/>
+        <file src="/usr/bin/conspy"/>
     </contents>
 </package>

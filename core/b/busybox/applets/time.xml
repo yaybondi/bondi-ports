@@ -18,7 +18,11 @@
         <package name="time"/>
     </conflicts>
 
+    <replaces>
+        <package name="time"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/time"/>
+        <file src="/usr/bin/time"/>
     </contents>
 </package>

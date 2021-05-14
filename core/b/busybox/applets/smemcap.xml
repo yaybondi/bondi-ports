@@ -18,7 +18,11 @@
         <package name="smemcap"/>
     </conflicts>
 
+    <replaces>
+        <package name="smemcap"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/smemcap"/>
+        <file src="/usr/bin/smemcap"/>
     </contents>
 </package>

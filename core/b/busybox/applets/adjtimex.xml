@@ -18,7 +18,11 @@
         <package name="adjtimex"/>
     </conflicts>
 
+    <replaces>
+        <package name="adjtimex"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/adjtimex"/>
+        <file src="/usr/sbin/adjtimex"/>
     </contents>
 </package>

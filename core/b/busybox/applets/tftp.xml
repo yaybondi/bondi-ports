@@ -18,7 +18,11 @@
         <package name="tftp"/>
     </conflicts>
 
+    <replaces>
+        <package name="tftp"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/tftp"/>
+        <file src="/usr/bin/tftp"/>
     </contents>
 </package>

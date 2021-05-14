@@ -24,13 +24,17 @@
         <package name="net-tools"/>
     </conflicts>
 
+    <replaces>
+        <package name="net-tools"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/netstat"/>
-        <file src="${prefix}/sbin/arp"/>
-        <file src="${prefix}/sbin/ifconfig"/>
-        <file src="${prefix}/sbin/iptunnel"/>
-        <file src="${prefix}/sbin/nameif"/>
-        <file src="${prefix}/sbin/route"/>
-        <file src="${prefix}/sbin/slattach"/>
+        <file src="/usr/bin/netstat"/>
+        <file src="/usr/sbin/arp"/>
+        <file src="/usr/sbin/ifconfig"/>
+        <file src="/usr/sbin/iptunnel"/>
+        <file src="/usr/sbin/nameif"/>
+        <file src="/usr/sbin/route"/>
+        <file src="/usr/sbin/slattach"/>
     </contents>
 </package>

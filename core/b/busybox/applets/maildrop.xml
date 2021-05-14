@@ -19,8 +19,12 @@
         <package name="maildrop"/>
     </conflicts>
 
+    <replaces>
+        <package name="maildrop"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/makemime"/>
-        <file src="${prefix}/bin/reformime"/>
+        <file src="/usr/bin/makemime"/>
+        <file src="/usr/bin/reformime"/>
     </contents>
 </package>

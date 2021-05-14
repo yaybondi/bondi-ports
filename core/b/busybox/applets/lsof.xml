@@ -18,7 +18,11 @@
         <package name="lsof"/>
     </conflicts>
 
+    <replaces>
+        <package name="lsof"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/lsof"/>
+        <file src="/usr/bin/lsof"/>
     </contents>
 </package>

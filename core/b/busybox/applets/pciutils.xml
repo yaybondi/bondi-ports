@@ -18,7 +18,11 @@
         <package name="pciutils"/>
     </conflicts>
 
+    <replaces>
+        <package name="pciutils"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/lspci"/>
+        <file src="/usr/sbin/lspci"/>
     </contents>
 </package>

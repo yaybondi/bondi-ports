@@ -18,7 +18,11 @@
         <package name="hexedit"/>
     </conflicts>
 
+    <replaces>
+        <package name="hexedit"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/hexedit"/>
+        <file src="/usr/bin/hexedit"/>
     </contents>
 </package>

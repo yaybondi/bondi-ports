@@ -18,7 +18,11 @@
         <package name="ipcalc"/>
     </conflicts>
 
+    <replaces>
+        <package name="ipcalc"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/ipcalc"/>
+        <file src="/usr/bin/ipcalc"/>
     </contents>
 </package>

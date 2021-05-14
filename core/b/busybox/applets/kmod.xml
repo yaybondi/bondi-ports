@@ -23,12 +23,16 @@
         <package name="kmod"/>
     </conflicts>
 
+    <replaces>
+        <package name="kmod"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/depmod"/>
-        <file src="${prefix}/sbin/insmod"/>
-        <file src="${prefix}/sbin/lsmod"/>
-        <file src="${prefix}/sbin/modinfo"/>
-        <file src="${prefix}/sbin/modprobe"/>
-        <file src="${prefix}/sbin/rmmod"/>
+        <file src="/usr/sbin/depmod"/>
+        <file src="/usr/sbin/insmod"/>
+        <file src="/usr/sbin/lsmod"/>
+        <file src="/usr/sbin/modinfo"/>
+        <file src="/usr/sbin/modprobe"/>
+        <file src="/usr/sbin/rmmod"/>
     </contents>
 </package>

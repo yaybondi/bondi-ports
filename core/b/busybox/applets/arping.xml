@@ -18,7 +18,11 @@
         <package name="arping"/>
     </conflicts>
 
+    <replaces>
+        <package name="arping"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/arping"/>
+        <file src="/usr/sbin/arping"/>
     </contents>
 </package>

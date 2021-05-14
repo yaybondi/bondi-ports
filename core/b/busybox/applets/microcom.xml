@@ -18,7 +18,11 @@
         <package name="microcom"/>
     </conflicts>
 
+    <replaces>
+        <package name="microcom"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/microcom"/>
+        <file src="/usr/bin/microcom"/>
     </contents>
 </package>

@@ -19,8 +19,12 @@
         <package name="ifupdown"/>
     </conflicts>
 
+    <replaces>
+        <package name="ifupdown"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/ifdown"/>
-        <file src="${prefix}/sbin/ifup"/>
+        <file src="/usr/sbin/ifdown"/>
+        <file src="/usr/sbin/ifup"/>
     </contents>
 </package>

@@ -8,11 +8,6 @@
         <ul>
             <li>ip</li>
             <li>tc</li>
-            <li>ipaddr</li>
-            <li>iplink</li>
-            <li>ipneigh</li>
-            <li>iproute</li>
-            <li>iprule</li>
         </ul>
     </description>
 
@@ -24,13 +19,12 @@
         <package name="iproute2"/>
     </conflicts>
 
+    <replaces>
+        <package name="iproute2"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/ip"/>
-        <file src="${prefix}/sbin/tc"/>
-        <file src="${prefix}/sbin/ipaddr"/>
-        <file src="${prefix}/sbin/iplink"/>
-        <file src="${prefix}/sbin/ipneigh"/>
-        <file src="${prefix}/sbin/iproute"/>
-        <file src="${prefix}/sbin/iprule"/>
+        <file src="/usr/sbin/ip"/>
+        <file src="/usr/sbin/tc"/>
     </contents>
 </package>

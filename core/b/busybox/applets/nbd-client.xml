@@ -18,7 +18,11 @@
         <package name="nbd-client"/>
     </conflicts>
 
+    <replaces>
+        <package name="nbd-client"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/nbd-client"/>
+        <file src="/usr/sbin/nbd-client"/>
     </contents>
 </package>

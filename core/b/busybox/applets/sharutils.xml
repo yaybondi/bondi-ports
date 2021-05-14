@@ -19,8 +19,12 @@
         <package name="sharutils"/>
     </conflicts>
 
+    <replaces>
+        <package name="sharutils"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/uudecode"/>
-        <file src="${prefix}/bin/uuencode"/>
+        <file src="/usr/bin/uudecode"/>
+        <file src="/usr/bin/uuencode"/>
     </contents>
 </package>

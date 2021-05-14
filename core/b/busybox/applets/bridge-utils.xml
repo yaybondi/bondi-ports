@@ -18,7 +18,11 @@
         <package name="bridge-utils"/>
     </conflicts>
 
+    <replaces>
+        <package name="bridge-utils"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/brctl"/>
+        <file src="/usr/sbin/brctl"/>
     </contents>
 </package>

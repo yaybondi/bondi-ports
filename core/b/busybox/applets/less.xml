@@ -18,7 +18,11 @@
         <package name="less"/>
     </conflicts>
 
+    <replaces>
+        <package name="less"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/less"/>
+        <file src="/usr/bin/less"/>
     </contents>
 </package>

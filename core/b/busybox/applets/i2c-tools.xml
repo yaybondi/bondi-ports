@@ -10,6 +10,7 @@
             <li>i2cdump</li>
             <li>i2cget</li>
             <li>i2cset</li>
+            <li>i2ctransfer</li>
         </ul>
     </description>
 
@@ -21,10 +22,15 @@
         <package name="i2c-tools"/>
     </conflicts>
 
+    <replaces>
+        <package name="i2c-tools"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/i2cdetect"/>
-        <file src="${prefix}/sbin/i2cdump"/>
-        <file src="${prefix}/sbin/i2cget"/>
-        <file src="${prefix}/sbin/i2cset"/>
+        <file src="/usr/sbin/i2cdetect"/>
+        <file src="/usr/sbin/i2cdump"/>
+        <file src="/usr/sbin/i2cget"/>
+        <file src="/usr/sbin/i2cset"/>
+        <file src="/usr/sbin/i2ctransfer"/>
     </contents>
 </package>

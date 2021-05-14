@@ -18,7 +18,11 @@
         <package name="uml-utilities"/>
     </conflicts>
 
+    <replaces>
+        <package name="uml-utilities"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/tunctl"/>
+        <file src="/usr/sbin/tunctl"/>
     </contents>
 </package>

@@ -18,7 +18,11 @@
         <package name="libdigest-sha3-perl"/>
     </conflicts>
 
+    <replaces>
+        <package name="libdigest-sha3-perl"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/sha3sum"/>
+        <file src="/usr/bin/sha3sum"/>
     </contents>
 </package>

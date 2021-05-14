@@ -20,9 +20,13 @@
         <package name="syslogd"/>
     </conflicts>
 
+    <replaces>
+        <package name="syslogd"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/klogd"/>
-        <file src="${prefix}/sbin/logread"/>
-        <file src="${prefix}/sbin/syslogd"/>
+        <file src="/usr/sbin/klogd"/>
+        <file src="/usr/sbin/logread"/>
+        <file src="/usr/sbin/syslogd"/>
     </contents>
 </package>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="busybox-citadel-server-symlinks" section="admin">
+<package name="busybox-courier-mta-symlinks" section="admin">
     <description>
-        <summary>Substitutes for (some) programs from the citadel-server package</summary>
+        <summary>Substitutes for (some) programs from the courier-mta package</summary>
         <p>
             This package contains the symbolic links for the following applets:
         </p>
@@ -15,10 +15,14 @@
     </requires>
 
     <conflicts>
-        <package name="citadel-server"/>
+        <package name="courier-mta"/>
     </conflicts>
 
+    <replaces>
+        <package name="courier-mta"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/sendmail"/>
+        <file src="/usr/sbin/sendmail"/>
     </contents>
 </package>

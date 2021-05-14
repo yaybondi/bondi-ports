@@ -18,7 +18,11 @@
         <package name="parted"/>
     </conflicts>
 
+    <replaces>
+        <package name="parted"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/partprobe"/>
+        <file src="/usr/sbin/partprobe"/>
     </contents>
 </package>

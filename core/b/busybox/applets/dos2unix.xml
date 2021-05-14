@@ -19,8 +19,12 @@
         <package name="dos2unix"/>
     </conflicts>
 
+    <replaces>
+        <package name="dos2unix"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/dos2unix"/>
-        <file src="${prefix}/bin/unix2dos"/>
+        <file src="/usr/bin/dos2unix"/>
+        <file src="/usr/bin/unix2dos"/>
     </contents>
 </package>

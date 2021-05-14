@@ -18,7 +18,11 @@
         <package name="ed"/>
     </conflicts>
 
+    <replaces>
+        <package name="ed"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/ed"/>
+        <file src="/usr/bin/ed"/>
     </contents>
 </package>

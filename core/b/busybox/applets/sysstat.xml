@@ -19,8 +19,12 @@
         <package name="sysstat"/>
     </conflicts>
 
+    <replaces>
+        <package name="sysstat"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/iostat"/>
-        <file src="${prefix}/bin/mpstat"/>
+        <file src="/usr/bin/iostat"/>
+        <file src="/usr/bin/mpstat"/>
     </contents>
 </package>

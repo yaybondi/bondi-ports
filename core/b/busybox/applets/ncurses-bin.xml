@@ -24,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="${prefix}/bin/clear"/>
-        <file src="${prefix}/bin/reset"/>
+        <file src="/usr/bin/clear"/>
+        <file src="/usr/bin/reset"/>
     </contents>
 </package>

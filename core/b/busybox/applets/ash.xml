@@ -18,26 +18,11 @@
         <package name="ash"/>
     </conflicts>
 
+    <replaces>
+        <package name="ash"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/ash"/>
+        <file src="/usr/bin/ash"/>
     </contents>
-
-    <maintainer-scripts>
-        <postinst><![CDATA[
-
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/sh" ]; then
-    ln -sf "ash" "$BOLT_INSTALL_PREFIX/bin/sh"
-fi
-
-        ]]></postinst>
-
-        <postrm><![CDATA[
-
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/sh" ]; then
-    rm -f "$BOLT_INSTALL_PREFIX/bin/sh"
-fi
-
-        ]]></postrm>
-    </maintainer-scripts>
-
 </package>

@@ -18,7 +18,11 @@
         <package name="bcron"/>
     </conflicts>
 
+    <replaces>
+        <package name="bcron"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/crontab"/>
+        <file src="/usr/bin/crontab"/>
     </contents>
 </package>

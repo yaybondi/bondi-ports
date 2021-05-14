@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="${prefix}/bin/bash"/>
+        <file src="/usr/bin/bash"/>
     </contents>
 </package>

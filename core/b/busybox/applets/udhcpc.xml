@@ -18,7 +18,11 @@
         <package name="udhcpc"/>
     </conflicts>
 
+    <replaces>
+        <package name="udhcpc"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/udhcpc"/>
+        <file src="/usr/sbin/udhcpc"/>
     </contents>
 </package>

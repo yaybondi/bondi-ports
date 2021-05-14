@@ -22,11 +22,15 @@
         <package name="policycoreutils"/>
     </conflicts>
 
+    <replaces>
+        <package name="policycoreutils"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/load_policy"/>
-        <file src="${prefix}/sbin/restorecon"/>
-        <file src="${prefix}/sbin/sestatus"/>
-        <file src="${prefix}/sbin/setfiles"/>
-        <file src="${prefix}/sbin/setsebool"/>
+        <file src="/usr/sbin/load_policy"/>
+        <file src="/usr/sbin/restorecon"/>
+        <file src="/usr/sbin/sestatus"/>
+        <file src="/usr/sbin/setfiles"/>
+        <file src="/usr/sbin/setsebool"/>
     </contents>
 </package>

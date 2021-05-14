@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="busybox-pscan-symlinks" section="admin">
+<package name="busybox-bind9-dnsutils-symlinks" section="admin">
     <description>
-        <summary>Substitutes for (some) programs from the pscan package</summary>
+        <summary>Substitutes for (some) programs from the bind9-dnsutils package</summary>
         <p>
             This package contains the symbolic links for the following applets:
         </p>
         <ul>
-            <li>pscan</li>
+            <li>nslookup</li>
         </ul>
     </description>
 
@@ -15,14 +15,14 @@
     </requires>
 
     <conflicts>
-        <package name="pscan"/>
+        <package name="bind9-dnsutils"/>
     </conflicts>
 
     <replaces>
-        <package name="pscan"/>
+        <package name="bind9-dnsutils"/>
     </replaces>
 
     <contents>
-        <file src="/usr/bin/pscan"/>
+        <file src="/usr/bin/nslookup"/>
     </contents>
 </package>

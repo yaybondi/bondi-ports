@@ -18,7 +18,11 @@
         <package name="beep"/>
     </conflicts>
 
+    <replaces>
+        <package name="beep"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/beep"/>
+        <file src="/usr/bin/beep"/>
     </contents>
 </package>

@@ -19,8 +19,12 @@
         <package name="udhcpd"/>
     </conflicts>
 
+    <replaces>
+        <package name="udhcpd"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/dumpleases"/>
-        <file src="${prefix}/sbin/udhcpd"/>
+        <file src="/usr/bin/dumpleases"/>
+        <file src="/usr/sbin/udhcpd"/>
     </contents>
 </package>

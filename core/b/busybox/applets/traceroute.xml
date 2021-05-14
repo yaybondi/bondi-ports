@@ -19,8 +19,12 @@
         <package name="traceroute"/>
     </conflicts>
 
+    <replaces>
+        <package name="traceroute"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/traceroute"/>
-        <file src="${prefix}/bin/traceroute6"/>
+        <file src="/usr/bin/traceroute"/>
+        <file src="/usr/bin/traceroute6"/>
     </contents>
 </package>

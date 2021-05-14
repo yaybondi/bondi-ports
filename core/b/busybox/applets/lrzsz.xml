@@ -18,7 +18,11 @@
         <package name="lrzsz"/>
     </conflicts>
 
+    <replaces>
+        <package name="lrzsz"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/rx"/>
+        <file src="/usr/bin/rx"/>
     </contents>
 </package>

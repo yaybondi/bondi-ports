@@ -18,7 +18,11 @@
         <package name="openbsd-inetd"/>
     </conflicts>
 
+    <replaces>
+        <package name="openbsd-inetd"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/inetd"/>
+        <file src="/usr/sbin/inetd"/>
     </contents>
 </package>

@@ -18,7 +18,11 @@
         <package name="usbutils"/>
     </conflicts>
 
+    <replaces>
+        <package name="usbutils"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/lsusb"/>
+        <file src="/usr/bin/lsusb"/>
     </contents>
 </package>

@@ -20,9 +20,13 @@
         <package name="psmisc"/>
     </conflicts>
 
+    <replaces>
+        <package name="psmisc"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/fuser"/>
-        <file src="${prefix}/bin/killall"/>
-        <file src="${prefix}/bin/pstree"/>
+        <file src="/usr/bin/fuser"/>
+        <file src="/usr/bin/killall"/>
+        <file src="/usr/bin/pstree"/>
     </contents>
 </package>

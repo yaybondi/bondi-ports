@@ -18,7 +18,11 @@
         <package name="dc"/>
     </conflicts>
 
+    <replaces>
+        <package name="dc"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/dc"/>
+        <file src="/usr/bin/dc"/>
     </contents>
 </package>

@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="${prefix}/bin/setfattr"/>
+        <file src="/usr/bin/setfattr"/>
     </contents>
 </package>

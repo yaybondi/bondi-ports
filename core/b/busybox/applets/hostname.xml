@@ -19,8 +19,12 @@
         <package name="hostname"/>
     </conflicts>
 
+    <replaces>
+        <package name="hostname"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/dnsdomainname"/>
-        <file src="${prefix}/bin/hostname"/>
+        <file src="/usr/bin/dnsdomainname"/>
+        <file src="/usr/bin/hostname"/>
     </contents>
 </package>

@@ -18,7 +18,11 @@
         <package name="sed"/>
     </conflicts>
 
+    <replaces>
+        <package name="sed"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/sed"/>
+        <file src="/usr/bin/sed"/>
     </contents>
 </package>

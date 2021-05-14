@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="busybox-dnsutils-symlinks" section="admin">
+<package name="busybox-moreutils-symlinks" section="admin">
     <description>
-        <summary>Substitutes for (some) programs from the dnsutils package</summary>
+        <summary>Substitutes for (some) programs from the moreutils package</summary>
         <p>
             This package contains the symbolic links for the following applets:
         </p>
         <ul>
-            <li>nslookup</li>
+            <li>ts</li>
         </ul>
     </description>
 
@@ -15,10 +15,14 @@
     </requires>
 
     <conflicts>
-        <package name="dnsutils"/>
+        <package name="moreutils"/>
     </conflicts>
 
+    <replaces>
+        <package name="moreutils"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/nslookup"/>
+        <file src="/usr/bin/ts"/>
     </contents>
 </package>

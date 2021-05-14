@@ -19,8 +19,12 @@
         <package name="login"/>
     </conflicts>
 
+    <replaces>
+        <package name="login"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/login"/>
-        <file src="${prefix}/sbin/nologin"/>
+        <file src="/usr/bin/login"/>
+        <file src="/usr/sbin/nologin"/>
     </contents>
 </package>

@@ -18,7 +18,11 @@
         <package name="ntp"/>
     </conflicts>
 
+    <replaces>
+        <package name="ntp"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/ntpd"/>
+        <file src="/usr/sbin/ntpd"/>
     </contents>
 </package>

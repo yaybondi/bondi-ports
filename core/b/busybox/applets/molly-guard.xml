@@ -20,9 +20,13 @@
         <package name="molly-guard"/>
     </conflicts>
 
+    <replaces>
+        <package name="molly-guard"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/halt"/>
-        <file src="${prefix}/sbin/poweroff"/>
-        <file src="${prefix}/sbin/reboot"/>
+        <file src="/usr/sbin/halt"/>
+        <file src="/usr/sbin/poweroff"/>
+        <file src="/usr/sbin/reboot"/>
     </contents>
 </package>

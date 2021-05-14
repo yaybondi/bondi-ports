@@ -18,7 +18,11 @@
         <package name="lsscsi"/>
     </conflicts>
 
+    <replaces>
+        <package name="lsscsi"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/lsscsi"/>
+        <file src="/usr/bin/lsscsi"/>
     </contents>
 </package>

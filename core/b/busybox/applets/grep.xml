@@ -20,9 +20,13 @@
         <package name="grep"/>
     </conflicts>
 
+    <replaces>
+        <package name="grep"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/egrep"/>
-        <file src="${prefix}/bin/fgrep"/>
-        <file src="${prefix}/bin/grep"/>
+        <file src="/usr/bin/egrep"/>
+        <file src="/usr/bin/fgrep"/>
+        <file src="/usr/bin/grep"/>
     </contents>
 </package>

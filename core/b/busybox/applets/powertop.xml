@@ -18,7 +18,11 @@
         <package name="powertop"/>
     </conflicts>
 
+    <replaces>
+        <package name="powertop"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/powertop"/>
+        <file src="/usr/sbin/powertop"/>
     </contents>
 </package>

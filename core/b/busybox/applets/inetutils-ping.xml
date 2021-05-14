@@ -19,8 +19,12 @@
         <package name="inetutils-ping"/>
     </conflicts>
 
+    <replaces>
+        <package name="inetutils-ping"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/ping"/>
-        <file src="${prefix}/bin/ping6"/>
+        <file src="/usr/bin/ping"/>
+        <file src="/usr/bin/ping6"/>
     </contents>
 </package>

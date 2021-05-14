@@ -18,7 +18,11 @@
         <package name="fatattr"/>
     </conflicts>
 
+    <replaces>
+        <package name="fatattr"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/fatattr"/>
+        <file src="/usr/bin/fatattr"/>
     </contents>
 </package>

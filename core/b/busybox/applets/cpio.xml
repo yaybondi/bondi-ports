@@ -15,10 +15,6 @@
         <package name="busybox"/>
     </requires>
 
-    <provides>
-        <package name="cpio"/>
-    </provides>
-
     <conflicts>
         <package name="cpio"/>
     </conflicts>
@@ -28,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="${prefix}/bin/cpio"/>
-        <file src="${prefix}/bin/mt"/>
+        <file src="/usr/bin/cpio"/>
+        <file src="/usr/bin/mt"/>
     </contents>
 </package>

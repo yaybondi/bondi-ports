@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="busybox-ifenslave-symlinks" section="admin">
+<package name="busybox-fdflush-symlinks" section="admin">
     <description>
-        <summary>Substitutes for (some) programs from the ifenslave package</summary>
+        <summary>Substitutes for (some) programs from the fdflush package</summary>
         <p>
             This package contains the symbolic links for the following applets:
         </p>
         <ul>
-            <li>ifenslave</li>
+            <li>fdflush</li>
         </ul>
     </description>
 
@@ -15,10 +15,14 @@
     </requires>
 
     <conflicts>
-        <package name="ifenslave"/>
+        <package name="fdflush"/>
     </conflicts>
 
+    <replaces>
+        <package name="fdflush"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/ifenslave"/>
+        <file src="/usr/bin/fdflush"/>
     </contents>
 </package>

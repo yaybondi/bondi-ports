@@ -18,7 +18,11 @@
         <package name="acpid"/>
     </conflicts>
 
+    <replaces>
+        <package name="acpid"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/acpid"/>
+        <file src="/usr/sbin/acpid"/>
     </contents>
 </package>

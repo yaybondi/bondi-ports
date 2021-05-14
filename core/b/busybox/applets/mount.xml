@@ -27,10 +27,10 @@
     </replaces>
 
     <contents>
-        <file src="${prefix}/bin/mount"/>
-        <file src="${prefix}/bin/umount"/>
-        <file src="${prefix}/sbin/losetup"/>
-        <file src="${prefix}/sbin/swapoff"/>
-        <file src="${prefix}/sbin/swapon"/>
+        <file src="/usr/bin/mount"/>
+        <file src="/usr/bin/umount"/>
+        <file src="/usr/sbin/losetup"/>
+        <file src="/usr/sbin/swapoff"/>
+        <file src="/usr/sbin/swapon"/>
     </contents>
 </package>

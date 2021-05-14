@@ -19,8 +19,12 @@
         <package name="findutils"/>
     </conflicts>
 
+    <replaces>
+        <package name="findutils"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/find"/>
-        <file src="${prefix}/bin/xargs"/>
+        <file src="/usr/bin/find"/>
+        <file src="/usr/bin/xargs"/>
     </contents>
 </package>

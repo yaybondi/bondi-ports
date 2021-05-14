@@ -18,7 +18,11 @@
         <package name="rdate"/>
     </conflicts>
 
+    <replaces>
+        <package name="rdate"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/rdate"/>
+        <file src="/usr/sbin/rdate"/>
     </contents>
 </package>

@@ -18,7 +18,11 @@
         <package name="ifplugd"/>
     </conflicts>
 
+    <replaces>
+        <package name="ifplugd"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/ifplugd"/>
+        <file src="/usr/sbin/ifplugd"/>
     </contents>
 </package>

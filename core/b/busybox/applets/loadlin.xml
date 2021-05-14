@@ -18,7 +18,11 @@
         <package name="loadlin"/>
     </conflicts>
 
+    <replaces>
+        <package name="loadlin"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/sbin/freeramdisk"/>
+        <file src="/usr/sbin/freeramdisk"/>
     </contents>
 </package>

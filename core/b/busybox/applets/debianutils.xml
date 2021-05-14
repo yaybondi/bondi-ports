@@ -21,10 +21,14 @@
         <package name="debianutils"/>
     </conflicts>
 
+    <replaces>
+        <package name="debianutils"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/run-parts"/>
-        <file src="${prefix}/bin/which"/>
-        <file src="${prefix}/sbin/add-shell"/>
-        <file src="${prefix}/sbin/remove-shell"/>
+        <file src="/usr/bin/run-parts"/>
+        <file src="/usr/bin/which"/>
+        <file src="/usr/sbin/add-shell"/>
+        <file src="/usr/sbin/remove-shell"/>
     </contents>
 </package>

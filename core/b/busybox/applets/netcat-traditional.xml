@@ -19,8 +19,12 @@
         <package name="netcat-traditional"/>
     </conflicts>
 
+    <replaces>
+        <package name="netcat-traditional"/>
+    </replaces>
+
     <contents>
-        <file src="${prefix}/bin/nc"/>
-        <file src="${prefix}/bin/netcat"/>
+        <file src="/usr/bin/nc"/>
+        <file src="/usr/bin/netcat"/>
     </contents>
 </package>
