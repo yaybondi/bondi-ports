@@ -21,31 +21,33 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="busybox-1.30.1.tar.bz2" subdir="sources"
-                sha256sum="3d1d04a4dbd34048f4794815a5c48ebb9eb53c5277e09ffffc060323b95dfbdc"/>
-            <file src="debian-patches-6.tar.gz" subdir="patches"
-                sha256sum="1a5ee758d84a2b1d3f6bc72c3b39e0f9ff7c420a1f36ce47bf6f78aea92d8610"/>
-            <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="e69c18d5bd18a8efcca9add191eb4be322c527541599fff7f5ecb0e2715c33de"/>
+            <file src="busybox-1.33.1.tar.bz2" subdir="sources"
+                sha256sum="12cec6bd2b16d8a9446dd16130f2b92982f1819f6e1c5f5887b6db03f5660d28"/>
+            <file src="bolt-patches-2.tar.gz" subdir="patches"
+                sha256sum="327c06ede2f0dc79c200b33faf3dbdf9e37b4207884d66e961fb77566afa27d8"/>
+            <file src="alpine-patches-bd9fc3cc.tar.gz" subdir="patches"
+                sha256sum="f016cf0d83290d11077d6c5e631d6f8b195a2c0f9aa74a1541d8dae0c7e6add7"/>
         </sources>
 
         <patches>
             <patchset subdir="sources">
-                <!-- Debian -->
-                <file src="patches/cherry-pick.1_30_0-35-g74d9f1ba3.udhcpc-when-decoding-dhcp-subnet-ensure-it-is-4-bytes-long.patch"/>
-                <file src="patches/cherry-pick.1_30_0-110-gbb3a9531b.ip-fix-ip-o-link.patch"/>
-                <file src="patches/cherry-pick.1_31_0-92-gd3539be8f0.remove-stime-function-calls.patch"/>
-                <file src="patches/cherry-pick.1_32_0-26-g1a5d6fcbb.hwclock-fix-settimeofday-for-glibc-v2.31.patch"/>
-                <file src="patches/u-mount-FreeBSD-support.patch"/>
-                <file src="patches/swaponoff-FreeBSD-support.patch"/>
-                <file src="patches/shell-ash-export-HOME.patch"/>
-                <file src="patches/version.patch"/>
-                <file src="patches/init-console.patch"/>
-                <file src="patches/stop-checking-ancient-kernel-version.patch"/>
-                <file src="patches/revert-9c143ce52da11ec3d21a3491c3749841d3dc10f0.patch"/>
-                <file src="patches/temp-deb-installer-hack.patch"/>
-                <file src="patches/install-readlink-in-bin.patch"/>
-                <file src="patches/ignore-ip-valid_lft.patch"/>
+                <!-- Alpine -->
+                <file src="patches/0001-adduser-default-to-sbin-nologin-as-shell-for-system-.patch"/>
+                <file src="patches/0001-ash-add-built-in-BB_ASH_VERSION-variable.patch"/>
+                <file src="patches/0001-echo-do-not-assume-that-free-leaves-errno-unmodified.patch"/>
+                <file src="patches/0001-lineedit-fix-tab-completion-with-equal-sign.patch"/>
+                <file src="patches/0001-nologin-Install-applet-to-sbin-instead-of-usr-sbin.patch"/>
+                <file src="patches/0001-properly-fix-wget-https-support.patch"/>
+                <file src="patches/0002-fsck-resolve-LABEL-.-UUID-.-spec-to-device.patch"/>
+                <file src="patches/0003-ash-exec-busybox.static.patch"/>
+                <file src="patches/0004-app-location-for-cpio-vi-and-lspci.patch"/>
+                <file src="patches/0005-udhcpc-set-default-discover-retries-to-5.patch"/>
+                <file src="patches/0006-ping-make-ping-work-without-root-privileges.patch"/>
+                <file src="patches/0007-fbsplash-support-console-switching.patch"/>
+                <file src="patches/0008-fbsplash-support-image-and-bar-alignment-and-positio.patch"/>
+                <file src="patches/0009-depmod-support-generating-kmod-binary-index-files.patch"/>
+                <file src="patches/0010-Add-flag-for-not-following-symlinks-when-recursing.patch"/>
+                <file src="patches/0012-udhcpc-Don-t-background-if-n-is-given.patch"/>
             </patchset>
         </patches>
 
