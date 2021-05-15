@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/bc"/>
+        <file src="${prefix}/bin/bc"/>
     </contents>
 </package>

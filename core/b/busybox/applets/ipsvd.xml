@@ -24,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/tcpsvd"/>
-        <file src="/usr/bin/udpsvd"/>
+        <file src="${prefix}/bin/tcpsvd"/>
+        <file src="${prefix}/bin/udpsvd"/>
     </contents>
 </package>

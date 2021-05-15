@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/partprobe"/>
+        <file src="${prefix}/sbin/partprobe"/>
     </contents>
 </package>

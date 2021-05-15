@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/smemcap"/>
+        <file src="${prefix}/bin/smemcap"/>
     </contents>
 </package>

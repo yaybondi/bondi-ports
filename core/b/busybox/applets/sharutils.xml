@@ -24,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/uudecode"/>
-        <file src="/usr/bin/uuencode"/>
+        <file src="${prefix}/bin/uudecode"/>
+        <file src="${prefix}/bin/uuencode"/>
     </contents>
 </package>

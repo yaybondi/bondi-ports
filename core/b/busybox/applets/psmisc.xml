@@ -25,8 +25,8 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/fuser"/>
-        <file src="/usr/bin/killall"/>
-        <file src="/usr/bin/pstree"/>
+        <file src="${prefix}/bin/fuser"/>
+        <file src="${prefix}/bin/killall"/>
+        <file src="${prefix}/bin/pstree"/>
     </contents>
 </package>

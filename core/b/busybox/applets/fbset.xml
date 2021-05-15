@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/fbset"/>
+        <file src="${prefix}/sbin/fbset"/>
     </contents>
 </package>

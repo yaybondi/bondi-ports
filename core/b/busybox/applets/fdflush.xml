@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/fdflush"/>
+        <file src="${prefix}/bin/fdflush"/>
     </contents>
 </package>

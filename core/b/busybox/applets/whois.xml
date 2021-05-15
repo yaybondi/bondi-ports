@@ -24,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/mkpasswd"/>
-        <file src="/usr/bin/whois"/>
+        <file src="${prefix}/bin/mkpasswd"/>
+        <file src="${prefix}/bin/whois"/>
     </contents>
 </package>

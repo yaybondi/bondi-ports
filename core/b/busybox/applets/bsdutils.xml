@@ -27,10 +27,10 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/logger"/>
-        <file src="/usr/bin/renice"/>
-        <file src="/usr/bin/script"/>
-        <file src="/usr/bin/scriptreplay"/>
-        <file src="/usr/bin/wall"/>
+        <file src="${prefix}/bin/logger"/>
+        <file src="${prefix}/bin/renice"/>
+        <file src="${prefix}/bin/script"/>
+        <file src="${prefix}/bin/scriptreplay"/>
+        <file src="${prefix}/bin/wall"/>
     </contents>
 </package>

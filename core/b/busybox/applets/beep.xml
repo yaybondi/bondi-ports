@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/beep"/>
+        <file src="${prefix}/bin/beep"/>
     </contents>
 </package>

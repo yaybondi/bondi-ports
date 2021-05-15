@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/sha3sum"/>
+        <file src="${prefix}/bin/sha3sum"/>
     </contents>
 </package>

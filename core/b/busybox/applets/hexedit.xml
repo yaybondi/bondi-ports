@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/hexedit"/>
+        <file src="${prefix}/bin/hexedit"/>
     </contents>
 </package>

@@ -24,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/cmp"/>
-        <file src="/usr/bin/diff"/>
+        <file src="${prefix}/bin/cmp"/>
+        <file src="${prefix}/bin/diff"/>
     </contents>
 </package>

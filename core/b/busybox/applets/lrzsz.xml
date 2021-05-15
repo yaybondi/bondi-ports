@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/rx"/>
+        <file src="${prefix}/bin/rx"/>
     </contents>
 </package>

@@ -24,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/ar"/>
-        <file src="/usr/bin/strings"/>
+        <file src="${prefix}/bin/ar"/>
+        <file src="${prefix}/bin/strings"/>
     </contents>
 </package>

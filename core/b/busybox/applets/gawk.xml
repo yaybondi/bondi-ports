@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/awk"/>
+        <file src="${prefix}/bin/awk"/>
     </contents>
 </package>

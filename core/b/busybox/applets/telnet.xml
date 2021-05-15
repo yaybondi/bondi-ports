@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/telnet"/>
+        <file src="${prefix}/bin/telnet"/>
     </contents>
 </package>

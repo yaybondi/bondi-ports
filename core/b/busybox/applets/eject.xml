@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/eject"/>
+        <file src="${prefix}/bin/eject"/>
     </contents>
 </package>

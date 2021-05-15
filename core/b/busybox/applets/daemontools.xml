@@ -28,11 +28,11 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/envdir"/>
-        <file src="/usr/bin/envuidgid"/>
-        <file src="/usr/bin/setuidgid"/>
-        <file src="/usr/bin/softlimit"/>
-        <file src="/usr/bin/svc"/>
-        <file src="/usr/bin/svok"/>
+        <file src="${prefix}/bin/envdir"/>
+        <file src="${prefix}/bin/envuidgid"/>
+        <file src="${prefix}/bin/setuidgid"/>
+        <file src="${prefix}/bin/softlimit"/>
+        <file src="${prefix}/bin/svc"/>
+        <file src="${prefix}/bin/svok"/>
     </contents>
 </package>

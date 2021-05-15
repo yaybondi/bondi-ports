@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/microcom"/>
+        <file src="${prefix}/bin/microcom"/>
     </contents>
 </package>

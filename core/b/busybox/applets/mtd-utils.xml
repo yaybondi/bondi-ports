@@ -31,14 +31,14 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/nanddump"/>
-        <file src="/usr/sbin/nandwrite"/>
-        <file src="/usr/sbin/ubiattach"/>
-        <file src="/usr/sbin/ubidetach"/>
-        <file src="/usr/sbin/ubimkvol"/>
-        <file src="/usr/sbin/ubirename"/>
-        <file src="/usr/sbin/ubirmvol"/>
-        <file src="/usr/sbin/ubirsvol"/>
-        <file src="/usr/sbin/ubiupdatevol"/>
+        <file src="${prefix}/sbin/nanddump"/>
+        <file src="${prefix}/sbin/nandwrite"/>
+        <file src="${prefix}/sbin/ubiattach"/>
+        <file src="${prefix}/sbin/ubidetach"/>
+        <file src="${prefix}/sbin/ubimkvol"/>
+        <file src="${prefix}/sbin/ubirename"/>
+        <file src="${prefix}/sbin/ubirmvol"/>
+        <file src="${prefix}/sbin/ubirsvol"/>
+        <file src="${prefix}/sbin/ubiupdatevol"/>
     </contents>
 </package>

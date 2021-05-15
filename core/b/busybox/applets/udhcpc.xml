@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/udhcpc"/>
+        <file src="${prefix}/sbin/udhcpc"/>
     </contents>
 </package>

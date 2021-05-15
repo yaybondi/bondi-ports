@@ -24,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/ifdown"/>
-        <file src="/usr/sbin/ifup"/>
+        <file src="${prefix}/sbin/ifdown"/>
+        <file src="${prefix}/sbin/ifup"/>
     </contents>
 </package>

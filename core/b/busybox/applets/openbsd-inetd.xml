@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/inetd"/>
+        <file src="${prefix}/sbin/inetd"/>
     </contents>
 </package>

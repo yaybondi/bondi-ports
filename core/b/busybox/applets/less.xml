@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/less"/>
+        <file src="${prefix}/bin/less"/>
     </contents>
 </package>

@@ -25,8 +25,8 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/halt"/>
-        <file src="/usr/sbin/poweroff"/>
-        <file src="/usr/sbin/reboot"/>
+        <file src="${prefix}/sbin/halt"/>
+        <file src="${prefix}/sbin/poweroff"/>
+        <file src="${prefix}/sbin/reboot"/>
     </contents>
 </package>

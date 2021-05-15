@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/lsof"/>
+        <file src="${prefix}/bin/lsof"/>
     </contents>
 </package>

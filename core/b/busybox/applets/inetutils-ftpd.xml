@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/ftpd"/>
+        <file src="${prefix}/sbin/ftpd"/>
     </contents>
 </package>

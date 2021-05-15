@@ -24,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/find"/>
-        <file src="/usr/bin/xargs"/>
+        <file src="${prefix}/bin/find"/>
+        <file src="${prefix}/bin/xargs"/>
     </contents>
 </package>

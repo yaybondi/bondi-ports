@@ -24,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/ping"/>
-        <file src="/usr/bin/ping6"/>
+        <file src="${prefix}/bin/ping"/>
+        <file src="${prefix}/bin/ping6"/>
     </contents>
 </package>

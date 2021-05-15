@@ -24,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/makemime"/>
-        <file src="/usr/bin/reformime"/>
+        <file src="${prefix}/bin/makemime"/>
+        <file src="${prefix}/bin/reformime"/>
     </contents>
 </package>

@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/fatattr"/>
+        <file src="${prefix}/bin/fatattr"/>
     </contents>
 </package>

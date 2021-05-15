@@ -28,11 +28,11 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/lzcat"/>
-        <file src="/usr/bin/lzma"/>
-        <file src="/usr/bin/unlzma"/>
-        <file src="/usr/bin/unxz"/>
-        <file src="/usr/bin/xz"/>
-        <file src="/usr/bin/xzcat"/>
+        <file src="${prefix}/bin/lzcat"/>
+        <file src="${prefix}/bin/lzma"/>
+        <file src="${prefix}/bin/unlzma"/>
+        <file src="${prefix}/bin/unxz"/>
+        <file src="${prefix}/bin/xz"/>
+        <file src="${prefix}/bin/xzcat"/>
     </contents>
 </package>

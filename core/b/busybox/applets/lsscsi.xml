@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/lsscsi"/>
+        <file src="${prefix}/bin/lsscsi"/>
     </contents>
 </package>

@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/sendmail"/>
+        <file src="${prefix}/sbin/sendmail"/>
     </contents>
 </package>

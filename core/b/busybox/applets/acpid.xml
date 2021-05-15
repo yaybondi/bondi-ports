@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/acpid"/>
+        <file src="${prefix}/sbin/acpid"/>
     </contents>
 </package>

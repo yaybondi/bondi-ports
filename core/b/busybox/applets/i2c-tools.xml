@@ -27,10 +27,10 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/i2cdetect"/>
-        <file src="/usr/sbin/i2cdump"/>
-        <file src="/usr/sbin/i2cget"/>
-        <file src="/usr/sbin/i2cset"/>
-        <file src="/usr/sbin/i2ctransfer"/>
+        <file src="${prefix}/sbin/i2cdetect"/>
+        <file src="${prefix}/sbin/i2cdump"/>
+        <file src="${prefix}/sbin/i2cget"/>
+        <file src="${prefix}/sbin/i2cset"/>
+        <file src="${prefix}/sbin/i2ctransfer"/>
     </contents>
 </package>

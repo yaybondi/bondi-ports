@@ -24,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/cpio"/>
-        <file src="/usr/bin/mt"/>
+        <file src="${prefix}/bin/cpio"/>
+        <file src="${prefix}/bin/mt"/>
     </contents>
 </package>

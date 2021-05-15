@@ -24,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/pidof"/>
-        <file src="/usr/sbin/killall5"/>
+        <file src="${prefix}/bin/pidof"/>
+        <file src="${prefix}/sbin/killall5"/>
     </contents>
 </package>

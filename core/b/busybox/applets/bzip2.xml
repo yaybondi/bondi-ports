@@ -25,8 +25,8 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/bunzip2"/>
-        <file src="/usr/bin/bzcat"/>
-        <file src="/usr/bin/bzip2"/>
+        <file src="${prefix}/bin/bunzip2"/>
+        <file src="${prefix}/bin/bzcat"/>
+        <file src="${prefix}/bin/bzip2"/>
     </contents>
 </package>

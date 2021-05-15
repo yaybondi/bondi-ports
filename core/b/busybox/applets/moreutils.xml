@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/ts"/>
+        <file src="${prefix}/bin/ts"/>
     </contents>
 </package>

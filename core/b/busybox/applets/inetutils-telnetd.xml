@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/telnetd"/>
+        <file src="${prefix}/sbin/telnetd"/>
     </contents>
 </package>

@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/xxd"/>
+        <file src="${prefix}/bin/xxd"/>
     </contents>
 </package>

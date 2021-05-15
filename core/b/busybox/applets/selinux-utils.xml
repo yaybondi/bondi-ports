@@ -27,10 +27,10 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/getenforce"/>
-        <file src="/usr/sbin/getsebool"/>
-        <file src="/usr/sbin/matchpathcon"/>
-        <file src="/usr/sbin/selinuxenabled"/>
-        <file src="/usr/sbin/setenforce"/>
+        <file src="${prefix}/sbin/getenforce"/>
+        <file src="${prefix}/sbin/getsebool"/>
+        <file src="${prefix}/sbin/matchpathcon"/>
+        <file src="${prefix}/sbin/selinuxenabled"/>
+        <file src="${prefix}/sbin/setenforce"/>
     </contents>
 </package>

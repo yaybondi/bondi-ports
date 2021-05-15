@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/arping"/>
+        <file src="${prefix}/sbin/arping"/>
     </contents>
 </package>

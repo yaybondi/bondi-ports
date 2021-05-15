@@ -28,11 +28,11 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/depmod"/>
-        <file src="/usr/sbin/insmod"/>
-        <file src="/usr/sbin/lsmod"/>
-        <file src="/usr/sbin/modinfo"/>
-        <file src="/usr/sbin/modprobe"/>
-        <file src="/usr/sbin/rmmod"/>
+        <file src="${prefix}/sbin/depmod"/>
+        <file src="${prefix}/sbin/insmod"/>
+        <file src="${prefix}/sbin/lsmod"/>
+        <file src="${prefix}/sbin/modinfo"/>
+        <file src="${prefix}/sbin/modprobe"/>
+        <file src="${prefix}/sbin/rmmod"/>
     </contents>
 </package>

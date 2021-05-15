@@ -24,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/nc"/>
-        <file src="/usr/bin/netcat"/>
+        <file src="${prefix}/bin/nc"/>
+        <file src="${prefix}/bin/netcat"/>
     </contents>
 </package>

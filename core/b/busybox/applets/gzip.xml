@@ -25,8 +25,8 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/gunzip"/>
-        <file src="/usr/bin/gzip"/>
-        <file src="/usr/bin/zcat"/>
+        <file src="${prefix}/bin/gunzip"/>
+        <file src="${prefix}/bin/gzip"/>
+        <file src="${prefix}/bin/zcat"/>
     </contents>
 </package>

@@ -26,9 +26,9 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/addgroup"/>
-        <file src="/usr/sbin/adduser"/>
-        <file src="/usr/sbin/delgroup"/>
-        <file src="/usr/sbin/deluser"/>
+        <file src="${prefix}/sbin/addgroup"/>
+        <file src="${prefix}/sbin/adduser"/>
+        <file src="${prefix}/sbin/delgroup"/>
+        <file src="${prefix}/sbin/deluser"/>
     </contents>
 </package>

@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/freeramdisk"/>
+        <file src="${prefix}/sbin/freeramdisk"/>
     </contents>
 </package>

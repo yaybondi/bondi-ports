@@ -24,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/iostat"/>
-        <file src="/usr/bin/mpstat"/>
+        <file src="${prefix}/bin/iostat"/>
+        <file src="${prefix}/bin/mpstat"/>
     </contents>
 </package>

@@ -24,7 +24,7 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/login"/>
-        <file src="/usr/sbin/nologin"/>
+        <file src="${prefix}/bin/login"/>
+        <file src="${prefix}/sbin/nologin"/>
     </contents>
 </package>

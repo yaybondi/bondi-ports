@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/cal"/>
+        <file src="${prefix}/bin/cal"/>
     </contents>
 </package>

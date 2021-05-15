@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/sbin/ntpd"/>
+        <file src="${prefix}/sbin/ntpd"/>
     </contents>
 </package>

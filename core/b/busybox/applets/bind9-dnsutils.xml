@@ -23,6 +23,6 @@
     </replaces>
 
     <contents>
-        <file src="/usr/bin/nslookup"/>
+        <file src="${prefix}/bin/nslookup"/>
     </contents>
 </package>
