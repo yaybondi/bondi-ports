@@ -17,7 +17,7 @@
 
     <provides>
         <package name="cpio"/>
-    </provides>>
+    </provides>
 
     <conflicts>
         <package name="cpio"/>
