@@ -25,6 +25,14 @@
         <file src="${prefix}/share/awk"/>
     </contents>
 
+    <conflicts>
+        <package name="busybox-gawk-symlinks"/>
+    </conflicts>
+
+    <replaces>
+        <package name="busybox-gawk-symlinks"/>
+    </replaces>
+
     <maintainer-scripts>
         <postinst><![CDATA[
 
