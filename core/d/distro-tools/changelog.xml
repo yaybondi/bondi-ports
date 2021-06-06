@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.3.0" revision="0bolt1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2021-06-06 11:58:00+03:00">
+        <changeset>
+            <li>bolt-pack: search patches relative to XML spec before looking in work dir</li>
+            <li>bolt-pack: fall back to fetching 'upstream-src' if specified</li>
+            <li>bolt-pack: create local copies of source archives per default</li>
+            <li>ffi-libarchive: fix error while overwriting symlinks from archive in unpack_to_disk</li>
+            <li>boltpack/shlibcache: handle /usr merge on Debian systems</li>
+            <li>bolt-pack: make --force-local mean 'local' (including cache)</li>
+        </changeset>
+    </release>
     <release version="1.2.1" revision="0bolt1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2021-05-09 00:17:00+03:00">
