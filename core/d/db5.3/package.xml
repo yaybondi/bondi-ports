@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <source name="db5.3" repo="core" architecture-independent="false">
+    <source name="db5.3" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
             <summary>Berkeley v5.3 Database and tools</summary>
             <p>

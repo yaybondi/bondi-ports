@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="mpclib3" repo="core" architecture-independent="false">
+    <source name="mpclib3" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
             <summary>multiple precision complex floating-point library</summary>
             <p>

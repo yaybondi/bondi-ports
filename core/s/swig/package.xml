@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="swig" repo="core" architecture-independent="false">
+    <source name="swig" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
             <summary>Generate scripting interfaces to C/C++ code</summary>
             <p>

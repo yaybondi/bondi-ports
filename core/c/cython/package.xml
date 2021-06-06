@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="cython" repo="core" architecture-independent="false">
+    <source name="cython" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
             <summary>C-Extensions for Python</summary>
             <p>

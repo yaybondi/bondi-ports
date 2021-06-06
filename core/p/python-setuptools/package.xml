@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <source name="python-setuptools" repo="core" architecture-independent="true">
+    <source name="python-setuptools" repo="core" architecture-independent="true" build-for="tools,target">
         <description>
             <summary>Package Discovery and Resource Access using pkg_resources</summary>
             <p>

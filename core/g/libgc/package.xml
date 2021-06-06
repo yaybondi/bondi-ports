@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="libgc" repo="core" architecture-independent="false">
+    <source name="libgc" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
             <summary>conservative garbage collector for C and C++</summary>
             <p>

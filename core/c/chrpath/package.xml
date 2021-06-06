@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="chrpath" repo="core" architecture-independent="false">
+    <source name="chrpath" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
             <summary>Tool to edit the rpath in ELF binaries</summary>
             <p>

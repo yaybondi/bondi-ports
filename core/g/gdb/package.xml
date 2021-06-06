@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="gdb" repo="core" architecture-independent="false">
+    <source name="gdb" repo="core" architecture-independent="false" build-for="tools,cross-tools,target">
         <description>
             <summary>GNU Debugger</summary>
             <p>

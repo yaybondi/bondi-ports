@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="sources"/>
     </defines>
 
-    <source name="autotools-dev" repo="core" architecture-independent="true">
+    <source name="autotools-dev" repo="core" architecture-independent="true" build-for="target">
         <description>
             <summary>Update infrastructure for config.{guess,sub} files</summary>
             <p>

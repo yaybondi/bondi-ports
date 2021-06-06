@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <source name="linux-5.4" repo="core" architecture-independent="false">
+    <source name="linux-5.4" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
             <summary>Linux kernel version 4.19</summary>
             <p>

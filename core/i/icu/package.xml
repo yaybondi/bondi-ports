@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <source name="icu" repo="core" architecture-independent="false">
+    <source name="icu" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
             <summary>International Components for Unicode</summary>
             <p>
