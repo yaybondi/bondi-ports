@@ -19,18 +19,13 @@
         <xi:include href="copyright.xml"/>
 
         <sources>
-            <file src="pam-config-1.1.tar.gz" subdir="sources"
-                sha256sum="2b252064f89f3f867f0818cf6212002927146a48322d4a05eabc3a5eb0de5dd5"/>
-            <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="da8fec8e9d4aaf93df533ff41eed79be4d1f5cc42974e659b56d7045ffc964ad"/>
+            <file
+                subdir="sources"
+                src="pam-config-1.3.tar.gz"
+                upstream-src="https://github.com/SUSE/pam-config/archive/refs/tags/v1.3.tar.gz"
+                sha256sum="5245a41ea80e5ff0434c78929024bc12c702e90ab2d8579ddde807fdf28d83e0"
+            />
         </sources>
-
-        <patches>
-            <patchset subdir="sources">
-                <!-- Bolt -->
-                <file src="patches/no-force-cracklib-on-create.patch"/>
-            </patchset>
-        </patches>
 
         <xi:include href="rules.xml"/>
     </source>

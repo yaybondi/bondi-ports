@@ -22,8 +22,11 @@
     <maintainer-scripts>
         <postinst><![CDATA[
 
-"$BOLT_INSTALL_PREFIX/sbin/pam-config" --update
-
+if [ `ls /etc/pam.d/ | wc -l` -eq 0 ]; then
+    "$BOLT_INSTALL_PREFIX/sbin/pam-config" --create
+else
+    "$BOLT_INSTALL_PREFIX/sbin/pam-config" --update || true
+fi
         ]]></postinst>
     </maintainer-scripts>
 </package>
