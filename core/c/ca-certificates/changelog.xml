@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="20210119" revision="0bolt3" upstream-version="20210119"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2021-07-19 21:43:00+03:00">
+        <changeset>
+            <li>
+                Postinst only checks if selinux is enabled if selinuxenabled
+                executable is installed.
+            </li>
+        </changeset>
+    </release>
     <release version="20210119" revision="0bolt2" upstream-version="20210119"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2021-07-18 17:39:20+03:00">
