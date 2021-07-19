@@ -21,8 +21,8 @@
         <sources>
             <file src="ca-certificates-20210119.tar.gz" subdir="sources"
                 sha256sum="db1b35e0c5085a7f863a2f08d3e84809dc32fc333056d4c98468dd150a32273c"/>
-            <file src="bolt-patches-2.tar.gz" subdir="patches"
-                sha256sum="ca897281f44dc2fae07ad98131d1e36152b31e1c2b67b346e78f3c314b09d4c4"/>
+            <file src="bolt-patches-3.tar.gz" subdir="patches"
+                sha256sum="3a61b5d9f9c8cfc48e004b79ba46560376409ab27adb5d8d6649f6ce38361b8f"/>
         </sources>
 
         <patches>
