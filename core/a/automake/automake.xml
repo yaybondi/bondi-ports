@@ -25,7 +25,7 @@
 
     <requires>
         <package name="autoconf" version=">= 2.65"/>
-        <package name="autotools-dev" version=">= 20020320.1"/>
+        <package name="autotools-dev" version=">= 20020320.1" tools-prefix=""/>
     </requires>
 
     <contents>
