@@ -8,7 +8,7 @@
     </description>
 
     <requires>
-        <package name="autotools-dev"/>
+        <package name="autotools-dev" tools-prefix=""/>
         <package name="binutils" tools-prefix="tools-target-"/>
         <package name="binutils" tools-prefix="tools-"/>
         <package name="chrpath"/>
