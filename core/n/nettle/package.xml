@@ -44,7 +44,7 @@
             <package name="libgmp-dev"/>
             <package name="m4"/>
             <package name="texinfo"/>
-            <package name="autotools-dev"/>
+            <package name="autotools-dev" tools-prefix=""/>
         </requires>
 
         <xi:include href="rules.xml"/>

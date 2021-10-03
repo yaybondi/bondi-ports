@@ -26,7 +26,7 @@
         </sources>
 
         <requires>
-            <package name="autotools-dev"/>
+            <package name="autotools-dev" tools-prefix=""/>
             <package name="bison"/>
             <package name="gettext"/>
             <package name="libmpfr-dev"/>

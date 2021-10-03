@@ -30,7 +30,7 @@
         </patches>
 
         <requires>
-            <package name="autotools-dev"/>
+            <package name="autotools-dev" tools-prefix=""/>
         </requires>
 
         <xi:include href="rules.xml"/>

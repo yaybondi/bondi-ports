@@ -39,7 +39,7 @@
         </patches>
 
         <requires>
-            <package name="autotools-dev"/>
+            <package name="autotools-dev" tools-prefix=""/>
             <package name="pkg-config"/>
             <package name="python3-dev"/>
             <package name="zlib1g-dev"/>

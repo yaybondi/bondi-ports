@@ -49,7 +49,7 @@
         </patches>
 
         <requires>
-            <package name="autotools-dev"/>
+            <package name="autotools-dev" tools-prefix=""/>
             <package name="autoconf"/>
             <package name="tcl8.6-dev"/>
         </requires>

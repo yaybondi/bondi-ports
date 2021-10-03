@@ -37,7 +37,7 @@
             <package name="texinfo"/>
             <package name="autoconf"/>
             <package name="automake"/>
-            <package name="autotools-dev"/>
+            <package name="autotools-dev" tools-prefix=""/>
         </requires>
 
         <xi:include href="rules.xml"/>

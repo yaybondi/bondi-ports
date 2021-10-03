@@ -31,7 +31,7 @@
 
         <requires>
             <package name="autoconf"/>
-            <package name="autotools-dev"/>
+            <package name="autotools-dev" tools-prefix=""/>
             <package name="bison"/>
             <package name="flex"/>
             <package name="libevent-dev"/>

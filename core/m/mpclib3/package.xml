@@ -39,7 +39,7 @@
         </patches>
 
         <requires>
-            <package name="autotools-dev"/>
+            <package name="autotools-dev" tools-prefix=""/>
             <package name="libmpfr-dev" version=">= 4.0.0"/>
             <package name="libgmp-dev"/>
         </requires>

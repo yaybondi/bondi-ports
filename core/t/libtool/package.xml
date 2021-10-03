@@ -69,7 +69,7 @@
             <package name="file"/>
             <package name="automake"/>
             <package name="autoconf"/>
-            <package name="autotools-dev"/>
+            <package name="autotools-dev" tools-prefix=""/>
             <package name="help2man"/>
             <package name="texinfo"/>
             <package name="zlib1g-dev"/>
