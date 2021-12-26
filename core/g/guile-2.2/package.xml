@@ -55,7 +55,6 @@
             <package name="libgc-dev"/>
             <package name="libffi-dev"/>
             <package name="pkg-config"/>
-            <package name="guile-2.2" target-prefix="tools-"/>
         </requires>
 
         <xi:include href="rules.xml"/>

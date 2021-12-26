@@ -14,18 +14,9 @@ mkdir .mybin
 ln -sf "$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-pkg-config" .mybin/pkg-config
 export PATH="`pwd`/.mybin:$PATH"
 
-# trigger a cross build and use guile from /tools if available
-if [ "$BOLT_BUILD_FOR" = "target" ] && [ -f /etc/target ]  && [ -e "/tools/bin/guile" ]; then
-    export GUILE_FOR_BUILD="/tools/bin/guile"
-    MY_BUILD_TYPE="$(cat /etc/target | grep ^TOOLS_TYPE= | cut -d= -f2-)"
-    export CC_FOR_BUILD="${BOLT_HOST_TYPE}-gcc"
-else
-    MY_BUILD_TYPE="$BOLT_HOST_TYPE"
-fi
-
 "$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$MY_BUILD_TYPE" \
+    --build="$BOLT_HOST_TYPE" \
     --host="$BOLT_HOST_TYPE" \
     --disable-nls \
     --disable-error-on-warning \
