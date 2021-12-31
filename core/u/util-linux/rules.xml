@@ -18,6 +18,16 @@ $BOLT_SOURCE_DIR/configure \
     --disable-makeinstall-chown \
     --disable-makeinstall-setuid
 
+# During the first phase of package builds during bootstrapping, the build
+# system finds /tools/include/ncurses and adds /tools/include to the header
+# search path even when the prefix has been set to /usr. To work around that
+# we fix up all files with /tools/include inside before running the build.
+
+if [ "$BOLT_BUILD_FOR" = "target" ] && [ -d /tools/include/ncurses ]; then
+    sed -i "s@/tools/include@/usr/include@g" $(
+        grep -r -l -F "/tools/include" * | sort -u
+    )
+fi
     ]]>
     </prepare>
 
