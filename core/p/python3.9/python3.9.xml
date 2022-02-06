@@ -17,12 +17,8 @@
     <provides>
         <package name="python3-all"/>
         <package name="python3"/>
+        <package name="python"/>
     </provides>
-
-    <conflicts>
-        <package name="python3-all"/>
-        <package name="python3"/>
-    </conflicts>
 
     <contents subdir="all">
         <dir src="${prefix}/lib/python3"/>
