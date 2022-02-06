@@ -14,6 +14,11 @@
         </p>
     </description>
 
+    <provides>
+        <package name="ruby2"/>
+        <package name="ruby"/>
+    </provides>
+
     <contents>
         <file src="${prefix}/bin"/>
         <dir src="/var/lib/gems"/>
