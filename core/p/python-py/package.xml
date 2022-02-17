@@ -7,13 +7,10 @@
             The Codespeak py lib aims at supporting a decent Python development process
             addressing deployment, versioning and documentation perspectives. It includes:
             </p>
-            <p>
-            * py.path: path abstractions over local and Subversion files
-            * py.code: dynamic code compile and traceback printing support
-            </p>
-            <p>
-            This package provides the Python 3 modules.
-            </p>
+            <ul>
+              <li>py.path: path abstractions over local and Subversion files</li>
+              <li>py.code: dynamic code compile and traceback printing support</li>
+            </ul>
         </description>
 
         <xi:include href="copyright.xml"/>
