@@ -6,7 +6,7 @@
 
     <source name="perl" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>Perl</summary>
+            <summary>Larry Wall's Practical Extraction and Report Language</summary>
             <p>
             Perl is a scripting language used in many system scripts and utilities.
             </p>
