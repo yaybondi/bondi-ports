@@ -14,35 +14,6 @@
             as gzip and bzip2. The library is inherently stream-oriented; readers serially
             iterate through the archive, writers serially add things to the archive.
             </p>
-            <p>
-            Archive formats supported are:
-            </p>
-            <ul>
-                <li>tar (read and write, including GNU extensions)</li>
-                <li>pax (read and write, including GNU and star extensions)</li>
-                <li>cpio (read and write, including odc and newc variants)</li>
-                <li>iso9660 (read and write, including Joliet and Rockridge extensions, with some limitations)</li>
-                <li>zip (read only, with some limitations, uses zlib)</li>
-                <li>mtree (read and write)</li>
-                <li>shar (write only)</li>
-                <li>ar (read and write, including BSD and GNU/SysV variants)</li>
-                <li>empty (read only; in particular, note that no other format will accept an empty file)</li>
-                <li>raw (read only)</li>
-                <li>xar (read only)</li>
-                <li>rar (read only, with some limitations)</li>
-                <li>7zip (read and write, with some limitations)</li>
-            </ul>
-            <p>
-            Filters supported are:
-            </p>
-            <ul>
-                <li>gzip (read and write, uses zlib)</li>
-                <li>bzip2 (read and write, uses bzlib)</li>
-                <li>compress (read and write, uses an internal implementation)</li>
-                <li>uudecode (read only)</li>
-                <li>separate command-line compressors with fixed-signature auto-detection</li>
-                <li>xz and lzma (read and write using liblzma)</li>
-            </ul>
         </description>
 
         <xi:include href="copyright.xml"/>
