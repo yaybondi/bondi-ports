@@ -4,7 +4,7 @@
         <summary>Bash loadable builtins - headers &amp; examples</summary>
         <p>
         Bash can dynamically load new builtin commands. Included are the
-        necessary headers to compile your own builtins and lots of examples.
+        necessary headers to compile your own builtins.
         </p>
     </description>
 

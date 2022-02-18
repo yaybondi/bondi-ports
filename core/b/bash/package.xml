@@ -16,10 +16,6 @@
             Bash is ultimately intended to be a conformant implementation of the
             IEEE POSIX Shell and Tools specification (IEEE Working Group 1003.2).
             </p>
-            <p>
-            The Programmable Completion Code, by Ian Macdonald, is now found in
-            the bash-completion package.
-            </p>
         </description>
 
         <xi:include href="copyright.xml"/>
