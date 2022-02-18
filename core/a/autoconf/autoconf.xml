@@ -8,10 +8,6 @@
         programs.
         </p>
         <p>
-        For an extensive library of additional Autoconf macros, install the
-        `autoconf-archive' package.
-        </p>
-        <p>
         This version of autoconf is not compatible with scripts meant for
         Autoconf 2.13 or earlier.
         </p>
