@@ -2,7 +2,7 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
     <source name="bzip2" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>high-quality block-sorting file compressor library</summary>
+            <summary>High-quality block-sorting file compressor library</summary>
             <p>
             bzip2 is a freely available, patent free, high-quality data compressor.
             It typically compresses files to within 10% to 15% of the best available

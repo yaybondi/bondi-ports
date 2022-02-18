@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="bzip2" section="utils">
     <description>
-        <summary>high-quality block-sorting file compressor - utilities</summary>
+        <summary>High-quality block-sorting file compressor - utilities</summary>
         <p>
         bzip2 is a freely available, patent free, high-quality data compressor.
         It typically compresses files to within 10% to 15% of the best available
