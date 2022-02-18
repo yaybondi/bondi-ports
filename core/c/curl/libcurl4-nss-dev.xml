@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libcurl4-nss-dev" section="libdevel">
     <description>
-        <summary>development files and documentation for libcurl (NSS flavour)</summary>
+        <summary>Development files for libcurl (NSS flavour)</summary>
         <p>
         libcurl is an easy-to-use client-side URL transfer library, supporting DICT,
         FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S,

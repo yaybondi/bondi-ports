@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="curl" section="web">
     <description>
-        <summary>command line tool for transferring data with URL syntax</summary>
+        <summary>Command line tool for transferring data with URL syntax</summary>
         <p>
         curl is a command line tool for transferring data with URL syntax, supporting
         DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3,
