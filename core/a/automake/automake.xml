@@ -16,11 +16,6 @@
         (with rules being thrown in occasionally). The generated
         `Makefile.in's are compliant with the GNU Makefile standards.
         </p>
-        <p>
-        Automake 1.16 fails to work in a number of situations that Automake
-        1.11, and 1.16 did, so some previous versions are available as separate
-        packages.
-        </p>
     </description>
 
     <requires>
