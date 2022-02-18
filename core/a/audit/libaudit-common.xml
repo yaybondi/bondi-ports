@@ -8,8 +8,7 @@
         security related events.
         </p>
         <p>
-        This package contains the libaudit.conf configuration file and the associated
-        manpage.
+        This package contains the libaudit.conf configuration file.
         </p>
     </description>
 
