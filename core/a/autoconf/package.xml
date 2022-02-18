@@ -2,7 +2,7 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
     <source name="autoconf" repo="core" architecture-independent="true" build-for="tools,target">
         <description>
-            <summary>automatic configure script builder</summary>
+            <summary>Automatic configure script builder</summary>
             <p>
             The standard for FSF source packages. This is only useful if you
             write your own programs or if you extensively modify other people's 

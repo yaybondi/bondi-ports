@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="autoconf" section="devel">
     <description>
-        <summary>automatic configure script builder</summary>
+        <summary>Automatic configure script builder</summary>
         <p>
         The standard for FSF source packages. This is only useful if you
         write your own programs or if you extensively modify other people's 
