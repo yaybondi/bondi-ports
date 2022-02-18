@@ -7,6 +7,9 @@
         protocol". This protocol is used for IPC between most newer GnuPG
         components. Both server and client side functions are provided.
         </p>
+        <p>
+        This package contains the runtime shared library.
+        </p>
     </description>
 
     <requires>
