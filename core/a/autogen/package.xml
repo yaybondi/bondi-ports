@@ -15,11 +15,6 @@
             option attributes, then it produces all the code necessary to parse and
             handle the command line and initialization file options.
             </p>
-            <p>
-            This package contains the development tools. libopts25-dev contains the
-            static libraries and header files. libopts25 contains the shared libraries.
-            autogen-doc contains the PostScript and HTML documentation.
-            </p>
         </description>
 
         <xi:include href="copyright.xml"/>

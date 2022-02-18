@@ -15,9 +15,7 @@
         handle the command line and initialization file options.
         </p>
         <p>
-        This package contains the development tools. libopts25-dev contains the
-        static libraries and header files. libopts25 contains the shared libraries.
-        autogen-doc contains the PostScript and HTML documentation.
+        This package contains the development tools.
         </p>
     </description>
 
