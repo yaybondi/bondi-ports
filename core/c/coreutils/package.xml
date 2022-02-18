@@ -9,19 +9,106 @@
             <summary>GNU core utilities</summary>
             <p>
             This package contains the basic file, shell and text manipulation
-            utilities which are expected to exist on every operating system.
+            utilities which are expected to exist on every operating system:
             </p>
-            <p>
-            Specifically, this package includes: 
-            arch base64 basename cat chcon chgrp chmod chown chroot cksum comm cp
-            csplit cut date dd df dir dircolors dirname du echo env expand expr
-            factor false flock fmt fold groups head hostid id install join link ln
-            logname ls md5sum mkdir mkfifo mknod mktemp mv nice nl nohup nproc numfmt
-            od paste pathchk pinky pr printenv printf ptx pwd readlink realpath rm 
-            rmdir runcon sha*sum seq shred sleep sort split stat stty sum sync tac 
-            tail tee test timeout touch tr true truncate tsort tty uname unexpand 
-            uniq unlink users vdir wc who whoami yes
-            </p>
+            <ul>
+                <li>arch</li>
+                <li>base64</li>
+                <li>basename</li>
+                <li>cat</li>
+                <li>chcon</li>
+                <li>chgrp</li>
+                <li>chmod</li>
+                <li>chown</li>
+                <li>chroot</li>
+                <li>cksum</li>
+                <li>comm</li>
+                <li>cp</li>
+                <li>csplit</li>
+                <li>cut</li>
+                <li>date</li>
+                <li>dd</li>
+                <li>df</li>
+                <li>dir</li>
+                <li>dircolors</li>
+                <li>dirname</li>
+                <li>du</li>
+                <li>echo</li>
+                <li>env</li>
+                <li>expand</li>
+                <li>expr</li>
+                <li>factor</li>
+                <li>false</li>
+                <li>flock</li>
+                <li>fmt</li>
+                <li>fold</li>
+                <li>groups</li>
+                <li>head</li>
+                <li>hostid</li>
+                <li>id</li>
+                <li>install</li>
+                <li>join</li>
+                <li>link</li>
+                <li>ln</li>
+                <li>logname</li>
+                <li>ls</li>
+                <li>md5sum</li>
+                <li>mkdir</li>
+                <li>mkfifo</li>
+                <li>mknod</li>
+                <li>mktemp</li>
+                <li>mv</li>
+                <li>nice</li>
+                <li>nl</li>
+                <li>nohup</li>
+                <li>nproc</li>
+                <li>numfmt</li>
+                <li>od</li>
+                <li>paste</li>
+                <li>pathchk</li>
+                <li>pinky</li>
+                <li>pr</li>
+                <li>printenv</li>
+                <li>printf</li>
+                <li>ptx</li>
+                <li>pwd</li>
+                <li>readlink</li>
+                <li>realpath</li>
+                <li>rm</li>
+                <li>rmdir</li>
+                <li>runcon</li>
+                <li>sha*sum</li>
+                <li>seq</li>
+                <li>shred</li>
+                <li>sleep</li>
+                <li>sort</li>
+                <li>split</li>
+                <li>stat</li>
+                <li>stty</li>
+                <li>sum</li>
+                <li>sync</li>
+                <li>tac</li>
+                <li>tail</li>
+                <li>tee</li>
+                <li>test</li>
+                <li>timeout</li>
+                <li>touch</li>
+                <li>tr</li>
+                <li>true</li>
+                <li>truncate</li>
+                <li>tsort</li>
+                <li>tty</li>
+                <li>uname</li>
+                <li>unexpand</li>
+                <li>uniq</li>
+                <li>unlink</li>
+                <li>users</li>
+                <li>vdir</li>
+                <li>wc</li>
+                <li>who</li>
+                <li>whoami</li>
+                <li>yes</li>
+            </ul>
         </description>
 
         <xi:include href="copyright.xml"/>

@@ -7,7 +7,7 @@
         utilities which are expected to exist on every operating system.
         </p>
         <p>
-        Specifically, this package includes: join
+        This package contains the join command.
         </p>
     </description>
 
