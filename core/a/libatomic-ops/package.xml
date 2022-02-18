@@ -6,7 +6,7 @@
 
     <source name="libatomic-ops" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>A library for atomic operations (development files)</summary>
+            <summary>A library for atomic operations</summary>
             <p>
             Libatomic-ops implements a large collection of operations, each one
             of which is a combination of an (optional) atomic memory operation,
@@ -16,10 +16,6 @@
             Libatomic-ops attempts to replace various existing files with similar
             goals, since they usually do not handle differences in memory barrier
             styles with sufficient generality.
-            </p>
-            <p>
-            This package provides the header files and documentation needed by
-            developers.
             </p>
         </description>
 
