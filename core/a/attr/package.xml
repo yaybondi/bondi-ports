@@ -2,18 +2,10 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
     <source name="attr" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>Utilities for manipulating filesystem extended attributes</summary>
+            <summary>Filesystem extended attributes modification</summary>
             <p>
-            A set of tools for manipulating extended attributes on filesystem
-            objects, in particular getfattr(1) and setfattr(1).
-            An attr(1) command is also provided which is largely compatible
-            with the SGI IRIX tool of the same name.
-            </p>
-            <p>
-            attr-dev contains the libraries and header files needed to develop
-            programs which make use of extended attributes. For Linux programs,
-            the documented system call API is the recommended interface, but an
-            SGI IRIX compatibility interface is also provided.
+            Tools and programming interfaces for modifying extended attributes
+            on filesystems that support them.
             </p>
             <p>
             Currently only ext2, ext3, JFS and XFS support extended attributes.
