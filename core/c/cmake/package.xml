@@ -6,7 +6,7 @@
 
     <source name="cmake" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>cross-platform, open-source make system</summary>
+            <summary>Cross-platform, open-source make system</summary>
             <p>
             CMake is used to control the software compilation process using
             simple platform and compiler independent configuration files. CMake

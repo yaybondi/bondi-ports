@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="cmake-curses-gui" section="devel">
     <description>
-        <summary>curses based user interface for CMake (ccmake)</summary>
+        <summary>Curses based user interface for CMake (ccmake)</summary>
         <p>
         CMake is used to control the software compilation process using simple
         platform and compiler independent configuration files. CMake generates native
