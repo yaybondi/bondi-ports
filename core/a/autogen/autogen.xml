@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="autogen" section="devel">
     <description>
-        <summary>automated text file generator</summary>
+        <summary>Automated text file generator</summary>
         <p>
         AutoGen is a tool designed for generating program files that contain
         repetitive text with varied substitutions. This is especially valuable if
