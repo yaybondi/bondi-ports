@@ -6,7 +6,7 @@
 
     <source name="libcap-ng" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>Development and header files for libcap-ng</summary>
+            <summary>An alternate POSIX capabilities library</summary>
             <p>
             This library implements the user-space interfaces to the POSIX
             1003.1e capabilities available in Linux kernels. These capabilities are
