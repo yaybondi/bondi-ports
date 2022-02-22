@@ -7,9 +7,6 @@
             The file command is "a file type guesser", a command-line tool that
             tells you in words what kind of data a file contains.
             </p>
-            <p>
-            This package contains the file program itself.
-            </p>
         </description>
 
         <xi:include href="copyright.xml"/>
