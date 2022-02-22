@@ -3,9 +3,8 @@
     <description>
         <summary>Berkeley v5.3 SQL Database Utilities</summary>
         <p>
-        This package provides different tools for manipulating databases
-        in the Berkeley v5.3 SQL database format, and includes:
-        - db5.3_sql: sqlite3 compatible command-line utility
+        This package provides the db5.3_sql command, an sqlite3-compatible
+        command line utility for working with Berkeley v5.3 databases.
         </p>
     </description>
 
