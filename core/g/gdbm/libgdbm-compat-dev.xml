@@ -4,8 +4,8 @@
         <summary>GNU dbm database routines (legacy support development files)</summary>
         <p>
         This package includes development files, required to build old
-        programs, that use legacy 'dbm' interface. For new programs, please
-        use modern interface, provided by libgdbm6 and libgdbm-dev.
+        programs that use the legacy 'dbm' interface. For new programs, please
+        use the modern interface provided by libgdbm6 and libgdbm-dev.
         </p>
     </description>
 

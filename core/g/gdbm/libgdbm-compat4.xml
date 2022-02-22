@@ -3,9 +3,9 @@
     <description>
         <summary>GNU dbm database routines (legacy support runtime version)</summary>
         <p>
-        This package includes library files, required to run old programs,
-        that use legacy 'dbm' interface. For new programs, please use modern
-        interface, provided by libgdbm6 and libgdbm-dev.
+        This package includes library files, required to run old programs
+        that use the legacy 'dbm' interface. For new programs, please use the
+        modern interface, provided by libgdbm6 and libgdbm-dev.
         </p>
     </description>
 

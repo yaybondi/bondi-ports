@@ -6,7 +6,7 @@
 
     <source name="gdbm" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>GNU dbm database routines (runtime version)</summary>
+            <summary>GNU dbm database</summary>
             <p>
             GNU dbm ('gdbm') is a library of database functions that use extendible
             hashing and works similarly to the standard UNIX 'dbm' functions.
