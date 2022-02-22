@@ -2,10 +2,10 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
     <source name="gettext" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>GNU Internationalization utilities for the base system</summary>
+            <summary>GNU Internationalization tools and library</summary>
             <p>
-            This package includes the gettext and ngettext programs which allow
-            other packages to internationalize the messages given by shell scripts.
+            A programming library and a set of tools for creating multi-lingual software
+            programs.
             </p>
         </description>
 
