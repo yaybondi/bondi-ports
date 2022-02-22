@@ -23,9 +23,6 @@
             <p>
             This is the "fstrm" implementation of Frame Streams in C.
             </p>
-            <p>
-            This package contains the shared library.
-            </p>
         </description>
 
         <xi:include href="copyright.xml"/>
