@@ -8,9 +8,9 @@
         <p>
         Guile is a Scheme implementation designed for real world programming,
         providing a rich Unix interface, a module system, an interpreter, and
-        many extension languages. Guile can be used as a standard #! style
-        interpreter, via #!${prefix}/bin/guile, or as an extension language for
-        other applications via libguile.
+        many extension languages. Guile can be used as a standard <tt>#!</tt> style
+        interpreter, via <tt>#!${prefix}/bin/guile</tt>, or as an extension language
+        for other applications via libguile.
         </p>
     </description>
 
