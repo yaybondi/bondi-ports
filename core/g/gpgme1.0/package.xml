@@ -6,14 +6,10 @@
 
     <source name="gpgme1.0" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>GPGME - GnuPG Made Easy (development files)</summary>
+            <summary>GPGME - GnuPG Made Easy</summary>
             <p>
             GPGME is a wrapper library which provides a C API to access some of the
             GnuPG functions, such as encrypt, decrypt, sign, verify, ...
-            </p>
-            <p>
-            This package contains the headers and other files needed to compile
-            against this library.
             </p>
         </description>
 
