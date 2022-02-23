@@ -8,9 +8,6 @@
             as trees, hashes, lists, and strings. It is a useful general-purpose
             C library used by projects such as GTK+, GIMP, and GNOME.
             </p>
-            <p>
-            This package contains the shared libraries.
-            </p>
         </description>
 
         <xi:include href="copyright.xml"/>
