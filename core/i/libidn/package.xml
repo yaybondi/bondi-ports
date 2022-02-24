@@ -6,16 +6,12 @@
 
     <source name="libidn" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>Command line and Emacs interface to GNU Libidn</summary>
+            <summary>Implementation of IETF IDN specifications</summary>
             <p>
             GNU Libidn is a fully documented implementation of the Stringprep,
             Punycode and IDNA specifications. Libidn's purpose is to encode and
             decode internationalized domain names. The Nameprep, XMPP, SASLprep,
             and iSCSI profiles are supported.
-            </p>
-            <p>
-            This package contains the idn command-line tool and its Emacs lisp
-            interface.
             </p>
         </description>
 
