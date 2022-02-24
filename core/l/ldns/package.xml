@@ -13,9 +13,6 @@
             conforming to current RFCs, and experimental software for current Internet
             Drafts.
             </p>
-            <p>
-            This package contains shared libraries.
-            </p>
         </description>
 
         <xi:include href="copyright.xml"/>
