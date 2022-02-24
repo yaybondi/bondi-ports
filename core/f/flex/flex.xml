@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="flex" section="devel">
     <description>
-        <summary>fast lexical analyzer generator</summary>
+        <summary>Fast lexical analyzer generator</summary>
         <p>
         Flex is a tool for generating scanners: programs which recognized lexical
         patterns in text. It reads the given input files for a description of a

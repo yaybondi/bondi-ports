@@ -6,7 +6,7 @@
 
     <source name="flex" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>fast lexical analyzer generator</summary>
+            <summary>Fast lexical analyzer generator</summary>
             <p>
             Flex is a tool for generating scanners: programs which recognized lexical
             patterns in text. It reads the given input files for a description of a

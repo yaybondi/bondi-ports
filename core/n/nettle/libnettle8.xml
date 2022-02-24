@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libnettle8" section="libs">
     <description>
-        <summary>low level cryptographic library (symmetric and one-way cryptos)</summary>
+        <summary>Low level cryptographic library (symmetric and one-way cryptos)</summary>
         <p>
         Nettle is a cryptographic library that is designed to fit easily in more or
         less any context: In crypto toolkits for object-oriented languages (C++,

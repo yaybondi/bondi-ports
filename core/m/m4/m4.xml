@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="m4" section="interpreters">
     <description>
-        <summary>macro processing language</summary>
+        <summary>Macro processing language</summary>
         <p>
         GNU `m4' is an implementation of the traditional UNIX macro
         processor. It is mostly SVR4 compatible, although it has some

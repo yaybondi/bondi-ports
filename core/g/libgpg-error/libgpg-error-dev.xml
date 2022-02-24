@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libgpg-error-dev" section="libdevel">
     <description>
-        <summary>library for common error values and messages in GnuPG components (development)</summary>
+        <summary>Library for common error values and messages in GnuPG components (development)</summary>
         <p>
         Library that defines common error values for all GnuPG
         components. Among these are GPG, GPGSM, GPGME, GPG-Agent, libgcrypt,

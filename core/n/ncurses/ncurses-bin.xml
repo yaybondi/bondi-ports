@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="ncurses-bin" section="utils">
     <description>
-        <summary>terminal-related programs and man pages</summary>
+        <summary>Terminal-related programs and man pages</summary>
         <p>
         The ncurses library routines are a terminal-independent method of
         updating character screens with reasonable optimization.

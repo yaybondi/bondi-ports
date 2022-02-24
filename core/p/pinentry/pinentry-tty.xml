@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="pinentry-tty" section="utils">
     <description>
-        <summary>minimal dumb-terminal PIN or pass-phrase entry for GnuPG</summary>
+        <summary>Minimal dumb-terminal PIN or pass-phrase entry for GnuPG</summary>
         <p>
         This package contains a program that allows for secure entry of PINs or
         pass phrases. That means it tries to take care that the entered

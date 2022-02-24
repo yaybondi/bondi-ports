@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libucontext1" section="libs">
     <description>
-        <summary>library which provides the ucontext.h C API</summary>
+        <summary>Library which provides the ucontext.h C API</summary>
         <p>
             libucontext is a library which provides the ucontext.h C API. Unlike
             other implementations, it faithfully follows the kernel process ABI

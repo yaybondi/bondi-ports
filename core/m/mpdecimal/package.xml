@@ -2,7 +2,7 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
     <source name="mpdecimal" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>library for decimal floating point arithmetic</summary>
+            <summary>Library for decimal floating point arithmetic</summary>
             <p>
             mpdecimal is a package for correctly-rounded arbitrary precision decimal
             floating point arithmetic.

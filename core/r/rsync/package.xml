@@ -6,7 +6,7 @@
 
     <source name="rsync" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>fast, versatile, remote (and local) file-copying tool</summary>
+            <summary>Fast, versatile, remote (and local) file-copying tool</summary>
             <p>
             rsync is a fast and versatile file-copying tool which can copy locally
             and to/from a remote host. It offers many options to control its behavior,

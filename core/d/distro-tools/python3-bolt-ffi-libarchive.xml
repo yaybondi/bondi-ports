@@ -1,6 +1,6 @@
 <package name="python3-bolt-ffi-libarchive" section="python">
     <description>
-        <summary>ffi bindings to libarchive (using ctypes)</summary>
+        <summary>FFI bindings to libarchive (using ctypes)</summary>
         <p>
         This module provides a pythonic interface to libarchive.
         </p>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libunbound-dev" section="libdevel">
     <description>
-        <summary>static library, header files, and docs for libunbound</summary>
+        <summary>Static library, header files, and docs for libunbound</summary>
         <p>
         Static library, header files, and documentation for libunbound.
         </p>

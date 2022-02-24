@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="unbound-host" section="net">
     <description>
-        <summary>reimplementation of the 'host' command</summary>
+        <summary>Reimplementation of the 'host' command</summary>
         <p>
         This package provides the 'unbound-host' program that is bundled with the
         Unbound domain name server. This version differs from the one provided in the

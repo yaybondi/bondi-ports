@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="python3-unbound" section="python">
     <description>
-        <summary>library implementing DNS resolution and validation (Python3 bindings)</summary>
+        <summary>Library implementing DNS resolution and validation (Python3 bindings)</summary>
         <p>
         Python3 extension module for libunbound.
         </p>

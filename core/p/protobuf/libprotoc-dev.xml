@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libprotoc-dev" section="libdevel">
     <description>
-        <summary>protocol buffers compiler library (development files)</summary>
+        <summary>Protocol buffers compiler library (development files)</summary>
         <p>
         Protocol buffers are a flexible, efficient, automated mechanism for
         serializing structured data - similar to XML, but smaller, faster, and

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="python3-dateutil" section="python">
     <description>
-        <summary>powerful extensions to the standard datetime module</summary>
+        <summary>Powerful extensions to the standard datetime module</summary>
         <p>
         It features:
         </p>

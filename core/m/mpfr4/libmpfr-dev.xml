@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libmpfr-dev" section="libdevel">
     <description>
-        <summary>multiple precision floating-point computation developers tools</summary>
+        <summary>Multiple precision floating-point computation developers tools</summary>
         <p>
         This development package provides the header files and the symbolic
         links to allow compilation and linking of programs that use the libraries

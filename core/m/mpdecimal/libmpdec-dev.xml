@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libmpdec-dev" section="libdevel">
     <description>
-        <summary>library for decimal floating point arithmetic (development files)</summary>
+        <summary>Library for decimal floating point arithmetic (development files)</summary>
         <p>
         mpdecimal is a package for correctly-rounded arbitrary precision decimal
         floating point arithmetic.

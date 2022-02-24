@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libzstd1" section="libs">
     <description>
-        <summary>fast lossless compression algorithm</summary>
+        <summary>Fast lossless compression algorithm</summary>
         <p>
         Zstd, short for Zstandard, is a fast lossless compression algorithm, targeting
         real-time compression scenarios at zlib-level compression ratio.

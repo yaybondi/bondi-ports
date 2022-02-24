@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libncurses5" section="oldlibs">
     <description>
-        <summary>shared libraries for terminal handling (legacy version)</summary>
+        <summary>Shared libraries for terminal handling (legacy version)</summary>
         <p>
         The ncurses library routines are a terminal-independent method of
         updating character screens with reasonable optimization.

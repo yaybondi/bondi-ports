@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libblkid-dev" section="libdevel">
     <description>
-        <summary>block device ID library - headers and static libraries</summary>
+        <summary>Block device ID library - headers and static libraries</summary>
         <p>
         The blkid library allows system programs such as fsck and mount to
         quickly and easily find block devices by filesystem UUID or label.

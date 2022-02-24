@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libsolv-tools" section="admin">
     <description>
-        <summary>dependency solver using a satisfiability algorithm (command-line tools)</summary>
+        <summary>Dependency solver using a satisfiability algorithm (command-line tools)</summary>
         <p>
         This dependency solver code in this package is based on two major, but
         independent, blocks:

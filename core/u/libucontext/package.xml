@@ -2,7 +2,7 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
     <source name="libucontext" repo="core" build-for="tools,target">
         <description>
-            <summary>library which provides the ucontext.h C API</summary>
+            <summary>Library which provides the ucontext.h C API</summary>
             <p>
                 libucontext is a library which provides the ucontext.h C API. Unlike
                 other implementations, it faithfully follows the kernel process ABI

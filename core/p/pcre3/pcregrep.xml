@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="pcregrep" section="utils">
     <description>
-        <summary>grep utility that uses perl 5 compatible regexes.</summary>
+        <summary>Grep utility that uses perl 5 compatible regexes.</summary>
         <p>
         Perl-style regexps have many useful features that the standard POSIX ones
         don't; this is basically the same as grep but with the different

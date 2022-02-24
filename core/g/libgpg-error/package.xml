@@ -6,7 +6,7 @@
 
     <source name="libgpg-error" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>library for common error values and messages in GnuPG components</summary>
+            <summary>Library for common error values and messages in GnuPG components</summary>
             <p>
             Library that defines common error values for all GnuPG
             components. Among these are GPG, GPGSM, GPGME, GPG-Agent, libgcrypt,

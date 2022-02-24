@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="unbound-anchor" section="net">
     <description>
-        <summary>utility to securely fetch the root DNS trust anchor</summary>
+        <summary>Utility to securely fetch the root DNS trust anchor</summary>
         <p>
         unbound-anchor is a utility which securely fetches or updates the root DNS
         zone trust anchor. A copy of the current root anchor and root update

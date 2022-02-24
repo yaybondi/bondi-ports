@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="re2c" section="devel">
     <description>
-        <summary>lexer generator for C, C++ and Go</summary>
+        <summary>Lexer generator for C, C++ and Go</summary>
         <p>
         re2c's main goal is generating fast lexers: at least as fast as
         their reasonably optimized hand-coded counterparts. Instead of using

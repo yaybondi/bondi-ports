@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libprotoc23" section="libs">
     <description>
-        <summary>protocol buffers compiler library</summary>
+        <summary>Protocol buffers compiler library</summary>
         <p>
         Protocol buffers are a flexible, efficient, automated mechanism for
         serializing structured data - similar to XML, but smaller, faster, and

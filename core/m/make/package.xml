@@ -6,7 +6,7 @@
 
     <source name="make-dfsg" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>utility for directing compilation</summary>
+            <summary>Utility for directing compilation</summary>
             <p>
             GNU Make is a utility which controls the generation of executables
             and other target files of a program from the program's source

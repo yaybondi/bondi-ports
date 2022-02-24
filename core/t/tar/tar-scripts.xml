@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="tar-scripts" section="utils">
     <description>
-        <summary>optional scripts for GNU version of the tar archiving utility</summary>
+        <summary>Optional scripts for GNU version of the tar archiving utility</summary>
         <p>
         This package provides the backup, restore, backup.sh, and dump-remind
         scripts that are mentioned in the tar documentation.

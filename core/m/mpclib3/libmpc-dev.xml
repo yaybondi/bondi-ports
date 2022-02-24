@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libmpc-dev" section="libdevel">
     <description>
-        <summary>multiple precision complex floating-point library development package</summary>
+        <summary>Multiple precision complex floating-point library development package</summary>
         <p>
         MPC is a portable library written in C for arbitrary precision
         arithmetic on complex numbers providing correct rounding. For the time

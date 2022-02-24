@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libncurses-dev" section="libdevel">
     <description>
-        <summary>developer's libraries for ncurses</summary>
+        <summary>Developer's libraries for ncurses</summary>
         <p>
         The ncurses library routines are a terminal-independent method of
         updating character screens with reasonable optimization.

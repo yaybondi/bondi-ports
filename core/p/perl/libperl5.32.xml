@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libperl5.32" section="libs">
     <description>
-        <summary>shared Perl library</summary>
+        <summary>Shared Perl library</summary>
         <p>
         This package contains the shared Perl library, used by applications
         which embed a Perl interpreter.

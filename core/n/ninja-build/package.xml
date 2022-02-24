@@ -6,7 +6,7 @@
 
     <source name="ninja-build" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>small build system closest in spirit to Make</summary>
+            <summary>Small build system closest in spirit to Make</summary>
             <p>
             Ninja is yet another build system. It takes as input the interdependencies of
             files (typically source code and output executables) and orchestrates

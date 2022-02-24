@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="mount" section="admin">
     <description>
-        <summary>tools for mounting and manipulating filesystems</summary>
+        <summary>Tools for mounting and manipulating filesystems</summary>
         <p>
             This package provides the mount, umount, swapon, swapoff, and losetup
             commands.

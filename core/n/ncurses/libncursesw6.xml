@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libncursesw6" section="libs">
     <description>
-        <summary>shared libraries for terminal handling (wide character support)</summary>
+        <summary>Shared libraries for terminal handling (wide character support)</summary>
         <p>
         The ncurses library routines are a terminal-independent method of
         updating character screens with reasonable optimization.

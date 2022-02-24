@@ -6,7 +6,7 @@
 
     <source name="meson" repo="core" architecture-independent="true" build-for="tools,target">
         <description>
-            <summary>high-productivity build system</summary>
+            <summary>High-productivity build system</summary>
             <p>
             Meson is a build system designed to increase programmer
             productivity. It does this by providing a fast, simple and easy to

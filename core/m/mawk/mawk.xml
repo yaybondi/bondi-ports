@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="mawk" section="interpreters">
     <description>
-        <summary>a pattern scanning and text processing language</summary>
+        <summary>Pattern scanning and text processing language</summary>
         <p>
         Mawk is an interpreter for the AWK Programming Language. The AWK
         language is useful for manipulation of data files, text retrieval and

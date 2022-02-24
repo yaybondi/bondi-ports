@@ -6,7 +6,7 @@
 
     <source name="unbound" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>library implementing DNS resolution and validation</summary>
+            <summary>Library implementing DNS resolution and validation</summary>
             <p>
             libunbound performs and validates DNS lookups; it can be used to convert
             hostnames to IP addresses and back and obtain other information from the

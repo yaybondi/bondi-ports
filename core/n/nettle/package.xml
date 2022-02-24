@@ -6,7 +6,7 @@
 
     <source name="nettle" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>low level cryptographic library</summary>
+            <summary>Low level cryptographic library</summary>
             <p>
             Nettle is a cryptographic library that is designed to fit easily in more or
             less any context: In crypto toolkits for object-oriented languages (C++,

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="uuid-runtime" section="utils">
     <description>
-        <summary>runtime components for the Universally Unique ID library</summary>
+        <summary>Runtime components for the Universally Unique ID library</summary>
         <p>
         The libuuid library generates and parses 128-bit Universally Unique
         IDs (UUIDs). A UUID is an identifier that is unique within the space

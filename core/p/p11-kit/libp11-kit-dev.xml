@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libp11-kit-dev" section="libdevel">
     <description>
-        <summary>library for loading and coordinating access to PKCS#11 modules - development</summary>
+        <summary>Library for loading and coordinating access to PKCS#11 modules - development</summary>
         <p>
         The p11-kit library provides a way to load and enumerate Public-Key
         Cryptography Standard #11 modules, along with a standard configuration

@@ -6,7 +6,7 @@
 
     <source name="gengetopt" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>skeleton main.c generator</summary>
+            <summary>Skeleton main.c generator</summary>
             <p>
             gengetopt reads an interface description file, and writes a skeleton
             main.c file. gengetopt supports: long and short options, 11 types of

@@ -2,10 +2,10 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
     <source name="zlib" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>compression library - runtime</summary>
+            <summary>Compression library</summary>
             <p>
             zlib is a library implementing the deflate compression method found
-            in gzip and PKZIP. This package includes the shared library.
+            in gzip and PKZIP.
             </p>
         </description>
 

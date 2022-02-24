@@ -6,7 +6,7 @@
 
     <source name="libsolv" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>dependency solver using a satisfiability algorithm (shared library)</summary>
+            <summary>Dependency solver using a satisfiability algorithm (shared library)</summary>
             <p>
             This dependency solver code in this package is based on two major, but
             independent, blocks:

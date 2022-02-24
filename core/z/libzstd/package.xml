@@ -2,13 +2,10 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
     <source name="libzstd" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>fast lossless compression algorithm -- development files</summary>
+            <summary>Fast lossless compression algorithm</summary>
             <p>
             Zstd, short for Zstandard, is a fast lossless compression algorithm, targeting
             real-time compression scenarios at zlib-level compression ratio.
-            </p>
-            <p>
-            This package contains the headers and static library.
             </p>
         </description>
 

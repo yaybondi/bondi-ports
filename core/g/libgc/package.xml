@@ -6,7 +6,7 @@
 
     <source name="libgc" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>conservative garbage collector for C and C++</summary>
+            <summary>Conservative garbage collector for C and C++</summary>
             <p>
             Boehm-Demers-Weiser's GC is a garbage collecting storage allocator that is
             intended to be used as a plug-in replacement for C's malloc or C++'s new().

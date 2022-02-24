@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libnpth0" section="libs">
     <description>
-        <summary>replacement for GNU Pth using system threads</summary>
+        <summary>Replacement for GNU Pth using system threads</summary>
         <p>
         nPth is a non-preemptive threads implementation using an API very
         similar to the one known from GNU Pth. It has been designed as a

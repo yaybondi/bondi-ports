@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="protobuf-compiler" section="devel">
     <description>
-        <summary>compiler for protocol buffer definition files</summary>
+        <summary>Compiler for protocol buffer definition files</summary>
         <p>
         Protocol buffers are a flexible, efficient, automated mechanism for
         serializing structured data - similar to XML, but smaller, faster, and

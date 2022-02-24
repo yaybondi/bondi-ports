@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="rsync" section="net">
     <description>
-        <summary>fast, versatile, remote (and local) file-copying tool</summary>
+        <summary>Fast, versatile, remote (and local) file-copying tool</summary>
         <p>
         rsync is a fast and versatile file-copying tool which can copy locally
         and to/from a remote host. It offers many options to control its behavior,

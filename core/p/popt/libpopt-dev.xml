@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libpopt-dev" section="libdevel">
     <description>
-        <summary>lib for parsing cmdline parameters - development files</summary>
+        <summary>Lib for parsing cmdline parameters - development files</summary>
         <p>
         Popt was heavily influenced by the getopt() and getopt_long() functions,
         but it allows more powerful argument expansion. It can parse arbitrary

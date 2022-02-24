@@ -6,7 +6,7 @@
 
     <source name="util-linux" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>miscellaneous system utilities</summary>
+            <summary>Miscellaneous system utilities</summary>
             <p>
             This package contains a number of important utilities, most of which
             are oriented towards maintenance of your system. Some of the more

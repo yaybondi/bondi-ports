@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="ninja-build" section="devel">
     <description>
-        <summary>small build system closest in spirit to Make</summary>
+        <summary>Small build system closest in spirit to Make</summary>
         <p>
         Ninja is yet another build system. It takes as input the interdependencies of
         files (typically source code and output executables) and orchestrates

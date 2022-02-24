@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libprocps8" section="libs">
     <description>
-        <summary>library for accessing process information from /proc</summary>
+        <summary>Library for accessing process information from /proc</summary>
         <p>
         The libprocps library is a way of accessing information out of the /proc
         filesystem.

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libfl-dev" section="libdevel">
     <description>
-        <summary>static library for flex (a fast lexical analyzer generator)</summary>
+        <summary>Static library for flex (a fast lexical analyzer generator)</summary>
         <p>
         Flex is a tool for generating scanners: programs which recognized lexical
         patterns in text. It reads the given input files for a description of a

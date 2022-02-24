@@ -6,7 +6,7 @@
 
     <source name="ncurses" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>system libraries for terminal handling</summary>
+            <summary>System libraries for terminal handling</summary>
             <p>
             The ncurses library routines are a terminal-independent method of
             updating character screens with reasonable optimization.

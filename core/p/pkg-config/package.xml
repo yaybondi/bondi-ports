@@ -2,7 +2,7 @@
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
     <source name="pkg-config" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>manage compile and link flags for libraries</summary>
+            <summary>Manage compile and link flags for libraries</summary>
             <p>
             pkg-config is a system for managing library compile and link flags that 
             works with automake and autoconf.

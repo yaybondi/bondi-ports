@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="meson" section="devel">
     <description>
-        <summary>high-productivity build system</summary>
+        <summary>High-productivity build system</summary>
         <p>
         Meson is a build system designed to increase programmer
         productivity. It does this by providing a fast, simple and easy to

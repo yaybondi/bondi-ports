@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="make" section="devel">
     <description>
-        <summary>utility for directing compilation</summary>
+        <summary>Utility for directing compilation</summary>
         <p>
         GNU Make is a utility which controls the generation of executables
         and other target files of a program from the program's source

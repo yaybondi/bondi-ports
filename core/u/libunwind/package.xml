@@ -6,7 +6,7 @@
 
     <source name="libunwind" repo="core" architecture-independent="false" supported-on="!s390x,!riscv64" build-for="tools,target">
         <description>
-            <summary>library to determine the call-chain of a program - development</summary>
+            <summary>Library to determine the call-chain of a program - development</summary>
             <p>
             The primary goal of this project is to define a portable and efficient C
             programming interface (API) to determine the call-chain of a program.

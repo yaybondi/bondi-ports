@@ -6,7 +6,7 @@
 
     <source name="isl" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>manipulating sets and relations of integer points bounded by linear constraints</summary>
+            <summary>Manipulating sets and relations of integer points bounded by linear constraints</summary>
             <p>
             isl is a library for manipulating sets and relations of integer points
             bounded by linear constraints. Supported operations on sets include

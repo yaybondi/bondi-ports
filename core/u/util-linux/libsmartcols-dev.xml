@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libsmartcols-dev" section="libdevel">
     <description>
-        <summary>smart column output alignment library - headers and static libraries</summary>
+        <summary>Smart column output alignment library - headers and static libraries</summary>
         <p>
         This smart column output alignment library is used by fdisk utilities.
         </p>

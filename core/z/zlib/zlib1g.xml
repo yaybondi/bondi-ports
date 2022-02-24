@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="zlib1g" section="libs">
     <description>
-        <summary>compression library - runtime</summary>
+        <summary>Compression library - runtime</summary>
         <p>
         zlib is a library implementing the deflate compression method found
         in gzip and PKZIP. This package includes the shared library.

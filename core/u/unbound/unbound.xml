@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="unbound" section="net">
     <description>
-        <summary>validating, recursive, caching DNS resolver</summary>
+        <summary>Validating, recursive, caching DNS resolver</summary>
         <p>
         Unbound is a recursive-only caching DNS server which can perform DNSSEC
         validation of results. It implements only a minimal amount of authoritative

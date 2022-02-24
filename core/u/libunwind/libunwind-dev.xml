@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libunwind-dev" section="libdevel">
     <description>
-        <summary>library to determine the call-chain of a program - development</summary>
+        <summary>Library to determine the call-chain of a program - development</summary>
         <p>
         The primary goal of this project is to define a portable and efficient C
         programming interface (API) to determine the call-chain of a program.

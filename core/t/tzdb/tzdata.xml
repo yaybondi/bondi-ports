@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="tzdata" section="localization">
     <description>
-        <summary>time zone and daylight-saving time data</summary>
+        <summary>Time zone and daylight-saving time data</summary>
         <p>
         This package contains data required for the implementation of
         standard local time for many representative locations around the

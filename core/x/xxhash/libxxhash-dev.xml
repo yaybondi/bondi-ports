@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libxxhash-dev" section="libdevel">
     <description>
-        <summary>header files and a static library for libxxhash</summary>
+        <summary>Header files and a static library for libxxhash</summary>
         <p>
         xxHash is an Extremely fast Hash algorithm, running at RAM speed limits.
         It successfully completes the SMHasher test suite which evaluates collision,

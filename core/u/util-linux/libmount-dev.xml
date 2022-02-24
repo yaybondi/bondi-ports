@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libmount-dev" section="libdevel">
     <description>
-        <summary>device mounting library - headers and static libraries</summary>
+        <summary>Device mounting library - headers and static libraries</summary>
         <p>
         This device mounting library is used by mount and umount helpers.
         </p>

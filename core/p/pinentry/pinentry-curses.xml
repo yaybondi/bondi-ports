@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="pinentry-curses" section="utils">
     <description>
-        <summary>curses-based PIN or pass-phrase entry dialog for GnuPG</summary>
+        <summary>Curses-based PIN or pass-phrase entry dialog for GnuPG</summary>
         <p>
         This package contains a program that allows for secure entry of PINs or
         pass phrases. That means it tries to take care that the entered

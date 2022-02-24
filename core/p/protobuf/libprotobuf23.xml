@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package name="libprotobuf23" section="libs">
     <description>
-        <summary>protocol buffers C++ library</summary>
+        <summary>Protocol buffers C++ library</summary>
         <p>
         Protocol buffers are a flexible, efficient, automated mechanism for
         serializing structured data - similar to XML, but smaller, faster, and

@@ -6,7 +6,7 @@
 
     <source name="pinentry" repo="core" architecture-independent="false" build-for="tools,target">
         <description>
-            <summary>curses-based PIN or pass-phrase entry dialog for GnuPG</summary>
+            <summary>Curses-based PIN or pass-phrase entry dialog for GnuPG</summary>
             <p>
             This package contains a program that allows for secure entry of PINs or
             pass phrases. That means it tries to take care that the entered
