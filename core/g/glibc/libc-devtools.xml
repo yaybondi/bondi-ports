@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libc-devtools" section="devel">
+    <description>
+        <summary>GNU C Library: Development tools</summary>
+        <p>
+        This package contains development tools shipped by the GNU C
+        Library.
+        </p>
+        <ul>
+            <li>memusage, memusagestat: profile a program's memory usage</li>
+            <li>mtrace: interpret the malloc trace log</li>
+            <li>sotruss: trace shared library calls</li>
+            <li>sprof: display shared object profiling data</li>
+        </ul>
+    </description>
+
+    <contents>
+        <file src="/usr/bin/memusage"/>
+        <file src="/usr/bin/memusagestat"/>
+        <file src="/usr/bin/mtrace"/>
+        <file src="/usr/bin/sotruss"/>
+        <file src="/usr/bin/sprof"/>
+    </contents>
+</package>

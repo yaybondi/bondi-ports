@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libc6" section="libs">
+    <description>
+        <summary>GNU C Library: Shared libraries</summary>
+        <p>
+        Contains the standard libraries that are used by nearly all programs on
+        the system. This package includes shared versions of the standard C library
+        and the standard math library, as well as many others.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libgcc-s1"/>
+        <package name="libcrypt1"/>
+    </requires>
+
+    <contents>
+        <file src="/etc/ld.so.conf.d/*.conf"/>
+        <file src="/usr/lib/audit"/>
+        <file src="/usr/lib/gconv"/>
+
+        <file src="/usr/lib/ld-2.31.so" mode="0755"/>
+        <file src="/usr/lib/libc-2.31.so" mode="0755"/>
+        <file src="/usr/lib/libpthread-2.31.so" mode="0755"/>
+
+        <file src="/usr/lib/*.so.*"/>
+        <file src="/usr/lib/lib*-1.*.so"/>
+        <file src="/usr/lib/lib*-2.*.so"/>
+
+        <file src="/usr/lib/libSegFault.so"/>
+        <file src="/usr/lib/libmemusage.so"/>
+        <file src="/usr/lib/libpcprofile.so"/>
+    </contents>
+</package>

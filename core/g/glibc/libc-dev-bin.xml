@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libc-dev-bin" section="libdevel">
+    <description>
+        <summary>GNU C Library: Development binaries</summary>
+        <p>
+        This package contains utility programs related to the GNU C Library
+        development package.
+        </p>
+        <ul>
+            <li>gencat: generate message catalogs</li>
+            <li>rpcgen: compile RPC protocols to C</li>
+        </ul>
+    </description>
+
+    <contents>
+        <file src="/usr/bin/gencat"/>
+        <file src="/usr/bin/rpcgen"/>
+    </contents>
+</package>

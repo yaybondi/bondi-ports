@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="glibc" repo="core" architecture-independent="false">
+        <description>
+            <summary>GNU C Library</summary>
+            <p>
+                The standard C runtime libraries that are used by nearly all
+                programs on the system.
+            </p>
+        </description>
+
+        <xi:include href="copyright.xml"/>
+
+        <sources>
+            <file 
+                subdir="sources"
+                src="glibc-2.31.tar.xz"
+                upstream-src="http://ftp.debian.org/debian/pool/main/g/glibc/glibc_2.31.orig.tar.xz"
+                sha256sum="3dc7704b6166839c37d7047626fd199f3d4c09aca0d90e48c51c31c967dce34e"
+            />
+            <file 
+                subdir="patches"
+                src="debian-patches-13+deb11u2.tar.gz"
+                upstream-src=""
+                sha256sum="db7760e80d0246808e9e3ced3b0fe6fb55b8464f484421fd19663ca8588000f1"
+            />
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/git-updates.diff"/>
+                <file src="patches/locale/check-unknown-symbols.diff"/>
+                <file src="patches/locale/locale-print-LANGUAGE.diff"/>
+                <file src="patches/locale/LC_IDENTIFICATION-optional-fields.diff"/>
+                <file src="patches/localedata/sort-UTF8-first.diff"/>
+                <file src="patches/localedata/supported.diff"/>
+                <file src="patches/localedata/locale-eu_FR.diff"/>
+                <file src="patches/localedata/locale-ku_TR.diff"/>
+                <file src="patches/localedata/fo_FO-date_fmt.diff"/>
+                <file src="patches/localedata/locales-fr.diff"/>
+                <file src="patches/localedata/locale-en_DK.diff"/>
+                <file src="patches/localedata/locale-zh_TW.diff"/>
+                <file src="patches/localedata/tailor-iso14651_t1.diff"/>
+                <file src="patches/localedata/locale-C.diff"/>
+                <file src="patches/localedata/submitted-es_MX-decimal_point.diff"/>
+                <file src="patches/localedata/git-unicode-13-support.diff"/>
+                <file src="patches/alpha/local-gcc4.1.diff"/>
+                <file src="patches/alpha/submitted-dl-support.diff"/>
+                <file src="patches/alpha/local-string-functions.diff"/>
+                <file src="patches/alpha/submitted-fts64.diff"/>
+                <file src="patches/alpha/submitted-makecontext.diff"/>
+                <file src="patches/arm/local-sigaction.diff"/>
+                <file src="patches/arm/unsubmitted-ldconfig-cache-abi.diff"/>
+                <file src="patches/arm/local-soname-hack.diff"/>
+                <file src="patches/arm/local-vfp-sysdeps.diff"/>
+                <file src="patches/arm/unsubmitted-ldso-multilib.diff"/>
+                <file src="patches/arm/local-arm-futex.diff"/>
+                <file src="patches/hppa/local-inlining.diff"/>
+                <file src="patches/hurd-i386/git-posix_openpt.diff"/>
+                <file src="patches/hurd-i386/local-enable-ldconfig.diff"/>
+                <file src="patches/hurd-i386/tg-sysvshm.diff"/>
+                <file src="patches/hurd-i386/tg-thread-cancel.diff"/>
+                <file src="patches/hurd-i386/tg-bigmem.diff"/>
+                <file src="patches/hurd-i386/local-disable-ioctls.diff"/>
+                <file src="patches/hurd-i386/tg-sendmsg-SCM_CREDS.diff"/>
+                <file src="patches/hurd-i386/tg-mach-hurd-link.diff"/>
+                <file src="patches/hurd-i386/local-ED.diff"/>
+                <file src="patches/hurd-i386/local-madvise_warn.diff"/>
+                <file src="patches/hurd-i386/git-hurdsig-SA_SIGINFO.diff"/>
+                <file src="patches/hurd-i386/tg-hooks.diff"/>
+                <file src="patches/hurd-i386/local-usr.diff"/>
+                <file src="patches/hurd-i386/git-sbrk-end.diff"/>
+                <file src="patches/hurd-i386/tg-ifaddrs_v6.diff"/>
+                <file src="patches/hurd-i386/tg-EIEIO-fr.diff"/>
+                <file src="patches/hurd-i386/tg-EGREGIOUS-fr.diff"/>
+                <file src="patches/hurd-i386/unsubmitted-clock_t_centiseconds.diff"/>
+                <file src="patches/hurd-i386/submitted-path_mounted.diff"/>
+                <file src="patches/hurd-i386/git-sigstate_thread_reference.diff"/>
+                <file src="patches/hurd-i386/submitted-bind_umask2.diff"/>
+                <file src="patches/hurd-i386/tg-bootstrap.diff"/>
+                <file src="patches/hurd-i386/local-mach_print.diff"/>
+                <file src="patches/hurd-i386/tg-eintr.diff"/>
+                <file src="patches/hurd-i386/tg-libc_rwlock_recursive.diff"/>
+                <file src="patches/hurd-i386/local-no_unsupported_ioctls.diff"/>
+                <file src="patches/hurd-i386/local-exec_filename.diff"/>
+                <file src="patches/hurd-i386/git-fork-pthread_exit.diff"/>
+                <file src="patches/hurd-i386/git-spin_lock.diff"/>
+                <file src="patches/hurd-i386/git-barrier-1.diff"/>
+                <file src="patches/hurd-i386/git-sem-intr.diff"/>
+                <file src="patches/hurd-i386/git-register-atfork.diff"/>
+                <file src="patches/hurd-i386/git-register-atfork2.diff"/>
+                <file src="patches/hurd-i386/git-pthread_self.diff"/>
+                <file src="patches/hurd-i386/git-trunc-times.diff"/>
+                <file src="patches/hurd-i386/git-ss_init.diff"/>
+                <file src="patches/hurd-i386/git-tst-udp.diff"/>
+                <file src="patches/hurd-i386/git-pselect.diff"/>
+                <file src="patches/hurd-i386/git-fexecve.diff"/>
+                <file src="patches/hurd-i386/git-cond_destroy.diff"/>
+                <file src="patches/hurd-i386/git-holes.diff"/>
+                <file src="patches/hurd-i386/git-longjmp-onstack.diff"/>
+                <file src="patches/hurd-i386/git-intr-msg-unwind.diff"/>
+                <file src="patches/hurd-i386/git-strtol-test.diff"/>
+                <file src="patches/hurd-i386/local-tls-ie-align.diff"/>
+                <file src="patches/hurd-i386/git-fix-longjmp.diff"/>
+                <file src="patches/hurd-i386/git-sched_sets.diff"/>
+                <file src="patches/hurd-i386/git-pthread_atfork-hidden.diff"/>
+                <file src="patches/hurd-i386/git-bsd4.3-ioctls.diff"/>
+                <file src="patches/hurd-i386/git-clock-cputime.diff"/>
+                <file src="patches/hurd-i386/git-raise.diff"/>
+                <file src="patches/hurd-i386/git-WAIT.diff"/>
+                <file src="patches/hurd-i386/git-pthread_link_tests.diff"/>
+                <file src="patches/hurd-i386/git-libpthread_syms.diff"/>
+                <file src="patches/hurd-i386/git-libpthread-nodelete.diff"/>
+                <file src="patches/hurd-i386/git-cthreads.diff"/>
+                <file src="patches/hurd-i386/git-cthreads-symbols.diff"/>
+                <file src="patches/hurd-i386/git-libpthread_plt.diff"/>
+                <file src="patches/hurd-i386/git-lll-initializer.diff"/>
+                <file src="patches/hurd-i386/sysvshm-lll.diff"/>
+                <file src="patches/hurd-i386/git-lll-ptr.diff"/>
+                <file src="patches/hurd-i386/git-ld-library-path-checks.diff"/>
+                <file src="patches/hurd-i386/git-lll-wait-intr.diff"/>
+                <file src="patches/hurd-i386/git-lll-private.diff"/>
+                <file src="patches/hurd-i386/git-futex-internal.diff"/>
+                <file src="patches/hurd-i386/git-libc-open.diff"/>
+                <file src="patches/hurd-i386/git-pthread_get_cleanup_stack.diff"/>
+                <file src="patches/hurd-i386/git-libpthread-testcancel.diff"/>
+                <file src="patches/hurd-i386/git-SEM_VALUE_MAX.diff"/>
+                <file src="patches/hurd-i386/git-sem-pshared.diff"/>
+                <file src="patches/hurd-i386/git-sem-open-init.diff"/>
+                <file src="patches/hurd-i386/git-sem-open.diff"/>
+                <file src="patches/hurd-i386/git-siginfo_uesp.diff"/>
+                <file src="patches/hurd-i386/git-mmap-EINVAL.diff"/>
+                <file src="patches/hurd-i386/git-waitid.diff"/>
+                <file src="patches/hurd-i386/git-hurd-version.diff"/>
+                <file src="patches/hurd-i386/git-mmap_addr.diff"/>
+                <file src="patches/hurd-i386/git-tiocflush.diff"/>
+                <file src="patches/i386/local-biarch.diff"/>
+                <file src="patches/i386/unsubmitted-quiet-ldconfig.diff"/>
+                <file src="patches/riscv64/local-asin-acos-raise-invalid.diff"/>
+                <file src="patches/kfreebsd/submitted-waitid.diff"/>
+                <file src="patches/kfreebsd/submitted-auxv.diff"/>
+                <file src="patches/kfreebsd/local-config_h_in.patch"/>
+                <file src="patches/kfreebsd/local-grantpt.diff"/>
+                <file src="patches/kfreebsd/local-sysdeps.diff"/>
+                <file src="patches/kfreebsd/local-fbtl.diff"/>
+                <file src="patches/kfreebsd/local-fbtl-depends.diff"/>
+                <file src="patches/kfreebsd/local-scripts.diff"/>
+                <file src="patches/kfreebsd/local-getaddrinfo-freebsd-kernel.diff"/>
+                <file src="patches/kfreebsd/local-no-execfn.diff"/>
+                <file src="patches/m68k/local-dwarf2-buildfix.diff"/>
+                <file src="patches/m68k/local-reloc.diff"/>
+                <file src="patches/m68k/submitted-gcc34-seccomment.diff"/>
+                <file src="patches/mips/submitted-rld_map.diff"/>
+                <file src="patches/powerpc/local-powerpc8xx-dcbz.diff"/>
+                <file src="patches/sh4/local-fpscr_values.diff"/>
+                <file src="patches/all/local-alias-et_EE.diff"/>
+                <file src="patches/all/local-remove-manual.diff"/>
+                <file src="patches/all/local-ru_RU.diff"/>
+                <file src="patches/all/local-ldd.diff"/>
+                <file src="patches/all/local-nis-shadow.diff"/>
+                <file src="patches/all/submitted-po-fr-fixes.diff"/>
+                <file src="patches/any/local-asserth-decls.diff"/>
+                <file src="patches/any/local-bindresvport_blacklist.diff"/>
+                <file src="patches/any/local-fhs-linux-paths.diff"/>
+                <file src="patches/any/local-fhs-nscd.diff"/>
+                <file src="patches/any/local-ld-multiarch.diff"/>
+                <file src="patches/any/local-ldso-disable-hwcap.diff"/>
+                <file src="patches/any/local-nss-upgrade.diff"/>
+                <file src="patches/any/local-stubs_h.diff"/>
+                <file src="patches/any/local-tcsetaddr.diff"/>
+                <file src="patches/any/local-nss-overflow.diff"/>
+                <file src="patches/any/submitted-missing-etc-hosts.diff"/>
+                <file src="patches/any/submitted-bits-fcntl_h-at.diff"/>
+                <file src="patches/any/submitted-nptl-invalid-td.patch"/>
+                <file src="patches/any/local-ldconfig-multiarch.diff"/>
+                <file src="patches/any/local-disable-libnss-db.diff"/>
+                <file src="patches/any/local-revert-bz13979.diff"/>
+                <file src="patches/any/unsubmitted-ldso-machine-mismatch.diff"/>
+                <file src="patches/any/local-ldconfig-ignore-ld.so.diff"/>
+                <file src="patches/any/local-bootstrap-headers.diff"/>
+                <file src="patches/any/submitted-resolv-unaligned.diff"/>
+                <file src="patches/any/local-cudacc-float128.diff"/>
+                <file src="patches/any/submitted-ld.so-cache-new-format.diff"/>
+                <file src="patches/any/local-test-install.diff"/>
+                <file src="patches/any/git-surplus-tls-accounting.diff"/>
+                <file src="patches/any/git-ld.so-cache-endianness-markup.diff"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="gettext"/>
+            <package name="xz-utils"/>
+            <package name="file"/>
+            <package name="autoconf"/>
+            <package name="gawk"/>
+            <package name="gperf"/>
+            <package name="bison"/>
+            <package name="libaudit-dev"/>
+            <package name="libcap-dev"/>
+            <package name="libselinux-dev"/>
+            <package name="binutils"/>
+            <package name="python3"/>
+            <package name="libidn2-0"/>
+            <package name="libc-bin"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libc-bin.xml"/>
+    <xi:include href="libc-dev-bin.xml"/>
+    <xi:include href="libc-devtools.xml"/>
+    <xi:include href="locales.xml"/>
+    <xi:include href="nscd.xml"/>
+    <xi:include href="libc6.xml"/>
+    <xi:include href="libc6-dev.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
