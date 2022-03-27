@@ -28,6 +28,12 @@
                 upstream-src=""
                 sha256sum="db7760e80d0246808e9e3ced3b0fe6fb55b8464f484421fd19663ca8588000f1"
             />
+            <file
+                subdir="patches"
+                src="bolt-patches-1.tar.gz"
+                upstream-src=""
+                sha256sum="d2bc241123a2dc45eba43f374946f01d80423c1815510a606f32bc2e96a386a4"
+            />
         </sources>
 
         <patches>
