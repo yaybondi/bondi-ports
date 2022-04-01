@@ -22,7 +22,7 @@
             <file src="debian-patches-2.tar.gz" subdir="patches"
                 sha256sum="83caf0940887ad108c9af9181d8a783da66814be87a749dea5f6ce3f63ab47f9"/>
             <file src="bolt-patches-1.tar.gz" subdir="patches"
-                sha256sum="fe8f8ae8445365bc953a22ffd3cfba6407c014c9a29c33057463426c616236c0"/>
+                sha256sum="3dd8cd4cd56bb1a5f38ba4fcbabb69ff994ef984db8e58f7f46185440309e66e"/>
         </sources>
 
         <patches>
@@ -76,7 +76,7 @@
                 <file src="patches/fixes/hurd-cachepropagate-test-fix.diff"/>
                 <file src="patches/fixes/io_socket_ip_ipv6.diff"/>
                 <!-- Bolt -->
-                <file src="patches/cross-musl-config-sh.patch"/>
+                <file src="patches/bolt-cross-config-sh.patch"/>
             </patchset>
         </patches>
 
