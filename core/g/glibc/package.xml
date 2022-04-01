@@ -32,7 +32,7 @@
                 subdir="patches"
                 src="bolt-patches-1.tar.gz"
                 upstream-src=""
-                sha256sum="51c48c809ee72eb1e3816c2965c7468f2ef2c8fc4443e0844d289508cd97a4d9"
+                sha256sum="18145a223b64ae4f5f0d33da4729a3575e1235426d50f745f8ac176f5deaef56"
             />
         </sources>
 
