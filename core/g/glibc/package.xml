@@ -32,12 +32,13 @@
                 subdir="patches"
                 src="bolt-patches-1.tar.gz"
                 upstream-src=""
-                sha256sum="18145a223b64ae4f5f0d33da4729a3575e1235426d50f745f8ac176f5deaef56"
+                sha256sum="2476c5161c5861ec4dc7432307ba4ce2e636d0cd7bd1860c2904caacf152961d"
             />
         </sources>
 
         <patches>
             <patchset subdir="sources">
+                <!-- Debian -->
                 <file src="patches/git-updates.diff"/>
                 <file src="patches/locale/check-unknown-symbols.diff"/>
                 <file src="patches/locale/locale-print-LANGUAGE.diff"/>
@@ -194,6 +195,9 @@
                 <file src="patches/any/local-test-install.diff"/>
                 <file src="patches/any/git-surplus-tls-accounting.diff"/>
                 <file src="patches/any/git-ld.so-cache-endianness-markup.diff"/>
+
+                <!-- Bolt -->
+                <file src="patches/no-lib-in-extralib-dir.patch"/>
             </patchset>
         </patches>
 
