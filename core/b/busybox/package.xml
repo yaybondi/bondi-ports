@@ -24,7 +24,7 @@
             <file src="busybox-1.33.1.tar.bz2" subdir="sources"
                 sha256sum="12cec6bd2b16d8a9446dd16130f2b92982f1819f6e1c5f5887b6db03f5660d28"/>
             <file src="bolt-patches-2.tar.gz" subdir="patches"
-                sha256sum="6433f89bbf3cbf12caf195bdb524aee3e652e3fd0d5e5a3ae6d0611e2447004c"/>
+                sha256sum="712670781b3d697f60293ec708e9eb2a89dd54c453b049d2057b61eeeb56db24"/>
             <file src="alpine-patches-bd9fc3cc.tar.gz" subdir="patches"
                 sha256sum="f016cf0d83290d11077d6c5e631d6f8b195a2c0f9aa74a1541d8dae0c7e6add7"/>
         </sources>
