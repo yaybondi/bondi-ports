@@ -174,7 +174,9 @@
                 <file src="patches/any/local-bindresvport_blacklist.diff"/>
                 <file src="patches/any/local-fhs-linux-paths.diff"/>
                 <file src="patches/any/local-fhs-nscd.diff"/>
+                <!--
                 <file src="patches/any/local-ld-multiarch.diff"/>
+                -->
                 <file src="patches/any/local-ldso-disable-hwcap.diff"/>
                 <file src="patches/any/local-nss-upgrade.diff"/>
                 <file src="patches/any/local-stubs_h.diff"/>
@@ -183,7 +185,9 @@
                 <file src="patches/any/submitted-missing-etc-hosts.diff"/>
                 <file src="patches/any/submitted-bits-fcntl_h-at.diff"/>
                 <file src="patches/any/submitted-nptl-invalid-td.patch"/>
+                <!--
                 <file src="patches/any/local-ldconfig-multiarch.diff"/>
+                -->
                 <file src="patches/any/local-disable-libnss-db.diff"/>
                 <file src="patches/any/local-revert-bz13979.diff"/>
                 <file src="patches/any/unsubmitted-ldso-machine-mismatch.diff"/>
@@ -195,9 +199,6 @@
                 <file src="patches/any/local-test-install.diff"/>
                 <file src="patches/any/git-surplus-tls-accounting.diff"/>
                 <file src="patches/any/git-ld.so-cache-endianness-markup.diff"/>
-
-                <!-- Bolt -->
-                <file src="patches/no-lib-in-extralib-dir.patch"/>
             </patchset>
         </patches>
 
