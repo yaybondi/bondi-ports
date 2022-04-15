@@ -8,7 +8,7 @@
         <description>
             <summary>GNU grep, egrep and fgrep</summary>
             <p>
-            'grep' is a utility to search for text in files; it can be used from the
+            GNU grep is a utility to search for text in files; it can be used from the
             command line or in scripts. Even if you don't want to use it, other packages
             on your system probably will.
             </p>
