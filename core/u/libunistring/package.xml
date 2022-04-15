@@ -41,7 +41,7 @@
     </source>
 
     <xi:include href="libunistring-dev.xml"/>
-    <xi:include href="libunistring0.xml"/>
+    <xi:include href="libunistring2.xml"/>
 
     <xi:include href="changelog.xml"/>
 </control>
