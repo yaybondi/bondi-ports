@@ -213,7 +213,6 @@
             <package name="libaudit-dev"/>
             <package name="libcap-dev"/>
             <package name="libselinux-dev"/>
-            <package name="binutils"/>
             <package name="python3"/>
             <package name="libidn2-0"/>
             <package name="libc-bin"/>
