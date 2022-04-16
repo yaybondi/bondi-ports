@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libidn2-dev" section="libdevel">
+    <description>
+        <summary>Internationalized domain names (IDNA2008/TR46) development files</summary>
+        <p>
+        Libidn2 implements the revised algorithm for internationalized domain
+        names called IDNA2008/TR46.
+        </p>
+        <p>
+        This package contains header files and libraries for static linking.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libidn2-0" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libidn2.{a,so}"/>
+        <file src="${prefix}/lib/pkgconfig"/>
+    </contents>
+</package>

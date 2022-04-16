@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libidn2" repo="core" architecture-independent="false">
+        <description>
+            <summary>Internationalized domain names (IDNA2008/TR46) library</summary>
+            <p>
+            Libidn2 implements the revised algorithm for internationalized domain
+            names called IDNA2008/TR46.
+            </p>
+        </description>
+
+        <xi:include href="copyright.xml"/>
+
+        <sources>
+            <file 
+                subdir="sources"
+                src="libidn2-2.3.0.tar.gz"
+                upstream-src="http://ftp.debian.org/debian/pool/main/libi/libidn2/libidn2_2.3.0.orig.tar.gz"
+                sha256sum="e1cb1db3d2e249a6a3eb6f0946777c2e892d5c5dc7bd91c74394fc3a01cab8b5"
+            />
+        </sources>
+
+        <requires>
+            <package name="gengetopt"/>
+            <package name="libunistring-dev"/>
+            <package name="pkg-config"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libidn2-0.xml"/>
+    <xi:include href="libidn2-dev.xml"/>
+    <xi:include href="idn2.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>

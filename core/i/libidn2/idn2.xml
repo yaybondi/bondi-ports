@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="idn2" section="devel">
+    <description>
+        <summary>Internationalized domain names (IDNA2008/TR46) command line tool</summary>
+        <p>
+        Libidn2 implements the revised algorithm for internationalized domain
+        names called IDNA2008/TR46.
+        </p>
+        <p>
+        This package contains the idn2 command-line tool.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/bin"/>
+    </contents>
+</package>
