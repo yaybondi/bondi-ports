@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <prepare>
+    <![CDATA[
+
+true
+
+    ]]>
+    </prepare>
+
+    <build>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make CC="${BOLT_HOST_TYPE}-gcc" -j"$BOLT_PARALLEL_JOBS"
+
+    ]]>
+    </build>
+
+    <install>
+    <![CDATA[
+
+cd "$BOLT_BUILD_DIR"
+make DESTDIR="$BOLT_INSTALL_DIR" prefix="$BOLT_INSTALL_PREFIX" lib=lib install 
+
+    ]]>
+    </install>
+</rules>

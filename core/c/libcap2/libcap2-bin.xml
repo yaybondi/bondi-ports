@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libcap2-bin" section="utils">
+    <description>
+        <summary>POSIX 1003.1e capabilities (utilities)</summary>
+        <p>
+        Libcap implements the user-space interfaces to the POSIX 1003.1e capabilities
+        available in Linux kernels. These capabilities are a partitioning of the all
+        powerful root privilege into a set of distinct privileges.
+        </p>
+        <p>
+        This package contains additional utilities.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libcap2" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/sbin"/>
+    </contents>
+</package>

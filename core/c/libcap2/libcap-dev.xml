@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libcap-dev" section="libdevel">
+    <description>
+        <summary>POSIX 1003.1e capabilities (development)</summary>
+        <p>
+        Libcap implements the user-space interfaces to the POSIX 1003.1e capabilities
+        available in Linux kernels. These capabilities are a partitioning of the all
+        powerful root privilege into a set of distinct privileges.
+        </p>
+        <p>
+        This package contains the development files.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libcap2" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/include/sys"/>
+        <file src="${prefix}/lib/libcap.{a,so}"/>
+        <file src="${prefix}/lib/pkgconfig"/>
+    </contents>
+</package>

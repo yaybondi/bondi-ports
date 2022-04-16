@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <source name="libcap2" repo="contrib" architecture-independent="false">
+        <description>
+            <summary>POSIX 1003.1e capabilities handling</summary>
+            <p>
+            Libcap implements the user-space interfaces to the POSIX 1003.1e capabilities
+            available in Linux kernels. These capabilities are a partitioning of the all
+            powerful root privilege into a set of distinct privileges.
+            </p>
+        </description>
+
+        <xi:include href="copyright.xml"/>
+
+        <sources>
+            <file 
+                subdir="sources"
+                src="libcap2-2.44.tar.xz"
+                upstream-src="http://ftp.debian.org/debian/pool/main/libc/libcap2/libcap2_2.44.orig.tar.xz"
+                sha256sum="92188359cd5be86e8e5bd3f6483ac6ce582264f912398937ef763def2205c8e1"
+            />
+            <file 
+                subdir="patches"
+                src="debian-patches-1.tar.gz"
+                upstream-src=""
+                sha256sum="3273985b55ceb89939febf968916813ee6f400ac872a0670d0b92e3f8b62c2f6"
+            />
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/ldlibs.patch"/>
+                <file src="patches/setcap-error-message.patch"/>
+                <file src="patches/Don-t-hardcode-build-flags.patch"/>
+                <file src="patches/Hide-private-symbols.patch"/>
+                <file src="patches/Filter-out-PIE-flags-when-building-shared-objects.patch"/>
+                <file src="patches/Use-DEB_GAIN_ROOT_CMD-for-make-test.patch"/>
+                <file src="patches/Make.Rules-Allow-overriding-DYNAMIC.patch"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="libpam0g-dev"/>
+            <package name="gperf"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libcap2-bin.xml"/>
+    <xi:include href="libcap2.xml"/>
+    <xi:include href="libcap-dev.xml"/>
+    <xi:include href="libpam-cap.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
