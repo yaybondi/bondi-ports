@@ -3,12 +3,53 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-"$BOLT_SOURCE_DIR/configure" \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
-    --disable-nls
+cd "$BOLT_SOURCE_DIR"
+
+# Make sure that ld is invoked from /usr/lib.
+case "$BOLT_BUILD_FOR" in
+    target)
+        grep -rl '"[^"]*/lib\(32\|64\)\?/ld' * | while read filename; do
+            sed -i 's@"[^"]*/lib\(32\|64\)\?/ld@"/usr/lib/ld@g' "$filename"
+        done
+        ;;
+    tools)
+        ;;
+esac
+
+rm -fr .build && mkdir -p .build
+
+(
+    set -e
+    cd .build
+
+    ../configure \
+        --prefix="$BOLT_INSTALL_PREFIX" \
+        --with-headers="$BOLT_INSTALL_PREFIX/include" \
+        --build="$BOLT_BUILD_TYPE" \
+        --host="$BOLT_HOST_TYPE" \
+        --disable-profile \
+        --disable-werror \
+        --enable-stackguard-randomization \
+        --enable-stack-protector=strong \
+        --without-gd \
+        --without-cvs \
+        --enable-add-ons \
+        libc_cv_slibdir="$BOLT_INSTALL_PREFIX/lib"
+
+    # Cheat our way around building the manual (which is not there).
+    cat << EOF >> ../manual/empty-script.sh
+#!/bin/sh
+true
+EOF
+    chmod +x ../manual/empty-script.sh
+
+    ln -sf empty-script.sh ../manual/libc-texinfo.sh
+    ln -sf empty-script.sh ../manual/libm-err-tab.pl
+    ln -sf empty-script.sh ../manual/xtract-typefun.awk
+
+    touch ../manual/libc.texinfo
+    touch ../manual/libc.info
+)
 
     ]]>
     </prepare>
@@ -16,7 +57,7 @@ cd "$BOLT_BUILD_DIR"
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
+cd "$BOLT_SOURCE_DIR/.build"
 make -j"$BOLT_PARALLEL_JOBS"
 
     ]]>
@@ -25,7 +66,7 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
+cd "$BOLT_SOURCE_DIR/.build"
 make DESTDIR="$BOLT_INSTALL_DIR" install
 
     ]]>
