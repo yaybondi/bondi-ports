@@ -13,6 +13,14 @@ case "$BOLT_BUILD_FOR" in
         done
         ;;
     tools)
+        sed -i '/define LD_SO_CONF SYSCONFDIR/ s/ld\.so\.conf"/ld.so.tools-conf"/g' elf/ldconfig.c
+        sed -i '/define LD_SO_CACHE SYSCONFDIR/ s/ld\.so\.cache"/ld.so.tools-cache"/g' sysdeps/generic/dl-cache.h
+
+        grep -rl '"[^"]*/lib\(32\|64\)\?/ld' * | while read filename; do
+            sed -i 's@"[^"]*/lib\(32\|64\)\?/ld@"/tools/lib/ld@g' "$filename"
+        done
+
+        patch -tN -p1 < "$BOLT_WORK_DIR/patches/bbox-redirect-bin-sh.patch"
         ;;
 esac
 
@@ -22,25 +30,26 @@ rm -fr .build && mkdir -p .build
     set -e
     cd .build
 
+    CFLAGS="" CXXFLAGS="" CPPFLAGS="" \
     ../configure \
         --prefix="$BOLT_INSTALL_PREFIX" \
         --with-headers="$BOLT_INSTALL_PREFIX/include" \
         --build="$BOLT_BUILD_TYPE" \
         --host="$BOLT_HOST_TYPE" \
-        --disable-profile \
         --disable-werror \
-        --enable-stackguard-randomization \
-        --enable-stack-protector=strong \
         --without-gd \
         --without-cvs \
+        --enable-stackguard-randomization \
+        --enable-stack-protector=strong \
+        --enable-profile \
         --enable-add-ons \
         libc_cv_slibdir="$BOLT_INSTALL_PREFIX/lib"
 
     # Cheat our way around building the manual (which is not there).
     cat << EOF >> ../manual/empty-script.sh
 #!/bin/sh
-true
 EOF
+
     chmod +x ../manual/empty-script.sh
 
     ln -sf empty-script.sh ../manual/libc-texinfo.sh
@@ -68,6 +77,23 @@ make -j"$BOLT_PARALLEL_JOBS"
 
 cd "$BOLT_SOURCE_DIR/.build"
 make DESTDIR="$BOLT_INSTALL_DIR" install
+
+if [ -d "$BOLT_INSTALL_DIR/sbin" ]; then
+    mv "$BOLT_INSTALL_DIR/sbin"/* \
+        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin/"
+    rmdir "$BOLT_INSTALL_DIR/sbin"
+fi
+
+mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin/zdump" \
+    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/zdump"
+
+export I18NPATH="$BOLT_SOURCE_DIR/localedata"
+export GCONV_PATH="$BOLT_SOURCE_DIR/.build/iconvdata"
+
+install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/locale/"
+"$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/localedef" \
+    --quiet -c -f UTF-8 -i C \
+        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/locale/C.UTF-8"
 
     ]]>
     </install>

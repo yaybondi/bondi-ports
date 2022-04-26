@@ -8,12 +8,10 @@
         </p>
         <ul>
             <li>gencat: generate message catalogs</li>
-            <li>rpcgen: compile RPC protocols to C</li>
         </ul>
     </description>
 
     <contents>
-        <file src="/usr/bin/gencat"/>
-        <file src="/usr/bin/rpcgen"/>
+        <file src="${prefix}/bin/gencat"/>
     </contents>
 </package>

@@ -17,29 +17,21 @@
     </description>
 
     <contents>
-        <file src="/etc/bindresvport.blacklist"/>
-        <file src="/etc/default"/>
-        <file src="/etc/gai.conf"/>
-        <file src="/etc/ld.so.conf"/>
-        <file src="/etc/ld.so.conf.d/libc.conf"/>
+        <file src="${prefix}/bin/catchsegv"/>
+        <file src="${prefix}/bin/getconf"/>
+        <file src="${prefix}/bin/getent"/>
+        <file src="${prefix}/bin/iconv"/>
+        <file src="${prefix}/bin/ldd"/>
+        <file src="${prefix}/bin/locale"/>
+        <file src="${prefix}/bin/localedef"/>
+        <file src="${prefix}/bin/pldd"/>
+        <file src="${prefix}/bin/tzselect"/>
+        <file src="${prefix}/bin/zdump"/>
 
-        <file src="/usr/bin/catchsegv"/>
-        <file src="/usr/bin/getconf"/>
-        <file src="/usr/bin/getent"/>
-        <file src="/usr/bin/iconv"/>
-        <file src="/usr/bin/ldd"/>
-        <file src="/usr/bin/locale"/>
-        <file src="/usr/bin/localedef"/>
-        <file src="/usr/bin/pldd"/>
-        <file src="/usr/bin/tzselect"/>
-        <file src="/usr/bin/zdump"/>
+        <file src="${prefix}/lib/locale/C.UTF-8"/>
 
-        <file src="/usr/lib/locale/C.UTF-8"/>
-
-        <file src="/usr/sbin/iconvconfig"/>
-        <file src="/usr/sbin/ldconfig"/>
-        <file src="/usr/sbin/zic"/>
-
-        <file src="/usr/share/libc-bin"/>
+        <file src="${prefix}/sbin/iconvconfig"/>
+        <file src="${prefix}/sbin/ldconfig"/>
+        <file src="${prefix}/sbin/zic"/>
     </contents>
 </package>

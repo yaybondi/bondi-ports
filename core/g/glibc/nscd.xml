@@ -11,9 +11,7 @@
     </description>
 
     <contents>
-        <file src="/etc/nscd.conf"/>
-        <file src="/usr/lib/tmpfiles.d"/>
-        <file src="/usr/sbin/nscd"/>
+        <file src="${prefix}/sbin/nscd"/>
         <dir src="/var/cache/nscd"/>
     </contents>
 </package>

@@ -16,19 +16,19 @@
 
     <contents>
         <file src="/etc/ld.so.conf.d/*.conf"/>
-        <file src="/usr/lib/audit"/>
-        <file src="/usr/lib/gconv"/>
+        <file src="${prefix}/lib/audit"/>
+        <file src="${prefix}/lib/gconv"/>
 
-        <file src="/usr/lib/ld-2.31.so" mode="0755"/>
-        <file src="/usr/lib/libc-2.31.so" mode="0755"/>
-        <file src="/usr/lib/libpthread-2.31.so" mode="0755"/>
+        <file src="${prefix}/lib/ld-2.31.so" mode="0755"/>
+        <file src="${prefix}/lib/libc-2.31.so" mode="0755"/>
+        <file src="${prefix}/lib/libpthread-2.31.so" mode="0755"/>
 
-        <file src="/usr/lib/*.so.*"/>
-        <file src="/usr/lib/lib*-1.*.so"/>
-        <file src="/usr/lib/lib*-2.*.so"/>
+        <file src="${prefix}/lib/*.so.*"/>
+        <file src="${prefix}/lib/lib*-1.*.so"/>
+        <file src="${prefix}/lib/lib*-2.*.so"/>
 
-        <file src="/usr/lib/libSegFault.so"/>
-        <file src="/usr/lib/libmemusage.so"/>
-        <file src="/usr/lib/libpcprofile.so"/>
+        <file src="${prefix}/lib/libSegFault.so"/>
+        <file src="${prefix}/lib/libmemusage.so"/>
+        <file src="${prefix}/lib/libpcprofile.so"/>
     </contents>
 </package>

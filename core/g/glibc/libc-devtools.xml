@@ -15,10 +15,8 @@
     </description>
 
     <contents>
-        <file src="/usr/bin/memusage"/>
-        <file src="/usr/bin/memusagestat"/>
-        <file src="/usr/bin/mtrace"/>
-        <file src="/usr/bin/sotruss"/>
-        <file src="/usr/bin/sprof"/>
+        <file src="${prefix}/bin/mtrace"/>
+        <file src="${prefix}/bin/sotruss"/>
+        <file src="${prefix}/bin/sprof"/>
     </contents>
 </package>

@@ -11,41 +11,40 @@
     <requires>
         <package name="libc-dev-bin" version="=="/>
         <package name="libcrypt-dev"/>
-        <package name="libnsl-dev"/>
     </requires>
 
     <contents>
-        <file src="/usr/include"/>
+        <file src="${prefix}/include"/>
 
-        <file src="/usr/lib/Mcrt1.o"/>
-        <file src="/usr/lib/Scrt1.o"/>
-        <file src="/usr/lib/crt1.o"/>
-        <file src="/usr/lib/crti.o"/>
-        <file src="/usr/lib/crtn.o"/>
-        <file src="/usr/lib/gcrt1.o"/>
-        <file src="/usr/lib/grcrt1.o"/>
-        <file src="/usr/lib/rcrt1.o"/>
+        <file src="${prefix}/lib/Mcrt1.o"/>
+        <file src="${prefix}/lib/Scrt1.o"/>
+        <file src="${prefix}/lib/crt1.o"/>
+        <file src="${prefix}/lib/crti.o"/>
+        <file src="${prefix}/lib/crtn.o"/>
+        <file src="${prefix}/lib/gcrt1.o"/>
 
-        <file src="/usr/lib/*.a"/>
+        <file src="${prefix}/lib/*.a"/>
 
-        <file src="/usr/lib/libBrokenLocale.a"/>
-        <file src="/usr/lib/libBrokenLocale.so"/>
+        <file src="${prefix}/lib/libBrokenLocale.a"/>
+        <file src="${prefix}/lib/libBrokenLocale.so"/>
 
-        <file src="/usr/lib/libanl.so"/>
-        <file src="/usr/lib/libc.so"/>
-        <file src="/usr/lib/libdl.so"/>
-        <file src="/usr/lib/libm.so"/>
-        <file src="/usr/lib/libmvec.so"/>
-        <file src="/usr/lib/libnss_compat.so"/>
-        <file src="/usr/lib/libnss_dns.so"/>
-        <file src="/usr/lib/libnss_files.so"/>
-        <file src="/usr/lib/libnss_hesiod.so"/>
-        <file src="/usr/lib/libpthread.so"/>
-        <file src="/usr/lib/libresolv.so"/>
-        <file src="/usr/lib/librt.so"/>
-        <file src="/usr/lib/libthread_db.so"/>
-        <file src="/usr/lib/libutil.so"/>
+        <file src="${prefix}/lib/libanl.so"/>
+        <file src="${prefix}/lib/libc.so"/>
+        <file src="${prefix}/lib/libdl.so"/>
+        <file src="${prefix}/lib/libm.so"/>
+        <!--
+        <file src="${prefix}/lib/libmvec.so"/>
+        -->
+        <file src="${prefix}/lib/libnss_compat.so"/>
+        <file src="${prefix}/lib/libnss_dns.so"/>
+        <file src="${prefix}/lib/libnss_files.so"/>
+        <file src="${prefix}/lib/libnss_hesiod.so"/>
+        <file src="${prefix}/lib/libpthread.so"/>
+        <file src="${prefix}/lib/libresolv.so"/>
+        <file src="${prefix}/lib/librt.so"/>
+        <file src="${prefix}/lib/libthread_db.so"/>
+        <file src="${prefix}/lib/libutil.so"/>
 
-        <file src="/usr/share/gdb/auto-load/lib/*-linux-gnu"/>
+        <file src="${prefix}/share/gdb/auto-load/lib/*-linux-gnu"/>
     </contents>
 </package>

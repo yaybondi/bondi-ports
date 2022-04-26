@@ -16,18 +16,11 @@
     </description>
 
     <requires>
-        <package name="libc-bin" version=">> 2.31"/>
+        <package name="libc-bin" version=">=="/>
     </requires>
 
     <contents>
-        <file src="/etc/locale.alias"/>
-
-        <file src="/usr/sbin/locale-gen"/>
-        <file src="/usr/sbin/update-locale"/>
-        <file src="/usr/sbin/validlocale"/>
-
-        <file src="/usr/share/i18n"/>
-
-        <dir src="/usr/lib/locale"/>
+        <file src="${prefix}/share/i18n"/>
+        <dir src="${prefix}/lib/locale"/>
     </contents>
 </package>
