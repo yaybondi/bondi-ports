@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
-    <release epoch="1" version="20.4.1" revision="1" maintainer="Tobias Koch"
-     email="tobias.koch@gmail.com" date="2019-12-13 09:17:00+03:00">
+    <release epoch="1" version="22.10" revision="1" maintainer="Tobias Koch"
+     email="tobias.koch@gmail.com" date="2022-04-26 23:48:00+03:00">
         <changeset>
             <li>New version for 'Ollie' release</li>
         </changeset>
