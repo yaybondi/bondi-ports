@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.5.7" revision="0bolt1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2022-04-26 23:58:00+03:00">
+        <changeset>
+          <li>shlibcache: never use ldconfig on Bolt OS (even with glibc)</li>
+          <li>shlibcache: overlay_package recognizes ld-* as possible SO dependency</li>
+        </changeset>
+    </release>
     <release version="1.5.6" revision="0bolt1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2022-04-06 10:24:00+03:00">
