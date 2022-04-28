@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libxcrypt-source" section="devel">
+    <description>
+        <summary>libcrypt shared library: sources</summary>
+        <p>
+        This package contains the sources and patches which are needed to
+        build libxcrypt.
+        </p>
+    </description>
+
+    <contents>
+        <file src="${prefix}/src/libxcrypt"/>
+    </contents>
+</package>

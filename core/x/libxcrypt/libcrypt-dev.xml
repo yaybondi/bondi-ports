@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="libcrypt-dev" section="libdevel">
+    <description>
+        <summary>libcrypt development files</summary>
+        <p>
+        This package contains the files needed for developing applications that
+        use libcrypt.
+        </p>
+    </description>
+
+    <requires>
+        <package name="libcrypt1" version="=="/>
+    </requires>
+
+    <contents>
+        <file src="${prefix}/include"/>
+        <file src="${prefix}/lib/libcrypt.{a,so}"/>
+        <file src="${prefix}/lib/pkgconfig"/>
+    </contents>
+</package>

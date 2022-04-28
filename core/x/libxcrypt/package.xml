@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:xi="http://www.w3.org/2001/XInclude">
+    <defines>
+        <def name="BOLT_BUILD_DIR" value="build"/>
+    </defines>
+
+    <source name="libxcrypt" repo="core" architecture-independent="false">
+        <description>
+            <summary>libcrypt shared library</summary>
+            <p>
+            libxcrypt is a modern library for one-way hashing of passwords.
+            It supports DES, MD5, NTHASH, SUNMD5, SHA-2-256, SHA-2-512, and
+            bcrypt-based password hashes
+            It provides the traditional Unix 'crypt' and 'crypt_r' interfaces,
+            as well as a set of extended interfaces like 'crypt_gensalt'.
+            </p>
+        </description>
+
+        <sources>
+            <file 
+                subdir="sources"
+                src="libxcrypt-4.4.18.tar.xz"
+                upstream-src="http://ftp.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.18.orig.tar.xz"
+                sha256sum="4cd2a06e98519d57a5572ee8885b6cc23c70a559d234c161d3f22c487edaa3fa"
+            />
+            <file 
+                subdir="patches"
+                src="debian-patches-4.tar.gz"
+                upstream-src=""
+                sha256sum="a664841d0b5d8051e1fafa11de842a36b9ae69a257f46846f89fc5839fa173c1"
+            />
+        </sources>
+
+        <patches>
+            <patchset subdir="sources">
+                <file src="patches/commit-86d1e4e"/>
+                <file src="patches/include_ltdlm4"/>
+            </patchset>
+        </patches>
+
+        <requires>
+            <package name="autoconf"/>
+            <package name="automake"/>
+            <package name="libtool"/>
+            <package name="pkg-config"/>
+        </requires>
+
+        <xi:include href="rules.xml"/>
+    </source>
+
+    <xi:include href="libcrypt1.xml"/>
+    <xi:include href="libcrypt-dev.xml"/>
+    <xi:include href="libxcrypt-source.xml"/>
+
+    <xi:include href="changelog.xml"/>
+</control>
