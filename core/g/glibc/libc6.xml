@@ -10,7 +10,7 @@
     </description>
 
     <requires>
-        <package name="libgcc-s1"/>
+        <package name="libgcc"/>
         <package name="libcrypt1"/>
     </requires>
 
