@@ -37,6 +37,7 @@ rm -fr .build && mkdir -p .build
         --build="$BOLT_BUILD_TYPE" \
         --host="$BOLT_HOST_TYPE" \
         --disable-werror \
+        --disable-crypt \
         --without-gd \
         --without-cvs \
         --enable-stackguard-randomization \
