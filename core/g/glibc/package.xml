@@ -221,7 +221,6 @@
     <xi:include href="libc-dev-bin.xml"/>
     <xi:include href="libc-devtools.xml"/>
     <xi:include href="locales.xml"/>
-    <xi:include href="nscd.xml"/>
     <xi:include href="libc6.xml"/>
     <xi:include href="libc6-dev.xml"/>
 
