@@ -8,6 +8,10 @@
         </p>
     </description>
 
+    <provides>
+        <package name="libc-dev"/>
+    </provides>
+
     <requires>
         <package name="libc-dev-bin" version="=="/>
         <package name="libcrypt-dev"/>
