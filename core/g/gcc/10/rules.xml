@@ -22,18 +22,18 @@ fi
 cd "$BOLT_SOURCE_DIR"
 
 if [ "$BOLT_BUILD_FOR" = "tools" ]; then
-    # fix musl interp to be located in /tools/lib
-    grep -rl '"[^"]*/lib/ld-musl' gcc/config | while read filename; do
-        sed -i 's@"[^"]*/lib/ld-musl@"/tools/lib/ld-musl@g' "$filename"
+    # fix interp to be located in /tools/lib
+    grep -rl '"[^"]*/lib\(32\|64\)\?/ld' gcc/config | while read filename; do
+        sed -i 's@"[^"]*/lib\(32\|64\)\?/ld@"/tools/lib/ld@g' "$filename"
     done
 else
-    # fix musl interp to be located in /usr/lib
-    grep -rl '"[^"]*/lib/ld-musl' gcc/config | while read filename; do
-        sed -i 's@"[^"]*/lib/ld-musl@"/usr/lib/ld-musl@g' "$filename"
+    # fix interp to be located in /usr/lib
+    grep -rl '"[^"]*/lib\(32\|64\)\?/ld' gcc/config | while read filename; do
+        sed -i 's@"[^"]*/lib\(32\|64\)\?/ld@"/usr/lib/ld@g' "$filename"
     done
 fi
 
-        # run autoconf for some of the patches to take effect
+# run autoconf for some of the patches to take effect
 for SUBDIR in . gcc libcc1 libdecnumber libffi libgcc libgnat_util libgo libgomp libstdc++-v3; do
     cd "$BOLT_SOURCE_DIR/$SUBDIR" && autoconf
 done
