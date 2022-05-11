@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.5.8" revision="0bolt1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2022-05-11 23:48:00+03:00">
+        <changeset>
+          <li>boltpack: convert rpath to runpath instead of deleting either</li>
+          <li>build-essential: install GNU grep</li>
+          <li>specfile: TLDs can have up to 63 characters</li>
+        </changeset>
+    </release>
     <release version="1.5.7" revision="0bolt1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2022-04-26 23:58:00+03:00">
