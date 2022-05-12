@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.5.9" revision="0bolt1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2022-05-12 10:28:00+03:00">
+        <changeset>
+          <li>sourcepackage: don't break early when loading bolt_helpers</li>
+        </changeset>
+    </release>
     <release version="1.5.8" revision="0bolt1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2022-05-11 23:48:00+03:00">
