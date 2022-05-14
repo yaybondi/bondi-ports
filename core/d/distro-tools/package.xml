@@ -21,7 +21,7 @@
                 subdir="sources"
                 src="distro-tools-1.5.9.tar.gz"
                 upstream-src="https://github.com/boltlinux/distro-tools/archive/refs/tags/1.5.9.tar.gz"
-                sha256sum="0f8044af063dc6c847b14b2ce5b44d01b5ae259695c5f65b7b896a6d668b57c1"/>
+                sha256sum="0b9596d61e6fa7ad096e58b838bb42ce40c728a5f553c9cf36940c6d9cfa6d94"/>
         </sources>
 
         <requires>
