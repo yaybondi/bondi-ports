@@ -21,6 +21,9 @@ case "$BOLT_BUILD_FOR" in
         done
 
         patch -tN -p1 < "$BOLT_WORK_DIR/patches/bbox-redirect-bin-sh.patch"
+
+        sed -i -e "s/^OBJCOPY=.*/OBJCOPY=$BOLT_HOST_TYPE-objcopy/g" \
+               -e "s/^OBJDUMP=.*/OBJDUMP=$BOLT_HOST_TYPE-objdump/g" configure
         ;;
 esac
 
@@ -46,7 +49,8 @@ rm -fr .build && mkdir -p .build
         --enable-stack-protector=strong \
         --enable-profile \
         --enable-add-ons \
-        libc_cv_slibdir="$BOLT_INSTALL_PREFIX/lib"
+        libc_cv_slibdir="$BOLT_INSTALL_PREFIX/lib" \
+        libc_cv_rtlddir="$BOLT_INSTALL_PREFIX/lib"
 
     # Cheat our way around building the manual (which is not there).
     cat << EOF >> ../manual/empty-script.sh
