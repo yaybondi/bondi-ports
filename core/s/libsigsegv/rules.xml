@@ -11,7 +11,7 @@ $BOLT_SOURCE_DIR/configure \
     --enable-relocatable \
     --enable-shared \
     --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_BUILD_TYPE" \
+    --build="$BOLT_HOST_TYPE" \
     --host="$BOLT_HOST_TYPE"
 
     ]]>
