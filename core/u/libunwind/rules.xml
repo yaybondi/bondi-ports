@@ -3,6 +3,11 @@
     <prepare>
     <![CDATA[
 
+if [ ! -f "$BOLT_INSTALL_PREFIX/include/sys/reg.h" ]; then
+    cd "$BOLT_SOURCE_DIR"
+    sed -i '/#include <sys\/reg.h>/d' src/coredump/_UCD_lib.h
+fi
+
 cd "$BOLT_BUILD_DIR"
 "$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
