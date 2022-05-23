@@ -3,7 +3,8 @@
     <prepare>
     <![CDATA[
 
-true
+cd "$BOLT_SOURCE_DIR"
+sed -i "s@/usr/include@$BOLT_INSTALL_PREFIX/include@g" Make.Rules
 
     ]]>
     </prepare>
