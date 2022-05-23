@@ -13,6 +13,7 @@
     </provides>
 
     <requires>
+        <package name="linux-system-headers"/>
         <package name="libc-dev-bin" version="=="/>
         <package name="libcrypt-dev"/>
     </requires>
