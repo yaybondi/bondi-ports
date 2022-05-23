@@ -32,6 +32,7 @@ CONFIGURE_ARGS="
     --host=$BOLT_HOST_TYPE
     --build=$BOLT_BUILD_TYPE
     --disable-symbol-hiding
+    --disable-silent-rules
     --enable-versioned-symbols
     --enable-threaded-resolver
     --enable-ipv6
@@ -51,6 +52,10 @@ cd "$BOLT_BUILD_DIR/gnutls"
     --without-ssl --without-nss --with-gnutls --without-libssh2
 
 cd "$BOLT_BUILD_DIR/nss"
+
+# HACK: to avoid colliding with glibc's nss.h
+sed -i 's@#include <nss.h>@#include <nss/nss.h>@g' lib/vtls/nss.c
+
 LIBS="-lssl3 -lnspr4 -lplds4" CFLAGS="$CFLAGS -I$BOLT_INSTALL_PREFIX/include/nspr -I$BOLT_INSTALL_PREFIX/include/nss" \
 ./configure $CONFIGURE_ARGS \
     --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt \
