@@ -24,12 +24,16 @@ cd "$BOLT_SOURCE_DIR"
 if [ "$BOLT_BUILD_FOR" = "tools" ]; then
     # fix interp to be located in /tools/lib
     grep -rl '"[^"]*/lib\(32\|64\)\?/ld' gcc/config | while read filename; do
-        sed -i 's@"[^"]*/lib\(32\|64\)\?/ld@"/tools/lib/ld@g' "$filename"
+        sed -i -e 's@"/lib\(32\|64\)\?/ld@"/tools/lib/ld@g' \
+               -e 's@:/lib\(32\|64\)\?/ld@:/tools/lib/ld@g' \
+               -e 's@%(dynamic_linker_prefix)/lib\(32\|64\)\?/ld@/tools/lib/ld@g' "$filename"
     done
 else
     # fix interp to be located in /usr/lib
     grep -rl '"[^"]*/lib\(32\|64\)\?/ld' gcc/config | while read filename; do
-        sed -i 's@"[^"]*/lib\(32\|64\)\?/ld@"/usr/lib/ld@g' "$filename"
+        sed -i -e 's@"/lib\(32\|64\)\?/ld@"/usr/lib/ld@g' \
+               -e 's@:/lib\(32\|64\)\?/ld@:/usr/lib/ld@g' \
+               -e 's@%(dynamic_linker_prefix)/lib\(32\|64\)\?/ld@/usr/lib/ld@g' "$filename"
     done
 fi
 
