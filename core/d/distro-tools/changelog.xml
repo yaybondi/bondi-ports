@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.6.4" revision="0bolt1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2022-05-25 12:28:00+03:00">
+        <changeset>
+          <li>shlibcache: overlay_package recognizes ld64* as possible SO dependency</li>
+          <li>Run chrpath -c silently</li>
+          <li>Replace Platform.num_cpus with os.cpu_count</li>
+          <li>misc/platform: no -bolt- in target triplets</li>
+          <li>osimage/generator: simplify Platform.target_for_machine call</li>
+        </changeset>
+    </release>
     <release version="1.5.9" revision="0bolt1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2022-05-12 10:28:00+03:00">
