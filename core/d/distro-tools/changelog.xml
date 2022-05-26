@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.6.5" revision="0bolt1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2022-05-26 11:30:00+03:00">
+        <changeset>
+          <li>misc/platform: fix broken elif logic (used if...return previously)</li>
+        </changeset>
+    </release>
     <release version="1.6.4" revision="0bolt1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2022-05-25 12:28:00+03:00">
