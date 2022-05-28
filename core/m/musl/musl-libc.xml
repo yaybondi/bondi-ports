@@ -29,5 +29,6 @@
 
     <contents>
         <file src="${prefix}/lib/*.so*"/>
+        <file src="${prefix}/share/misc/libc.name"/>
     </contents>
 </package>
