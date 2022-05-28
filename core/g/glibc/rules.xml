@@ -102,6 +102,11 @@ install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/locale/"
     --quiet -c -f UTF-8 -i C \
         "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/locale/C.UTF-8"
 
+install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share"
+install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/misc"
+
+echo "glibc" > "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/misc/libc.name"
+
     ]]>
     </install>
 </rules>

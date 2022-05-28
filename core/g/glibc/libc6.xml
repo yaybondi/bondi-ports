@@ -30,5 +30,7 @@
         <file src="${prefix}/lib/libSegFault.so"/>
         <file src="${prefix}/lib/libmemusage.so"/>
         <file src="${prefix}/lib/libpcprofile.so"/>
+
+        <file src="${prefix}/share/misc/libc.name"/>
     </contents>
 </package>
