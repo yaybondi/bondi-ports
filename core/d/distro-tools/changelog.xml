@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.7.0" revision="0bolt1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2022-05-29 23:25:00+03:00">
+        <changeset>
+          <li>Move all of boltpack.platform into misc.platform</li>
+        </changeset>
+    </release>
     <release version="1.6.5" revision="0bolt1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2022-05-26 11:30:00+03:00">
