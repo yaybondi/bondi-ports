@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="mpfr4" repo="core" architecture-independent="false" build-for="tools,target">
+    <source name="mpfr4" repo="core" architecture-independent="false" if="tools-build or target-build">
         <description>
             <summary>Multiple precision floating-point computation</summary>
             <p>

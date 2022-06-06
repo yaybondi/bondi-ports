@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="rsync" repo="core" architecture-independent="false" build-for="tools,target">
+    <source name="rsync" repo="core" architecture-independent="false" if="tools-build or target-build">
         <description>
             <summary>Fast, versatile, remote (and local) file-copying tool</summary>
             <p>

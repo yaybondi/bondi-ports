@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="gcc-10-plugin-dev" section="devel" build-for="target,tools">
+<package name="gcc-10-plugin-dev" section="devel" if="tools-build or target-build">
     <description>
         <summary>Files for GNU GCC plugin development.</summary>
         <p>

@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="libyaml" repo="core" architecture-independent="false" build-for="tools,target">
+    <source name="libyaml" repo="core" architecture-independent="false" if="tools-build or target-build">
         <description>
             <summary>Fast YAML 1.1 parser and emitter library</summary>
             <p>

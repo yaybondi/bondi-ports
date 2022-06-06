@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <source name="p11-kit" repo="core" architecture-independent="false" build-for="tools,target">
+    <source name="p11-kit" repo="core" architecture-independent="false" if="tools-build or target-build">
         <description>
             <summary>Library for loading and coordinating access to PKCS#11 modules</summary>
             <p>

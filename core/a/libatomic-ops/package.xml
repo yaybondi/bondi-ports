@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="libatomic-ops" repo="core" architecture-independent="false" build-for="tools,target">
+    <source name="libatomic-ops" repo="core" architecture-independent="false" if="tools-build or target-build">
         <description>
             <summary>A library for atomic operations</summary>
             <p>

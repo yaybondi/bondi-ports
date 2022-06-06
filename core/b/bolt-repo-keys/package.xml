@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <source name="bolt-repo-keys" repo="core" architecture-independent="true" build-for="target">
+    <source name="bolt-repo-keys" repo="core" architecture-independent="true" if="target-build">
         <description>
             <summary>The public portion of the repo signing keys</summary>
             <p>

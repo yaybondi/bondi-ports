@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libcc1-0" section="libs" build-for="target,tools">
+<package name="libcc1-0" section="libs" if="tools-build or target-build">
     <description>
         <summary>GCC cc1 plugin for GDB</summary>
         <p>

@@ -4,7 +4,8 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="libunwind" repo="core" architecture-independent="false" supported-on="!s390x,!riscv64" build-for="tools,target">
+    <source name="libunwind" repo="core" architecture-independent="false"
+            if="(tools-build or target-build) and !(s390x or riscv64)">
         <description>
             <summary>Library to determine the call-chain of a program - development</summary>
             <p>

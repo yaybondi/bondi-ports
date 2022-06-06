@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libatomic1" section="libs" build-for="target,tools">
+<package name="libatomic1" section="libs" if="tools-build or target-build">
     <description>
         <summary>Support library providing __atomic built-in functions</summary>
         <p>

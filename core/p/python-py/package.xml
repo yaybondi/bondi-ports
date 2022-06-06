@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <source name="python-py" repo="core" architecture-independent="true" build-for="tools,target">
+    <source name="python-py" repo="core" architecture-independent="true" if="tools-build or target-build">
         <description>
             <summary>Advanced Python development support library (Python 3)</summary>
             <p>

@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="libtasn1-6" repo="core" architecture-independent="false" build-for="tools,target">
+    <source name="libtasn1-6" repo="core" architecture-independent="false" if="tools-build or target-build">
         <description>
             <summary>Manage ASN.1 structures</summary>
             <p>

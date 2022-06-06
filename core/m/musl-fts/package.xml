@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="musl-fts" repo="core" architecture-independent="false" build-for="tools,target">
+    <source name="musl-fts" repo="core" architecture-independent="false" if="tools-build or target-build">
         <description>
             <summary>Library with fts functions missing in musl libc</summary>
             <p>

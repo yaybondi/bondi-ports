@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <source name="procps" repo="core" architecture-independent="false" build-for="tools,target">
+    <source name="procps" repo="core" architecture-independent="false" if="tools-build or target-build">
         <description>
             <summary>/proc file system utilities</summary>
             <p>

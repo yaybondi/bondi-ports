@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libgcc" section="libs" build-for="target,tools">
+<package name="libgcc" section="libs" if="tools-build or target-build">
     <description>
         <summary>GCC support library</summary>
         <p>

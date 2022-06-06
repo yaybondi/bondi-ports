@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="gdbserver" section="devel" build-for="target">
+<package name="gdbserver" section="devel" if="target-build">
     <description>
         <summary>GNU Debugger (remote server)</summary>
         <p>

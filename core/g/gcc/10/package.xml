@@ -4,7 +4,8 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="gcc-10" repo="core" architecture-independent="false" build-for="tools,cross-tools,target">
+    <source name="gcc-10" repo="core" architecture-independent="false"
+            if="tools-build or target-build or cross-tools-build">
         <description>
             <summary>GCC, the GNU Compiler Collection (base package)</summary>
             <p>

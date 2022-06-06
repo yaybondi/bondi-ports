@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <source name="libucontext" repo="core" build-for="tools,target">
+    <source name="libucontext" repo="core" if="tools-build or target-build">
         <description>
             <summary>Library which provides the ucontext.h C API</summary>
             <p>

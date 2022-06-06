@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package name="libgomp1" section="libs" build-for="target,tools">
+<package name="libgomp1" section="libs" if="tools-build or target-build">
     <description>
         <summary>GCC OpenMP (GOMP) support library</summary>
         <p>

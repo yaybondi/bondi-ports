@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="perl" repo="core" architecture-independent="false" build-for="tools,target">
+    <source name="perl" repo="core" architecture-independent="false" if="tools-build or target-build">
         <description>
             <summary>Larry Wall's Practical Extraction and Report Language</summary>
             <p>

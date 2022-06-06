@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <source name="base-files" repo="core" architecture-independent="true" build-for="tools,target">
+    <source name="base-files" repo="core" architecture-independent="true" if="tools-build or target-build">
         <xi:include href="description.xml"/>
 
         <sources>
