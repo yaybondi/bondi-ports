@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <control xmlns:xi="http://www.w3.org/2001/XInclude">
-    <source name="musl" repo="core" architecture-independent="false" if="tools-build or target-build">
+    <source name="musl" repo="core" architecture-independent="false" if="(tools-build or target-build) and musl">
         <description>
             <summary>A small, standards-conformling libc for Linux</summary>
             <p>
