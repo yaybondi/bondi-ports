@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.8.1" revision="0bolt1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2022-06-07 22:51:00+03:00">
+        <changeset>
+          <li>boltpack: fix enabled/disabled packages logic broken by preprocessor</li>
+        </changeset>
+    </release>
     <release version="1.8.0" revision="0bolt1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2022-06-07 14:16:00+03:00">
