@@ -4,7 +4,8 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="musl-utils" repo="core" architecture-independent="false" if="tools-build or target-build">
+    <source name="musl-utils" repo="core" architecture-independent="false"
+            if="(tools-build or target-build) and musl">
         <description>
             <summary>musl Libc Auxiliary Utilities</summary>
             <p>
