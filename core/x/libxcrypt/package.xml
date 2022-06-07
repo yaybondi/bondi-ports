@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="libxcrypt" repo="core" architecture-independent="false">
+    <source name="libxcrypt" repo="core" architecture-independent="false" if="(tools-build or target-build) and glibc">
         <description>
             <summary>libcrypt shared library</summary>
             <p>
