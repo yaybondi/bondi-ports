@@ -14,12 +14,17 @@ sed -i 's/#if OVERRIDE_GETTID/#if 0/g' src/procattr.c
     <build>
     <![CDATA[
 
+if [ "$BOLT_LIBC_NAME" = "musl" ]; then
+    LIBFTS="-lfts"
+fi
+
 cd "$BOLT_BUILD_DIR"
 make -j"$BOLT_PARALLEL_JOBS" \
     PREFIX="$BOLT_INSTALL_PREFIX" \
     CFLAGS="$CFLAGS" \
     CPPFLAGS="$CPPFLAGS" \
-    FTS_LDLIBS="-lfts" PCRE_LDLIBS="-lpcre" \
+    FTS_LDLIBS="$LIBFTS" \
+    PCRE_LDLIBS="-lpcre" \
     CC="$BOLT_HOST_TYPE-gcc" \
     LD="$BOLT_HOST_TYPE-ld" \
     AS="$BOLT_HOST_TYPE-as" \
