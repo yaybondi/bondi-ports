@@ -30,8 +30,11 @@ export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
 export ac_cv_func_isnan=yes
 export ac_cv_func_isinf=yes
 
-SHELL="$(which bash)" \
-LIBS="-lucontext" \
+if [ "$BOLT_LIBC_NAME" = "musl" ]; then
+    LIBS="-lucontext"
+fi
+
+SHELL="$(which bash)" LIBS="$LIBS" \
 "$BOLT_SOURCE_DIR/configure" \
     --prefix="$BOLT_INSTALL_PREFIX" \
     --build="$MY_BUILD_TYPE" \

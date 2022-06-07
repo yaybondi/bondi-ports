@@ -71,7 +71,7 @@
             <package name="openssl"/>
             <package name="ruby2.7"/>
             <package name="tzdata"/>
-            <package name="libucontext-dev"/>
+            <package name="libucontext-dev" if="musl"/>
             <package name="zlib1g-dev"/>
         </requires>
 
