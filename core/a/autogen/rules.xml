@@ -6,6 +6,8 @@
 cd "$BOLT_SOURCE_DIR"
 bh_autotools_dev_update
 
+autoreconf -vi
+
 export SHELL="$BOLT_INSTALL_PREFIX/bin/sh"
 export PKG_CONFIG="${BOLT_HOST_TYPE}-pkg-config"
 
