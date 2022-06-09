@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.9.0" revision="0bolt1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2022-06-10 01:07:00+03:00">
+        <changeset>
+          <li>bolt-pack: implement --would-build command</li>
+          <li>misc/platform: add active_release() method</li>
+        </changeset>
+    </release>
     <release version="1.8.1" revision="0bolt1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2022-06-07 22:51:00+03:00">
