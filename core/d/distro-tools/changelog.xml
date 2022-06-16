@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.9.1" revision="0bolt1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2022-06-17 01:14:00+03:00">
+        <changeset>
+          <li>shlibcache: accept ld.*?\.so\.* as valid shared object name (fixes mips64el bootstrap)</li>
+        </changeset>
+    </release>
     <release version="1.9.0" revision="0bolt1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2022-06-10 01:07:00+03:00">
