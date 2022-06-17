@@ -49,8 +49,8 @@
                 <file src="patches/0001-Gia64-test-nat.c-include-signal.h-for-sigaction.patch"/>
                 <file src="patches/0001-Disable-Ltest-init-local-signal-on-ia64.patch"/>
                 <!-- Alpine Linux-->
-                <file src="patches/musl-mips-fix.patch"/>
-                <file src="patches/ppc64-musl.patch"/>
+                <file src="patches/musl-mips-fix.patch" if="musl"/>
+                <file src="patches/ppc64-musl.patch" if="musl"/>
             </patchset>
         </patches>
 
