@@ -13,7 +13,11 @@ sed -i "s@/usr/include@$BOLT_INSTALL_PREFIX/include@g" Make.Rules
     <![CDATA[
 
 cd "$BOLT_BUILD_DIR"
-make CC="${BOLT_HOST_TYPE}-gcc" -j"$BOLT_PARALLEL_JOBS"
+make \
+    CC="${BOLT_HOST_TYPE}-gcc" \
+    AR="${BOLT_HOST_TYPE}-ar" \
+    RANLIB="${BOLT_HOST_TYPE}-ranlib" \
+    -j"$BOLT_PARALLEL_JOBS"
 
     ]]>
     </build>
