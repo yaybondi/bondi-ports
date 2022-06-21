@@ -37,7 +37,7 @@ rm -fr .build && mkdir -p .build
     ../configure \
         --prefix="$BOLT_INSTALL_PREFIX" \
         --with-headers="$BOLT_INSTALL_PREFIX/include" \
-        --build="$BOLT_BUILD_TYPE" \
+        --build="$BOLT_HOST_TYPE" \
         --host="$BOLT_HOST_TYPE" \
         --disable-werror \
         --disable-crypt \
@@ -74,7 +74,10 @@ EOF
     <![CDATA[
 
 cd "$BOLT_SOURCE_DIR/.build"
-make -j"$BOLT_PARALLEL_JOBS"
+make \
+    AR="${BOLT_HOST_TYPE}-ar" \
+    RANLIB="${BOLT_HOST_TYPE}-ranlib" \
+    -j"$BOLT_PARALLEL_JOBS"
 
     ]]>
     </build>
