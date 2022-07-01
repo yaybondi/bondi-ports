@@ -23,6 +23,10 @@
         </p>
     </description>
 
+    <provides>
+        <package name="libc"/>
+    </provides>
+
     <requires>
         <package name="base-files"/>
     </requires>

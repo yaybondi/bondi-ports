@@ -9,7 +9,12 @@
         </p>
     </description>
 
+    <provides>
+        <package name="libc"/>
+    </provides>
+
     <requires>
+        <package name="base-files"/>
         <package name="libgcc"/>
         <package name="libcrypt1"/>
     </requires>
