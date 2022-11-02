@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.10.2" revision="0bolt1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2022-11-02 15:44:00+03:00">
+        <changeset>
+          <li>Remove the bolt-install-deps script</li>
+          <li>bolt-pack can generate bolt-build-deps package</li>
+        </changeset>
+    </release>
     <release version="1.9.1" revision="0bolt1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2022-06-17 01:14:00+03:00">
