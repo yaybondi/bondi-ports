@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.10.3" revision="0bolt1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2022-11-02 21:31:00+03:00">
+        <changeset>
+          <li>More meaninful naming and metadata for bolt-build-deps.bolt</li>
+        </changeset>
+    </release>
     <release version="1.10.2" revision="0bolt1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2022-11-02 15:44:00+03:00">
