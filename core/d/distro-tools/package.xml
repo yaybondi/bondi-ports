@@ -19,9 +19,9 @@
         <sources>
             <file
                 subdir="sources"
-                src="distro-tools-1.10.3.tar.gz"
-                upstream-src="https://github.com/boltlinux/distro-tools/archive/refs/tags/1.10.3.tar.gz"
-                sha256sum="8ac3003f05f99672920429323de52b15e35bbf634b02e54db77ff202410c4cbc"/>
+                src="distro-tools-1.11.0.tar.gz"
+                upstream-src="https://github.com/boltlinux/distro-tools/archive/refs/tags/1.11.0.tar.gz"
+                sha256sum="b126b13dea6c608d283105208253676d9cb156f21e9b2a30686194a87afdf0ba"/>
         </sources>
 
         <requires>

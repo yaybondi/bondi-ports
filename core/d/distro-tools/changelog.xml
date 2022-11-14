@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.11.0" revision="0bolt1"
+        maintainer="Tobias Koch" email="tobias.koch@gmail.com"
+        date="2022-11-14 20:17:00+01:00">
+        <changeset>
+          <li>binarypackage: version == implies same source</li>
+          <li>packagecontrol: elif not if if, duh...</li>
+          <li>packagecontrol: don't parse bin packages on would_build action</li>
+        </changeset>
+    </release>
     <release version="1.10.3" revision="0bolt1"
         maintainer="Tobias Koch" email="tobias.koch@gmail.com"
         date="2022-11-02 21:31:00+03:00">
