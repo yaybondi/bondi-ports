@@ -38,4 +38,29 @@
 
         <file src="${prefix}/share/misc/libc.name"/>
     </contents>
+
+    <maintainer-scripts>
+        <postinst><![CDATA[
+if [ ! -f /etc/nsswitch.conf ]; then
+
+    cat << EOF > /etc/nsswitch.conf
+passwd:         files
+group:          files
+shadow:         files
+gshadow:        files
+
+hosts:          files dns
+networks:       files
+
+protocols:      db files
+services:       db files
+ethers:         db files
+rpc:            db files
+
+netgroup:       nis
+EOF
+
+fi
+        ]]></postinst>
+    </maintainer-scripts>
 </package>
