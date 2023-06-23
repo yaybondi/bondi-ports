@@ -4,7 +4,7 @@
         <def name="BOLT_BUILD_DIR" value="build"/>
     </defines>
 
-    <source name="libidn2" repo="core" architecture-independent="false">
+    <source name="libidn2" repo="core" architecture-independent="false" if="tools-build or target-build">
         <description>
             <summary>Internationalized domain names (IDNA2008/TR46) library</summary>
             <p>
