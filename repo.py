@@ -27,6 +27,8 @@
 import os
 import sys
 import re
+import textwrap
+
 from functools import cmp_to_key
 
 try:
@@ -307,21 +309,23 @@ class List:
 #end function
 
 def print_usage():
-    print(
-        "Package Definitions Viewer Tool, version %s                                   \n"
-        "Copyright (c) 2016-2017 Nonterra Software Solutions                           \n"
-        "                                                                              \n"
-        "USAGE:                                                                        \n"
-        "                                                                              \n"
-        "  ./repo.py <command> [args]                                                  \n"
-        "                                                                              \n"
-        "COMMANDS:                                                                     \n"
-        "                                                                              \n"
-        "  index             Refresh the repository index file.                        \n"
-        "  list              Dump the repository index to standard output.             \n"
-        "  show  <pkg_name>  Show summary information about package.                   \n"
-        % VERSION
-    )
+    sys.stdout.write(textwrap.dedent(
+        """\
+        Package Definitions Viewer Tool, version %s
+        Copyright (c) 2016-2024 Tobias Koch <tobias.koch@gmail.com>
+
+        USAGE:
+
+          ./repo.py <command> [args]
+
+        COMMANDS:
+
+          index             Refresh the repository index file.
+          list              Dump the repository index to standard output.
+          show  <pkg_name>  Show summary information about package.
+
+        """ % VERSION
+    ))
 #end function
 
 if __name__ == "__main__":
