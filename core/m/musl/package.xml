@@ -26,8 +26,8 @@
         <sources>
             <file src="musl-1.2.2.tar.gz" subdir="sources"
                 sha256sum="9b969322012d796dc23dda27a35866034fa67d8fb67e0e2c45c913c3d43219dd"/>
-            <file src="bolt-patches-3.tar.gz" subdir="patches"
-                sha256sum="f12a246c58342b611a266b19510e6505f5558eaee2f086bb0efc55ca269230c4"/>
+            <file src="bolt-patches-4.tar.gz" subdir="patches"
+                sha256sum="1595314c29ebc44470aaeaff49f8e1465ac12492c9c4e5f5482bc599da9ca16c"/>
         </sources>
 
         <patches>
