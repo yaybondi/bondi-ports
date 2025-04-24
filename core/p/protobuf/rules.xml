@@ -3,17 +3,17 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 autoreconf -vfi
 
-rm -f "$BOLT_SOURCE_DIR/objectivec/generate_well_known_types.sh"
-rm -f "$BOLT_SOURCE_DIR/csharp/generate_protos.sh"
+rm -f "$BONDI_SOURCE_DIR/objectivec/generate_well_known_types.sh"
+rm -f "$BONDI_SOURCE_DIR/csharp/generate_protos.sh"
 
-cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE"
+cd "$BONDI_BUILD_DIR"
+$BONDI_SOURCE_DIR/configure \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_HOST_TYPE" \
+    --host="$BONDI_HOST_TYPE"
 
     ]]>
     </prepare>
@@ -21,15 +21,15 @@ $BOLT_SOURCE_DIR/configure \
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR"
+make -j"$BONDI_PARALLEL_JOBS"
 
 chmod +x generate_descriptor_proto.sh
 ./generate_descriptor_proto.sh
 
 cp -a python python3
 
-cd "$BOLT_SOURCE_DIR/python3"
+cd "$BONDI_SOURCE_DIR/python3"
 bh_python_install --py3 --build
 
     ]]>
@@ -38,13 +38,13 @@ bh_python_install --py3 --build
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/python3"
+install -d -m 0755 "$BONDI_INSTALL_DIR/python3"
 
-cd "$BOLT_SOURCE_DIR/python3"
-bh_python_install --py3 --install --root "$BOLT_INSTALL_DIR/python3"
+cd "$BONDI_SOURCE_DIR/python3"
+bh_python_install --py3 --install --root "$BONDI_INSTALL_DIR/python3"
 
     ]]>
     </install>

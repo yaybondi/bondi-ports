@@ -19,14 +19,14 @@ true
     <install>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 
-mkdir -p "$BOLT_INSTALL_DIR/python3"
+mkdir -p "$BONDI_INSTALL_DIR/python3"
 
-bh_python_install --py3 --root "$BOLT_INSTALL_DIR/python3"
+bh_python_install --py3 --root "$BONDI_INSTALL_DIR/python3"
 
-mv "$BOLT_INSTALL_DIR/python3/$BOLT_INSTALL_PREFIX/bin/easy_install" \
-    "$BOLT_INSTALL_DIR/python3/$BOLT_INSTALL_PREFIX/bin/easy_install3"
+mv "$BONDI_INSTALL_DIR/python3/$BONDI_INSTALL_PREFIX/bin/easy_install" \
+    "$BONDI_INSTALL_DIR/python3/$BONDI_INSTALL_PREFIX/bin/easy_install3"
 
     ]]>
     </install>

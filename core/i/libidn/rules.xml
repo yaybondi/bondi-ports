@@ -3,24 +3,24 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 bh_autotools_dev_update
 autoreconf -vfi
 
 export CFLAGS="`echo $CFLAGS | sed 's@-Werror=format-security@@g'`"
 
-cd "$BOLT_BUILD_DIR"
-"$BOLT_SOURCE_DIR/configure" \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
+cd "$BONDI_BUILD_DIR"
+"$BONDI_SOURCE_DIR/configure" \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_HOST_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
     --with-packager=Bolt \
     --disable-java \
     --disable-silent-rules \
     --disable-nls \
     --disable-gtk-doc-html
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 touch doc/libidn*
 
     ]]>
@@ -29,8 +29,8 @@ touch doc/libidn*
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR"
+make -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -38,8 +38,8 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
     ]]>
     </install>

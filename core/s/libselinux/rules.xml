@@ -3,7 +3,7 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 
 # Hack: prevent override of gettid        
 sed -i 's/#if OVERRIDE_GETTID/#if 0/g' src/procattr.c
@@ -14,22 +14,22 @@ sed -i 's/#if OVERRIDE_GETTID/#if 0/g' src/procattr.c
     <build>
     <![CDATA[
 
-if [ "$BOLT_LIBC_NAME" = "musl" ]; then
+if [ "$BONDI_LIBC_NAME" = "musl" ]; then
     LIBFTS="-lfts"
 fi
 
-cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS" \
-    PREFIX="$BOLT_INSTALL_PREFIX" \
+cd "$BONDI_BUILD_DIR"
+make -j"$BONDI_PARALLEL_JOBS" \
+    PREFIX="$BONDI_INSTALL_PREFIX" \
     CFLAGS="$CFLAGS" \
     CPPFLAGS="$CPPFLAGS" \
     FTS_LDLIBS="$LIBFTS" \
     PCRE_LDLIBS="-lpcre" \
-    CC="$BOLT_HOST_TYPE-gcc" \
-    LD="$BOLT_HOST_TYPE-ld" \
-    AS="$BOLT_HOST_TYPE-as" \
-    AR="$BOLT_HOST_TYPE-ar" \
-    RANLIB="$BOLT_HOST_TYPE-ranlib"
+    CC="$BONDI_HOST_TYPE-gcc" \
+    LD="$BONDI_HOST_TYPE-ld" \
+    AS="$BONDI_HOST_TYPE-as" \
+    AR="$BONDI_HOST_TYPE-ar" \
+    RANLIB="$BONDI_HOST_TYPE-ranlib"
 
     ]]>
     </build>
@@ -37,11 +37,11 @@ make -j"$BOLT_PARALLEL_JOBS" \
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-mkdir -p "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX"
-make PREFIX="$BOLT_INSTALL_PREFIX" \
-    SHLIBDIR="$BOLT_INSTALL_PREFIX/lib" \
-    DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR"
+mkdir -p "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX"
+make PREFIX="$BONDI_INSTALL_PREFIX" \
+    SHLIBDIR="$BONDI_INSTALL_PREFIX/lib" \
+    DESTDIR="$BONDI_INSTALL_DIR" install
 
     ]]>
     </install>

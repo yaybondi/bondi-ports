@@ -3,14 +3,14 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 bh_autotools_dev_update
 
-cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_BUILD_TYPE" \
-    --host="$BOLT_HOST_TYPE"
+cd "$BONDI_BUILD_DIR"
+$BONDI_SOURCE_DIR/configure \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_BUILD_TYPE" \
+    --host="$BONDI_HOST_TYPE"
 
     ]]>
     </prepare>
@@ -18,24 +18,24 @@ $BOLT_SOURCE_DIR/configure \
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR"
+make -j"$BONDI_PARALLEL_JOBS"
 
 rm -rf examples/rlfe
-cp -a "$BOLT_SOURCE_DIR/examples/rlfe" "$BOLT_BUILD_DIR/examples/"
-ln -sf "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/examples/rlfe/readline"
+cp -a "$BONDI_SOURCE_DIR/examples/rlfe" "$BONDI_BUILD_DIR/examples/"
+ln -sf "$BONDI_SOURCE_DIR" "$BONDI_BUILD_DIR/examples/rlfe/readline"
 
-ln -sf $(cd $BOLT_BUILD_DIR/shlib && ls libreadline.so.*.*) \
-    "$BOLT_BUILD_DIR/shlib/libreadline.so"
+ln -sf $(cd $BONDI_BUILD_DIR/shlib && ls libreadline.so.*.*) \
+    "$BONDI_BUILD_DIR/shlib/libreadline.so"
 
-cd "$BOLT_BUILD_DIR/examples/rlfe" && ./configure \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE"
+cd "$BONDI_BUILD_DIR/examples/rlfe" && ./configure \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_HOST_TYPE" \
+    --host="$BONDI_HOST_TYPE"
 
-make -C "$BOLT_BUILD_DIR/examples/rlfe" \
+make -C "$BONDI_BUILD_DIR/examples/rlfe" \
     CFLAGS="$CFLAGS -D_GNU_SOURCE" CPPFLAGS="$CPPFLAGS" \
-    LDFLAGS="$LDFLAGS -g -L$BOLT_BUILD_DIR/shlib" \
+    LDFLAGS="$LDFLAGS -g -L$BONDI_BUILD_DIR/shlib" \
     LIBS="-lreadline -ltinfo -lutil" rlfe
 
     ]]>
@@ -44,11 +44,11 @@ make -C "$BOLT_BUILD_DIR/examples/rlfe" \
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
-install -m 0755 "$BOLT_BUILD_DIR/examples/rlfe/rlfe" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/"
+install -m 0755 "$BONDI_BUILD_DIR/examples/rlfe/rlfe" \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/"
 
     ]]>
     </install>

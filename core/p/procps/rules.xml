@@ -3,18 +3,18 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 sed -i 's@__GNU_LIBRARY__ >= 6@1@g' proc/escape.c
 
 # The build system prefers utmpx.h over utmp.h, but musl's utmp.h includes
 # utmpx.h.
 export ac_cv_header_utmpx_h='no'
 
-cd "$BOLT_BUILD_DIR"
-"$BOLT_SOURCE_DIR/configure" \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
+cd "$BONDI_BUILD_DIR"
+"$BONDI_SOURCE_DIR/configure" \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_HOST_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
     --disable-nls
 
     ]]>
@@ -23,8 +23,8 @@ cd "$BOLT_BUILD_DIR"
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR"
+make -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -32,15 +32,15 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-mkdir -p "$BOLT_INSTALL_DIR/procps"
-mkdir -p "$BOLT_INSTALL_DIR/sysctl"
+mkdir -p "$BONDI_INSTALL_DIR/procps"
+mkdir -p "$BONDI_INSTALL_DIR/sysctl"
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR/procps" install
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR/procps" install
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/sysctl/$BOLT_INSTALL_PREFIX/sbin"
-mv "$BOLT_INSTALL_DIR/procps/$BOLT_INSTALL_PREFIX/sbin/sysctl" \
-   "$BOLT_INSTALL_DIR/sysctl/$BOLT_INSTALL_PREFIX/sbin"
+install -d -m 0755 "$BONDI_INSTALL_DIR/sysctl/$BONDI_INSTALL_PREFIX/sbin"
+mv "$BONDI_INSTALL_DIR/procps/$BONDI_INSTALL_PREFIX/sbin/sysctl" \
+   "$BONDI_INSTALL_DIR/sysctl/$BONDI_INSTALL_PREFIX/sbin"
 
     ]]>
     </install>

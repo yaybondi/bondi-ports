@@ -25,16 +25,16 @@
     <maintainer-scripts>
         <postinst><![CDATA[
 
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/pip" ]; then
-    ln -sf "pip3" "$BOLT_INSTALL_PREFIX/bin/pip"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/pip" ]; then
+    ln -sf "pip3" "$BONDI_INSTALL_PREFIX/bin/pip"
 fi
 
         ]]></postinst>
 
         <postrm><![CDATA[
 
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/pip" ]; then
-    rm -f "$BOLT_INSTALL_PREFIX/bin/pip"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/pip" ]; then
+    rm -f "$BONDI_INSTALL_PREFIX/bin/pip"
 fi
 
         ]]></postrm>

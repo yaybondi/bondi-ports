@@ -3,10 +3,10 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 mkdir -p .mybin
-ln -sf "$BOLT_INSTALL_PREFIX/bin/xml2-config" .mybin/xml2-config
-ln -sf "$BOLT_INSTALL_PREFIX/bin/xslt-config" .mybin/xslt-config
+ln -sf "$BONDI_INSTALL_PREFIX/bin/xml2-config" .mybin/xml2-config
+ln -sf "$BONDI_INSTALL_PREFIX/bin/xslt-config" .mybin/xslt-config
 
     ]]>
     </prepare>
@@ -14,13 +14,13 @@ ln -sf "$BOLT_INSTALL_PREFIX/bin/xslt-config" .mybin/xslt-config
     <build>
     <![CDATA[
 
-export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
-cd "$BOLT_SOURCE_DIR"
+export PATH="$BONDI_BUILD_DIR/.mybin:$PATH"
+cd "$BONDI_SOURCE_DIR"
 
 bh_python_install --py3 --build \
     -- \
-    --with-xslt-config="$BOLT_INSTALL_PREFIX/bin/xslt-config" \
-    --with-xml2-config="$BOLT_INSTALL_PREFIX/bin/xml2-config"
+    --with-xslt-config="$BONDI_INSTALL_PREFIX/bin/xslt-config" \
+    --with-xml2-config="$BONDI_INSTALL_PREFIX/bin/xml2-config"
 
     ]]>
     </build>
@@ -28,16 +28,16 @@ bh_python_install --py3 --build \
     <install>
     <![CDATA[
 
-export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
-cd "$BOLT_SOURCE_DIR"
+export PATH="$BONDI_BUILD_DIR/.mybin:$PATH"
+cd "$BONDI_SOURCE_DIR"
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/python3"
+install -d -m 0755 "$BONDI_INSTALL_DIR/python3"
 
 bh_python_install --py3 --install \
-    --root "$BOLT_INSTALL_DIR/python3" \
+    --root "$BONDI_INSTALL_DIR/python3" \
     -- \
-    --with-xslt-config="$BOLT_INSTALL_PREFIX/bin/xslt-config" \
-    --with-xml2-config="$BOLT_INSTALL_PREFIX/bin/xml2-config"
+    --with-xslt-config="$BONDI_INSTALL_PREFIX/bin/xslt-config" \
+    --with-xml2-config="$BONDI_INSTALL_PREFIX/bin/xml2-config"
 
     ]]>
     </install>

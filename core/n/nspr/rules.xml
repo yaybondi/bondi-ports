@@ -3,26 +3,26 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 bh_autotools_dev_update
 
 # NOTE: quick hack, put this into a patch.
-sed -i 's@<sgidefs.h>@<asm/sgidefs.h>@g' "$BOLT_SOURCE_DIR/nspr/pr/include/md/_linux.cfg"
+sed -i 's@<sgidefs.h>@<asm/sgidefs.h>@g' "$BONDI_SOURCE_DIR/nspr/pr/include/md/_linux.cfg"
 
 export CFLAGS="$CFLAGS -Wall -pipe"
 export LDFLAGS="$LDFLAGS -Wl,--as-needed"
 
-if [ "`bh_os_bits $BOLT_HOST_TYPE`" = "64" ]; then
+if [ "`bh_os_bits $BONDI_HOST_TYPE`" = "64" ]; then
     EXTRA_ARGS="--enable-64bit"
 else
     EXTRA_ARGS=""
 fi
 
-cd "$BOLT_BUILD_DIR"
-"$BOLT_SOURCE_DIR/nspr/configure" \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
+cd "$BONDI_BUILD_DIR"
+"$BONDI_SOURCE_DIR/nspr/configure" \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_HOST_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
     --disable-debug \
     --enable-debug-symbols \
     --enable-optimize \
@@ -34,8 +34,8 @@ cd "$BOLT_BUILD_DIR"
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make AR="${BOLT_HOST_TYPE}-ar" -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR"
+make AR="${BONDI_HOST_TYPE}-ar" -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -43,8 +43,8 @@ make AR="${BOLT_HOST_TYPE}-ar" -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
     ]]>
     </install>

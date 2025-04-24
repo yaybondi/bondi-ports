@@ -19,8 +19,8 @@ true
     <install>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
-bh_python_install --py3 --root "$BOLT_INSTALL_DIR"
+cd "$BONDI_SOURCE_DIR"
+bh_python_install --py3 --root "$BONDI_INSTALL_DIR"
 
     ]]>
     </install>

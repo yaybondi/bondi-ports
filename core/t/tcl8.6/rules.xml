@@ -3,20 +3,20 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 touch generic/tclStubInit.c
 
 cd unix
-TCL_LIBRARY="$BOLT_INSTALL_PREFIX/share/tcltk/tcl8.6" \
-TCL_PACKAGE_PATH="$BOLT_INSTALL_PREFIX/local/lib/tcltk $BOLT_INSTALL_PREFIX/local/share/tcltk \
-		  $BOLT_INSTALL_PREFIX/lib/tcltk $BOLT_INSTALL_PREFIX/share/tcltk \
-		  $BOLT_INSTALL_PREFIX/lib/tcltk/tcl8.6 $BOLT_INSTALL_PREFIX/lib" \
+TCL_LIBRARY="$BONDI_INSTALL_PREFIX/share/tcltk/tcl8.6" \
+TCL_PACKAGE_PATH="$BONDI_INSTALL_PREFIX/local/lib/tcltk $BONDI_INSTALL_PREFIX/local/share/tcltk \
+		  $BONDI_INSTALL_PREFIX/lib/tcltk $BONDI_INSTALL_PREFIX/share/tcltk \
+		  $BONDI_INSTALL_PREFIX/lib/tcltk/tcl8.6 $BONDI_INSTALL_PREFIX/lib" \
 TCL_SHLIB_LD_EXTRAS="-Wl,-soname,\${TCL_LIB_FILE}" \
 ./configure \
-    --prefix=$BOLT_INSTALL_PREFIX \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
-    --includedir="$BOLT_INSTALL_PREFIX/include/tcl8.6" \
+    --prefix=$BONDI_INSTALL_PREFIX \
+    --build="$BONDI_HOST_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
+    --includedir="$BONDI_INSTALL_PREFIX/include/tcl8.6" \
     --enable-shared \
     --enable-threads \
     --enable-dll-unloading \
@@ -31,13 +31,13 @@ TCL_SHLIB_LD_EXTRAS="-Wl,-soname,\${TCL_LIB_FILE}" \
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR/unix"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR/unix"
+make -j"$BONDI_PARALLEL_JOBS"
 
 LC_ALL=C \
-"${BOLT_HOST_TYPE}-ar" cr libtcl8.6.a *.o && \
-    "${BOLT_HOST_TYPE}-ar" d libtcl8.6.a tclAppInit.o && \
-        "${BOLT_HOST_TYPE}-ranlib" libtcl8.6.a
+"${BONDI_HOST_TYPE}-ar" cr libtcl8.6.a *.o && \
+    "${BONDI_HOST_TYPE}-ar" d libtcl8.6.a tclAppInit.o && \
+        "${BONDI_HOST_TYPE}-ranlib" libtcl8.6.a
 
     ]]>
     </build>
@@ -45,35 +45,35 @@ LC_ALL=C \
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR/unix"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR/unix"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
-sed -i -e"s:variable paths {}:variable paths {/$BOLT_INSTALL_PREFIX/share/tcltk/tcl8.6/tcl8}:" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX"/share/tcltk/tcl8.6/tm.tcl
+sed -i -e"s:variable paths {}:variable paths {/$BONDI_INSTALL_PREFIX/share/tcltk/tcl8.6/tcl8}:" \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX"/share/tcltk/tcl8.6/tm.tcl
 install -d -m 755 \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX"/share/tcltk/tcl8.6/tcl8
-mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX"/share/tcltk/tcl8/*/* \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX"/share/tcltk/tcl8.6/tcl8
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX"/share/tcltk/tcl8.6/tcl8
+mv "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX"/share/tcltk/tcl8/*/* \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX"/share/tcltk/tcl8.6/tcl8
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/tcl8.6/tcl-private/generic"
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/tcl8.6/tcl-private/unix"
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/tcl8.6/tcl-private/compat"
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/tcl8.6/tcl-private/libtommath"
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/tcl8.6"
+install -d -m 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/tcl8.6/tcl-private/generic"
+install -d -m 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/tcl8.6/tcl-private/unix"
+install -d -m 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/tcl8.6/tcl-private/compat"
+install -d -m 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/tcl8.6/tcl-private/libtommath"
+install -d -m 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/tcl8.6"
 
-ln -sf libtcl8.6.so "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libtcl8.6.so.0"
+ln -sf libtcl8.6.so "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libtcl8.6.so.0"
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 
-cp generic/*.h "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/tcl8.6/tcl-private/generic"
-cp unix/*.h "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/tcl8.6/tcl-private/unix"
-cp compat/*.h "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/tcl8.6/tcl-private/compat"
-cp libtommath/*.h "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/tcl8.6/tcl-private/libtommath"
+cp generic/*.h "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/tcl8.6/tcl-private/generic"
+cp unix/*.h "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/tcl8.6/tcl-private/unix"
+cp compat/*.h "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/tcl8.6/tcl-private/compat"
+cp libtommath/*.h "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/tcl8.6/tcl-private/libtommath"
 
-mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/"tcl*Config.sh \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/tcl8.6"
-mv "$BOLT_SOURCE_DIR/unix/libtcl8.6.a" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib"
+mv "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/"tcl*Config.sh \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/tcl8.6"
+mv "$BONDI_SOURCE_DIR/unix/libtcl8.6.a" \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib"
 
     ]]>
     </install>

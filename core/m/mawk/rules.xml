@@ -3,7 +3,7 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 autoreconf -vfi
 
 sed -i 's/MAWK_RAND_MAX/RAND_MAX/g' bi_funct.c
@@ -11,11 +11,11 @@ sed -i '/#include <time.h>/a #include <sys\/time.h>/g' bi_funct.c
 
 export CFLAGS="$CFLAGS -D_GNU_SOURCE"
 
-cd "$BOLT_BUILD_DIR"
-"$BOLT_SOURCE_DIR/configure" \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
+cd "$BONDI_BUILD_DIR"
+"$BONDI_SOURCE_DIR/configure" \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_HOST_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
     --disable-nls
 
     ]]>
@@ -24,8 +24,8 @@ cd "$BOLT_BUILD_DIR"
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS" mawk
+cd "$BONDI_BUILD_DIR"
+make -j"$BONDI_PARALLEL_JOBS" mawk
 
     ]]>
     </build>
@@ -33,9 +33,9 @@ make -j"$BOLT_PARALLEL_JOBS" mawk
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin"
-cp mawk "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin"
+cd "$BONDI_BUILD_DIR"
+install -d -m 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin"
+cp mawk "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin"
 
     ]]>
     </install>

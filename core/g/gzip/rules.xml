@@ -3,18 +3,18 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 autoreconf -vfi
 
-if [ "`bh_os_bits $BOLT_HOST_TYPE`" = "32" ]; then
+if [ "`bh_os_bits $BONDI_HOST_TYPE`" = "32" ]; then
     export TIME_T_32_BIT_OK=yes
 fi
 
-cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_BUILD_TYPE" \
-    --host="$BOLT_HOST_TYPE"
+cd "$BONDI_BUILD_DIR"
+$BONDI_SOURCE_DIR/configure \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_BUILD_TYPE" \
+    --host="$BONDI_HOST_TYPE"
 
     ]]>
     </prepare>
@@ -22,8 +22,8 @@ $BOLT_SOURCE_DIR/configure \
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR"
+make -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -31,11 +31,11 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
-rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/uncompress"
-ln -sf gunzip "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/uncompress"
+rm -f "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/uncompress"
+ln -sf gunzip "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/uncompress"
 
     ]]>
     </install>

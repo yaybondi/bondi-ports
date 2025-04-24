@@ -3,8 +3,8 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
-sed -i "s@/usr/include@$BOLT_INSTALL_PREFIX/include@g" Make.Rules
+cd "$BONDI_SOURCE_DIR"
+sed -i "s@/usr/include@$BONDI_INSTALL_PREFIX/include@g" Make.Rules
 
     ]]>
     </prepare>
@@ -12,12 +12,12 @@ sed -i "s@/usr/include@$BOLT_INSTALL_PREFIX/include@g" Make.Rules
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 make \
-    CC="${BOLT_HOST_TYPE}-gcc" \
-    AR="${BOLT_HOST_TYPE}-ar" \
-    RANLIB="${BOLT_HOST_TYPE}-ranlib" \
-    -j"$BOLT_PARALLEL_JOBS"
+    CC="${BONDI_HOST_TYPE}-gcc" \
+    AR="${BONDI_HOST_TYPE}-ar" \
+    RANLIB="${BONDI_HOST_TYPE}-ranlib" \
+    -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -25,8 +25,8 @@ make \
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" prefix="$BOLT_INSTALL_PREFIX" lib=lib install 
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR" prefix="$BONDI_INSTALL_PREFIX" lib=lib install 
 
     ]]>
     </install>

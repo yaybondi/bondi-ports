@@ -3,20 +3,20 @@
     <prepare>
     <![CDATA[
 
-if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
+if [ "$BONDI_BUILD_FOR" = "cross-tools" ]; then
     EXTRA_OPTS="--with-sysroot=/usr"
-elif [ "$BOLT_BUILD_FOR" = "tools" ]; then
-    EXTRA_OPTS="--with-sysroot=/tools --program-prefix=${BOLT_TARGET_TYPE}-"
+elif [ "$BONDI_BUILD_FOR" = "tools" ]; then
+    EXTRA_OPTS="--with-sysroot=/tools --program-prefix=${BONDI_TARGET_TYPE}-"
 else
     EXTRA_OPTS="--with-sysroot=/usr"
 fi
 
-cd "$BOLT_BUILD_DIR"
-"$BOLT_SOURCE_DIR/configure" \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
-    --target="$BOLT_TARGET_TYPE" \
+cd "$BONDI_BUILD_DIR"
+"$BONDI_SOURCE_DIR/configure" \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_HOST_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
+    --target="$BONDI_TARGET_TYPE" \
     --disable-gdbtk \
     --disable-shared \
     --disable-readline \
@@ -26,7 +26,7 @@ cd "$BOLT_BUILD_DIR"
     --with-expat \
     --with-system-zlib \
     --with-lzma \
-    --with-python="$BOLT_INSTALL_PREFIX/bin/python3" \
+    --with-python="$BONDI_INSTALL_PREFIX/bin/python3" \
     --disable-nls \
     $EXTRA_OPTS
 
@@ -36,8 +36,8 @@ cd "$BOLT_BUILD_DIR"
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR"
+make -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -49,67 +49,67 @@ make -j"$BOLT_PARALLEL_JOBS"
 # SETUP
 # -------------------------------------------------------------------------
 
-if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
-    PROGRAM_PREFIX_FROM="${BOLT_TARGET_TYPE}-"
+if [ "$BONDI_BUILD_FOR" = "cross-tools" ]; then
+    PROGRAM_PREFIX_FROM="${BONDI_TARGET_TYPE}-"
     PROGRAM_PREFIX_TO=""
-elif [ "$BOLT_BUILD_FOR" = "tools" ]; then
-    PROGRAM_PREFIX_FROM="${BOLT_TARGET_TYPE}-"
+elif [ "$BONDI_BUILD_FOR" = "tools" ]; then
+    PROGRAM_PREFIX_FROM="${BONDI_TARGET_TYPE}-"
     PROGRAM_PREFIX_TO="$PROGRAM_PREFIX_FROM"
 else
     PROGRAM_PREFIX_FROM=""
     PROGRAM_PREFIX_TO=""
 fi
 
-FULL_INSTALL="$BOLT_INSTALL_DIR/all"
+FULL_INSTALL="$BONDI_INSTALL_DIR/all"
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 make DESTDIR="$FULL_INSTALL" install
 
 find "$FULL_INSTALL" -name "*.la" -exec rm '{}' \;
-rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/share/info"
-rm -fr "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/share/man"
+rm -fr "$FULL_INSTALL/$BONDI_INSTALL_PREFIX/share/info"
+rm -fr "$FULL_INSTALL/$BONDI_INSTALL_PREFIX/share/man"
 
 # -------------------------------------------------------------------------
-PKG_PATH="$BOLT_INSTALL_DIR/gdb"
+PKG_PATH="$BONDI_INSTALL_DIR/gdb"
 # -------------------------------------------------------------------------
 
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
+install -d -m 0755 "$PKG_PATH/$BONDI_INSTALL_PREFIX/bin"
 
 for PROG in gcore gdb gdb-add-index; do
-    if [ -e "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/$PROGRAM_PREFIX_FROM$PROG" ]; then
-        mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/$PROGRAM_PREFIX_FROM$PROG" \
-            "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin/$PROGRAM_PREFIX_TO$PROG"
+    if [ -e "$FULL_INSTALL/$BONDI_INSTALL_PREFIX/bin/$PROGRAM_PREFIX_FROM$PROG" ]; then
+        mv "$FULL_INSTALL/$BONDI_INSTALL_PREFIX/bin/$PROGRAM_PREFIX_FROM$PROG" \
+            "$PKG_PATH/$BONDI_INSTALL_PREFIX/bin/$PROGRAM_PREFIX_TO$PROG"
     fi
 done
 
 # -------------------------------------------------------------------------
-PKG_PATH="$BOLT_INSTALL_DIR/gdb-common"
+PKG_PATH="$BONDI_INSTALL_DIR/gdb-common"
 # -------------------------------------------------------------------------
 
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX"
+install -d -m 0755 "$PKG_PATH/$BONDI_INSTALL_PREFIX"
 
 for SUBDIR in share include; do
-    mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$SUBDIR" \
-        "$PKG_PATH/$BOLT_INSTALL_PREFIX/"
+    mv "$FULL_INSTALL/$BONDI_INSTALL_PREFIX/$SUBDIR" \
+        "$PKG_PATH/$BONDI_INSTALL_PREFIX/"
 done
 
 # -------------------------------------------------------------------------
-PKG_PATH="$BOLT_INSTALL_DIR/gdbserver"
+PKG_PATH="$BONDI_INSTALL_DIR/gdbserver"
 # -------------------------------------------------------------------------
 
-install -d -m 0755 "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
+install -d -m 0755 "$PKG_PATH/$BONDI_INSTALL_PREFIX/bin"
 
 for PROG in gdbserver; do
-    if [ -e "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/$PROG" ]; then
-        mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/bin/$PROG" \
-            "$PKG_PATH/$BOLT_INSTALL_PREFIX/bin"
+    if [ -e "$FULL_INSTALL/$BONDI_INSTALL_PREFIX/bin/$PROG" ]; then
+        mv "$FULL_INSTALL/$BONDI_INSTALL_PREFIX/bin/$PROG" \
+            "$PKG_PATH/$BONDI_INSTALL_PREFIX/bin"
     fi
 done
 
 for SUBDIR in lib; do
-    if [ -d "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$SUBDIR" ]; then
-        mv "$FULL_INSTALL/$BOLT_INSTALL_PREFIX/$SUBDIR" \
-            "$PKG_PATH/$BOLT_INSTALL_PREFIX/"
+    if [ -d "$FULL_INSTALL/$BONDI_INSTALL_PREFIX/$SUBDIR" ]; then
+        mv "$FULL_INSTALL/$BONDI_INSTALL_PREFIX/$SUBDIR" \
+            "$PKG_PATH/$BONDI_INSTALL_PREFIX/"
     fi
 done
 

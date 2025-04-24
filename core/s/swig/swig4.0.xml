@@ -26,36 +26,36 @@
     <maintainer-scripts>
         <postinst><![CDATA[
 
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/swig" ]; then
-    ln -sf "swig4.0" "$BOLT_INSTALL_PREFIX/bin/swig"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/swig" ]; then
+    ln -sf "swig4.0" "$BONDI_INSTALL_PREFIX/bin/swig"
 fi
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/swig4" ]; then
-    ln -sf "swig4.0" "$BOLT_INSTALL_PREFIX/bin/swig4"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/swig4" ]; then
+    ln -sf "swig4.0" "$BONDI_INSTALL_PREFIX/bin/swig4"
 fi
 
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ccache-swig" ]; then
-    ln -sf "ccache-swig4.0" "$BOLT_INSTALL_PREFIX/bin/ccache-swig"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/ccache-swig" ]; then
+    ln -sf "ccache-swig4.0" "$BONDI_INSTALL_PREFIX/bin/ccache-swig"
 fi
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ccache-swig4" ]; then
-    ln -sf "ccache-swig4.0" "$BOLT_INSTALL_PREFIX/bin/ccache-swig4"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/ccache-swig4" ]; then
+    ln -sf "ccache-swig4.0" "$BONDI_INSTALL_PREFIX/bin/ccache-swig4"
 fi
 
         ]]></postinst>
 
         <postrm><![CDATA[
 
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/swig" ]; then
-    rm -f "$BOLT_INSTALL_PREFIX/bin/swig"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/swig" ]; then
+    rm -f "$BONDI_INSTALL_PREFIX/bin/swig"
 fi
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/swig4" ]; then
-    rm -f "$BOLT_INSTALL_PREFIX/bin/swig4"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/swig4" ]; then
+    rm -f "$BONDI_INSTALL_PREFIX/bin/swig4"
 fi
 
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ccache-swig" ]; then
-    rm -f "$BOLT_INSTALL_PREFIX/bin/ccache-swig"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/ccache-swig" ]; then
+    rm -f "$BONDI_INSTALL_PREFIX/bin/ccache-swig"
 fi
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ccache-swig4" ]; then
-    rm -f "$BOLT_INSTALL_PREFIX/bin/ccache-swig4"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/ccache-swig4" ]; then
+    rm -f "$BONDI_INSTALL_PREFIX/bin/ccache-swig4"
 fi
 
         ]]></postrm>

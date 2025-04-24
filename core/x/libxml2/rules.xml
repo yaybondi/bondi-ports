@@ -3,7 +3,7 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 bh_autotools_dev_update
 autoreconf -vfi
 
@@ -13,7 +13,7 @@ autoreconf -vfi
     <build>
     <![CDATA[
 
-export ICU_CONFIG="$BOLT_INSTALL_PREFIX/bin/icu-config"
+export ICU_CONFIG="$BONDI_INSTALL_PREFIX/bin/icu-config"
 
 if [ -e "/tools/bin/python3" ]; then
     export PYTHON="/tools/bin/python3"
@@ -21,25 +21,25 @@ else
     export PYTHON="/usr/bin/python3"
 fi
 
-cp -a "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/python3"
-cd "$BOLT_BUILD_DIR/python3"
+cp -a "$BONDI_SOURCE_DIR" "$BONDI_BUILD_DIR/python3"
+cd "$BONDI_BUILD_DIR/python3"
 
 ./configure \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_HOST_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
     --disable-silent-rules \
     --with-history \
     --with-icu \
-    --with-python="$BOLT_INSTALL_PREFIX/bin/python3"
+    --with-python="$BONDI_INSTALL_PREFIX/bin/python3"
 
 # HACK: this fixes a problem with lib path detection
-if [ "$BOLT_INSTALL_PREFIX" != "/tools" ]; then
+if [ "$BONDI_INSTALL_PREFIX" != "/tools" ]; then
     find . -name "Makefile" -exec sed -i 's@-L/tools/lib@-L/usr/lib@g' '{}' ';'
 fi
 
-make PYTHON_INCLUDES="$BOLT_INSTALL_PREFIX/include/python3.9" \
-    -j"$BOLT_PARALLEL_JOBS"
+make PYTHON_INCLUDES="$BONDI_INSTALL_PREFIX/include/python3.9" \
+    -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -47,9 +47,9 @@ make PYTHON_INCLUDES="$BOLT_INSTALL_PREFIX/include/python3.9" \
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR/python3"
-make DESTDIR="$BOLT_INSTALL_DIR" install
-cd "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python3"*
+cd "$BONDI_BUILD_DIR/python3"
+make DESTDIR="$BONDI_INSTALL_DIR" install
+cd "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/python3"*
 find . -name "*.py" -exec \
     python3 -c "import py_compile; py_compile.compile('{}')" \;
 

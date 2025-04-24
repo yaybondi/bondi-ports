@@ -5,11 +5,11 @@
 
 export LDFLAGS="$LDFLAGS -Wl,-z,defs -Wl,--no-as-needed -Wl,-O1"
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 
 cat << EOF > build.ini
 [constants]
-arch = '$BOLT_HOST_TYPE'
+arch = '$BONDI_HOST_TYPE'
 
 [binaries]
 c = arch + '-gcc'
@@ -24,8 +24,8 @@ EOF
 # HACK: the tests won't build on some plaforms such as mips64.
 sed -i 's/build_tests =.*/build_tests = false/' meson.build
 
-"$BOLT_INSTALL_PREFIX"/bin/meson setup \
-    --prefix="$BOLT_INSTALL_PREFIX" \
+"$BONDI_INSTALL_PREFIX"/bin/meson setup \
+    --prefix="$BONDI_INSTALL_PREFIX" \
     --buildtype=debugoptimized \
     --native-file=build.ini \
     --default-library=both \
@@ -37,7 +37,7 @@ sed -i 's/build_tests =.*/build_tests = false/' meson.build
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 ninja -v -C _build
 
     ]]>
@@ -46,8 +46,8 @@ ninja -v -C _build
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-DESTDIR="$BOLT_INSTALL_DIR" ninja -C _build install
+cd "$BONDI_BUILD_DIR"
+DESTDIR="$BONDI_INSTALL_DIR" ninja -C _build install
 
     ]]>
     </install>

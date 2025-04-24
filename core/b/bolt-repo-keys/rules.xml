@@ -15,13 +15,13 @@
     <install>
     <![CDATA[
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/opkg/usign/bolt-repo-keys"
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/"
+install -d -m 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/opkg/usign/bolt-repo-keys"
+install -d -m 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/"
 
-install -m 0644 "$BOLT_SOURCE_DIR/"*.pub \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/opkg/usign/bolt-repo-keys/"
-install -m 0755 "$BOLT_SOURCE_DIR/opkg-key" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/"
+install -m 0644 "$BONDI_SOURCE_DIR/"*.pub \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/opkg/usign/bolt-repo-keys/"
+install -m 0755 "$BONDI_SOURCE_DIR/opkg-key" \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/"
 
     ]]>
     </install>

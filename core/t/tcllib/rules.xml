@@ -3,9 +3,9 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-"$BOLT_SOURCE_DIR/configure" \
-    --prefix="$BOLT_INSTALL_PREFIX"
+cd "$BONDI_BUILD_DIR"
+"$BONDI_SOURCE_DIR/configure" \
+    --prefix="$BONDI_INSTALL_PREFIX"
 
     ]]>
     </prepare>
@@ -21,15 +21,15 @@ true
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
-cd "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib"
+cd "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib"
 find . -type f -print | xargs chmod 644
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/tcltk/"
-mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/"tcllib* \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/tcltk/"
+install -d -m 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/tcltk/"
+mv "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/"tcllib* \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/tcltk/"
 
     ]]>
     </install>

@@ -41,11 +41,11 @@ case $(uname -m) in
         ;;
 esac
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 
 cat << EOF > build.ini
 [constants]
-arch = '$BOLT_HOST_TYPE'
+arch = '$BONDI_HOST_TYPE'
 
 [binaries]
 c = arch + '-gcc'
@@ -59,7 +59,7 @@ EOF
 
 cat << EOF > cross.ini
 [constants]
-arch = '$BOLT_HOST_TYPE'
+arch = '$BONDI_HOST_TYPE'
 
 [host_machine]
 system = 'linux'
@@ -77,12 +77,12 @@ objcopy = arch + '-objcopy'
 pkgconfig = arch + '-pkg-config'
 EOF
 
-if [ "$BOLT_BUILD_FOR" != "tools" ]; then
+if [ "$BONDI_BUILD_FOR" != "tools" ]; then
     EXTRA_OPTS="--cross-file=cross.ini"
 fi
 
 meson setup \
-    --prefix="$BOLT_INSTALL_PREFIX" \
+    --prefix="$BONDI_INSTALL_PREFIX" \
     --buildtype=debugoptimized \
     --native-file=build.ini \
     --default-library=both \
@@ -95,7 +95,7 @@ meson setup \
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 ninja -C _build
 
     ]]>
@@ -104,8 +104,8 @@ ninja -C _build
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-DESTDIR="$BOLT_INSTALL_DIR" ninja -C _build install
+cd "$BONDI_BUILD_DIR"
+DESTDIR="$BONDI_INSTALL_DIR" ninja -C _build install
 
     ]]>
     </install>

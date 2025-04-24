@@ -11,7 +11,7 @@ true
     <build>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 
 for PROJECT in ffi-libarchive misc distro-info package repository; do
     (
@@ -26,24 +26,24 @@ done
     <install>
     <![CDATA[
 
-PYTHON="$BOLT_INSTALL_PREFIX/bin/python3"
+PYTHON="$BONDI_INSTALL_PREFIX/bin/python3"
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 
 for PROJECT in ffi-libarchive misc distro-info package repository; do
-    mkdir -p "$BOLT_INSTALL_DIR/$PROJECT"
+    mkdir -p "$BONDI_INSTALL_DIR/$PROJECT"
 
     (
         cd $PROJECT
         bh_python_install \
             --py3 \
             --install \
-            --root "$BOLT_INSTALL_DIR/$PROJECT"
+            --root "$BONDI_INSTALL_DIR/$PROJECT"
     )
 
-    if [ `ls "$BOLT_INSTALL_DIR/$PROJECT/$BOLT_INSTALL_PREFIX/bin/" | wc -l` -gt 0 ]; then
+    if [ `ls "$BONDI_INSTALL_DIR/$PROJECT/$BONDI_INSTALL_PREFIX/bin/" | wc -l` -gt 0 ]; then
         sed -i "s|^#!/usr/bin/env python.*|#!$PYTHON|g" \
-            "$BOLT_INSTALL_DIR/$PROJECT/$BOLT_INSTALL_PREFIX/bin/"*
+            "$BONDI_INSTALL_DIR/$PROJECT/$BONDI_INSTALL_PREFIX/bin/"*
     fi
 done
 

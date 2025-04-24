@@ -3,16 +3,16 @@
     <prepare>
     <![CDATA[
 
-if [ "$BOLT_BUILD_FOR" = "tools" ]; then
-    NCURSESW_INCLUDE_DIR="$BOLT_INSTALL_PREFIX/include"
+if [ "$BONDI_BUILD_FOR" = "tools" ]; then
+    NCURSESW_INCLUDE_DIR="$BONDI_INSTALL_PREFIX/include"
 else
-    NCURSESW_INCLUDE_DIR="$BOLT_INSTALL_PREFIX/include/ncursesw"
+    NCURSESW_INCLUDE_DIR="$BONDI_INSTALL_PREFIX/include/ncursesw"
 fi
 
 CONFARGS="
-    --prefix=$BOLT_INSTALL_PREFIX \
-    --host=$BOLT_HOST_TYPE \
-    --includedir=$BOLT_INSTALL_PREFIX/include \
+    --prefix=$BONDI_INSTALL_PREFIX \
+    --host=$BONDI_HOST_TYPE \
+    --includedir=$BONDI_INSTALL_PREFIX/include \
     --sysconfdir=/etc \
     --enable-echo \
     --enable-const \
@@ -21,8 +21,8 @@ CONFARGS="
     --disable-termcap \
     --disable-rpath \
     --with-default-terminfo-dir=/etc/terminfo \
-    --with-terminfo-dirs=/etc/terminfo:$BOLT_INSTALL_PREFIX/lib/terminfo:$BOLT_INSTALL_PREFIX/share/terminfo \
-    --with-pkg-config-libdir=$BOLT_INSTALL_PREFIX/lib/pkgconfig \
+    --with-terminfo-dirs=/etc/terminfo:$BONDI_INSTALL_PREFIX/lib/terminfo:$BONDI_INSTALL_PREFIX/share/terminfo \
+    --with-pkg-config-libdir=$BONDI_INSTALL_PREFIX/lib/pkgconfig \
     --with-ticlib=tic \
     --with-termlib=tinfo \
     --with-versioned-syms \
@@ -55,21 +55,21 @@ CONFAGS_WCHAR="
 export cf_cv_type_of_bool=unsigned char
 export cf_cv_working_poll=yes
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 mkdir -p curses5 && cd curses5
-"$BOLT_SOURCE_DIR/configure" $CONFARGS $CONFARGS_LEGACY
+"$BONDI_SOURCE_DIR/configure" $CONFARGS $CONFARGS_LEGACY
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 mkdir -p curses5w && cd curses5w
-"$BOLT_SOURCE_DIR/configure" $CONFARGS $CONFARGS_LEGACY $CONFAGS_WCHAR
+"$BONDI_SOURCE_DIR/configure" $CONFARGS $CONFARGS_LEGACY $CONFAGS_WCHAR
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 mkdir -p curses6 && cd curses6
-"$BOLT_SOURCE_DIR/configure" $CONFARGS
+"$BONDI_SOURCE_DIR/configure" $CONFARGS
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 mkdir -p curses6w && cd curses6w
-"$BOLT_SOURCE_DIR/configure" $CONFARGS $CONFAGS_WCHAR
+"$BONDI_SOURCE_DIR/configure" $CONFARGS $CONFAGS_WCHAR
 
     ]]>
     </prepare>
@@ -78,8 +78,8 @@ mkdir -p curses6w && cd curses6w
     <![CDATA[
 
 for VARIANT in curses5 curses5w curses6 curses6w; do
-    cd "$BOLT_BUILD_DIR/$VARIANT"
-    make -j"$BOLT_PARALLEL_JOBS"
+    cd "$BONDI_BUILD_DIR/$VARIANT"
+    make -j"$BONDI_PARALLEL_JOBS"
 done
 
     ]]>
@@ -101,55 +101,55 @@ LIBTERMINFOFILES="a/ansi c/cons25 c/cons25-debian c/cygwin d/dumb h/hurd l/linux
 	w/wsvt25 w/wsvt25m E/Eterm E/Eterm-color"
 
 for VARIANT in curses5 curses5w curses6 curses6w; do
-    cd "$BOLT_BUILD_DIR/$VARIANT"
-    make DESTDIR="$BOLT_INSTALL_DIR" install
+    cd "$BONDI_BUILD_DIR/$VARIANT"
+    make DESTDIR="$BONDI_INSTALL_DIR" install
 done
 
 # Debian uses a linker script instead of a symlink.
-rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libtermcap.so"
-echo "GROUP( libtinfo.so )" > "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libtermcap.so"
-ln -sf libtinfo.a "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libtermcap.a"
+rm -f "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libtermcap.so"
+echo "GROUP( libtinfo.so )" > "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libtermcap.so"
+ln -sf libtinfo.a "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libtermcap.a"
 
 # Always add -ltinfo when linking with -lncurses or -lnursesw
-rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libncurses.so"
-echo "INPUT(libncurses.so.6 -ltinfo)" > "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libncurses.so"
-rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libncursesw.so"
-echo "INPUT(libncursesw.so.6 -ltinfo)" > "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libncursesw.so"
+rm -f "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libncurses.so"
+echo "INPUT(libncurses.so.6 -ltinfo)" > "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libncurses.so"
+rm -f "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libncursesw.so"
+echo "INPUT(libncursesw.so.6 -ltinfo)" > "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libncursesw.so"
 
 # Move terminfo files to the right place.
-mv "$BOLT_INSTALL_DIR/etc/terminfo" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/terminfo"
+mv "$BONDI_INSTALL_DIR/etc/terminfo" "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/terminfo"
 
 # Remove blacklisted terminal types and other stuff we don't install
-cd "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/terminfo" && rm -f $BADTERMINFO && cd -
+cd "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/terminfo" && rm -f $BADTERMINFO && cd -
 
 # Move ncurses-base terminfo entries to /lib/terminfo.
 for f in $LIBTERMINFOFILES; do
-    dir="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/terminfo/$(dirname $f)"
+    dir="$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/terminfo/$(dirname $f)"
     mkdir -p "$dir"
-    if [ -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/terminfo/$f" ]; then
-        mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/terminfo/$f" "$dir"
+    if [ -f "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/terminfo/$f" ]; then
+        mv "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/terminfo/$f" "$dir"
     fi
 done
 
 # Create an empty /etc/terminfo for the sysadmin.
-mkdir -p "$BOLT_INSTALL_DIR/etc/terminfo"
+mkdir -p "$BONDI_INSTALL_DIR/etc/terminfo"
 
 # Symlinks libcurses.a and libcurses.so seem to be missing when prefix != /usr
-if [ ! -e "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libcurses.a" ]; then
+if [ ! -e "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libcurses.a" ]; then
     ln -sf libncurses.a \
-        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libcurses.a"
+        "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libcurses.a"
 fi
-if [ ! -e "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libcurses.so" ]; then
+if [ ! -e "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libcurses.so" ]; then
     ln -sf libncurses.so \
-        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libcurses.so"
+        "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libcurses.so"
 fi
 
 # Build system ignores includedir directive when prefix != /usr
-if [ -d "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/ncurses" ]; then
-    mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/ncurses/"* \
-        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include"
-    rmdir "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/ncurses/"
-    sed -i 's@ncurses/@@g' "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/"*.h
+if [ -d "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/ncurses" ]; then
+    mv "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/ncurses/"* \
+        "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include"
+    rmdir "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/ncurses/"
+    sed -i 's@ncurses/@@g' "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/"*.h
 fi
 
     ]]>

@@ -19,29 +19,29 @@
     <install>
     <![CDATA[
 
-cd $BOLT_SOURCE_DIR
+cd $BONDI_SOURCE_DIR
 
-if [ "$BOLT_INSTALL_PREFIX" != "/tools" ]; then
-    make OSBITS="`bh_os_bits $BOLT_HOST_TYPE`" \
-        DESTDIR="$BOLT_INSTALL_DIR" install
+if [ "$BONDI_INSTALL_PREFIX" != "/tools" ]; then
+    make OSBITS="`bh_os_bits $BONDI_HOST_TYPE`" \
+        DESTDIR="$BONDI_INSTALL_DIR" install
 else
-    install -d -m 0755 "$BOLT_INSTALL_DIR/tools"
-    install -d -m 0755 "$BOLT_INSTALL_DIR/tools/bin"
-    install -d -m 0755 "$BOLT_INSTALL_DIR/tools/include"
-    install -d -m 0755 "$BOLT_INSTALL_DIR/tools/lib"
-    install -d -m 0755 "$BOLT_INSTALL_DIR/tools/libexec"
-    install -d -m 0755 "$BOLT_INSTALL_DIR/tools/sbin"
-    install -d -m 0755 "$BOLT_INSTALL_DIR/tools/share"
+    install -d -m 0755 "$BONDI_INSTALL_DIR/tools"
+    install -d -m 0755 "$BONDI_INSTALL_DIR/tools/bin"
+    install -d -m 0755 "$BONDI_INSTALL_DIR/tools/include"
+    install -d -m 0755 "$BONDI_INSTALL_DIR/tools/lib"
+    install -d -m 0755 "$BONDI_INSTALL_DIR/tools/libexec"
+    install -d -m 0755 "$BONDI_INSTALL_DIR/tools/sbin"
+    install -d -m 0755 "$BONDI_INSTALL_DIR/tools/share"
 
     for entry in etc var run tmp; do
-        ln -sf "../$entry" "$BOLT_INSTALL_DIR/tools/$entry"
+        ln -sf "../$entry" "$BONDI_INSTALL_DIR/tools/$entry"
     done
 
-    ln -sf . "$BOLT_INSTALL_DIR/tools/usr"
-    ln -sf . "$BOLT_INSTALL_DIR/tools/tools"
+    ln -sf . "$BONDI_INSTALL_DIR/tools/usr"
+    ln -sf . "$BONDI_INSTALL_DIR/tools/tools"
 
     # just assume it's always x86_64
-    ln -sf lib "$BOLT_INSTALL_DIR/tools/lib64"
+    ln -sf lib "$BONDI_INSTALL_DIR/tools/lib64"
 fi
 
     ]]>

@@ -3,9 +3,9 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 mkdir -p .mybin
-ln -sf "$BOLT_INSTALL_PREFIX/bin/nspr-config" .mybin/nspr-config
+ln -sf "$BONDI_INSTALL_PREFIX/bin/nspr-config" .mybin/nspr-config
 
     ]]>
     </prepare>
@@ -13,19 +13,19 @@ ln -sf "$BOLT_INSTALL_PREFIX/bin/nspr-config" .mybin/nspr-config
     <build>
     <![CDATA[
 
-export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
-cd "$BOLT_BUILD_DIR"
+export PATH="$BONDI_BUILD_DIR/.mybin:$PATH"
+cd "$BONDI_BUILD_DIR"
 
 DISTDIR="`pwd`/dist"
 CFLAGS="$CFLAGS -Wall -pipe"
 
-if [ "$BOLT_BUILD_FOR" = "tools" ]; then
-    MACHINE="`echo $BOLT_HOST_TYPE | cut -d'-' -f1`"
+if [ "$BONDI_BUILD_FOR" = "tools" ]; then
+    MACHINE="`echo $BONDI_HOST_TYPE | cut -d'-' -f1`"
 else
     MACHINE="`uname -m`"
 fi
 
-if [ "`bh_os_bits $BOLT_HOST_TYPE`" = "64" ]; then
+if [ "`bh_os_bits $BONDI_HOST_TYPE`" = "64" ]; then
     EXTRA_FLAGS="USE_64=1"
 else
     EXTRA_FLAGS=""
@@ -39,11 +39,11 @@ make -C nss/coreconf/nsinstall \
     OS_TEST="$MACHINE" \
     KERNEL=linux \
     ARCHFLAG= \
-    CC="${BOLT_HOST_TYPE}-gcc" \
-    CXX="${BOLT_HOST_TYPE}-g++" \
-    CCC="${BOLT_HOST_TYPE}-g++" \
-    RANLIB="${BOLT_HOST_TYPE}-ranlib" \
-    AR="${BOLT_HOST_TYPE}-ar cr \$@" \
+    CC="${BONDI_HOST_TYPE}-gcc" \
+    CXX="${BONDI_HOST_TYPE}-g++" \
+    CCC="${BONDI_HOST_TYPE}-g++" \
+    RANLIB="${BONDI_HOST_TYPE}-ranlib" \
+    AR="${BONDI_HOST_TYPE}-ar cr \$@" \
     $EXTRA_FLAGS
 
 make -C nss \
@@ -55,14 +55,14 @@ make -C nss \
     OS_TEST="$MACHINE" \
     KERNEL=linux \
     ARCHFLAG= \
-    CC="${BOLT_HOST_TYPE}-gcc" \
-    CXX="${BOLT_HOST_TYPE}-g++" \
-    CCC="${BOLT_HOST_TYPE}-g++" \
-    RANLIB="${BOLT_HOST_TYPE}-ranlib" \
-    AR="${BOLT_HOST_TYPE}-ar cr \$@" \
+    CC="${BONDI_HOST_TYPE}-gcc" \
+    CXX="${BONDI_HOST_TYPE}-g++" \
+    CCC="${BONDI_HOST_TYPE}-g++" \
+    RANLIB="${BONDI_HOST_TYPE}-ranlib" \
+    AR="${BONDI_HOST_TYPE}-ar cr \$@" \
     MOZILLA_CLIENT=1 \
-    NSPR_INCLUDE_DIR="$BOLT_INSTALL_PREFIX/include/nspr" \
-    NSPR_LIB_DIR="$BOLT_INSTALL_PREFIX/lib/" \
+    NSPR_INCLUDE_DIR="$BONDI_INSTALL_PREFIX/include/nspr" \
+    NSPR_LIB_DIR="$BONDI_INSTALL_PREFIX/lib/" \
     BUILD_OPT=1 \
     NS_USE_GCC=1 \
     OPTIMIZER="$CFLAGS $CPPFLAGS" \
@@ -79,7 +79,7 @@ make -C nss \
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 
 DISTDIR="`pwd`/dist"
 NSS_TOOLS="
@@ -112,40 +112,40 @@ NSS_TOOLS="
 
 # directories
 install -m 755 -d \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/nss" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/pkgconfig" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/nss" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/nss/private"
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin" \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/nss" \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/pkgconfig" \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/nss" \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/nss/private"
 
 # libraries
-install -m 644 "$DISTDIR/lib/libnss3.so"        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libnss3.so"
-install -m 644 "$DISTDIR/lib/libnssutil3.so"    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libnssutil3.so"
-install -m 644 "$DISTDIR/lib/libsmime3.so"      "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libsmime3.so"
-install -m 644 "$DISTDIR/lib/libssl3.so"        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libssl3.so"
+install -m 644 "$DISTDIR/lib/libnss3.so"        "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libnss3.so"
+install -m 644 "$DISTDIR/lib/libnssutil3.so"    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libnssutil3.so"
+install -m 644 "$DISTDIR/lib/libsmime3.so"      "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libsmime3.so"
+install -m 644 "$DISTDIR/lib/libssl3.so"        "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libssl3.so"
 
-install -m 644 "$DISTDIR/lib/libfreebl3.so"     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/nss/libfreebl3.so"
-install -m 644 "$DISTDIR/lib/libfreeblpriv3.so" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/nss/libfreeblpriv3.so"
-install -m 644 "$DISTDIR/lib/libsoftokn3.so"    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/nss/libsoftokn3.so"
-install -m 644 "$DISTDIR/lib/libnssdbm3.so"     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/nss/libnssdbm3.so"
-install -m 644 "$DISTDIR/lib/libnssckbi.so"     "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/nss/libnssckbi.so"
+install -m 644 "$DISTDIR/lib/libfreebl3.so"     "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/nss/libfreebl3.so"
+install -m 644 "$DISTDIR/lib/libfreeblpriv3.so" "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/nss/libfreeblpriv3.so"
+install -m 644 "$DISTDIR/lib/libsoftokn3.so"    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/nss/libsoftokn3.so"
+install -m 644 "$DISTDIR/lib/libnssdbm3.so"     "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/nss/libnssdbm3.so"
+install -m 644 "$DISTDIR/lib/libnssckbi.so"     "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/nss/libnssckbi.so"
 
 # these are needed to compile nss-pem
-install -m 644 "$DISTDIR/lib/libcrmf.a"         "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libcrmf.a"
-install -m 644 "$DISTDIR/lib/libfreebl.a"       "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libfreebl.a"
-install -m 644 "$DISTDIR/lib/libnssb.a"         "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libnssb.a"
-install -m 644 "$DISTDIR/lib/libnssckfw.a"      "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libnssckfw.a"
+install -m 644 "$DISTDIR/lib/libcrmf.a"         "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libcrmf.a"
+install -m 644 "$DISTDIR/lib/libfreebl.a"       "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libfreebl.a"
+install -m 644 "$DISTDIR/lib/libnssb.a"         "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libnssb.a"
+install -m 644 "$DISTDIR/lib/libnssckfw.a"      "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libnssckfw.a"
 
 # header files
-install -m 644 "$DISTDIR"/public/nss/*          "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/nss/"
-install -m 644 "$DISTDIR"/private/nss/*         "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/nss/private"
+install -m 644 "$DISTDIR"/public/nss/*          "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/nss/"
+install -m 644 "$DISTDIR"/private/nss/*         "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/nss/private"
 
 # executables
 for TOOL in $NSS_TOOLS; do
-    install -m 755 "$DISTDIR/bin/$TOOL" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/$TOOL"
+    install -m 755 "$DISTDIR/bin/$TOOL" "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/$TOOL"
 done
 for TOOL in addbuiltin dbtest pp; do
-    install -m 755 "$DISTDIR/bin/$TOOL" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/nss-$TOOL"
+    install -m 755 "$DISTDIR/bin/$TOOL" "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/nss-$TOOL"
 done
 
     ]]>

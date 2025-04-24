@@ -3,11 +3,11 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-"$BOLT_SOURCE_DIR/configure" \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_BUILD_TYPE" \
-    --host="$BOLT_HOST_TYPE"
+cd "$BONDI_BUILD_DIR"
+"$BONDI_SOURCE_DIR/configure" \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_BUILD_TYPE" \
+    --host="$BONDI_HOST_TYPE"
 
     ]]>
     </prepare>
@@ -15,8 +15,8 @@ cd "$BOLT_BUILD_DIR"
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make AR="$BOLT_HOST_TYPE-ar" -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR"
+make AR="$BONDI_HOST_TYPE-ar" -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -24,8 +24,8 @@ make AR="$BOLT_HOST_TYPE-ar" -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
     ]]>
     </install>

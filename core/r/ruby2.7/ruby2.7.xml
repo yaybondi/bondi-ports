@@ -28,32 +28,32 @@
     <maintainer-scripts>
         <postinst><![CDATA[
 
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/irb" ]; then
-    ln -sf "irb2.7" "$BOLT_INSTALL_PREFIX/bin/irb"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/irb" ]; then
+    ln -sf "irb2.7" "$BONDI_INSTALL_PREFIX/bin/irb"
 fi
 
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ruby" ]; then
-    ln -sf "ruby2.7" "$BOLT_INSTALL_PREFIX/bin/ruby"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/ruby" ]; then
+    ln -sf "ruby2.7" "$BONDI_INSTALL_PREFIX/bin/ruby"
 fi
 
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/gem" ]; then
-    ln -sf "gem2.7" "$BOLT_INSTALL_PREFIX/bin/gem"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/gem" ]; then
+    ln -sf "gem2.7" "$BONDI_INSTALL_PREFIX/bin/gem"
 fi
 
         ]]></postinst>
 
         <postrm><![CDATA[
 
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/irb" ]; then
-    rm -f "$BOLT_INSTALL_PREFIX/bin/irb"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/irb" ]; then
+    rm -f "$BONDI_INSTALL_PREFIX/bin/irb"
 fi
 
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/ruby" ]; then
-    rm -f "$BOLT_INSTALL_PREFIX/bin/ruby"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/ruby" ]; then
+    rm -f "$BONDI_INSTALL_PREFIX/bin/ruby"
 fi
 
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/gem" ]; then
-    rm -f "$BOLT_INSTALL_PREFIX/bin/gem"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/gem" ]; then
+    rm -f "$BONDI_INSTALL_PREFIX/bin/gem"
 fi
 
         ]]></postrm>

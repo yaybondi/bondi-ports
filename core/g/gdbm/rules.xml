@@ -5,17 +5,17 @@
 
 export CFLAGS="$CFLAGS -O2 -g -Wall -D_REENTRANT"
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 bh_autotools_dev_update
 autoreconf -v -fi
 
 sed -i 's@$(INSTALL) -T@$(INSTALL)@g' Makefile.in
 
-cd "$BOLT_BUILD_DIR"
-"$BOLT_SOURCE_DIR/configure" \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
+cd "$BONDI_BUILD_DIR"
+"$BONDI_SOURCE_DIR/configure" \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_HOST_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
     --enable-libgdbm-compat \
     finish_cmds=""
 
@@ -28,7 +28,7 @@ echo "#undef HAVE_FLOCK" >> autoconf.h
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 make
 
     ]]>
@@ -37,14 +37,14 @@ make
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 make BINOWN="`whoami`" BINGRP="`whoami`" \
-    prefix="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
-    infodir="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/info" \
-    man3dir="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/man/man3" \
+    prefix="$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX" \
+    infodir="$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/info" \
+    man3dir="$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/man/man3" \
     install
 
-ln -sf ndbm.h "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include/gdbm-ndbm.h"
+ln -sf ndbm.h "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include/gdbm-ndbm.h"
 
     ]]>
     </install>

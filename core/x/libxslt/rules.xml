@@ -3,7 +3,7 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 bh_autotools_dev_update
 autoreconf -vfi
 
@@ -13,26 +13,26 @@ autoreconf -vfi
     <build>
     <![CDATA[
 
-export XML_CONFIG="$BOLT_INSTALL_PREFIX/bin/xml2-config"
-export LIBGCRYPT_CONFIG="$BOLT_INSTALL_PREFIX/bin/libgcrypt-config"
+export XML_CONFIG="$BONDI_INSTALL_PREFIX/bin/xml2-config"
+export LIBGCRYPT_CONFIG="$BONDI_INSTALL_PREFIX/bin/libgcrypt-config"
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 
-"$BOLT_SOURCE_DIR"/configure \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
+"$BONDI_SOURCE_DIR"/configure \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_HOST_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
     --disable-silent-rules \
     --with-history \
     --with-icu \
     --without-python
 
 # HACK: this fixes a problem with lib path detection
-if [ "$BOLT_INSTALL_PREFIX" != "/tools" ]; then
+if [ "$BONDI_INSTALL_PREFIX" != "/tools" ]; then
     find . -name "Makefile" -exec sed -i 's@-L/tools/lib@-L/usr/lib@g' '{}' ';'
 fi
 
-make -j"$BOLT_PARALLEL_JOBS"
+make -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -40,8 +40,8 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
     ]]>
     </install>

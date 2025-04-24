@@ -17,7 +17,7 @@
     <maintainer-scripts>
         <postinst><![CDATA[
 
-"$BOLT_INSTALL_PREFIX/bin/opkg-key" populate
+"$BONDI_INSTALL_PREFIX/bin/opkg-key" populate
 
         ]]></postinst>
     </maintainer-scripts>

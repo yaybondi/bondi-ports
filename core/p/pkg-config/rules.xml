@@ -3,18 +3,18 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 bh_autotools_dev_update
 autoreconf -vfi --no-recursive
 
-export GLIB_CFLAGS="-I$BOLT_INSTALL_PREFIX/include/glib-2.0 -I$BOLT_INSTALL_PREFIX/lib/glib-2.0/include"
+export GLIB_CFLAGS="-I$BONDI_INSTALL_PREFIX/include/glib-2.0 -I$BONDI_INSTALL_PREFIX/lib/glib-2.0/include"
 export GLIB_LIBS="-lglib-2.0"
 
-cd "$BOLT_BUILD_DIR"
-"$BOLT_SOURCE_DIR/configure" \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
+cd "$BONDI_BUILD_DIR"
+"$BONDI_SOURCE_DIR/configure" \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_HOST_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
     --disable-nls
 
     ]]>
@@ -23,8 +23,8 @@ cd "$BOLT_BUILD_DIR"
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR"
+make -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -32,14 +32,14 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
-if [ -e "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-pkg-config" ]; then
-    rm "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pkg-config"
+if [ -e "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/${BONDI_HOST_TYPE}-pkg-config" ]; then
+    rm "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/pkg-config"
 else
-    mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/pkg-config" \
-        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-pkg-config"
+    mv "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/pkg-config" \
+        "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/${BONDI_HOST_TYPE}-pkg-config"
 fi
 
     ]]>

@@ -26,16 +26,16 @@
     <maintainer-scripts>
         <postinst><![CDATA[
 
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/awk" ]; then
-    ln -sf "mawk" "$BOLT_INSTALL_PREFIX/bin/awk"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/awk" ]; then
+    ln -sf "mawk" "$BONDI_INSTALL_PREFIX/bin/awk"
 fi
 
         ]]></postinst>
 
         <postrm><![CDATA[
 
-if [ ! -e "$BOLT_INSTALL_PREFIX/bin/awk" ]; then
-    rm -f "$BOLT_INSTALL_PREFIX/bin/awk"
+if [ ! -e "$BONDI_INSTALL_PREFIX/bin/awk" ]; then
+    rm -f "$BONDI_INSTALL_PREFIX/bin/awk"
 fi
 
         ]]></postrm>

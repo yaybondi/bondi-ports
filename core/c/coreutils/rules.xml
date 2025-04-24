@@ -3,19 +3,19 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 autoreconf -v -fi
 
-if [ "`bh_os_bits $BOLT_HOST_TYPE`" = "32" ]; then
+if [ "`bh_os_bits $BONDI_HOST_TYPE`" = "32" ]; then
     export TIME_T_32_BIT_OK=yes
 fi
 
-cd "$BOLT_BUILD_DIR"
-"$BOLT_SOURCE_DIR/configure" \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --libexecdir="$BOLT_INSTALL_PREFIX/lib" \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
+cd "$BONDI_BUILD_DIR"
+"$BONDI_SOURCE_DIR/configure" \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --libexecdir="$BONDI_INSTALL_PREFIX/lib" \
+    --build="$BONDI_HOST_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
     --disable-nls
 
     ]]>
@@ -24,8 +24,8 @@ cd "$BOLT_BUILD_DIR"
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR"
+make -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -34,25 +34,25 @@ make -j"$BOLT_PARALLEL_JOBS"
     <![CDATA[
 
 for pkg in coreutils join; do
-    install -d -m 0755 "$BOLT_INSTALL_DIR/$pkg"
-    install -d -m 0755 "$BOLT_INSTALL_DIR/$pkg/$BOLT_INSTALL_PREFIX"
-    install -d -m 0755 "$BOLT_INSTALL_DIR/$pkg/$BOLT_INSTALL_PREFIX/bin"
+    install -d -m 0755 "$BONDI_INSTALL_DIR/$pkg"
+    install -d -m 0755 "$BONDI_INSTALL_DIR/$pkg/$BONDI_INSTALL_PREFIX"
+    install -d -m 0755 "$BONDI_INSTALL_DIR/$pkg/$BONDI_INSTALL_PREFIX/bin"
 done
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR/coreutils" install
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR/coreutils" install
 
 for prog in kill hostname uptime; do
-    rm -f "$BOLT_INSTALL_DIR/coreutils/$BOLT_INSTALL_PREFIX/bin/$prog"
+    rm -f "$BONDI_INSTALL_DIR/coreutils/$BONDI_INSTALL_PREFIX/bin/$prog"
 done
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/coreutils/$BOLT_INSTALL_PREFIX/sbin"
-mv "$BOLT_INSTALL_DIR/coreutils/$BOLT_INSTALL_PREFIX/bin/chroot" \
-   "$BOLT_INSTALL_DIR/coreutils/$BOLT_INSTALL_PREFIX/sbin/chroot"
+install -d -m 0755 "$BONDI_INSTALL_DIR/coreutils/$BONDI_INSTALL_PREFIX/sbin"
+mv "$BONDI_INSTALL_DIR/coreutils/$BONDI_INSTALL_PREFIX/bin/chroot" \
+   "$BONDI_INSTALL_DIR/coreutils/$BONDI_INSTALL_PREFIX/sbin/chroot"
 
 # we need join to make gnulib work, so put it in a separate package
-mv "$BOLT_INSTALL_DIR/coreutils/$BOLT_INSTALL_PREFIX/bin/join" \
-   "$BOLT_INSTALL_DIR/join/$BOLT_INSTALL_PREFIX/bin/join"
+mv "$BONDI_INSTALL_DIR/coreutils/$BONDI_INSTALL_PREFIX/bin/join" \
+   "$BONDI_INSTALL_DIR/join/$BONDI_INSTALL_PREFIX/bin/join"
 
     ]]>
     </install>

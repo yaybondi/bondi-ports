@@ -3,15 +3,15 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 autoreconf -vfi
 
-cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix="$BOLT_INSTALL_PREFIX" \
+cd "$BONDI_BUILD_DIR"
+$BONDI_SOURCE_DIR/configure \
+    --prefix="$BONDI_INSTALL_PREFIX" \
     --disable-nls \
-    --build="$BOLT_BUILD_TYPE" \
-    --host="$BOLT_HOST_TYPE"
+    --build="$BONDI_BUILD_TYPE" \
+    --host="$BONDI_HOST_TYPE"
 
 # HACK: Make sure rpl_{m,re}alloc are explictly declared.
 sed -i \
@@ -25,8 +25,8 @@ sed -i \
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR"
+make -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -34,9 +34,9 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -C src DESTDIR="$BOLT_INSTALL_DIR" install
-make DESTDIR="$BOLT_INSTALL_DIR" install-exec-hook
+cd "$BONDI_BUILD_DIR"
+make -C src DESTDIR="$BONDI_INSTALL_DIR" install
+make DESTDIR="$BONDI_INSTALL_DIR" install-exec-hook
 
     ]]>
     </install>

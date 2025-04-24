@@ -3,12 +3,12 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 
-cp "$BOLT_WORK_DIR/patches/configs/defconfig" .config
-sed -e "s@CONFIG_CROSS_COMPILER_PREFIX=\"\"@CONFIG_CROSS_COMPILER_PREFIX=\"$BOLT_HOST_TYPE-\"@g" -i .config
+cp "$BONDI_WORK_DIR/patches/configs/defconfig" .config
+sed -e "s@CONFIG_CROSS_COMPILER_PREFIX=\"\"@CONFIG_CROSS_COMPILER_PREFIX=\"$BONDI_HOST_TYPE-\"@g" -i .config
 
-if [ "$BOLT_BUILD_FOR" = "tools" ]; then
+if [ "$BONDI_BUILD_FOR" = "tools" ]; then
     sed -e "s@CONFIG_SYSROOT=\"\"@CONFIG_SYSROOT=\"/tools\"@g" -i .config
 else
     sed -e "s@CONFIG_SYSROOT=\"\"@CONFIG_SYSROOT=\"/\"@g" -i .config
@@ -20,8 +20,8 @@ fi
     <build>
     <![CDATA[
 
-cd $BOLT_BUILD_DIR
-make V=1 SKIP_STRIP=y -j$BOLT_PARALLEL_JOBS
+cd $BONDI_BUILD_DIR
+make V=1 SKIP_STRIP=y -j$BONDI_PARALLEL_JOBS
 
     ]]>
     </build>
@@ -29,12 +29,12 @@ make V=1 SKIP_STRIP=y -j$BOLT_PARALLEL_JOBS
     <install>
     <![CDATA[
 
-cd $BOLT_BUILD_DIR
-make CONFIG_PREFIX="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" install
+cd $BONDI_BUILD_DIR
+make CONFIG_PREFIX="$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX" install
 
-rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/uname"
-cp "$BOLT_WORK_DIR/patches/scripts/uname" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/uname"
+rm -f "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/uname"
+cp "$BONDI_WORK_DIR/patches/scripts/uname" \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/uname"
 
     ]]>
     </install>

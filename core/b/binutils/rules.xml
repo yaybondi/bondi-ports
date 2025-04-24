@@ -3,24 +3,24 @@
     <prepare>
       <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
-if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
+cd "$BONDI_SOURCE_DIR"
+if [ "$BONDI_BUILD_FOR" = "cross-tools" ]; then
     grep -r 'ldscripts' * | grep -v 'cross-ldscripts' | cut -d':' -f1 | \
             sort -u | while read FILENAME; do
         sed -i 's/ldscripts/cross-ldscripts/g' "$FILENAME"
     done
     EXTRA_OPTS="--disable-shared --enable-plugins --with-sysroot=/"
-elif [ "$BOLT_BUILD_FOR" = "tools" ]; then
+elif [ "$BONDI_BUILD_FOR" = "tools" ]; then
     EXTRA_OPTS="--enable-shared --enable-plugins --with-sysroot=/tools
-        --program-prefix=${BOLT_TARGET_TYPE}-"
+        --program-prefix=${BONDI_TARGET_TYPE}-"
 else
     EXTRA_OPTS="--enable-shared --enable-plugins --with-sysroot=/
-        --program-prefix=${BOLT_TARGET_TYPE}-"
+        --program-prefix=${BONDI_TARGET_TYPE}-"
 fi
 
-cd "$BOLT_BUILD_DIR"
-"$BOLT_SOURCE_DIR/configure"  \
-    --prefix="$BOLT_INSTALL_PREFIX" \
+cd "$BONDI_BUILD_DIR"
+"$BONDI_SOURCE_DIR/configure"  \
+    --prefix="$BONDI_INSTALL_PREFIX" \
     --disable-multiarch \
     --disable-multilib \
     --disable-nls    \
@@ -28,9 +28,9 @@ cd "$BOLT_BUILD_DIR"
     --disable-silent-rules \
     --with-system-zlib \
     --with-pkgversion="GNU Binutils for Bolt Linux" \
-    --build="$BOLT_BUILD_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
-    --target="$BOLT_TARGET_TYPE" \
+    --build="$BONDI_BUILD_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
+    --target="$BONDI_TARGET_TYPE" \
     $EXTRA_OPTS
 
     ]]>
@@ -39,8 +39,8 @@ cd "$BOLT_BUILD_DIR"
     <build>
     <![CDATA[
 
-cd $BOLT_BUILD_DIR
-make MAKEINFO=true LEXLIB= -j"$BOLT_PARALLEL_JOBS"
+cd $BONDI_BUILD_DIR
+make MAKEINFO=true LEXLIB= -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -48,63 +48,63 @@ make MAKEINFO=true LEXLIB= -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd $BOLT_BUILD_DIR
-make DESTDIR=$BOLT_INSTALL_DIR install
+cd $BONDI_BUILD_DIR
+make DESTDIR=$BONDI_INSTALL_DIR install
 
-rm "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/${BOLT_TARGET_TYPE}-ld"
-ln -sf "${BOLT_TARGET_TYPE}-ld.bfd" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/${BOLT_TARGET_TYPE}-ld"
+rm "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/${BONDI_TARGET_TYPE}-ld"
+ln -sf "${BONDI_TARGET_TYPE}-ld.bfd" \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/${BONDI_TARGET_TYPE}-ld"
 
-if [ "$BOLT_BUILD_FOR" = "cross-tools" -o "$BOLT_BUILD_FOR" = "target" ]; then
-    for PROG in "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/${BOLT_TARGET_TYPE}-"*; do
+if [ "$BONDI_BUILD_FOR" = "cross-tools" -o "$BONDI_BUILD_FOR" = "target" ]; then
+    for PROG in "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/${BONDI_TARGET_TYPE}-"*; do
         BASENAME=`basename $PROG`
-        SHORTNAME=`echo $BASENAME | sed "s/${BOLT_TARGET_TYPE}-//g"`
+        SHORTNAME=`echo $BASENAME | sed "s/${BONDI_TARGET_TYPE}-//g"`
 
         ln -sf "$BASENAME" \
-            "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/$SHORTNAME"
+            "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/$SHORTNAME"
     done
 fi
 
-if [ "$BOLT_BUILD_FOR" = "tools" -o "$BOLT_BUILD_FOR" = "target" ]; then
+if [ "$BONDI_BUILD_FOR" = "tools" -o "$BONDI_BUILD_FOR" = "target" ]; then
     for i in demangle.h libiberty.h; do
-        install -m 644 "$BOLT_SOURCE_DIR/include/$i" \
-            "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include"
+        install -m 644 "$BONDI_SOURCE_DIR/include/$i" \
+            "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include"
     done
 fi
 
-PKG_BINUTILS="$BOLT_INSTALL_DIR/binutils"
+PKG_BINUTILS="$BONDI_INSTALL_DIR/binutils"
 install -d -m 0755 "$PKG_BINUTILS"
-install -d -m 0755 "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX"
-install -d -m 0755 "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/bin"
-install -d -m 0755 "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/lib"
+install -d -m 0755 "$PKG_BINUTILS/$BONDI_INSTALL_PREFIX"
+install -d -m 0755 "$PKG_BINUTILS/$BONDI_INSTALL_PREFIX/bin"
+install -d -m 0755 "$PKG_BINUTILS/$BONDI_INSTALL_PREFIX/lib"
 
-PKG_BINUTILS_DEV="$BOLT_INSTALL_DIR/binutils-dev"
+PKG_BINUTILS_DEV="$BONDI_INSTALL_DIR/binutils-dev"
 install -d -m 0755 "$PKG_BINUTILS_DEV"
-install -d -m 0755 "$PKG_BINUTILS_DEV/$BOLT_INSTALL_PREFIX"
+install -d -m 0755 "$PKG_BINUTILS_DEV/$BONDI_INSTALL_PREFIX"
 
-mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/"* \
-    "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/bin/"
+mv -v "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/"* \
+    "$PKG_BINUTILS/$BONDI_INSTALL_PREFIX/bin/"
 
-if [ "$BOLT_BUILD_FOR" = "cross-tools" ]; then
-    mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/cross-ldscripts" \
-        "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/lib/"
+if [ "$BONDI_BUILD_FOR" = "cross-tools" ]; then
+    mv -v "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/cross-ldscripts" \
+        "$PKG_BINUTILS/$BONDI_INSTALL_PREFIX/lib/"
 else
-    mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/ldscripts" \
-        "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/lib/"
+    mv -v "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/ldscripts" \
+        "$PKG_BINUTILS/$BONDI_INSTALL_PREFIX/lib/"
 fi
 
-if [ "$BOLT_BUILD_FOR" != "cross-tools" ]; then
-    rm -f "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/"*.la
+if [ "$BONDI_BUILD_FOR" != "cross-tools" ]; then
+    rm -f "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/"*.la
 
-    mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/"libbfd-*.so \
-        "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/lib/"
-    mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/"libopcodes-*.so \
-        "$PKG_BINUTILS/$BOLT_INSTALL_PREFIX/lib/"
+    mv -v "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/"libbfd-*.so \
+        "$PKG_BINUTILS/$BONDI_INSTALL_PREFIX/lib/"
+    mv -v "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/"libopcodes-*.so \
+        "$PKG_BINUTILS/$BONDI_INSTALL_PREFIX/lib/"
 
-    mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib" \
-        "$PKG_BINUTILS_DEV/$BOLT_INSTALL_PREFIX/"
-    mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include" \
-        "$PKG_BINUTILS_DEV/$BOLT_INSTALL_PREFIX/"
+    mv -v "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib" \
+        "$PKG_BINUTILS_DEV/$BONDI_INSTALL_PREFIX/"
+    mv -v "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include" \
+        "$PKG_BINUTILS_DEV/$BONDI_INSTALL_PREFIX/"
 fi
 
     ]]>

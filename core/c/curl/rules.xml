@@ -4,59 +4,59 @@
     <prepare>
     <![CDATA[
 
-export PKG_CONFIG="$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-pkg-config"
+export PKG_CONFIG="$BONDI_INSTALL_PREFIX/bin/${BONDI_HOST_TYPE}-pkg-config"
 
 # duplicate source tree
 for t in openssl gnutls nss
 do
-    cp -a "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/$t"
+    cp -a "$BONDI_SOURCE_DIR" "$BONDI_BUILD_DIR/$t"
 done
 
 # patch for non openssl builds
-patch -f -p1 -d "$BOLT_BUILD_DIR/gnutls" -i "$BOLT_WORK_DIR/patches/"??_gnutls.patch
-patch -f -p1 -d "$BOLT_BUILD_DIR/nss"    -i "$BOLT_WORK_DIR/patches/"??_gnutls.patch
-patch -f -p1 -d "$BOLT_BUILD_DIR/nss"    -i "$BOLT_WORK_DIR/patches/"??_nss.patch
+patch -f -p1 -d "$BONDI_BUILD_DIR/gnutls" -i "$BONDI_WORK_DIR/patches/"??_gnutls.patch
+patch -f -p1 -d "$BONDI_BUILD_DIR/nss"    -i "$BONDI_WORK_DIR/patches/"??_gnutls.patch
+patch -f -p1 -d "$BONDI_BUILD_DIR/nss"    -i "$BONDI_WORK_DIR/patches/"??_nss.patch
 
 # rebuild configuration
 for t in openssl gnutls nss
 do
-    cd "$BOLT_BUILD_DIR/$t" && autoreconf -fi
+    cd "$BONDI_BUILD_DIR/$t" && autoreconf -fi
     # HACK: We cannot safely use LD_LIBRARY_PATH inside bbox.
     sed -i 's@export LD_LIBRARY_PATH@@g' configure
 done
 
 # run configure in all source trees
 CONFIGURE_ARGS="
-    --prefix=$BOLT_INSTALL_PREFIX 
-    --mandir=$BOLT_INSTALL_PREFIX/share/man
-    --host=$BOLT_HOST_TYPE
-    --build=$BOLT_BUILD_TYPE
+    --prefix=$BONDI_INSTALL_PREFIX 
+    --mandir=$BONDI_INSTALL_PREFIX/share/man
+    --host=$BONDI_HOST_TYPE
+    --build=$BONDI_BUILD_TYPE
     --disable-symbol-hiding
     --disable-silent-rules
     --enable-versioned-symbols
     --enable-threaded-resolver
     --enable-ipv6
     --with-lber-lib=lber
-    --with-gssapi=$BOLT_INSTALL_PREFIX
-    --with-nss=$BOLT_INSTALL_PREFIX
+    --with-gssapi=$BONDI_INSTALL_PREFIX
+    --with-nss=$BONDI_INSTALL_PREFIX
     --without-libidn2
 "
 
-cd "$BOLT_BUILD_DIR/openssl"
+cd "$BONDI_BUILD_DIR/openssl"
 ./configure $CONFIGURE_ARGS \
     --with-ca-path=/etc/ssl/certs --without-nss --without-gnutls
 
-cd "$BOLT_BUILD_DIR/gnutls"
+cd "$BONDI_BUILD_DIR/gnutls"
 ./configure $CONFIGURE_ARGS \
     --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt \
     --without-ssl --without-nss --with-gnutls --without-libssh2
 
-cd "$BOLT_BUILD_DIR/nss"
+cd "$BONDI_BUILD_DIR/nss"
 
 # HACK: to avoid colliding with glibc's nss.h
 sed -i 's@#include <nss.h>@#include <nss/nss.h>@g' lib/vtls/nss.c
 
-LIBS="-lssl3 -lnspr4 -lplds4" CFLAGS="$CFLAGS -I$BOLT_INSTALL_PREFIX/include/nspr -I$BOLT_INSTALL_PREFIX/include/nss" \
+LIBS="-lssl3 -lnspr4 -lplds4" CFLAGS="$CFLAGS -I$BONDI_INSTALL_PREFIX/include/nspr -I$BONDI_INSTALL_PREFIX/include/nss" \
 ./configure $CONFIGURE_ARGS \
     --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt \
     --without-ssl --without-gnutls --with-nss --without-libssh2
@@ -69,7 +69,7 @@ LIBS="-lssl3 -lnspr4 -lplds4" CFLAGS="$CFLAGS -I$BOLT_INSTALL_PREFIX/include/nsp
 
 for t in openssl gnutls nss
 do
-    make -j"$BOLT_PARALLEL_JOBS" -C "$BOLT_BUILD_DIR/$t"
+    make -j"$BONDI_PARALLEL_JOBS" -C "$BONDI_BUILD_DIR/$t"
 done
 
     ]]>
@@ -80,16 +80,16 @@ done
 
 for t in openssl gnutls nss
 do
-    mkdir -p "$BOLT_INSTALL_DIR/$t"
-    make -C "$BOLT_BUILD_DIR/$t" DESTDIR="$BOLT_INSTALL_DIR/$t" install
+    mkdir -p "$BONDI_INSTALL_DIR/$t"
+    make -C "$BONDI_BUILD_DIR/$t" DESTDIR="$BONDI_INSTALL_DIR/$t" install
 
     # compatibility symlinks
     if [ "$t" = "openssl" ]; then
-        ln -s libcurl.so.4 "$BOLT_INSTALL_DIR/$t/$BOLT_INSTALL_PREFIX/lib/libcurl.so.3"
+        ln -s libcurl.so.4 "$BONDI_INSTALL_DIR/$t/$BONDI_INSTALL_PREFIX/lib/libcurl.so.3"
     else
-        ln -s "libcurl-$t.so.4" "$BOLT_INSTALL_DIR/$t/$BOLT_INSTALL_PREFIX/lib/libcurl-$t.so.3"
-        ln -s "libcurl-$t.so"   "$BOLT_INSTALL_DIR/$t/$BOLT_INSTALL_PREFIX/lib/libcurl.so"
-        ln -s "libcurl-$t.a"    "$BOLT_INSTALL_DIR/$t/$BOLT_INSTALL_PREFIX/lib/libcurl.a"
+        ln -s "libcurl-$t.so.4" "$BONDI_INSTALL_DIR/$t/$BONDI_INSTALL_PREFIX/lib/libcurl-$t.so.3"
+        ln -s "libcurl-$t.so"   "$BONDI_INSTALL_DIR/$t/$BONDI_INSTALL_PREFIX/lib/libcurl.so"
+        ln -s "libcurl-$t.a"    "$BONDI_INSTALL_DIR/$t/$BONDI_INSTALL_PREFIX/lib/libcurl.a"
     fi
 done
 

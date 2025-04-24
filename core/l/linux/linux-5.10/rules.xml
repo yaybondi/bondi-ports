@@ -4,7 +4,7 @@
     <prepare>
     <![CDATA[
 
-cd $BOLT_SOURCE_DIR
+cd $BONDI_SOURCE_DIR
 make SHELL=/bin/sh mrproper
 
     ]]>
@@ -13,9 +13,9 @@ make SHELL=/bin/sh mrproper
     <build>
     <![CDATA[
 
-KERNEL_ARCH="`bh_kernel_arch_for_target $BOLT_HOST_TYPE`"
+KERNEL_ARCH="`bh_kernel_arch_for_target $BONDI_HOST_TYPE`"
 
-cd $BOLT_SOURCE_DIR
+cd $BONDI_SOURCE_DIR
 make SHELL=/bin/sh ARCH="$KERNEL_ARCH" headers
 
     ]]>
@@ -24,12 +24,12 @@ make SHELL=/bin/sh ARCH="$KERNEL_ARCH" headers
     <install>
     <![CDATA[
 
-cd $BOLT_SOURCE_DIR
+cd $BONDI_SOURCE_DIR
 find usr/include -name '.*' -delete
 rm usr/include/Makefile
 
-mkdir -p "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include"
-cp -va usr/include/* "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/include"
+mkdir -p "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include"
+cp -va usr/include/* "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/include"
 
     ]]>
     </install>

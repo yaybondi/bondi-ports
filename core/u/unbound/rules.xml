@@ -3,65 +3,65 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 bh_autotools_dev_update
 autoreconf -vfi
 
-cp -a "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/python3"
-cp -a "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/libonly"
+cp -a "$BONDI_SOURCE_DIR" "$BONDI_BUILD_DIR/python3"
+cp -a "$BONDI_SOURCE_DIR" "$BONDI_BUILD_DIR/libonly"
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 mkdir .mybin
-ln -sf "$BOLT_INSTALL_PREFIX/bin/python3.9" .mybin/python3.9
-ln -sf "$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-pkg-config" \
+ln -sf "$BONDI_INSTALL_PREFIX/bin/python3.9" .mybin/python3.9
+ln -sf "$BONDI_INSTALL_PREFIX/bin/${BONDI_HOST_TYPE}-pkg-config" \
     .mybin/pkg-config
 
-export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
+export PATH="$BONDI_BUILD_DIR/.mybin:$PATH"
 
-cd "$BOLT_BUILD_DIR/python3"
+cd "$BONDI_BUILD_DIR/python3"
 
 PYTHON_VERSION="3.9" \
 CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
 ./configure \
-    --prefix="$BOLT_INSTALL_PREFIX" \
+    --prefix="$BONDI_INSTALL_PREFIX" \
     --sysconfdir=/etc \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
+    --build="$BONDI_HOST_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
     --disable-rpath \
     --disable-flto \
     --with-pidfile=/run/unbound.pid \
     --with-rootkey-file=/var/lib/unbound/root.key \
-    --with-libevent="$BOLT_INSTALL_PREFIX" \
-    --with-libexpat="$BOLT_INSTALL_PREFIX" \
+    --with-libevent="$BONDI_INSTALL_PREFIX" \
+    --with-libexpat="$BONDI_INSTALL_PREFIX" \
     --with-pythonmodule \
     --with-pyunbound \
-    --with-ssl="$BOLT_INSTALL_PREFIX" \
+    --with-ssl="$BONDI_INSTALL_PREFIX" \
     --enable-dnstap \
     --with-dnstap-socket-path=/run/dnstap.sock \
-    --libdir="$BOLT_INSTALL_PREFIX/lib"
+    --libdir="$BONDI_INSTALL_PREFIX/lib"
 
-cd "$BOLT_BUILD_DIR/libonly"
+cd "$BONDI_BUILD_DIR/libonly"
 
 PYTHON_VERSION="3.9" \
 CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
 ./configure \
-    --prefix="$BOLT_INSTALL_PREFIX" \
+    --prefix="$BONDI_INSTALL_PREFIX" \
     --sysconfdir=/etc \
-    --build="$BOLT_HOST_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
+    --build="$BONDI_HOST_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
     --with-libunbound-only \
     --disable-rpath \
     --disable-flto \
     --with-pidfile=/run/unbound.pid \
     --with-rootkey-file=/var/lib/unbound/root.key \
-    --with-libevent="$BOLT_INSTALL_PREFIX" \
-    --with-libexpat="$BOLT_INSTALL_PREFIX" \
+    --with-libevent="$BONDI_INSTALL_PREFIX" \
+    --with-libexpat="$BONDI_INSTALL_PREFIX" \
     --without-pythonmodule \
     --without-pyunbound \
-    --with-ssl="$BOLT_INSTALL_PREFIX" \
+    --with-ssl="$BONDI_INSTALL_PREFIX" \
     --enable-dnstap \
     --with-dnstap-socket-path=/run/dnstap.sock \
-    --libdir="$BOLT_INSTALL_PREFIX/lib"
+    --libdir="$BONDI_INSTALL_PREFIX/lib"
 
     ]]>
     </prepare>
@@ -69,13 +69,13 @@ CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" LDFLAGS="-Wl,--as-needed $LDFLAGS" \
     <build>
     <![CDATA[
 
-export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
+export PATH="$BONDI_BUILD_DIR/.mybin:$PATH"
 
-cd "$BOLT_BUILD_DIR/python3"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR/python3"
+make -j"$BONDI_PARALLEL_JOBS"
 
-cd "$BOLT_BUILD_DIR/libonly"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR/libonly"
+make -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -83,24 +83,24 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-export PATH="$BOLT_BUILD_DIR/.mybin:$PATH"
+export PATH="$BONDI_BUILD_DIR/.mybin:$PATH"
 
-cd "$BOLT_BUILD_DIR/python3"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR/python3"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
-cd "$BOLT_BUILD_DIR/libonly"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR/libonly"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin"
-mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin/unbound-host" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin"
+install -d -m 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin"
+mv "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/sbin/unbound-host" \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin"
 
-PYTHON3="$BOLT_INSTALL_PREFIX/bin/python3"
+PYTHON3="$BONDI_INSTALL_PREFIX/bin/python3"
 
-cd "$BOLT_INSTALL_DIR"
+cd "$BONDI_INSTALL_DIR"
 find . -name "*.la" -exec rm -f '{}' ';'
 
-cd "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/python3"
+cd "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/python3"
 find . -name "*.py" -exec "$PYTHON3" -c "import py_compile; py_compile.compile('{}')" \;
 
     ]]>

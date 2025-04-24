@@ -3,15 +3,15 @@
     <prepare>
     <![CDATA[
 
-(cd "$BOLT_SOURCE_DIR/expat" && ./buildconf.sh)
+(cd "$BONDI_SOURCE_DIR/expat" && ./buildconf.sh)
 
-mkdir -p "$BOLT_BUILD_DIR/expat"
+mkdir -p "$BONDI_BUILD_DIR/expat"
 
-cd "$BOLT_BUILD_DIR/expat"
-$BOLT_SOURCE_DIR/expat/configure \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_BUILD_TYPE" \
-    --host="$BOLT_HOST_TYPE"
+cd "$BONDI_BUILD_DIR/expat"
+$BONDI_SOURCE_DIR/expat/configure \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_BUILD_TYPE" \
+    --host="$BONDI_HOST_TYPE"
 
     ]]>
     </prepare>
@@ -19,8 +19,8 @@ $BOLT_SOURCE_DIR/expat/configure \
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR/expat"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR/expat"
+make -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -28,12 +28,12 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR/expat"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR/expat"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/aclocal"
-install -m 0644 "$BOLT_SOURCE_DIR/expat/conftools/expat.m4" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/aclocal"
+install -d -m 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/aclocal"
+install -m 0644 "$BONDI_SOURCE_DIR/expat/conftools/expat.m4" \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/aclocal"
 
     ]]>
     </install>

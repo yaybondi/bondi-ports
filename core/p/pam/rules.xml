@@ -3,18 +3,18 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 autoreconf -vfi
 
-cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_BUILD_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
+cd "$BONDI_BUILD_DIR"
+$BONDI_SOURCE_DIR/configure \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_BUILD_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
     --sysconfdir=/etc \
-    --libdir="$BOLT_INSTALL_PREFIX/lib" \
-    --bindir="$BOLT_INSTALL_PREFIX/bin" \
-    --sbindir="$BOLT_INSTALL_PREFIX/sbin" \
+    --libdir="$BONDI_INSTALL_PREFIX/lib" \
+    --bindir="$BONDI_INSTALL_PREFIX/bin" \
+    --sbindir="$BONDI_INSTALL_PREFIX/sbin" \
     --disable-nls \
     --disable-cracklib \
     --disable-nis \
@@ -22,7 +22,7 @@ $BOLT_SOURCE_DIR/configure \
     --enable-shared \
     --enable-static \
     --enable-db=no \
-    --includedir="$BOLT_INSTALL_PREFIX/include/security"
+    --includedir="$BONDI_INSTALL_PREFIX/include/security"
 
     ]]>
     </prepare>
@@ -30,8 +30,8 @@ $BOLT_SOURCE_DIR/configure \
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make CC="${BOLT_TARGET_TYPE}-gcc" -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR"
+make CC="${BONDI_TARGET_TYPE}-gcc" -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -39,17 +39,17 @@ make CC="${BOLT_TARGET_TYPE}-gcc" -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/etc/pam.d"
+install -d -m 0755 "$BONDI_INSTALL_DIR/etc/pam.d"
 
-install -m 644 "$BOLT_WORK_DIR/extra/etc/pam.conf" \
-    "$BOLT_INSTALL_DIR/etc/"
-install -m 644 "$BOLT_WORK_DIR/extra/etc/pam.d/other" \
-    "$BOLT_INSTALL_DIR/etc/pam.d/"
+install -m 644 "$BONDI_WORK_DIR/extra/etc/pam.conf" \
+    "$BONDI_INSTALL_DIR/etc/"
+install -m 644 "$BONDI_WORK_DIR/extra/etc/pam.d/other" \
+    "$BONDI_INSTALL_DIR/etc/pam.d/"
 
-cd "$BOLT_INSTALL_DIR"
+cd "$BONDI_INSTALL_DIR"
 
     ]]>
     </install>

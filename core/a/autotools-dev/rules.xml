@@ -19,8 +19,8 @@ true
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" PREFIX="$BOLT_INSTALL_PREFIX" install
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR" PREFIX="$BONDI_INSTALL_PREFIX" install
 
     ]]>
     </install>

@@ -3,7 +3,7 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 find . -type f -exec touch -t 200001010000.01 '{}' ';'
 
     ]]>
@@ -12,9 +12,9 @@ find . -type f -exec touch -t 200001010000.01 '{}' ';'
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make HOSTSYSTEM="$BOLT_HOST_TYPE" \
-    PREFIX="$BOLT_INSTALL_PREFIX" \
+cd "$BONDI_BUILD_DIR"
+make HOSTSYSTEM="$BONDI_HOST_TYPE" \
+    PREFIX="$BONDI_INSTALL_PREFIX" \
     PLATFORM=linux \
     C_COMPILER_OPTIMIZATION_OPTIONS="$CFLAGS $CPPFLAGS" \
     VARDIR=/var/lib/
@@ -25,16 +25,16 @@ make HOSTSYSTEM="$BOLT_HOST_TYPE" \
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make HOSTSYSTEM="$BOLT_HOST_TYPE" \
-    PREFIX="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" \
+cd "$BONDI_BUILD_DIR"
+make HOSTSYSTEM="$BONDI_HOST_TYPE" \
+    PREFIX="$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX" \
     PLATFORM=linux \
     LINKER_LINK_SHARED_DLOADABLE_OPTIONS="-L. -shared $LDFLAGS" \
     LINKER_LINK_SHARED_PROGRAM_OPTIONS="$LDFLAGS" \
     LIBCHICKEN_SO_LINKER_OPTIONS="$LDFLAGS -Wl,-soname,libchicken.so.11" \
-    VARDIR="$BOLT_INSTALL_DIR/var/lib" install
+    VARDIR="$BONDI_INSTALL_DIR/var/lib" install
 
-rm -fr $BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/chicken/doc
+rm -fr $BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/chicken/doc
 
     ]]>
     </install>

@@ -11,7 +11,7 @@ true
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 
 # Verify root-anchors.xml using OpenSSL
 openssl smime -verify -noverify -inform DER -in root-anchors.p7s -content root-anchors.xml
@@ -34,10 +34,10 @@ diff -u root-anchors.ds root.ds
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 
-install -d 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/dns/"
-cp root.* "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/dns/"
+install -d 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/dns/"
+cp root.* "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/dns/"
 
     ]]>
     </install>

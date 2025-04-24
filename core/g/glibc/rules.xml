@@ -3,10 +3,10 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 
 # Make sure that ld is invoked from /usr/lib.
-case "$BOLT_BUILD_FOR" in
+case "$BONDI_BUILD_FOR" in
     target)
         grep -rl '"[^"]*/lib\(32\|64\)\?/ld' * | while read filename; do
             sed -i 's@"[^"]*/lib\(32\|64\)\?/ld@"/usr/lib/ld@g' "$filename"
@@ -20,10 +20,10 @@ case "$BOLT_BUILD_FOR" in
             sed -i 's@"[^"]*/lib\(32\|64\)\?/ld@"/tools/lib/ld@g' "$filename"
         done
 
-        patch -tN -p1 < "$BOLT_WORK_DIR/patches/bbox-redirect-bin-sh.patch"
+        patch -tN -p1 < "$BONDI_WORK_DIR/patches/bbox-redirect-bin-sh.patch"
 
-        sed -i -e "s/^OBJCOPY=.*/OBJCOPY=$BOLT_HOST_TYPE-objcopy/g" \
-               -e "s/^OBJDUMP=.*/OBJDUMP=$BOLT_HOST_TYPE-objdump/g" configure
+        sed -i -e "s/^OBJCOPY=.*/OBJCOPY=$BONDI_HOST_TYPE-objcopy/g" \
+               -e "s/^OBJDUMP=.*/OBJDUMP=$BONDI_HOST_TYPE-objdump/g" configure
         ;;
 esac
 
@@ -35,10 +35,10 @@ rm -fr .build && mkdir -p .build
 
     CFLAGS="" CXXFLAGS="" CPPFLAGS="" \
     ../configure \
-        --prefix="$BOLT_INSTALL_PREFIX" \
-        --with-headers="$BOLT_INSTALL_PREFIX/include" \
-        --build="$BOLT_HOST_TYPE" \
-        --host="$BOLT_HOST_TYPE" \
+        --prefix="$BONDI_INSTALL_PREFIX" \
+        --with-headers="$BONDI_INSTALL_PREFIX/include" \
+        --build="$BONDI_HOST_TYPE" \
+        --host="$BONDI_HOST_TYPE" \
         --disable-werror \
         --disable-crypt \
         --disable-build-nscd \
@@ -49,8 +49,8 @@ rm -fr .build && mkdir -p .build
         --enable-stack-protector=strong \
         --enable-profile \
         --enable-add-ons \
-        libc_cv_slibdir="$BOLT_INSTALL_PREFIX/lib" \
-        libc_cv_rtlddir="$BOLT_INSTALL_PREFIX/lib"
+        libc_cv_slibdir="$BONDI_INSTALL_PREFIX/lib" \
+        libc_cv_rtlddir="$BONDI_INSTALL_PREFIX/lib"
 
     # Cheat our way around building the manual (which is not there).
     cat << EOF >> ../manual/empty-script.sh
@@ -73,11 +73,11 @@ EOF
     <build>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR/.build"
+cd "$BONDI_SOURCE_DIR/.build"
 make \
-    AR="${BOLT_HOST_TYPE}-ar" \
-    RANLIB="${BOLT_HOST_TYPE}-ranlib" \
-    -j"$BOLT_PARALLEL_JOBS"
+    AR="${BONDI_HOST_TYPE}-ar" \
+    RANLIB="${BONDI_HOST_TYPE}-ranlib" \
+    -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -85,30 +85,30 @@ make \
     <install>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR/.build"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_SOURCE_DIR/.build"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
-if [ -d "$BOLT_INSTALL_DIR/sbin" ]; then
-    mv "$BOLT_INSTALL_DIR/sbin"/* \
-        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin/"
-    rmdir "$BOLT_INSTALL_DIR/sbin"
+if [ -d "$BONDI_INSTALL_DIR/sbin" ]; then
+    mv "$BONDI_INSTALL_DIR/sbin"/* \
+        "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/sbin/"
+    rmdir "$BONDI_INSTALL_DIR/sbin"
 fi
 
-mv "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin/zdump" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/zdump"
+mv "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/sbin/zdump" \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/zdump"
 
-export I18NPATH="$BOLT_SOURCE_DIR/localedata"
-export GCONV_PATH="$BOLT_SOURCE_DIR/.build/iconvdata"
+export I18NPATH="$BONDI_SOURCE_DIR/localedata"
+export GCONV_PATH="$BONDI_SOURCE_DIR/.build/iconvdata"
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/locale/"
-"$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/localedef" \
+install -d -m 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/locale/"
+"$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/localedef" \
     --quiet -c -f UTF-8 -i C \
-        "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/locale/C.UTF-8"
+        "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/locale/C.UTF-8"
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share"
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/misc"
+install -d -m 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share"
+install -d -m 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/misc"
 
-echo "glibc" > "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/share/misc/libc.name"
+echo "glibc" > "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/share/misc/libc.name"
 
     ]]>
     </install>

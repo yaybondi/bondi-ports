@@ -4,9 +4,9 @@
     <prepare>
     <![CDATA[
 
-export PKG_CONFIG="$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-pkg-config"
+export PKG_CONFIG="$BONDI_INSTALL_PREFIX/bin/${BONDI_HOST_TYPE}-pkg-config"
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 bh_autotools_dev_update
 autoreconf -vfi
 
@@ -16,13 +16,13 @@ echo "# Configure full                                                        "
 echo "########################################################################"
 set -x
 
-mkdir -p "$BOLT_BUILD_DIR/full" && cd "$BOLT_BUILD_DIR/full"
-"$BOLT_SOURCE_DIR"/configure \
-    --prefix="$BOLT_INSTALL_PREFIX" \
+mkdir -p "$BONDI_BUILD_DIR/full" && cd "$BONDI_BUILD_DIR/full"
+"$BONDI_SOURCE_DIR"/configure \
+    --prefix="$BONDI_INSTALL_PREFIX" \
     --sysconfdir=/etc \
     --localstatedir=/var \
-    --build="$BOLT_BUILD_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
+    --build="$BONDI_BUILD_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
     --disable-silent-rules \
     --disable-gpg \
     --disable-openssl \
@@ -38,13 +38,13 @@ echo "# Configure minimal                                                     "
 echo "########################################################################"
 set -x
 
-mkdir -p "$BOLT_BUILD_DIR/minimal" && cd "$BOLT_BUILD_DIR/minimal"
-"$BOLT_SOURCE_DIR"/configure \
-    --prefix="$BOLT_INSTALL_PREFIX" \
+mkdir -p "$BONDI_BUILD_DIR/minimal" && cd "$BONDI_BUILD_DIR/minimal"
+"$BONDI_SOURCE_DIR"/configure \
+    --prefix="$BONDI_INSTALL_PREFIX" \
     --sysconfdir=/etc \
     --localstatedir=/var \
-    --build="$BOLT_BUILD_TYPE" \
-    --host="$BOLT_HOST_TYPE" \
+    --build="$BONDI_BUILD_TYPE" \
+    --host="$BONDI_HOST_TYPE" \
     --disable-silent-rules \
     --disable-gpg \
     --disable-openssl \
@@ -65,8 +65,8 @@ echo "# Build full                                                            "
 echo "########################################################################"
 set -x
 
-cd "$BOLT_BUILD_DIR/full"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR/full"
+make -j"$BONDI_PARALLEL_JOBS"
 
 set +x
 echo "########################################################################"
@@ -74,11 +74,11 @@ echo "# Build minimal                                                         "
 echo "########################################################################"
 set -x
 
-cd "$BOLT_BUILD_DIR/minimal"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR/minimal"
+make -j"$BONDI_PARALLEL_JOBS"
 
-cd "$BOLT_BUILD_DIR/minimal/src"
-"$BOLT_HOST_TYPE-gcc" $CFLAGS $LDFLAGS \
+cd "$BONDI_BUILD_DIR/minimal/src"
+"$BONDI_HOST_TYPE-gcc" $CFLAGS $LDFLAGS \
     -o opkg opkg.o ../libopkg/.libs/libopkg.a \
     -l:libarchive.a \
     -l:libz.a \
@@ -97,18 +97,18 @@ echo "# Install full                                                          "
 echo "########################################################################"
 set -x
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/full"
-install -d -m 0755 "$BOLT_INSTALL_DIR/minimal"
+install -d -m 0755 "$BONDI_INSTALL_DIR/full"
+install -d -m 0755 "$BONDI_INSTALL_DIR/minimal"
 
-cd "$BOLT_BUILD_DIR/full"
-make DESTDIR="$BOLT_INSTALL_DIR/full" install
+cd "$BONDI_BUILD_DIR/full"
+make DESTDIR="$BONDI_INSTALL_DIR/full" install
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/full/$BOLT_INSTALL_PREFIX/include/opkg"
-find "$BOLT_SOURCE_DIR/libopkg/" -name "*.h" -exec install -m 644 '{}' \
-    "$BOLT_INSTALL_DIR/full/$BOLT_INSTALL_PREFIX/include/opkg" ';'
+install -d -m 0755 "$BONDI_INSTALL_DIR/full/$BONDI_INSTALL_PREFIX/include/opkg"
+find "$BONDI_SOURCE_DIR/libopkg/" -name "*.h" -exec install -m 644 '{}' \
+    "$BONDI_INSTALL_DIR/full/$BONDI_INSTALL_PREFIX/include/opkg" ';'
 
-rm -f "$BOLT_INSTALL_DIR/full/$BOLT_INSTALL_PREFIX/bin/opkg-key"
-rm -f "$BOLT_INSTALL_DIR/full/$BOLT_INSTALL_PREFIX/bin/opkg-check-config"
+rm -f "$BONDI_INSTALL_DIR/full/$BONDI_INSTALL_PREFIX/bin/opkg-key"
+rm -f "$BONDI_INSTALL_DIR/full/$BONDI_INSTALL_PREFIX/bin/opkg-check-config"
 
 set +x
 echo "########################################################################"
@@ -116,9 +116,9 @@ echo "# Install minimal                                                       "
 echo "########################################################################"
 set -x
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/minimal/$BOLT_INSTALL_PREFIX/bin"
-install -m 0755 "$BOLT_BUILD_DIR/minimal/src/opkg" \
-    "$BOLT_INSTALL_DIR/minimal/$BOLT_INSTALL_PREFIX/bin"
+install -d -m 0755 "$BONDI_INSTALL_DIR/minimal/$BONDI_INSTALL_PREFIX/bin"
+install -m 0755 "$BONDI_BUILD_DIR/minimal/src/opkg" \
+    "$BONDI_INSTALL_DIR/minimal/$BONDI_INSTALL_PREFIX/bin"
 
     ]]>
     </install>

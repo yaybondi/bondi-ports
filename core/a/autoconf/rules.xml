@@ -3,24 +3,24 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 bh_autotools_dev_update
 
 echo "\
-ac_cv_path_EGREP='$BOLT_INSTALL_PREFIX/bin/grep -E'
-ac_cv_path_EXPR=$BOLT_INSTALL_PREFIX/bin/expr
-ac_cv_path_GREP=$BOLT_INSTALL_PREFIX/bin/grep
-ac_cv_path_M4=$BOLT_INSTALL_PREFIX/bin/m4
-ac_cv_path_PERL=$BOLT_INSTALL_PREFIX/bin/perl
-ac_cv_path_SED=$BOLT_INSTALL_PREFIX/bin/sed
-ac_cv_path_install='$BOLT_INSTALL_PREFIX/bin/install -c'
-ac_cv_path_mkdir=$BOLT_INSTALL_PREFIX/bin/mkdir
+ac_cv_path_EGREP='$BONDI_INSTALL_PREFIX/bin/grep -E'
+ac_cv_path_EXPR=$BONDI_INSTALL_PREFIX/bin/expr
+ac_cv_path_GREP=$BONDI_INSTALL_PREFIX/bin/grep
+ac_cv_path_M4=$BONDI_INSTALL_PREFIX/bin/m4
+ac_cv_path_PERL=$BONDI_INSTALL_PREFIX/bin/perl
+ac_cv_path_SED=$BONDI_INSTALL_PREFIX/bin/sed
+ac_cv_path_install='$BONDI_INSTALL_PREFIX/bin/install -c'
+ac_cv_path_mkdir=$BONDI_INSTALL_PREFIX/bin/mkdir
 " > config.site
 
 export CONFIG_SITE="config.site"
 
 ./configure \
-    --prefix="$BOLT_INSTALL_PREFIX"
+    --prefix="$BONDI_INSTALL_PREFIX"
 
     ]]>
     </prepare>
@@ -28,8 +28,8 @@ export CONFIG_SITE="config.site"
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR"
+make -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -37,8 +37,8 @@ make -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
     ]]>
     </install>

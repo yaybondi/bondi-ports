@@ -3,7 +3,7 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 sed -i "s/setuptools_scm//g" setup.cfg pyproject.toml
 
     ]]>
@@ -20,9 +20,9 @@ true
     <install>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
-mkdir -p "$BOLT_INSTALL_DIR/python3"
-bh_python_install --py3 --root "$BOLT_INSTALL_DIR/python3"
+cd "$BONDI_SOURCE_DIR"
+mkdir -p "$BONDI_INSTALL_DIR/python3"
+bh_python_install --py3 --root "$BONDI_INSTALL_DIR/python3"
 
     ]]>
     </install>

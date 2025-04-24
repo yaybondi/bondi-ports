@@ -3,14 +3,14 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 ./autogen.sh
 
-cd "$BOLT_BUILD_DIR"
-$BOLT_SOURCE_DIR/configure \
-    --prefix="$BOLT_INSTALL_PREFIX" \
-    --build="$BOLT_BUILD_TYPE" \
-    --host="$BOLT_HOST_TYPE"
+cd "$BONDI_BUILD_DIR"
+$BONDI_SOURCE_DIR/configure \
+    --prefix="$BONDI_INSTALL_PREFIX" \
+    --build="$BONDI_BUILD_TYPE" \
+    --host="$BONDI_HOST_TYPE"
 
     ]]>
     </prepare>
@@ -18,8 +18,8 @@ $BOLT_SOURCE_DIR/configure \
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make -C src -j"$BOLT_PARALLEL_JOBS" pam-config
+cd "$BONDI_BUILD_DIR"
+make -C src -j"$BONDI_PARALLEL_JOBS" pam-config
 
     ]]>
     </build>
@@ -27,9 +27,9 @@ make -C src -j"$BOLT_PARALLEL_JOBS" pam-config
     <install>
     <![CDATA[
 
-install -d -m 0755 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin"
-install -m 0755 "$BOLT_BUILD_DIR/src/pam-config" \
-    "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/sbin/"
+install -d -m 0755 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/sbin"
+install -m 0755 "$BONDI_BUILD_DIR/src/pam-config" \
+    "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/sbin/"
 
     ]]>
     </install>

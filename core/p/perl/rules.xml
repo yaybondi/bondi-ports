@@ -3,7 +3,7 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 
 ###############################################################################
 # Set some variables
@@ -18,10 +18,10 @@ FULL_VERSION="$MAJOR_MINOR.$PATCHLEVEL"
 # Build against system zlib
 ###############################################################################
 export BUILD_BZIP2=0
-export BZIP2_INCLUDE="$BOLT_INSTALL_PREFIX/include"
-export BZIP2_LIB="$BOLT_INSTALL_PREFIX/lib"
+export BZIP2_INCLUDE="$BONDI_INSTALL_PREFIX/include"
+export BZIP2_LIB="$BONDI_INSTALL_PREFIX/lib"
 
-if [ "$BOLT_BUILD_FOR" = "target" ]; then
+if [ "$BONDI_BUILD_FOR" = "target" ]; then
     SYSROOT="/"
 else
     SYSROOT="/tools"
@@ -31,43 +31,43 @@ fi
 # Configure duplicate source trees for shared and static build
 ###############################################################################
 for variant in shared static; do
-    cp -a "$BOLT_SOURCE_DIR" "$BOLT_BUILD_DIR/$variant"
+    cp -a "$BONDI_SOURCE_DIR" "$BONDI_BUILD_DIR/$variant"
     OPTS="-Uuseshrplib"
     if [ "$variant" = "shared" ]; then
-        OPTS="-Duseshrplib -Dlibperl=libperl.so.$FULL_VERSION -Dplibpth=$BOLT_INSTALL_PREFIX/lib"
+        OPTS="-Duseshrplib -Dlibperl=libperl.so.$FULL_VERSION -Dplibpth=$BONDI_INSTALL_PREFIX/lib"
     fi
 
     ###########################################################################
     # Run configuration script
     ###########################################################################
-    cd "$BOLT_BUILD_DIR/$variant"
+    cd "$BONDI_BUILD_DIR/$variant"
     ./Configure \
         -Dusethreads                                                    \
         -Duselargefiles                                                 \
         -Dccflags=""                                                    \
         -Dcccdlflags="-fPIC"                                            \
-        -Darchname="$BOLT_HOST_TYPE"                                    \
-        -Dtargetarch="$BOLT_HOST_TYPE"                                  \
+        -Darchname="$BONDI_HOST_TYPE"                                    \
+        -Dtargetarch="$BONDI_HOST_TYPE"                                  \
         -Dsysroot="$SYSROOT"                                            \
-        -Dcc="${BOLT_HOST_TYPE}-gcc"                                    \
-        -Dcpp="${BOLT_HOST_TYPE}-cpp"                                   \
-        -Dld="${BOLT_HOST_TYPE}-gcc"                                    \
-        -Dprefix="$BOLT_INSTALL_PREFIX"                                 \
-        -Dprivlib="$BOLT_INSTALL_PREFIX/share/perl/$MAJOR_MINOR"        \
-        -Darchlib="$BOLT_INSTALL_PREFIX/lib/perl/$MAJOR_MINOR"          \
-        -Dvendorprefix="$BOLT_INSTALL_PREFIX"                           \
-        -Dvendorlib="$BOLT_INSTALL_PREFIX/share/perl5"                  \
-        -Dvendorarch="$BOLT_INSTALL_PREFIX/lib/perl5"                   \
-        -Dsiteprefix="$BOLT_INSTALL_PREFIX/local"                       \
-        -Dsitelib="$BOLT_INSTALL_PREFIX/local/share/perl/$FULL_VERSION" \
-        -Dsitearch="$BOLT_INSTALL_PREFIX/local/lib/perl/$FULL_VERSION"  \
-        -Dman1dir="$BOLT_INSTALL_PREFIX/share/man/man1"                 \
-        -Dman3dir="$BOLT_INSTALL_PREFIX/share/man/man3"                 \
-        -Dsiteman1dir="$BOLT_INSTALL_PREFIX/local/man/man1"             \
-        -Dsiteman3dir="$BOLT_INSTALL_PREFIX/local/man/man3"             \
+        -Dcc="${BONDI_HOST_TYPE}-gcc"                                    \
+        -Dcpp="${BONDI_HOST_TYPE}-cpp"                                   \
+        -Dld="${BONDI_HOST_TYPE}-gcc"                                    \
+        -Dprefix="$BONDI_INSTALL_PREFIX"                                 \
+        -Dprivlib="$BONDI_INSTALL_PREFIX/share/perl/$MAJOR_MINOR"        \
+        -Darchlib="$BONDI_INSTALL_PREFIX/lib/perl/$MAJOR_MINOR"          \
+        -Dvendorprefix="$BONDI_INSTALL_PREFIX"                           \
+        -Dvendorlib="$BONDI_INSTALL_PREFIX/share/perl5"                  \
+        -Dvendorarch="$BONDI_INSTALL_PREFIX/lib/perl5"                   \
+        -Dsiteprefix="$BONDI_INSTALL_PREFIX/local"                       \
+        -Dsitelib="$BONDI_INSTALL_PREFIX/local/share/perl/$FULL_VERSION" \
+        -Dsitearch="$BONDI_INSTALL_PREFIX/local/lib/perl/$FULL_VERSION"  \
+        -Dman1dir="$BONDI_INSTALL_PREFIX/share/man/man1"                 \
+        -Dman3dir="$BONDI_INSTALL_PREFIX/share/man/man3"                 \
+        -Dsiteman1dir="$BONDI_INSTALL_PREFIX/local/man/man1"             \
+        -Dsiteman3dir="$BONDI_INSTALL_PREFIX/local/man/man3"             \
         -Dman1ext=1                                                     \
         -Dman3ext=3perl                                                 \
-        -Dpager="$BOLT_INSTALL_PREFIX/bin/pager"                        \
+        -Dpager="$BONDI_INSTALL_PREFIX/bin/pager"                        \
         -Uafs                                                           \
         -Ud_csh                                                         \
         -Ud_ualarm                                                      \
@@ -79,11 +79,11 @@ for variant in shared static; do
 done
 
 ###############################################################################
-# Disable rpath, libperl will be moved to $BOLT_INSTALL_PREFIX/lib
+# Disable rpath, libperl will be moved to $BONDI_INSTALL_PREFIX/lib
 ###############################################################################
 
-sed -i "/^CCDLFLAGS/{s/-Wl,-rpath,\$BOLT_INSTALL_PREFIX[^ ]\+//g}" \
-	$BOLT_BUILD_DIR/shared/Makefile
+sed -i "/^CCDLFLAGS/{s/-Wl,-rpath,\$BONDI_INSTALL_PREFIX[^ ]\+//g}" \
+	$BONDI_BUILD_DIR/shared/Makefile
 
     ]]>
     </prepare>
@@ -91,7 +91,7 @@ sed -i "/^CCDLFLAGS/{s/-Wl,-rpath,\$BOLT_INSTALL_PREFIX[^ ]\+//g}" \
     <build>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 
 ###############################################################################
 # Set some variables
@@ -102,23 +102,23 @@ PATCHLEVEL="`echo '#include "./patchlevel.h"
 SET PERL_SUBVERSION' | gcc -E -DPERL_PATCHLEVEL_H_IMPLICIT -  | sed -n '/^SET/{s///;s/ //gp;}'`"
 FULL_VERSION="$MAJOR_MINOR.$PATCHLEVEL"
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 
 ###############################################################################
 # Run build
 ###############################################################################
 for variant in shared static; do
-    make ranlib="$BOLT_INSTALL_PREFIX/bin/${BOLT_HOST_TYPE}-ranlib" \
-        -C "$BOLT_BUILD_DIR/$variant" -j"$BOLT_PARALLEL_JOBS"
+    make ranlib="$BONDI_INSTALL_PREFIX/bin/${BONDI_HOST_TYPE}-ranlib" \
+        -C "$BONDI_BUILD_DIR/$variant" -j"$BONDI_PARALLEL_JOBS"
 done
 
 ###############################################################################
 # Regenerate shared library and add soname
 ###############################################################################
-cd "$BOLT_BUILD_DIR/shared/"
+cd "$BONDI_BUILD_DIR/shared/"
 rm -f libperl.so.$FULL_VERSION
 make SHRPLDFLAGS="\$(LDDLFLAGS) -Wl,-soname,libperl.so.$MAJOR_MINOR" libperl.so.$FULL_VERSION
-ln -s libperl.so.$FULL_VERSION "$BOLT_BUILD_DIR/shared/libperl.so.$MAJOR_MINOR"
+ln -s libperl.so.$FULL_VERSION "$BONDI_BUILD_DIR/shared/libperl.so.$MAJOR_MINOR"
 
     ]]>
     </build>
@@ -126,7 +126,7 @@ ln -s libperl.so.$FULL_VERSION "$BOLT_BUILD_DIR/shared/libperl.so.$MAJOR_MINOR"
     <install>
     <![CDATA[
 
-cd "$BOLT_SOURCE_DIR"
+cd "$BONDI_SOURCE_DIR"
 
 ###############################################################################
 # Set some variables
@@ -137,31 +137,31 @@ PATCHLEVEL="`echo '#include "./patchlevel.h"
 SET PERL_SUBVERSION' | gcc -E -DPERL_PATCHLEVEL_H_IMPLICIT -  | sed -n '/^SET/{s///;s/ //gp;}'`"
 FULL_VERSION="$MAJOR_MINOR.$PATCHLEVEL"
 
-cd "$BOLT_BUILD_DIR/shared"
+cd "$BONDI_BUILD_DIR/shared"
 
 ###############################################################################
 # Install the shared version
 ###############################################################################
-make DESTDIR="$BOLT_INSTALL_DIR" install
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
-mv -v "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/perl/$MAJOR_MINOR/CORE/libperl.so.$FULL_VERSION" \
-	"$BOLT_INSTALL_DIR$BOLT_INSTALL_PREFIX/lib/"
+mv -v "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/perl/$MAJOR_MINOR/CORE/libperl.so.$FULL_VERSION" \
+	"$BONDI_INSTALL_DIR$BONDI_INSTALL_PREFIX/lib/"
 ln -sf libperl.so.$FULL_VERSION \
-	"$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libperl.so.$MAJOR_MINOR"
+	"$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libperl.so.$MAJOR_MINOR"
 ln -sf libperl.so.$FULL_VERSION \
-	"$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libperl.so"
+	"$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libperl.so"
 
-chmod 644 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/lib/libperl.so.$FULL_VERSION"
+chmod 644 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/lib/libperl.so.$FULL_VERSION"
 
 ###############################################################################
 # Copy the static library
 ###############################################################################
-cp -va "$BOLT_BUILD_DIR/static/libperl.a" "$BOLT_INSTALL_DIR$BOLT_INSTALL_PREFIX/lib/"
+cp -va "$BONDI_BUILD_DIR/static/libperl.a" "$BONDI_INSTALL_DIR$BONDI_INSTALL_PREFIX/lib/"
 
 ###############################################################################
 # Fix permissions
 ###############################################################################
-find "$BOLT_INSTALL_DIR/" -exec chmod u+w '{}' ';'
+find "$BONDI_INSTALL_DIR/" -exec chmod u+w '{}' ';'
 
     ]]>
     </install>

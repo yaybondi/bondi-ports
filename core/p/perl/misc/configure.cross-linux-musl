@@ -1,5 +1,5 @@
 #
-# 1. As root, create a symlink from /tools to $BOLT_SYSROOT_DIR/tools
+# 1. As root, create a symlink from /tools to $BONDI_SYSROOT_DIR/tools
 # 2. Fix the version numbers in this script and run it
 # 3. Edit the resulting config.sh and 
 #    - fix email addresses and other cruft
@@ -58,10 +58,10 @@ VERSION="5.32"
     -Dlibperl=libperl.so.$VERSION.1
 
 REPLACE=$(echo $SYSROOT | sed -e 's/[\/&]/\\&/g')
-sed -i "s@$REPLACE@##BOLT_SYSROOT_DIR##@g" config.sh
+sed -i "s@$REPLACE@##BONDI_SYSROOT_DIR##@g" config.sh
 
 REPLACE=$(echo $TOOLDIR | sed -e 's/[\/&]/\\&/g')
-sed -i "s@$REPLACE@##BOLT_HOST_TOOLS_DIR##@g" config.sh
+sed -i "s@$REPLACE@##BONDI_HOST_TOOLS_DIR##@g" config.sh
 
 sed -i "s@hostperl=''@hostperl='../host/miniperl'@g" config.sh
 sed -i "s@hostgenerate=''@hostgenerate='../host/generate_uudmap'@g" config.sh

@@ -3,18 +3,18 @@
     <prepare>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 cmake \
     -DCMAKE_SYSTEM_NAME=Linux \
-    -DCMAKE_C_COMPILER="${BOLT_HOST_TYPE}-gcc" \
+    -DCMAKE_C_COMPILER="${BONDI_HOST_TYPE}-gcc" \
     -DCMAKE_FIND_ROOT_PATH_MODE_PROGRAM=NEVER \
     -DCMAKE_FIND_ROOT_PATH_MODE_INCLUDE=ONLY \
-    -DCMAKE_INSTALL_PREFIX="$BOLT_INSTALL_PREFIX" \
+    -DCMAKE_INSTALL_PREFIX="$BONDI_INSTALL_PREFIX" \
     -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DCMAKE_VERBOSE_MAKEFILE=ON \
     -DCMAKE_SKIP_RPATH=FALSE \
     -DCMAKE_SKIP_INSTALL_RPATH=TRUE \
-    "$BOLT_SOURCE_DIR"
+    "$BONDI_SOURCE_DIR"
 
     ]]>
     </prepare>
@@ -22,7 +22,7 @@ cmake \
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
+cd "$BONDI_BUILD_DIR"
 make
 
     ]]>
@@ -31,8 +31,8 @@ make
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make DESTDIR="$BOLT_INSTALL_DIR" install
+cd "$BONDI_BUILD_DIR"
+make DESTDIR="$BONDI_INSTALL_DIR" install
 
     ]]>
     </install>

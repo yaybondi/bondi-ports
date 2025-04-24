@@ -11,8 +11,8 @@ true
     <build>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make CC="${BOLT_HOST_TYPE}-gcc" -j"$BOLT_PARALLEL_JOBS"
+cd "$BONDI_BUILD_DIR"
+make CC="${BONDI_HOST_TYPE}-gcc" -j"$BONDI_PARALLEL_JOBS"
 
     ]]>
     </build>
@@ -20,18 +20,18 @@ make CC="${BOLT_HOST_TYPE}-gcc" -j"$BOLT_PARALLEL_JOBS"
     <install>
     <![CDATA[
 
-cd "$BOLT_BUILD_DIR"
-make PREFIX="$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX" install
+cd "$BONDI_BUILD_DIR"
+make PREFIX="$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX" install
 
-ln -sf bzdiff "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzcmp"
-ln -sf bzgrep "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzegrep"
-ln -sf bzgrep "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzfgrep"
-ln -sf bzmore "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzless"
+ln -sf bzdiff "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/bzcmp"
+ln -sf bzgrep "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/bzegrep"
+ln -sf bzgrep "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/bzfgrep"
+ln -sf bzmore "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/bzless"
 
-rm "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzcat" "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzip2"
+rm "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/bzcat" "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/bzip2"
 
-ln -sf bunzip2 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzcat"
-ln -sf bunzip2 "$BOLT_INSTALL_DIR/$BOLT_INSTALL_PREFIX/bin/bzip2"
+ln -sf bunzip2 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/bzcat"
+ln -sf bunzip2 "$BONDI_INSTALL_DIR/$BONDI_INSTALL_PREFIX/bin/bzip2"
 
     ]]>
     </install>
